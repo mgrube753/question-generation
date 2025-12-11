@@ -6,7 +6,7 @@
 -   wir generieren 168 fragen
 -   4llms x 1skript x 7layers x 2fragetypen x 3randomBloomLevels = 168 fragen
 -   und samplen davon 1/7 layers, sodass 24 fragen pro llm haben, pro llm dann 3 für mcq, 3 für open ended, mit jeweils 3 random bloom levels statt alle 6 zu fokussieren
--   bei experiment 2 schmeißen wir volles iso osi modell rein, da ist bloom wichtiger
+-   bei experiment 2 schmeißen wir volles iso osi modell rein (konkateniert), da ist bloom wichtiger
 -   sind also 4llms x 1skript x 2fragetypen x 6bloomlevels = 48 fragen mit 1/2 sampling 24 fragen
 -   müssen nur noch überlegen, da MCQ nur bloom 1-3 ansprechen, und open ended alle levels...
 -   24 fragen = 12 open ended mit je 2 fragen pro bloom level
@@ -18,3 +18,4 @@
 -   in analyses kommen csvs im vornherein wieder hin + expert instructions
 -   haben nun alle 4 provider via api
 -   qualitative analysis machen wir via experts, nicht llm-based
+- meine llms sind: grok-4, gpt-5.2, claude-opus-4.5, deepseek-v3.2

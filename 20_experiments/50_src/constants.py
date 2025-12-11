@@ -8,21 +8,23 @@ ANALYSES_PATH = os.path.join(EXPERIMENTS_BASE_PATH, "60_analyses")
 EXP1_PATH = os.path.join(EXPERIMENTS_BASE_PATH, "10_exp1")
 EXP2_PATH = os.path.join(EXPERIMENTS_BASE_PATH, "20_exp2")
 
+# LLM Configuration: grok-4, gpt-5.2, claude-opus-4.5, deepseek-v3.2
 LLM_MODEL_IDS = {
-    "anthropic": "claude-opus-4-5",
+    "anthropic": "claude-opus-4-5-20251101",
     "openai": "gpt-5.2-2025-12-11",
     "deepseek": "deepseek-reasoner",
     "xai": "grok-4-0709",
 }
-LLM_NAMES = LLM_MODEL_IDS.keys()
+LLM_NAMES = list(LLM_MODEL_IDS.keys())
 REQUEST_DELAY_SECONDS = 10
 
-EXP1_PROMPT_TYPES = ["exp1_common_prompt", "exp1_complex_prompt"]
-EXP1_SOURCE_TYPES_A = ["script", "transcript", "tanenbaum"]
-EXP1_SOURCE_TYPE_B = "script"
+# Layer configuration (OSI/ISO model layers 1-7)
 LAYERS = list(range(1, 8))
 
-EXP2_QUESTION_TYPES = ["Multiple-Choice", "Open-Ended"]
+# Question types
+QUESTION_TYPES = ["mcq", "open_ended"]
+
+# Bloom's Taxonomy levels (ordered from lowest to highest cognitive level)
 BLOOM_LEVELS_ORDERED = [
     "Remembering",
     "Understanding",
@@ -32,4 +34,41 @@ BLOOM_LEVELS_ORDERED = [
     "Creating",
 ]
 
+# MCQ questions only use Bloom levels 1-3
+BLOOM_LEVELS_MCQ = BLOOM_LEVELS_ORDERED[:3]  # Remembering, Understanding, Applying
+
+# Open-ended questions use all 6 Bloom levels
+BLOOM_LEVELS_OPEN_ENDED = BLOOM_LEVELS_ORDERED  # All 6 levels
+
+# Prompt file paths for MCQ (3-step process) and Open-Ended
+PROMPT_MCQ_STEM = os.path.join(
+    PROMPT_TEMPLATES_PATH, "experiment", "prompt_mcq_stem.md"
+)
+PROMPT_MCQ_KEYS = os.path.join(
+    PROMPT_TEMPLATES_PATH, "experiment", "prompt_mcq_keys.md"
+)
+PROMPT_MCQ_DISTRACTORS = os.path.join(
+    PROMPT_TEMPLATES_PATH, "experiment", "prompt_mcq_distractors.md"
+)
+PROMPT_OPEN_ENDED = os.path.join(
+    PROMPT_TEMPLATES_PATH, "experiment", "prompt_open_ended.md"
+)
+
 BLOOM_DATA_FILE = os.path.join(PROMPT_TEMPLATES_PATH, "experiment", "bloom.md")
+
+# Experiment 1: Content Fidelity
+# 4 LLMs × 1 Script × 7 Layers × 2 Question Types × 3 Random Bloom Levels = 168 questions
+# Sample 24 questions (1/7 of layers)
+EXP1_TOTAL_QUESTIONS = 168
+EXP1_SAMPLE_SIZE = 24
+EXP1_BLOOM_LEVELS_PER_QUESTION = 3  # Random 3 Bloom levels per layer
+
+# Experiment 2: Bloom Alignment
+# 4 LLMs × 1 Script × 2 Question Types × 6 Bloom Levels = 48 questions
+# Sample 24 questions (1/2)
+# - 12 Open-Ended: 2 per Bloom level (6 levels)
+# - 12 MCQ: 4 per Bloom level (3 levels: 1-3)
+EXP2_TOTAL_QUESTIONS = 48
+EXP2_SAMPLE_SIZE = 24
+EXP2_OPEN_ENDED_PER_BLOOM = 2
+EXP2_MCQ_PER_BLOOM = 4

@@ -1,34 +1,9 @@
 import time
 from constants import REQUEST_DELAY_SECONDS, LLM_MODEL_IDS
-from google.genai import types
-
-
-def gen_with_google(client, prompt_text, model_id, max_tokens):
-    try:
-        response = client.models.generate_content(
-            model=model_id,
-            contents=prompt_text,
-            config=types.GenerateContentConfig(
-                thinking_config=types.ThinkingConfig(thinking_budget=1100),
-                max_output_tokens=max_tokens,
-            ),
-        )
-        candidate = response.candidates[0]
-        if candidate.finish_reason == "MAX_TOKENS":
-            print(f"\n[WARNING] {model_id} ran out of tokens")
-            if response.text:
-                print(f"[INFO] Partial output available for {model_id}")
-                return response.text
-            else:
-                print(f"[WARNING] No output available for {model_id}")
-                return None
-        return response.text
-    except Exception as e:
-        print(f"[ERROR] Gemini API ({model_id}): {e}")
-        return None
 
 
 def gen_with_anthropic(client, prompt_text, model_id, max_tokens):
+    """Generate content using Anthropic's Claude API."""
     try:
         response = client.messages.create(
             model=model_id,
@@ -55,12 +30,13 @@ def gen_with_anthropic(client, prompt_text, model_id, max_tokens):
 
 
 def gen_with_openai(client, prompt_text, model_id, max_tokens):
+    """Generate content using OpenAI's API (gpt-5.2)."""
     try:
         response = client.responses.create(
             model=model_id,
-            reasoning={"effort": "medium"},
+            reasoning={"effort": "high"},
             input=[{"role": "user", "content": prompt_text}],
-            max_output_tokens=max_tokens,
+            max_tokens=max_tokens,
         )
         if (
             response.status == "incomplete"
@@ -81,7 +57,69 @@ def gen_with_openai(client, prompt_text, model_id, max_tokens):
         return None
 
 
+def gen_with_deepseek(client, prompt_text, model_id, max_tokens):
+    """Generate content using DeepSeek's API (deepseek-v3.2)."""
+    try:
+        response = client.responses.create(
+            model=model_id,
+            input=[{"role": "user", "content": prompt_text}],
+            max_tokens=max_tokens,
+        )
+
+        if (
+            response.status == "incomplete"
+            and response.incomplete_details.reason == "max_output_tokens"
+        ):
+            print(f"\n[WARNING] {model_id} ran out of tokens")
+            if response.output_text:
+                print(f"[INFO] Partial output available for {model_id}")
+                return response.output_text
+            else:
+                print(f"[WARNING] {model_id} ran out of tokens during reasoning")
+                return None
+
+        return response.output_text
+    except Exception as e:
+        print(f"[ERROR] OpenAI API ({model_id}): {e}")
+        return None
+
+
+def gen_with_xai(client, prompt_text, model_id, max_tokens):
+    """Generate content using xAI's Grok API (grok-4)."""
+    try:
+        response = client.responses.create(
+            model=model_id,
+            input=[{"role": "user", "content": prompt_text}],
+            max_tokens=max_tokens,
+        )
+
+        if (
+            response.status == "incomplete"
+            and response.incomplete_details.reason == "max_output_tokens"
+        ):
+            print(f"\n[WARNING] {model_id} ran out of tokens")
+            if response.output_text:
+                print(f"[INFO] Partial output available for {model_id}")
+                return response.output_text
+            else:
+                print(f"[WARNING] {model_id} ran out of tokens during reasoning")
+                return None
+
+        return response.output_text
+
+    except Exception as e:
+        print(f"[ERROR] xAI/Grok API ({model_id}): {e}")
+        return None
+
+
 def llm_generation(llm_name, clients, prompt_text, max_tokens):
+    """
+    Unified LLM generation function for all 4 providers:
+    - anthropic: claude-opus-4.5
+    - openai: gpt-5.2
+    - deepseek: deepseek-v3.2
+    - xai: grok-4
+    """
     client = clients.get(llm_name)
     model_id = LLM_MODEL_IDS.get(llm_name)
 
@@ -90,12 +128,14 @@ def llm_generation(llm_name, clients, prompt_text, max_tokens):
         return None
 
     result = None
-    if llm_name == "google":
-        result = gen_with_google(client, prompt_text, model_id, max_tokens)
-    elif llm_name == "anthropic":
+    if llm_name == "anthropic":
         result = gen_with_anthropic(client, prompt_text, model_id, max_tokens)
     elif llm_name == "openai":
         result = gen_with_openai(client, prompt_text, model_id, max_tokens)
+    elif llm_name == "deepseek":
+        result = gen_with_deepseek(client, prompt_text, model_id, max_tokens)
+    elif llm_name == "xai":
+        result = gen_with_xai(client, prompt_text, model_id, max_tokens)
     else:
         print(f"[ERROR] Unknown LLM name '{llm_name}'")
         return None
