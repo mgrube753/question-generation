@@ -1,0 +1,8 @@
+Frage: Welche der folgenden Aufgaben gehört *nicht* zu den Kernaufgaben des Data Link Layer (Schicht 2) gemäß dem gegebenen Text?
+
+Antwortmöglichkeiten:
+- Erkennen, Beheben oder Signalisieren von Übertragungsfehlern. (Falsch)
+- Strategien, wenn Sender für Empfänger zu schnell sendet. (Falsch)
+- Zusammenfassen einzelner Bits zu größeren Einheiten wie 8-bit Bytes. (Falsch)
+- Das Weiterleiten von Datenpaketen zwischen verschiedenen Netzwerken. (Richtig)
+- Auswählen bestimmter Sender oder Empfänger anhand einer Adresse. (Falsch)

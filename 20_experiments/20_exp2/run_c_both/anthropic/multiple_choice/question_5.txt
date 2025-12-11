@@ -1,0 +1,8 @@
+Frage: Beurteilen Sie die Verteilung der Flusssteuerungsmechanismen im OSI-Modell über mehrere Schichten (Layer 2, 3 und 4). Welche Aussage evaluiert diese Designentscheidung am treffendsten?
+
+Antwortmöglichkeiten:
+a) Die mehrfache Implementation der Flusssteuerung auf verschiedenen Schichten stellt eine unnötige Redundanz dar und widerspricht dem Prinzip der Modularität im OSI-Modell. (Falsch)
+b) Die Verteilung der Flusssteuerung über mehrere Schichten ist notwendig, da sie auf jeder Ebene unterschiedliche Aspekte adressiert: Layer 2 (Sender-Empfänger direkt), Layer 3 (End-to-End und Node-to-Node) und Layer 4 (teilnehmerspezifisch). (Richtig)
+c) Die Flusssteuerung sollte ausschließlich in Layer 4 implementiert werden, da nur dort eine umfassende Kenntnis über die Endpunkte der Kommunikation vorhanden ist. (Falsch)
+d) Die Verteilung der Flusssteuerung über mehrere Schichten zeigt, dass das OSI-Modell theoretisch entwickelt wurde, ohne praktische Implementierungsanforderungen zu berücksichtigen. (Falsch)
+e) Die Flusssteuerung wäre effizienter, wenn sie ausschließlich in Layer 3 implementiert würde, da dieser Layer sowohl End-to-End als auch Node-to-Node Aspekte abdeckt. (Falsch)

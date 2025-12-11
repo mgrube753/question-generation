@@ -1,0 +1,8 @@
+Frage: Angesichts der im Text betonten starken Abhängigkeit des Application Layers (Schicht 7) von der jeweiligen Anwendung und der daraus resultierenden geringen Systematisierbarkeit: Welche grundlegenden Implikationen ergeben sich daraus für das Design und die Interoperabilität von Anwendungen in verteilten Systemen im Vergleich zu den stärker standardisierten unteren Schichten des OSI-Modells?
+
+Antwortmöglichkeiten:
+- Die Notwendigkeit, für jede spezifische Anwendung eigene, potenziell inkompatible Protokolle entwickeln zu müssen, was die Wiederverwendbarkeit von Komponenten erschwert. (Richtig)
+- Eine erhöhte Komplexität bei der Fehlerdiagnose, da das Verhalten stark anwendungsspezifisch ist und weniger auf generischen Protokollregeln basiert. (Richtig)
+- Die Forderung nach einer engeren Koordination und detaillierten Spezifikation zwischen den Entwicklern interagierender Anwendungen, da weniger universelle Abstraktionen greifen. (Richtig)
+- Eine geringere Anfälligkeit für Sicherheitslücken, da die mangelnde Systematisierung es Angreifern erschwert, generische Exploits zu entwickeln. (Falsch)
+- Eine vereinfachte Integration neuer Dienste, da die Anwendungsschicht flexibler auf neue Anforderungen reagieren kann, ohne bestehende Protokolle anpassen zu müssen. (Falsch)

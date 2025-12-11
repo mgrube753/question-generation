@@ -1,0 +1,7 @@
+Frage: Der Text hebt hervor, dass die Transportschicht im Gegensatz zu den unteren Schichten (1-3), die als "verkettet" beschrieben werden, eine "echte Ende-zu-Ende-Schicht" ist. Welche der folgenden Aussagen beschreiben korrekte Implikationen oder Merkmale dieser architektonischen Unterscheidung, basierend auf dem gegebenen Text?
+
+Antwortmöglichkeiten:
+- Eine Konversation auf der Transportschicht findet zwischen einem Programm auf der Quellmaschine und einem ähnlichen Programm auf der Zielmaschine statt, unabhängig von den dazwischenliegenden Routern. (Richtig)
+- Die "verkettete" Natur der unteren Schichten bedeutet, dass Protokolle dieser Schichten primär die Kommunikation zwischen einer Maschine und ihren direkten Nachbarn steuern, nicht zwischen der ursprünglichen Quelle und dem endgültigen Ziel. (Richtig)
+- Die Ende-zu-Ende-Kommunikation der Transportschicht ermöglicht es, dass Hardware-Technologieänderungen auf den unteren Schichten die oberen Schichten isoliert nicht direkt beeinflussen, da die Transportschicht die Abstraktionsebene bildet. (Richtig)
+- Wenn ein Problem in einer der "verketteten" Schichten auftritt (z.B. Schicht 2), muss dieses Problem immer bis zur Transportschicht hochpropagiert werden, bevor es von einem Endgerät erkannt und behoben werden kann. (Falsch)

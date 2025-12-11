@@ -1,0 +1,8 @@
+Frage: Welche der folgenden Funktionen sind Aufgaben der Sicherungsschicht (Data Link Layer) im ISO-OSI-Modell, wie im Text beschrieben?
+
+Antwortmöglichkeiten:
+- Die Maskierung von Übertragungsfehlern, um der Netzwerkschicht eine fehlerfreie Leitung zu simulieren. (Richtig)
+- Die Aufteilung von Eingabedaten in Datenrahmen und deren sequentielle Übertragung. (Richtig)
+- Die Regulierung des Datenflusses, um zu verhindern, dass ein schneller Sender einen langsamen Empfänger überflutet. (Richtig)
+- Die Kontrolle des Zugriffs auf den gemeinsam genutzten Kanal in Broadcast-Netzwerken. (Richtig)
+- Die logische Adressierung und das Routing von Datenpaketen zwischen Netzwerken. (Falsch)

@@ -1,0 +1,8 @@
+Frage: Welche Kernaufgaben sind dem Network Layer (Schicht 3) des ISO-OSI-Modells zugeordnet?
+
+Antwortmöglichkeiten:
+a) Adressierung, Routing und Flußsteuerung (Richtig)
+b) Fehlerkontrolle, Flußkontrolle und Segmentierung (Falsch)
+c) Codierung, Transport und Decodierung (Falsch)
+d) Sitzungen, Synchronisation und Bündelung (Falsch)
+e) Endian-Ness, Zeichen, Kompression und Verschlüsselung (Falsch)

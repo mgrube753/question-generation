@@ -1,0 +1,9 @@
+Frage: Welche Eigenschaften treffen auf die Transport-Schicht im ISO-OSI-Modell zu?
+
+Antwortmöglichkeiten:
+- Die Transport-Schicht ist eine echte End-to-End-Schicht, die Daten von der Quelle bis zum Ziel transportiert. (Richtig)
+- Die Transport-Schicht akzeptiert Daten von höheren Schichten und kann sie bei Bedarf in kleinere Einheiten aufteilen. (Richtig)
+- Die Transport-Schicht kann unterschiedliche Dienste anbieten, wie fehlerfreie Punkt-zu-Punkt-Kanäle oder Broadcasting von Nachrichten. (Richtig)
+- Die Transport-Schicht kommuniziert immer nur mit unmittelbaren Nachbarknoten im Netzwerk. (Falsch)
+- Die Transport-Schicht gehört zu den unteren drei Schichten (1-3) des OSI-Modells, die als verkettete Protokolle bezeichnet werden. (Falsch)
+- Die Transport-Schicht kann keine Garantie für die Reihenfolge der Zustellung von Nachrichten bieten. (Falsch)

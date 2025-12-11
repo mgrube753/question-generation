@@ -1,0 +1,8 @@
+Frage: Welche Kernaufgaben werden im Text dem Transport Layer (Schicht 4) des ISO-OSI-Modells zugeschrieben?
+
+Antwortmöglichkeiten:
+- Adressierung, Flusssteuerung und Dienstqualität (Richtig)
+- Routing, Switching und Netzwerksegmentierung (Falsch)
+- Bit-Übertragung, Fehlererkennung und Mediumzugriff (Falsch)
+- Datendarstellung, Verschlüsselung und Kompression (Falsch)
+- Teilnehmeridentifikation, Quality of Service und Bandbreitenreservierung (Richtig)

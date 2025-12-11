@@ -1,0 +1,8 @@
+Frage: Welche der folgenden Aufgaben sind Kernfunktionen der Sitzungsschicht (Session Layer 5) im ISO-OSI-Modell?
+
+Antwortmöglichkeiten:
+- Aufbau, Verwaltung, Zurückweisung und Beendigung von Kommunikationssitzungen. (Richtig)
+- Setzen von Synchronisationspunkten (Zwischenpunkten) innerhalb einer Datenübertragung. (Richtig)
+- Gruppierung zusammengehöriger Transaktionen. (Richtig)
+- Umwandlung von Datenformaten für die anwendungsspezifische Darstellung. (Falsch)
+- Logische Adressierung und Weiterleitung von Datenpaketen durch das Netzwerk. (Falsch)

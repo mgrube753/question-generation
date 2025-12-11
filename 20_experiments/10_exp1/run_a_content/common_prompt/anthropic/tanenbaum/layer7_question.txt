@@ -1,0 +1,9 @@
+Frage: Welche Aussage über HTTP (HyperText Transfer Protocol) ist gemäß dem Text korrekt?
+
+Antwortmöglichkeiten:
+- HTTP ist ein Anwendungsprotokoll in der Anwendungsschicht des ISO-OSI-Modells (Richtig)
+- HTTP bildet die Grundlage für das World Wide Web (Richtig)
+- Bei HTTP sendet der Browser den Namen der gewünschten Webseite an den Server (Richtig)
+- HTTP ist das einzige Protokoll in der Anwendungsschicht (Falsch)
+- HTTP wird hauptsächlich für E-Mail-Übertragungen verwendet (Falsch)
+- HTTP arbeitet in der Transportschicht des ISO-OSI-Modells (Falsch)

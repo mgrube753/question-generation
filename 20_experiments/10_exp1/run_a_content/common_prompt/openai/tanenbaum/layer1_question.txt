@@ -1,0 +1,6 @@
+Frage: Welche Aufgabe gehört zur Bitübertragungsschicht (Physical Layer) des ISO-OSI-Modells?
+
+Antwortmöglichkeiten:
+- Festlegen, welche elektrischen Signale eine 1 oder eine 0 repräsentieren (Richtig)
+- Durchführen der Datenkompression vor der Übertragung (Falsch)
+- Vergabe und Verwaltung von IP-Adressen im Netzwerk (Falsch)

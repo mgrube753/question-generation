@@ -1,0 +1,7 @@
+Frage: Entwerfen Sie eine Netzwerklösung für ein internationales Unternehmen mit Standorten in verschiedenen Ländern, das eine sichere und effiziente Datenübertragung zwischen seinen Niederlassungen gewährleisten muss. Welche Kombination von OSI-Schicht-Funktionalitäten würde die optimale Lösung darstellen?
+
+Antwortmöglichkeiten:
+a) Eine Lösung, die auf Layer 3 Routing mit dynamischen Protokollen für die standortübergreifende Verbindung, Layer 4 QoS-Garantien für kritische Anwendungen, Layer 6 Verschlüsselung für die Datensicherheit und Layer 7 Protokollelemente für spezifische Unternehmensanwendungen kombiniert. (Richtig)
+b) Eine Lösung, die ausschließlich auf Layer 2 Funktionalitäten basiert, mit Fehlerkontrolle und Identifikation durch MAC-Adressen, ergänzt durch Layer 5 Sitzungsverwaltung für die Benutzerauthentifizierung. (Falsch)
+c) Eine Lösung, die hauptsächlich auf Layer 1 Transport mit hoher Bandbreite und Layer 7 Anwendungsprotokollen basiert, ohne Berücksichtigung von Routing, Verschlüsselung oder QoS-Garantien. (Falsch)
+d) Eine Lösung, die nur die Funktionen von Layer 3 Adressierung und Layer 6 Zeichenkonvertierung nutzt, ohne Berücksichtigung der Datensicherheit, Netzwerkperformance oder anwendungsspezifischer Anforderungen. (Falsch)

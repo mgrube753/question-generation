@@ -1,0 +1,3 @@
+Frage: Zwei heterogene Computersysteme müssen Gleitpunktzahlen austauschen, die sie intern jeweils unterschiedlich kodieren. Auf welcher OSI-Schicht wird das Problem der Vereinheitlichung dieser Darstellung primär gelöst, und warum?
+
+Antwort: In der Präsentationsschicht, weil sie für die Syntax und Semantik der zu übertragenden Daten verantwortlich ist und damit standardisierte externe Kodierungen bereitstellt, die systemspezifische interne Darstellungen abstrahieren (Richtig)

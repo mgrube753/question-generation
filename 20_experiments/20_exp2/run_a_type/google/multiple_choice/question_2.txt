@@ -1,0 +1,7 @@
+Frage: Welche der folgenden Aussagen beschreibt die primäre Unterscheidung der Aufgaben zur Flusskontrolle zwischen dem Data Link Layer, dem Network Layer und dem Transport Layer im OSI-Modell?
+
+Antwortmöglichkeiten:
+a) Der Data Link Layer handhabt Flusskontrolle für die Übertragung über eine direkte Verbindung, der Network Layer für die pfadbasierte Übertragung zwischen beliebigen Netzknoten, und der Transport Layer für die zuverlässige Datenlieferung zwischen Quell- und Zielanwendungen. (Falsch)
+b) Die Flusskontrolle des Data Link Layers adressiert die Geschwindigkeit der Übertragung auf einer lokalen Verbindung, während die des Network Layers End-to-End-Steuerung für die gesamte Kommunikationsstrecke über verschiedene Netzwerke hinweg bietet und der Transport Layer die Flusskontrolle spezifisch an die Charakteristik der beteiligten Anwendungsteilnehmer anpasst. (Richtig)
+c) Alle drei Schichten implementieren Flusskontrolle identisch, um zu verhindern, dass ein Sender den Empfänger überfordert, jedoch mit unterschiedlichen Protokollelementen. (Falsch)
+d) Der Network Layer ist ausschließlich für die Flusskontrolle zwischen Netzwerken zuständig, während der Transport Layer diese für die Kommunikationspartner innerhalb eines einzelnen Netzwerks optimiert und der Data Link Layer keine explizite Flusskontrolle besitzt. (Falsch)

@@ -1,0 +1,4 @@
+Frage: Listen Sie die sieben Schichten des ISO-OSI-Modells in der korrekten Reihenfolge von Layer 1 bis Layer 7.
+
+Antwort: a) Physical Layer, b) Data Link Layer, c) Network Layer, d) Transport Layer, e) Session Layer, f) Presentation Layer, g) Application Layer (Richtig)
+Antwort: a) Data Link Layer, b) Physical Layer, c) Network Layer, d) Transport Layer, e) Session Layer, f) Presentation Layer, g) Application Layer (Falsch)

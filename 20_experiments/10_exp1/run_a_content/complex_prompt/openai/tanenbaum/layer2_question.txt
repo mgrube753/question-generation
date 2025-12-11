@@ -1,0 +1,3 @@
+Frage: Welches Konzept im Data-Link-Layer verhindert, dass ein schneller Sender einen langsameren Empfänger überlastet, und welcher spezielle Sublayer koordiniert in Broadcast-Netzen den gleichzeitigen Zugriff mehrerer Stationen auf dasselbe Übertragungsmedium? Nennen Sie beide Bezeichnungen.
+
+Antwort: Ein Traffic-Regulation- bzw. Flow-Control-Mechanismus begrenzt die Sendegeschwindigkeit, während die Medium Access Control (MAC) Sublayer den Zugriff auf das gemeinsame Medium steuert (Richtig)

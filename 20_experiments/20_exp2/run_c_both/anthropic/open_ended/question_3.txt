@@ -1,0 +1,17 @@
+Frage: Untersuchen Sie einen typischen Vorgang beim Versenden einer verschlüsselten E-Mail über das Internet und ordnen Sie die beteiligten Prozesse den entsprechenden OSI-Schichten zu. Erläutern Sie dabei, welche spezifischen Aufgaben jede involvierte Schicht bei diesem Kommunikationsvorgang übernimmt.
+
+Antwort: Bei der Übertragung einer verschlüsselten E-Mail sind mehrere OSI-Schichten beteiligt:
+
+Die Anwendungsschicht (Layer 7) stellt die E-Mail-Anwendung bereit, definiert das SMTP-Protokoll für den E-Mail-Versand und bietet die Benutzeroberfläche zur Erstellung der Nachricht.
+
+Die Präsentationsschicht (Layer 6) übernimmt die Verschlüsselung der E-Mail-Inhalte, wandelt die Texte in entsprechende Zeichencodierungen wie Unicode oder ASCII um und komprimiert möglicherweise die Anhänge.
+
+Die Sitzungsschicht (Layer 5) verwaltet die Kommunikationssitzung zwischen dem E-Mail-Client und dem Server, baut die Verbindung auf und beendet sie nach erfolgreicher Übertragung.
+
+Die Transportschicht (Layer 4) verwendet typischerweise TCP für die zuverlässige Übertragung der E-Mail-Daten, sorgt für eine korrekte Reihenfolge der Datenpakete und adressiert den E-Mail-Dienst über den Port 25 (SMTP).
+
+Die Vermittlungsschicht (Layer 3) kümmert sich um die IP-Adressierung und das Routing zwischen verschiedenen Netzwerken, wodurch die E-Mail über das Internet zum Zielserver geleitet wird.
+
+Die Sicherungsschicht (Layer 2) überträgt die Daten über lokale Netzwerke mittels MAC-Adressen und sorgt für eine fehlerfreie Übertragung auf den jeweiligen Teilstrecken.
+
+Die Bitübertragungsschicht (Layer 1) wandelt die digitalen Daten in physikalische Signale um, die über die jeweiligen Übertragungsmedien (Kabel, WLAN, etc.) transportiert werden. (Richtig)

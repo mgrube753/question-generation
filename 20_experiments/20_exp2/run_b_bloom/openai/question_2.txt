@@ -1,0 +1,8 @@
+Frage: Klassifizieren Sie die folgenden Aussagen zu Kernaufgaben innerhalb des ISO-OSI-Modells und entscheiden Sie, welche korrekt zugeordnet sind.
+
+Antwortmöglichkeiten:
+a) Fehlerkontrolle ist eine Kernaufgabe des Data Link Layers. (Richtig)
+b) Endian-Konvertierung wird im Presentation Layer vorgenommen. (Richtig)
+c) Sitzungsverwaltung gehört zum Transport Layer. (Falsch)
+d) Medienzugriffskontrolle wird im Physical Layer realisiert. (Falsch)
+e) Quality-of-Service-Sicherung ist Teilaufgabe des Transport Layers. (Richtig)

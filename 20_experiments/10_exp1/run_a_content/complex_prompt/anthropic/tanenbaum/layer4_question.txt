@@ -1,0 +1,8 @@
+Frage: Ein Systemarchitekt argumentiert: "Da moderne Netzwerktechnologien immer zuverlässiger werden, könnten wir die Transportschicht des OSI-Modells stark vereinfachen oder sogar entfernen, indem wir ihre Aufgaben auf die Netzwerk- und Sitzungsschicht verteilen." Analysieren Sie diese Aussage kritisch unter Berücksichtigung der fundamentalen Eigenschaften der Transportschicht.
+
+Antwortmöglichkeiten:
+- Die Transportschicht ist die einzige Schicht mit echter End-to-End-Funktionalität zwischen Quelle und Ziel, während die Netzwerkschicht nur zwischen benachbarten Geräten kommuniziert. Diese fundamentale Eigenschaft kann nicht einfach auf andere Schichten verteilt werden. (Richtig)
+- Die Transportschicht ist überflüssig, da fehlerfreie Übertragungskanäle mittlerweile Standard sind und keine zusätzliche Fehlerkorrektur mehr benötigt wird. (Falsch)
+- Die Transportschicht isoliert höhere Schichten von technologischen Veränderungen der Hardware - diese Isolation würde verloren gehen, wenn ihre Funktionen auf andere Schichten verteilt würden. (Richtig)
+- Moderne Netzwerke benötigen keine Dienst-Differenzierung mehr, da alle Anwendungen mit dem gleichen Servicetyp effizient arbeiten können. (Falsch)
+- Die Funktion der Transportschicht, Daten in kleinere Einheiten aufzuteilen und am Ziel wieder korrekt zusammenzusetzen, könnte problemlos von der Sitzungsschicht übernommen werden, ohne die Architektur zu beeinträchtigen. (Falsch)

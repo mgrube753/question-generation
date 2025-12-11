@@ -1,0 +1,7 @@
+Frage: Entwickeln Sie einen modularen Protokollstapel, der gleichzeitig folgende Anforderungen erfüllt: Ende-zu-Ende-Flußsteuerung, Verschlüsselung der Nutzdaten, Sitzungs-Synchronisation mit Wiederaufsetzpunkten sowie koordinierter Medienzugriff auf einem gemeinsamen Funkkanal. Welche Kombination von OSI-Schichten muss dafür mindestens integriert werden?
+
+Antwortmöglichkeiten:
+a) Data Link Layer, Network Layer, Session Layer, Presentation Layer (Richtig)
+b) Physical Layer, Network Layer, Session Layer, Presentation Layer (Falsch)
+c) Transport Layer, Presentation Layer, Application Layer (Falsch)
+d) Data Link Layer, Transport Layer, Application Layer (Falsch)

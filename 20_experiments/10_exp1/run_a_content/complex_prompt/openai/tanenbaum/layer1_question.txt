@@ -1,0 +1,3 @@
+Frage: Identifizieren Sie aus dem gegebenen Text zwei Gestaltungsparameter, die zwingend auf der Bitübertragungsschicht festgelegt werden müssen, und analysieren Sie, wie eine falsche Schichteinordnung dieser Parameter den Empfang eines „1“-Bits als „0“-Bit begünstigen würde.
+
+Antwort: Die elektrischen Pegel beziehungsweise Signalformen, die eine logische 1 oder 0 repräsentieren, sowie die zeitliche Länge eines Bits in Nanosekunden müssen von der Bitübertragungsschicht definiert werden; würden diese Parameter erst in einer höheren Schicht festgelegt, könnten Sender und Empfänger unterschiedliche Pegel oder Timing verwenden, was dazu führt, dass das physische Medium die Signale verfälscht und somit ein gesendetes „1“-Bit als „0“-Bit empfangen wird (Richtig)

@@ -1,0 +1,3 @@
+Frage: Wenden Sie das ISO-OSI-Modell auf folgendes Szenario an: Ein Rechner übermittelt über mehrere miteinander verbundene Netze (etwa Ethernet, Glasfaser-Backbone und WLAN) einen kontinuierlichen Datenstrom an einen entfernten Empfänger. Ermitteln und veranschaulichen Sie für die Teilaufgaben a) physische Übertragung, b) Fehlerkontrolle, c) Routing sowie d) Sitzungsverwaltung jeweils den zuständigen OSI-Layer und einen typischen Mechanismus, der diese Aufgabe dort realisiert.
+
+Antwort: a) Physical Layer – Manchester-Codierung (Richtig); b) Data Link Layer – CRC-basierte Frame-Prüfsumme (Richtig); c) Network Layer – IP-Routing mittels Forwarding-Tabellen (Richtig); d) Session Layer – Sitzungsaufbau mit Synchronisationspunkten (Richtig)

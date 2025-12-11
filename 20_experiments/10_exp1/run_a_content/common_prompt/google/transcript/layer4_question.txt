@@ -1,0 +1,8 @@
+Frage: Welche der folgenden Punkte werden im Text als Kernaufgaben des Transport Layers genannt?
+
+Antwortmöglichkeiten:
+- Adressierung (Richtig)
+- Flusssteuerung (Richtig)
+- Bereitstellung physikalischer Übertragungsmedien (Falsch)
+- Dienstqualität (Quality of Service) (Richtig)
+- Routing von Datenpaketen zwischen Netzwerken (Falsch)

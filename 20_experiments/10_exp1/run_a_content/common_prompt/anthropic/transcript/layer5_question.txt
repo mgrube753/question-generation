@@ -1,0 +1,8 @@
+Frage: Welche drei Kernaufgaben hat der Session Layer (Schicht 5) im ISO-OSI-Modell?
+
+Antwortmöglichkeiten:
+- Sitzungen, Synchronisation und Bündelung (Richtig)
+- Routing, Switching und Adressierung (Falsch)
+- Fehlerkorrektur, Flusskontrolle und Segmentierung (Falsch)
+- Verschlüsselung, Authentifizierung und Zertifikatsverwaltung (Falsch)
+- Datenkompression, Formatierung und Codierung (Falsch)

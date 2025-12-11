@@ -1,0 +1,8 @@
+Frage: Was sind die Kernaufgaben des Physical Layers (Schicht 1) des ISO-OSI-Modells gemäß dem bereitgestellten Text?
+
+Antwortmöglichkeiten:
+- Codierung (Richtig)
+- Transport (Richtig)
+- Decodierung (Richtig)
+- Segmentierung (Falsch)
+- Adressauflösung (Falsch)

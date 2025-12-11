@@ -1,0 +1,8 @@
+Frage: Angesichts der Beschreibung der Präsentationsschicht, welche der folgenden Szenarien würde ohne die Funktionen dieser Schicht voraussichtlich zu Kommunikationsfehlern oder Ineffizienzen führen, und warum ist ihre Rolle in diesem Kontext entscheidend?
+
+Antwortmöglichkeiten:
+- Zwei Computersysteme mit unterschiedlicher Bytereihenfolge (Big-Endian vs. Little-Endian) versuchen, eine Ganzzahl auszutauschen, ohne eine gemeinsame Datenrepräsentationsebene. (Richtig)
+- Eine Datei wird über ein Netzwerk übertragen, dessen physische Verbindung intermittierende Paketverluste aufweist, was zu unvollständigen Daten am Empfänger führt. (Falsch)
+- Zwei Anwendungen versuchen, miteinander zu kommunizieren, verwenden jedoch unterschiedliche Zeichensätze (z.B. ASCII und EBCDIC), um Textdaten darzustellen. (Richtig)
+- Ein Webserver liefert HTML-Inhalte an einen Browser, und die Komprimierung des Inhalts wird nicht vom Browser verstanden. (Richtig)
+- Die Netzwerkgeräte auf der Übertragungsstrecke leiten IP-Pakete aufgrund falscher Routing-Tabellen an ein inkorrektes Ziel weiter. (Falsch)

@@ -1,0 +1,9 @@
+Frage: Welche Aufgaben übernimmt die Data-Link-Schicht (Sicherungsschicht) im ISO-OSI-Modell?  
+
+Antwortmöglichkeiten:  
+- Sie verwandelt das Übertragungsmedium in eine Verbindung, die für höhere Schichten frei von unentdeckten Übertragungsfehlern erscheint (Richtig)  
+- Sie unterteilt eingehende Daten in Frames und versendet diese sequentiell (Richtig)  
+- Sie reguliert den Datenfluss, damit ein schneller Sender einen langsamen Empfänger nicht überlastet (Richtig)  
+- Sie kontrolliert in Broadcast-Netzen den Zugriff auf das gemeinsame Medium über die MAC-Sublayer (Richtig)  
+- Sie übernimmt die Ende-zu-Ende-Wegewahl (Routing) im Netzwerk (Falsch)  
+- Sie verschlüsselt Anwendungsdaten für die Sitzungsschicht (Falsch)

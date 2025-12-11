@@ -1,0 +1,9 @@
+Frage: Erklären Sie die unterschiedlichen Arten der Flusssteuerung in den verschiedenen Schichten des ISO-OSI-Modells und vergleichen Sie deren Funktionen und Zielsetzungen.
+
+Antwort: Die Flusssteuerung tritt in drei verschiedenen Schichten des OSI-Modells auf, jeweils mit unterschiedlichem Fokus:
+
+Im Data Link Layer (Schicht 2) dient die Flusssteuerung dazu, Probleme zu lösen, wenn ein Sender für einen direkt verbundenen Empfänger zu schnell sendet. Typische Strategien sind Zwischenpuffern von Daten, Herunterregeln der Übertragungsgeschwindigkeit oder Wartenlassen des Senders. Diese Flusssteuerung ist auf die direkte Verbindung zwischen benachbarten Knoten beschränkt.
+
+Im Network Layer (Schicht 3) unterscheidet die Flusssteuerung zwischen zwei Ansätzen: End-to-End-Steuerung, die sich auf die gesamte Kommunikationsstrecke vom ursprünglichen Sender zum endgültigen Empfänger bezieht, und Node-to-Node-Steuerung, die jeweils zwischen benachbarten Knoten im Netzwerk stattfindet. Diese differenzierte Betrachtung wird notwendig, da auf dieser Ebene netzwerkübergreifende Kommunikation stattfindet.
+
+Im Transport Layer (Schicht 4) wird die Flusssteuerung verfeinert, indem sie die spezifischen Charakteristiken der Kommunikationsteilnehmer berücksichtigt. Hier wird die Steuerung an die individuellen Anforderungen und Fähigkeiten der Endgeräte angepasst, um eine optimale Kommunikation zwischen beliebigen Teilnehmern im Netz zu gewährleisten. (Richtig)

@@ -1,0 +1,8 @@
+Frage: Ein Unternehmen entwickelt eine internationale Anwendung, die große Mengen vertraulicher Daten zwischen verschiedenen Systemen mit unterschiedlichen Architekturen austauscht. Welche Herausforderungen der Presentation Layer (Schicht 6) müssen in welcher optimalen Reihenfolge adressiert werden, um maximale Effizienz und Sicherheit zu gewährleisten?
+
+Antwortmöglichkeiten:
+- Zuerst Zeichenkonvertierung (z.B. Unicode), dann Kompression der Daten, anschließend Endian-Ness-Anpassung und zuletzt Verschlüsselung (Richtig)
+- Zuerst Verschlüsselung, dann Kompression, anschließend Zeichenkonvertierung und zuletzt Endian-Ness-Anpassung (Falsch)
+- Zuerst Endian-Ness-Anpassung, dann Verschlüsselung, anschließend Zeichenkonvertierung und zuletzt Kompression (Falsch)
+- Zuerst Kompression, dann Verschlüsselung, anschließend Endian-Ness-Anpassung und zuletzt Zeichenkonvertierung (Falsch)
+- Die Reihenfolge ist irrelevant, solange alle vier Kernaufgaben der Presentation Layer implementiert werden (Falsch)

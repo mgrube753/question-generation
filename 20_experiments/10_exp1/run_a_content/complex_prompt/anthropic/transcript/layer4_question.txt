@@ -1,0 +1,7 @@
+Frage: Ein Netzwerkarchitekt entwirft ein System, in dem sowohl Echtzeitvideokommunikation als auch umfangreiche Dateiübertragungen parallel stattfinden sollen. Welche konzeptionellen Zusammenhänge zwischen den beschriebenen Kernaufgaben des Transport Layers müssen dabei besonders berücksichtigt werden, und wie wirken sie sich auf die praktische Implementierung aus?
+
+Antwortmöglichkeiten:
+- Die Dienstqualität (QoS) funktioniert als erweiterte Form der Flusssteuerung, indem sie für verschiedene Teilnehmertypen unterschiedliche Parameter wie Bandbreite, Latenz und Jitter garantiert; für Echtzeitvideo sind niedrige Latenz und geringer Jitter wichtiger als fehlerfreie Übertragung, während bei Dateiübertragungen die Fehlerfreiheit priorisiert wird (Richtig)
+- Adressierung und Flusssteuerung sind vollständig unabhängige Konzepte, wobei die Adressierung ausschließlich für die Teilnehmeridentifikation zuständig ist, während die Dienstqualität nur die verfügbare Bandbreite reguliert (Falsch)
+- Der Transport Layer kann entweder Echtzeitkommunikation oder Dateiübertragung unterstützen, aber niemals beide gleichzeitig, da die Adressierungskonzepte für verschiedene Anwendungstypen grundsätzlich inkompatibel sind (Falsch)
+- Die Flusssteuerung auf dem Transport Layer bezieht sich ausschließlich auf die physikalische Übertragungsgeschwindigkeit und hat keine Verbindung zur Dienstqualität oder zu den spezifischen Anforderungen der kommunizierenden Teilnehmer (Falsch)

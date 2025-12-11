@@ -1,0 +1,8 @@
+Frage: Welche der folgenden Aufgaben gehören gemäß der Beschreibung zum Data Link Layer des ISO-OSI-Modells?
+
+Antwortmöglichkeiten:
+- Erkennen und Signalisieren von Übertragungsfehlern im Rahmen einer Fehlerkontrolle (Richtig)
+- Flusskontrolle durch Herunterregeln der Sendegeschwindigkeit bei Pufferüberlauf (Richtig)
+- Zusammenfassen von Bits zu größeren Einheiten wie Bytes (Richtig)
+- Routing von Datenpaketen über mehrere Netze hinweg anhand von IP-Adressen (Falsch)
+- Ende-zu-Ende-Verschlüsselung der Nutzdaten zur Wahrung von Vertraulichkeit (Falsch)

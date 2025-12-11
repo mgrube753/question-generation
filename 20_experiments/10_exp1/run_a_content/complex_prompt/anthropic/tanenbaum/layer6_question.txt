@@ -1,0 +1,7 @@
+Frage: Welche konzeptionelle Herausforderung adressiert die Präsentationsschicht des OSI-Modells, die von den unteren Schichten nicht behandelt wird, und wie unterscheidet sich ihr Ansatz fundamental von der Arbeitsweise dieser unteren Schichten?
+
+Antwortmöglichkeiten:
+- Die Präsentationsschicht befasst sich mit Syntax und Semantik der übertragenen Informationen und ermöglicht die Kommunikation zwischen Computern mit unterschiedlichen internen Datenrepräsentationen, während untere Schichten primär auf die Bewegung von Bits fokussiert sind (Richtig)
+- Die Präsentationsschicht ist für die physikalische Übertragung von Daten zwischen verschiedenen Netzwerkknoten verantwortlich, während die unteren Schichten sich mit der logischen Adressierung befassen (Falsch)
+- Die Präsentationsschicht befasst sich ausschließlich mit der Verschlüsselung von Daten, während die unteren Schichten für die Datenkompression zuständig sind (Falsch)
+- Die Präsentationsschicht ist für die Verbindungsherstellung und Terminierung zwischen Netzwerkknoten verantwortlich, während die unteren Schichten nur für die Datenübertragung zuständig sind (Falsch)

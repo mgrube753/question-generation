@@ -1,0 +1,8 @@
+Frage: Der Session Layer (Schicht 5) des ISO-OSI-Modells ist für die Bereitstellung des Sitzungskonzepts verantwortlich und umfasst Kernaufgaben wie den Aufbau, die Verwaltung und das Beenden von Sitzungen, die Synchronisation durch das Setzen von Zwischenpunkten sowie die Bündelung zusammengehöriger Transaktionen. Welche der folgenden Aussagen beschreibt am präzisesten die kritische Bedeutung der "Synchronisation" durch das Setzen von Zwischenpunkten für die Robustheit einer Kommunikationsbeziehung, insbesondere im Kontext von Datenübertragungen über unsichere oder zeitweise unterbrochene Verbindungen?
+
+Antwortmöglichkeiten:
+- Die Synchronisation durch Zwischenpunkte ermöglicht es, große Datenmengen in einer einzigen, ununterbrochenen Übertragung zu bündeln, wodurch der Overhead für Sitzungsaufbau und -abbau reduziert wird. (Falsch)
+- Zwischenpunkte dienen primär dazu, die Verschlüsselung und Integritätsprüfung der übertragenen Daten zu gewährleisten und so die Sicherheit der Sitzung zu erhöhen. (Falsch)
+- Die Synchronisation erlaubt es, den Zustand einer Kommunikationssitzung zu speichern und bei einer Unterbrechung die Übertragung ab dem letzten bekannten, konsistenten Punkt fortzusetzen, ohne die gesamte Sitzung neu aufbauen zu müssen. (Richtig)
+- Das Setzen von Zwischenpunkten optimiert die Flusskontrolle, indem es dem Sender signalisiert, wann der Empfänger bereit ist, neue Daten zu empfangen, und verhindert so einen Pufferüberlauf. (Falsch)
+- Die Hauptfunktion der Synchronisation besteht darin, sicherzustellen, dass die Datenpakete in der korrekten Reihenfolge beim Empfänger ankommen, um eine logische Inkonsistenz zu vermeiden. (Falsch)

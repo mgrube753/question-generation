@@ -1,0 +1,9 @@
+Frage: Welche Dienste werden von der Session Layer (Sitzungsschicht) des ISO-OSI-Modells bereitgestellt?
+
+Antwortmöglichkeiten:
+- Dialog-Kontrolle, Token-Management und Synchronisation (Richtig)
+- Routing von Datenpaketen und Adressierung (Falsch)
+- Bitübertragung und physische Verbindung (Falsch)
+- Ende-zu-Ende-Verschlüsselung von Daten (Falsch)
+- Ermöglichung von Sitzungen zwischen Benutzern auf verschiedenen Maschinen (Richtig)
+- Fehlerkorrektur auf Bit-Ebene (Falsch)

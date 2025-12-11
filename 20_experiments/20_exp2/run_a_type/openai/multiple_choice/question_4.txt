@@ -1,0 +1,7 @@
+Frage: Welche der folgenden Zuordnungen von Kernaufgaben zu OSI-Schichten ist ausschließlich zutreffend?
+
+Antwortmöglichkeiten:
+a) Fehlerkontrolle – Data Link Layer; Routing – Network Layer; Verschlüsselung – Presentation Layer (Richtig)
+b) Medienzugriff – Physical Layer; Dienstqualität – Network Layer; Sitzungen – Transport Layer (Falsch)
+c) Kompression – Application Layer; Identifikation – Session Layer; Segmentierung – Presentation Layer (Falsch)
+d) Flusssteuerung – Physical Layer; Adressierung (Teilnehmer) – Data Link Layer; Endian-Ness – Presentation Layer (Falsch)

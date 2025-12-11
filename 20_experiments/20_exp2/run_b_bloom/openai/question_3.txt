@@ -1,0 +1,7 @@
+Frage: Ein Netzwerktechniker stellt fest, dass bei einer Punkt-zu-Punkt-Verbindung der Sender dauerhaft schneller Daten überträgt, als der Empfänger verarbeiten kann, was zu Pufferüberläufen führt. Untersuchen Sie das ISO-OSI-Modell und bestimmen Sie, welche Schicht mitsamt ihrer spezifischen Kernaufgabe angewendet werden muss, um dieses Problem direkt auf der Verbindung zu beheben.
+
+Antwortmöglichkeiten:
+a) Data Link Layer – Flusskontrolle (Richtig)
+b) Physical Layer – Codierung (Falsch)
+c) Network Layer – Routing (Falsch)
+d) Transport Layer – Dienstqualität (Falsch)

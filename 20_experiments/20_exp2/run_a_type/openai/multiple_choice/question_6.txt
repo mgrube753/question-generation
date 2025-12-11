@@ -1,0 +1,8 @@
+Frage: Welche der folgenden Kombinationen aus OSI-Schicht und Kernaufgabe ist korrekt zugeordnet?
+
+Antwortmöglichkeiten:
+a) Data Link Layer – Medienzugriff (Richtig)
+b) Network Layer – Verschlüsselung (Falsch)
+c) Transport Layer – Dienstqualität (Richtig)
+d) Session Layer – Endian-Konvertierung (Falsch)
+e) Presentation Layer – Segmentierung (Falsch)

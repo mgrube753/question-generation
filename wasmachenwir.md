@@ -1,0 +1,20 @@
+-   wir wollen fragepipeline vereinen, statt für die beiden experimente separat fragen zu generieren
+-   wir wollen jeweils 24 fragen samplen
+-   wir wollen 4llms auf SCRIPT hauen
+-   bei inhaltstreue exp1 fragen wir für jeden layer einzeln pro prompting
+-   haben zwei fragetypen: mcq und open ended
+-   wir generieren 168 fragen
+-   4llms x 1skript x 7layers x 2fragetypen x 3randomBloomLevels = 168 fragen
+-   und samplen davon 1/7 layers, sodass 24 fragen pro llm haben, pro llm dann 3 für mcq, 3 für open ended, mit jeweils 3 random bloom levels statt alle 6 zu fokussieren
+-   bei experiment 2 schmeißen wir volles iso osi modell rein, da ist bloom wichtiger
+-   sind also 4llms x 1skript x 2fragetypen x 6bloomlevels = 48 fragen mit 1/2 sampling 24 fragen
+-   müssen nur noch überlegen, da MCQ nur bloom 1-3 ansprechen, und open ended alle levels...
+-   24 fragen = 12 open ended mit je 2 fragen pro bloom level
+-   und 12 mcq mit je 4 fragen pro bloom level
+-   haben zudem 1 prompt für open ended
+-   und 3 teilprompts für mcq (stem, 2keys, 2distractors)
+-   beide experimente nutzen nun bloom, wobei alignment bei exp2 wichtig; bei exp1 inhaltstreue
+-   für bloom infos: prompts/bloom.md
+-   in analyses kommen csvs im vornherein wieder hin + expert instructions
+-   haben nun alle 4 provider via api
+-   qualitative analysis machen wir via experts, nicht llm-based

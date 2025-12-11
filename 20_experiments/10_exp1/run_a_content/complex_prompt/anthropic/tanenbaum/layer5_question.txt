@@ -1,0 +1,7 @@
+Frage: Welche der folgenden Szenarien demonstriert am besten die Notwendigkeit des Token-Management-Dienstes der Session Layer im OSI-Modell, und warum unterscheidet sich dieses von Szenarien, die primär durch andere Session-Layer-Dienste unterstützt werden?
+
+Antwortmöglichkeiten:
+- Ein verteiltes Datenbanksystem, bei dem mehrere Benutzer versuchen könnten, denselben Datensatz gleichzeitig zu aktualisieren. Das Token-Management verhindert hier, dass zwei Parteien dieselbe kritische Operation gleichzeitig durchführen, was zu Dateninkonsistenzen führen könnte. (Richtig)
+- Ein Videokonferenzsystem, das bestimmen muss, welcher Teilnehmer gerade sprechen darf. Dies ist hauptsächlich eine Funktion der Dialog-Kontrolle, nicht des Token-Managements, da es um die Steuerung der Übertragungsreihenfolge geht. (Falsch)
+- Ein Backup-System, das nach einem Systemabsturz die Datenübertragung an einem zuvor gespeicherten Punkt fortsetzt. Dies demonstriert primär die Synchronisationsfunktion mit ihren Checkpoints, nicht das Token-Management. (Falsch)
+- Ein Netzwerkprotokoll, das sicherstellt, dass Datenpakete in der richtigen Reihenfolge ankommen. Dies ist eine Funktion der Transportschicht und nicht der Session-Schicht. (Falsch)

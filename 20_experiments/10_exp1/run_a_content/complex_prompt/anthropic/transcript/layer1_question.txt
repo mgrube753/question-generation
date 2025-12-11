@@ -1,0 +1,8 @@
+Frage: Ein Netzwerkingenieur plant ein neues System, bei dem Daten über verschiedene Medien übertragen werden sollen. Bei der Analyse der Anforderungen auf dem Physical Layer stellt er fest, dass ein kritischer Prozess fehlt. Welche der folgenden Aussagen beschreibt am besten ein mögliches Problem, das auftreten könnte, wenn eine der drei Kernaufgaben des Physical Layers nicht angemessen implementiert wird?
+
+Antwortmöglichkeiten:
+- Wenn die Codierung unzureichend definiert ist, könnten dieselben physikalischen Signale von verschiedenen Empfängern unterschiedlich interpretiert werden, was zu Inkonsistenzen in den übertragenen Daten führt. (Richtig)
+- Wenn die Übertragung über medienfrei erfolgt, ist eine Codierung nicht notwendig, da elektromagnetische Wellen direkt als logische Werte interpretiert werden können. (Falsch)
+- Der Dekodierungsprozess ist nur relevant, wenn unterschiedliche Medientypen verwendet werden, bei homogenen Netzwerken kann dieser Schritt übersprungen werden. (Falsch)
+- Die drei Kernaufgaben (Codierung, Transport, Dekodierung) sind voneinander unabhängig und können daher isoliert implementiert werden, ohne dass dies Auswirkungen auf die Gesamtfunktionalität hat. (Falsch)
+- Bei der Verwendung von Licht als Übertragungsmedium muss der Physical Layer entweder für mediengebundene oder medienfreie Übertragung optimiert sein, eine duale Unterstützung ist technisch unmöglich. (Falsch)

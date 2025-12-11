@@ -1,0 +1,9 @@
+Frage: Identifizieren Sie alle Aufgaben, die gemäß OSI-Modell dem Network Layer (Schicht 3) zugeordnet sind.  
+
+Antwortmöglichkeiten:  
+a) Routing zwischen nicht direkt verbundenen Knoten (Richtig)  
+b) Endian-Konvertierung der Datendarstellung (Falsch)  
+c) Sicherstellung der Dienstqualität (QoS) für Teilnehmer (Falsch)  
+d) Vergabe netzwerkübergreifender Adressen (Richtig)  
+e) Komprimieren und Dekomprimieren der Daten (Falsch)  
+f) End-to-End-Flusssteuerung zwischen Sender und entferntem Empfänger (Richtig)

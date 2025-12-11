@@ -1,0 +1,10 @@
+Frage: Welche Aufgaben werden gemäß dem Text im Presentation Layer (Schicht 6) des ISO-OSI-Modells ausgeführt?
+
+Antwortmöglichkeiten:
+- Konvertierung von Datendarstellungen zwischen Little und Big Endian (Richtig)
+- Serialisierung komplexer Objekte und Datenstrukturen (Richtig)
+- Konvertierung verschiedener Zeichendarstellungen wie ASCII, Unicode und EBCDIC (Richtig)
+- Kompression und Verschlüsselung von Daten (Richtig)
+- Routing von Datenpaketen zwischen verschiedenen Netzwerken (Falsch)
+- Herstellung physischer Verbindungen zwischen Endgeräten (Falsch)
+- Sitzungsverwaltung und Dialog-Kontrolle (Falsch)

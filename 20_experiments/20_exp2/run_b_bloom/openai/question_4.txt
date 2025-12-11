@@ -1,0 +1,7 @@
+Frage: Analysieren Sie die Implementierungen der Flusskontrolle in den ISO-OSI-Schichten 2, 3 und 4 und wählen Sie die Aussage aus, die die jeweiligen Wirkungsbereiche dieser Funktion zutreffend voneinander unterscheidet.
+
+Antwortmöglichkeiten:
+a) Layer 2 realisiert Flusskontrolle ausschließlich link-lokal zwischen direkt verbundenen Knoten; Layer 3 kann Flusskontrolle sowohl link-lokal als auch end-to-end einsetzen; Layer 4 führt Flusskontrolle speziell bezogen auf die Charakteristik der kommunizierenden Endsysteme end-to-end durch. (Richtig)
+b) Layer 2 und Layer 3 verwenden identische Flusskontrollmechanismen, während Layer 4 keine Flusskontrolle bereitstellt. (Falsch)
+c) Flusskontrolle in Layer 3 beschränkt sich auf Router-interne Pufferverwaltung, während Layer 2 und Layer 4 ausschließlich end-to-end Flusskontrolle liefern. (Falsch)
+d) Die Flusskontrolle wird ausschließlich in Layer 3 durchgeführt; Layer 2 übernimmt nur Fehlerkontrolle und Layer 4 nur Dienstqualität. (Falsch)

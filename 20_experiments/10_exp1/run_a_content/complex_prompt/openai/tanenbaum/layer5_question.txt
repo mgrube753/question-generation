@@ -1,0 +1,7 @@
+Frage: Bei einer verteilten Datenbank-Transaktion müssen zwei Bedingungen erfüllt sein: Erstens darf stets nur ein Knoten die kritische Commit-Phase initiieren können, und zweitens soll eine abgebrochene, sehr große Commit-Protokollübertragung nach einem Neustart exakt an der letzten gesicherten Stelle fortgesetzt werden. Welche Kombination von Sitzungsschicht-Diensten erfüllt beide Anforderungen gleichzeitig?
+
+Antwortmöglichkeiten:
+- Token Management und Synchronisation (Richtig)
+- Dialog Control und Token Management (Falsch)
+- Dialog Control und Synchronisation (Falsch)
+- Nur Token Management (Falsch)

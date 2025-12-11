@@ -1,0 +1,7 @@
+Frage: Der Data Link Layer 2 ist für die Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer zuständig. Angenommen, ein Sender versucht, Daten an einen Empfänger zu übertragen, wobei die physische Verbindung plötzlich eine signifikant erhöhte Fehlerrate aufweist und gleichzeitig die Empfangspuffer des Zielgeräts zu überlaufen drohen. Welche der folgenden Maßnahmen oder Zusammenspiele von Kernaufgaben des Data Link Layer 2 sind primär dafür verantwortlich, die Integrität und den Fluss der Daten unter diesen erschwerten Bedingungen aufrechtzuerhalten?
+
+Antwortmöglichkeiten:
+- Die Flusskontrolle priorisiert das Zwischenpuffern und Herunterregeln der Senderate, während die Medienzugriffskontrolle sicherstellt, dass nur fehlerfreie Segmente übertragen werden. (Falsch)
+- Die Segmentierung unterteilt die Daten in kleinere Einheiten, um die Auswirkungen von Einzelbitfehlern zu minimieren, während die Identifikation die effiziente Adressierung von fehlerhaften Paketen für die Neuübertragung ermöglicht. (Falsch)
+- Die Fehlerkontrolle erkennt und korrigiert die Übertragungsfehler, gegebenenfalls durch Neuübertragung der betroffenen Segmente, und die Flusskontrolle passt die Senderate dynamisch an die Verarbeitungsfähigkeit des Empfängers an, um Pufferüberläufe zu verhindern. (Richtig)
+- Die Medienzugriffskontrolle reserviert exklusive Übertragungszeiten für kritische Daten, und die Segmentierung fasst die Bits zu einer Einheit zusammen, die robust gegen hohe Fehlerraten ist. (Falsch)

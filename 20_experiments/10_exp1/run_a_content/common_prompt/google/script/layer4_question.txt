@@ -1,0 +1,8 @@
+Frage: Welche der folgenden Aufgaben gehören zu den Kernaufgaben des Transport Layer (Schicht 4) im ISO-OSI-Modell, basierend auf dem bereitgestellten Text?
+
+Antwortmöglichkeiten:
+- Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes (Richtig)
+- Sicherung der Quality of Service (QoS) mit Garantien für Bandbreite, Latenz und Fehlerrate (Richtig)
+- Adressierung von Teilnehmern (Richtig)
+- Umwandlung von IP-Adressen in MAC-Adressen (Falsch)
+- Steuerung des Datenflusses unter Nutzung der Teilnehmer-Charakteristik (Richtig)

@@ -1,0 +1,8 @@
+Frage: Listen Sie die fünf Kernaufgaben des Data Link Layers auf.
+
+Antwort:
+a) Fehlerkontrolle (Richtig)
+b) Flusskontrolle (Richtig)
+c) Identifikation (Richtig)
+d) Medienzugriff (Richtig)
+e) Segmentierung (Richtig)

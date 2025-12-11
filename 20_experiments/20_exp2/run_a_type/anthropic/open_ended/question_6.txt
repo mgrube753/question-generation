@@ -1,0 +1,11 @@
+Frage: Analysieren Sie die Flusssteuerungsmechanismen auf den verschiedenen Schichten des OSI-Modells (insbesondere auf den Schichten 2, 3 und 4) und erläutern Sie, warum die Implementierung der Flusssteuerung auf mehreren Ebenen notwendig ist, obwohl dies scheinbar redundant erscheint. Beziehen Sie in Ihre Analyse ein, wie sich die Zielsetzungen der Flusssteuerung auf den verschiedenen Schichten unterscheiden und welche spezifischen Probleme sie jeweils adressieren.
+
+Antwort: Die Flusssteuerung auf verschiedenen OSI-Schichten dient unterschiedlichen Zwecken und adressiert spezifische Herausforderungen:
+
+Die Flusssteuerung auf Schicht 2 (Data Link Layer) erfolgt direkt zwischen physisch verbundenen Geräten und behandelt lokale Übertragungsprobleme wie Pufferüberläufe bei unterschiedlichen Verarbeitungsgeschwindigkeiten. Sie implementiert Mechanismen wie "Zwischenpuffern", "Herunterregeln" oder "Warten lassen", um eine zuverlässige Punkt-zu-Punkt-Verbindung zu gewährleisten.
+
+Auf Schicht 3 (Network Layer) erweitert sich die Flusssteuerung auf netzwerkübergreifende Kommunikation und unterscheidet zwischen End-to-End- und Node-to-Node-Strategien. Sie muss mit heterogenen Netzwerken und unterschiedlichen Layer-2-Technologien umgehen können und verhindert Überlastungen in Routing-Pfaden zwischen entfernten Endpunkten.
+
+Die Flusssteuerung auf Schicht 4 (Transport Layer) ist anwendungsorientiert und berücksichtigt die spezifischen Charakteristiken der kommunizierenden Teilnehmer. Sie stellt sicher, dass Daten entsprechend der Verarbeitungskapazität der Anwendungen übertragen werden und kann Quality-of-Service-Parameter garantieren.
+
+Diese scheinbare Redundanz ist notwendig, weil jede Schicht andere Verantwortungsbereiche und Sichtbarkeiten hat. Die Schicht-2-Flusssteuerung hat keine Kenntnis über das Gesamtnetzwerk, während die Schicht-3-Flusssteuerung nichts über Anwendungsanforderungen weiß. Nur durch die koordinierte Implementierung auf allen Ebenen kann eine optimale End-to-End-Kommunikation über heterogene Netzwerke mit unterschiedlichen Leistungsmerkmalen gewährleistet werden. (Richtig)

@@ -1,0 +1,5 @@
+Frage: Beurteilen Sie die Doppelimplementierung der Flusssteuerung im OSI-Modell hinsichtlich ihrer Effektivität. Begründen Sie, welcher Layer – Data Link Layer oder Transport Layer – in einem weiträumigen, latenzkritischen Satellitennetz primär die Flusssteuerung übernehmen sollte und verteidigen Sie Ihre Entscheidung mit zwei technischen Argumenten.
+
+Antwort: Der Transport Layer sollte primär die Flusssteuerung übernehmen, weil er a) End-to-End-Kenntnis über die gesamte Pfadlatenz und Bandbreite besitzt und dadurch die Sende-Fenster an die hohe Round-Trip-Time eines Satellitenlinks anpassen kann, und b) nur er Stau über mehrere Hops hinweg erkennen und regulieren kann, während eine rein hop-bezogene Data-Link-Kontrolle bei großer Latenz zu ineffizienter Bandbreitennutzung und Pufferüberläufen führt. (Richtig)
+
+Antwort: Der Data Link Layer sollte alleine die Flusssteuerung übernehmen, weil seine Nähe zum physischen Medium ausreicht, um Verzögerungen im Satellitenlink vollständig zu kompensieren. (Falsch)

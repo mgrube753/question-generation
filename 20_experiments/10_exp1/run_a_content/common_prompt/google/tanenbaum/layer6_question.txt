@@ -1,0 +1,7 @@
+Frage: Welche der folgenden Aussagen beschreibt die Hauptaufgabe der Darstellungsschicht (Presentation Layer) im ISO-OSI-Modell, basierend auf dem gegebenen Text?
+
+Antwortmöglichkeiten:
+- Sie befasst sich hauptsächlich mit der Bewegung von Bits über das Netzwerk. (Falsch)
+- Sie ermöglicht die Kommunikation zwischen Computern mit unterschiedlichen internen Datenrepräsentationen, indem sie die Syntax und Semantik der übertragenen Informationen verwaltet und abstrakte Datenstrukturen sowie Standardkodierungen handhabt. (Richtig)
+- Sie ist verantwortlich für das Routing von Datenpaketen zum korrekten Ziel. (Falsch)
+- Sie sorgt für die physische Verbindung zwischen Geräten. (Falsch)

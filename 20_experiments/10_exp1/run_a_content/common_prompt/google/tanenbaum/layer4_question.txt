@@ -1,0 +1,8 @@
+Frage: Welche der folgenden Aussagen beschreiben eine Funktion oder ein Merkmal der Transportschicht im ISO-OSI-Modell gemäß dem bereitgestellten Text?
+
+Antwortmöglichkeiten:
+- Die Transportschicht isoliert die oberen Schichten von Änderungen in der Hardware-Technologie. (Richtig)
+- Eine der Hauptfunktionen der Transportschicht ist die Weiterleitung von Daten an die physikalische Schicht. (Falsch)
+- Die Transportschicht bestimmt die Art des Dienstes, der der Sitzungsschicht und den Benutzern des Netzwerks zur Verfügung gestellt wird, wie z.B. eine fehlerfreie Punkt-zu-Punkt-Verbindung oder das Broadcasting von Nachrichten. (Richtig)
+- Die Transportschicht ist eine echte End-to-End-Schicht, bei der Programme auf der Quellmaschine direkt mit Programmen auf der Zielmaschine kommunizieren. (Richtig)
+- Protokolle der Transportschicht agieren primär zwischen einer Maschine und ihren unmittelbaren Nachbarn im Netzwerk. (Falsch)

@@ -1,0 +1,8 @@
+Frage: Welche der folgenden Punkte gehören laut dem bereitgestellten Text zu den Kernaufgaben des Application Layers (Schicht 7) des ISO-OSI-Modells?
+
+Antwortmöglichkeiten:
+- Festlegung, welche Begriffe in der Anwendung auftreten. (Richtig)
+- Beschreibung, wie die Anwendung auf Anforderungen durch Protokollelemente reagiert. (Richtig)
+- Definition, welche Anforderungen an Protokollelemente gestellt werden können und welche Daten dabei erwartet werden. (Richtig)
+- Die Verwaltung und Beendigung von Sitzungen zwischen Anwendungen. (Falsch)
+- Die Segmentierung von Daten zur Übertragung über das Netzwerk. (Falsch)

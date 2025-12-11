@@ -1,0 +1,9 @@
+Frage: Welche Kernaufgaben sind laut dem Text dem Session Layer (Schicht 5) des ISO-OSI-Modells zugeordnet?
+
+Antwortmöglichkeiten:
+-   Aufbau, Verwaltung und Beendigung von Sitzungen (Richtig)
+-   Setzen von Synchronisationspunkten (Richtig)
+-   Bündelung zusammengehöriger Transaktionen (Richtig)
+-   Verschlüsselung und Komprimierung von Daten (Falsch)
+-   Logische Adressierung und Routing von Datenpaketen (Falsch)
+-   Ende-zu-Ende-Flusskontrolle und Fehlerkorrektur (Falsch)

@@ -1,0 +1,8 @@
+Frage: Angenommen, auf einer drahtlosen Punkt-zu-Punkt-Verbindung treten sporadische Bitfehler auf, während der Sender Daten schneller liefert, als der Empfänger sie aufnehmen kann. Welche zwei Kernaufgaben der Data-Link-Schicht müssen hier gemeinsam eingesetzt werden, um dennoch eine korrekte und verlustfreie Übertragung zu gewährleisten?
+
+Antwortmöglichkeiten:
+- Fehlerkontrolle (Richtig)
+- Flußkontrolle (Richtig)
+- Segmentierung (Falsch)
+- Identifikation (Falsch)
+- Medienzugriff (Falsch)

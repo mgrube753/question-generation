@@ -1,0 +1,8 @@
+Frage: Welche drei Kernaufgaben erfüllt der Network Layer (Schicht 3) im ISO-OSI-Modell?
+
+Antwortmöglichkeiten:
+- Adressierung, Routing und Flusssteuerung (Richtig)
+- Synchronisation, Fragmentierung und Multiplexing (Falsch)
+- Bitübertragung, Fehlererkennung und Zugriffssteuerung (Falsch)
+- Datenkompression, Verschlüsselung und Authentifizierung (Falsch)
+- Ende-zu-Ende-Verbindung, Segmentierung und Wiederherstellung (Falsch)

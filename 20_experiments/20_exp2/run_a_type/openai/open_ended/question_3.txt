@@ -1,0 +1,9 @@
+Frage: Ein Benutzer lädt eine komprimierte und verschlüsselte Datei von einem Webserver herunter. Erläutern Sie für jede der sieben Schichten des ISO-OSI-Modells a) die im Rahmen dieses Szenarios ausgeführte charakteristische Kernaufgabe und b) ein mögliches technisches Verfahren oder Protokoll, das diese Aufgabe realisiert.
+
+Antwort: a) Physical Layer: Codierung der logischen Bits in elektrische Signale mittels Manchester Encoding auf einer 100BASE-TX-Ethernet-Verbindung  
+b) Data Link Layer: Fehlerkontrolle durch Prüfsummen (CRC) innerhalb des Ethernet-Frames  
+c) Network Layer: Routing des IP-Pakets über Zwischenknoten auf Basis einer globalen IPv4-Adresse  
+d) Transport Layer: Dienstqualität durch TCP-Congestion-Control und Port-Adressierung  
+e) Session Layer: Aufbau und Verwaltung einer TLS-Sitzung einschließlich Aushandlung von Wiederaufnahme-Parametern  
+f) Presentation Layer: Verschlüsselung und optionale Kompression der Nutzdaten im TLS-Record-Layer (z. B. AES-GCM und DEFLATE)  
+g) Application Layer: HTTP-GET-Anfrage mit dem Header „Accept-Encoding: gzip“ und Auslieferung der Datei als gzip-komprimierter Body (Richtig)
