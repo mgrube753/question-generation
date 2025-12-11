@@ -113,7 +113,7 @@ def load_concatenated_content():
 
 
 def generate_mcq_question(
-    llm_name, clients, source_text, bloom_level, bloom_data, max_tokens=2400
+    llm_name, clients, source_text, bloom_level, bloom_data, max_tokens=4000
 ):
     """
     Generate a Multiple-Choice question using the 3-step MCQ pipeline:
@@ -140,7 +140,7 @@ def generate_mcq_question(
     )
 
     stem_result = llm_generation(
-        llm_name, clients, stem_prompt, max_tokens=max_tokens // 3
+        llm_name, clients, stem_prompt, max_tokens=max_tokens // 2
     )
     if not stem_result:
         return None
@@ -160,7 +160,7 @@ def generate_mcq_question(
     )
 
     keys_result = llm_generation(
-        llm_name, clients, keys_prompt, max_tokens=max_tokens // 3
+        llm_name, clients, keys_prompt, max_tokens=max_tokens // 2
     )
     if not keys_result:
         return None
@@ -180,7 +180,7 @@ def generate_mcq_question(
     )
 
     distractors_result = llm_generation(
-        llm_name, clients, distractors_prompt, max_tokens=max_tokens // 3
+        llm_name, clients, distractors_prompt, max_tokens=max_tokens // 2
     )
     if not distractors_result:
         return None
@@ -202,7 +202,7 @@ def generate_mcq_question(
 
 
 def generate_open_ended_question(
-    llm_name, clients, source_text, bloom_level, bloom_data, max_tokens=2400
+    llm_name, clients, source_text, bloom_level, bloom_data, max_tokens=4000
 ):
     """
     Generate an Open-Ended question.
@@ -346,7 +346,7 @@ def run_exp1(clients):
                         bloom_data,
                         output_path,
                         f"L{layer_num} MCQ {bloom_level}",
-                        2400,
+                        4000,
                     )
                 )
                 csv_rows.append([llm_name, layer_num, "mcq", bloom_level, bloom_idx])
@@ -375,7 +375,7 @@ def run_exp1(clients):
                         bloom_data,
                         output_path,
                         f"L{layer_num} OE {bloom_level}",
-                        2400,
+                        4000,
                     )
                 )
                 csv_rows.append(
@@ -439,7 +439,7 @@ def run_exp2(clients):
                         bloom_data,
                         output_path,
                         f"MCQ B{bloom_idx} Q{q_num}",
-                        2400,
+                        4000,
                     )
                 )
                 csv_rows.append([llm_name, "mcq", bloom_level, bloom_idx, q_num])
@@ -467,7 +467,7 @@ def run_exp2(clients):
                         bloom_data,
                         output_path,
                         f"OE B{bloom_idx} Q{q_num}",
-                        2400,
+                        4000,
                     )
                 )
                 csv_rows.append([llm_name, "open_ended", bloom_level, bloom_idx, q_num])

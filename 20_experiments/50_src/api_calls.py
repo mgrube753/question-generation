@@ -7,7 +7,7 @@ def gen_with_anthropic(client, prompt_text, model_id, max_tokens):
     try:
         response = client.messages.create(
             model=model_id,
-            thinking={"type": "enabled", "budget_tokens": 1100},
+            thinking={"type": "enabled", "budget_tokens": 1800},
             messages=[{"role": "user", "content": prompt_text}],
             max_tokens=max_tokens,
         )
@@ -36,7 +36,7 @@ def gen_with_openai(client, prompt_text, model_id, max_tokens):
             model=model_id,
             reasoning={"effort": "high"},
             input=[{"role": "user", "content": prompt_text}],
-            max_tokens=max_tokens,
+            max_output_tokens=max_tokens,
         )
         if (
             response.status == "incomplete"
