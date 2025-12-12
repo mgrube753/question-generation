@@ -1,8 +1,0 @@
-Frage: Analysieren Sie die Mechanismen der Flusskontrolle in den Schichten 2, 3 und 4 des ISO/OSI-Modells und diskutieren Sie, inwiefern sich ihre jeweiligen Zielsetzungen, Sichtbarkeiten und Implementierungen unterscheiden. Verdeutlichen Sie Ihre Antwort, indem Sie je Schicht ein konkretes Beispiel für eine typische Strategie nennen.
-
-Antwort: a) Data Link Layer (Schicht 2): Flusskontrolle wirkt nur zwischen zwei direkt verbundenen Knoten (Node-to-Node); Ziel ist es, den Pufferüberlauf beim unmittelbaren Empfänger zu verhindern. Typische Strategie: Stop-and-Wait- oder Credit-Based-Verfahren.  
-b) Network Layer (Schicht 3): Flusskontrolle kann Node-to-Node oder End-to-End entlang des gesamten Pfades betreffen; Ziel ist die Überlastvermeidung innerhalb des Netzes. Typische Strategie: ICMP Source Quench oder Explicit Congestion Notification.  
-c) Transport Layer (Schicht 4): End-to-End-Flusskontrolle zwischen den Kommunikations­teilnehmern; Ziel ist die Anpassung an die Empfangskapazität sowie die Einhaltung vereinbarter Dienstqualitäten. Typische Strategie: Sliding-Window-Verfahren mit dynamischer Fenstergrößenanpassung (z. B. bei TCP).  
-Damit weitet sich mit höherer Schicht die Betrachtungsspanne von der lokalen Verbindung (Schicht 2) über das gesamte Netz (Schicht 3) bis zur Ende-zu-Ende-Sitzung (Schicht 4), während die Mechanismen zunehmend abstrakt und softwareorientiert werden. (Richtig)
-
-Antwort: Flusskontrolle wird ausschließlich in der Physical Layer umgesetzt; die Schichten 2 bis 4 besitzen dafür keine eigenen Verfahren. (Falsch)

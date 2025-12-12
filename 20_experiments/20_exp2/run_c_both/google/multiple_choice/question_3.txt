@@ -1,7 +1,0 @@
-Frage: Ein Netzwerkadministrator stellt fest, dass Datenpakete zwischen zwei Geräten, die sich in unterschiedlichen Subnetzen befinden, trotz korrekter physischer Verbindung nicht ihr Ziel erreichen, weil der optimale Übertragungsweg durch verschiedene Router nicht ermittelt wird. Welche Kernaufgabe eines OSI-Layers muss in diesem Szenario primär überprüft und konfiguriert werden, um das Problem zu lösen?
-
-Antwortmöglichkeiten:
-a) Die Fehlerkontrolle im Data Link Layer (Falsch)
-b) Die Segmentierung im Data Link Layer (Falsch)
-c) Das Routing im Network Layer (Richtig)
-d) Die Dienstqualität im Transport Layer (Falsch)

@@ -1,6 +1,0 @@
-Frage: Klassifizieren und erklären Sie die Flusskontroll-Mechanismen der Schichten 2, 3 und 4 des ISO-OSI-Modells hinsichtlich ihrer jeweiligen Wirkungsbereiche innerhalb eines Kommunikationssystems.
-
-Antwort:  
-a) Schicht 2 (Data Link Layer): Flusskontrolle wirkt ausschließlich link-lokal zwischen zwei unmittelbar verbundenen Knoten; sie bremst oder puffert, wenn der Empfänger den physischen Übertragungsfluss auf dem Medium nicht in Echtzeit verarbeiten kann.  
-b) Schicht 3 (Network Layer): Flusskontrolle kann sowohl node-to-node als auch end-to-end greifen; sie adressiert Stau auf Zwischenknoten und koordiniert die Weiterleitung über mehrere Netze hinweg, um Überlastungen entlang des Pfades zu vermeiden.  
-c) Schicht 4 (Transport Layer): Flusskontrolle ist rein end-to-end zwischen den kommunizierenden Teilnehmer-Prozessen angesiedelt; sie passt die Sendegeschwindigkeit an die Verarbeitungskapazität des entfernten Hosts bzw. der Anwendung an und nutzt dazu z. B. Fenster- oder Kreditverfahren. (Richtig)

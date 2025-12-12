@@ -1,8 +1,0 @@
-Frage: In einem Netzwerk tritt eine Überlastungssituation auf, bei der Router an einem Knotenpunkt beginnen, Pakete zu verwerfen. Welche Kernaufgabe(n) des Network Layer 3 ist/sind primär betroffen, und welche sekundären Auswirkungen könnten auf die anderen Kernaufgaben entstehen?
-
-Antwortmöglichkeiten:
-- Die Flusssteuerung ist primär betroffen, da sie für die Bewältigung von Überlastungen zuständig ist. Als sekundäre Auswirkung könnte das Routing neue Pfade suchen müssen, um überlastete Knoten zu umgehen. (Richtig)
-- Die Adressierung ist primär betroffen, da in Überlastungssituationen die Netzwerk-übergreifenden Adressen nicht mehr korrekt aufgelöst werden können. (Falsch)
-- Das Routing ist die einzige betroffene Kernaufgabe, da nur die Wegfindung durch Paketverluste beeinträchtigt wird. (Falsch)
-- Die Flusssteuerung betrifft nur die End-to-End-Kommunikation und hat keine Auswirkung auf das Verwerfen von Paketen in Zwischenknoten. (Falsch)
-- Sowohl Flusssteuerung (Node-to-Node) als auch Routing sind primär betroffen, da Überlastungen sowohl die Datenflussregulierung zwischen benachbarten Knoten als auch die Auswahl alternativer Routen beeinflussen. (Richtig)

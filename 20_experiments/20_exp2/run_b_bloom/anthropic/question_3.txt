@@ -1,8 +1,0 @@
-Frage: Bei der Analyse eines Netzwerkproblems stellen Sie fest, dass Datenpakete zwischen zwei Rechnern in verschiedenen Netzwerken nicht korrekt weitergeleitet werden. Der physische Verbindungsaufbau und die Datenübertragung auf Linkebene funktionieren einwandfrei, jedoch kommt es zu Fehlern bei der Weiterleitung zwischen den Netzwerken. Welche Schicht des ISO-OSI-Modells müssen Sie untersuchen, um dieses Problem zu beheben, und welche Kernaufgabe dieser Schicht ist vermutlich betroffen?
-
-Antwortmöglichkeiten:
-a) Network Layer (Layer 3) mit Fokus auf die Routing-Funktionalität, da hier die Weiterleitung zwischen verschiedenen Netzwerken stattfindet. (Richtig)
-b) Transport Layer (Layer 4) mit Fokus auf die Dienstqualität, da hier die Ende-zu-Ende-Verbindung zwischen den Rechnern hergestellt wird. (Falsch)
-c) Data Link Layer (Layer 2) mit Fokus auf Fehlerkontrolle, da hier möglicherweise Übertragungsfehler nicht korrekt erkannt werden. (Falsch)
-d) Physical Layer (Layer 1) mit Fokus auf Decodierung, da die Interpretation der physikalischen Signale fehlerhaft sein könnte. (Falsch)
-e) Session Layer (Layer 5) mit Fokus auf Synchronisation, da die Sitzung zwischen den Kommunikationspartnern nicht korrekt aufgebaut wird. (Falsch)

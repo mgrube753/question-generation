@@ -1,7 +1,0 @@
-Frage: Ein Netzwerkexperte möchte ein System entwickeln, das Videokonferenz-Daten über ein überlastetes Netzwerk priorisiert. Welche der folgenden Implementierungen auf der Transport-Schicht (Layer 4) würde am effektivsten die beschriebenen Kernaufgaben umsetzen, um eine flüssige Videoübertragung zu gewährleisten?
-
-Antwortmöglichkeiten:
-- Ein System, das dynamisch die Bandbreitenanforderungen analysiert, bestimmte Ports für Videokonferenzen reserviert und adaptive Flusssteuerungsmechanismen implementiert, die sich an die Netzwerkbedingungen und Endgerätekapazitäten anpassen (Richtig)
-- Ein System, das ausschließlich auf Adressierung durch Priorisierung aller Pakete mit Videokonferenz-IP-Adressen setzt, ohne Berücksichtigung der Netzwerkauslastung oder Endgerätecharakteristik (Falsch)
-- Ein System, das eine statische Quality of Service-Garantie bietet, indem es eine feste Bandbreite für alle Videokonferenzen reserviert, unabhängig von den tatsächlichen Anforderungen der einzelnen Teilnehmer (Falsch)
-- Ein System, das die Flusssteuerung optimiert, indem es die Datenrate konstant hält und keine dynamischen Anpassungen an veränderte Netzwerkbedingungen vornimmt (Falsch)

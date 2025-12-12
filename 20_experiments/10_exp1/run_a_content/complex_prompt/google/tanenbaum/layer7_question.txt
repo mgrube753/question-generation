@@ -1,7 +1,0 @@
-Frage: Angesichts der Beschreibung der Anwendungsschicht, die Protokolle wie HTTP, Dateitransfer, elektronische Post und Netzwerk-News umfasst und als "commonly needed by users" charakterisiert wird, welche übergeordnete Funktion erfüllt diese Schicht im Kontext des gesamten ISO-OSI-Modells, die sie von den darunterliegenden Schichten fundamental unterscheidet?
-
-Antwortmöglichkeiten:
-- Sie stellt sicher, dass Datenpakete effizient über das physische Medium übertragen werden, indem sie Übertragungsfehler korrigiert. (Falsch)
-- Sie definiert die Syntax und Semantik der Daten, die von Anwendungssoftware genutzt werden, und bietet Dienste, die direkt auf die Endnutzerbedürfnisse zugeschnitten sind. (Richtig)
-- Ihre primäre Aufgabe ist die logische Adressierung und das Routing von Datenpaketen über verschiedene Netzwerke hinweg. (Falsch)
-- Sie konzentriert sich auf die Bereitstellung einer zuverlässigen Ende-zu-Ende-Kommunikation zwischen Prozessen auf verschiedenen Systemen, unabhängig vom Netzwerktyp. (Falsch)

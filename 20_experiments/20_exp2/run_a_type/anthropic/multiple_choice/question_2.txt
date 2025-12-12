@@ -1,8 +1,0 @@
-Frage: Welche Aussage beschreibt korrekt einen fundamentalen Unterschied zwischen der Flusssteuerung im Transport Layer (4) und der Flusssteuerung im Data Link Layer (2)?
-
-Antwortmöglichkeiten:
-a) Die Flusssteuerung im Transport Layer berücksichtigt die spezifischen Charakteristiken der Teilnehmer, während die Flusssteuerung im Data Link Layer generische Strategien wie Zwischenpuffern oder Herunterregeln verwendet, wenn der Sender zu schnell für den Empfänger sendet. (Richtig)
-b) Die Flusssteuerung im Transport Layer befasst sich ausschließlich mit End-to-End-Kommunikation, während der Data Link Layer ausschließlich für die Node-to-Node-Flusssteuerung zuständig ist. (Falsch)
-c) Der Transport Layer implementiert Flusssteuerung durch Fehlererkennung und -korrektur, während der Data Link Layer dies durch Quality of Service (QoS)-Garantien erreicht. (Falsch)
-d) Die Flusssteuerung im Transport Layer ist optional, während sie im Data Link Layer eine obligatorische Kernaufgabe darstellt. (Falsch)
-e) Der Transport Layer verwendet Segmentierung als Hauptmethode der Flusssteuerung, während der Data Link Layer ausschließlich auf Medienzugriffskontrolle setzt. (Falsch)

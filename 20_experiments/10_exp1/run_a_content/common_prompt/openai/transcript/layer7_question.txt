@@ -1,8 +1,0 @@
-Frage: Welche drei Kernaufgaben des Application Layers (Layer 7) werden im Text beschrieben?
-
-Antwortmöglichkeiten:
-- Definition der in der Anwendung auftretenden Begriffe (Richtig)
-- Spezifikation der Protokollelemente, mit denen Kommunikationspartner Anforderungen und Daten austauschen (Richtig)
-- Festlegung, wie die Anwendung auf Anforderungen reagiert, z.B. durch Zustandsänderungen (Richtig)
-- Routing von Datenpaketen zwischen Netzwerken (Falsch)
-- Verschlüsselung auf Transportebene (Falsch)

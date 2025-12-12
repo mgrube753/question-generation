@@ -1,8 +1,0 @@
-Frage: Welche der folgenden Aussagen über die Anwendungsschicht und ihre Protokolle sind basierend auf dem gegebenen Text korrekt?
-
-Antwortmöglichkeiten:
-- HTTP ist ein weit verbreitetes Anwendungsprotokoll und die Grundlage für das World Wide Web. (Richtig)
-- Die Anwendungsschicht enthält Protokolle, die hauptsächlich von Netzwerkinfrastrukturen und nicht von Endnutzern benötigt werden. (Falsch)
-- Webbrowser verwenden HTTP, um Webseiten von Servern anzufordern, die dann die Seite zurücksenden. (Richtig)
-- Neben HTTP werden andere Anwendungsprotokolle ausschließlich für die Verschlüsselung von Datenübertragungen verwendet. (Falsch)
-- HTTP ist das einzige Anwendungsprotokoll, das im Text erwähnt wird. (Falsch)

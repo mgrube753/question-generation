@@ -1,8 +1,0 @@
-Frage: Welche der folgenden Aufgaben zählen zu den Kernaufgaben der Transportschicht (Layer 4) im ISO-OSI-Modell?
-
-Antwortmöglichkeiten:
-- Adressierung von Teilnehmern (Richtig)
-- Flusssteuerung unter Berücksichtigung der Teilnehmer-Charakteristik (Richtig)
-- Sicherstellung der Dienstqualität (Quality of Service) (Richtig)
-- Wegwahl (Routing) zwischen Netzwerken (Falsch)
-- Physikalische Signalkodierung (Falsch)

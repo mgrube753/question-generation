@@ -1,8 +1,0 @@
-Frage: Welche der folgenden Aufgaben gehören zu den Funktionen des Presentation Layers (Schicht 6) im ISO-OSI-Modell?
-
-Antwortmöglichkeiten:
-- Konvertierung der Datendarstellung, wie zum Beispiel zwischen Little- und Big-Endian. (Richtig)
-- Routing von Datenpaketen über verschiedene Netzwerke. (Falsch)
-- Verwaltung von Kompression und Verschlüsselung von Daten. (Richtig)
-- Aufbau und Beendigung von Kommunikationssitzungen. (Falsch)
-- Konvertierung verschiedener Zeichendarstellungen, z.B. von ASCII zu Unicode oder EBCDIC. (Richtig)

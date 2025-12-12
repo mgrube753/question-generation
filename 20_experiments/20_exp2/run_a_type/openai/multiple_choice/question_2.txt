@@ -1,7 +1,0 @@
-Frage: Bei welchen Schichten des OSI-Referenzmodells gehören Mechanismen zur Regulierung der Sendegeschwindigkeit (Flusskontrolle bzw. -steuerung) explizit zu den Kernaufgaben, und zwar ausschließlich bei diesen Schichten?
-
-Antwortmöglichkeiten:
-a) Nur Layer 2 und Layer 3 (Falsch)
-b) Layer 2, Layer 3 und Layer 4 (Richtig)
-c) Layer 1, Layer 2 und Layer 3 (Falsch)
-d) Layer 3, Layer 4 und Layer 5 (Falsch)

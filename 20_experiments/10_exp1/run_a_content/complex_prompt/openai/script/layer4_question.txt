@@ -1,7 +1,0 @@
-Frage: Welches der folgenden Netzszenarien illustriert primär die Dienstqualitäts-Funktion (QoS) der Transportschicht, deren Ziel es ist, verbindungsbezogene Garantien für Bandbreite, Latenz und Jitter sicherzustellen?
-
-Antwortmöglichkeiten:
-- Ein IP-Telefongespräch, das unterbrechungsfrei mit fester Bandbreite und geringer Verzögerung übertragen werden muss (Richtig)
-- Das Herunterladen einer großen Datei über FTP, bei dem der Sender kontinuierlich die Fenstergröße anpasst, um einen langsameren Empfänger nicht zu überlasten (Falsch)
-- Ein Router, der die Ziel-Portnummer nutzt, um eingehende Pakete an den richtigen Dienst weiterzuleiten (Falsch)
-- Das Abweisen weiterer Pakete durch einen Empfänger, weil dessen Empfangspuffer bereits voll ist (Falsch)

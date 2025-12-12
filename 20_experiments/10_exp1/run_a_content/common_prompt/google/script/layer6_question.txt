@@ -1,8 +1,0 @@
-Frage: Welche der folgenden Aufgaben fallen in den Verantwortungsbereich des Presentation Layer (Schicht 6) des ISO-OSI-Modells?
-
-Antwortmöglichkeiten:
-- Konvertierung der Zeichendarstellung (z.B. zwischen ASCII und Unicode) (Richtig)
-- Aufbau, Verwaltung und Beendigung von Kommunikationssitzungen (Falsch)
-- Komprimierung und Dekomprimierung von Daten (Richtig)
-- Routen von Datenpaketen zwischen verschiedenen Netzwerken (Falsch)
-- Verschlüsselung und Entschlüsselung von Anwendungsdaten (Richtig)

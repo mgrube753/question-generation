@@ -1,8 +1,0 @@
-Frage: Welche der folgenden Kernaufgaben werden im Physical Layer (Schicht 1) des ISO-OSI-Modells ausgeführt?
-
-Antwortmöglichkeiten:
-- Codierung logischer Werte in physikalische Größen (Richtig)
-- Transport physikalischer Größen von einem Ort zum anderen (Richtig)
-- Fehlerkorrektur durch Parity Bits (Falsch)
-- Decodierung physikalischer Größen in logische Werte (Richtig)
-- Routenberechnung zwischen Netzwerken (Falsch)

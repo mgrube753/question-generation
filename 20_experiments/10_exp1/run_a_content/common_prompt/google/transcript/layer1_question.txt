@@ -1,7 +1,0 @@
-Frage: Welche drei zentralen Kernaufgaben des Physical Layers im ISO-OSI-Modell werden im Text beschrieben?
-
-Antwortmöglichkeiten:
-- Codierung, Transport und Dekodierung (Richtig)
-- Fehlerkorrektur, Flusskontrolle und Adressierung (Falsch)
-- Sitzungsmanagement, Datenkomprimierung und Verschlüsselung (Falsch)
-- Segmentierung, Fragmentierung und Routenwahl (Falsch)

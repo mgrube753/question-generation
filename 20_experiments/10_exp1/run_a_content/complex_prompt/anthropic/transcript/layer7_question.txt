@@ -1,8 +1,0 @@
-Frage: Welche konzeptuelle Herausforderung unterscheidet den Application Layer (Layer 7) fundamental von den anderen Schichten des OSI-Modells, und wie wirkt sich diese auf die Standardisierbarkeit von Protokollen aus?
-
-Antwortmöglichkeiten:
-- Der Application Layer ist stark anwendungsabhängig, was eine generische, anwendungsfreie Systematisierung seiner Funktionen erschwert, da die Protokollelemente und Reaktionsmuster je nach Anwendungskontext variieren (Richtig)
-- Der Application Layer ist der einzige Layer, der keine direkten Kommunikationsprotokolle enthält, sondern nur Schnittstellen für Anwendungen bereitstellt (Falsch)
-- Der Application Layer wird durch die extreme Komplexität der Datenverarbeitung charakterisiert, während die unteren Layer ausschließlich für den Transport zuständig sind (Falsch)
-- Im Gegensatz zu den unteren Layern ist der Application Layer vollständig standardisiert und ermöglicht daher keine anwendungsspezifischen Implementierungen (Falsch)
-- Der Application Layer muss ausschließlich Grundkonzepte und Begriffe definieren, während die Protokollelemente durch den darunter liegenden Presentation Layer festgelegt werden (Falsch)

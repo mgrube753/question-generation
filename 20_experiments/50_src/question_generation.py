@@ -330,7 +330,6 @@ def run_exp1(clients):
                 bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
                 output_path = os.path.join(
                     constants.EXP1_PATH,
-                    "questions",
                     llm_name,
                     f"layer{layer_num}",
                     "mcq",
@@ -359,7 +358,6 @@ def run_exp1(clients):
                 bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
                 output_path = os.path.join(
                     constants.EXP1_PATH,
-                    "questions",
                     llm_name,
                     f"layer{layer_num}",
                     "open_ended",
@@ -426,7 +424,6 @@ def run_exp2(clients):
             for q_num in range(1, constants.EXP2_MCQ_PER_BLOOM + 1):
                 output_path = os.path.join(
                     constants.EXP2_PATH,
-                    "questions",
                     llm_name,
                     "mcq",
                     f"bloom{bloom_idx}_{slugify(bloom_level)}_q{q_num}.txt",
@@ -454,7 +451,6 @@ def run_exp2(clients):
             for q_num in range(1, constants.EXP2_OPEN_ENDED_PER_BLOOM + 1):
                 output_path = os.path.join(
                     constants.EXP2_PATH,
-                    "questions",
                     llm_name,
                     "open_ended",
                     f"bloom{bloom_idx}_{slugify(bloom_level)}_q{q_num}.txt",

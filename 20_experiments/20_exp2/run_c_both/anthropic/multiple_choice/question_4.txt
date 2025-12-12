@@ -1,8 +1,0 @@
-Frage: Analysieren Sie die Implementierung der Flusskontrolle in verschiedenen Schichten des ISO-OSI-Modells und bestimmen Sie, worin sich die Ansätze zur Behandlung von Übertragungsgeschwindigkeitsproblemen zwischen den Schichten unterscheiden.
-
-Antwortmöglichkeiten:
-a) Die Flusskontrolle auf dem Data Link Layer (Schicht 2) konzentriert sich auf direkt verbundene Geräte, während sie auf dem Network Layer (Schicht 3) sowohl End-to-End als auch Node-to-Node Strategien umfasst. (Richtig)
-b) Die Flusskontrolle auf dem Transport Layer (Schicht 4) nutzt die Teilnehmer-Charakteristik, während sie auf dem Data Link Layer (Schicht 2) hauptsächlich durch Verschlüsselung implementiert wird. (Falsch)
-c) Der Network Layer (Schicht 3) implementiert Flusskontrolle durch Medienreservierung, während der Transport Layer (Schicht 4) ausschließlich Segmentierung zur Geschwindigkeitsregulierung einsetzt. (Falsch)
-d) Die Flusskontrolle auf dem Data Link Layer (Schicht 2) beinhaltet Strategien wie Zwischenpuffern und Herunterregeln, während der Transport Layer (Schicht 4) diese auf die spezifischen Eigenschaften der Kommunikationsteilnehmer abstimmt. (Richtig)
-e) Flusskontrolle wird ausschließlich auf dem Application Layer (Schicht 7) implementiert, um die Überlastung aller darunterliegenden Schichten zu verhindern. (Falsch)

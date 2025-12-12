@@ -1,3 +1,0 @@
-Frage: Benennen Sie die drei Kernaufgaben des Network Layer im ISO-OSI-Modell.
-
-Antwort: Adressierung, Routing und Flußsteuerung (Richtig)

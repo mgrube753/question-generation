@@ -1,9 +1,0 @@
-Frage: Welche der folgenden Aufgaben fallen gemäß dem Text in den Verantwortungsbereich der Netzwerkschicht (Network Layer) im ISO-OSI-Modell?
-
-Antwortmöglichkeiten:
-- Die Bestimmung, wie Pakete von der Quelle zum Ziel geleitet werden. (Richtig)
-- Die Behandlung von Überlastungen (Congestion) im Subnetz. (Richtig)
-- Die Sicherstellung der Dienstgüte (Quality of Service), wie Verzögerung oder Laufzeit. (Richtig)
-- Die Überwindung von Problemen, die beim Verbinden heterogener Netzwerke auftreten können. (Richtig)
-- Die Verwaltung von TCP-Verbindungen und Segmentierungen. (Falsch)
-- Die physische Übertragung von Bits über das Medium. (Falsch)

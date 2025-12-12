@@ -1,9 +1,0 @@
-Frage: Stellen Sie sich vor, ein Netzwerkprotokoll verzichtet vollständig auf die Funktionalitäten des Session Layers (Schicht 5). Analysieren Sie kritisch, welche der folgenden Szenarien dadurch negativ beeinflusst würden und warum.
-
-Antwortmöglichkeiten:
-- Eine große Dateiübertragung bricht nach 90% ab und muss vollständig neu gestartet werden, da keine Synchronisationspunkte gesetzt wurden, die einen Wiederaufnahmepunkt markieren könnten. (Richtig)
-- Mehrere zusammengehörige Transaktionen werden einzeln und unkoordiniert verarbeitet, was die Integrität komplexer Operationen gefährdet. (Richtig)
-- Eine laufende Videokonferenz kann nicht ordnungsgemäß beendet werden, da der geregelte Sitzungsabbau nicht möglich ist. (Richtig)
-- Die Übertragungsgeschwindigkeit von Datenpaketen sinkt drastisch, da die Flusssteuerung nicht mehr funktioniert. (Falsch)
-- Die Daten erreichen den Empfänger in falscher Reihenfolge, da die Sequenzierung der Pakete nicht mehr gewährleistet ist. (Falsch)
-- Die Verschlüsselung der Daten ist nicht mehr gegeben, wodurch die Sicherheit der Kommunikation gefährdet ist. (Falsch)

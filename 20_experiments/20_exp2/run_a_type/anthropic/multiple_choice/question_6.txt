@@ -1,8 +1,0 @@
-Frage: Welche OSI-Schichten implementieren Funktionen zur Flusssteuerung und worin unterscheiden sich deren Ansätze konzeptionell?
-
-Antwortmöglichkeiten:
-a) Die Schichten 2 (Data Link), 3 (Network) und 4 (Transport) implementieren Flusssteuerung, wobei Layer 2 lokale Übertragungsprobleme behandelt, Layer 3 zwischen Node-to-Node und End-to-End unterscheidet und Layer 4 die spezifischen Charakteristiken der Teilnehmer berücksichtigt. (Richtig)
-b) Nur die Schichten 2 (Data Link) und 4 (Transport) implementieren Flusssteuerung, wobei Layer 2 sich auf Fehlerkorrektur konzentriert und Layer 4 auf die Bandbreitengarantie. (Falsch)
-c) Die Schichten 1 (Physical), 2 (Data Link) und 5 (Session) implementieren Flusssteuerung, wobei Layer 1 die physikalische Signalrate reguliert, Layer 2 die Übertragungsgeschwindigkeit anpasst und Layer 5 dies durch Synchronisationspunkte erreicht. (Falsch)
-d) Alle Schichten außer Layer 7 (Application) implementieren verschiedene Arten der Flusssteuerung, da dies eine Grundfunktion jeder Netzwerkschicht ist. (Falsch)
-e) Nur Layer 3 (Network) implementiert Flusssteuerung mit den Konzepten End-to-End und Node-to-Node, während andere Schichten sich auf Fehlerkorrektur und Adressierung konzentrieren. (Falsch)

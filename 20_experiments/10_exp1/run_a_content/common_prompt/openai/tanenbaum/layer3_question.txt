@@ -1,7 +1,0 @@
-Frage: Welche der folgenden Aufgaben gehören zur Network Layer im ISO-OSI-Modell?
-
-Antwortmöglichkeiten:
-- Bestimmung der Route von Paketen vom Sender zum Empfänger (Richtig)
-- Umgang mit Netzüberlastung (Congestion Control) (Richtig)
-- Verwaltung von Sitzungen zwischen Anwendungen (Falsch)
-- Umwandlung von Zeichensätzen für die Präsentationsebene (Falsch)

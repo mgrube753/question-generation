@@ -1,8 +1,0 @@
-Frage: Welche der folgenden Dienstleistungen werden von der Sitzungsschicht (Session Layer) des ISO-OSI-Modells angeboten?
-
-Antwortmöglichkeiten:
-- Dialogkontrolle (Richtig)
-- Token-Management (Richtig)
-- Synchronisation, z.B. durch Checkpointing bei langen Übertragungen (Richtig)
-- Routing von Datenpaketen zwischen verschiedenen Netzwerken (Falsch)
-- Fehlererkennung und -korrektur auf der Bit-Ebene (Falsch)

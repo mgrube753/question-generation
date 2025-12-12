@@ -1,8 +1,0 @@
-Frage: Welche der folgenden Aufgaben gehören zum Session Layer (Schicht 5) des ISO-OSI-Modells?
-
-Antwortmöglichkeiten:
-- Aufbau, Verwaltung und Beendigung von Sitzungen (Richtig)
-- Setzen von Synchronisationspunkten bei Datenübertragungen (Richtig)
-- Bündelung zusammengehöriger Transaktionen (Richtig)
-- Routing von Datenpaketen zwischen Netzwerken (Falsch)
-- Verschlüsselung der übertragenen Datenpakete (Falsch)

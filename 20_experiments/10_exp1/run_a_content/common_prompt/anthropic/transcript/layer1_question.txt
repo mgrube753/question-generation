@@ -1,9 +1,0 @@
-Frage: Welche der folgenden Aussagen beschreiben korrekt die Kernaufgaben des Physical Layers im ISO-OSI-Modell?
-
-Antwortmöglichkeiten:
-- Die Codierung bildet logische Werte auf physikalische Größen ab (Richtig)
-- Der Transport kann sowohl mediengebunden als auch medienfrei erfolgen (Richtig)
-- Die Dekodierung wandelt physikalische Größen zurück in logische Werte (Richtig)
-- Die Verschlüsselung der Daten zur Gewährleistung der Sicherheit (Falsch)
-- Die Adressierung von Netzwerkgeräten durch MAC-Adressen (Falsch)
-- Die Fehlererkennung durch Prüfsummenberechnung (Falsch)

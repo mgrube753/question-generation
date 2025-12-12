@@ -1,7 +1,0 @@
-Frage: Welche der folgenden Kernaufgaben ist dem Presentation Layer 6 zugeordnet?
-
-Antwortmöglichkeiten:
-a) Fehlerkontrolle (Falsch)
-b) Kompression (Richtig)
-c) Routing (Falsch)
-d) Medienzugriff (Falsch)

@@ -1,3 +1,0 @@
-Frage: Erläutern Sie anhand eines Szenarios, in dem ein Videostreaming-Dienst nach einem kurzzeitigen Netzwerkausfall nahtlos fortgesetzt werden soll, welche zwei Kernaufgaben der Session Layer 5 hierbei essenziell zusammenwirken und begründen Sie, wie deren Kooperation sowohl Datenverlust als auch redundante Übertragungen vermeidet.
-
-Antwort: Die Sitzungsverwaltung stellt die Sitzung nach dem Ausfall erneut her oder hält sie logisch offen, während die Synchronisationsfunktion zuvor gesetzte Zwischenpunkte nutzt; gemeinsam ermöglichen sie, dass der Stream exakt ab dem letzten Synchronisationspunkt weiterläuft, sodass keine Daten verlorengehen und bereits empfangene Sequenzen nicht erneut übertragen werden müssen (Richtig)

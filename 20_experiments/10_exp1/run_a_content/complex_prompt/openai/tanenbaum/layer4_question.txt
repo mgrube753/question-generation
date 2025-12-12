@@ -1,9 +1,0 @@
-Frage: Welche der folgenden Aussagen beschreibt(en) die Aufgaben und Eigenschaften der Transportschicht im ISO-OSI-Modell gemäß dem obigen Text?
-
-Antwortmöglichkeiten:
-- Sie stellt eine echte End-to-End-Kommunikation zwischen Quell- und Zielprogramm her. (Richtig)
-- Sie agiert ausschließlich zwischen unmittelbar benachbarten Netzwerkknoten. (Falsch)
-- Sie definiert nur verbindungslose Dienste ohne Reihenfolgegarantie. (Falsch)
-- Sie segmentiert die Daten bei Bedarf und sorgt dafür, dass alle Segmente korrekt am Ziel ankommen. (Richtig)
-- Sie schützt die oberen Schichten vor Veränderungen der zugrunde liegenden Hardwaretechnologie. (Richtig)
-- Sie bietet einen absolut fehlerfreien Kanal ohne jegliche Fehler. (Falsch)

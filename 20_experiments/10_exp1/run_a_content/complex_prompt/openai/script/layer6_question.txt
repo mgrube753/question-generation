@@ -1,9 +1,0 @@
-Frage: Welche der folgenden Funktionen sind originäre Aufgaben der OSI-Schicht 6 (Presentation Layer) und müssen dort ausgeführt werden, damit zwei unterschiedlich aufgebaute Hosts ihre Anwendungsdaten inhaltlich korrekt verstehen, ohne die Verbindungssteuerung anderer Schichten zu beeinflussen?
-
-Antwortmöglichkeiten:
-- Konvertierung von Little-Endian- zu Big-Endian-Darstellungen ganzer Zahlen (Richtig)
-- Komprimieren der Nutzdaten mittels Deflate-Algorithmus vor der Übertragung (Richtig)
-- Zeichensatzabbildung von Unicode auf landesspezifisches EBCDIC (Richtig)
-- Aushandeln von Sitzungsschlüssel-Lebensdauern während eines TLS-Handshakes (Falsch)
-- Verlustrate-basierte Flusskontrolle des Datenstroms (Falsch)
-- Aufbau eines zuverlässigen, ACK-basierten Transportkanals über ein unzuverlässiges Netzwerk (Falsch)

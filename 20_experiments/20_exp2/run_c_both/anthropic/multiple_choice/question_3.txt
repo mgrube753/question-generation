@@ -1,8 +1,0 @@
-Frage: Ein Netzwerkadministrator stellt fest, dass bei der Datenübertragung zwischen zwei Computern in verschiedenen Netzwerken gelegentlich Pakete verloren gehen. Um dieses Problem zu lösen, muss er ermitteln, welche Schicht des OSI-Modells für die Auswahl des optimalen Übertragungswegs zwischen diesen Netzwerken verantwortlich ist. Welche Schicht sollte er untersuchen und welche Kernaufgabe dieser Schicht ist für sein Problem relevant?
-
-Antwortmöglichkeiten:
-a) Network Layer (Schicht 3) mit der Kernaufgabe Routing (Richtig)
-b) Transport Layer (Schicht 4) mit der Kernaufgabe Dienstqualität (Falsch)
-c) Data Link Layer (Schicht 2) mit der Kernaufgabe Fehlerkontrolle (Falsch)
-d) Session Layer (Schicht 5) mit der Kernaufgabe Synchronisation (Falsch)
-e) Physical Layer (Schicht 1) mit der Kernaufgabe Transport (Falsch)

@@ -1,7 +1,0 @@
-Frage: Ein Netzwerkingenieur soll für einen Videostreaming-Dienst garantierte Bandbreite, geringe Latenz und minimalen Jitter bereitstellen, ohne dabei Änderungen an den Übertragungsmedien selbst vorzunehmen. Ermitteln Sie, auf welcher OSI-Schicht er vorrangig QoS-Mechanismen konfigurieren sollte, um dieses Ziel zu erreichen.
-
-Antwortmöglichkeiten:
-a) Transport Layer (Schicht 4) (Richtig)
-b) Physical Layer (Schicht 1) (Falsch)
-c) Data Link Layer (Schicht 2) (Falsch)
-d) Presentation Layer (Schicht 6) (Falsch)

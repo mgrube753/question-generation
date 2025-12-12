@@ -1,8 +1,0 @@
-Frage: Analysieren Sie die Konzepte der Flusskontrolle und Flusssteuerung, wie sie in den Schichten des ISO-OSI-Modells eingeführt werden, und differenzieren Sie die jeweiligen primären Aufgabenbereiche und angewandten Strategien zwischen diesen Schichten.
-
-Antwortmöglichkeiten:
-a) Die Flusskontrolle des Data Link Layer ist darauf ausgelegt, die Datenübertragung zwischen direkt verbundenen Systemen abzusichern, indem sie Mechanismen wie Zwischenpuffern und Herunterregeln implementiert, um eine Überlastung des Empfängers durch einen zu schnell sendenden Sender zu verhindern. (Richtig)
-b) Der Network Layer implementiert eine Flusssteuerung, die sich auf die Verwaltung des Datenflusses über netzwerkübergreifende Pfade konzentriert, und unterscheidet dabei zwischen End-to-End-Strategien, die den gesamten Kommunikationsweg umfassen, und Node-to-Node-Ansätzen für die Steuerung zwischen aufeinanderfolgenden Knoten. (Richtig)
-c) Der Transport Layer bietet eine End-to-End-Flusssteuerung, die sich auf die Charakteristika der beteiligten Teilnehmer stützt, um eine optimale Dienstqualität zu gewährleisten und die Senderate spezifisch an die Anforderungen und Fähigkeiten der Anwendung oder des Endgeräts anzupassen. (Richtig)
-d) Die Flusssteuerung auf dem Physical Layer ist für die Anpassung der Übertragungsgeschwindigkeit basierend auf den Signalstärken und Leitungseigenschaften zuständig, um eine Überlastung der physikalischen Übertragungsmedien zu vermeiden. (Falsch)
-e) Der Session Layer ist für die gruppenbasierte Flusssteuerung verantwortlich, um sicherzustellen, dass Transaktionen innerhalb einer Sitzung konsistent und ohne Verzögerungen verarbeitet werden. (Falsch)

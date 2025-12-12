@@ -1,7 +1,0 @@
-Frage: Bewerten Sie die Designentscheidung, Flusskontrollmechanismen ausschließlich im Network Layer zu implementieren und sie im Data Link Layer sowie im Transport Layer vollständig zu eliminieren. Welche der folgenden Begründungen liefert die fundierteste Kritik an diesem Ansatz?
-
-Antwortmöglichkeiten:
-a) Der Network Layer hat keinen direkten Zugriff auf link-spezifische Pufferzustände; dadurch werden lokale Überlastungen erst spät erkannt, sodass verlorene Frames bereits vor einer Network-Layer-Reaktion auftreten können, was eine frühere Flusskontrolle im Data Link und Transport Layer unerlässlich macht. (Richtig)
-b) Da der Network Layer per Definition den vollständigen Einblick in alle Zwischenpuffer besitzt, kann Flusskontrolle dort granularer umgesetzt werden als in den unteren Schichten, weshalb die Verlagerung die Effizienz erhöht. (Falsch)
-c) Die Herausnahme der Flusskontrolle aus dem Transport Layer ist unkritisch, weil die Dienstqualität ausschließlich von der Anwendungsschicht garantiert wird und somit keine End-to-End-Regelung nötig ist. (Falsch)
-d) Eine Flusskontrolle im Network Layer ist zwingend erforderlich, weil das Data Link Layer keinerlei Geschwindigkeitssynchronisation zwischen Sender und Empfänger vorsieht. (Falsch)

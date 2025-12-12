@@ -1,7 +1,0 @@
-Frage: In einem Online-Bestellsystem müssen verschiedene Design-Entscheidungen getroffen werden. Welcher der folgenden Punkte liegt nach den drei im Text genannten Kernaufgaben eindeutig in der Verantwortung des Application Layers des ISO-OSI-Modells?
-
-Antwortmöglichkeiten:
-- Festlegung der semantischen Bedeutung und der erlaubten Parameter der Nachrichtentypen "ORDER_CREATE" und "ORDER_STATUS" (Richtig)
-- Bestimmung der maximalen Segmentgröße, die zwischen Endpunkten übertragen wird (Falsch)
-- Wahl des Sliding-Window-Mechanismus zur Flusskontrolle (Falsch)
-- Umsetzung der 4B/5B-Codierung zur Leitungskodierung auf dem Übertragungsmedium (Falsch)

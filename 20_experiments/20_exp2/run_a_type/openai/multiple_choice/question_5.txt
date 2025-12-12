@@ -1,8 +1,0 @@
-Frage: Welche der folgenden Aufgabenkombinationen werden jeweils innerhalb desselben ISO/OSI-Schichtmodells-Layers realisiert?
-
-Antwortmöglichkeiten:
-a) Medienzugriff und Fehlerkontrolle (Richtig)
-b) Routing und Dienstqualität (Falsch)
-c) Endian-Ness und Verschlüsselung (Richtig)
-d) Segmentierung und Synchronisation (Falsch)
-e) Sitzungen und Bündelung (Richtig)

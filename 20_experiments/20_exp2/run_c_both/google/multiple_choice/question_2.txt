@@ -1,7 +1,0 @@
-Frage: Wie lässt sich die primäre Rolle des Network Layer (Schicht 3) im OSI-Modell am präzisesten umschreiben?
-
-Antwortmöglichkeiten:
-a) Der Network Layer ist zuständig für die physikalische Codierung und Decodierung von Daten sowie deren Transport über verschiedene Medien. (Falsch)
-b) Er gewährleistet eine fehlergesicherte Übertragung von Daten über eine direkte Verbindung und die korrekte Segmentierung von Bitströmen. (Falsch)
-c) Seine Hauptaufgabe ist die Bereitstellung einer netzwerkübergreifenden Kommunikation zwischen Geräten, die sich in potenziell unterschiedlichen Netzwerken befinden, inklusive Adressierung und Routing. (Richtig)
-d) Er verantwortet die Bereitstellung von Kommunikationssitzungen und die Synchronisation des Datenaustauschs zwischen Anwendungen. (Falsch)

@@ -1,8 +1,0 @@
-Frage: Die Kontrolle des Datenflusses ist eine wiederkehrende Aufgabe in mehreren Schichten des OSI-Modells. Welche der folgenden Aussagen beschreibt die spezifischen Ansätze oder den Fokus der Flusskontrolle in den jeweiligen Schichten korrekt?
-
-Antwortmöglichkeiten:
-a) Im Data Link Layer zielt die Flusskontrolle primär darauf ab, Überlastung zwischen direkt verbundenen Sender- und Empfängergeräten über eine möglicherweise unsichere physikalische Verbindung zu verhindern. (Richtig)
-b) Der Network Layer implementiert Flusssteuerung sowohl End-to-End, das heisst vom ursprünglichen Sender zum finalen Empfänger, als auch Node-to-Node, also zwischen einzelnen vermittelnden Knoten. (Richtig)
-c) Die Flusssteuerung im Transport Layer ist darauf ausgelegt, die Teilnehmer-Charakteristik zu berücksichtigen und somit die Übertragungsrate an die spezifischen Anforderungen und Fähigkeiten der Endanwendungen anzupassen. (Richtig)
-d) Eine Flusskontrolle, die sich auf das Setzen von Zwischenpunkten zur Synchronisation des Datenaustauschs konzentriert, ist eine Kernaufgabe des Session Layers. (Falsch)
-e) Der Physical Layer ist für die grundlegende Flusskontrolle von Bits verantwortlich, indem er Übertragungsraten basierend auf der Medienbeschaffenheit dynamisch anpasst. (Falsch)

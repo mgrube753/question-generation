@@ -1,7 +1,0 @@
-Frage: Welche Aussage beschreibt korrekt den Unterschied zwischen der Flusskontrolle im Data Link Layer (Layer 2), der Flusssteuerung im Network Layer (Layer 3) und der Flusssteuerung im Transport Layer (Layer 4)?
-
-Antwortmöglichkeiten:
-a) Die Flusskontrolle im Data Link Layer bezieht sich auf Strategien, wenn der Sender für den Empfänger zu schnell sendet, während die Flusssteuerung im Network Layer sowohl End-to-End als auch Node-to-Node Strategien umfasst. Die Flusssteuerung im Transport Layer nutzt spezifisch die Charakteristik der Teilnehmer. (Richtig)
-b) Die Flusskontrolle im Data Link Layer arbeitet ausschließlich Node-to-Node, die Flusssteuerung im Network Layer ist für die Quality of Service zuständig, und die Flusssteuerung im Transport Layer implementiert Fehlerkorrekturmechanismen. (Falsch)
-c) Die Flusskontrolle im Data Link Layer ist für die Vermeidung von Kollisionen beim Medienzugriff verantwortlich, während die Flusssteuerung im Network Layer und Transport Layer identisch sind und sich nur in der Implementierung unterscheiden. (Falsch)
-d) Die Flusskontrolle im Data Link Layer reguliert die physikalische Übertragungsgeschwindigkeit, die Flusssteuerung im Network Layer dient der Routingoptimierung, und die Flusssteuerung im Transport Layer ist für die Synchronisation von Sitzungen zuständig. (Falsch)

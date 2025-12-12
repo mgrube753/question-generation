@@ -1,9 +1,0 @@
-Frage: Welche der folgenden Aufgaben werden von der Präsentationsschicht (Layer 6) des ISO-OSI-Modells übernommen?
-
-Antwortmöglichkeiten:
-- Konvertierung der Bytereihenfolge (Endian-Ness) (Richtig)
-- Zeichencodierungsumwandlung, z. B. ASCII zu Unicode (Richtig)
-- Datenkompression und -dekompression (Richtig)
-- Verschlüsselung und Entschlüsselung der Daten (Richtig)
-- Wegwahl (Routing) zwischen Netzwerken (Falsch)
-- Medienzugriffskontrolle auf dem physikalischen Medium (Falsch)

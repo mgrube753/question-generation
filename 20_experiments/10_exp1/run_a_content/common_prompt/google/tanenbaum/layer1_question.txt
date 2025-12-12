@@ -1,9 +1,0 @@
-Frage: Welche der folgenden Aspekte gehören zu den typischen Design-Fragen, mit denen sich die Bitübertragungsschicht (Physical Layer) im ISO-OSI-Modell befasst?
-
-Antwortmöglichkeiten:
-- Die Spezifikation elektrischer Signale zur Darstellung von 1 und 0. (Richtig)
-- Die Bestimmung, wie viele Nanosekunden ein Bit dauert. (Richtig)
-- Ob die Übertragung gleichzeitig in beide Richtungen erfolgen kann. (Richtig)
-- Die Auswahl des besten Weges (Routing) für Datenpakete durch ein Netzwerk. (Falsch)
-- Der Aufbau und Abbau der anfänglichen Verbindung. (Richtig)
-- Die Verschlüsselung von Daten zur Gewährleistung der Vertraulichkeit. (Falsch)

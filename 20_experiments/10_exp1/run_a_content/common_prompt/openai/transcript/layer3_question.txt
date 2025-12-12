@@ -1,9 +1,0 @@
-Frage: Welche der folgenden Aufgaben werden im ISO-OSI-Network-Layer laut Text wahrgenommen?
-
-Antwortmöglichkeiten:
-- Adressierung (Richtig)
-- Routing (Richtig)
-- Flusssteuerung (Richtig)
-- Medienzugriffskontrolle (Falsch)
-- Verschlüsselung auf Anwendungsebene (Falsch)
-- Session Management (Falsch)

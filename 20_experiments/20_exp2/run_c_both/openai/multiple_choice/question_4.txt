@@ -1,8 +1,0 @@
-Frage: Analysieren Sie die nachstehenden Funktionspaare. Wählen Sie jede Antwort, bei der beide Funktionsblöcke derselben OSI-Schicht zugeordnet werden können.
-
-Antwortmöglichkeiten:
-a) Medienzugriff und Fehlerkontrolle (Richtig)
-b) Dienstqualität und Zeichenkonvertierung (Falsch)
-c) Routing und Endian-Ness (Falsch)
-d) Verschlüsselung und Kompression (Richtig)
-e) Flusssteuerung (Node-to-Node) und Teilnehmer-Adressierung (Falsch)

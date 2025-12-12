@@ -1,7 +1,0 @@
-Frage: Analysieren Sie die folgenden Aussagen zur Layer-3-Flusssteuerung des ISO-OSI-Modells. Welche Aussagen treffen zu?
-
-Antwortmöglichkeiten:
-- End-to-End-Flusssteuerung wirkt unmittelbar zwischen dem ursprünglichen Sender und dem endgültigen Empfänger, unabhängig davon, wie viele Router dazwischenliegen. (Richtig)
-- Node-to-Node-Flusssteuerung erfordert, dass jeder Zwischenknoten das gesamte Ende-zu-Ende-Verkehrsaufkommen im Voraus kennt. (Falsch)
-- Eine korrekt implementierte Node-to-Node-Flusssteuerung kann Pufferung in einzelnen Routern notwendig machen, um Überlastungen auf einzelnen Hops zu vermeiden. (Richtig)
-- Durch End-to-End-Flusssteuerung entfällt jeglicher Bedarf an Flusskontrolle in Zwischenknoten. (Falsch)

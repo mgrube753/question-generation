@@ -1,3 +1,0 @@
-Frage: Beschreiben Sie die Kernaufgaben des Transport Layers (Schicht 4) im ISO-OSI-Modell und erläutern Sie kurz, was unter dem Begriff "Dienstqualität" in diesem Zusammenhang zu verstehen ist.
-
-Antwort: Der Transport Layer (Schicht 4) hat drei Kernaufgaben: Adressierung (für Teilnehmer-Adressen), Flußsteuerung (Nutzen der Teilnehmer-Charakteristik) und Dienstqualität. Die Dienstqualität (Quality of Service, QoS) bezieht sich auf die Sicherung eines Kommunikationsdienstes mit Garantien für Parameter wie Bandbreite, Latenz, Jitter und Fehlerrate. Diese Garantien werden speziell auf den jeweiligen Teilnehmer zugeschnitten. (Richtig)

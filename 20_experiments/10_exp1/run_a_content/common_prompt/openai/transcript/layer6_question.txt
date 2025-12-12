@@ -1,9 +1,0 @@
-Frage: Welche der folgenden Aufgaben werden typischerweise im Presentation Layer (Schicht 6) des ISO/OSI-Modells ausgeführt?
-
-Antwortmöglichkeiten:
-- Konvertierung der Datendarstellung zwischen Little- und Big-Endian-Formaten (Richtig)
-- Zeichensatzkonvertierung, z. B. zwischen ASCII und Unicode (Richtig)
-- Datenkompression und -dekompression (Richtig)
-- Routing der Datenpakete zwischen verschiedenen Netzwerken (Falsch)
-- Festlegung von MAC-Adressen auf dem Übertragungsmedium (Falsch)
-- Sitzungssteuerung und Synchronisation zwischen Anwendungsprozessen (Falsch)

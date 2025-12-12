@@ -83,7 +83,7 @@ def gen_with_deepseek(client, prompt_text, model_id, max_tokens):
 
         return response.output_text
     except Exception as e:
-        print(f"[ERROR] OpenAI API ({model_id}): {e}")
+        print(f"[ERROR] DeepSeek API ({model_id}): {e}")
         return None
 
 

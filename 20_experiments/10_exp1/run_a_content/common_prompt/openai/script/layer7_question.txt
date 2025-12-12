@@ -1,6 +1,0 @@
-Frage: Welche drei Kernaufgaben definiert die Application Layer (Schicht 7) des ISO-OSI-Modells laut Beschreibung?
-
-Antwortmöglichkeiten:
-- Grundkonzepte, Protokollelemente und Verhalten (Richtig)
-- Routing, Switching und Flusskontrolle (Falsch)
-- Codierung, Synchronisation und Leitungsschutz (Falsch)

@@ -1,7 +1,0 @@
-Frage: Bewerten Sie die Notwendigkeit und Rechtfertigung der dreifachen Implementierung von "Flusssteuerung" (Flow Control) in verschiedenen Schichten des OSI-Modells (Data Link, Network, Transport) und beurteilen Sie, welche der folgenden Aussagen die primäre Begründung für diese scheinbare Redundanz am besten widerspiegelt.
-
-Antwortmöglichkeiten:
-a) Die Flusssteuerung in jeder Schicht adressiert unterschiedliche Scopes und Ziele: Der Data Link Layer reguliert den Datenfluss über eine einzelne physische Verbindung, der Network Layer steuert den Verkehr durch das Netzwerk über mehrere Hops, um Überlastung zu vermeiden, und der Transport Layer passt den Fluss an die Empfangscharakteristika der Endanwendung an, um Datenverlust zu verhindern. (Richtig)
-b) Die mehrfache Implementierung der Flusssteuerung dient primär der Fehlertoleranz, indem eine Schicht die Flusssteuerung der darunterliegenden Schicht übernehmen kann, falls diese ausfällt oder ineffizient arbeitet. (Falsch)
-c) Die unterschiedlichen Flusssteuerungsmechanismen sind historisch bedingt und stellen keine gezielte Designentscheidung dar, sondern resultieren aus der sukzessiven Entwicklung der jeweiligen Schichten. (Falsch)
-d) Die Flusssteuerung auf allen drei genannten Schichten ist im Wesentlichen redundant und deutet auf eine Ineffizienz im Design des OSI-Modells hin, da eine einzige, umfassende Flusssteuerung im Transport Layer ausreichen würde. (Falsch)
