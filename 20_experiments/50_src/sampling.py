@@ -57,49 +57,124 @@ def sample_exp1():
     """
     Sample 24 questions from Experiment 1 (168 total).
 
-    Strategy: Sample 1 complete layer (all LLMs, both question types, all Bloom levels)
-    Per sampled layer: 4 LLMs × 2 types × 3 Bloom = 24 questions
+    Strategy: Stratified sampling to ensure balanced distribution
+    Per LLM: 6 questions (3 MCQ + 3 Open-Ended)
+    Total: 4 LLMs × 6 = 24 questions
     """
     print("\n[INFO] Sampling Experiment 1 questions...")
-    print("       Target: 24 questions (1 complete layer)")
+    print("       Target: 24 questions (6 per LLM: 3 MCQ + 3 Open-Ended)")
+
+    # Clean old samples before starting
+    clean_samples(constants.EXP1_PATH)
 
     questions_path = os.path.join(constants.EXP1_PATH, "questions")
     sample_path = os.path.join(constants.EXP1_PATH, "sampled")
 
-    # Randomly select 1 layer to sample completely
-    sampled_layer = random.choice(constants.LAYERS)
-    print(f"       Selected layer: {sampled_layer}")
-
-    sampled_files = []
-    csv_rows = []
+    # Collect questions organized by LLM and question type
+    questions_by_llm_type = {
+        llm: {"mcq": [], "open_ended": []} for llm in constants.LLM_NAMES
+    }
 
     for llm_name in constants.LLM_NAMES:
-        for q_type in constants.QUESTION_TYPES:
-            src_dir = os.path.join(
-                questions_path, llm_name, f"layer{sampled_layer}", q_type
-            )
-            dest_dir = os.path.join(
-                sample_path, llm_name, f"layer{sampled_layer}", q_type
-            )
+        llm_dir = os.path.join(questions_path, llm_name)
+        if not os.path.exists(llm_dir):
+            continue
 
-            if not os.path.exists(src_dir):
-                print(f"[WARNING] Directory not found: {src_dir}")
+        for layer_num in constants.LAYERS:
+            layer_dir = os.path.join(llm_dir, f"layer{layer_num}")
+            if not os.path.exists(layer_dir):
                 continue
 
-            files = [f for f in os.listdir(src_dir) if f.endswith(".txt")]
+            for q_type in constants.QUESTION_TYPES:
+                type_dir = os.path.join(layer_dir, q_type)
+                if not os.path.exists(type_dir):
+                    continue
 
-            for filename in files:
-                src_file = os.path.join(src_dir, filename)
-                dest_file = os.path.join(dest_dir, filename)
-                os.makedirs(dest_dir, exist_ok=True)
-                shutil.copy2(src_file, dest_file)
-                sampled_files.append(dest_file)
+                for filename in os.listdir(type_dir):
+                    if filename.endswith(".txt"):
+                        # Extract bloom index from filename
+                        bloom_part = filename.replace(".txt", "").split("_")[-1]
+                        try:
+                            bloom_idx = int(bloom_part)
+                        except ValueError:
+                            # Bloom level name, convert to index
+                            bloom_name = bloom_part.capitalize()
+                            if bloom_name in constants.BLOOM_LEVELS_ORDERED:
+                                bloom_idx = (
+                                    constants.BLOOM_LEVELS_ORDERED.index(bloom_name) + 1
+                                )
+                            else:
+                                print(
+                                    f"[WARNING] Unknown bloom level in {filename}, skipping"
+                                )
+                                continue
 
-                # Parse Bloom level from filename
-                bloom_idx = int(filename.split("_")[0].replace("bloom", ""))
-                csv_rows.append([llm_name, sampled_layer, q_type, bloom_idx])
+                        file_path = os.path.join(type_dir, filename)
 
-    print(f"       Sampled: {len(sampled_files)} questions")
+                        questions_by_llm_type[llm_name][q_type].append(
+                            {
+                                "path": file_path,
+                                "llm": llm_name,
+                                "layer": layer_num,
+                                "question_type": q_type,
+                                "bloom_idx": bloom_idx,
+                            }
+                        )
+
+    # Stratified sampling: 3 MCQ + 3 Open-Ended per LLM
+    sampled_questions = []
+    for llm_name in constants.LLM_NAMES:
+        # Sample 3 MCQ questions
+        mcq_questions = questions_by_llm_type[llm_name]["mcq"]
+        if len(mcq_questions) >= 3:
+            sampled_questions.extend(random.sample(mcq_questions, 3))
+        else:
+            print(f"[WARNING] {llm_name} has only {len(mcq_questions)} MCQ questions")
+            sampled_questions.extend(mcq_questions)
+
+        # Sample 3 Open-Ended questions
+        oe_questions = questions_by_llm_type[llm_name]["open_ended"]
+        if len(oe_questions) >= 3:
+            sampled_questions.extend(random.sample(oe_questions, 3))
+        else:
+            print(
+                f"[WARNING] {llm_name} has only {len(oe_questions)} Open-Ended questions"
+            )
+            sampled_questions.extend(oe_questions)
+
+    print(f"       Sampled: {len(sampled_questions)} questions")
+
+    # Copy sampled files and create CSV rows
+    csv_rows = []
+    for q in sampled_questions:
+        # Create destination path
+        dest_dir = os.path.join(
+            sample_path, q["llm"], f"layer{q['layer']}", q["question_type"]
+        )
+        os.makedirs(dest_dir, exist_ok=True)
+
+        # Copy file
+        dest_file = os.path.join(dest_dir, os.path.basename(q["path"]))
+        shutil.copy2(q["path"], dest_file)
+
+        # Add to CSV
+        csv_rows.append([q["llm"], q["layer"], q["question_type"], q["bloom_idx"]])
+
+    # Show distribution per LLM
+    print("\n       Distribution per LLM:")
+    for llm_name in constants.LLM_NAMES:
+        llm_questions = [q for q in sampled_questions if q["llm"] == llm_name]
+        mcq_count = len([q for q in llm_questions if q["question_type"] == "mcq"])
+        oe_count = len([q for q in llm_questions if q["question_type"] == "open_ended"])
+        print(
+            f"       {llm_name}: {len(llm_questions)} total ({mcq_count} MCQ, {oe_count} OE)"
+        )
+
+    # Show layer distribution
+    layer_dist = {}
+    for q in sampled_questions:
+        layer_dist[q["layer"]] = layer_dist.get(q["layer"], 0) + 1
+    print(f"\n       Layer distribution: {dict(sorted(layer_dist.items()))}")
 
     # Create sample CSV
     csv_path = os.path.join(
@@ -108,10 +183,11 @@ def sample_exp1():
     os.makedirs(os.path.dirname(csv_path), exist_ok=True)
 
     df = pd.DataFrame(csv_rows, columns=["llm", "layer", "question_type", "bloom_idx"])
+    df = df.sort_values(["llm", "layer", "question_type", "bloom_idx"])
     df.to_csv(csv_path, index=False)
-    print(f"       CSV saved: {csv_path}")
+    print(f"\n       CSV saved: {csv_path}")
 
-    return sampled_files
+    return sampled_questions
 
 
 def sample_exp2():
@@ -280,6 +356,8 @@ def run_sampling():
     print("\n" + "=" * 60)
     print("Question Sampling")
     print("=" * 60)
+
+    random.seed(constants.RANDOM_SEED)
 
     clean_samples(constants.EXP1_PATH)
     clean_samples(constants.EXP2_PATH)

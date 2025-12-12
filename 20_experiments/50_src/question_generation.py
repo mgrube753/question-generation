@@ -34,7 +34,7 @@ from tqdm import tqdm
 from collections import defaultdict
 
 
-# Thread-safe counters for progress tracking
+random.seed(constants.RANDOM_SEED)
 llm_counters = defaultdict(int)
 counter_lock = threading.Lock()
 
