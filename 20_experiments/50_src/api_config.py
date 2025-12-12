@@ -8,8 +8,8 @@ def load_api_keys():
     """Load API keys from .env file for all 4 LLM providers."""
     load_dotenv()
     keys = {
-        "anthropic": os.getenv("ANTHROPIC_API_KEY"),
-        "openai": os.getenv("OPENAI_API_KEY"),
+        # "anthropic": os.getenv("ANTHROPIC_API_KEY"),
+        # "openai": os.getenv("OPENAI_API_KEY"),
         "deepseek": os.getenv("DEEPSEEK_API_KEY"),
         "xai": os.getenv("XAI_API_KEY"),
     }
@@ -33,8 +33,8 @@ def init_clients():
 
     print("[INFO] Initializing API clients...")
 
-    anthropic_client = anthropic.Anthropic(api_key=api_keys["anthropic"])
-    openai_client = openai.OpenAI(api_key=api_keys["openai"])
+    # anthropic_client = anthropic.Anthropic(api_key=api_keys["anthropic"])
+    # openai_client = openai.OpenAI(api_key=api_keys["openai"])
     deepseek_client = openai.OpenAI(
         api_key=api_keys["deepseek"], base_url="https://api.deepseek.com"
     )
@@ -47,8 +47,8 @@ def init_clients():
     print("       - xAI (grok-4)")
 
     return {
-        "anthropic": anthropic_client,
-        "openai": openai_client,
+        # "anthropic": anthropic_client,
+        # "openai": openai_client,
         "deepseek": deepseek_client,
         "xai": xai_client,
     }

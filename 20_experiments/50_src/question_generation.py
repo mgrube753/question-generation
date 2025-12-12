@@ -4,14 +4,16 @@ Question Generation Module
 Implements the unified question generation pipeline for two experiments:
 
 Experiment 1 (Content Fidelity):
-- 4 LLMs × 1 Script × 7 Layers × 2 Question Types × 3 Random Bloom Levels = 168 questions
-- Sample 24 questions (1/7 of layers)
+- 4 LLMs × 1 Script × 7 Layers × 2 Question Types × 3 Bloom Levels = 168 questions
+- MCQ: Bloom levels 1-3 (all three)
+- Open-ended: 3 randomized Bloom levels from all 6
+- Sample: 168/7 = 24 questions (1 complete layer)
 
 Experiment 2 (Bloom Alignment):
-- 4 LLMs × 1 Script × 2 Question Types × 6 Bloom Levels = 48 questions
-- Sample 24 questions (1/2)
-- 12 Open-Ended: 2 per Bloom level (all 6 levels)
-- 12 MCQ: 4 per Bloom level (levels 1-3 only)
+- 4 LLMs × concatenated script × 2 Question Types
+- MCQ: 6 per LLM (Bloom 1-3, each 2×) = 24 MCQ total
+- Open-ended: 6 per LLM (Bloom 1-6, each 1×) = 24 OE total
+- Total: 48 questions, sample 24
 
 Question Types:
 - MCQ: 3-step process (stem → keys → distractors)
@@ -284,15 +286,15 @@ def generate_task(task_params):
 
 def run_tasks(tasks, exp_desc):
     """Run all tasks with progress tracking."""
+    print(f"\n[INFO] Running {len(tasks)} tasks for {exp_desc}...")
+
     with ThreadPoolExecutor(max_workers=4) as executor:
         futures = {executor.submit(generate_task, task): task for task in tasks}
 
-        with tqdm(
-            total=len(tasks), desc=f"{exp_desc} {get_progress()}", unit="task"
-        ) as pbar:
+        with tqdm(total=len(tasks), desc=get_progress()) as pbar:
             for future in as_completed(futures):
                 future.result()
-                pbar.set_description(f"{exp_desc} {get_progress()}")
+                pbar.set_description(get_progress())
                 pbar.update(1)
 
 
@@ -300,10 +302,11 @@ def run_exp1(clients):
     """
     Experiment 1: Content Fidelity
 
-    4 LLMs × 1 Script × 7 Layers × 2 Question Types × 3 Random Bloom Levels = 168 questions
+    4 LLMs × 1 Script × 7 Layers × 2 Question Types × 3 Bloom Levels = 168 questions
 
-    For each layer, we randomly select 3 Bloom levels.
-    MCQ uses only Bloom 1-3, Open-Ended uses all 6.
+    For each layer:
+    - MCQ: Use all 3 Bloom levels (1-3: Remembering, Understanding, Applying)
+    - Open-ended: Use 3 random Bloom levels from all 6
     """
     print("\n[INFO] Experiment 1: Content Fidelity")
     print(
@@ -322,10 +325,8 @@ def run_exp1(clients):
             continue
 
         for llm_name in constants.LLM_NAMES:
-            # MCQ: Sample 3 random Bloom levels from levels 1-3
-            mcq_bloom_levels = random.sample(constants.BLOOM_LEVELS_MCQ, 3)
-
-            for bloom_level in mcq_bloom_levels:
+            # MCQ: Use all 3 Bloom levels (1-3)
+            for bloom_level in constants.BLOOM_LEVELS_MCQ:
                 bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
                 output_path = os.path.join(
                     constants.EXP1_PATH,
@@ -397,13 +398,15 @@ def run_exp2(clients):
 
     4 LLMs × 1 Script (concatenated) × 2 Question Types × 6 Bloom Levels = 48 questions
 
-    - 12 MCQ: 4 questions per Bloom level (levels 1-3 only)
-    - 12 Open-Ended: 2 questions per Bloom level (all 6 levels)
+    - MCQ: 6 per LLM (Bloom 1-3, each level 2×) = 24 MCQ total
+    - Open-ended: 6 per LLM (Bloom 1-6, each level 1×) = 24 OE total
 
     Uses concatenated script content for full OSI model coverage.
     """
     print("\n[INFO] Experiment 2: Bloom Alignment")
-    print("       4 LLMs × 2 Question Types × varying Bloom Levels = 48 questions")
+    print("       4 LLMs × 2 Question Types = 48 questions")
+    print("       MCQ: 6 per LLM (Bloom 1-3, each 2×)")
+    print("       Open-ended: 6 per LLM (Bloom 1-6, each 1×)")
     reset_counters()
 
     tasks = []
@@ -416,7 +419,7 @@ def run_exp2(clients):
         return
 
     for llm_name in constants.LLM_NAMES:
-        # MCQ: 4 questions per Bloom level (levels 1-3)
+        # MCQ: 2 questions per Bloom level (levels 1-3) = 6 MCQ per LLM
         for bloom_level in constants.BLOOM_LEVELS_MCQ:
             bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
 
@@ -444,7 +447,7 @@ def run_exp2(clients):
                 )
                 csv_rows.append([llm_name, "mcq", bloom_level, bloom_idx, q_num])
 
-        # Open-Ended: 2 questions per Bloom level (all 6 levels)
+        # Open-Ended: 1 question per Bloom level (all 6 levels) = 6 OE per LLM
         for bloom_level in constants.BLOOM_LEVELS_OPEN_ENDED:
             bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
 

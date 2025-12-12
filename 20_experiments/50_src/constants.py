@@ -57,18 +57,20 @@ PROMPT_OPEN_ENDED = os.path.join(
 BLOOM_DATA_FILE = os.path.join(PROMPT_TEMPLATES_PATH, "experiment", "bloom.md")
 
 # Experiment 1: Content Fidelity
-# 4 LLMs × 1 Script × 7 Layers × 2 Question Types × 3 Random Bloom Levels = 168 questions
-# Sample 24 questions (1/7 of layers)
+# 4 LLMs × 1 Script × 7 Layers × 2 Question Types × 3 Bloom Levels = 168 questions
+# MCQ: Bloom 1-3 (all three levels)
+# Open-ended: 3 random Bloom levels from all 6
+# Sample: 168/7 = 24 questions (1 complete layer)
 EXP1_TOTAL_QUESTIONS = 168
 EXP1_SAMPLE_SIZE = 24
-EXP1_BLOOM_LEVELS_PER_QUESTION = 3  # Random 3 Bloom levels per layer
+EXP1_BLOOM_LEVELS_PER_TYPE = 3  # 3 Bloom levels per question type
 
 # Experiment 2: Bloom Alignment
-# 4 LLMs × 1 Script × 2 Question Types × 6 Bloom Levels = 48 questions
-# Sample 24 questions (1/2)
-# - 12 Open-Ended: 2 per Bloom level (6 levels)
-# - 12 MCQ: 4 per Bloom level (3 levels: 1-3)
+# 4 LLMs × concatenated script × 2 Question Types
+# MCQ: 6 per LLM (Bloom 1-3, each 2×) = 24 MCQ total
+# Open-ended: 6 per LLM (Bloom 1-6, each 1×) = 24 OE total
+# Total: 48 questions, sample 24
 EXP2_TOTAL_QUESTIONS = 48
 EXP2_SAMPLE_SIZE = 24
-EXP2_OPEN_ENDED_PER_BLOOM = 2
-EXP2_MCQ_PER_BLOOM = 4
+EXP2_MCQ_PER_BLOOM = 2  # 2 questions per Bloom level (levels 1-3) = 6 MCQ per LLM
+EXP2_OPEN_ENDED_PER_BLOOM = 1  # 1 question per Bloom level (all 6) = 6 OE per LLM

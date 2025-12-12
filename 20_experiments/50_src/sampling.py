@@ -3,12 +3,12 @@ Sampling Module for Question Generation Experiments
 
 Implements stratified sampling for both experiments:
 
-Experiment 1: Sample 24 questions from 168 (1/7 = sample 1 layer worth)
-- Stratified by LLM, Question Type
+Experiment 1: Sample 24 questions from 168 (1/7 = sample 1 complete layer)
+- Sample 1 layer completely: 4 LLMs × 2 types × 3 Bloom = 24 questions
 
 Experiment 2: Sample 24 questions from 48 (1/2)
-- 12 MCQ: 4 per Bloom level (levels 1-3)
-- 12 Open-Ended: 2 per Bloom level (all 6 levels)
+- MCQ: 3 per LLM (sample 1 per Bloom level from 2 available) = 12 total
+- Open-ended: 3 per LLM (sample 3 from 6 Bloom levels) = 12 total
 """
 
 import os
@@ -25,27 +25,17 @@ def collect_question_files(base_path, pattern=".txt"):
         for filename in filenames:
             if filename.endswith(pattern):
                 files.append(os.path.join(root, filename))
-    return sorted(files)
+    return files
 
 
 def sample_files(files, sample_size, dest_base):
     """Sample files and copy to destination."""
-    if len(files) < sample_size:
-        print(f"[WARNING] Only {len(files)} files available, requested {sample_size}")
-        sample_size = len(files)
-
-    if sample_size == 0:
-        return []
-
-    sampled = random.sample(files, sample_size)
-
-    for src_path in sampled:
-        # Preserve relative structure
-        rel_path = os.path.relpath(src_path, os.path.dirname(src_path))
-        dest_path = os.path.join(dest_base, rel_path)
-        os.makedirs(os.path.dirname(dest_path), exist_ok=True)
-        shutil.copy2(src_path, dest_path)
-
+    sampled = random.sample(files, min(sample_size, len(files)))
+    for src in sampled:
+        rel_path = os.path.relpath(src, os.path.dirname(src))
+        dest = os.path.join(dest_base, rel_path)
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        shutil.copy2(src, dest)
     return sampled
 
 
@@ -53,13 +43,11 @@ def sample_exp1():
     """
     Sample 24 questions from Experiment 1 (168 total).
 
-    Strategy: Sample 1 complete layer (all LLMs, both question types, 3 Bloom levels)
-    1/7 of layers = ~24 questions
-
+    Strategy: Sample 1 complete layer (all LLMs, both question types, all Bloom levels)
     Per sampled layer: 4 LLMs × 2 types × 3 Bloom = 24 questions
     """
     print("\n[INFO] Sampling Experiment 1 questions...")
-    print("       Target: 24 questions (1 layer)")
+    print("       Target: 24 questions (1 complete layer)")
 
     questions_path = os.path.join(constants.EXP1_PATH, "questions")
     sample_path = os.path.join(constants.EXP1_PATH, "sampled")
@@ -116,9 +104,9 @@ def sample_exp2():
     """
     Sample 24 questions from Experiment 2 (48 total).
 
-    Strategy: Sample 1/2 of questions
-    - 12 MCQ: Sample 2 per Bloom level (from 4 per level × 3 levels = 12)
-    - 12 Open-Ended: Sample 1 per Bloom level (from 2 per level × 6 levels = 12)
+    Strategy: Sample 1/2 of questions per LLM
+    - MCQ: 3 per LLM (sample 1 per Bloom level from 2 available per level) = 12 total
+    - Open-ended: 3 per LLM (sample 3 random Bloom levels from 6) = 12 total
 
     Total per LLM: 3 MCQ + 3 Open-Ended = 6
     4 LLMs × 6 = 24 questions
@@ -133,13 +121,13 @@ def sample_exp2():
     csv_rows = []
 
     for llm_name in constants.LLM_NAMES:
-        # Sample MCQ: 2 questions from each of 3 Bloom levels (6 total, sample 3)
+        # Sample MCQ: 1 question from each of 3 Bloom levels (3 total per LLM)
         mcq_dir = os.path.join(questions_path, llm_name, "mcq")
         mcq_dest = os.path.join(sample_path, llm_name, "mcq")
 
         if os.path.exists(mcq_dir):
             mcq_files = [f for f in os.listdir(mcq_dir) if f.endswith(".txt")]
-            # Sample 1 question per Bloom level (3 total)
+            # Sample 1 question per Bloom level (from 2 available per level)
             for bloom_level in constants.BLOOM_LEVELS_MCQ:
                 bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
                 level_files = [
@@ -154,7 +142,7 @@ def sample_exp2():
                     sampled_files.append(dest_file)
                     csv_rows.append([llm_name, "mcq", bloom_level, bloom_idx])
 
-        # Sample Open-Ended: 1 question from each of 6 Bloom levels (sample 3)
+        # Sample Open-Ended: 3 random Bloom levels from 6 (3 total per LLM)
         oe_dir = os.path.join(questions_path, llm_name, "open_ended")
         oe_dest = os.path.join(sample_path, llm_name, "open_ended")
 
@@ -207,13 +195,13 @@ def generate_expert_evaluation_csvs():
 
         # Add evaluation columns
         eval_columns = [
-            "relevance",  # 1-5 scale
-            "clarity",  # 1-5 scale
-            "answerability",  # 1-5 scale
-            "challenging",  # 1-5 scale
-            "value",  # 1-5 scale
-            "language",  # 1-5 scale
-            "correctness",  # 1-5 scale
+            "relevance",  # 0-10 scale
+            "clarity",  # 0-10 scale
+            "answerability",  # 0-10 scale
+            "challenging",  # 0-10 scale
+            "value",  # 0-10 scale
+            "language",  # 0-10 scale
+            "correctness",  # 0-10 scale
             "comments",  # Free text
         ]
 
@@ -244,9 +232,13 @@ def generate_expert_evaluation_csvs():
 
         # Add evaluation columns for Bloom alignment
         eval_columns = [
-            "perceived_difficulty",  # 1-6 scale (matching Bloom levels)
-            "actual_answer_quality",  # 1-5 scale
-            "bloom_alignment",  # 1-5 scale
+            "relevance",  # 0-10 scale
+            "clarity",  # 0-10 scale
+            "answerability",  # 0-10 scale
+            "challenging",  # 0-10 scale
+            "value",  # 0-10 scale
+            "language",  # 0-10 scale
+            "bloom_rating",  # 1-6 scale (Bloom level)
             "comments",  # Free text
         ]
 

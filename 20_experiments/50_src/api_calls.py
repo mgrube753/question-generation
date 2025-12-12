@@ -59,11 +59,14 @@ def gen_with_openai(client, prompt_text, model_id, max_tokens):
 
 def gen_with_deepseek(client, prompt_text, model_id, max_tokens):
     """Generate content using DeepSeek's API (deepseek-v3.2)."""
+    # https://api-docs.deepseek.com/guides/thinking_mode
+    # https://api-docs.deepseek.com/guides/reasoning_model
     try:
-        response = client.responses.create(
+        response = client.chat.completions.create(
             model=model_id,
-            input=[{"role": "user", "content": prompt_text}],
+            messages=[{"role": "user", "content": prompt_text}],
             max_tokens=max_tokens,
+            extra_body={"thinking": {"type": "enabled"}},
         )
 
         if (
@@ -90,7 +93,7 @@ def gen_with_xai(client, prompt_text, model_id, max_tokens):
         response = client.responses.create(
             model=model_id,
             input=[{"role": "user", "content": prompt_text}],
-            max_tokens=max_tokens,
+            max_output_tokens=max_tokens,
         )
 
         if (
