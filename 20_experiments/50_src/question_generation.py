@@ -24,6 +24,7 @@ import os
 import csv
 import random
 import constants
+import shutil
 from file_utils import load_txt, save_result, slugify
 from prompt_utils import load_prompt, format_prompt, get_bloom
 from api_calls import llm_generation
@@ -36,6 +37,20 @@ from collections import defaultdict
 # Thread-safe counters for progress tracking
 llm_counters = defaultdict(int)
 counter_lock = threading.Lock()
+
+
+def clean_questions(exp_path):
+    """
+    Delete all existing questions for a new experiment run.
+    Removes the entire questions directory to avoid mixing old and new runs.
+    """
+    questions_dir = os.path.join(exp_path, "questions")
+    if os.path.exists(questions_dir):
+        try:
+            shutil.rmtree(questions_dir)
+            print(f"[INFO] Cleaned old questions: {os.path.relpath(questions_dir)}")
+        except Exception as e:
+            print(f"[ERROR] Could not clean questions directory: {e}")
 
 
 def increment_counter(llm_name):
@@ -68,15 +83,7 @@ def create_csvs(exp_name, headers, rows):
     """Create initial CSV file for an experiment."""
     try:
         initial_csv_dir = os.path.join(constants.ANALYSES_PATH, "csv", "initial")
-
-        if exp_name.startswith("exp1"):
-            exp_subdir = os.path.join(initial_csv_dir, "exp1")
-        elif exp_name.startswith("exp2"):
-            exp_subdir = os.path.join(initial_csv_dir, "exp2")
-        else:
-            exp_subdir = initial_csv_dir
-
-        file_path = os.path.join(exp_subdir, f"{exp_name}.csv")
+        file_path = os.path.join(initial_csv_dir, f"{exp_name}.csv")
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
         with open(file_path, "w", newline="", encoding="utf-8") as f:
@@ -312,6 +319,9 @@ def run_exp1(clients):
     print(
         "       4 LLMs × 7 Layers × 2 Question Types × 3 Bloom Levels = 168 questions"
     )
+
+    clean_questions(constants.EXP1_PATH)
+
     reset_counters()
 
     tasks = []
@@ -330,6 +340,7 @@ def run_exp1(clients):
                 bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
                 output_path = os.path.join(
                     constants.EXP1_PATH,
+                    "questions",
                     llm_name,
                     f"layer{layer_num}",
                     "mcq",
@@ -358,6 +369,7 @@ def run_exp1(clients):
                 bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
                 output_path = os.path.join(
                     constants.EXP1_PATH,
+                    "questions",
                     llm_name,
                     f"layer{layer_num}",
                     "open_ended",
@@ -424,6 +436,7 @@ def run_exp2(clients):
             for q_num in range(1, constants.EXP2_MCQ_PER_BLOOM + 1):
                 output_path = os.path.join(
                     constants.EXP2_PATH,
+                    "questions",
                     llm_name,
                     "mcq",
                     f"bloom{bloom_idx}_{slugify(bloom_level)}_q{q_num}.txt",
@@ -451,6 +464,7 @@ def run_exp2(clients):
             for q_num in range(1, constants.EXP2_OPEN_ENDED_PER_BLOOM + 1):
                 output_path = os.path.join(
                     constants.EXP2_PATH,
+                    "questions",
                     llm_name,
                     "open_ended",
                     f"bloom{bloom_idx}_{slugify(bloom_level)}_q{q_num}.txt",

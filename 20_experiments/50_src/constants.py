@@ -74,3 +74,5 @@ EXP2_TOTAL_QUESTIONS = 48
 EXP2_SAMPLE_SIZE = 24
 EXP2_MCQ_PER_BLOOM = 2  # 2 questions per Bloom level (levels 1-3) = 6 MCQ per LLM
 EXP2_OPEN_ENDED_PER_BLOOM = 1  # 1 question per Bloom level (all 6) = 6 OE per LLM
+
+DRY_RUN = True

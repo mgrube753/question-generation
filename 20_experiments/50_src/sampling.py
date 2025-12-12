@@ -18,6 +18,20 @@ import pandas as pd
 import constants
 
 
+def clean_samples(exp_path):
+    """
+    Delete all existing samples for a new sampling run.
+    Removes the entire sampled directory to avoid mixing old and new samples.
+    """
+    sample_dir = os.path.join(exp_path, "sampled")
+    if os.path.exists(sample_dir):
+        try:
+            shutil.rmtree(sample_dir)
+            print(f"[INFO] Cleaned old samples: {os.path.relpath(sample_dir)}")
+        except Exception as e:
+            print(f"[ERROR] Could not clean samples directory: {e}")
+
+
 def collect_question_files(base_path, pattern=".txt"):
     """Collect all question files from a directory tree."""
     files = []
@@ -266,6 +280,9 @@ def run_sampling():
     print("\n" + "=" * 60)
     print("Question Sampling")
     print("=" * 60)
+
+    clean_samples(constants.EXP1_PATH)
+    clean_samples(constants.EXP2_PATH)
 
     sample_exp1()
     sample_exp2()

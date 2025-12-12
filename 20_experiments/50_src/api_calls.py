@@ -1,5 +1,5 @@
 import time
-from constants import REQUEST_DELAY_SECONDS, LLM_MODEL_IDS
+from constants import REQUEST_DELAY_SECONDS, LLM_MODEL_IDS, DRY_RUN
 
 
 def gen_with_anthropic(client, prompt_text, model_id, max_tokens):
@@ -123,6 +123,11 @@ def llm_generation(llm_name, clients, prompt_text, max_tokens):
     - deepseek: deepseek-v3.2
     - xai: grok-4
     """
+
+    if DRY_RUN:
+        print(f"[DRY-RUN] Skipping API call for {llm_name}, returning empty content")
+        return " "  # Leerer String statt None, damit Files erstellt werden
+
     client = clients.get(llm_name)
     model_id = LLM_MODEL_IDS.get(llm_name)
 
