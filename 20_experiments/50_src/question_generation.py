@@ -198,13 +198,13 @@ def generate_mcq_question(
     complete_mcq = f"""## Multiple-Choice Question
 ### Bloom Level: {bloom_level}
 
-### Stem (Question):
+### Stem Generation Step:
 {stem_result}
 
-### Correct Answer(s):
+### Key Generation Step:
 {keys_result}
 
-### Distractors (Incorrect Answers):
+### Distractor Generation Step + Union of all:
 {distractors_result}
 """
     return complete_mcq
@@ -236,6 +236,8 @@ def generate_open_ended_question(
     result = llm_generation(llm_name, clients, formatted_prompt, max_tokens=max_tokens)
     if not result:
         return None
+    # else:
+    #     return result
 
     complete_question = f"""## Open-Ended Question
 ### Bloom Level: {bloom_level}
@@ -443,7 +445,7 @@ def run_exp2(clients):
             for bloom_level in constants.BLOOM_LEVELS_OPEN_ENDED:
                 bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
 
-                for q_num in range(1, constants.EXP2_OPEN_ENDED_PER_BLOOM + 1):
+                for q_num in range(1, constants.EXP2_OPEN_ENDED_PER_BLOOM):
                     output_path = os.path.join(
                         constants.EXP2_PATH,
                         "questions",

@@ -1,7 +1,2 @@
-- [ ] todo change output structure, since details of bloom levels etc shall not be in the question txt file itself
-- [x] todo change directory structure
-- 10_exp1/questions/anthropic/mcq
--                            /open_ended/bloom1_layer1.txt
-- 20/exp2/questions/anthropic/mcq
--                            /open_ended/bloom1_q1.txt
-- [ ] also todo to minimize the codebase!!
+- [ ] todo change output structure for sampled questions
+- [ ] also todo to minimize the codebase
