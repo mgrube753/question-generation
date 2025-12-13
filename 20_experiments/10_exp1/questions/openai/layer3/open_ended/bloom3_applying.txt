@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Applying
-
-Frage: Simulieren Sie eine Übertragung von Gerät A (Netzwerk 1, Layer-2-Technologie X) zu Gerät B (Netzwerk 2, Layer-2-Technologie Y) über die Zwischenknoten R1 und R2: Wie wenden Sie auf Network Layer 3 (1) Adressierung und (2) Routing an, um eine Kommunikation von A nach B über R1 und R2 zu ermöglichen, und welche (3) Flusssteuerungs-Strategien setzen Sie ein, wenn auf dem Weg zu schnell gesendet wird?
-
-Antwort: (1) Adressierung: A nutzt netzwerk-übergreifende Layer-3-Adressen, sodass B eindeutig über Netzwerkgrenzen hinweg adressiert werden kann (nicht nur innerhalb einer Layer-2-Domäne). (2) Routing: Layer 3 wählt zur Kommunikation zwischen nicht direkt verbundenen Knoten die vermittelnden Zwischenknoten aus und legt hier den Pfad A → R1 → R2 → B fest. (3) Flusssteuerung: Bei zu hoher Sendegeschwindigkeit werden Strategien eingesetzt, entweder end-to-end (Regelung vom Sender A bis zum weit entfernten Empfänger B) und/oder node-to-node (Regelung jeweils von A→R1, R1→R2, R2→B). (Richtig)

@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Creating
-
-Frage: Entwerfen Sie ein Konzept für die Datenverarbeitung innerhalb der Presentation Layer, das alle vier Kernaufgaben (Endian-Ness, Zeichenkonvertierung, Kompression, Verschlüsselung) in einer sinnvollen Verarbeitungsreihenfolge integriert, und begründen Sie Ihre gewählte Abfolge.
-
-Antwort: Ein sinnvolles Konzept für die Datenverarbeitung in der Presentation Layer umfasst folgende Reihenfolge: Zunächst erfolgt die Zeichenkonvertierung, bei der Textdaten in ein einheitliches Format wie Unicode überführt werden, um plattformübergreifende Kompatibilität sicherzustellen. Anschließend wird die Endian-Ness-Konvertierung durchgeführt, um die Byte-Reihenfolge numerischer Daten für das Zielsystem anzupassen. Im dritten Schritt werden die standardisierten Daten komprimiert, um das Datenvolumen zu reduzieren. Abschließend erfolgt die Verschlüsselung der komprimierten Daten. Diese Reihenfolge ist sinnvoll, da Zeichenkonvertierung und Endian-Ness auf den Originaldaten operieren müssen, Kompression vor der Verschlüsselung effizienter ist, weil verschlüsselte Daten aufgrund ihrer hohen Entropie kaum noch komprimierbar sind, und die Verschlüsselung als letzter Schritt alle vorherigen Transformationen schützt. (Richtig)

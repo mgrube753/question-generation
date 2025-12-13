@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Understanding
-
-Frage: Erklären Sie, was die Presentation Layer (Schicht 6) mit Anwendungsdaten macht und nennen Sie die vier Kernaufgaben inklusive je eines passenden Beispiels aus dem Lehrmaterial.
-
-Antwort: Die Presentation Layer kodiert bzw. stellt Anwendungsdaten als Bitstrom dar und sorgt dafür, dass Daten zwischen Systemen in einer passenden Darstellung vorliegen. Ihre vier Kernaufgaben sind: (1) Endian-Ness: Konvertieren der Datendarstellung, z.B. little endian und big endian (oder andere Serialisierungs-Formate). (2) Zeichen: Konvertierung der Zeichendarstellung, z.B. ASCII, Unicode, EBCDIC oder nationale Sonderzeichen. (3) Kompression: Komprimieren und Dekomprimieren von Daten. (4) Verschlüsselung: Verschlüsseln und Entschlüsseln von Daten. (Richtig)

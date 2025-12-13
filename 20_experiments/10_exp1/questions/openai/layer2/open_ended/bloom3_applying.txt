@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Applying
-
-Frage: Simulieren Sie eine Situation im Data Link Layer, in der ein Sender schneller sendet als der Empfänger verarbeiten kann, und zeigen Sie für die drei Flusskontroll-Strategien Zwischenpuffern, Herunterregeln und Wartenlassen jeweils konkret, wie der Data Link Layer den Ablauf der Übertragung steuert.
-
-Antwort: Zwischenpuffern: Der Data Link Layer nimmt die ankommenden Daten/Frames weiterhin vom Sender entgegen und legt sie in einem Puffer ab, sodass der Empfänger sie zeitversetzt abarbeiten kann, ohne dass sofort Daten verloren gehen. Herunterregeln: Der Data Link Layer sorgt dafür, dass der Sender die Sendegeschwindigkeit reduziert (z. B. durch Signalisierung/Regelung), damit weniger oder langsamer gesendet wird und der Empfänger nachkommt. Wartenlassen: Der Data Link Layer lässt den Sender temporär stoppen bzw. warten, bis der Empfänger wieder aufnahmefähig ist, und setzt das Senden erst danach fort. (Richtig)

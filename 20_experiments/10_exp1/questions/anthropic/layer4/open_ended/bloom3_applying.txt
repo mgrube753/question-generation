@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Applying
-
-Frage: Ein Unternehmen plant die Einführung eines VoIP-Telefoniesystems. Wenden Sie die drei Kernaufgaben der Transportschicht (Layer 4) an, um zu erläutern, wie diese bei der Umsetzung des VoIP-Systems berücksichtigt werden müssen.
-
-Antwort: Bei der Umsetzung des VoIP-Systems müssen die drei Kernaufgaben der Transportschicht wie folgt angewendet werden: Erstens die Adressierung, bei der jedem Telefonteilnehmer eine eindeutige Teilnehmer-Adresse zugewiesen wird, um die korrekte Zustellung der Sprachdaten zu gewährleisten. Zweitens die Flusssteuerung, die an die Charakteristik der einzelnen Teilnehmer angepasst werden muss, beispielsweise bei unterschiedlichen Bandbreiten der Endgeräte. Drittens die Dienstqualität, bei der spezifische QoS-Parameter für VoIP garantiert werden müssen: ausreichende Bandbreite für die Sprachübertragung, niedrige Latenz für verzögerungsfreie Gespräche, geringer Jitter für gleichmäßige Sprachqualität und eine niedrige Fehlerrate zur Vermeidung von Aussetzern. (Richtig)

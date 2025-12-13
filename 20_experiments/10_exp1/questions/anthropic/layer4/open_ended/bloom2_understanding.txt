@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Understanding
-
-Frage: Erklären Sie, was unter der Kernaufgabe "Dienstqualität" des Transport Layers verstanden wird und welche konkreten Aspekte dabei für die Kommunikation garantiert werden.
-
-Antwort: Die Dienstqualität (Quality of Service, QoS) des Transport Layers bezeichnet die Sicherstellung eines Kommunikationsdienstes mit festgelegten Garantien. Diese Garantien beziehen sich auf Parameter wie Bandbreite, Latenz, Jitter und Fehlerrate. Das Besondere dabei ist, dass die Dienstqualität individuell auf den jeweiligen Teilnehmer zugeschnitten wird, um dessen spezifische Anforderungen an die Datenübertragung zu erfüllen. (Richtig)

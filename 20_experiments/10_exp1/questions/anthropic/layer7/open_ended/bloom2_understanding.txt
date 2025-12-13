@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Understanding
-
-Frage: Erklären Sie die drei Kernaufgaben der Application Layer 7 und deren jeweilige Funktion im OSI-Modell.
-
-Antwort: Die drei Kernaufgaben der Application Layer 7 umfassen erstens die Grundkonzepte, welche festlegen, welche Begriffe in der jeweiligen Anwendung auftreten. Zweitens die Protokollelemente, die bestimmen, welche Anforderungen gestellt werden können und welche Daten dabei erwartet werden. Drittens das Verhalten, das beschreibt, wie die Anwendung auf die Anforderungen durch die Protokollelemente reagiert. Da diese Aufgaben stark von der jeweiligen Anwendung abhängig sind, ist eine umfassende Systematisierung nur eingeschränkt möglich. (Richtig)

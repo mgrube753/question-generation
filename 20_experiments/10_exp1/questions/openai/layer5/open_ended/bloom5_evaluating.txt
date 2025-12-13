@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Evaluating
-
-Frage: Beurteilen Sie, welche der drei Kernaufgaben der Session Layer (Sitzungen, Synchronisation, Bündelung) in einer Kommunikationsbeziehung mit langen, mehrteiligen Transaktionen und häufigen Verbindungsunterbrechungen nach dem Kriterium „minimale Wiederholungsarbeit nach einem Abbruch“ den größten Beitrag zur Robustheit leistet, und begründen Sie Ihr Urteil.
-
-Antwort: Synchronisation leistet nach dem Kriterium „minimale Wiederholungsarbeit nach einem Abbruch“ den größten Beitrag, weil durch das Setzen von Zwischenpunkten (Checkpoints) nach einer Unterbrechung nicht die gesamte Transaktion erneut durchgeführt werden muss, sondern an einem definierten Punkt fortgesetzt werden kann; Sitzungsfunktionen (aufbauen/verwalten/beenden/zurückweisen) sind zwar notwendig, um die Beziehung zu kontrollieren, reduzieren aber ohne Zwischenpunkte nicht gezielt die Wiederholungsarbeit, und Bündelung gruppiert Transaktionen zwar sinnvoll, verhindert jedoch ohne Synchronisationspunkte nicht, dass große Gruppen nach einem Abbruch komplett erneut übertragen oder ausgeführt werden müssen. (Richtig)

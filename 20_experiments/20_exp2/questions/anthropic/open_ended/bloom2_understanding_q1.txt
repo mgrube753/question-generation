@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Understanding
-
-Frage: Erklären Sie, wie sich die Adressierung auf dem Data Link Layer, dem Network Layer und dem Transport Layer unterscheidet und welchen jeweiligen Zweck sie auf diesen drei Schichten erfüllt.
-
-Antwort: Auf dem Data Link Layer (Schicht 2) dient die Adressierung der Identifikation, also der Auswahl bestimmter Sender oder Empfänger innerhalb eines direkten Netzwerkverbunds. Auf dem Network Layer (Schicht 3) ermöglicht die netzwerkübergreifende Adressierung die Kommunikation zwischen Geräten, die sich in unterschiedlichen Netzwerken mit möglicherweise verschiedenen Layer-2-Technologien befinden. Auf dem Transport Layer (Schicht 4) identifizieren Teilnehmer-Adressen die konkreten Kommunikationsteilnehmer, also die spezifischen Anwendungen oder Dienste auf einem Gerät. Die Adressierung wird somit von Schicht zu Schicht abstrakter: von der lokalen Geräteidentifikation über die netzwerkübergreifende Geräteposition bis hin zur Identifikation einzelner Teilnehmer innerhalb eines Geräts. (Richtig)

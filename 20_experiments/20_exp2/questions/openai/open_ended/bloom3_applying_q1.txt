@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Applying
-
-Frage: Ermitteln Sie für jede der folgenden Teilaufgaben bei einer Datenübertragung von Host A zu Host B die zuständige OSI-Schicht (1–7) anhand der angegebenen Kernaufgaben: (1) Übertragung eines elektrischen Signals über ein Telefonkabel, (2) Zusammenfassen einzelner Bits zu 8-bit Bytes, (3) Erkennen und Signalisieren von Übertragungsfehlern auf dem Übertragungsweg, (4) Auswahl vermittelnder Zwischenknoten zur Kommunikation zwischen zwei nicht direkt verbundenen Netzwerken, (5) Konvertierung einer Zahlendarstellung von little endian zu big endian, (6) Aufbauen und Beenden einer Kommunikationssitzung, (7) Bereitstellung von Garantien für Bandbreite und Latenz.
-
-Antwort: (1) Layer 1 Physical Layer – Transport, (2) Layer 2 Data Link Layer – Segmentierung, (3) Layer 2 Data Link Layer – Fehlerkontrolle, (4) Layer 3 Network Layer – Routing, (5) Layer 6 Presentation Layer – Endian-Ness, (6) Layer 5 Session Layer – Sitzungen, (7) Layer 4 Transport Layer – Dienstqualität (QoS). (Richtig)

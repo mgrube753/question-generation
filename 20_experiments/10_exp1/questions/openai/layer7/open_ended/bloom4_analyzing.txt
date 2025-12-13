@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Analyzing
-
-Frage: Zerlegen Sie die Festlegung der Application Layer (Schicht 7) für eine spezifische Anwendung in die drei Kernaufgaben Grundkonzepte, Protokollelemente und Verhalten und setzen Sie diese Bestandteile in Beziehung, sodass erkennbar wird, wie Begriffe, Anforderungen/erwartete Daten und Reaktionen der Anwendung zusammenhängen.
-
-Antwort: Grundkonzepte: Identifikation der in der konkreten Anwendung auftretenden Begriffe/Elemente. Protokollelemente: Untersuchung, welche Anforderungen über Protokollelemente gestellt werden können und welche Daten dabei jeweils erwartet werden. Verhalten: Bestimmung, wie die Anwendung auf die Anforderungen dieser Protokollelemente reagiert. Beziehung: Die Grundkonzepte legen fest, worauf sich Protokollelemente beziehen; Protokollelemente operationalisieren diese Begriffe durch konkrete Anforderungen und erwartete Daten; das Verhalten definiert die zugehörigen Reaktionen der Anwendung auf genau diese Anforderungen (stark an die jeweilige Anwendung gebunden, daher nur begrenzt systematisierbar). (Richtig)

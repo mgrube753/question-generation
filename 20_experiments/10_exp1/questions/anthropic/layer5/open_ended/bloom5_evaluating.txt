@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Evaluating
-
-Frage: Beurteilen Sie, welche der drei Kernaufgaben des Session Layers (Sitzungsverwaltung, Synchronisation, Bündelung) für die Aufrechterhaltung einer zuverlässigen Kommunikationsbeziehung am kritischsten ist, und begründen Sie Ihre Einschätzung anhand der jeweiligen Funktionen.
-
-Antwort: Die Sitzungsverwaltung ist als kritischste Kernaufgabe zu bewerten, da ohne das Aufbauen, Verwalten und Beenden von Sitzungen keine Kommunikationsbeziehung überhaupt erst etabliert werden kann. Sie bildet die fundamentale Grundlage, auf der die anderen Funktionen aufbauen. Die Synchronisation mit dem Setzen von Zwischenpunkten ist zwar wichtig für die Wiederaufnahme bei Unterbrechungen, setzt aber eine bestehende Sitzung voraus. Die Bündelung zusammengehöriger Transaktionen dient der effizienten Organisation, ist jedoch für die grundlegende Kommunikationsfähigkeit weniger essenziell. Ohne Sitzungsverwaltung wären weder Synchronisation noch Bündelung möglich, weshalb sie als Basis aller Session-Layer-Funktionen die höchste Priorität besitzt. (Richtig)

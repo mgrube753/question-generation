@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Evaluating
-
-Frage: Beurteilen Sie den folgenden Physical-Layer-Entwurf anhand der drei Kernaufgaben Codierung, Transport und Decodierung: Logische Werte werden per NRZ codiert, als Lichtsignal (medien-frei) übertragen und am Empfänger durch Abtastung einer elektrischen Spannung mit Detektionsbereichen decodiert. Begründen Sie Ihr Urteil mit Bezug auf etablierte Kriterien des Physical Layers.
-
-Antwort: Der Entwurf ist nicht konsistent und damit nicht geeignet, weil die drei Kernaufgaben zwar genannt sind, aber physikalisch nicht zusammenpassen: Bei der Codierung werden logische Werte auf eine physikalische Größe abgebildet und diese Größe muss im Transport tatsächlich übertragen werden und in der Decodierung wieder als dieselbe physikalische Größe abtastbar/auswertbar sein. Hier wird als Transport ein Lichtsignal verwendet, die Decodierung basiert jedoch auf Spannungsabtastung; damit kann die transportierte physikalische Größe (Licht) nicht direkt durch die vorgesehenen Detektionsbereiche der Spannung rückinterpretiert werden. Korrekt wäre z. B. eine Decodierung durch Abtastung/Detektionsbereiche der Lichtintensität oder alternativ ein medien-gebundener Transport über ein Kabel, wenn Spannungsabtastung beibehalten werden soll. (Richtig)

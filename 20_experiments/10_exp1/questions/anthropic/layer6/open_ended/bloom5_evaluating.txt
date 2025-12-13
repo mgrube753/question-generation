@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Evaluating
-
-Frage: Beurteilen Sie, welche der vier Kernaufgaben der Presentation Layer 6 für die sichere internationale Datenkommunikation die höchste Priorität haben sollte, und begründen Sie Ihre Einschätzung anhand der spezifischen Herausforderungen bei der länderübergreifenden Datenübertragung.
-
-Antwort: Bei der sicheren internationalen Datenkommunikation sollte die Verschlüsselung die höchste Priorität haben, da sie die Vertraulichkeit und Integrität der übertragenen Daten gewährleistet, insbesondere wenn Daten über unsichere oder fremde Netzwerke transportiert werden. An zweiter Stelle steht die Zeichenkonvertierung, da unterschiedliche Länder verschiedene Zeichensätze verwenden (ASCII, Unicode, EBCDIC, nationale Sonderzeichen) und ohne korrekte Konvertierung Daten falsch interpretiert oder unlesbar werden können. Die Endian-Ness ist ebenfalls wichtig, da verschiedene Systeme unterschiedliche Byte-Reihenfolgen verwenden und ohne Konvertierung Datenwerte verfälscht werden könnten. Die Kompression hat eine niedrigere Priorität, da sie primär der Effizienz dient und nicht der korrekten oder sicheren Datenübertragung. Die Bewertung basiert auf den Kriterien Datensicherheit, Datenintegrität und Interoperabilität zwischen heterogenen Systemen. (Richtig)

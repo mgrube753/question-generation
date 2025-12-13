@@ -44,3 +44,6 @@ _minted/
 # Python plots and tables
 **/plots/**/*.png
 **/tables/**/*.csv
+
+# other
+70_archive

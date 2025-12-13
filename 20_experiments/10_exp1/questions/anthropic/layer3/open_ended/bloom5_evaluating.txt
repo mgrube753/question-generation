@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Evaluating
-
-Frage: Beurteilen Sie, in welchen Szenarien die End-to-End-Flusssteuerung gegenüber der Node-to-Node-Flusssteuerung im Network Layer 3 vorzuziehen ist, und begründen Sie Ihre Einschätzung anhand der Funktionsweise beider Strategien.
-
-Antwort: Die End-to-End-Flusssteuerung ist in Szenarien vorzuziehen, in denen eine ganzheitliche Kontrolle der Übertragungsrate zwischen weit entferntem Sender und Empfänger erforderlich ist. Sie ermöglicht eine direkte Anpassung an die tatsächliche Verarbeitungskapazität des Empfängers und eignet sich besonders für stabile Netzwerke mit vorhersehbarer Leistung. Die Node-to-Node-Flusssteuerung ist hingegen vorzuziehen, wenn lokale Überlastungen zwischen einzelnen Zwischenknoten schnell erkannt und behoben werden müssen. Sie bietet schnellere Reaktionsfähigkeit auf lokale Engpässe, da jeder vermittelnde Knoten den Datenfluss zum nächsten Knoten direkt regulieren kann. Bei komplexen Netzwerken mit variablen Bedingungen und unterschiedlichen Layer-2-Technologien bietet die Node-to-Node-Steuerung daher bessere lokale Kontrolle, während End-to-End bei einfacheren Topologien effizienter arbeitet. (Richtig)

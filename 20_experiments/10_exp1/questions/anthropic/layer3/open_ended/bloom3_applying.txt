@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Applying
-
-Frage: Veranschaulichen Sie anhand eines Szenarios, in dem ein Computer in einem WLAN-Netzwerk eine Verbindung zu einem Server in einem entfernten Ethernet-Netzwerk aufbauen möchte, wie die drei Kernaufgaben des Network Layer 3 in dieser Situation angewendet werden.
-
-Antwort: Im beschriebenen Szenario werden die drei Kernaufgaben des Network Layer 3 wie folgt angewendet: Bei der Adressierung erhalten sowohl der Computer als auch der Server netzwerkübergreifende Adressen, die unabhängig von der verwendeten Layer-2-Technologie (WLAN bzw. Ethernet) eine eindeutige Identifikation ermöglichen. Beim Routing werden die vermittelnden Zwischenknoten ausgewählt, die die Datenpakete vom WLAN-Netzwerk zum entfernten Ethernet-Netzwerk weiterleiten, da Computer und Server nicht direkt verbunden sind. Die Flusssteuerung kommt zum Einsatz, wenn der Computer schneller sendet als der Server oder die Zwischenknoten verarbeiten können. Dabei können End-to-End-Strategien zwischen Computer und Server oder Node-to-Node-Strategien zwischen den einzelnen Zwischenknoten eingesetzt werden, um die Übertragungsgeschwindigkeit anzupassen. (Richtig)

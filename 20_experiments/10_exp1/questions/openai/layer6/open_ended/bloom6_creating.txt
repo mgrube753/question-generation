@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Creating
-
-Frage: Entwerfen Sie für eine Client-Server-Anwendung eine Präsentationsschicht, die strukturierte Anwendungsdaten (z. B. Integer, Float und Text) als Bitstrom überträgt, indem Sie Endian-Ness, Zeichendarstellung, Kompression und Verschlüsselung zu einem konsistenten Gesamtverfahren zusammenstellen; geben Sie dabei die Reihenfolge der Schritte beim Senden und beim Empfangen an und nennen Sie je einen konkreten Beispielstandard pro Schritt (z. B. little/big endian, ASCII/Unicode/EBCDIC).
-
-Antwort: (Richtig) Senden: (1) Endian-Ness-Konvertierung der numerischen Felder in ein festgelegtes Austauschformat, z. B. Network Byte Order = big endian (statt ggf. little endian lokal). (2) Konvertierung der Zeichendarstellung in eine einheitliche Kodierung, z. B. Unicode UTF-8 (statt ASCII/EBCDIC bzw. nationaler Sonderzeichenformate). (3) Kompression des resultierenden Byte-/Bitstroms, z. B. DEFLATE. (4) Verschlüsselung des komprimierten Stroms, z. B. AES. Empfangen: (1) Entschlüsselung (AES). (2) Dekompression (DEFLATE). (3) Rückkonvertierung der Zeichendarstellung (UTF-8 → interne Darstellung). (4) Rückkonvertierung der Endian-Ness (big endian → lokale Endian-Ness). Ergebnis: konsistente Kodierung der Anwendungsdaten als Bitstrom inkl. eindeutiger Umkehrbarkeit durch die Gegenreihenfolge.

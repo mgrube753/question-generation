@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Evaluating
-
-Frage: Überprüfen Sie die Aussage „Flusskontrolle ist ausschließlich Aufgabe des Data Link Layer“ und begründen Sie Ihr Urteil anhand der im Lehrmaterial genannten Kernaufgaben der Schichten 2, 3 und 4.
-
-Antwort: Die Aussage ist nicht zutreffend. Zwar nennt der Data Link Layer (Layer 2) Flusskontrolle als Kernaufgabe (Strategien, wenn der Sender für den Empfänger zu schnell sendet, z. B. puffern, herunterregeln, warten lassen), aber auch der Network Layer (Layer 3) enthält Flusssteuerung als Kernaufgabe und unterscheidet dabei End-to-End (vom Sender zum weit entfernten Empfänger) sowie Node-to-Node (von jedem Knoten zum nächsten). Zusätzlich nennt der Transport Layer (Layer 4) ebenfalls Flusssteuerung als Kernaufgabe, wobei sie „die Teilnehmer-Charakteristik“ nutzt. Damit ist Flusskontrolle/Flusssteuerung nicht exklusiv Layer 2 zugeordnet, sondern wird je nach Kommunikationsbezug (lokal auf dem Link, zwischen Knoten, Ende-zu-Ende und teilnehmerbezogen) auf mehreren Schichten umgesetzt. (Richtig)

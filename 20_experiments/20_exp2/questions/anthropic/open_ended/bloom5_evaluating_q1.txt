@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Evaluating
-
-Frage: Beurteilen Sie, ob die Verteilung der Flusssteuerung auf mehrere OSI-Schichten (Data Link Layer, Network Layer und Transport Layer) sinnvoll ist, und begründen Sie Ihr Urteil anhand der spezifischen Aufgaben und Unterschiede dieser Schichten.
-
-Antwort: Die Verteilung der Flusssteuerung auf mehrere Schichten ist als sinnvoll zu beurteilen, da jede Schicht unterschiedliche Kommunikationsaspekte adressiert. Im Data Link Layer löst die Flusskontrolle lokale Probleme bei direkten Verbindungen durch Zwischenpuffern, Herunterregeln oder Warten lassen. Im Network Layer differenziert die Flusssteuerung zwischen End-to-End (vom Sender zum entfernten Empfänger) und Node-to-Node (von jedem Knoten zum nächsten), was bei netzwerkübergreifender Kommunikation mit verschiedenen Layer-2-Technologien notwendig ist. Der Transport Layer berücksichtigt hingegen die individuellen Teilnehmer-Charakteristiken und kann die Flusssteuerung auf spezifische Anforderungen einzelner Kommunikationspartner abstimmen. Durch diese Schichtung werden Flusssteuerungsprobleme auf der jeweils angemessenen Abstraktionsebene gelöst, ohne dass eine einzelne Schicht alle Komplexitäten bewältigen muss. Dies erhöht die Modularität und ermöglicht unabhängige Optimierungen auf jeder Ebene. (Richtig)

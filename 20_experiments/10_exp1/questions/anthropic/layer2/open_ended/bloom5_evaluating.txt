@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Evaluating
-
-Frage: Beurteilen Sie die Eignung der drei Flußkontroll-Strategien (Zwischenpuffern, Herunterregeln, Warten lassen) für ein Szenario mit stark begrenzten Speicherressourcen beim Empfänger und begründen Sie Ihre Bewertung anhand technischer Kriterien.
-
-Antwort: Bei stark begrenzten Speicherressourcen ist das Zwischenpuffern am wenigsten geeignet, da diese Strategie zusätzlichen Speicherplatz beim Empfänger erfordert, der nicht verfügbar ist. Das Herunterregeln ist bedingt geeignet, da der Sender seine Geschwindigkeit reduziert und somit weniger Daten pro Zeiteinheit ankommen, was den Speicherbedarf senkt. Diese Strategie ist jedoch nur wirksam, wenn eine Rückmeldung an den Sender möglich ist. Das Warten lassen ist am besten geeignet, da der Sender komplett pausiert, bis der Empfänger die vorhandenen Daten verarbeitet hat. Dies erfordert keinen zusätzlichen Speicher und garantiert, dass keine Daten verloren gehen. Die Bewertung basiert auf den Kriterien Speicherverbrauch, Umsetzbarkeit und Datensicherheit im beschriebenen Szenario. (Richtig)

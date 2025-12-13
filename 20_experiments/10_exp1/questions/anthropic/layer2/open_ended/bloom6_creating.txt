@@ -1,6 +1,0 @@
-## Open-Ended Question
-### Bloom Level: Creating
-
-Frage: Entwerfen Sie ein vereinfachtes Data Link Layer-Protokoll, das alle fünf Kernaufgaben (Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff) integriert. Beschreiben Sie dabei, wie diese Aufgaben in Ihrem Protokollentwurf zusammenwirken, um eine fehlergesicherte Übertragung zu gewährleisten.
-
-Antwort: Ein möglicher Protokollentwurf könnte folgende Struktur aufweisen: Die Segmentierung organisiert die Rohdaten in 8-bit Bytes und fasst diese zu Frames zusammen. Für die Identifikation erhält jeder Frame einen Header mit Sender- und Empfängeradresse. Die Fehlerkontrolle wird durch ein Prüfsummenfeld am Frame-Ende realisiert, das Übertragungsfehler erkennt und bei Bedarf eine Neuübertragung auslöst. Die Flusskontrolle implementiert einen Mechanismus, bei dem der Empfänger Bestätigungen sendet und bei Überlastung den Sender zum Warten auffordert oder Daten zwischenpuffert. Der Medienzugriff erfolgt durch Prüfen der Physical Layer-Verfügbarkeit vor dem Senden, wobei das Protokoll bei Belegung wartet, bei Kollisionen den Fehler behebt und den Kanal für die Übertragungsdauer reserviert. Alle Aufgaben greifen ineinander: Erst nach erfolgreicher Medienzugriffsprüfung werden segmentierte, adressierte und fehlergesicherte Frames unter Beachtung der Flusskontrolle übertragen. (Richtig)
