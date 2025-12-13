@@ -351,9 +351,7 @@ def run_exp1(clients):
                             4000,
                         )
                     )
-                    csv_rows.append(
-                        [llm_name, layer_num, "mcq", bloom_level, bloom_idx]
-                    )
+                    csv_rows.append([llm_name, layer_num, "mcq", bloom_idx])
 
             # Open-Ended: Sample 3 random Bloom levels from all 6
             if constants.GENERATE_OPEN_ENDED:
@@ -382,12 +380,10 @@ def run_exp1(clients):
                             4000,
                         )
                     )
-                    csv_rows.append(
-                        [llm_name, layer_num, "open_ended", bloom_level, bloom_idx]
-                    )
+                    csv_rows.append([llm_name, layer_num, "open_ended", bloom_idx])
     # Sort CSV rows and create file
-    csv_rows.sort(key=lambda row: (row[0], int(row[1]), row[2], row[4]))
-    headers = ["llm", "layer", "question_type", "bloom_level", "bloom_idx"]
+    csv_rows.sort(key=lambda row: (row[0], int(row[1]), row[2], row[3]))
+    headers = ["llm", "layer", "question_type", "bloom_idx"]
     create_csvs("exp1", headers, csv_rows)
 
     run_tasks(tasks, "Exp 1")
@@ -438,7 +434,7 @@ def run_exp2(clients):
                             4000,
                         )
                     )
-                    csv_rows.append([llm_name, "mcq", bloom_level, bloom_idx, q_num])
+                    csv_rows.append([llm_name, "mcq", bloom_idx, q_num])
 
         # Open-Ended: 1 question per Bloom level (all 6 levels) = 6 OE per LLM
         if constants.GENERATE_OPEN_ENDED:
@@ -467,9 +463,7 @@ def run_exp2(clients):
                             4000,
                         )
                     )
-                    csv_rows.append(
-                        [llm_name, "open_ended", bloom_level, bloom_idx, q_num]
-                    )
+                    csv_rows.append([llm_name, "open_ended", bloom_idx, q_num])
 
         # Open-Ended: 1 question per Bloom level (all 6 levels) = 6 OE per LLM
         for bloom_level in constants.BLOOM_LEVELS_OPEN_ENDED:
@@ -481,7 +475,7 @@ def run_exp2(clients):
                     "questions",
                     llm_name,
                     "open_ended",
-                    f"bloom{bloom_idx}_{slugify(bloom_level)}_q{q_num}.txt",
+                    f"bloom{bloom_idx}_q{q_num}.txt",
                 )
 
                 tasks.append(
@@ -497,11 +491,11 @@ def run_exp2(clients):
                         4000,
                     )
                 )
-                csv_rows.append([llm_name, "open_ended", bloom_level, bloom_idx, q_num])
+                csv_rows.append([llm_name, "open_ended", bloom_idx, q_num])
 
     # Sort CSV rows and create file
-    csv_rows.sort(key=lambda row: (row[0], row[1], row[3], row[4]))
-    headers = ["llm", "question_type", "bloom_level", "bloom_idx", "question_num"]
+    csv_rows.sort(key=lambda row: (row[0], row[1], row[2], row[3]))
+    headers = ["llm", "question_type", "bloom_idx", "question_num"]
     create_csvs("exp2", headers, csv_rows)
 
     run_tasks(tasks, "Exp 2")

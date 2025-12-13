@@ -1,14 +1,5 @@
 """
 Sampling Module for Question Generation Experiments
-
-Implements stratified sampling for both experiments:
-
-Experiment 1: Sample 24 questions from 168 (1/7 = sample 1 complete layer)
-- Sample 1 layer completely: 4 LLMs × 2 types × 3 Bloom = 24 questions
-
-Experiment 2: Sample 24 questions from 48 (1/2)
-- MCQ: 3 per LLM (sample 1 per Bloom level from 2 available) = 12 total
-- Open-ended: 3 per LLM (sample 3 from 6 Bloom levels) = 12 total
 """
 
 import os
@@ -19,10 +10,6 @@ import constants
 
 
 def clean_samples(exp_path):
-    """
-    Delete all existing samples for a new sampling run.
-    Removes the entire sampled directory to avoid mixing old and new samples.
-    """
     sample_dir = os.path.join(exp_path, "sampled")
     if os.path.exists(sample_dir):
         try:
@@ -33,7 +20,6 @@ def clean_samples(exp_path):
 
 
 def collect_question_files(base_path, pattern=".txt"):
-    """Collect all question files from a directory tree."""
     files = []
     for root, _, filenames in os.walk(base_path):
         for filename in filenames:
@@ -43,7 +29,6 @@ def collect_question_files(base_path, pattern=".txt"):
 
 
 def sample_files(files, sample_size, dest_base):
-    """Sample files and copy to destination."""
     sampled = random.sample(files, min(sample_size, len(files)))
     for src in sampled:
         rel_path = os.path.relpath(src, os.path.dirname(src))
@@ -54,13 +39,6 @@ def sample_files(files, sample_size, dest_base):
 
 
 def sample_exp1():
-    """
-    Sample 24 questions from Experiment 1 (168 total).
-
-    Strategy: Stratified sampling to ensure balanced distribution
-    Per LLM: 6 questions (3 MCQ + 3 Open-Ended)
-    Total: 4 LLMs × 6 = 24 questions
-    """
     print("\n[INFO] Sampling Experiment 1 questions...")
     print("       Target: 24 questions (6 per LLM: 3 MCQ + 3 Open-Ended)")
 
@@ -78,36 +56,27 @@ def sample_exp1():
     for llm_name in constants.LLM_NAMES:
         llm_dir = os.path.join(questions_path, llm_name)
         if not os.path.exists(llm_dir):
+            print(f"[WARNING] Directory not found: {llm_dir}")
             continue
 
-        for layer_num in constants.LAYERS:
-            layer_dir = os.path.join(llm_dir, f"layer{layer_num}")
-            if not os.path.exists(layer_dir):
+        # Check both question types
+        for q_type in constants.QUESTION_TYPES:
+            type_dir = os.path.join(llm_dir, q_type)
+            if not os.path.exists(type_dir):
+                print(f"[WARNING] Directory not found: {type_dir}")
                 continue
 
-            for q_type in constants.QUESTION_TYPES:
-                type_dir = os.path.join(layer_dir, q_type)
-                if not os.path.exists(type_dir):
+            # Scan files in this type directory
+            for filename in os.listdir(type_dir):
+                if not filename.endswith(".txt"):
                     continue
 
-                for filename in os.listdir(type_dir):
-                    if filename.endswith(".txt"):
-                        # Extract bloom index from filename
-                        bloom_part = filename.replace(".txt", "").split("_")[-1]
-                        try:
-                            bloom_idx = int(bloom_part)
-                        except ValueError:
-                            # Bloom level name, convert to index
-                            bloom_name = bloom_part.capitalize()
-                            if bloom_name in constants.BLOOM_LEVELS_ORDERED:
-                                bloom_idx = (
-                                    constants.BLOOM_LEVELS_ORDERED.index(bloom_name) + 1
-                                )
-                            else:
-                                print(
-                                    f"[WARNING] Unknown bloom level in {filename}, skipping"
-                                )
-                                continue
+                # Expected format: bloom{idx}_layer{num}.txt
+                if filename.startswith("bloom") and "_layer" in filename:
+                    try:
+                        parts = filename.replace(".txt", "").split("_")
+                        bloom_idx = int(parts[0].replace("bloom", ""))
+                        layer_num = int(parts[1].replace("layer", ""))
 
                         file_path = os.path.join(type_dir, filename)
 
@@ -120,6 +89,8 @@ def sample_exp1():
                                 "bloom_idx": bloom_idx,
                             }
                         )
+                    except (ValueError, IndexError) as e:
+                        print(f"[WARNING] Could not parse filename {filename}: {e}")
 
     # Stratified sampling: 3 MCQ + 3 Open-Ended per LLM
     sampled_questions = []
@@ -144,13 +115,15 @@ def sample_exp1():
 
     print(f"       Sampled: {len(sampled_questions)} questions")
 
+    if len(sampled_questions) == 0:
+        print("[ERROR] No questions were sampled! Check file paths and structure.")
+        return []
+
     # Copy sampled files and create CSV rows
     csv_rows = []
     for q in sampled_questions:
-        # Create destination path
-        dest_dir = os.path.join(
-            sample_path, q["llm"], f"layer{q['layer']}", q["question_type"]
-        )
+        # Create destination path matching source structure: {llm}/{question_type}/
+        dest_dir = os.path.join(sample_path, q["llm"], q["question_type"])
         os.makedirs(dest_dir, exist_ok=True)
 
         # Copy file
@@ -183,24 +156,14 @@ def sample_exp1():
     os.makedirs(os.path.dirname(csv_path), exist_ok=True)
 
     df = pd.DataFrame(csv_rows, columns=["llm", "layer", "question_type", "bloom_idx"])
-    df = df.sort_values(["llm", "layer", "question_type", "bloom_idx"])
+    df = df.sort_values(["llm", "question_type", "bloom_idx", "layer"])
     df.to_csv(csv_path, index=False)
-    print(f"\n       CSV saved: {csv_path}")
+    print(f"\n       CSV saved: {csv_path} ({len(df)} rows)")
 
     return sampled_questions
 
 
 def sample_exp2():
-    """
-    Sample 24 questions from Experiment 2 (48 total).
-
-    Strategy: Sample 1/2 of questions per LLM
-    - MCQ: 3 per LLM (sample 1 per Bloom level from 2 available per level) = 12 total
-    - Open-ended: 3 per LLM (sample 3 random Bloom levels from 6) = 12 total
-
-    Total per LLM: 3 MCQ + 3 Open-Ended = 6
-    4 LLMs × 6 = 24 questions
-    """
     print("\n[INFO] Sampling Experiment 2 questions...")
     print("       Target: 24 questions (6 per LLM)")
 
@@ -230,7 +193,7 @@ def sample_exp2():
                     os.makedirs(mcq_dest, exist_ok=True)
                     shutil.copy2(src_file, dest_file)
                     sampled_files.append(dest_file)
-                    csv_rows.append([llm_name, "mcq", bloom_level, bloom_idx])
+                    csv_rows.append([llm_name, "mcq", bloom_idx])
 
         # Sample Open-Ended: 3 random Bloom levels from 6 (3 total per LLM)
         oe_dir = os.path.join(questions_path, llm_name, "open_ended")
@@ -253,7 +216,7 @@ def sample_exp2():
                     os.makedirs(oe_dest, exist_ok=True)
                     shutil.copy2(src_file, dest_file)
                     sampled_files.append(dest_file)
-                    csv_rows.append([llm_name, "open_ended", bloom_level, bloom_idx])
+                    csv_rows.append([llm_name, "open_ended", bloom_idx])
 
     print(f"       Sampled: {len(sampled_files)} questions")
 
@@ -263,9 +226,8 @@ def sample_exp2():
     )
     os.makedirs(os.path.dirname(csv_path), exist_ok=True)
 
-    df = pd.DataFrame(
-        csv_rows, columns=["llm", "question_type", "bloom_level", "bloom_idx"]
-    )
+    df = pd.DataFrame(csv_rows, columns=["llm", "question_type", "bloom_idx"])
+    df = df.sort_values(["llm", "question_type", "bloom_idx"])
     df.to_csv(csv_path, index=False)
     print(f"       CSV saved: {csv_path}")
 
@@ -282,6 +244,12 @@ def generate_expert_evaluation_csvs():
     )
     if os.path.exists(exp1_csv):
         df = pd.read_csv(exp1_csv)
+
+        # Add sample_id as first column (001, 002, ...)
+        df.insert(0, "sample_id", [f"{i+1:03d}" for i in range(len(df))])
+
+        # Remove llm and bloom_idx columns for blind evaluation
+        df = df.drop(columns=["llm", "bloom_idx"])
 
         # Add evaluation columns
         eval_columns = [
@@ -319,6 +287,12 @@ def generate_expert_evaluation_csvs():
     )
     if os.path.exists(exp2_csv):
         df = pd.read_csv(exp2_csv)
+
+        # Add sample_id as first column (001, 002, ...)
+        df.insert(0, "sample_id", [f"{i+1:03d}" for i in range(len(df))])
+
+        # Remove llm and bloom_idx columns for blind evaluation
+        df = df.drop(columns=["llm", "bloom_idx"])
 
         # Add evaluation columns for Bloom alignment
         eval_columns = [
