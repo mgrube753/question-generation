@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Creating
+
+Frage: Entwerfen Sie ein eigenes Physical-Layer-Konzept für ein einfaches Kommunikationssystem zwischen zwei Geräten, das alle drei Kernaufgaben (Codierung, Transport, Decodierung) integriert. Beschreiben Sie dabei konkret, welche physikalischen Größen Sie verwenden und wie die einzelnen Komponenten zusammenwirken.
+
+Antwort: Ein mögliches Physical-Layer-Konzept könnte wie folgt aussehen: Für die Codierung werden logische Werte (0 und 1) als unterschiedliche Lichtintensitäten abgebildet, wobei eine hohe Intensität den Wert 1 und eine niedrige Intensität den Wert 0 repräsentiert. Der Transport erfolgt medienfrei über Lichtsignale (Infrarot), die von einer LED ausgesendet und durch die Luft übertragen werden. Bei der Decodierung auf der Empfängerseite tastet ein Fotoempfänger die eintreffenden Lichtsignale ab und interpretiert diese anhand definierter Detektionsbereiche zurück als logische Werte. Die drei Komponenten wirken zusammen, indem der Sender zunächst die Daten codiert, diese dann über das Medium transportiert werden und der Empfänger abschließend die physikalischen Signale wieder in die ursprünglichen logischen Werte zurückübersetzt. (Richtig)

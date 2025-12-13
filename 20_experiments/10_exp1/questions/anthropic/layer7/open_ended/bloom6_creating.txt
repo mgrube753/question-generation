@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Creating
+
+Frage: Entwerfen Sie für eine selbstgewählte Anwendung (z.B. Dateiaustausch, Chat oder Buchungssystem) eine vollständige Application Layer 7 Spezifikation, die alle drei Kernaufgaben systematisch integriert und deren Zusammenspiel darstellt.
+
+Antwort: Beispiel für ein Chat-System: Grundkonzepte umfassen Begriffe wie Benutzer, Nachricht, Chatroom und Zeitstempel. Protokollelemente definieren Anforderungen wie SEND_MESSAGE (erwartet: Absender-ID, Empfänger-ID, Nachrichteninhalt, Zeitstempel), JOIN_ROOM (erwartet: Benutzer-ID, Raum-ID) und GET_HISTORY (erwartet: Raum-ID, Anzahl Nachrichten). Das Verhalten spezifiziert die Reaktionen: Bei SEND_MESSAGE validiert die Anwendung den Absender, speichert die Nachricht und liefert alle Teilnehmer im Raum aus. Bei JOIN_ROOM wird der Benutzer zur Teilnehmerliste hinzugefügt und eine Bestätigung sowie die aktuelle Teilnehmerliste zurückgesendet. Bei GET_HISTORY werden die angeforderten Nachrichten chronologisch sortiert zurückgeliefert. Die Integration zeigt, wie Grundkonzepte die Struktur der Protokollelemente bestimmen und das Verhalten die konsistente Verarbeitung dieser Elemente sicherstellt. (Richtig)

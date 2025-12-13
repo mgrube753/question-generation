@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Remembering
+
+Frage: Zähle die drei Kernaufgaben der Session Layer 5 auf und benenne jeweils kurz, was darunter verstanden wird.
+
+Antwort: 1) Sitzungen: Aufbauen, verwalten, zurückweisen und beenden. 2) Synchronisation: Setzen von Zwischenpunkten. 3) Bündelung: Gruppierung zusammengehöriger Transaktionen. (Richtig)

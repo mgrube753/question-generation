@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Analyzing
+
+Frage: Analysieren Sie, wie die drei Kernaufgaben der Transport Layer 4 – Adressierung, Flusssteuerung und Dienstqualität – zusammenwirken, um die Bereitstellung einer Übertragung zwischen beliebigen Netzteilnehmern zu ermöglichen.
+
+Antwort: Die Adressierung bildet die Grundlage des Zusammenspiels, indem sie durch Teilnehmer-Adressen die eindeutige Identifikation der Kommunikationspartner ermöglicht. Die Flusssteuerung baut darauf auf und nutzt die spezifischen Charakteristiken der adressierten Teilnehmer, um die Datenübertragung entsprechend anzupassen. Die Dienstqualität greift beide vorherigen Aufgaben auf, indem sie auf Basis der Teilnehmerinformationen individuelle Garantien für Parameter wie Bandbreite, Latenz, Jitter und Fehlerrate erbringt. Die drei Aufgaben stehen in einer hierarchischen Beziehung zueinander: Ohne Adressierung ist keine gezielte Kommunikation möglich, ohne Flusssteuerung keine effiziente Nutzung der Verbindungskapazitäten, und ohne Dienstqualität keine garantierten, auf den jeweiligen Teilnehmer zugeschnittenen Übertragungsparameter. Gemeinsam erfüllen sie den Gesamtzweck der Transport Layer, eine zuverlässige und qualitätsgesicherte Kommunikation zwischen beliebigen Netzteilnehmern bereitzustellen. (Richtig)

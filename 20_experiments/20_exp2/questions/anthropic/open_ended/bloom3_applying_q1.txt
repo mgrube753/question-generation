@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Applying
+
+Frage: Ein Benutzer sendet eine E-Mail mit einem angehängten Bild an einen Empfänger in einem anderen Netzwerk. Die E-Mail enthält Sonderzeichen und soll komprimiert übertragen werden. Ermitteln Sie, welche OSI-Schicht für die Kompression und die Konvertierung der Sonderzeichen verantwortlich ist und wenden Sie die entsprechenden Kernaufgaben dieser Schicht auf dieses Szenario an.
+
+Antwort: Der Presentation Layer 6 ist für diese Aufgaben zuständig. Im beschriebenen Szenario kommen folgende Kernaufgaben zur Anwendung: Die Kernaufgabe Zeichen wird angewendet, um die Sonderzeichen in der E-Mail korrekt zu konvertieren, beispielsweise von Unicode zu ASCII oder umgekehrt, damit nationale Sonderzeichen beim Empfänger korrekt dargestellt werden. Die Kernaufgabe Kompression wird genutzt, um die E-Mail mit dem angehängten Bild vor der Übertragung zu komprimieren, wodurch das Datenvolumen reduziert wird. Beim Empfänger erfolgt dann die Dekomprimierung, um die ursprünglichen Daten wiederherzustellen. Der Presentation Layer kodiert somit die Anwendungsdaten als Bitstrom für die weitere Übertragung durch die darunterliegenden Schichten. (Richtig)

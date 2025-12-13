@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Understanding
+
+Frage: Stellen Sie die Kernaufgaben des Physical Layer (Layer 1) und des Data Link Layer (Layer 2) gegenüber, indem Sie für beide Layer die jeweiligen Aufgaben benennen und kurz erklären.
+
+Antwort: Physical Layer (Layer 1): (1) Codierung: Abbildung logischer Werte auf physikalische Größen (z.B. NRZ, Manchester). (2) Transport: Übertragung dieser physikalischen Größen von einem Ort zum anderen, mediengebunden (z.B. Telefonkabel) oder medienfrei (z.B. Lichtsignal, Funk). (3) Decodierung: Rückinterpretation physikalischer Größen als logische Werte (z.B. Abtastung, Detektionsbereiche). Data Link Layer (Layer 2): stellt eine fehlergesicherte Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer bereit und umfasst (1) Fehlerkontrolle: Erkennen/Beheben/Signalisieren von Übertragungsfehlern, (2) Flußkontrolle: Umgang damit, wenn der Sender zu schnell für den Empfänger ist (z.B. puffern, herunterregeln, warten lassen), (3) Segmentierung: Zusammenfassen einzelner Bits zu größeren Einheiten (z.B. 8-bit Bytes), (4) Identifikation: Auswahl bestimmter Sender/Empfänger durch Adressen, (5) Medienzugriff: Aktivieren und Regeln der Nutzung des Physical Layer (Senden, Warten, Beheben, Reservieren). (Richtig)

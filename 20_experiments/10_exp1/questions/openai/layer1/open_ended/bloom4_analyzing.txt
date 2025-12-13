@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Analyzing
+
+Frage: Analysieren Sie den Ablauf der Bitübertragung in der Physical Layer: Differenzieren Sie anhand der Beispiele NRZ/Manchester, Telefonkabel vs. Licht/Funk sowie Abtastung/Detektionsbereiche, welcher Kernaufgabe (Codierung, Transport, Decodierung) sie jeweils zuzuordnen sind, und setzen Sie Codierung, Transport und Decodierung hinsichtlich ihres Beitrags zum Gesamtzweck (Übertragung logischer Werte) in Beziehung.
+
+Antwort: Codierung: NRZ und Manchester sind Verfahren, die logische Werte (Bits) auf physikalische Größen abbilden. Transport: Telefonkabel steht für medien-gebundene Übertragung, Lichtsignal/Funk für medien-freie Übertragung; in beiden Fällen werden die bei der Codierung erzeugten physikalischen Größen von einem Ort zum anderen übertragen. Decodierung: Abtastung und Detektionsbereiche gehören zur Rückinterpretation der empfangenen physikalischen Größen als logische Werte. Beziehung: Codierung erzeugt ein physikalisches Signalformat für die logischen Werte, der Transport überführt dieses Signal durch ein konkretes Medium, und die Decodierung nutzt Abtastung/Detektionsbereiche, um aus dem transportierten physikalischen Signal wieder die logischen Werte zu rekonstruieren; dabei beeinflussen die Eigenschaften von Codierung und Medium die Anforderungen an die Decodierung. (Richtig)

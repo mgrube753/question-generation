@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Creating
+
+Frage: Entwickeln Sie ein konkretes Anwendungsszenario für einen Dateiübertragungsdienst, in dem Sie die drei Kernaufgaben des Session Layers (Sitzungen, Synchronisation, Bündelung) zu einem funktionalen Gesamtkonzept zusammenstellen.
+
+Antwort: Ein mögliches Szenario für einen Dateiübertragungsdienst: Bei einer großen Dateiübertragung wird zunächst eine Sitzung zwischen Sender und Empfänger aufgebaut, die während der gesamten Übertragung verwaltet wird und bei unberechtigten Zugriffsversuchen zurückgewiesen werden kann. Während der Übertragung werden in regelmäßigen Abständen Synchronisationspunkte gesetzt, sodass bei einem Verbindungsabbruch die Übertragung nicht komplett neu gestartet werden muss, sondern am letzten Zwischenpunkt fortgesetzt werden kann. Mehrere zusammengehörige Dateien werden durch Bündelung als logische Transaktionsgruppe behandelt, um sicherzustellen, dass entweder alle Dateien vollständig übertragen werden oder keine. Nach erfolgreicher Übertragung wird die Sitzung ordnungsgemäß beendet. (Richtig)

@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Remembering
+
+Frage: Zählen Sie die drei Kernaufgaben von Network Layer 3 auf.
+
+Antwort: Adressierung, Routing, Flusssteuerung. (Richtig)

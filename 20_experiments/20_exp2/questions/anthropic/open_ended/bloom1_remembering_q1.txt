@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Remembering
+
+Frage: Zählen Sie die drei Kernaufgaben des Physical Layer (Schicht 1) auf und nennen Sie zu jeder Kernaufgabe ein Beispiel aus dem Lehrmaterial.
+
+Antwort: Die drei Kernaufgaben des Physical Layer sind: 1. Codierung - Abbildung logischer Werte auf physikalische Größen (Beispiele: NRZ, Manchester). 2. Transport - Übertragung physikalischer Größen von einem Ort zum anderen (Beispiele: Telefonkabel für mediengebunden, Lichtsignal oder Funk für medienfrei). 3. Decodierung - Rückinterpretation physikalischer Größen als logische Werte (Beispiele: Abtastung, Detektionsbereiche). (Richtig)

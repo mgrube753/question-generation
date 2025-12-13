@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Analyzing
+
+Frage: Setzen Sie die drei Kernaufgaben des Session Layers (Sitzungsverwaltung, Synchronisation, Bündelung) zueinander in Beziehung und erläutern Sie, wie diese gemeinsam zur Bereitstellung des Sitzungskonzepts einer Kommunikationsbeziehung beitragen.
+
+Antwort: Die drei Kernaufgaben stehen in einer funktionalen Abhängigkeit zueinander und ergänzen sich gegenseitig. Die Sitzungsverwaltung bildet die Grundlage, indem sie den Rahmen für die Kommunikation schafft durch Aufbauen, Verwalten, Zurückweisen und Beenden von Sitzungen. Die Synchronisation sichert diese Sitzung ab, indem Zwischenpunkte gesetzt werden, die bei Störungen eine Wiederherstellung des Kommunikationszustands ermöglichen. Die Bündelung strukturiert den Datenfluss innerhalb der Sitzung, indem zusammengehörige Transaktionen gruppiert werden. Gemeinsam gewährleisten diese drei Aufgaben, dass eine Kommunikationsbeziehung zuverlässig etabliert, während der Übertragung abgesichert und inhaltlich organisiert wird. (Richtig)

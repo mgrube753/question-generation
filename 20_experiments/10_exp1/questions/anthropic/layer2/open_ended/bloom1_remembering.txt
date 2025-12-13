@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Remembering
+
+Frage: Zählen Sie die fünf Kernaufgaben des Data Link Layer 2 auf.
+
+Antwort: Die fünf Kernaufgaben des Data Link Layer 2 sind Fehlerkontrolle, Flußkontrolle, Segmentierung, Identifikation und Medienzugriff. (Richtig)

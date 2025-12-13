@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Applying
+
+Frage: Veranschaulichen Sie anhand eines konkreten Szenarios, bei dem eine digitale Bitfolge über ein Telefonkabel gesendet werden soll, wie die drei Kernaufgaben des Physical Layer 1 nacheinander ablaufen und zusammenwirken.
+
+Antwort: Bei der Übertragung einer digitalen Bitfolge über ein Telefonkabel wirken die drei Kernaufgaben wie folgt zusammen: Zunächst erfolgt die Codierung, bei der die logischen Werte (Nullen und Einsen) auf physikalische Größen wie elektrische Spannungspegel abgebildet werden, beispielsweise mittels NRZ-Codierung. Anschließend findet der Transport statt, bei dem diese elektrischen Signale mediengebunden über das Telefonkabel von Sender zu Empfänger übertragen werden. Am Zielort erfolgt schließlich die Decodierung, wobei durch Abtastung der eingehenden Signale und Anwendung definierter Detektionsbereiche die physikalischen Größen wieder als logische Werte interpretiert werden, sodass die ursprüngliche Bitfolge rekonstruiert wird. (Richtig)

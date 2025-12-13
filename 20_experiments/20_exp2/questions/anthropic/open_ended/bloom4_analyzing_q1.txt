@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Analyzing
+
+Frage: Untersuchen Sie die Konzepte der Flusssteuerung auf den Schichten 2, 3 und 4 des OSI-Modells und differenzieren Sie diese hinsichtlich ihrer jeweiligen Zielsetzung und Reichweite.
+
+Antwort: Die Flusssteuerung existiert auf drei Schichten mit unterschiedlichen Zielsetzungen und Reichweiten. Auf Layer 2 (Data Link Layer) bezieht sich die Flusskontrolle auf die direkte Verbindung zwischen Sender und Empfänger mit Strategien wie Zwischenpuffern, Herunterregeln oder Warten lassen, wenn der Sender zu schnell sendet. Die Reichweite ist auf die unmittelbare physische Verbindung begrenzt. Auf Layer 3 (Network Layer) unterscheidet die Flusssteuerung zwischen End-to-End (vom Sender zum entfernten Empfänger) und Node-to-Node (von jedem Knoten zum nächsten). Die Zielsetzung ist die netzwerkübergreifende Regulierung über verschiedene Zwischenknoten hinweg. Auf Layer 4 (Transport Layer) nutzt die Flusssteuerung die spezifische Teilnehmer-Charakteristik und ist auf den jeweiligen Kommunikationspartner zugeschnitten. Die Beziehung zur Gesamtstruktur zeigt eine zunehmende Abstraktion: von der physischen Verbindungsebene über die Netzwerkebene bis zur teilnehmerspezifischen Ebene. (Richtig)

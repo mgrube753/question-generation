@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Applying
+
+Frage: Ermitteln Sie für einen Echtzeit-Audio-Dienst zwischen Teilnehmer A (Empfangskapazität deutlich geringer als die Sendekapazität von Teilnehmer B) die Umsetzung der drei Kernaufgaben der Transportschicht 4, indem Sie (1) die erforderliche Adressierung, (2) die passende Flusssteuerung unter Nutzung der Teilnehmer-Charakteristik und (3) die nötigen QoS-Garantien (Bandbreite, Latenz, Jitter, Fehlerrate) für diese Situation angeben.
+
+Antwort: (1) Adressierung: eindeutige Teilnehmer-Adressen für A und B, damit die Übertragung zwischen genau diesen beiden Teilnehmern erfolgt. (2) Flusssteuerung: Anpassung der Übertragungsrate an die geringere Empfangskapazität von A, sodass B nicht schneller sendet als A verarbeiten/empfangen kann. (3) Dienstqualität (QoS): Garantien zugeschnitten auf den Echtzeit-Audio-Dienst, insbesondere ausreichende Bandbreite sowie geringe Latenz und geringer Jitter; zusätzlich eine möglichst geringe Fehlerrate. (Richtig)

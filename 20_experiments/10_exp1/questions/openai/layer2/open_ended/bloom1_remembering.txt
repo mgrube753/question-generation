@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Remembering
+
+Frage: Zählen Sie die fünf Kernaufgaben des Data Link Layer 2 auf und nennen Sie zu jeder Aufgabe kurz, was sie umfasst.
+
+Antwort: Fehlerkontrolle: Erkennen, Beheben oder Signalisieren von Übertragungsfehlern; Flußkontrolle: Strategien, wenn der Sender für den Empfänger zu schnell sendet (z. B. Zwischenpuffern, Herunterregeln, warten lassen); Segmentierung: Zusammenfassen einzelner Bits zu größeren Einheiten (z. B. 8-bit Bytes); Identifikation: Auswahl bestimmter Sender oder Empfänger (Adresse); Medienzugriff: Aktivieren des Physical Layer (typische Aspekte: Senden, Warten, Beheben, Reservieren). (Richtig)

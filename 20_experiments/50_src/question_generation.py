@@ -336,31 +336,31 @@ def run_exp1(clients):
 
         for llm_name in constants.LLM_NAMES:
             # MCQ: Use all 3 Bloom levels (1-3)
-            for bloom_level in constants.BLOOM_LEVELS_MCQ:
-                bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
-                output_path = os.path.join(
-                    constants.EXP1_PATH,
-                    "questions",
-                    llm_name,
-                    f"layer{layer_num}",
-                    "mcq",
-                    f"bloom{bloom_idx}_{slugify(bloom_level)}.txt",
-                )
+            # for bloom_level in constants.BLOOM_LEVELS_MCQ:
+            #     bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
+            #     output_path = os.path.join(
+            #         constants.EXP1_PATH,
+            #         "questions",
+            #         llm_name,
+            #         f"layer{layer_num}",
+            #         "mcq",
+            #         f"bloom{bloom_idx}_{slugify(bloom_level)}.txt",
+            #     )
 
-                tasks.append(
-                    (
-                        llm_name,
-                        clients,
-                        "mcq",
-                        source_text,
-                        bloom_level,
-                        bloom_data,
-                        output_path,
-                        f"L{layer_num} MCQ {bloom_level}",
-                        4000,
-                    )
-                )
-                csv_rows.append([llm_name, layer_num, "mcq", bloom_level, bloom_idx])
+            #     tasks.append(
+            #         (
+            #             llm_name,
+            #             clients,
+            #             "mcq",
+            #             source_text,
+            #             bloom_level,
+            #             bloom_data,
+            #             output_path,
+            #             f"L{layer_num} MCQ {bloom_level}",
+            #             4000,
+            #         )
+            #     )
+            #     csv_rows.append([llm_name, layer_num, "mcq", bloom_level, bloom_idx])
 
             # Open-Ended: Sample 3 random Bloom levels from all 6
             oe_bloom_levels = random.sample(constants.BLOOM_LEVELS_OPEN_ENDED, 3)
@@ -430,32 +430,32 @@ def run_exp2(clients):
 
     for llm_name in constants.LLM_NAMES:
         # MCQ: 2 questions per Bloom level (levels 1-3) = 6 MCQ per LLM
-        for bloom_level in constants.BLOOM_LEVELS_MCQ:
-            bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
+        # for bloom_level in constants.BLOOM_LEVELS_MCQ:
+        #     bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
 
-            for q_num in range(1, constants.EXP2_MCQ_PER_BLOOM + 1):
-                output_path = os.path.join(
-                    constants.EXP2_PATH,
-                    "questions",
-                    llm_name,
-                    "mcq",
-                    f"bloom{bloom_idx}_{slugify(bloom_level)}_q{q_num}.txt",
-                )
+        #     for q_num in range(1, constants.EXP2_MCQ_PER_BLOOM + 1):
+        #         output_path = os.path.join(
+        #             constants.EXP2_PATH,
+        #             "questions",
+        #             llm_name,
+        #             "mcq",
+        #             f"bloom{bloom_idx}_{slugify(bloom_level)}_q{q_num}.txt",
+        #         )
 
-                tasks.append(
-                    (
-                        llm_name,
-                        clients,
-                        "mcq",
-                        source_text,
-                        bloom_level,
-                        bloom_data,
-                        output_path,
-                        f"MCQ B{bloom_idx} Q{q_num}",
-                        4000,
-                    )
-                )
-                csv_rows.append([llm_name, "mcq", bloom_level, bloom_idx, q_num])
+        #         tasks.append(
+        #             (
+        #                 llm_name,
+        #                 clients,
+        #                 "mcq",
+        #                 source_text,
+        #                 bloom_level,
+        #                 bloom_data,
+        #                 output_path,
+        #                 f"MCQ B{bloom_idx} Q{q_num}",
+        #                 4000,
+        #             )
+        #         )
+        #         csv_rows.append([llm_name, "mcq", bloom_level, bloom_idx, q_num])
 
         # Open-Ended: 1 question per Bloom level (all 6 levels) = 6 OE per LLM
         for bloom_level in constants.BLOOM_LEVELS_OPEN_ENDED:

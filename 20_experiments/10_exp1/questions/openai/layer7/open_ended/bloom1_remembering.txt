@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Remembering
+
+Frage: Zählen Sie die drei Kernaufgaben der Application Layer 7 auf, wie sie im Lehrmaterial genannt werden.
+
+Antwort: Grundkonzepte, Protokollelemente, Verhalten. (Richtig)

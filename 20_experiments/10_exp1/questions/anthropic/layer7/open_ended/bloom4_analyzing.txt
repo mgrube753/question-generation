@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Analyzing
+
+Frage: Analysieren Sie die drei Kernaufgaben des Application Layers und setzen Sie diese in Beziehung zueinander, um deren Zusammenwirken bei der Festlegung einer spezifischen Anwendung zu erklären.
+
+Antwort: Die drei Kernaufgaben des Application Layers stehen in einer hierarchischen Abhängigkeitsbeziehung zueinander. Die Grundkonzepte bilden das Fundament, indem sie die Begriffe und Elemente definieren, die innerhalb der Anwendung auftreten. Darauf aufbauend legen die Protokollelemente fest, welche Anforderungen an die Anwendung gestellt werden können und welche Daten dabei erwartet werden. Das Verhalten beschreibt schließlich, wie die Anwendung auf diese durch Protokollelemente formulierten Anforderungen reagiert. Diese drei Aufgaben bilden zusammen eine logische Kette: Ohne definierte Grundkonzepte können keine sinnvollen Protokollelemente formuliert werden, und ohne Protokollelemente kann kein Verhalten als Reaktion definiert werden. Diese enge Verzahnung erklärt auch, warum der Application Layer stark von der jeweiligen Anwendung abhängig ist und eine übergreifende Systematisierung kaum möglich ist. (Richtig)

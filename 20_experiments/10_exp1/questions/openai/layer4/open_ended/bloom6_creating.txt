@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Creating
+
+Frage: Entwerfen Sie für ein Netz einen Transport-Layer-4-Kommunikationsdienst zwischen zwei beliebigen Teilnehmern, der die drei Kernaufgaben Adressierung, Flusssteuerung und Dienstqualität als zusammenhängendes Gesamtkonzept integriert.
+
+Antwort: Ein möglicher Entwurf ist ein verbindungsorientierter Transportdienst mit (1) Adressierung über eindeutige Teilnehmer-Adressen für Sender und Empfänger, die zur Zuordnung der Endpunkte einer Übertragung verwendet werden; (2) Flusssteuerung als Rückmelde-/Fenster-Mechanismus, bei dem der Empfänger seine charakteristische Aufnahmekapazität (z. B. verfügbare Puffer/Verarbeitungsrate) signalisiert und der Sender seine Sendeleistung daran anpasst; (3) Dienstqualität über einen pro Teilnehmer zugeschnittenen QoS-Vertrag, der bei Verbindungsaufbau festgelegt wird und garantierte Werte/Schranken für Bandbreite, Latenz, Jitter und Fehlerrate bereitstellt, sodass der Kommunikationsdienst diese Parameter für die jeweilige Teilnehmer-Kombination zusichert. (Richtig)

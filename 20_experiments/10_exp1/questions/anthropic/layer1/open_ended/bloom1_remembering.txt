@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Remembering
+
+Frage: Zählen Sie die drei Kernaufgaben des Physical Layer 1 auf und beschreiben Sie jeweils kurz deren Funktion.
+
+Antwort: Die drei Kernaufgaben des Physical Layer 1 sind: 1. Codierung: Abbildung logischer Werte auf physikalische Größen. 2. Transport: Übertragung physikalischer Größen von einem Ort zum anderen. 3. Decodierung: Rückinterpretation physikalischer Größen als logische Werte. (Richtig)

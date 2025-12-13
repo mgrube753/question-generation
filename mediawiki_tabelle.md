@@ -1,6 +1,6 @@
 ```mediawiki
 {| class="wikitable sortable"
-|+ Übersicht der Forschungsarbeiten zur LLM-gestützten Fragogenerierung
+|+ Übersicht der Forschungsarbeiten zur LLM-gestützten Fragengenerierung
 ! Quelle & Fokus
 ! Forschungsziel & Adressierte Lücke
 ! Methodische Umsetzung (Prompting & Architektur)

@@ -1,0 +1,5 @@
+- Fragengenerierung klappte ziemlich gut mit GPT-5.2 und Claude Opus 4.5
+- Es gab nur wenige Fälle, in denen die Erwähnung des Lehrmaterials in die Frage eingebunden wurde
+- Teilweise mehrere Operatorverben, aber dies ist gut umgesetzt worden, statt einfach zu spammen
+- Heißt, der Prompt muss wohl doch ggf. Vermeidung von Bezugnahmen an Lehrmaterial beinhalten
+- MCQ-Prompts müssen angelegt und auch getestet werden

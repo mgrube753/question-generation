@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Evaluating
+
+Frage: Bewerten Sie die Eignung folgender Vorgehensweise zur Übertragung von Anwendungsdaten als Bitstrom zwischen einem little-endian Sender und einem big-endian Empfänger, wenn zusätzlich nationale Sonderzeichen enthalten sind und die Daten vertraulich bleiben müssen: (1) keine Endian-Konvertierung, (2) Zeichendarstellung in ASCII, (3) keine Kompression, (4) keine Verschlüsselung; begründen Sie Ihr Urteil anhand der Kernaufgaben der Presentation Layer.
+
+Antwort: Die Vorgehensweise ist insgesamt ungeeignet. Ohne Endian-Konvertierung wird die Datendarstellung zwischen little und big endian nicht konsistent, sodass der Empfänger Werte falsch interpretiert. ASCII ist für nationale Sonderzeichen nicht ausreichend, daher ist eine Zeichendarstellungs-Konvertierung auf einen geeigneten Zeichensatz (z. B. Unicode) erforderlich. Da Vertraulichkeit gefordert ist, muss eine Verschlüsselung (und beim Empfänger Entschlüsselung) erfolgen; ohne diese ist das Kriterium nicht erfüllt. Kompression ist keine zwingende Anforderung aus der Aufgabenbeschreibung selbst, aber falls eine geringere Datenmenge gefordert ist, wäre zusätzlich Komprimieren/Dekomprimieren notwendig. (Richtig)
