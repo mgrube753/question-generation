@@ -272,11 +272,11 @@ def generate_expert_evaluation_csvs():
                 "csv",
                 "qualitative",
                 "exp1",
-                "experts",
-                f"expert_{i}",
             )
             os.makedirs(expert_dir, exist_ok=True)
-            df.to_csv(os.path.join(expert_dir, "exp1_eval.csv"), index=False)
+
+            for i in range(1, 6):
+                df.to_csv(os.path.join(expert_dir, f"exp1_eval_e{i}.csv"), index=False)
 
         print("       Exp1 expert CSVs created (5 experts)")
 
@@ -315,11 +315,10 @@ def generate_expert_evaluation_csvs():
                 "csv",
                 "qualitative",
                 "exp2",
-                "students",
-                f"student_{i}",
             )
             os.makedirs(student_dir, exist_ok=True)
-            df.to_csv(os.path.join(student_dir, "exp2_eval.csv"), index=False)
+            for i in range(1, 4):
+                df.to_csv(os.path.join(student_dir, f"exp2_eval_s{i}.csv"), index=False)
 
         print("       Exp2 student CSVs created (3 students)")
 
