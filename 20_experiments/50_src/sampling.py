@@ -235,7 +235,6 @@ def sample_exp2():
 
 
 def generate_expert_evaluation_csvs():
-    """Generate CSV templates for expert evaluation."""
     print("\n[INFO] Generating expert evaluation CSV templates...")
 
     # Exp1 expert CSVs
@@ -326,7 +325,6 @@ def generate_expert_evaluation_csvs():
 
 
 def run_sampling():
-    """Run the complete sampling pipeline."""
     print("\n" + "=" * 60)
     print("Question Sampling")
     print("=" * 60)
