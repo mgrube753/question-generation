@@ -1,25 +1,9 @@
-"""
-Prompt Utilities for Question Generation
-
-Provides functions for loading and formatting prompts,
-as well as Bloom's Taxonomy data handling.
-"""
-
 import os
 from constants import BLOOM_LEVELS_ORDERED, BLOOM_DATA_FILE, PROMPT_TEMPLATES_PATH
 from file_utils import load_txt
 
 
 def load_prompt(prompt_path):
-    """
-    Load a prompt template from a file.
-
-    Args:
-        prompt_path: Full path to the prompt file, or filename within PROMPT_TEMPLATES_PATH
-
-    Returns:
-        String content of the prompt, or None if not found
-    """
     if os.path.isabs(prompt_path):
         return load_txt(prompt_path)
 
@@ -30,16 +14,6 @@ def load_prompt(prompt_path):
 
 
 def format_prompt(template, **values):
-    """
-    Format a prompt template with the given values.
-
-    Args:
-        template: Prompt template string with {placeholders}
-        **values: Key-value pairs to substitute into the template
-
-    Returns:
-        Formatted prompt string, or original template if formatting fails
-    """
     if template is None:
         return None
 
@@ -57,19 +31,6 @@ def format_prompt(template, **values):
 
 
 def parse_bloom_md(md_content):
-    """
-    Parse Bloom's Taxonomy data from markdown format.
-
-    Expected format:
-    ## Descriptions
-    - LevelName: Description text
-
-    ## Verbs
-    - LevelName: verb1, verb2, verb3
-
-    Returns:
-        Dictionary with level names as keys and {description, verbs} as values
-    """
     bloom_data = {
         level: {"description": "", "verbs": ""} for level in BLOOM_LEVELS_ORDERED
     }
@@ -106,17 +67,10 @@ def parse_bloom_md(md_content):
     return bloom_data
 
 
-# Cache for Bloom data to avoid repeated file reads
 _bloom_cache = None
 
 
 def get_bloom():
-    """
-    Get Bloom's Taxonomy data (cached).
-
-    Returns:
-        Dictionary with level names as keys and {description, verbs} as values
-    """
     global _bloom_cache
     if _bloom_cache is None:
         raw = load_txt(BLOOM_DATA_FILE)
@@ -126,15 +80,6 @@ def get_bloom():
 
 
 def get_bloom_level_index(level_name):
-    """
-    Get the 1-based index for a Bloom level name.
-
-    Args:
-        level_name: Name of the Bloom level (e.g., "Remembering")
-
-    Returns:
-        Integer index (1-6) or 0 if not found
-    """
     try:
         return BLOOM_LEVELS_ORDERED.index(level_name) + 1
     except ValueError:
@@ -142,15 +87,6 @@ def get_bloom_level_index(level_name):
 
 
 def get_bloom_level_name(index):
-    """
-    Get the Bloom level name for a 1-based index.
-
-    Args:
-        index: 1-based index (1-6)
-
-    Returns:
-        Level name string or None if invalid index
-    """
     if 1 <= index <= len(BLOOM_LEVELS_ORDERED):
         return BLOOM_LEVELS_ORDERED[index - 1]
     return None

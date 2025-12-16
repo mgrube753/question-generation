@@ -1,25 +1,3 @@
-"""
-Question Generation Module
-
-Implements the unified question generation pipeline for two experiments:
-
-Experiment 1 (Content Fidelity):
-- 4 LLMs × 1 Script × 7 Layers × 2 Question Types × 3 Bloom Levels = 168 questions
-- MCQ: Bloom levels 1-3 (all three)
-- Open-ended: 3 randomized Bloom levels from all 6
-- Sample: 168/7 = 24 questions (1 complete layer)
-
-Experiment 2 (Bloom Alignment):
-- 4 LLMs × concatenated script × 2 Question Types
-- MCQ: 6 per LLM (Bloom 1-3, each 2×) = 24 MCQ total
-- Open-ended: 6 per LLM (Bloom 1-6, each 1×) = 24 OE total
-- Total: 48 questions, sample 24
-
-Question Types:
-- MCQ: 3-step process (stem → keys → distractors)
-- Open-Ended: 1 prompt
-"""
-
 import os
 import csv
 import random
@@ -40,10 +18,6 @@ counter_lock = threading.Lock()
 
 
 def clean_questions(exp_path):
-    """
-    Delete all existing questions for a new experiment run.
-    Removes the entire questions directory to avoid mixing old and new runs.
-    """
     questions_dir = os.path.join(exp_path, "questions")
     if os.path.exists(questions_dir):
         try:
@@ -54,13 +28,11 @@ def clean_questions(exp_path):
 
 
 def increment_counter(llm_name):
-    """Increment the question counter for an LLM."""
     with counter_lock:
         llm_counters[llm_name] += 1
 
 
 def reset_counters():
-    """Reset all LLM counters."""
     with counter_lock:
         llm_counters.clear()
         for llm_name in constants.LLM_NAMES:
@@ -68,7 +40,6 @@ def reset_counters():
 
 
 def get_progress():
-    """Get formatted progress string for all LLMs."""
     with counter_lock:
         if not llm_counters:
             return "Progress"
@@ -80,7 +51,6 @@ def get_progress():
 
 
 def create_csvs(exp_name, headers, rows):
-    """Create initial CSV file for an experiment."""
     try:
         initial_csv_dir = os.path.join(constants.ANALYSES_PATH, "csv", "initial")
         file_path = os.path.join(initial_csv_dir, f"{exp_name}.csv")
@@ -97,13 +67,11 @@ def create_csvs(exp_name, headers, rows):
 
 
 def load_layer_content(layer_num):
-    """Load content for a specific OSI layer."""
     layer_path = os.path.join(constants.INPUT_SOURCES_PATH, f"layer{layer_num}.txt")
     return load_txt(layer_path)
 
 
 def load_concatenated_content():
-    """Load concatenated content of all layers for Exp2."""
     concat_path = os.path.join(constants.INPUT_SOURCES_PATH, "concatenated_common.txt")
     content = load_txt(concat_path)
 
@@ -124,14 +92,6 @@ def load_concatenated_content():
 def generate_mcq_question(
     llm_name, clients, source_text, bloom_level, bloom_data, max_tokens=4000
 ):
-    """
-    Generate a Multiple-Choice question using the 3-step MCQ pipeline:
-    1. Generate stem (question text)
-    2. Generate keys (correct answers)
-    3. Generate distractors (incorrect answers)
-
-    Returns the complete MCQ or None if any step fails.
-    """
     level_data = bloom_data.get(bloom_level, {})
 
     # Step 1: Generate MCQ Stem
@@ -213,11 +173,6 @@ def generate_mcq_question(
 def generate_open_ended_question(
     llm_name, clients, source_text, bloom_level, bloom_data, max_tokens=4000
 ):
-    """
-    Generate an Open-Ended question.
-
-    Returns the complete question or None if generation fails.
-    """
     level_data = bloom_data.get(bloom_level, {})
 
     prompt_template = load_prompt(constants.PROMPT_OPEN_ENDED)
@@ -236,8 +191,6 @@ def generate_open_ended_question(
     result = llm_generation(llm_name, clients, formatted_prompt, max_tokens=max_tokens)
     if not result:
         return None
-    # else:
-    #     return result
 
     complete_question = f"""## Open-Ended Question
 ### Bloom Level: {bloom_level}
@@ -248,20 +201,6 @@ def generate_open_ended_question(
 
 
 def generate_task(task_params):
-    """
-    Execute a single question generation task.
-
-    task_params is a tuple containing:
-    - llm_name: Name of the LLM
-    - clients: Dictionary of LLM clients
-    - question_type: 'mcq' or 'open_ended'
-    - source_text: Input text for question generation
-    - bloom_level: Bloom's taxonomy level
-    - bloom_data: Bloom level descriptions and verbs
-    - output_path: Path to save the generated question
-    - description: Task description for logging
-    - max_tokens: Maximum tokens for generation
-    """
     (
         llm_name,
         clients,
@@ -294,7 +233,6 @@ def generate_task(task_params):
 
 
 def run_tasks(tasks, exp_desc):
-    """Run all tasks with progress tracking."""
     print(f"\n[INFO] Running {len(tasks)} tasks for {exp_desc}...")
 
     with ThreadPoolExecutor(max_workers=4) as executor:

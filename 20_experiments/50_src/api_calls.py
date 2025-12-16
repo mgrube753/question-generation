@@ -3,7 +3,6 @@ from constants import REQUEST_DELAY_SECONDS, LLM_MODEL_IDS, DRY_RUN
 
 
 def gen_with_anthropic(client, prompt_text, model_id, max_tokens):
-    """Generate content using Anthropic's Claude API."""
     try:
         response = client.messages.create(
             model=model_id,
@@ -30,7 +29,6 @@ def gen_with_anthropic(client, prompt_text, model_id, max_tokens):
 
 
 def gen_with_openai(client, prompt_text, model_id, max_tokens):
-    """Generate content using OpenAI's API (gpt-5.2)."""
     try:
         response = client.responses.create(
             model=model_id,
@@ -58,7 +56,6 @@ def gen_with_openai(client, prompt_text, model_id, max_tokens):
 
 
 def gen_with_deepseek(client, prompt_text, model_id, max_tokens):
-    """Generate content using DeepSeek's API (deepseek-v3.2)."""
     # https://api-docs.deepseek.com/guides/thinking_mode
     # https://api-docs.deepseek.com/guides/reasoning_model
     try:
@@ -88,7 +85,6 @@ def gen_with_deepseek(client, prompt_text, model_id, max_tokens):
 
 
 def gen_with_xai(client, prompt_text, model_id, max_tokens):
-    """Generate content using xAI's Grok API (grok-4)."""
     try:
         response = client.responses.create(
             model=model_id,
@@ -116,14 +112,6 @@ def gen_with_xai(client, prompt_text, model_id, max_tokens):
 
 
 def llm_generation(llm_name, clients, prompt_text, max_tokens):
-    """
-    Unified LLM generation function for all 4 providers:
-    - anthropic: claude-opus-4.5
-    - openai: gpt-5.2
-    - deepseek: deepseek-v3.2
-    - xai: grok-4
-    """
-
     if DRY_RUN:
         print(f"[DRY-RUN] Skipping API call for {llm_name}, returning empty content")
         return " "  # Leerer String statt None, damit Files erstellt werden

@@ -1,7 +1,3 @@
-"""
-Sampling Module for Question Generation Experiments
-"""
-
 import os
 import random
 import shutil
@@ -42,13 +38,11 @@ def sample_exp1():
     print("\n[INFO] Sampling Experiment 1 questions...")
     print("       Target: 24 questions (6 per LLM: 3 MCQ + 3 Open-Ended)")
 
-    # Clean old samples before starting
     clean_samples(constants.EXP1_PATH)
 
     questions_path = os.path.join(constants.EXP1_PATH, "questions")
     sample_path = os.path.join(constants.EXP1_PATH, "sampled")
 
-    # Collect questions organized by LLM and question type
     questions_by_llm_type = {
         llm: {"mcq": [], "open_ended": []} for llm in constants.LLM_NAMES
     }
@@ -66,12 +60,10 @@ def sample_exp1():
                 print(f"[WARNING] Directory not found: {type_dir}")
                 continue
 
-            # Scan files in this type directory
             for filename in os.listdir(type_dir):
                 if not filename.endswith(".txt"):
                     continue
 
-                # Expected format: bloom{idx}_layer{num}.txt
                 if filename.startswith("bloom") and "_layer" in filename:
                     try:
                         parts = filename.replace(".txt", "").split("_")
@@ -119,18 +111,13 @@ def sample_exp1():
         print("[ERROR] No questions were sampled! Check file paths and structure.")
         return []
 
-    # Copy sampled files and create CSV rows
     csv_rows = []
     for q in sampled_questions:
-        # Create destination path matching source structure: {llm}/{question_type}/
         dest_dir = os.path.join(sample_path, q["llm"], q["question_type"])
         os.makedirs(dest_dir, exist_ok=True)
 
-        # Copy file
         dest_file = os.path.join(dest_dir, os.path.basename(q["path"]))
         shutil.copy2(q["path"], dest_file)
-
-        # Add to CSV
         csv_rows.append([q["llm"], q["layer"], q["question_type"], q["bloom_idx"]])
 
     # Show distribution per LLM
@@ -149,7 +136,6 @@ def sample_exp1():
         layer_dist[q["layer"]] = layer_dist.get(q["layer"], 0) + 1
     print(f"\n       Layer distribution: {dict(sorted(layer_dist.items()))}")
 
-    # Create sample CSV
     csv_path = os.path.join(
         constants.ANALYSES_PATH, "csv", "sampled", "exp1_sampled.csv"
     )
@@ -220,7 +206,6 @@ def sample_exp2():
 
     print(f"       Sampled: {len(sampled_files)} questions")
 
-    # Create sample CSV
     csv_path = os.path.join(
         constants.ANALYSES_PATH, "csv", "sampled", "exp2_sampled.csv"
     )
@@ -237,20 +222,15 @@ def sample_exp2():
 def generate_expert_evaluation_csvs():
     print("\n[INFO] Generating expert evaluation CSV templates...")
 
-    # Exp1 expert CSVs
     exp1_csv = os.path.join(
         constants.ANALYSES_PATH, "csv", "sampled", "exp1_sampled.csv"
     )
     if os.path.exists(exp1_csv):
         df = pd.read_csv(exp1_csv)
 
-        # Add sample_id as first column (001, 002, ...)
         df.insert(0, "sample_id", [f"{i+1:03d}" for i in range(len(df))])
-
-        # Remove llm and bloom_idx columns for blind evaluation
         df = df.drop(columns=["llm", "bloom_idx"])
 
-        # Add evaluation columns
         eval_columns = [
             "relevance",  # 0-10 scale
             "clarity",  # 0-10 scale
@@ -265,7 +245,6 @@ def generate_expert_evaluation_csvs():
         for col in eval_columns:
             df[col] = ""
 
-        # Save to expert folders
         for i in range(1, 6):
             expert_dir = os.path.join(
                 constants.ANALYSES_PATH,
@@ -280,35 +259,29 @@ def generate_expert_evaluation_csvs():
 
         print("       Exp1 expert CSVs created (5 experts)")
 
-    # Exp2 student CSVs
     exp2_csv = os.path.join(
         constants.ANALYSES_PATH, "csv", "sampled", "exp2_sampled.csv"
     )
     if os.path.exists(exp2_csv):
         df = pd.read_csv(exp2_csv)
 
-        # Add sample_id as first column (001, 002, ...)
         df.insert(0, "sample_id", [f"{i+1:03d}" for i in range(len(df))])
-
-        # Remove llm and bloom_idx columns for blind evaluation
         df = df.drop(columns=["llm", "bloom_idx"])
 
-        # Add evaluation columns for Bloom alignment
         eval_columns = [
-            "relevance",  # 0-10 scale
-            "clarity",  # 0-10 scale
-            "answerability",  # 0-10 scale
-            "challenging",  # 0-10 scale
-            "value",  # 0-10 scale
-            "language",  # 0-10 scale
-            "bloom_rating",  # 1-6 scale (Bloom level)
+            "relevance",  # 0-10
+            "clarity",  # 0-10
+            "answerability",  # 0-10
+            "challenging",  # 0-10
+            "value",  # 0-10
+            "language",  # 0-10
+            "bloom_rating",  # 1-6 (Bloom levels)
             "comments",  # Free text
         ]
 
         for col in eval_columns:
             df[col] = ""
 
-        # Save to student folders
         for i in range(1, 4):
             student_dir = os.path.join(
                 constants.ANALYSES_PATH,
