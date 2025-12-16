@@ -146,6 +146,7 @@ def generate_mcq_question(
         stem=stem_result,
         keys=keys_result,
         bloom_level=bloom_level,
+        bloom_level_description=level_data.get("description", ""),
     )
 
     distractors_result = llm_generation(
@@ -159,13 +160,20 @@ def generate_mcq_question(
 ### Bloom Level: {bloom_level}
 
 ### Stem Generation Step:
+
 {stem_result}
 
 ### Key Generation Step:
+
 {keys_result}
 
 ### Distractor Generation Step + Union of all:
+
 {distractors_result}
+
+### Source Text:
+
+{source_text}
 """
     return complete_mcq
 
@@ -196,6 +204,10 @@ def generate_open_ended_question(
 ### Bloom Level: {bloom_level}
 
 {result}
+
+### Source Text:
+
+{source_text}
 """
     return complete_question
 

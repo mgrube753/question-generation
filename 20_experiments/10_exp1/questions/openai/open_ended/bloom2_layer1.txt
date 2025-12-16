@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Understanding
+
+Frage: Erklären Sie die drei Kernaufgaben der Physical Layer und nennen Sie zu jeder Aufgabe ein passendes Beispiel.
+
+Antwort: Codierung: Logische Werte werden auf physikalische Größen abgebildet, z.B. NRZ oder Manchester. Transport: Physikalische Größen werden von einem Ort zum anderen übertragen, z.B. medien-gebunden über Telefonkabel oder medien-frei als Lichtsignal bzw. Funk. Decodierung: Physikalische Größen werden wieder als logische Werte interpretiert, z.B. durch Abtastung und die Nutzung von Detektionsbereichen. (Richtig)

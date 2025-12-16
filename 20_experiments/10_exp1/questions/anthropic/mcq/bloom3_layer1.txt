@@ -1,0 +1,25 @@
+## Multiple-Choice Question
+### Bloom Level: Applying
+
+### Stem Generation Step:
+Frage: Welche Kernaufgabe des Physical Layer nutzt ein Netzwerkgerät, wenn es digitale Daten mittels Manchester-Codierung in elektrische Spannungswechsel umwandelt?
+
+### Key Generation Step:
+Korrekte Antwort(en):
+
+a) Codierung
+
+b) Die Abbildung logischer Werte auf physikalische Größen
+
+### Distractor Generation Step + Union of all:
+Frage: Welche Kernaufgabe des Physical Layer nutzt ein Netzwerkgerät, wenn es digitale Daten mittels Manchester-Codierung in elektrische Spannungswechsel umwandelt?
+
+Antwortmöglichkeiten:
+
+a) Codierung (Richtig)
+
+b) Decodierung (Falsch)
+
+c) Die Abbildung logischer Werte auf physikalische Größen (Richtig)
+
+d) Die Rückinterpretation physikalischer Größen als logische Werte (Falsch)

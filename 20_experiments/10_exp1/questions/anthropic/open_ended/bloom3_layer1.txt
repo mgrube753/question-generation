@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Applying
+
+Frage: Wenden Sie die drei Kernaufgaben des Physical Layers an, um den vollständigen Übertragungsweg der Bitfolge "1011" über ein Telefonkabel zu beschreiben.
+
+Antwort: Bei der Codierung werden die logischen Werte 1, 0, 1, 1 in physikalische Größen umgewandelt, beispielsweise durch NRZ-Codierung als unterschiedliche Spannungspegel. Beim Transport werden diese elektrischen Signale über das Telefonkabel als mediengebundenes Übertragungsmedium vom Sender zum Empfänger geleitet. Bei der Decodierung werden am Empfänger die ankommenden Spannungspegel durch Abtastung erfasst und mittels definierter Detektionsbereiche wieder als die ursprünglichen logischen Werte 1, 0, 1, 1 interpretiert. (Richtig)

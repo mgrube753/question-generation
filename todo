@@ -1,3 +1,2 @@
-- [ ] todo change output structure for sampled questions --> we need a separate 70_sampled_questions with 10_exp1 and 20_exp2 folders
+- [ ] todo change output structure for sampled questions --> we need a separate 70_sampled_questions with 10_exp1 and 20_exp2 folders, where all questions are in one dir, numerically named (look at csvs)
 - [ ] also todo to minimize the codebase
-- [ ] in each question txt then, the input source also has to be included at the bottom

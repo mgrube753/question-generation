@@ -1,0 +1,6 @@
+## Open-Ended Question
+### Bloom Level: Creating
+
+Frage: Entwerfen Sie ein eigenes Kommunikationssystem für die Übertragung von Binärdaten zwischen zwei Geräten, das alle drei Kernaufgaben des Physical Layer berücksichtigt. Beschreiben Sie dabei die gewählten Methoden für Codierung, Transport und Decodierung sowie deren Zusammenspiel.
+
+Antwort: Ein mögliches Kommunikationssystem könnte folgendermaßen aufgebaut sein: Für die Codierung wird die Manchester-Codierung gewählt, bei der logische Einsen und Nullen durch Spannungswechsel innerhalb eines Taktzyklus dargestellt werden. Der Transport erfolgt über ein mediengebundenes Kupferkabel, das die elektrischen Signale zwischen Sender und Empfänger überträgt. Für die Decodierung werden am Empfänger definierte Detektionsbereiche festgelegt, die unterscheiden, ob ein Spannungswechsel von hoch nach niedrig oder von niedrig nach hoch erfolgt ist. Durch regelmäßige Abtastung in der Mitte jedes Taktzyklus werden die ursprünglichen logischen Werte rekonstruiert. Das Zusammenspiel funktioniert so, dass der Sender zunächst die Bitfolge codiert, das Kabel die physikalischen Signale transportiert und der Empfänger durch Abtastung und Interpretation der Spannungsänderungen die ursprünglichen logischen Daten wiederherstellt. (Richtig)

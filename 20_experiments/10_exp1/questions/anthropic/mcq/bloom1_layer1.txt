@@ -1,0 +1,25 @@
+## Multiple-Choice Question
+### Bloom Level: Remembering
+
+### Stem Generation Step:
+Frage: Welche drei Kernaufgaben umfasst der Physical Layer?
+
+### Key Generation Step:
+Korrekte Antwort(en):
+
+a) Codierung, Transport und Decodierung
+
+b) Die drei Kernaufgaben sind Codierung, Transport und Decodierung.
+
+### Distractor Generation Step + Union of all:
+Frage: Welche drei Kernaufgaben umfasst der Physical Layer?
+
+Antwortmöglichkeiten:
+
+a) Codierung, Transport und Decodierung (Richtig)
+
+b) Segmentierung, Routing und Adressierung (Falsch)
+
+c) Synchronisation, Übertragung und Fehlererkennung (Falsch)
+
+d) Verschlüsselung, Transport und Entschlüsselung (Falsch)

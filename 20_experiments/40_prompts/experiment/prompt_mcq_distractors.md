@@ -4,11 +4,11 @@
 
 **Context:** Der Fragestamm ist:
 
-{question_stem}
+{stem}
 
 Die korrekten Antworten zur Frage sind:
 
-{correct_answers}
+{keys}
 
 Das ursprüngliche Lehrmaterial war:
 
@@ -31,7 +31,7 @@ Das Ziel-Level war Bloom-Level {bloom_level}. Die Beschreibung dieses Levels ist
 
 **Output Format:** Die Ausgabe sollte wie folgt formatiert sein:
 
-Frage: {question_stem}
+Frage: {stem}
 
 Antwortmöglichkeiten:
 

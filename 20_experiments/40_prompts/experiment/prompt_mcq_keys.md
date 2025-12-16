@@ -4,7 +4,7 @@
 
 **Context:** Der Fragestamm ist:
 
-{question_stem}
+{stem}
 
 Das ursprüngliche Lehrmaterial war:
 
@@ -24,9 +24,9 @@ Das Ziel-Level war Bloom-Level {bloom_level}. Die Beschreibung dieses Levels ist
 
 Korrekte Antwort(en):
 
-a) [Hier die korrekte Antwort einfügen]
+a) [Hier die korrekte Antwort einfügen] (Richtig)
 
-b) [Hier die korrekte Antwort einfügen]
+b) [Hier die korrekte Antwort einfügen] (Richtig)
 
 Gib nur die korrekten Antwortmöglichkeiten im vorgegebenen Format aus. Schreibe keinen zusätzlichen Text und vermeide jegliche Markdown-basierte Formatierung (e.g. Hervorhebungen, Heading-Tags, ...).
 

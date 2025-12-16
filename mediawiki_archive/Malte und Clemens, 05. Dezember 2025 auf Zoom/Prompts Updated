@@ -86,7 +86,7 @@ Gib nur den Fragesatz (Stamm) im vorgegebenen Format aus. Schreibe keinen zusät
 
 **Context:** Der Fragestamm ist:
 
-{question_stem}
+{stem}
 
 Das ursprüngliche Lehrmaterial war:
 
@@ -123,7 +123,7 @@ Gib nur die korrekten Antwortmöglichkeiten im vorgegebenen Format aus. Schreibe
 
 **Context:** Der Fragestamm ist:
 
-{question_stem}
+{stem}
 
 Die korrekten Antworten zur Frage sind:
 
@@ -150,7 +150,7 @@ Das Ziel-Level war Bloom-Level {bloom_level}. Die Beschreibung dieses Levels ist
 
 **Output Format:** Die Ausgabe sollte wie folgt formatiert sein:
 
-Frage: {question_stem}
+Frage: {stem}
 
 Antwortmöglichkeiten:
 
