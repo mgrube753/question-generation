@@ -1,0 +1,14 @@
+== Vorheriger Versuch ==
+
+* '''FF1:''' Wie beeinflusst ein '''vereinheitlichtes Prompt-Design''' (e.g. Role, Task, Context, …) die '''Inhaltstreue''' und Qualität (quantitativ und qualitativ) von LLM-generierten Fragen zu gewöhnlichen und manipulierten '''Lehrtexten'''?
+
+* '''FF2:''' Bei der '''kombinierten Vorgabe von Fragetyp und Bloom-Level''' mittels Einschränkung von '''Multiple-Choice-Fragen auf die Levels 1-3''', wie stark unterscheiden sich die generierten MCQ und offenen Fragen bezüglich '''Bloom-Alignment''' / '''pädagogischer Effektivität'''?
+
+== Neuer Versuch ==
+
+* '''FF1:''' How effectively can LLMs be constrained to provided instructional materials to generate questions solely based on these?
+Alternative: Do LLMs maintain content fidelity when generating questions from instructional texts?
+Nach CR: ''How effectively can LLMs be constrained to generate questions based on instructional materials?''
+* '''FF2:''' To what extent does the restriction to a certain question format influence LLMs in achieving a desired cognitive level?
+Nach CR scheint FF2 passend.
+Alternative: Does the restriction to a question format influence achieving the cognitive level in generating questions?

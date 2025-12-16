@@ -1,0 +1,43 @@
+== Alte FF angesehen ==
+* Beschlossen, dass schrittweises Prompting passend
+* Und weitere Todos waren passend
+* Bloom ebenso ins Prompting; Keine Freiheitsgrade vorgeben (Outputformat, Fragetyp muss an Bloom-Level gebunden sein, keine LLM-Entscheidung) 
+* Prompts beider neuen FF dann mischen, um mittels 1 Experiment dies anzugehen?
+** IuK-Bewerter machen Rubrik+Inhaltstreue
+** Studis machen Rubrik+Bloom, disjunkte Fragemenge
+** Definitionen so spezifisch wie möglich, dass möglichst viele Rater viele Kategorien ähnlich bewerten können
+** Rater brauchen ein Durchsprechen/initiales Training vor der wahren Bewertung, um Bsp. durchzusprechen
+
+== Neue Fragestellungen ==
+* Keine Methodik in Frage
+* TODO FF gröber zu verfassen versuchen (Paper als Hilfe ansehen) 
+* TODO Forschungsstand + wie passt Forschung zur Literatur? 
+** Was entnehmen wir an Infos, was wissen wir in Forschung
+** Wo setzen wir an, und warum machen wir das dann so und so?
+* TODO jede Kategorie: Referenz, was geändert und warum
+** Mehr Inhalt bei Definitionen und Codierungsbsp. (Anker)
+** 0-10 war unpassend, Beschreibungen und Beispiele haben im Paper gefehlt
+** Value, Language von Prof. Cap
+** Bloom-Alignment woher?
+** Studis sagten: -99 oder 0 für "Keine Angabe möglich"
+*** Kommentarspalte genau für sowas sinnvoll
+
+== Keywords ==
+llm question generation (class OR Bloom OR higher education OR content fit)
+* Scholar, Springer, ACM, IEEE, Elsevier, ScienceDirect
+* Hochaktuelle Paper --> ResearchRabbit mit wenig Quellen probieren, um verwandtes zu sichten
+
+== Vorgehen ==
+* Mini-Dataset anlegen, um Kendall's W, ICC, Fleiss Kappa zu untersuchen
+* Literatur sichten (alt und neu)
+* Stand der Technik nah zu unserem Thema finden
+** Wichtige Infos entnehmen
+** Was entnehmen wir an Infos, was wissen wir in Forschung
+** Wo setzen wir an, und warum machen wir das dann so und so?
+* Rubrikanpassung 
+** Referenzen für Kategorien 
+** Was wurde geändert und warum
+** Weitere Rubrikänderungen
+* Über FF Gedanken machen
+* Über Experimentsetup Gedanken machen
+* Prompts verändern

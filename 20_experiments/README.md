@@ -1,5 +1,7 @@
 # Experiments
 
+> NOT THE RECENT STATUS OF THE CURRENT WORK, SINCE THIS WAS USED IN THE THESIS.
+
 This directory contains the experimental framework for evaluating Large Language Model capabilities in educational question generation, focusing on the two assessments of content adherence and Bloom's Taxonomy alignment.
 
 ## Structure Overview

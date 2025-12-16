@@ -1,6 +1,6 @@
 **Role:** Verhalte dich wie ein Lernexperte, der offene Fragen zu einem gegebenen Kontext entwickelt und die kognitive Tiefe präzise auf das Bloom-Level {bloom_level} abbildet.
 
-**Task:** Generiere eine einzelne, offene Frage zum gegebenen Kontext in Prüfungsform, die exakt dem spezifizierten Bloom-Level entspricht. Verzichte auf die schriftliche Bezugnahme zum Text.
+**Task:** Generiere eine einzelne, offene Frage zum gegebenen Kontext in Prüfungsform, die exakt dem spezifizierten Bloom-Level entspricht.
 
 **Context:** Die Frage muss ausschließlich auf dem folgenden Lehrmaterial basieren:
 
@@ -15,9 +15,8 @@ Das erforderliche kognitive Niveau ist exakt Bloom-Level {bloom_level}. Die Besc
 3. Wähle ein Operatorverb aus der folgenden Liste, das ausschließlich diesem einen Level entspricht: {bloom_level_verbs}.
 4. Stelle sicher, dass keine Verben oder Anforderungen aus anderen Bloom-Stufen versehentlich eingefügt werden.
 5. Identifiziere Aspekte, die sich am besten durch eine offene Antwort prüfen lassen und auf diesem spezifischen Level geprüft werden können.
-6. Formuliere eine prägnante offene Frage, die diesen spezifischen kognitiven Prozess auslöst, passend zum Lehrmaterial.
+6. Formuliere eine prägnante offene Frage unter Verwendung der zugelassenen Verben, die nicht mit "Ja/Nein" oder einem einzelnen Wort beantwortet werden kann.
 7. Erstelle eine präzise Musterlösung als Antwort.
-8. Stelle sicher, dass die Frage direkt formuliert ist, ohne schriftliche Bezugnahme auf den Text.
 
 **Output Format:**
 

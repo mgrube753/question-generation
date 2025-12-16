@@ -1,0 +1,32 @@
+
+* Zeiten:
+ Do von 13:00 bis 17:00
+ Fr von 8:00 bis 12:00
+ Bis Ende April unter Vertrag, dann Fortsetzung seiner Arbeit bei DEJ
+
+* Welche KI Agenten? Passende Modelle sind folgende:
+** DeepSeek v3.2 (Experimental Thinking) statt R1. Input Price $0.28, Output Price $0.42
+** GPT-5 statt o3 (OpenAI-Account bereits vorhanden). Input Price $1.25, Output Price $10.00
+** Claude 4.5 Sonnet statt 3.7 Sonnet (Account bereits da). Input Price $3.00, Output Price $6.00
+** Grok-4? statt Gemini-Modelle von Google (bspw. 2.5 Pro), da für Google API ein Google-Account vorliegen muss, statt Uni-Rostock-Account. 2.5 Flash war ein eher problematisches Modell bzgl. Leistung. Bei Grok wäre Input Price $3.00, Output Price $6.00
+
+'''Todos''':
+* Strukturiertes Aufschreiben der Forschungsfragen für die Arbeit ('Poster' für die Arbeit machen)
+* Treffen: '''7. November 9:00'''
+** Überlegen wir wieder 3 Experimente (Bewertung, Bloom, Manipulation der Inhalte)?
+  Das könnte man machen, aber bei Experiment 1 (Input Adherence) würde ich einen Prompt anfertigen, statt Common und Complex. Bei Experiment 2 (Bloom Adherence) würde ich auch nur noch Fragetyp + vorgesehenes Bloom-Level zu einem Prompt formen, statt ggf. Type-Only / Bloom-Only. Und Manipulation wäre stets nicht uninteressant. Die Fragetypen Multiple-Choice und Open-Ended kriegen jeweils eine Prompt-Variation; keine mangelhaft umgesetzte Entscheidungsfreiheit durch unpassendes Prompt-Design (hatten viele MCQ). MCQ werden nur bis Bloom-Level 3 umgesetzt, Open-Ended von 1-6. Ich teile das auf den A4-Seiten erneut mit.
+** Auswahl von 15 Fragen zur Codierung - Prompts dazu vorbereiten
+  Sind in Arbeit, ich arbeite ja nun schon vor meinen Arbeitszeiten die Dinge vor. Noch ist das möglich/genehm...
+** Gemeinsam Prompts besprechen
+** Dann Entscheidung, ob wir das wieder so machen oder anders.
+** Maltes BA war die Pilotstudie für diese Studie
+** Jetzt machen wir 15 neue Fragen aus den typischen Promptgruppen
+** Prompts anpassen nach den Erfahrungen der Pilotstudie
+* Beschreibungen der Kategorien der Codierung anpassen 
+** keine Zwischenstufen vorsehen
+** Sprachliche Formulierung anpassen in den Skalen
+  Auch in Arbeit...
+
+* Paper zur Reliabilität von Charlott ansehen
+* Kendall, ICC vorbereiten (da für Ordinalskala besser geeignet); Vergleich mit Fleiss Kappa (nur für Nominalskala); Interpretation der Unterschiede
+  Im Auswerten der Bewertungen kann man ggf. alle drei Metriken vorbereiten, um die Notwendigkeit der korrekten Auswahl an solchen Werkzeugen zu unterstreichen.

@@ -1,0 +1,39 @@
+Preise sind hier sowohl bei Input als auch Output in "per Million Tokens" gemessen (was ca. 750.000 Wörter sind).
+
+<br/>
+
+Accounts wurden nun auch für xAI (Grok-4) und DeepSeek (V3.2) angelegt. Gewisses Prompt-Testing wird die Woche über bei OpenAI und Anthropic durchgeführt.
+
+== DeepSeek v3.2 Thinking ==
+* '''Input Cost:''' $0.28
+* '''Output Cost:''' $0.42
+* '''Documentation:''' [https://api-docs.deepseek.com/quick_start/pricing DeepSeek API Docs]
+
+----
+
+== GPT-5 (Account Already Available) ==
+* '''Input Cost:''' $1.25
+* '''Output Cost:''' $10.00
+* '''Documentation:''' [https://platform.openai.com/docs/models/gpt-5 GPT-5 API Docs]
+
+GPT-5.1 ist raus, kostet genau so viel: [https://openai.com/api/pricing/]. Außerdem kommt GPT-5.2 demnächst raus; mal sehen.
+
+----
+
+== Claude 4.5 Sonnet (Account Already Available) ==
+* '''Input Cost:''' $3.00
+* '''Output Cost:''' $6.00
+* '''Documentation:''' [https://www.claude.com/pricing#api Claude API Pricing]
+
+Opus 4.5 gibt es nun auch s. Website. Input: $5.00 und Output: $25.00. Nehmen wir.
+
+----
+
+== Grok-4 (or Gemini 2.5-Pro, Qwen3 Max/Qwen3 235B A22B 2507) ==
+* '''Final Choice:''' Grok-4
+* '''Input Cost:''' $3.00
+* '''Output Cost:''' $15.00
+* '''Documentation:''' [https://x.ai/api Grok-4 API]
+
+Es gibt auch Grok-4.1-Fast, aber solange Grok-4.1 nicht draußen ist, ist Grok-4 nützlicher.
+Grok-4.1-Fast hat Input-Kosten $0.20 und Output-Kosten $0.50.

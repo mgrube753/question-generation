@@ -1,0 +1,32 @@
+= Was aus meiner Bachelorarbeit gelernt wurde =
+
+== Inhalt der ersten FF ==
+To what extent do LLMs adhere to the content of diverse provided instructional texts when generating questions? Die ursprüngliche Fragestellung war hierbei, wie inhaltstreu sich aktuelle LLMs bei verschiedenen bereitgestellten Lehrtexten zum Thema des ISO-OSI-Modells bei der Generierung von Fragen verhalten.
+
+=== Umsetzung dessen ===
+Hierbei wurden zwei Experimente, 1a und 1b, durchgeführt, bei denen zwei Prompts angelegt wurden: common und complex. Die quantitative Bewertung nutzte einerseits für die Inhaltstreue eine Berechnung der Cosinus-Ähnlichkeit zwischen semantisch vergleichbaren Vektor-Repräsentationen des Lehrtextes und der generierten Frage. Andererseits wurde ein Adherence Score durch zwei LLMs as Judges ermittelt, um eine alternative Metrik mit aktuellen Modellen zu verwenden. Qualitativ wurde eine Sample-Menge an Fragen von fünf Experten des zum Thema passenden Lehrstuhls anhand einer Bewertungsrubrik beurteilt, die verschiedene Aspekte wie Relevanz, Klarheit und Inhaltstreue einbezogen hat.
+
+=== Was wir ändern werden ===
+* Wir wollen weniger, aber ausreichend viele Fragen zum Bewerten samplen, da sonst bei den Bewertern durch zu viele Fragen ein Müdigkeits-Bias auftritt.
+* Neben der Expertenbewertung soll auch der Adherence Score wieder mit einbezogen werden, um eine zusätzliche Metrik bereitzustellen. Mittels besseren Promptings und dem gesondertem Nutzen und Analysieren von zwei Modellen als Judges (anstatt den Mittelwert aus beiden Modell-Ausgaben zu bilden) soll die Aussagekraft des Adherence Scores verbessert werden. Die Cosinus-Ähnlichkeit wird nicht weiterverwendet, da diese Metrik nicht aussagekräftig genug war.
+* Statt auf einen common und einen complex Prompt zu setzen, wollen wir einen einheitlichen Prompt verwenden, was eine Neuauflage des Prompt-Designs folgert. Multiple-Choice Fragen sowie offene Fragen sollen dabei weiterhin abgedeckt werden.
+* Die Prompts werden für mehr Klarheit auf den Guides basieren: Role, Task, Context, Reasoning Steps, Output Format, Stop Conditions.
+  https://cookbook.openai.com/examples/gpt-5/gpt-5_prompting_guide
+  https://cookbook.openai.com/examples/gpt4-1_prompting_guide
+* Beide Fragetypen bekommen eine passende Prompt-Variation. Anhand des vorigen Promptings inklusive Entscheidungsfreiheit der LLMs bei der Fragetyp-Wahl haben die LLMs überwiegend Multiple-Choice Fragen generiert, was zu einer unausgewogenen Verteilung der Fragetypen führte.
+* Es werden neuere LLMs verwendet, um stets den State-of-the-Art abzubilden: DeepSeek v3.2, GPT-5, Claude 4.5 Sonnet und Grok-4. Somit werden in Kombination mit passenden Prompts sprachliche Fähigkeiten besser ausgenutzt, um linguistische Probleme in e.g. Komplexität zu vermeiden.
+* Multiple-Choice Fragen werden in drei Stufen generiert (wie es bspw. siehe Quelle unterhalb getan wurde), um zuerst die Frage, dann die korrekte(n) Antwort(en) und zuletzt die falschen Antworten zu generieren. Dabei wird im letzten Schritt die Reihenfolge der möglichen Antworten getauscht. Mit dem zuvor benutzten Prompting gab es inkorrekte oder nicht im Lernstoff enthaltene Antwortmöglicheiten.
+  https://doi.org/10.1007/978-3-031-47994-6_38
+
+== Inhalt der zweiten FF ==
+How does the relationship between diverse question formats and Bloom’s Taxonomy levels influence the pedagogical effectiveness of LLM-generated questions? Hierbei war von Bedeutung, wie das Zusammenspiel von Fragetypen und bestimmten Bloom’s Taxonomy Levels die pädagogische Effektivität von LLM-generierten Fragen beeinflusst.
+
+=== Umsetzung dessen ===
+Für diese Forschungsfrage wurden drei unterschiedliche Prompt-Variationen eingesetzt, welche entweder nur den Fragetyp, nur das Bloom’s Level oder beides angaben. Dabei wurde untersucht, welche Bloom-Level ohne Aufforderung durch das LLM gewählt wurden, und wie sich bei Vorgabe des Bloom-Levels die Adherence verändert. Qualitativ wurden die Fragen als sampled Menge von drei Studierenden, welche mit Pädagogik vertraut sind, anhand einer ähnlichen Bewertungsrubrik wie in der ersten Forschungsfrage beurteilt. Dabei wurde explizit die Inhaltstreue durch die Bloom-basierte Bewertung ersetzt, um den Fokus auf die pädagogische Effektivität zu legen.
+
+=== Was wir ändern werden ===
+* Neben der zuvor genannten Änderungen aus der ersten Forschungsfrage, die auch hier Anwendung finden, werden wir in diesem Teil auch nur noch ein Prompting-Schema verwenden, basierend auf Angabe des Fragetyps und des Bloom’s Taxonomy Levels.
+* Das Prompt-Design wird sich dabei an den Aspekten aus der ersten Forschungsfrage orientieren. Dabei werden Multiple-Choice und offene Fragen jeweils eine eigene Prompt-Variation erhalten.
+* Auch Multiple-Choice Fragen werden in drei Stufen generiert, und werden in der Generierung nur innerhalb der ersten drei Bloom-Levels verwendet, wohingegen offene Fragen für alle sechs Bloom-Levels genutzt werden.
+* Eine Frage soll nur ein Bloom’s Level abdecken, was in der vorherigen Version nicht der Fall war. Gelegentlich wurden Fragen generiert, die mehrere Bloom’s Levels durch Angabe mehrerer Operatorverben abdeckten.
+* In beiden Forschungsfragen war das Fleiss’ Kappa zur Messung der Interrater-Reliabilität oftmals auffallend gering. Basierend auf neuen Bewertungsrubriken und verbesserten Anweisungen für die Experten wollen wir die Reliabilität der Bewertungen erhöhen. Neben Fleiss’ Kappa werden Kendall’s W und ICC als besonders sinnvolle Metriken hinzugezogen, um die Reliabilität besser zu erfassen. Zudem dürfen die Rubriken keine Zwischenstufen mehr zulassen, und die sprachliche Formulierung in den Skalen wird überarbeitet, um Eindeutigkeit zu gewährleisten.
