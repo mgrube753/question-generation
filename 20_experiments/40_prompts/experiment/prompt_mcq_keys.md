@@ -12,20 +12,22 @@ Das ursprüngliche Lehrmaterial war:
 
 Das Ziel-Level war Bloom-Level {bloom_level}. Die Beschreibung dieses Levels ist: {bloom_level_description}.
 
+Das Lernziel, das mit dieser Frage geprüft werden soll, ist: {learning_objective}.
+
 **Reasoning Steps:**
 
 1. Analysiere den bereitgestellten Kontext sorgfältig.
 2. Untersuche den Fragestamm bezüglich des Originalkontexts und das erforderliche Bloom-Level.
-3. Formuliere genau zwei korrekte Antwortmöglichkeiten, die zu der Frage passen, und deklariere diese als korrekt.
-4. Stelle sicher, dass die Antworten präzise und vollständig sind.
-5. Stelle sicher, dass die Antwort dem kognitiven Niveau des Fragestamms entspricht.
+3. Fokussiere dich auf das angegebene Lernziel.
+4. Formuliere genau zwei korrekte Antwortmöglichkeiten, die zu der Frage passen, und deklariere diese als korrekt.
+5. Stelle sicher, dass die Antworten präzise und vollständig sind.
+6. Stelle sicher, dass die Antwort dem kognitiven Niveau des Fragestamms entspricht.
 
 **Output Format:** Die Ausgabe sollte wie folgt formatiert sein:
 
 Korrekte Antwort(en):
 
 a) [Hier die korrekte Antwort einfügen] (Richtig)
-
 b) [Hier die korrekte Antwort einfügen] (Richtig)
 
 Gib nur die korrekten Antwortmöglichkeiten im vorgegebenen Format aus. Schreibe keinen zusätzlichen Text und vermeide jegliche Markdown-basierte Formatierung (e.g. Hervorhebungen, Heading-Tags, ...).

@@ -8,7 +8,7 @@ ANALYSES_PATH = os.path.join(EXPERIMENTS_BASE_PATH, "60_analyses")
 EXP1_PATH = os.path.join(EXPERIMENTS_BASE_PATH, "10_exp1")
 EXP2_PATH = os.path.join(EXPERIMENTS_BASE_PATH, "20_exp2")
 
-# LLM Configuration: grok-4, gpt-5.2, claude-opus-4.5, deepseek-v3.2
+# LLM Configuration
 LLM_MODEL_IDS = {
     "anthropic": "claude-opus-4-5-20251101",
     "openai": "gpt-5.2-2025-12-11",
@@ -40,7 +40,7 @@ BLOOM_LEVELS_MCQ = BLOOM_LEVELS_ORDERED[:3]  # Remembering, Understanding, Apply
 # Open-ended questions use all 6 Bloom levels
 BLOOM_LEVELS_OPEN_ENDED = BLOOM_LEVELS_ORDERED  # All 6 levels
 
-# Prompt file paths for MCQ (3-step process) and Open-Ended
+# Prompt file paths for MCQ (3-step process) and Open-Ended (2-step process)
 PROMPT_MCQ_STEM = os.path.join(
     PROMPT_TEMPLATES_PATH, "experiment", "prompt_mcq_stem.md"
 )
@@ -56,20 +56,16 @@ PROMPT_OPEN_ENDED = os.path.join(
 
 BLOOM_DATA_FILE = os.path.join(PROMPT_TEMPLATES_PATH, "experiment", "bloom.md")
 
+LEARNING_OBJECTIVES_FILE = os.path.join(
+    PROMPT_TEMPLATES_PATH, "experiment", "lernziele.md"
+)
+
 # Experiment 1: Content Fidelity
-# 4 LLMs × 1 Script × 7 Layers × 2 Question Types × 3 Bloom Levels = 168 questions
-# MCQ: Bloom 1-3 (all three levels)
-# Open-ended: 3 random Bloom levels from all 6
-# Sample: 168/7 = 24 questions (1 complete layer)
-EXP1_TOTAL_QUESTIONS = 168
+EXP1_TOTAL_QUESTIONS = 56
 EXP1_SAMPLE_SIZE = 24
 EXP1_BLOOM_LEVELS_PER_TYPE = 3  # 3 Bloom levels per question type
 
 # Experiment 2: Bloom Alignment
-# 4 LLMs × concatenated script × 2 Question Types
-# MCQ: 6 per LLM (Bloom 1-3, each 2×) = 24 MCQ total
-# Open-ended: 6 per LLM (Bloom 1-6, each 1×) = 24 OE total
-# Total: 48 questions, sample 24
 EXP2_TOTAL_QUESTIONS = 48
 EXP2_SAMPLE_SIZE = 24
 EXP2_MCQ_PER_BLOOM = 2  # 2 questions per Bloom level (levels 1-3) = 6 MCQ per LLM

@@ -8,15 +8,18 @@
 
 Das erforderliche kognitive Niveau ist exakt Bloom-Level {bloom_level}. Die Beschreibung dieses Levels ist: {bloom_level_description}.
 
+Das Lernziel, das mit dieser Frage geprüft werden soll, ist: {learning_objective}.
+
 **Reasoning Steps:**
 
 1. Analysiere das Kernkonzept des bereitgestellten Kontexts sorgfältig.
 2. Validiere das Ziel-Level {bloom_level}.
-3. Wähle ein Operatorverb aus der folgenden Liste, das genau diesem Level entspricht: {bloom_level_verbs}.
-4. Stelle sicher, dass keine Operatoren anderer Stufen verwendet werden.
-5. Identifiziere geeignete, prüfbare Fakten, Konzepte oder Definitionen im bereitgestellten Kontext.
-6. Formuliere einen prägnanten Fragesatz oder eine unvollständige Aussage, die als Stamm dient und diesen spezifischen kognitiven Prozess auslöst, passend zum Originalkontext.
-7. Stelle sicher, dass die Frage direkt formuliert ist, ohne schriftliche Bezugnahme auf den Text.
+3. Fokussiere dich auf das angegebene Lernziel.
+4. Wähle ein Operatorverb aus der folgenden Liste, das genau diesem Level entspricht: {bloom_level_verbs}.
+5. Stelle sicher, dass keine Operatoren anderer Stufen verwendet werden.
+6. Identifiziere geeignete, prüfbare Fakten, Konzepte oder Definitionen im bereitgestellten Kontext.
+7. Formuliere einen prägnanten Fragesatz oder eine unvollständige Aussage, die als Stamm dient und diesen spezifischen kognitiven Prozess auslöst, passend zum Originalkontext.
+8. Stelle sicher, dass die Frage direkt formuliert ist, ohne schriftliche Bezugnahme auf den Text.
 
 **Output Format:**
 

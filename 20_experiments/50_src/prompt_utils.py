@@ -1,5 +1,10 @@
 import os
-from constants import BLOOM_LEVELS_ORDERED, BLOOM_DATA_FILE, PROMPT_TEMPLATES_PATH
+from constants import (
+    BLOOM_LEVELS_ORDERED,
+    BLOOM_DATA_FILE,
+    PROMPT_TEMPLATES_PATH,
+    LEARNING_OBJECTIVES_FILE,
+)
 from file_utils import load_txt
 
 
@@ -7,7 +12,6 @@ def load_prompt(prompt_path):
     if os.path.isabs(prompt_path):
         return load_txt(prompt_path)
 
-    # Try as relative path within prompt templates
     filename = prompt_path if prompt_path.endswith(".md") else f"{prompt_path}.md"
     path = os.path.join(PROMPT_TEMPLATES_PATH, filename)
     return load_txt(path)
@@ -17,7 +21,6 @@ def format_prompt(template, **values):
     if template is None:
         return None
 
-    # If template is empty, return empty string
     if not template.strip():
         return ""
 
@@ -90,3 +93,58 @@ def get_bloom_level_name(index):
     if 1 <= index <= len(BLOOM_LEVELS_ORDERED):
         return BLOOM_LEVELS_ORDERED[index - 1]
     return None
+
+
+def parse_learning_objectives_md(md_content):
+    objectives = {"exp1": {}, "exp2": {}}
+
+    if not md_content:
+        return objectives
+
+    current_exp = None
+    current_key = None
+
+    for line in md_content.splitlines():
+        line = line.strip()
+
+        if line == "## Experiment 1":
+            current_exp = "exp1"
+        elif line == "## Experiment 2":
+            current_exp = "exp2"
+        elif line.startswith("### Layer ") and current_exp == "exp1":
+            current_key = int(line.replace("### Layer ", ""))
+        elif line.startswith("### Bloom ") and current_exp == "exp2":
+            current_key = int(line.replace("### Bloom ", ""))
+        elif line and current_exp and current_key:
+            objectives[current_exp][current_key] = line
+
+    return objectives
+
+
+_learning_objectives_cache = None
+
+
+def get_learning_objectives():
+    global _learning_objectives_cache
+    if _learning_objectives_cache is None:
+        raw = load_txt(LEARNING_OBJECTIVES_FILE)
+        _learning_objectives_cache = parse_learning_objectives_md(raw)
+        print(
+            f"[INFO] Loaded learning objectives: {len(_learning_objectives_cache['exp1'])} for Exp1, {len(_learning_objectives_cache['exp2'])} for Exp2"
+        )
+    return _learning_objectives_cache
+
+
+def get_learning_objective(experiment, layer=None, bloom_level=None):
+    objectives = get_learning_objectives()
+
+    if experiment == "exp1":
+        return objectives["exp1"].get(layer, "")
+    elif experiment == "exp2":
+        bloom_idx = (
+            get_bloom_level_index(bloom_level)
+            if isinstance(bloom_level, str)
+            else bloom_level
+        )
+        return objectives["exp2"].get(bloom_idx, "")
+    return ""
