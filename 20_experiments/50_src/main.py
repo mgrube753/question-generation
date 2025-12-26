@@ -12,7 +12,7 @@ def main():
     print(f"Layers: {len(constants.LAYERS)} OSI layers")
     print(f"Question Types: MCQ (3-step), Open-Ended")
     print("=" * 60)
-    print("\nExperiment 1: 4 × 7 × 2 × 3 = 168 questions (sample 24)")
+    print("Experiment 1: 4 × 7 × 2 = 56 questions (sample 24)")
     print("Experiment 2: 4 × (6 MCQ + 6 OE) = 48 questions (sample 24)")
     print("=" * 60)
 

@@ -166,18 +166,20 @@ def generate_mcq_question(
 
     # Combine into complete MCQ
     complete_mcq = f"""## Multiple-Choice Question
+
 ### Bloom Level: {bloom_level}
+
 ### Learning Objective: {learning_objective}
 
-### Stem Generation Step:
+### Stem Generation:
 
 {stem_result}
 
-### Key Generation Step:
+### Key Generation:
 
 {keys_result}
 
-### Distractor Generation Step + Union of all:
+### Distractor Generation + Union of all:
 
 {distractors_result}
 
@@ -218,12 +220,16 @@ def generate_open_ended_question(
         return None
 
     complete_question = f"""## Open-Ended Question
+
 ### Bloom Level: {bloom_level}
+
 ### Learning Objective: {learning_objective}
+
+### Question
 
 {result}
 
-### Source Text:
+### Source Text
 
 {source_text}
 """
@@ -313,7 +319,7 @@ def run_exp1(clients):
 
         # need halfway randomized bloom level setup
         for llm_name in constants.LLM_NAMES:
-            # MCQ: Sample 1 random Bloom level from levels 1-3 TODO
+            # MCQ: Sample 1 random Bloom level from levels 1-3
             if constants.GENERATE_MCQ:
                 bloom_level = random.choice(constants.BLOOM_LEVELS_MCQ)
                 bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
