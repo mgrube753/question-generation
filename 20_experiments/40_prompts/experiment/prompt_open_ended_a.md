@@ -4,7 +4,7 @@
 
 **Context:** Die Frage lautet:
 
-{stem}
+{question}
 
 Das ursprüngliche Lehrmaterial war:
 

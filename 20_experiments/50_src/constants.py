@@ -54,6 +54,14 @@ PROMPT_OPEN_ENDED = os.path.join(
     PROMPT_TEMPLATES_PATH, "experiment", "prompt_open_ended.md"
 )
 
+PROMPT_OPEN_ENDED_QUESTION = os.path.join(
+    PROMPT_TEMPLATES_PATH, "experiment", "prompt_open_ended_q.md"
+)
+
+PROMPT_OPEN_ENDED_ANSWER = os.path.join(
+    PROMPT_TEMPLATES_PATH, "experiment", "prompt_open_ended_a.md"
+)
+
 BLOOM_DATA_FILE = os.path.join(PROMPT_TEMPLATES_PATH, "experiment", "bloom.md")
 
 LEARNING_OBJECTIVES_FILE = os.path.join(
@@ -72,6 +80,6 @@ EXP2_MCQ_PER_BLOOM = 2  # 2 questions per Bloom level (levels 1-3) = 6 MCQ per L
 EXP2_OPEN_ENDED_PER_BLOOM = 1  # 1 question per Bloom level (all 6) = 6 OE per LLM
 
 RANDOM_SEED = 2026
-DRY_RUN = False
+DRY_RUN = True
 GENERATE_MCQ = True
 GENERATE_OPEN_ENDED = True

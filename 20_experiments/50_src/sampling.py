@@ -4,6 +4,16 @@ import shutil
 import pandas as pd
 import constants
 
+"""
+- TODO need another separate `70_sampled_questions` directory
+  with numeric txt namings and shorter contents
+  (since e.g. bloom level can be hidden)
+- Path: 70_sampled_questions/10_exp1 or .../20_exp2/
+  inserting all questions in it
+- Starting in exp1 with e.g., 001_mcq_layer7.txt
+- In exp2, we do 001_mcq_concatenated.txt
+"""
+
 
 def clean_samples(exp_path):
     sample_dir = os.path.join(exp_path, "sampled")

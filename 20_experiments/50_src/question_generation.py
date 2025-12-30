@@ -74,19 +74,7 @@ def load_layer_content(layer_num):
 def load_concatenated_content():
     concat_path = os.path.join(constants.INPUT_SOURCES_PATH, "concatenated_common.txt")
     content = load_txt(concat_path)
-
-    if content:
-        return content
-
-    # Fallback: concatenate all layers
-    print("[INFO] Concatenating all layer files...")
-    concatenated = []
-    for layer_num in constants.LAYERS:
-        layer_content = load_layer_content(layer_num)
-        if layer_content:
-            concatenated.append(f"--- Layer {layer_num} ---\n{layer_content.strip()}")
-
-    return "\n\n".join(concatenated)
+    return content
 
 
 def generate_mcq_question(
@@ -102,9 +90,9 @@ def generate_mcq_question(
 
     # Step 1: Generate MCQ Stem
     stem_template = load_prompt(constants.PROMPT_MCQ_STEM)
-    if not stem_template:
-        print(f"[WARNING] MCQ stem prompt not found")
-        return None
+    # if not stem_template:
+    #     print(f"[WARNING] MCQ stem prompt not found")
+    #     return None
 
     stem_prompt = format_prompt(
         stem_template,
@@ -118,14 +106,14 @@ def generate_mcq_question(
     stem_result = llm_generation(
         llm_name, clients, stem_prompt, max_tokens=max_tokens // 2
     )
-    if not stem_result:
-        return None
+    # if not stem_result:
+    #     return None
 
     # Step 2: Generate Keys (correct answers)
     keys_template = load_prompt(constants.PROMPT_MCQ_KEYS)
-    if not keys_template:
-        print(f"[WARNING] MCQ keys prompt not found")
-        return None
+    # if not keys_template:
+    #     print(f"[WARNING] MCQ keys prompt not found")
+    #     return None
 
     keys_prompt = format_prompt(
         keys_template,
@@ -139,14 +127,14 @@ def generate_mcq_question(
     keys_result = llm_generation(
         llm_name, clients, keys_prompt, max_tokens=max_tokens // 2
     )
-    if not keys_result:
-        return None
+    # if not keys_result:
+    #     return None
 
     # Step 3: Generate Distractors (incorrect answers)
     distractors_template = load_prompt(constants.PROMPT_MCQ_DISTRACTORS)
-    if not distractors_template:
-        print(f"[WARNING] MCQ distractors prompt not found")
-        return None
+    # if not distractors_template:
+    #     print(f"[WARNING] MCQ distractors prompt not found")
+    #     return None
 
     distractors_prompt = format_prompt(
         distractors_template,
@@ -161,15 +149,17 @@ def generate_mcq_question(
     distractors_result = llm_generation(
         llm_name, clients, distractors_prompt, max_tokens=max_tokens // 2
     )
-    if not distractors_result:
-        return None
+    # if not distractors_result:
+    #     return None
 
     # Combine into complete MCQ
     complete_mcq = f"""## Multiple-Choice Question
 
 ### Bloom Level: {bloom_level}
 
-### Learning Objective: {learning_objective}
+### Learning Objective 
+
+{learning_objective}
 
 ### Stem Generation:
 
@@ -179,7 +169,7 @@ def generate_mcq_question(
 
 {keys_result}
 
-### Distractor Generation + Union of all:
+### Distractor Generation + Union of all
 
 {distractors_result}
 
@@ -201,13 +191,13 @@ def generate_open_ended_question(
 ):
     level_data = bloom_data.get(bloom_level, {})
 
-    prompt_template = load_prompt(constants.PROMPT_OPEN_ENDED)
-    if not prompt_template:
-        print(f"[WARNING] Open-ended prompt not found")
-        return None
+    question_template = load_prompt(constants.PROMPT_OPEN_ENDED_QUESTION)
+    # if not question_template:
+    #     print(f"[WARNING] Open-ended prompt not found")
+    #     return None
 
-    formatted_prompt = format_prompt(
-        prompt_template,
+    question_prompt = format_prompt(
+        question_template,
         text=source_text,
         bloom_level=bloom_level,
         bloom_level_description=level_data.get("description", ""),
@@ -215,19 +205,43 @@ def generate_open_ended_question(
         learning_objective=learning_objective,
     )
 
-    result = llm_generation(llm_name, clients, formatted_prompt, max_tokens=max_tokens)
-    if not result:
-        return None
+    question_result = llm_generation(
+        llm_name, clients, question_prompt, max_tokens=max_tokens // 2
+    )
+    # if not question_result:
+    #     return None
+
+    answer_template = load_prompt(constants.PROMPT_OPEN_ENDED_ANSWER)
+
+    answer_prompt = format_prompt(
+        answer_template,
+        text=source_text,
+        question=question_result,
+        bloom_level=bloom_level,
+        bloom_level_description=level_data.get("description", ""),
+        bloom_level_verbs=level_data.get("verbs", ""),
+        learning_objective=learning_objective,
+    )
+
+    answer_result = llm_generation(
+        llm_name, clients, answer_prompt, max_tokens=max_tokens // 2
+    )
 
     complete_question = f"""## Open-Ended Question
 
 ### Bloom Level: {bloom_level}
 
-### Learning Objective: {learning_objective}
+### Learning Objective
 
-### Question
+{learning_objective}
 
-{result}
+### Question Generation
+
+{question_result}
+
+### Answer Generation + Union of all
+
+{answer_result}
 
 ### Source Text
 
@@ -375,7 +389,7 @@ def run_exp1(clients):
                 )
                 csv_rows.append([llm_name, layer_num, "open_ended", bloom_idx])
 
-    csv_rows.sort(key=lambda row: (row[0], int(row[1]), row[2], row[3]))
+    csv_rows.sort(key=lambda row: (row[0], row[2], int(row[3]), row[1]))
     headers = ["llm", "layer", "question_type", "bloom_idx"]
     create_csvs("exp1", headers, csv_rows)
 

@@ -1,3 +1,7 @@
-- [ ] todo change output structure for sampled questions --> we need a separate 70_sampled_questions with 10_exp1 and 20_exp2 folders, where all questions are in one dir, numerically named (look at csvs)
-- [ ] todo set up open-ended in 2 steps
-- [ ] todo to minimize the codebase
+- [ ] todo change output structure for sampled questions (`70_sampled_questions/`)
+- [ ] make program robust against at least server-based issues
+- [x] todo set up open-ended in 2 steps
+- [ ] todo minimize the codebase
+- [ ] eval notebooks have to be refined
+- [ ] expert instructions need to be prepared properly
+- [ ] talk to experts to understand the setup better
