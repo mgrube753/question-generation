@@ -1,8 +1,9 @@
 # Todo
 
 - [ ] make program robust against at least server-based issues
-- [x] todo set up open-ended in 2 steps
 - [ ] todo minimize the codebase
-- [ ] eval notebooks have to be refined
+- [ ] refine eval notebook 1 quantitative
+- [ ] finish eval notebook 1 qualitative
+- [ ] refine eval notebook 2 qualitative
 - [ ] expert instructions need to be prepared properly
 - [ ] talk to experts to understand the setup better
