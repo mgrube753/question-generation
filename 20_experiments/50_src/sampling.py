@@ -4,16 +4,6 @@ import shutil
 import pandas as pd
 import constants
 
-"""
-- TODO need another separate `70_sampled_questions` directory
-  with numeric txt namings and shorter contents
-  (since e.g. bloom level can be hidden)
-- Path: 70_sampled_questions/10_exp1 or .../20_exp2/
-  inserting all questions in it
-- Starting in exp1 with e.g., 001_mcq_layer7.txt
-- In exp2, we do 001_mcq_concatenated.txt
-"""
-
 
 def clean_samples(exp_path):
     sample_dir = os.path.join(exp_path, "sampled")
@@ -23,6 +13,16 @@ def clean_samples(exp_path):
             print(f"[INFO] Cleaned old samples: {os.path.relpath(sample_dir)}")
         except Exception as e:
             print(f"[ERROR] Could not clean samples directory: {e}")
+
+
+def clean_renamed_samples():
+    renamed_dir = os.path.join(constants.EXPERIMENTS_BASE_PATH, "70_sampled_questions")
+    if os.path.exists(renamed_dir):
+        try:
+            shutil.rmtree(renamed_dir)
+            print(f"[INFO] Cleaned old renamed samples: {os.path.relpath(renamed_dir)}")
+        except Exception as e:
+            print(f"[ERROR] Could not clean renamed samples directory: {e}")
 
 
 def collect_question_files(base_path, pattern=".txt"):
@@ -63,7 +63,6 @@ def sample_exp1():
             print(f"[WARNING] Directory not found: {llm_dir}")
             continue
 
-        # Check both question types
         for q_type in constants.QUESTION_TYPES:
             type_dir = os.path.join(llm_dir, q_type)
             if not os.path.exists(type_dir):
@@ -94,10 +93,8 @@ def sample_exp1():
                     except (ValueError, IndexError) as e:
                         print(f"[WARNING] Could not parse filename {filename}: {e}")
 
-    # Stratified sampling: 3 MCQ + 3 Open-Ended per LLM
     sampled_questions = []
     for llm_name in constants.LLM_NAMES:
-        # Sample 3 MCQ questions
         mcq_questions = questions_by_llm_type[llm_name]["mcq"]
         if len(mcq_questions) >= 3:
             sampled_questions.extend(random.sample(mcq_questions, 3))
@@ -105,7 +102,6 @@ def sample_exp1():
             print(f"[WARNING] {llm_name} has only {len(mcq_questions)} MCQ questions")
             sampled_questions.extend(mcq_questions)
 
-        # Sample 3 Open-Ended questions
         oe_questions = questions_by_llm_type[llm_name]["open_ended"]
         if len(oe_questions) >= 3:
             sampled_questions.extend(random.sample(oe_questions, 3))
@@ -130,7 +126,6 @@ def sample_exp1():
         shutil.copy2(q["path"], dest_file)
         csv_rows.append([q["llm"], q["layer"], q["question_type"], q["bloom_idx"]])
 
-    # Show distribution per LLM
     print("\n       Distribution per LLM:")
     for llm_name in constants.LLM_NAMES:
         llm_questions = [q for q in sampled_questions if q["llm"] == llm_name]
@@ -140,7 +135,6 @@ def sample_exp1():
             f"       {llm_name}: {len(llm_questions)} total ({mcq_count} MCQ, {oe_count} OE)"
         )
 
-    # Show layer distribution
     layer_dist = {}
     for q in sampled_questions:
         layer_dist[q["layer"]] = layer_dist.get(q["layer"], 0) + 1
@@ -170,13 +164,11 @@ def sample_exp2():
     csv_rows = []
 
     for llm_name in constants.LLM_NAMES:
-        # Sample MCQ: 1 question from each of 3 Bloom levels (3 total per LLM)
         mcq_dir = os.path.join(questions_path, llm_name, "mcq")
         mcq_dest = os.path.join(sample_path, llm_name, "mcq")
 
         if os.path.exists(mcq_dir):
             mcq_files = [f for f in os.listdir(mcq_dir) if f.endswith(".txt")]
-            # Sample 1 question per Bloom level (from 2 available per level)
             for bloom_level in constants.BLOOM_LEVELS_MCQ:
                 bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
                 level_files = [
@@ -191,12 +183,10 @@ def sample_exp2():
                     sampled_files.append(dest_file)
                     csv_rows.append([llm_name, "mcq", bloom_idx])
 
-        # Sample Open-Ended: 3 random Bloom levels from 6 (3 total per LLM)
         oe_dir = os.path.join(questions_path, llm_name, "open_ended")
         oe_dest = os.path.join(sample_path, llm_name, "open_ended")
 
         if os.path.exists(oe_dir):
-            # Sample 3 random Bloom levels
             sampled_blooms = random.sample(constants.BLOOM_LEVELS_OPEN_ENDED, 3)
             oe_files = [f for f in os.listdir(oe_dir) if f.endswith(".txt")]
 
@@ -229,6 +219,84 @@ def sample_exp2():
     return sampled_files
 
 
+def create_renamed_samples():
+    print("\n[INFO] Creating renamed sample collections...")
+
+    renamed_base = os.path.join(constants.EXPERIMENTS_BASE_PATH, "70_sampled_questions")
+
+    # Process Experiment 1
+    exp1_csv = os.path.join(
+        constants.ANALYSES_PATH, "csv", "sampled", "exp1_sampled.csv"
+    )
+    if os.path.exists(exp1_csv):
+        df = pd.read_csv(exp1_csv)
+        exp1_dest = os.path.join(renamed_base, "10_exp1")
+        os.makedirs(exp1_dest, exist_ok=True)
+
+        sample_path = os.path.join(constants.EXP1_PATH, "sampled")
+
+        for idx, row in df.iterrows():
+            sample_id = f"{idx + 1:03d}"
+            llm = row["llm"]
+            layer = row["layer"]
+            q_type = row["question_type"]
+            bloom_idx = row["bloom_idx"]
+
+            src_file = os.path.join(
+                sample_path, llm, q_type, f"bloom{bloom_idx}_layer{layer}.txt"
+            )
+
+            if os.path.exists(src_file):
+                dest_file = os.path.join(
+                    exp1_dest, f"{sample_id}_{q_type}_layer{layer}.txt"
+                )
+                shutil.copy2(src_file, dest_file)
+            else:
+                print(f"[WARNING] Source file not found: {src_file}")
+
+        print(f"       Exp1: {len(df)} files created in 70_sampled_questions/10_exp1")
+
+    # Process Experiment 2
+    exp2_csv = os.path.join(
+        constants.ANALYSES_PATH, "csv", "sampled", "exp2_sampled.csv"
+    )
+    if os.path.exists(exp2_csv):
+        df = pd.read_csv(exp2_csv)
+        exp2_dest = os.path.join(renamed_base, "20_exp2")
+        os.makedirs(exp2_dest, exist_ok=True)
+
+        sample_path = os.path.join(constants.EXP2_PATH, "sampled")
+
+        for idx, row in df.iterrows():
+            sample_id = f"{idx + 1:03d}"
+            llm = row["llm"]
+            q_type = row["question_type"]
+            bloom_idx = row["bloom_idx"]
+
+            src_dir = os.path.join(sample_path, llm, q_type)
+            if os.path.exists(src_dir):
+                matching_files = [
+                    f
+                    for f in os.listdir(src_dir)
+                    if f.startswith(f"bloom{bloom_idx}_") and f.endswith(".txt")
+                ]
+
+                if matching_files:
+                    src_file = os.path.join(src_dir, matching_files[0])
+                    dest_file = os.path.join(
+                        exp2_dest, f"{sample_id}_{q_type}_concatenated.txt"
+                    )
+                    shutil.copy2(src_file, dest_file)
+                else:
+                    print(
+                        f"[WARNING] No matching file for bloom{bloom_idx} in {src_dir}"
+                    )
+            else:
+                print(f"[WARNING] Directory not found: {src_dir}")
+
+        print(f"       Exp2: {len(df)} files created in 70_sampled_questions/20_exp2")
+
+
 def generate_expert_evaluation_csvs():
     print("\n[INFO] Generating expert evaluation CSV templates...")
 
@@ -242,14 +310,14 @@ def generate_expert_evaluation_csvs():
         df = df.drop(columns=["llm", "bloom_idx"])
 
         eval_columns = [
-            "relevance",  # 0-10 scale
-            "clarity",  # 0-10 scale
-            "answerability",  # 0-10 scale
-            "challenging",  # 0-10 scale
-            "value",  # 0-10 scale
-            "language",  # 0-10 scale
-            "correctness",  # 0-10 scale
-            "comments",  # Free text
+            "relevance",
+            "clarity",
+            "answerability",
+            "challenging",
+            "value",
+            "language",
+            "correctness",
+            "comments",
         ]
 
         for col in eval_columns:
@@ -279,14 +347,14 @@ def generate_expert_evaluation_csvs():
         df = df.drop(columns=["llm", "bloom_idx"])
 
         eval_columns = [
-            "relevance",  # 0-10
-            "clarity",  # 0-10
-            "answerability",  # 0-10
-            "challenging",  # 0-10
-            "value",  # 0-10
-            "language",  # 0-10
-            "bloom_rating",  # 1-6 (Bloom levels)
-            "comments",  # Free text
+            "relevance",
+            "clarity",
+            "answerability",
+            "challenging",
+            "value",
+            "language",
+            "bloom_rating",
+            "comments",
         ]
 
         for col in eval_columns:
@@ -315,9 +383,11 @@ def run_sampling():
 
     clean_samples(constants.EXP1_PATH)
     clean_samples(constants.EXP2_PATH)
+    clean_renamed_samples()
 
     sample_exp1()
     sample_exp2()
+    create_renamed_samples()
     generate_expert_evaluation_csvs()
 
     print("\n[INFO] Sampling completed.")

@@ -1,4 +1,5 @@
-- [ ] todo change output structure for sampled questions (`70_sampled_questions/`)
+# Todo
+
 - [ ] make program robust against at least server-based issues
 - [x] todo set up open-ended in 2 steps
 - [ ] todo minimize the codebase
