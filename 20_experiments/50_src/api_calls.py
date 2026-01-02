@@ -1,7 +1,34 @@
 import time
+from tenacity import (
+    retry,
+    stop_after_attempt,
+    wait_exponential,
+    retry_if_exception_type,
+    before_sleep_log,
+    after_log,
+)
+import logging
 from constants import REQUEST_DELAY_SECONDS, LLM_MODEL_IDS, DRY_RUN
 
+logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
 
+RETRYABLE_EXCEPTIONS = (
+    ConnectionError,
+    TimeoutError,
+    Exception,
+)
+
+
+@retry(
+    stop=stop_after_attempt(5),
+    wait=wait_exponential(multiplier=2, min=4, max=60),
+    retry=retry_if_exception_type(RETRYABLE_EXCEPTIONS),
+    before_sleep=before_sleep_log(logger, logging.WARNING),
+    after=after_log(logger, logging.INFO),
+)
 def gen_with_anthropic(client, prompt_text, model_id, max_tokens):
     try:
         response = client.messages.create(
@@ -12,22 +39,38 @@ def gen_with_anthropic(client, prompt_text, model_id, max_tokens):
         )
 
         if response.stop_reason == "max_tokens":
-            print(f"\n[WARNING] {model_id} ran out of tokens")
+            logger.warning(f"{model_id} ran out of tokens")
             for block in response.content:
                 if block.type == "text":
-                    print(f"[INFO] Partial output available for {model_id}")
+                    logger.info(f"Partial output available for {model_id}")
                     return block.text
-            print(f"[WARNING] No output available for {model_id}")
+            logger.warning(f"No output available for {model_id}")
             return None
 
         for block in response.content:
             if block.type == "text":
                 return block.text
+
     except Exception as e:
-        print(f"[ERROR] Claude API ({model_id}): {e}")
+        logger.error(f"Claude API ({model_id}): {e}")
+        if hasattr(e, "status_code") and e.status_code == 429:
+            logger.warning(f"Rate limit hit for {model_id}, will retry...")
+            raise  # Retry
+        if hasattr(e, "status_code") and e.status_code in [429, 500, 502, 503, 504]:
+            logger.warning(
+                f"Server error {e.status_code} for {model_id}, will retry..."
+            )
+            raise  # Retry
         return None
 
 
+@retry(
+    stop=stop_after_attempt(5),
+    wait=wait_exponential(multiplier=2, min=4, max=60),
+    retry=retry_if_exception_type(RETRYABLE_EXCEPTIONS),
+    before_sleep=before_sleep_log(logger, logging.WARNING),
+    after=after_log(logger, logging.INFO),
+)
 def gen_with_openai(client, prompt_text, model_id, max_tokens):
     try:
         response = client.responses.create(
@@ -36,25 +79,39 @@ def gen_with_openai(client, prompt_text, model_id, max_tokens):
             input=[{"role": "user", "content": prompt_text}],
             max_output_tokens=max_tokens,
         )
+
         if (
             response.status == "incomplete"
             and response.incomplete_details.reason == "max_output_tokens"
         ):
-            print(f"\n[WARNING] {model_id} ran out of tokens")
+            logger.warning(f"{model_id} ran out of tokens")
             if response.output_text:
-                print(f"[INFO] Partial output available for {model_id}")
+                logger.info(f"Partial output available for {model_id}")
                 return response.output_text
             else:
-                print(f"[WARNING] {model_id} ran out of tokens during reasoning")
+                logger.warning(f"{model_id} ran out of tokens during reasoning")
                 return None
 
         return response.output_text
 
     except Exception as e:
-        print(f"[ERROR] OpenAI API ({model_id}): {e}")
+        logger.error(f"OpenAI API ({model_id}): {e}")
+        # Check for retryable errors
+        if hasattr(e, "status_code") and e.status_code in [429, 500, 502, 503, 504]:
+            logger.warning(
+                f"Retryable error {e.status_code} for {model_id}, will retry..."
+            )
+            raise  # Retry
         return None
 
 
+@retry(
+    stop=stop_after_attempt(5),
+    wait=wait_exponential(multiplier=2, min=4, max=60),
+    retry=retry_if_exception_type(RETRYABLE_EXCEPTIONS),
+    before_sleep=before_sleep_log(logger, logging.WARNING),
+    after=after_log(logger, logging.INFO),
+)
 def gen_with_deepseek(client, prompt_text, model_id, max_tokens):
     # https://api-docs.deepseek.com/guides/thinking_mode
     # https://api-docs.deepseek.com/guides/reasoning_model
@@ -70,20 +127,34 @@ def gen_with_deepseek(client, prompt_text, model_id, max_tokens):
             response.status == "incomplete"
             and response.incomplete_details.reason == "max_output_tokens"
         ):
-            print(f"\n[WARNING] {model_id} ran out of tokens")
+            logger.warning(f"{model_id} ran out of tokens")
             if response.output_text:
-                print(f"[INFO] Partial output available for {model_id}")
+                logger.info(f"Partial output available for {model_id}")
                 return response.output_text
             else:
-                print(f"[WARNING] {model_id} ran out of tokens during reasoning")
+                logger.warning(f"{model_id} ran out of tokens during reasoning")
                 return None
 
         return response.output_text
+
     except Exception as e:
-        print(f"[ERROR] DeepSeek API ({model_id}): {e}")
+        logger.error(f"DeepSeek API ({model_id}): {e}")
+        # Check for retryable errors
+        if hasattr(e, "status_code") and e.status_code in [429, 500, 502, 503, 504]:
+            logger.warning(
+                f"Retryable error {e.status_code} for {model_id}, will retry..."
+            )
+            raise  # Retry
         return None
 
 
+@retry(
+    stop=stop_after_attempt(5),
+    wait=wait_exponential(multiplier=2, min=4, max=60),
+    retry=retry_if_exception_type(RETRYABLE_EXCEPTIONS),
+    before_sleep=before_sleep_log(logger, logging.WARNING),
+    after=after_log(logger, logging.INFO),
+)
 def gen_with_xai(client, prompt_text, model_id, max_tokens):
     try:
         response = client.responses.create(
@@ -96,44 +167,57 @@ def gen_with_xai(client, prompt_text, model_id, max_tokens):
             response.status == "incomplete"
             and response.incomplete_details.reason == "max_output_tokens"
         ):
-            print(f"\n[WARNING] {model_id} ran out of tokens")
+            logger.warning(f"{model_id} ran out of tokens")
             if response.output_text:
-                print(f"[INFO] Partial output available for {model_id}")
+                logger.info(f"Partial output available for {model_id}")
                 return response.output_text
             else:
-                print(f"[WARNING] {model_id} ran out of tokens during reasoning")
+                logger.warning(f"{model_id} ran out of tokens during reasoning")
                 return None
 
         return response.output_text
 
     except Exception as e:
-        print(f"[ERROR] xAI/Grok API ({model_id}): {e}")
+        logger.error(f"xAI/Grok API ({model_id}): {e}")
+        # Check for retryable errors
+        if hasattr(e, "status_code") and e.status_code in [429, 500, 502, 503, 504]:
+            logger.warning(
+                f"Retryable error {e.status_code} for {model_id}, will retry..."
+            )
+            raise  # Retry
         return None
 
 
 def llm_generation(llm_name, clients, prompt_text, max_tokens):
     if DRY_RUN:
-        print(f"[DRY-RUN] Skipping API call for {llm_name}, returning empty content")
-        return " "  # Leerer String statt None, damit Files erstellt werden
+        logger.info(
+            f"[DRY-RUN] Skipping API call for {llm_name}, returning empty content"
+        )
+        return " "
 
     client = clients.get(llm_name)
     model_id = LLM_MODEL_IDS.get(llm_name)
 
     if not client or not model_id:
-        print(f"[ERROR] Client or model_id not found for LLM: {llm_name}")
+        logger.error(f"Client or model_id not found for LLM: {llm_name}")
         return None
 
     result = None
-    if llm_name == "anthropic":
-        result = gen_with_anthropic(client, prompt_text, model_id, max_tokens)
-    elif llm_name == "openai":
-        result = gen_with_openai(client, prompt_text, model_id, max_tokens)
-    elif llm_name == "deepseek":
-        result = gen_with_deepseek(client, prompt_text, model_id, max_tokens)
-    elif llm_name == "xai":
-        result = gen_with_xai(client, prompt_text, model_id, max_tokens)
-    else:
-        print(f"[ERROR] Unknown LLM name '{llm_name}'")
+    try:
+        if llm_name == "anthropic":
+            result = gen_with_anthropic(client, prompt_text, model_id, max_tokens)
+        elif llm_name == "openai":
+            result = gen_with_openai(client, prompt_text, model_id, max_tokens)
+        elif llm_name == "deepseek":
+            result = gen_with_deepseek(client, prompt_text, model_id, max_tokens)
+        elif llm_name == "xai":
+            result = gen_with_xai(client, prompt_text, model_id, max_tokens)
+        else:
+            logger.error(f"Unknown LLM name '{llm_name}'")
+            return None
+
+    except Exception as e:
+        logger.error(f"All retry attempts failed for {llm_name}: {e}")
         return None
 
     time.sleep(REQUEST_DELAY_SECONDS)
