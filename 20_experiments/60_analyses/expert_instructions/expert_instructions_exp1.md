@@ -1,96 +1,67 @@
-# Überblick des Experiments 1 -- Malte Grube
+# Überblick des Experiments 1 -- Ausführung durch Malte Grube
 
-Dieses Experiment (bestehend aus 1a und 1b) testet die Qualität von automatisiert-generierten Fragen durch vier Large Language Models und deren Fähigkeit, sich an diverse gegebene Quellinhalte zu halten. Dabei wurden zwei verschiedene Prompts verwendet, mit denen die Modelle Fragen generieren sollten. Details zu diesen Prompts werden aufgrund des Blindtests nicht gegeben.
+Dieses Experiment testet die Qualität von automatisiert-generierten Fragen durch vier Large Language Models (LLMs) und deren Fähigkeit, sich an gegebene Quellinhalte zu halten. Dabei wurde ein einheitliches Promptdesign pro Fragetyp (Multiple-Choice, Open-Ended) verwendet, mit dem die Modelle Fragen zum ISO-OSI-Modell generieren sollten. Details zum Prompt werden aufgrund des Blindtests nicht gegeben.
 
-Als Sonderfall wird in Experiment 1b getestet, ob die Modelle in der Lage sind, Manipulationen im Text zu erkennen, oder ob genau diese straight-forward für die Fragengenerierung genutzt werden. Manipulation beschreibt hier, dass gewisse Informationen im Text bewusst verfälscht wurden, um zu prüfen, ob die Modelle diese erkennen und entsprechend Fragen generieren können.
+## Experimentaufbau
 
-Es folgen die Beschreibungen der beiden Subexperimente, welche Materialien genutzt und welche zusätzlich manipuliert wurden, sowie eine Anleitung, wie Sie die Bewertungen vornehmen können.
+**Eingabequelle:** Extrahierte Textauszüge aus Prof. Caps Vorlesungs-PDF "Referenzarchitekturen" zum ISO-OSI-Modell
 
-## Experiment 1a (`exp1a.csv`)
+**Material-Aufbereitung:**
 
-Es wurden folgende Materialien genutzt, um Fragen bei Experiment 1a zu generieren:
+- Aufteilung in 7 einzelne TXT-Files (Layer 1-7)
+- Bei Fragengenerierung wurde zum schnellen Nachvollziehen nachträglich der jeweilige Layer-Text in das Frage-File geschrieben
 
--   **Eingabequelle:** Originalinhalte aus drei verschiedenen Quellen zum Thema ISO-OSI-Modell
--   **Generiert:** Fragen wurden aus folgenden Materialien jeweils erstellt
--   **Material:**
-    -   `script`: Extrahierte Textauszüge von Prof. Caps Vorlesungs-PDF "Referenzarchitekturen"
-    -   `transcript`: Audio-Text-Fassung (TXT) dieser Vorlesung, von Doritt Linke bereitgestellt
-    -   `tanenbaum`: Auszüge aus der "Computer Networks"-PDF von Andrew S. Tanenbaum, bspw. [hier](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Computer%20Networks.pdf) einsehbar
+**Generierte Fragen:**
 
-Die Materialien wurden von mir extrahiert und aufbereitet durch
+Vorabinformation: Zur Steuerung der kognitiven Anforderung wurden in die Prompts für alle 4 LLMs bei jedem Lauf ein gemeinsames, randomisiertes Bloom-Level integriert, siehe **Bloom's revised Taxonomy** mit 6 Stufen.
 
--   Auteilen der Layer in einzelne TXT-Files und
--   gegebenenfalls Kürzung,
+Zudem hat jede Frage ein bestimmtes Lernziel, basierend auf dem jeweiligen OSI-Layer (1/7), zu erfüllen. Das Einhalten dessen soll mit der **Wertigkeit**-Kategorie in der Rubrik bewertet werden.
 
-sodass sie eine angemessene Länge für die Fragengenerierung haben.
-
-## Experiment 1b (`exp1b.csv`)
-
-Dieses Subexperiment, welches auf Experiment 1a aufbaut, fokussiert sich auf die Manipulation einer Inhaltsquelle.
-
--   **Eingabequelle:** Manipulierte Inhalte (TXT)
--   **Generiert:** Fragen wurden aus absichtlich verfälschten Texten erstellt
--   **Material:**
-    -   `script (manipulated)`: Extrahierte Textauszüge von Prof. Caps Vorlesungs-PDF "Referenzarchitekturen", jedoch manipuliert
-
-Die Layer-Dateien, basierend auf den Vorlesungsfolien, wurden durch einmaliges LLM-Prompting so verändert, dass sie inhaltlich keinen Sinn mehr ergeben, aber dennoch die stichpunktartige Struktur des Vorlesungstextes beibehalten.
-
-Durch diese Manipulation wird getestet, ob die Modelle in der Lage sind, die Unstimmigkeiten gegenüber dem ISO-OSI-Modell zu erkennen, oder ob sie diese Informationen für die Fragengenerierung nutzen.
+- 4 LLMs × 7 Layer × 2 Fragetypen = 56 Fragen gesamt
+- Pro LLM: 7 Multiple-Choice + 7 Open-Ended Fragen
+- Random Bloom-Level pro Frage (Bloom 1-6 für Open-Ended, Bloom 1-3 für MCQ)
+- Sample für Bewertung: 24 Fragen (6 pro LLM: 3 MCQ + 3 Open-Ended)
 
 ## Anleitung für Experten
 
-### Schritt 1: Verständnis der Bewertungskriterien
+### Schritt 1: Bewertungskriterien verstehen
 
-Lesen Sie Subexperiment-spezifischen Rubriken:
+Lesen Sie die Rubrik `exp1_rubric.md`, die folgende Kategorien umfasst (jeweils 1-5 Punkte):
 
--   `exp1a_rubric.md`
--   `exp1b_rubric.md`
+- **Relevanz:** Bezug zum Thema des Textinhalts
+- **Klarheit:** Eindeutigkeit der Formulierung
+- **Beantwortbarkeit:** Verfügbarkeit der Informationen im Text
+- **Herausforderung:** Anspruchsniveau der Frage
+- **Wertigkeit:** Bedeutung für vorgegebenes Lernziel
+- **Sprachqualität:** Verständlichkeit und Angemessenheit
+- **Korrektheit:** Fachliche Richtigkeit bezogen auf den Text, gemessen als Inhaltstreue zur Quelle
 
-Diese unterscheiden sich in den Bewertungskriterien innerhalb der letzten Kategorie jedes Subexperiments. Im ersten Subexperiment (1a) wird die **Korrektheit** der Fragen zum gegebenen Text bewertet (um grundlegend eine Form der Content Adherence auf Expertenebene zu analysieren), während im zweiten Subexperiment (1b) der **Umgang mit Manipulation** im Fokus steht (folgen die Modelle den manipulierten Inhalten blind, erkennen sie jene Manipulation, ignoriert das Modell bei der Frage den Text komplett?).
+### Schritt 2: CSV-Struktur verstehen
 
-### Schritt 2: Verständnis der CSV-Struktur
+Die Datei `exp1.csv` enthält:
 
-Die `exp1a.csv` und `exp1b.csv` enthalten:
+- `sample_id`: Eindeutige ID (001-024) für Zuordnung zur Fragendatei
+- `layer`: OSI-Layer (1-7), aus dem die Frage generiert wurde
+- `question_type`: `mcq` oder `open_ended`
+- Die 7 Bewertungsspalten aus Schritt 1 (1-5 Punkte)
+- `answer_problems`: Für problematische Antworten
+- `comments`: Für zusätzliche Anmerkungen
 
--   `input_source`: Die Quelle des Textes, aus dem die Frage generiert wurde (z.B. `script`, `transcript`, `tanenbaum`, `script_manipulated`).
--   `layer`: Der jeweilige Schichttext, aus der die Frage generiert wurde.
--   `sample_id`: Eine eindeutige ID für jede Frage, die Ihnen hilft, die Fragen den Quellen zuzuordnen.
--   Die jeweiligen 7 Kategorien zur Bewertung von 0-10:
-    -   `relevance` (Relevanz)
-    -   `clarity` (Klarheit)
-    -   `answerability` (Beantwortbarkeit)
-    -   `challenging` (Herausfordernd)
-    -   `value` (Wertigkeit)
-    -   `language` (Sprache)
-    -   `correctness` (Korrektheit) - Nur für Experiment 1a
-    -   `manipulation_handling` (Umgang mit Manipulationen) - Nur für Experiment 1b
--   Eine `answer_problems`-Spalte, in der Sie Antwort-Counter angeben können, bei denen der Wahrheitsgehalt der Antworten angezweifelt wird
--   Eine `comments`-Spalte für weitere Anmerkungen. Dies könnten beispielsweise Indizien sein, wie: Die Frage ist ein Ankerbeispiel für eine bestimmte Kategorie, sodass diese auffällig gut oder schlecht abschneidet, oder auch, dass die Frage nicht beantwortbar ist, weil sie zu unklar formuliert ist.
+### Schritt 3: Bewertung durchführen
 
-Anhand der CSV-Dateien können Sie die Fragen und deren Quellen nachvollziehen, um diese Zeile für Zeile zu bewerten.
-Die Dateien der einzelnen Fragen sind durch `sample_id` nummeriert, sodass die Zuordnung erleichtert wird.
-Der Zähler für die Fragen ist für Experiment 1a und 1b fangen jeweils bei 1 an.
-
-### Schritt 3: Bewertung von Experiment 1a
-
-1. Öffnen Sie `exp1a.csv`.
+1. Öffnen Sie `exp1.csv`
 2. Für jede Zeile:
-    - Schauen Sie sich die entsprechende Frage in `questions/exp1a/` an.
-    - Prüfen Sie den zur Fragengenerierung genutzten Quelltext in `source/[input_source]/layer[X].txt`.
-    - Bewerten Sie nach den Kategorien der Rubrik `exp1a_rubric.md` und geben Sie ggf. Ihre Kommentare in die `comments`-Spalte ein.
+   - Öffnen Sie die entsprechende Fragendatei und lesen Sie die Frage sorgfältig
+   - Prüfen Sie den Quelltext, welcher direkt unter der Frage angegeben ist
+   - Bewerten Sie nach den 7 Kategorien der Rubrik (1-5 Punkte), und notieren Sie Ihre Bewertungen in die entsprechenden Spalten
+   - Notieren Sie gegebenenfalls problematische Antworten/Antwortoptionen in `answer_problems`
+   - Ergänzen Sie bei Bedarf Kommentare
 
-### Schritt 4: Bewertung von Experiment 1b
+**Bewertungsfokus:**
 
-1. Öffnen Sie `exp1b.csv`.
-2. Für jede Zeile mit `script_manipulated`:
-    - Schauen Sie sich die Frage in `questions/exp1b/` an.
-    - Vergleichen Sie mit dem manipulierten Text in `source/script_manipulated/layer[X].txt`.
-    - Bewerten Sie nach den Kategorien der Rubrik `exp1b_rubric.md`, wobei die `manipulation_handling`-Bewertung für dieses Subexperiment das Hauptaugenmerk ist. Da können Kommentare hilfreich sein.
+- Ist die Frage fachlich korrekt bezogen auf den Layer-Text?
+- Sind alle im Text enthaltenen Informationen richtig wiedergegeben?
 
-### Schritt 5: CSV-Dokumentation
+## Dankbarkeit
 
-Tragen Sie Ihre Bewertungen (0-10) in die jeweiligen CSV-Spalten, basierend auf der jeweiligen Bewertungsrubrik, ein. Kommentare können Sie in der `comments`-Spalte hinterlassen, um Ihre Bewertungen zu erläutern oder auf Besonderheiten hinzuweisen.
-
-## Dankbarkeit für Ihre Unterstützung
-
-Vielen Dank, dass Sie sich die Zeit nehmen, die Qualität der generierten Fragen meines Experimentes zu bewerten.
+Vielen Dank für Ihre Unterstützung bei der Evaluation! Ihre Einschätzungen sind wertvoll für die Forschung.

@@ -1,91 +1,76 @@
-# Überblick des Experimente 2 -- Malte Grube
+# Überblick des Experiments 2 -- Ausführung durch Malte Grube
 
-Dieses Experiment testet die Qualität von automatisiert-generierten Fragen durch vier Large Language Models und deren Fähigkeit, verschiedene Fragetypen entsprechend spezifischer Bloom's Taxonomy-Level zu generieren. Dabei wurden drei verschiedene Prompting-Strategien verwendet, mit denen die Modelle Fragen generieren sollten. Details zu diesen Prompts werden aufgrund des Blindtests nicht gegeben. Das Thema der Fragen ist das ISO OSI Modell, welches in der Informatik eine wichtige Rolle spielt.
+Dieses Experiment testet die Fähigkeit von vier Large Language Models (LLMs), Fragen in verschiedenen Formaten (Multiple-Choice, Open-Ended) und auf unterschiedlichen kognitiven Niveaus nach Bloom's revised Taxonomy systematisch zu generieren. Das Thema ist das ISO-OSI-Modell, ein wichtiges Referenzmodell aus der Informatik. Details zum Prompting werden aufgrund des Blindtests nicht gegeben.
 
-Das Experiment fokussiert sich auf die Beziehung zwischen Frageformaten (Multiple-Choice vs. Open-Ended) und kognitiven Anforderungsniveaus nach Bloom's revised Taxonomy. Es wird untersucht, wie verschiedene Spezifikationen in den Prompts (Angabe von Fragetyp, Bloom-Level, oder beidem zusammen) die pädagogische Effektivität der generierten Fragen beeinflussen.
+## Experimentaufbau
 
-Es folgen die Beschreibungen der drei Subexperimente, sowie eine Anleitung, wie Sie die Bewertungen vornehmen können.
+**Eingabequelle:** Extrahierte Textauszüge aller 7 OSI-Layer als ein zusammengefügter Text, basierend auf einer Vorlesungs-PDF meines Professors.
 
-## Experiment 2a (`exp2a.csv`) - Fragetyp-fokussiert
+**Material-Aufbereitung:**
 
-Es wurde eine Prompting-Strategie genutzt, die sich ausschließlich auf die Spezifikation des Fragetyps konzentriert:
+- Zusammenfügen der Informationen aller 7 Layer zu einem Text, welcher in das vorliegende .docx Dokument integriert wurde
 
--   **Eingabequelle:** Entnommene Auszüge aus Vorlesungsskript
--   **Generiert:** Fragen wurden mit Fokus auf spezifische Frageformate erstellt
--   **Strategie:**
-    -   Vorgabe des Fragetyps (Multiple-Choice oder Open-Ended)
-    -   Keine Vorgabe des kognitiven Levels
-    -   Das final bestimmte kognitive Level jeder Frage ist entscheidend für die pädagogische Effektivität
+**Generierte Fragen:**
 
-## Experiment 2b (`exp2b.csv`) - Bloom-Level-fokussiert
+In jede Frage wurde ein bestimmtes Lernziel integriert (1/6), angeknüpft an das jeweilige Bloom-Level. Das Einhalten des Lernziels soll mit der **Wertigkeit**-Kategorie in der Rubrik bewertet werden.
 
-Es wurde eine Prompting-Strategie genutzt, die sich auf spezifische kognitive Level nach Bloom's Taxonomy konzentriert:
+- 4 LLMs × 12 Fragen = 48 Fragen gesamt
+- Pro LLM: 6 MCQ (Bloom 1-3, je 2 Fragen) + 6 Open-Ended (Bloom 1-6, je 1 Frage)
+- Sample für Bewertung: 24 Fragen (6 pro LLM: 3 MCQ + 3 Open-Ended)
 
--   **Eingabequelle:** Entnommene Auszüge aus Vorlesungsskript
--   **Generiert:** Fragen wurden mit Fokus auf spezifische Bloom-Levels erstellt
--   **Strategie:**
-    -   Vorgabe des gewünschten Bloom-Levels (1-6)
-    -   Kein festes Frageformat vorgegeben
-    -   Fokus auf Alignment mit dem vorgegebenen kognitiven Level
-    -   Das durch Prompting vorgegebene Bloom-Level wird zudem den Bewertern vorenthalten
+## Anleitung für Studierende
 
-## Experiment 2c (`exp2c.csv`) - Kombinierte Spezifikation
+### Schritt 1: Bewertungskriterien verstehen
 
-Es wurde eine Prompting-Strategie genutzt, die beide Anforderungen integriert:
+Lesen Sie die Rubrik `exp_rubric.md`, die folgende Kategorien umfasst (jeweils 1-5 Punkte):
 
--   **Eingabequelle:** Entnommene Auszüge aus Vorlesungsskript
--   **Generiert:** Fragen wurden mit kombinierter Spezifikation erstellt
--   **Strategie:**
-    -   Vorgabe sowohl des Fragetyps als auch des Bloom-Levels
-    -   Untersuchung von Beziehungen zwischen Frageformat und kognitivem Level
-    -   Umfassende Analyse der pädagogischen Effektivität
+**Kategorien 0-10 Punkte:**
 
-## Anleitung für Experten
+- **Relevanz:** Bezug zum ISO-OSI-Modell
+- **Klarheit:** Eindeutigkeit der Formulierung
+- **Beantwortbarkeit:** Verfügbarkeit der Informationen im Text
+- **Herausforderung:** Anspruchsniveau der Frage
+- **Wertigkeit:** Bedeutung für vorgegebenes Lernziel
+- **Sprachqualität:** Verständlichkeit und Angemessenheit
 
-### Schritt 1: Verständnis der Bewertungskriterien
+Sowie die folgende Kategorie:
 
-Lesen Sie die Experiment-spezifische Rubrik, um die Bewertungskriterien zu verstehen.
+**Bloom-Level-Bewertung (Punktevergabe 1-6):**
+Welches kognitive Level wird in dieser Frage erreicht? Nutzen Sie die Beschreibungen und Verben in der Rubrik:
 
-Diese Rubrik fokussiert sich auf die Bewertung der Fragen hinsichtlich ihrer pädagogischen Qualität und dem erreichten Bloom's Taxonomy-Level. **Bloom's Level** wird bewertet, um die kognitive Anspruchsebene der generierten Fragen zu analysieren.
+1. **Remembering**
+2. **Understanding**
+3. **Applying**
+4. **Analyzing**
+5. **Evaluating**
+6. **Creating**
 
-Primär war der Plan gewesen, dass die Fragen durch Large Language Models ebenso ausgewertet werden sollen, jedoch wurde dies durch die Experten-Verfügbarkeit verworfen. Deshalb steht in der Experten-Rubrik zu jedem Bloom's Level auch eine kurze Beschreibung, was die jeweilige Stufe umfasst, und Trigger-Verben, die auf diese Stufe hinweisen.
+### Schritt 2: CSV-Struktur verstehen
 
-### Schritt 2: Verständnis der CSV-Struktur
+Jede Klein-Tabelle zu der jeweiligen Frage enthält:
 
-Die `exp2a.csv` (16 Fragen), `exp2b.csv` (8 Fragen) und `exp2c.csv` (16 Fragen) enthalten:
+- Die 6 Bewertungsspalten aus Schritt 1 (1-5 Punkte), sowie
+- `bloom_rating`: Ihr bewertetes Bloom-Level (1-6)
+- `answer_problems`: Für problematische Antworten
+- `comments`: Für zusätzliche Anmerkungen
 
--   `sample_id`: Eine eindeutige ID für jede Frage, die Ihnen hilft, die Fragen zu identifizieren
--   Die jeweiligen 7 Kategorien zur Bewertung von 0-10 (beziehungsweise 1-6 für Bloom's Level):
-    -   `relevance` (Relevanz)
-    -   `clarity` (Klarheit)
-    -   `answerability` (Beantwortbarkeit)
-    -   `challenging` (Herausfordernd)
-    -   `value` (Wertigkeit)
-    -   `language` (Sprache)
-    -   `bloom_rating` (Erreichtes Bloom-Level, Bewertung 1-6)
--   Eine `answer_problems`-Spalte, in der Sie LLM-basierte Antworten angeben können, bei denen beispielsweise der Wahrheitsgehalt der Antworten angezweifelt wird oder weiteres
--   Eine `comments`-Spalte für weitere Anmerkungen. Dies könnten beispielsweise Indizien sein, wie: Die Frage ist ein Ankerbeispiel, indem sie besonders gut oder schlecht abschneidet, oder auch, dass die Frage nicht beantwortbar ist, weil sie zu unklar formuliert ist, oder zu stark vom Text abweicht. Dies kann geschehen, sobald höhere Bloom-Level erreicht werden, da diese Fragen über den Kontext hinausgehen können.
+### Schritt 3: Bewertung durchführen
 
-Anhand der CSV-Dateien können Sie die Fragen und deren Spezifikationen nachvollziehen, um diese Zeile für Zeile zu bewerten.
-Die Dateien der einzelnen Fragen sind durch `sample_id` nummeriert, sodass die Zuordnung erleichtert wird.
-Der Zähler für die Fragen fängt für jedes Subexperiment (2a, 2b, 2c) jeweils bei 1 an.
+1. Schauen Sie das Experiment-Dokument an
+2. Verschaffen Sie sich einen Überblick über die ISO-OSI-Layer-Inhalte durch das Lesen des Textes im Dokument
+3. Für jede Frage:
+   - Lesen Sie die Frage sorgfältig
+   - Bewerten Sie nach den 6 Kategorien der Rubrik (1-5 Punkte)
+   - Bestimmen Sie das erreichte Bloom-Level (1-6) basierend auf der Rubrik
+   - Notieren Sie Ihre Bewertungen entsprechend in die Tabelle
+   - Notieren Sie gegebenenfalls problematische Antworten/Antwortoptionen in `answer_problems`
+   - Ergänzen Sie bei Bedarf Kommentare
 
-### Schritt 3: Bewertung von Experiment 2a (Fragetyp-fokussiert)
+**Bewertungsfokus:**
 
-1. Öffnen Sie die jeweilige Experiment-CSV-Datei
-2. Für jede Zeile:
-    - Schauen Sie sich die entsprechende Frage an.
-    - Bewerten Sie nach den Kategorien der Rubrik.
-    - Notieren Sie diverse Anmerkungen in der `comments`-Spalte, sofern passend.
+- Welches Bloom-Level wird tatsächlich erreicht?
+- Gibt es bestimmte qualitative Unterschiede zwischen MCQ und Open-Ended Fragen?
 
-## Notiz für Fragenanzahl pro Student
+## Dankbarkeit
 
-Es kann passieren, dass die gegebene Zeit für Sie nicht ausreicht, um alle Fragen zu bewerten (muss aber nicht der Fall sein). Wenn dies recht schnell jedoch erkennbar ist, dann ist das Ziel, dass Sie jeweils zumindest 20 Fragen bewerten. Geplant sei dann eine 50%-Überlappung (10/20 Fragen) zwischen den Studenten, die wie folgt entsteht:
-
--   **Student 1:** Fragen 1-16 von Exp2a, 1-4 von Exp2b
--   **Student 2:** Fragen 11-16 von Exp2a, 1-8 von Exp2b, 1-6 von Exp2c
--   **Student 3:** Fragen 5-8 von Exp2b, 1-16 von Exp2c
-
-## Dankbarkeit für Ihre Unterstützung
-
-Vielen Dank, dass Sie sich die Zeit nehmen, die Qualität der generierten Fragen meines Experimentes zu bewerten.
+Vielen Dank für Ihre Unterstützung bei der Evaluation! Ihre Einschätzungen sind wertvoll für die Forschung.
