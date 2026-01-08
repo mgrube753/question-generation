@@ -5,43 +5,100 @@ import pandas as pd
 import constants
 
 
+def clean_directory(path, description):
+    if os.path.exists(path):
+        shutil.rmtree(path)
+        print(f"[INFO] Cleaned old {description}: {os.path.relpath(path)}")
+
+
 def clean_samples(exp_path):
-    sample_dir = os.path.join(exp_path, "sampled")
-    if os.path.exists(sample_dir):
-        try:
-            shutil.rmtree(sample_dir)
-            print(f"[INFO] Cleaned old samples: {os.path.relpath(sample_dir)}")
-        except Exception as e:
-            print(f"[ERROR] Could not clean samples directory: {e}")
+    clean_directory(os.path.join(exp_path, "sampled"), "samples")
 
 
 def clean_renamed_samples():
-    renamed_dir = os.path.join(constants.EXPERIMENTS_BASE_PATH, "70_sampled_questions")
-    if os.path.exists(renamed_dir):
-        try:
-            shutil.rmtree(renamed_dir)
-            print(f"[INFO] Cleaned old renamed samples: {os.path.relpath(renamed_dir)}")
-        except Exception as e:
-            print(f"[ERROR] Could not clean renamed samples directory: {e}")
+    clean_directory(
+        os.path.join(constants.EXPERIMENTS_BASE_PATH, "70_sampled_questions"),
+        "renamed samples",
+    )
 
 
-def collect_question_files(base_path, pattern=".txt"):
-    files = []
-    for root, _, filenames in os.walk(base_path):
-        for filename in filenames:
-            if filename.endswith(pattern):
-                files.append(os.path.join(root, filename))
-    return files
+def parse_question_filename(filename):
+    try:
+        parts = filename.replace(".txt", "").split("_")
+        return int(parts[0].replace("bloom", "")), int(parts[1].replace("layer", ""))
+    except (ValueError, IndexError):
+        return None, None
 
 
-def sample_files(files, sample_size, dest_base):
-    sampled = random.sample(files, min(sample_size, len(files)))
-    for src in sampled:
-        rel_path = os.path.relpath(src, os.path.dirname(src))
-        dest = os.path.join(dest_base, rel_path)
-        os.makedirs(os.path.dirname(dest), exist_ok=True)
-        shutil.copy2(src, dest)
+def collect_exp1_questions():
+    questions_path = os.path.join(constants.EXP1_PATH, "questions")
+    questions_by_llm_type = {
+        llm: {"mcq": [], "open_ended": []} for llm in constants.LLM_NAMES
+    }
+
+    for llm_name in constants.LLM_NAMES:
+        for q_type in constants.QUESTION_TYPES:
+            type_dir = os.path.join(questions_path, llm_name, q_type)
+            if not os.path.exists(type_dir):
+                continue
+
+            for filename in os.listdir(type_dir):
+                if not filename.endswith(".txt") or not filename.startswith("bloom"):
+                    continue
+
+                bloom_idx, layer_num = parse_question_filename(filename)
+                if bloom_idx is None:
+                    continue
+
+                questions_by_llm_type[llm_name][q_type].append(
+                    {
+                        "path": os.path.join(type_dir, filename),
+                        "llm": llm_name,
+                        "layer": layer_num,
+                        "question_type": q_type,
+                        "bloom_idx": bloom_idx,
+                    }
+                )
+
+    return questions_by_llm_type
+
+
+def sample_questions_per_llm(questions_by_llm_type, n_per_type=3):
+    sampled = []
+    for llm_name in constants.LLM_NAMES:
+        for q_type in ["mcq", "open_ended"]:
+            questions = questions_by_llm_type[llm_name][q_type]
+            n_sample = min(n_per_type, len(questions))
+            if n_sample < n_per_type:
+                print(
+                    f"[WARNING] {llm_name} has only {len(questions)} {q_type} questions"
+                )
+            sampled.extend(random.sample(questions, n_sample))
     return sampled
+
+
+def copy_sampled_questions(sampled_questions, sample_path):
+    csv_rows = []
+    for q in sampled_questions:
+        dest_dir = os.path.join(sample_path, q["llm"], q["question_type"])
+        os.makedirs(dest_dir, exist_ok=True)
+        shutil.copy2(q["path"], os.path.join(dest_dir, os.path.basename(q["path"])))
+        csv_rows.append([q["llm"], q["layer"], q["question_type"], q["bloom_idx"]])
+    return csv_rows
+
+
+def print_exp1_statistics(sampled_questions):
+    print("\n       Distribution per LLM:")
+    for llm_name in constants.LLM_NAMES:
+        llm_q = [q for q in sampled_questions if q["llm"] == llm_name]
+        mcq = sum(1 for q in llm_q if q["question_type"] == "mcq")
+        oe = sum(1 for q in llm_q if q["question_type"] == "open_ended")
+        print(f"       {llm_name}: {len(llm_q)} total ({mcq} MCQ, {oe} OE)")
+
+    layer_dist = {}
+    for q in sampled_questions:
+        layer_dist[q["layer"]] = layer_dist.get(q["layer"], 0) + 1
+    print(f"\n       Layer distribution: {dict(sorted(layer_dist.items()))}")
 
 
 def sample_exp1():
@@ -50,107 +107,51 @@ def sample_exp1():
 
     clean_samples(constants.EXP1_PATH)
 
-    questions_path = os.path.join(constants.EXP1_PATH, "questions")
-    sample_path = os.path.join(constants.EXP1_PATH, "sampled")
-
-    questions_by_llm_type = {
-        llm: {"mcq": [], "open_ended": []} for llm in constants.LLM_NAMES
-    }
-
-    for llm_name in constants.LLM_NAMES:
-        llm_dir = os.path.join(questions_path, llm_name)
-        if not os.path.exists(llm_dir):
-            print(f"[WARNING] Directory not found: {llm_dir}")
-            continue
-
-        for q_type in constants.QUESTION_TYPES:
-            type_dir = os.path.join(llm_dir, q_type)
-            if not os.path.exists(type_dir):
-                print(f"[WARNING] Directory not found: {type_dir}")
-                continue
-
-            for filename in os.listdir(type_dir):
-                if not filename.endswith(".txt"):
-                    continue
-
-                if filename.startswith("bloom") and "_layer" in filename:
-                    try:
-                        parts = filename.replace(".txt", "").split("_")
-                        bloom_idx = int(parts[0].replace("bloom", ""))
-                        layer_num = int(parts[1].replace("layer", ""))
-
-                        file_path = os.path.join(type_dir, filename)
-
-                        questions_by_llm_type[llm_name][q_type].append(
-                            {
-                                "path": file_path,
-                                "llm": llm_name,
-                                "layer": layer_num,
-                                "question_type": q_type,
-                                "bloom_idx": bloom_idx,
-                            }
-                        )
-                    except (ValueError, IndexError) as e:
-                        print(f"[WARNING] Could not parse filename {filename}: {e}")
-
-    sampled_questions = []
-    for llm_name in constants.LLM_NAMES:
-        mcq_questions = questions_by_llm_type[llm_name]["mcq"]
-        if len(mcq_questions) >= 3:
-            sampled_questions.extend(random.sample(mcq_questions, 3))
-        else:
-            print(f"[WARNING] {llm_name} has only {len(mcq_questions)} MCQ questions")
-            sampled_questions.extend(mcq_questions)
-
-        oe_questions = questions_by_llm_type[llm_name]["open_ended"]
-        if len(oe_questions) >= 3:
-            sampled_questions.extend(random.sample(oe_questions, 3))
-        else:
-            print(
-                f"[WARNING] {llm_name} has only {len(oe_questions)} Open-Ended questions"
-            )
-            sampled_questions.extend(oe_questions)
+    questions_by_llm_type = collect_exp1_questions()
+    sampled_questions = sample_questions_per_llm(questions_by_llm_type)
 
     print(f"       Sampled: {len(sampled_questions)} questions")
-
-    if len(sampled_questions) == 0:
+    if not sampled_questions:
         print("[ERROR] No questions were sampled! Check file paths and structure.")
         return []
 
-    csv_rows = []
-    for q in sampled_questions:
-        dest_dir = os.path.join(sample_path, q["llm"], q["question_type"])
-        os.makedirs(dest_dir, exist_ok=True)
+    sample_path = os.path.join(constants.EXP1_PATH, "sampled")
+    csv_rows = copy_sampled_questions(sampled_questions, sample_path)
+    print_exp1_statistics(sampled_questions)
 
-        dest_file = os.path.join(dest_dir, os.path.basename(q["path"]))
-        shutil.copy2(q["path"], dest_file)
-        csv_rows.append([q["llm"], q["layer"], q["question_type"], q["bloom_idx"]])
-
-    print("\n       Distribution per LLM:")
-    for llm_name in constants.LLM_NAMES:
-        llm_questions = [q for q in sampled_questions if q["llm"] == llm_name]
-        mcq_count = len([q for q in llm_questions if q["question_type"] == "mcq"])
-        oe_count = len([q for q in llm_questions if q["question_type"] == "open_ended"])
-        print(
-            f"       {llm_name}: {len(llm_questions)} total ({mcq_count} MCQ, {oe_count} OE)"
-        )
-
-    layer_dist = {}
-    for q in sampled_questions:
-        layer_dist[q["layer"]] = layer_dist.get(q["layer"], 0) + 1
-    print(f"\n       Layer distribution: {dict(sorted(layer_dist.items()))}")
-
+    # Save CSV
     csv_path = os.path.join(
         constants.ANALYSES_PATH, "csv", "sampled", "exp1_sampled.csv"
     )
     os.makedirs(os.path.dirname(csv_path), exist_ok=True)
-
     df = pd.DataFrame(csv_rows, columns=["llm", "layer", "question_type", "bloom_idx"])
-    df = df.sort_values(["llm", "question_type", "bloom_idx", "layer"])
+    df.sort_values(["llm", "question_type", "bloom_idx", "layer"], inplace=True)
     df.to_csv(csv_path, index=False)
     print(f"\n       CSV saved: {csv_path} ({len(df)} rows)")
 
     return sampled_questions
+
+
+def sample_bloom_files(src_dir, dest_dir, bloom_levels, llm_name, q_type):
+    if not os.path.exists(src_dir):
+        return []
+
+    files = [f for f in os.listdir(src_dir) if f.endswith(".txt")]
+    csv_rows = []
+
+    for bloom_level in bloom_levels:
+        bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
+        level_files = [f for f in files if f.startswith(f"bloom{bloom_idx}_")]
+
+        if level_files:
+            selected = random.choice(level_files)
+            os.makedirs(dest_dir, exist_ok=True)
+            shutil.copy2(
+                os.path.join(src_dir, selected), os.path.join(dest_dir, selected)
+            )
+            csv_rows.append([llm_name, q_type, bloom_idx])
+
+    return csv_rows
 
 
 def sample_exp2():
@@ -159,157 +160,151 @@ def sample_exp2():
 
     questions_path = os.path.join(constants.EXP2_PATH, "questions")
     sample_path = os.path.join(constants.EXP2_PATH, "sampled")
-
-    sampled_files = []
     csv_rows = []
 
     for llm_name in constants.LLM_NAMES:
-        mcq_dir = os.path.join(questions_path, llm_name, "mcq")
-        mcq_dest = os.path.join(sample_path, llm_name, "mcq")
+        # MCQ: all 3 Bloom levels (1-3)
+        mcq_rows = sample_bloom_files(
+            os.path.join(questions_path, llm_name, "mcq"),
+            os.path.join(sample_path, llm_name, "mcq"),
+            constants.BLOOM_LEVELS_MCQ,
+            llm_name,
+            "mcq",
+        )
+        csv_rows.extend(mcq_rows)
 
-        if os.path.exists(mcq_dir):
-            mcq_files = [f for f in os.listdir(mcq_dir) if f.endswith(".txt")]
-            for bloom_level in constants.BLOOM_LEVELS_MCQ:
-                bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
-                level_files = [
-                    f for f in mcq_files if f.startswith(f"bloom{bloom_idx}_")
-                ]
-                if level_files:
-                    selected = random.choice(level_files)
-                    src_file = os.path.join(mcq_dir, selected)
-                    dest_file = os.path.join(mcq_dest, selected)
-                    os.makedirs(mcq_dest, exist_ok=True)
-                    shutil.copy2(src_file, dest_file)
-                    sampled_files.append(dest_file)
-                    csv_rows.append([llm_name, "mcq", bloom_idx])
+        # Open-ended: 3 random Bloom levels (1-6)
+        oe_rows = sample_bloom_files(
+            os.path.join(questions_path, llm_name, "open_ended"),
+            os.path.join(sample_path, llm_name, "open_ended"),
+            random.sample(constants.BLOOM_LEVELS_OPEN_ENDED, 3),
+            llm_name,
+            "open_ended",
+        )
+        csv_rows.extend(oe_rows)
 
-        oe_dir = os.path.join(questions_path, llm_name, "open_ended")
-        oe_dest = os.path.join(sample_path, llm_name, "open_ended")
+    print(f"       Sampled: {len(csv_rows)} questions")
 
-        if os.path.exists(oe_dir):
-            sampled_blooms = random.sample(constants.BLOOM_LEVELS_OPEN_ENDED, 3)
-            oe_files = [f for f in os.listdir(oe_dir) if f.endswith(".txt")]
-
-            for bloom_level in sampled_blooms:
-                bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
-                level_files = [
-                    f for f in oe_files if f.startswith(f"bloom{bloom_idx}_")
-                ]
-                if level_files:
-                    selected = random.choice(level_files)
-                    src_file = os.path.join(oe_dir, selected)
-                    dest_file = os.path.join(oe_dest, selected)
-                    os.makedirs(oe_dest, exist_ok=True)
-                    shutil.copy2(src_file, dest_file)
-                    sampled_files.append(dest_file)
-                    csv_rows.append([llm_name, "open_ended", bloom_idx])
-
-    print(f"       Sampled: {len(sampled_files)} questions")
-
+    # Save CSV
     csv_path = os.path.join(
         constants.ANALYSES_PATH, "csv", "sampled", "exp2_sampled.csv"
     )
     os.makedirs(os.path.dirname(csv_path), exist_ok=True)
-
     df = pd.DataFrame(csv_rows, columns=["llm", "question_type", "bloom_idx"])
-    df = df.sort_values(["llm", "question_type", "bloom_idx"])
+    df.sort_values(["llm", "question_type", "bloom_idx"], inplace=True)
     df.to_csv(csv_path, index=False)
     print(f"       CSV saved: {csv_path}")
 
-    return sampled_files
+    return csv_rows
+
+
+def rename_and_copy_exp1(df, renamed_base):
+    exp1_dest = os.path.join(renamed_base, "10_exp1")
+    os.makedirs(exp1_dest, exist_ok=True)
+    sample_path = os.path.join(constants.EXP1_PATH, "sampled")
+
+    for idx, row in df.iterrows():
+        sample_id = f"{idx + 1:03d}"
+        src_file = os.path.join(
+            sample_path,
+            row["llm"],
+            row["question_type"],
+            f"bloom{row['bloom_idx']}_layer{row['layer']}.txt",
+        )
+        if os.path.exists(src_file):
+            dest_file = os.path.join(
+                exp1_dest, f"{sample_id}_{row['question_type']}_layer{row['layer']}.txt"
+            )
+            shutil.copy2(src_file, dest_file)
+        else:
+            print(f"[WARNING] Source file not found: {src_file}")
+
+    print(f"       Exp1: {len(df)} files created in 70_sampled_questions/10_exp1")
+
+
+def rename_and_copy_exp2(df, renamed_base):
+    exp2_dest = os.path.join(renamed_base, "20_exp2")
+    os.makedirs(exp2_dest, exist_ok=True)
+    sample_path = os.path.join(constants.EXP2_PATH, "sampled")
+
+    for idx, row in df.iterrows():
+        sample_id = f"{idx + 1:03d}"
+        src_dir = os.path.join(sample_path, row["llm"], row["question_type"])
+
+        if os.path.exists(src_dir):
+            matching_files = [
+                f
+                for f in os.listdir(src_dir)
+                if f.startswith(f"bloom{row['bloom_idx']}_") and f.endswith(".txt")
+            ]
+            if matching_files:
+                dest_file = os.path.join(
+                    exp2_dest, f"{sample_id}_{row['question_type']}_concatenated.txt"
+                )
+                shutil.copy2(os.path.join(src_dir, matching_files[0]), dest_file)
+            else:
+                print(
+                    f"[WARNING] No matching file for bloom{row['bloom_idx']} in {src_dir}"
+                )
+        else:
+            print(f"[WARNING] Directory not found: {src_dir}")
+
+    print(f"       Exp2: {len(df)} files created in 70_sampled_questions/20_exp2")
 
 
 def create_renamed_samples():
     print("\n[INFO] Creating renamed sample collections...")
-
     renamed_base = os.path.join(constants.EXPERIMENTS_BASE_PATH, "70_sampled_questions")
 
-    # Process Experiment 1
+    # Exp1
     exp1_csv = os.path.join(
         constants.ANALYSES_PATH, "csv", "sampled", "exp1_sampled.csv"
     )
     if os.path.exists(exp1_csv):
-        df = pd.read_csv(exp1_csv)
-        exp1_dest = os.path.join(renamed_base, "10_exp1")
-        os.makedirs(exp1_dest, exist_ok=True)
+        rename_and_copy_exp1(pd.read_csv(exp1_csv), renamed_base)
 
-        sample_path = os.path.join(constants.EXP1_PATH, "sampled")
-
-        for idx, row in df.iterrows():
-            sample_id = f"{idx + 1:03d}"
-            llm = row["llm"]
-            layer = row["layer"]
-            q_type = row["question_type"]
-            bloom_idx = row["bloom_idx"]
-
-            src_file = os.path.join(
-                sample_path, llm, q_type, f"bloom{bloom_idx}_layer{layer}.txt"
-            )
-
-            if os.path.exists(src_file):
-                dest_file = os.path.join(
-                    exp1_dest, f"{sample_id}_{q_type}_layer{layer}.txt"
-                )
-                shutil.copy2(src_file, dest_file)
-            else:
-                print(f"[WARNING] Source file not found: {src_file}")
-
-        print(f"       Exp1: {len(df)} files created in 70_sampled_questions/10_exp1")
-
-    # Process Experiment 2
+    # Exp2
     exp2_csv = os.path.join(
         constants.ANALYSES_PATH, "csv", "sampled", "exp2_sampled.csv"
     )
     if os.path.exists(exp2_csv):
-        df = pd.read_csv(exp2_csv)
-        exp2_dest = os.path.join(renamed_base, "20_exp2")
-        os.makedirs(exp2_dest, exist_ok=True)
+        rename_and_copy_exp2(pd.read_csv(exp2_csv), renamed_base)
 
-        sample_path = os.path.join(constants.EXP2_PATH, "sampled")
 
-        for idx, row in df.iterrows():
-            sample_id = f"{idx + 1:03d}"
-            llm = row["llm"]
-            q_type = row["question_type"]
-            bloom_idx = row["bloom_idx"]
+def create_evaluation_csv(
+    csv_path, eval_columns, n_evaluators, evaluator_prefix, exp_label
+):
+    if not os.path.exists(csv_path):
+        return
 
-            src_dir = os.path.join(sample_path, llm, q_type)
-            if os.path.exists(src_dir):
-                matching_files = [
-                    f
-                    for f in os.listdir(src_dir)
-                    if f.startswith(f"bloom{bloom_idx}_") and f.endswith(".txt")
-                ]
+    df = pd.read_csv(csv_path)
+    df.insert(0, "sample_id", [f"{i+1:03d}" for i in range(len(df))])
+    df = df.drop(columns=["llm", "bloom_idx"])
 
-                if matching_files:
-                    src_file = os.path.join(src_dir, matching_files[0])
-                    dest_file = os.path.join(
-                        exp2_dest, f"{sample_id}_{q_type}_concatenated.txt"
-                    )
-                    shutil.copy2(src_file, dest_file)
-                else:
-                    print(
-                        f"[WARNING] No matching file for bloom{bloom_idx} in {src_dir}"
-                    )
-            else:
-                print(f"[WARNING] Directory not found: {src_dir}")
+    for col in eval_columns:
+        df[col] = ""
 
-        print(f"       Exp2: {len(df)} files created in 70_sampled_questions/20_exp2")
+    output_dir = os.path.join(constants.ANALYSES_PATH, "csv", "qualitative", exp_label)
+    os.makedirs(output_dir, exist_ok=True)
+
+    for i in range(1, n_evaluators + 1):
+        df.to_csv(
+            os.path.join(output_dir, f"{exp_label}_eval_{evaluator_prefix}{i}.csv"),
+            index=False,
+        )
+
+    print(
+        f"       {exp_label.capitalize()} {evaluator_prefix.upper()} CSVs created ({n_evaluators} evaluators)"
+    )
 
 
 def generate_expert_evaluation_csvs():
     print("\n[INFO] Generating expert evaluation CSV templates...")
 
-    exp1_csv = os.path.join(
-        constants.ANALYSES_PATH, "csv", "sampled", "exp1_sampled.csv"
-    )
-    if os.path.exists(exp1_csv):
-        df = pd.read_csv(exp1_csv)
-
-        df.insert(0, "sample_id", [f"{i+1:03d}" for i in range(len(df))])
-        df = df.drop(columns=["llm", "bloom_idx"])
-
-        eval_columns = [
+    # Exp1: 5 experts
+    create_evaluation_csv(
+        os.path.join(constants.ANALYSES_PATH, "csv", "sampled", "exp1_sampled.csv"),
+        [
             "relevance",
             "clarity",
             "answerability",
@@ -318,35 +313,16 @@ def generate_expert_evaluation_csvs():
             "language",
             "correctness",
             "comments",
-        ]
-
-        for col in eval_columns:
-            df[col] = ""
-
-        for i in range(1, 6):
-            expert_dir = os.path.join(
-                constants.ANALYSES_PATH,
-                "csv",
-                "qualitative",
-                "exp1",
-            )
-            os.makedirs(expert_dir, exist_ok=True)
-
-            for i in range(1, 6):
-                df.to_csv(os.path.join(expert_dir, f"exp1_eval_e{i}.csv"), index=False)
-
-        print("       Exp1 expert CSVs created (5 experts)")
-
-    exp2_csv = os.path.join(
-        constants.ANALYSES_PATH, "csv", "sampled", "exp2_sampled.csv"
+        ],
+        5,
+        "e",
+        "exp1",
     )
-    if os.path.exists(exp2_csv):
-        df = pd.read_csv(exp2_csv)
 
-        df.insert(0, "sample_id", [f"{i+1:03d}" for i in range(len(df))])
-        df = df.drop(columns=["llm", "bloom_idx"])
-
-        eval_columns = [
+    # Exp2: 3 students
+    create_evaluation_csv(
+        os.path.join(constants.ANALYSES_PATH, "csv", "sampled", "exp2_sampled.csv"),
+        [
             "relevance",
             "clarity",
             "answerability",
@@ -355,23 +331,11 @@ def generate_expert_evaluation_csvs():
             "language",
             "bloom_rating",
             "comments",
-        ]
-
-        for col in eval_columns:
-            df[col] = ""
-
-        for i in range(1, 4):
-            student_dir = os.path.join(
-                constants.ANALYSES_PATH,
-                "csv",
-                "qualitative",
-                "exp2",
-            )
-            os.makedirs(student_dir, exist_ok=True)
-            for i in range(1, 4):
-                df.to_csv(os.path.join(student_dir, f"exp2_eval_s{i}.csv"), index=False)
-
-        print("       Exp2 student CSVs created (3 students)")
+        ],
+        3,
+        "s",
+        "exp2",
+    )
 
 
 def run_sampling():
