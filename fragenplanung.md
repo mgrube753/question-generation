@@ -55,3 +55,7 @@
   * 6 OE-Fragen
   * 6 MCQ-Fragen
 * Wir samplen 1/2 der Fragen pro LLM und Fragetyp
+
+## Warum die Bloom-Aufteilung?
+
+* [Dieser Link](https://teachingtools.uzh.ch/de/tools/lernziel-taxonomien) der Uni Zürich zeigt nämlich tabellarisch, **welche** Bloom-Level für **welche** Fragetypen **wie gut** geeignet sind.
