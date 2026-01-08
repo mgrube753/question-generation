@@ -1,9 +1,8 @@
 import os
 import pandas as pd
 import numpy as np
-import concurrent.futures
-import threading
-
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from threading import Lock
 from tqdm import tqdm
 from constants import (
     EXP1_PATH,
@@ -16,123 +15,96 @@ from api_calls import llm_generation
 from api_config import init_clients
 
 
-def get_adherence_scores(clients, question, source_text, evaluator):
-    prompt_path = os.path.join(
-        PROMPT_TEMPLATES_PATH, "evaluation", "exp1_adherence_eval.md"
+def get_adherence_score(clients, question, source_text, evaluator):
+    prompt = load_txt(
+        os.path.join(PROMPT_TEMPLATES_PATH, "evaluation", "exp1_adherence_eval.md")
     )
-    prompt_template = load_txt(prompt_path)
-
-    prompt = prompt_template.replace("{question_text}", question).replace(
+    prompt = prompt.replace("{question_text}", question).replace(
         "{context_text}", source_text
     )
 
     response = llm_generation(evaluator, clients, prompt, max_tokens=1200)
-    if response:
-        try:
-            score = float(response.strip())
-            if 0 <= score <= 1:
-                return score
-            else:
-                return None
-        except ValueError:
-            return None
-    else:
+    try:
+        score = float(response.strip())
+        return score if 0 <= score <= 1 else None
+    except (ValueError, AttributeError):
         return None
 
 
-def get_adherence_scores_parallel(
-    clients,
-    questions_sources_pairs,
-    max_workers=2,
-    df=None,
-    valid_indices=None,
-    csv_path=None,
+def process_adherence_scores(
+    clients, question_source_pairs, df, valid_indices, csv_path, max_workers=2
 ):
-    results = []
-    lock = threading.Lock()
+    lock = Lock()
 
-    def process_pair(idx_pair):
+    def evaluate_pair(idx_pair):
         idx, (question, source) = idx_pair
-        openai_score = get_adherence_scores(clients, question, source, "openai")
-        anthropic_score = get_adherence_scores(clients, question, source, "anthropic")
-
-        with lock:
-            if df is not None and valid_indices is not None and csv_path is not None:
-                df_idx = valid_indices[idx]
-                df.at[df_idx, "adherence_score_openai"] = openai_score
-                df.at[df_idx, "adherence_score_anthropic"] = anthropic_score
-                df.to_csv(csv_path, index=False)
-
-        return (openai_score, anthropic_score)
-
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = {
-            executor.submit(process_pair, (i, pair)): i
-            for i, pair in enumerate(questions_sources_pairs)
+        scores = {
+            "openai": get_adherence_score(clients, question, source, "openai"),
+            "anthropic": get_adherence_score(clients, question, source, "anthropic"),
         }
 
+        with lock:
+            df_idx = valid_indices[idx]
+            df.at[df_idx, "adherence_score_openai"] = scores["openai"]
+            df.at[df_idx, "adherence_score_anthropic"] = scores["anthropic"]
+            df.to_csv(csv_path, index=False)
+
+        return scores
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = {
+            executor.submit(evaluate_pair, (i, pair)): i
+            for i, pair in enumerate(question_source_pairs)
+        }
+
+        results = []
         for future in tqdm(
-            concurrent.futures.as_completed(futures),
-            total=len(futures),
-            desc="Adherence Scores",
+            as_completed(futures), total=len(futures), desc="Adherence Scores"
         ):
             try:
-                result = future.result()
-                results.append(result)
+                results.append(future.result())
             except Exception as e:
-                print(f"Error processing question: {e}")
-                results.append((None, None))
+                print(f"Error: {e}")
+                results.append({"openai": None, "anthropic": None})
 
     return results
 
 
-def get_question_path(llm, layer):
-    """Get path to a question file based on LLM and layer."""
-    # Check both mcq and open_ended directories
-    mcq_path = os.path.join(EXP1_PATH, "questions", llm, "mcq")
-    oe_path = os.path.join(EXP1_PATH, "questions", llm, "open_ended")
-
-    for base_path in [mcq_path, oe_path]:
-        if os.path.exists(base_path):
-            # Find any file that matches the layer
-            for filename in os.listdir(base_path):
-                if f"_layer{layer}.txt" in filename:
-                    return os.path.join(base_path, filename)
-
-    return None
+def parse_filename(filename):
+    try:
+        parts = filename.replace(".txt", "").split("_")
+        return int(parts[0].replace("bloom", "")), int(parts[1].replace("layer", ""))
+    except:
+        return None, None
 
 
-def get_source_file_path(layer):
-    """Get path to source file (OSI layer)."""
-    source_path = os.path.join(INPUT_SOURCES_PATH, f"layer{layer}.txt")
-    return source_path
+def filter_question_text(content):
+    return "\n".join(
+        line
+        for line in content.splitlines()
+        if not line.strip().endswith(("(Falsch)", "(Richtig)"))
+    )
 
 
 def process_experiment():
-    """Process all generated questions in Experiment 1."""
-    print(f"[INFO] Processing Experiment 1 - OSI Layer-based Questions")
+    print("[INFO] Processing Experiment 1 - OSI Layer-based Questions")
     print("=" * 80)
 
     clients = init_clients()
 
-    # Create output directory
-    csv_output_path = os.path.join(
+    # Setup output
+    csv_path = os.path.join(
         ANALYSES_PATH, "csv", "quantitative", "exp1", "exp1_adherence.csv"
     )
-    os.makedirs(os.path.dirname(csv_output_path), exist_ok=True)
+    os.makedirs(os.path.dirname(csv_path), exist_ok=True)
 
-    # Collect all question files
+    # Collect question-source pairs
     questions_dir = os.path.join(EXP1_PATH, "questions")
-
-    rows = []
-    questions = []
-    sources = []
-    valid_indices = []
-    comparison_info = []
+    rows, questions, sources, valid_indices = [], [], [], []
+    idx = 0
 
     print("[INFO] Loading questions and sources...")
 
-    idx = 0
     for llm in os.listdir(questions_dir):
         llm_path = os.path.join(questions_dir, llm)
         if not os.path.isdir(llm_path):
@@ -147,68 +119,41 @@ def process_experiment():
                 if not filename.endswith(".txt"):
                     continue
 
-                # Extract bloom level and layer from filename
-                # Format: bloom{X}_layer{Y}.txt
-                try:
-                    parts = filename.replace(".txt", "").split("_")
-                    bloom_idx = int(parts[0].replace("bloom", ""))
-                    layer = int(parts[1].replace("layer", ""))
-                except:
+                bloom_idx, layer = parse_filename(filename)
+                if bloom_idx is None:
                     print(f"[WARNING] Could not parse filename: {filename}")
                     continue
 
+                # Load and filter question
                 question_path = os.path.join(type_path, filename)
                 question_content = load_txt(question_path)
-
                 if not question_content:
-                    print(f"[WARNING] Could not load: {question_path}")
                     continue
 
-                # Filter out answer options (Falsch/Richtig markers)
-                question = "\n".join(
-                    line
-                    for line in question_content.splitlines()
-                    if not line.strip().endswith("(Falsch)")
-                    and not line.strip().endswith("(Richtig)")
-                )
-
+                question = filter_question_text(question_content)
                 if not question.strip():
-                    print(
-                        f"[WARNING] Question is empty after filtering: {question_path}"
-                    )
+                    print(f"[WARNING] Empty question after filtering: {question_path}")
                     continue
 
-                # Get source file
-                source_path = get_source_file_path(layer)
+                # Load source
+                source_path = os.path.join(INPUT_SOURCES_PATH, f"layer{layer}.txt")
                 source_text = load_txt(source_path)
-
                 if not source_text:
                     print(f"[WARNING] No source found: {source_path}")
                     continue
 
+                # Store data
                 print(
-                    f"[MATCH {len(questions)+1:3d}] Question: {os.path.relpath(question_path, EXP1_PATH)}"
+                    f"[MATCH {len(questions)+1:3d}] {os.path.relpath(question_path, EXP1_PATH)}"
                 )
-                print(f"             Source:   layer{layer}.txt")
                 print(
-                    f"             LLM:      {llm} | Type: {q_type} | Bloom: {bloom_idx}"
+                    f"             Source: layer{layer}.txt | LLM: {llm} | Type: {q_type} | Bloom: {bloom_idx}"
                 )
                 print("-" * 80)
 
                 questions.append(question)
                 sources.append(source_text)
                 valid_indices.append(idx)
-                comparison_info.append(
-                    {
-                        "question_path": question_path,
-                        "source_path": source_path,
-                        "llm": llm,
-                        "question_type": q_type,
-                        "layer": layer,
-                        "bloom_idx": bloom_idx,
-                    }
-                )
-
                 rows.append(
                     {
                         "llm": llm,
@@ -219,46 +164,39 @@ def process_experiment():
                         "adherence_score_anthropic": np.nan,
                     }
                 )
-
                 idx += 1
 
     if not questions:
         print("[ERROR] No valid question-source pairs found!")
         return
 
-    print(f"\n[INFO] Total valid pairs found: {len(questions)}")
+    print(f"\n[INFO] Total valid pairs: {len(questions)}")
     print("=" * 80)
 
-    # Create DataFrame and save initial version
+    # Initialize DataFrame
     df = pd.DataFrame(rows)
-    df.to_csv(csv_output_path, index=False)
-    print("=" * 80)
+    df.to_csv(csv_path, index=False)
 
     # Calculate adherence scores
-    questions_sources_pairs = list(zip(questions, sources))
-
     print("[INFO] Processing adherence scores with OpenAI and Anthropic...")
-    adherence_results = get_adherence_scores_parallel(
-        clients,
-        questions_sources_pairs,
-        max_workers=2,
-        df=df,
-        valid_indices=valid_indices,
-        csv_path=csv_output_path,
+    results = process_adherence_scores(
+        clients, list(zip(questions, sources)), df, valid_indices, csv_path
     )
 
     # Print results
     for i, idx in enumerate(valid_indices):
-        openai_score, anthropic_score = adherence_results[i]
-        info = comparison_info[i]
+        row = rows[i]
+        scores = results[i]
         print(
-            f"[ADHERENCE OpenAI] Layer {info['layer']} -> {info['llm']} ({info['question_type']}, Bloom {info['bloom_idx']}): {openai_score}"
+            f"[ADHERENCE OpenAI   ] Layer {row['layer']} -> {row['llm']} "
+            f"({row['question_type']}, Bloom {row['bloom_idx']}): {scores['openai']}"
         )
         print(
-            f"[ADHERENCE Anthropic] Layer {info['layer']} -> {info['llm']} ({info['question_type']}, Bloom {info['bloom_idx']}): {anthropic_score}"
+            f"[ADHERENCE Anthropic] Layer {row['layer']} -> {row['llm']} "
+            f"({row['question_type']}, Bloom {row['bloom_idx']}): {scores['anthropic']}"
         )
 
-    print(f"\n[INFO] Final results saved to {csv_output_path}")
+    print(f"\n[INFO] Results saved to {csv_path}")
     print("=" * 80)
 
 
