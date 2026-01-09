@@ -1,0 +1,61 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+
+### Stem Generation:
+
+Frage: Ein Sender überträgt Daten schneller, als der Empfänger diese verarbeiten kann. Welche Strategie des Data Link Layers nutzen Sie, um dieses Problem zu beheben?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) Flusskontrolle anwenden, indem der Sender angewiesen wird zu warten, bis der Empfänger bereit ist (Richtig)
+b) Flusskontrolle durch Zwischenpuffern der eingehenden Daten beim Empfänger einsetzen (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Ein Sender überträgt Daten schneller, als der Empfänger diese verarbeiten kann. Welche Strategie des Data Link Layers nutzen Sie, um dieses Problem zu beheben?
+
+Antwortmöglichkeiten:
+
+a) Fehlerkontrolle anwenden, um fehlerhafte Pakete erneut zu senden und so den Datenstrom zu verlangsamen (Falsch)
+b) Flusskontrolle anwenden, indem der Sender angewiesen wird zu warten, bis der Empfänger bereit ist (Richtig)
+c) Flusskontrolle durch Zwischenpuffern der eingehenden Daten beim Empfänger einsetzen (Richtig)
+d) Segmentierung verwenden, um die Datenmenge pro Übertragungseinheit zu reduzieren (Falsch)
+
+### Source Text:
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.

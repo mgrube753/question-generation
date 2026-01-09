@@ -1,0 +1,193 @@
+## Multiple-Choice Question
+
+### Bloom Level: Understanding
+
+### Learning Objective 
+
+Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
+
+### Stem Generation:
+
+Frage: Welche Formulierung erklärt, wie der Data Link Layer auf den Physical Layer aufbaut, indem sie die Kernaufgaben beider Schichten (Codierung/Transport/Decodierung vs. Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff) in eigenen Worten gegenüberstellt?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) Der Physical Layer sorgt nur dafür, dass 0/1 als physikalische Signale codiert, über ein Medium transportiert und beim Empfänger wieder als Bits decodiert werden; der Data Link Layer nimmt diesen (potenziell fehlerhaften) Bittransport als Grundlage und macht daraus eine geregelte Übertragung, indem er Bits zu Einheiten segmentiert, Sender/Empfänger identifiziert (Adressen), den Medienzugriff steuert und zusätzlich Fehler- sowie Flusskontrolle bereitstellt. (Richtig)
+b) Während der Physical Layer die technische „Signalstrecke“ bereitstellt (wie Bits in elektrische/optische/funkbasierte Größen umgesetzt, übertragen und zurückinterpretiert werden), baut der Data Link Layer darauf auf, indem er diese Bitstrecke aktiviert und organisiert: Er fasst Bits zu größeren Blöcken zusammen, regelt wer wann senden darf, kennzeichnet die beteiligten Stationen und sorgt mit Fehlerkontrolle und Flusskontrolle dafür, dass Übertragung trotz möglicher Störungen zuverlässig abläuft. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: Welche Formulierung erklärt, wie der Data Link Layer auf den Physical Layer aufbaut, indem sie die Kernaufgaben beider Schichten (Codierung/Transport/Decodierung vs. Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff) in eigenen Worten gegenüberstellt?
+
+Antwortmöglichkeiten:
+
+a) Der Physical Layer übernimmt bereits das Zusammenfassen von Bits zu Frames, das Setzen/Interpretieren von MAC-Adressen und die Regelung des Medienzugriffs; der Data Link Layer baut darauf auf, indem er vor allem die Codierung von 0/1 in elektrische/optische Signale sowie deren Transport und Decodierung realisiert. (Falsch)
+b) Der Physical Layer sorgt nur dafür, dass 0/1 als physikalische Signale codiert, über ein Medium transportiert und beim Empfänger wieder als Bits decodiert werden; der Data Link Layer nimmt diesen (potenziell fehlerhaften) Bittransport als Grundlage und macht daraus eine geregelte Übertragung, indem er Bits zu Einheiten segmentiert, Sender/Empfänger identifiziert (Adressen), den Medienzugriff steuert und zusätzlich Fehler- sowie Flusskontrolle bereitstellt. (Richtig)
+c) Der Physical Layer stellt bereits eine fehlergesicherte, flusskontrollierte Verbindung bereit; der Data Link Layer nutzt diese sichere Bitstrecke dann hauptsächlich für netzwerkübergreifendes Routing und die Vergabe von IP-Adressen zwischen unterschiedlichen Netzen. (Falsch)
+d) Während der Physical Layer die technische „Signalstrecke“ bereitstellt (wie Bits in elektrische/optische/funkbasierte Größen umgesetzt, übertragen und zurückinterpretiert werden), baut der Data Link Layer darauf auf, indem er diese Bitstrecke aktiviert und organisiert: Er fasst Bits zu größeren Blöcken zusammen, regelt wer wann senden darf, kennzeichnet die beteiligten Stationen und sorgt mit Fehlerkontrolle und Flusskontrolle dafür, dass Übertragung trotz möglicher Störungen zuverlässig abläuft. (Richtig)
+
+### Source Text:
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

@@ -1,0 +1,50 @@
+## Multiple-Choice Question
+
+### Bloom Level: Understanding
+
+### Learning Objective 
+
+Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+
+### Stem Generation:
+
+Frage: Welche Beschreibung erklärt die Funktion der Bündelung auf der Sitzungsschicht korrekt?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) Bündelung fasst mehrere zusammengehörige Transaktionen zu einer logischen Gruppe zusammen, um sie gemeinsam zu verarbeiten. (Richtig)
+b) Die Bündelung sorgt dafür, dass inhaltlich verbundene Transaktionen als zusammengehörige Einheit behandelt werden. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Welche Beschreibung erklärt die Funktion der Bündelung auf der Sitzungsschicht korrekt?
+
+Antwortmöglichkeiten:
+
+a) Bündelung fasst mehrere zusammengehörige Transaktionen zu einer logischen Gruppe zusammen, um sie gemeinsam zu verarbeiten. (Richtig)
+b) Bündelung setzt Zwischenpunkte in der Kommunikation, damit nach einem Abbruch an der richtigen Stelle fortgesetzt werden kann. (Falsch)
+c) Die Bündelung kombiniert mehrere Datenpakete zu einem größeren Paket, um die Übertragungseffizienz zu erhöhen. (Falsch)
+d) Die Bündelung sorgt dafür, dass inhaltlich verbundene Transaktionen als zusammengehörige Einheit behandelt werden. (Richtig)
+
+### Source Text:
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.

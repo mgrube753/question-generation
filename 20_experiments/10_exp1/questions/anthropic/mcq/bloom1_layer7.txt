@@ -1,0 +1,51 @@
+## Multiple-Choice Question
+
+### Bloom Level: Remembering
+
+### Learning Objective 
+
+Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+
+### Stem Generation:
+
+Frage: Welche drei Kernaufgaben werden auf der Application Layer 7 unterschieden?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) Grundkonzepte, Protokollelemente und Verhalten (Richtig)
+b) Die Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Welche drei Kernaufgaben werden auf der Application Layer 7 unterschieden?
+
+Antwortmöglichkeiten:
+
+a) Datenformatierung, Sitzungsmanagement und Protokollelemente (Falsch)
+b) Die Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen (Richtig)
+c) Grundkonzepte, Protokollelemente und Verhalten (Richtig)
+d) Segmentierung, Routing und Fehlerkorrektur (Falsch)
+
+### Source Text:
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

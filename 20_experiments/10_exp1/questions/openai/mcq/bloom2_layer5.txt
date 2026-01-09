@@ -1,0 +1,50 @@
+## Multiple-Choice Question
+
+### Bloom Level: Understanding
+
+### Learning Objective 
+
+Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+
+### Stem Generation:
+
+Frage: Welche Aussage fasst die drei Kernaufgaben der Sitzungsschicht (Layer 5) in einer Kommunikationsbeziehung korrekt zusammen (Sitzungsaufbau/-verwaltung/-zurückweisung/-beendigung, Synchronisation durch Zwischenpunkte und Bündelung zusammengehöriger Transaktionen)?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) Die Sitzungsschicht baut Sitzungen auf, verwaltet, weist sie ggf. zurück und beendet sie; sie setzt Synchronisations-Zwischenpunkte; und sie bündelt zusammengehörige Transaktionen zu einer Gruppe. (Richtig)
+b) Layer 5 stellt das Sitzungskonzept bereit, indem er Sitzungen einrichtet und steuert (inkl. Zurückweisung und Beendigung), Synchronisation über Zwischenpunkte ermöglicht und zusammengehörige Transaktionen bündelt. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: Welche Aussage fasst die drei Kernaufgaben der Sitzungsschicht (Layer 5) in einer Kommunikationsbeziehung korrekt zusammen (Sitzungsaufbau/-verwaltung/-zurückweisung/-beendigung, Synchronisation durch Zwischenpunkte und Bündelung zusammengehöriger Transaktionen)?
+
+Antwortmöglichkeiten:
+
+a) Die Sitzungsschicht kümmert sich primär um den Sitzungsaufbau und die Sitzungsbeendigung; Synchronisations-Zwischenpunkte und die Bündelung von Transaktionen werden von der Transportschicht übernommen. (Falsch)
+b) Die Sitzungsschicht baut Sitzungen auf, verwaltet, weist sie ggf. zurück und beendet sie; sie setzt Synchronisations-Zwischenpunkte; und sie bündelt zusammengehörige Transaktionen zu einer Gruppe. (Richtig)
+c) Layer 5 übernimmt vor allem die Datenformat-Umwandlung, Kompression und Verschlüsselung und setzt optional Zwischenpunkte zur Synchronisation. (Falsch)
+d) Layer 5 stellt das Sitzungskonzept bereit, indem er Sitzungen einrichtet und steuert (inkl. Zurückweisung und Beendigung), Synchronisation über Zwischenpunkte ermöglicht und zusammengehörige Transaktionen bündelt. (Richtig)
+
+### Source Text:
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.

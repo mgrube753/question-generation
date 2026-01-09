@@ -1,0 +1,191 @@
+## Open-Ended Question
+
+### Bloom Level: Applying
+
+### Learning Objective
+
+Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
+
+### Question Generation
+
+Frage: Veranschaulichen Sie die Anwendung der Kernaufgaben der Data Link Layer in einem Szenario, in dem ein Sender zu schnell für den Empfänger sendet und Übertragungsfehler auftreten.
+
+### Answer Generation + Union of all
+
+Frage: Veranschaulichen Sie die Anwendung der Kernaufgaben der Data Link Layer in einem Szenario, in dem ein Sender zu schnell für den Empfänger sendet und Übertragungsfehler auftreten.
+
+Antwort: Stellen Sie sich ein Szenario vor, in dem ein Computer (Sender) Daten über ein Ethernet-Netzwerk an einen anderen Computer (Empfänger) sendet. Der Sender überträgt die Daten mit hoher Geschwindigkeit, was den Empfänger überfordert, da dessen Puffer überläuft, und zudem treten durch Störungen im Kabel Übertragungsfehler auf. Die Kernaufgaben der Data Link Layer (Layer 2) werden wie folgt angewendet:
+
+- Fehlerkontrolle: Die Data Link Layer am Empfänger erkennt Übertragungsfehler durch Prüfsummen (z. B. CRC) in den empfangenen Frames. Bei erkannten Fehlern fordert sie eine erneute Übertragung an (z. B. via ARQ-Protokoll), um die Fehler zu beheben, oder signalisiert sie dem höheren Layer.
+
+- Flußkontrolle: Um das zu schnelle Senden zu handhaben, implementiert die Data Link Layer Strategien wie Sliding Window, bei denen der Empfänger dem Sender Signale sendet, um die Sende rate herabzusetzen oder Pausen einzulegen (z. B. durch ACK-Nachrichten mit Fenstergröße 0), oder der Empfänger puffert Daten zwischenspeichert, bis sie verarbeitet werden können.
+
+- Segmentierung: Die Data Link Layer am Sender fasst die einzelnen Bits der zu sendenden Daten zu größeren Einheiten zusammen, z. B. zu Ethernet-Frames mit einer Nutzlast von bis zu 1500 Bytes, um die Übertragung effizient zu gestalten, auch wenn Fehler oder Flussprobleme auftreten.
+
+- Identifikation: Die Data Link Layer weist MAC-Adressen zu, um den spezifischen Sender und Empfänger zu identifizieren. Im Szenario adressiert der Sender die Frames mit der MAC-Adresse des Empfängers, sodass nur dieser die Daten verarbeitet, selbst bei Fehlern oder Überlast.
+
+- Medienzugriff: Die Data Link Layer aktiviert den Physical Layer durch CSMA/CD in Ethernet, wobei der Sender wartet, bis das Medium frei ist, sendet dann, und bei Kollisionen (z. B. durch zu schnelles Senden) behebt sie diese durch Backoff und Reservierung, um eine geordnete Übertragung trotz Fehlern zu gewährleisten. (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

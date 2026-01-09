@@ -1,6 +1,11 @@
 # Todo
 
-- [ ] todo minimize the codebase
+- [ ] fix prompts since they do not really depend on each other
+   - MCQ get useless in this case here
+   - DeepSeek questions didn't work, so these have to be run afterwards
+   - 20_experiments/20_exp2/questions/openai/open_ended/bloom6_q1.txt partial output
+   - 20_experiments/10_exp1/questions/openai/open_ended/bloom6_layer7.txt partial output
+- [x] todo minimize the codebase
 - [ ] finish eval notebook 1 quantitative
 - [ ] finish eval notebook 1 qualitative
 - [ ] finish eval notebook 2 qualitative

@@ -1,0 +1,51 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+
+### Stem Generation:
+
+Frage: Anwenden Sie die drei Kernaufgaben der Application Layer 7 auf eine Online-Terminbuchungsanwendung und entscheiden Sie, welche Aussage ein Grundkonzept, welche ein Protokollelement (Anforderung/erwartete Daten) und welche das Verhalten der Anwendung beschreibt – welche Zuordnung ist korrekt?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) Grundkonzept: „Termin-Slot“, „Dienstleistung“, „Kunde“; Protokollelement (Anforderung/erwartete Daten): „Buchungsanfrage“ mit gewünschtem Datum/Uhrzeit, Dienstleistungs-ID und Kundendaten (z. B. Name, E‑Mail); Verhalten: Anwendung prüft Verfügbarkeit, legt die Buchung an und liefert eine Bestätigung oder bei Konflikt eine Ablehnung mit Hinweis auf Alternativen. (Richtig)
+b) Grundkonzept: „Kalender“, „Mitarbeiter/Ressource“, „Standort/Filiale“; Protokollelement (Anforderung/erwartete Daten): „Verfügbarkeitsabfrage“ mit Zeitraum, Standort und Dienstleistung (ggf. Mitarbeiterpräferenz); Verhalten: Anwendung durchsucht passende Kalender, gibt eine Liste freier Slots zurück und liefert bei keiner Verfügbarkeit eine leere Liste bzw. alternative Zeiträume. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: Anwenden Sie die drei Kernaufgaben der Application Layer 7 auf eine Online-Terminbuchungsanwendung und entscheiden Sie, welche Aussage ein Grundkonzept, welche ein Protokollelement (Anforderung/erwartete Daten) und welche das Verhalten der Anwendung beschreibt – welche Zuordnung ist korrekt?
+
+Antwortmöglichkeiten:
+
+a) Grundkonzept: „Buchungsanfrage“, „Verfügbarkeitsabfrage“, „Bestätigung“; Protokollelement (Anforderung/erwartete Daten): „Termin-Slot“, „Dienstleistung“, „Kunde“; Verhalten: Anwendung antwortet mit HTTP-Statuscodes (z. B. 200/404), ohne weitere fachliche Verarbeitung. (Falsch)
+b) Grundkonzept: „Kalender“, „Mitarbeiter/Ressource“, „Standort/Filiale“; Protokollelement (Anforderung/erwartete Daten): „Verfügbarkeitsabfrage“ mit Zeitraum, Standort und Dienstleistung (ggf. Mitarbeiterpräferenz); Verhalten: Anwendung durchsucht passende Kalender, gibt eine Liste freier Slots zurück und liefert bei keiner Verfügbarkeit eine leere Liste bzw. alternative Zeiträume. (Richtig)
+c) Grundkonzept: „SSL/TLS“, „TCP-Port 443“, „JSON“; Protokollelement (Anforderung/erwartete Daten): „TLS-Handshake“ mit Zertifikat und Cipher-Suite; Verhalten: Anwendung stellt die Transportverbindung her, bestätigt Pakete und führt Retransmissions bei Verlust durch. (Falsch)
+d) Grundkonzept: „Termin-Slot“, „Dienstleistung“, „Kunde“; Protokollelement (Anforderung/erwartete Daten): „Buchungsanfrage“ mit gewünschtem Datum/Uhrzeit, Dienstleistungs-ID und Kundendaten (z. B. Name, E‑Mail); Verhalten: Anwendung prüft Verfügbarkeit, legt die Buchung an und liefert eine Bestätigung oder bei Konflikt eine Ablehnung mit Hinweis auf Alternativen. (Richtig)
+
+### Source Text:
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

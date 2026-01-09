@@ -1,0 +1,42 @@
+## Open-Ended Question
+
+### Bloom Level: Understanding
+
+### Learning Objective
+
+Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+
+### Question Generation
+
+Frage: Erklären Sie, wie die drei Kernaufgaben der Vermittlungsschicht – Adressierung, Routing und Flusssteuerung – zusammenwirken, um eine Kommunikation zwischen Geräten in unterschiedlichen Netzwerken zu ermöglichen.
+
+### Answer Generation + Union of all
+
+Frage: Erklären Sie, wie die drei Kernaufgaben der Vermittlungsschicht – Adressierung, Routing und Flusssteuerung – zusammenwirken, um eine Kommunikation zwischen Geräten in unterschiedlichen Netzwerken zu ermöglichen.
+
+Antwort: Die Vermittlungsschicht ermöglicht die Kommunikation zwischen Geräten in unterschiedlichen Netzwerken durch das Zusammenspiel ihrer drei Kernaufgaben. Die Adressierung stellt netzwerkübergreifende Adressen bereit, die eine eindeutige Identifikation von Sender und Empfänger über verschiedene Netzwerke hinweg ermöglichen, unabhängig von den verwendeten Layer-2-Technologien. Das Routing nutzt diese Adressen, um vermittelnde Zwischenknoten auszuwählen und so einen Übertragungsweg zwischen nicht direkt verbundenen Geräten zu bestimmen. Die Flusssteuerung reguliert die Übertragungsgeschwindigkeit, damit keine Überlastung auftritt. Sie wirkt dabei auf zwei Ebenen: End-to-End zwischen dem ursprünglichen Sender und dem endgültigen Empfänger sowie Node-to-Node zwischen jedem Knoten und seinem direkten Nachfolger auf dem Übertragungsweg. Zusammen ermöglichen diese drei Aufgaben, dass Datenpakete zuverlässig über Netzwerkgrenzen hinweg vom Sender zum Empfänger gelangen. (Richtig)
+
+### Source Text
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.

@@ -1,0 +1,67 @@
+## Open-Ended Question
+
+### Bloom Level: Creating
+
+### Learning Objective
+
+Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+
+### Question Generation
+
+Frage: Entwerfen Sie eine anwendungsspezifische Definition der Grundkonzepte, Protokollelemente und Verhaltensweisen für eine E-Mail-Anwendung im Application Layer.
+
+### Answer Generation + Union of all
+
+Frage: Entwerfen Sie eine anwendungsspezifische Definition der Grundkonzepte, Protokollelemente und Verhaltensweisen für eine E-Mail-Anwendung im Application Layer.
+
+Antwort: Für eine E-Mail-Anwendung im Application Layer (Layer 7 des ISO-OSI-Modells) entwerfe ich eine anwendungsspezifische Definition, die die drei Kernaufgaben – Grundkonzepte, Protokollelemente und Verhaltensweisen – zu einem kohärenten Ganzen zusammenführt. Diese Definition ist auf eine typische E-Mail-Anwendung zugeschnitten, die den Versand, Empfang und die Verwaltung von Nachrichten ermöglicht, und berücksichtigt Protokolle wie SMTP für den Versand und IMAP/POP3 für den Empfang. Sie organisiert bestehende Elemente neu, um eine einheitliche, praxisorientierte Struktur zu schaffen, die den Application Layer als Schnittstelle zwischen Benutzer und Netzwerk betont.
+
+**Grundkonzepte:**  
+Die E-Mail-Anwendung basiert auf zentralen Begriffen, die die Kernfunktionalität definieren. Dazu gehören:  
+- **Nachricht (Message):** Die grundlegende Einheit, bestehend aus Header (z. B. Absender, Empfänger, Betreff, Datum) und Body (Text, Anhänge).  
+- **Absender (Sender) und Empfänger (Recipient):** Identifiziert durch E-Mail-Adressen im Format user@domain.com, die Authentizität und Routing ermöglichen.  
+- **Server (Mail Server):** Zentrale Instanz für Speicherung und Weiterleitung, unterteilt in Mail Transfer Agent (MTA) für Versand und Mail Delivery Agent (MDA) für Zustellung.  
+- **Anhänge (Attachments):** Binäre Dateien, die in MIME (Multipurpose Internet Mail Extensions) kodiert werden, um Multimedia-Inhalte zu unterstützen.  
+- **Ordnerstruktur (Folders):** Logische Organisation wie Inbox, Sent, Drafts und Trash für die Verwaltung von Nachrichten.  
+Diese Konzepte bilden das Vokabular der Anwendung und sind stark von der spezifischen Implementierung abhängig, z. B. ob es sich um eine webbasierte (z. B. Webmail) oder clientbasierte Anwendung handelt.
+
+**Protokollelemente:**  
+Die Anwendung definiert Anforderungen und erwartete Daten durch protokollbasierte Elemente, die den Datenaustausch regeln. Wichtige Elemente umfassen:  
+- **Versandanforderung (Send Request):** Erfordert Daten wie Absenderadresse, Empfängeradressen (To, Cc, Bcc), Betreff, Nachrichtentext und Anhänge; erwartet eine Bestätigung (z. B. SMTP-Response-Code 250 OK).  
+- **Empfangsanforderung (Retrieve Request):** Fordert Nachrichtenabruf an, z. B. via IMAP FETCH-Kommando, und erwartet Daten wie vollständige Nachricht mit Header und Body oder nur Metadaten (z. B. Flags für gelesen/ungelesen).  
+- **Authentifizierungselement (Authentication):** Erfordert Benutzername, Passwort oder Token (z. B. OAuth); erwartet sichere Validierung, um unbefugten Zugriff zu verhindern.  
+- **Fehlermeldung (Error Response):** Erwartet standardisierte Codes (z. B. SMTP 550 für ungültige Adresse) und beschreibende Texte für Anforderungen wie fehlgeschlagene Zustellung.  
+- **Sicherheitselement (Security):** Integriert TLS/SSL für Verschlüsselung; erwartet Zertifikatsvalidierung und schützt sensible Daten wie Passwörter.  
+Diese Elemente sind anwendungsspezifisch und variieren je nach Protokoll (z. B. SMTP für asynchrone Übertragung vs. IMAP für synchrone Synchronisation), mit Fokus auf zuverlässige Datenübertragung ohne detaillierte Netzwerklogik.
+
+**Verhaltensweisen:**  
+Die Anwendung reagiert auf Anforderungen durch definierte Verhaltensmuster, die ein konsistentes Ganzes ergeben:  
+- **Auf Versandanforderung:** Die Anwendung validiert Eingaben (z. B. Adressformat), kodiert die Nachricht (MIME), leitet sie an den MTA weiter und zeigt Erfolgs- oder Fehlermeldungen (z. B. "Gesendet" oder "Adresse ungültig"). Bei Fehlern wird eine Retry-Logik aktiviert, z. B. nach 5 Minuten neu versuchen.  
+- **Auf Empfangsanforderung:** Sie synchronisiert den Posteingang (z. B. via IMAP IDLE für Echtzeit-Updates), lädt Nachrichten herunter, markiert sie als gelesen und aktualisiert die Ordnerstruktur; bei Verbindungsabbruch wird ein automatischer Reconnect initiiert.  
+- **Auf Authentifizierung:** Bei erfolgreicher Validierung gewährt sie Zugriff und speichert Sitzungen; bei Fehlschlag blockiert sie den Zugriff und protokolliert Versuche für Sicherheitsüberwachung.  
+- **Auf Fehler oder Sicherheitsvorfälle:** Die Anwendung leitet zu alternativen Pfaden um (z. B. Offline-Modus bei Netzwerkausfall) und benachrichtigt den Benutzer, z. B. durch Pop-ups für Spam-Erkennung oder Virenscans von Anhängen.  
+- **Gesamthaftes Verhalten:** Die Anwendung priorisiert Benutzerfreundlichkeit, indem sie asynchrone Operationen (z. B. Hintergrund-Sync) mit Echtzeit-Feedback kombiniert, und passt sich an Geräte an (z. B. mobile vs. Desktop), um ein nahtloses Erlebnis zu schaffen.  
+
+Diese Definition fusst auf den OSI-Prinzipien und schafft ein neues, kohärentes Framework für E-Mail-Anwendungen, das Grundkonzepte mit Protokollelementen verknüpft und durch Verhaltensweisen operationalisiert, um eine flexible, sichere und effiziente Anwendung zu ermöglichen. Sie kann je nach Kontext (z. B. Unternehmens- vs. Privatnutzung) angepasst werden. (Richtig)
+
+### Source Text
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

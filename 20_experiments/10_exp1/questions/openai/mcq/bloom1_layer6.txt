@@ -1,0 +1,55 @@
+## Multiple-Choice Question
+
+### Bloom Level: Remembering
+
+### Learning Objective 
+
+Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+
+### Stem Generation:
+
+Frage: Welche vier Kernaufgaben der Presentation Layer (Schicht 6) müssen Sie aufzählen, um die Transformation von Anwendungsdaten in übertragbare Bitströme zu beschreiben?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) Endian-Ness-Konvertierung, Zeichensatz-/Zeichendarstellungs-Konvertierung, Kompression (Komprimieren/Dekomprimieren), Verschlüsselung (Verschlüsseln/Entschlüsseln) (Richtig)
+b) Konvertieren der Datendarstellung (Endian-Ness), Konvertieren der Zeichendarstellung, Komprimieren/Dekomprimieren, Verschlüsseln/Entschlüsseln (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: Welche vier Kernaufgaben der Presentation Layer (Schicht 6) müssen Sie aufzählen, um die Transformation von Anwendungsdaten in übertragbare Bitströme zu beschreiben?
+
+Antwortmöglichkeiten:
+
+a) Endian-Ness-Konvertierung, Zeichensatz-/Zeichendarstellungs-Konvertierung, Kompression (Komprimieren/Dekomprimieren), Verschlüsselung (Verschlüsseln/Entschlüsseln) (Richtig)
+b) Konvertieren der Datendarstellung (Endian-Ness), Konvertieren der Zeichendarstellung, Komprimieren/Dekomprimieren, Verschlüsseln/Entschlüsseln (Richtig)
+c) Konvertieren der Datendarstellung (Endian-Ness), Segmentierung/Reassemblierung, Komprimieren/Dekomprimieren, Verschlüsseln/Entschlüsseln (Falsch)
+d) Konvertierung der Zeichendarstellung, Komprimieren/Dekomprimieren, Fehlererkennung/-korrektur, Flusskontrolle (Falsch)
+
+### Source Text:
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.

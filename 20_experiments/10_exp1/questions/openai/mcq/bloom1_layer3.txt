@@ -1,0 +1,54 @@
+## Multiple-Choice Question
+
+### Bloom Level: Remembering
+
+### Learning Objective 
+
+Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+
+### Stem Generation:
+
+Frage: Welche drei Kernaufgaben erfüllt die Network Layer 3 (Layer 3) in Bezug auf netzwerkübergreifende Kommunikation?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) Adressierung (netzwerkübergreifende Adressen), Routing (Auswahl von Zwischenknoten) und Flusssteuerung (End-to-End sowie Node-to-Node) (Richtig)
+b) Adressierung, Routing und Flusssteuerung (inkl. End-to-End- und Node-to-Node-Flusssteuerung) (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: Welche drei Kernaufgaben erfüllt die Network Layer 3 (Layer 3) in Bezug auf netzwerkübergreifende Kommunikation?
+
+Antwortmöglichkeiten:
+
+a) Adressierung (netzwerkübergreifende Adressen), Routing (Auswahl von Zwischenknoten) und Flusssteuerung (End-to-End sowie Node-to-Node) (Richtig)
+b) Adressierung, Routing und Flusssteuerung (inkl. End-to-End- und Node-to-Node-Flusssteuerung) (Richtig)
+c) Adressierung (MAC-Adressen), Switching (Weiterleitung im selben Netzwerk) und Fehlererkennung (Falsch)
+d) Adressierung, Routing und Segmentierung (Aufteilung in TCP-Segmente) (Falsch)
+
+### Source Text:
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.

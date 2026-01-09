@@ -80,6 +80,6 @@ EXP2_MCQ_PER_BLOOM = 2  # 2 questions per Bloom level (levels 1-3) = 6 MCQ per L
 EXP2_OPEN_ENDED_PER_BLOOM = 1  # 1 question per Bloom level (all 6) = 6 OE per LLM
 
 RANDOM_SEED = 2026
-DRY_RUN = True
+DRY_RUN = False
 GENERATE_MCQ = True
 GENERATE_OPEN_ENDED = True

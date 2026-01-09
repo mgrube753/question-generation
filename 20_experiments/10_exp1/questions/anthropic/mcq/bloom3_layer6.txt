@@ -1,0 +1,55 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+
+### Stem Generation:
+
+Frage: Ein System muss Textdaten, die in ASCII kodiert vorliegen, an ein Mainframe-System übertragen, das ausschließlich EBCDIC verarbeitet. Welche Kernaufgabe des Presentation Layers wenden Sie an, um die korrekte Datenübertragung zu ermöglichen?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) Sie wenden die Kernaufgabe Zeichen an, um die Zeichendarstellung von ASCII nach EBCDIC zu konvertieren. (Richtig)
+b) Sie nutzen die Konvertierung der Zeichendarstellung, um die ASCII-kodierten Textdaten in das EBCDIC-Format des Mainframe-Systems zu übersetzen. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Ein System muss Textdaten, die in ASCII kodiert vorliegen, an ein Mainframe-System übertragen, das ausschließlich EBCDIC verarbeitet. Welche Kernaufgabe des Presentation Layers wenden Sie an, um die korrekte Datenübertragung zu ermöglichen?
+
+Antwortmöglichkeiten:
+
+a) Sie nutzen die Konvertierung der Zeichendarstellung, um die ASCII-kodierten Textdaten in das EBCDIC-Format des Mainframe-Systems zu übersetzen. (Richtig)
+b) Sie nutzen die Verschlüsselungsfunktion des Presentation Layers, um die ASCII-Daten in das für das Mainframe-System lesbare EBCDIC-Format zu transformieren. (Falsch)
+c) Sie wenden die Kernaufgabe Endian-Ness an, um die Datendarstellung der ASCII-Zeichen für das Mainframe-System anzupassen. (Falsch)
+d) Sie wenden die Kernaufgabe Zeichen an, um die Zeichendarstellung von ASCII nach EBCDIC zu konvertieren. (Richtig)
+
+### Source Text:
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.

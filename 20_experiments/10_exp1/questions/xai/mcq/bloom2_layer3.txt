@@ -1,0 +1,54 @@
+## Multiple-Choice Question
+
+### Bloom Level: Understanding
+
+### Learning Objective 
+
+Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+
+### Stem Generation:
+
+Frage: Welche Aussage erklärt korrekt den Unterschied zwischen End-to-End- und Node-to-Node-Flusssteuerung im Network Layer?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) End-to-End-Flusssteuerung regelt den Datenfluss vom ursprünglichen Sender bis zum endgültigen Empfänger über das gesamte Netzwerk hinweg, während Node-to-Node-Flusssteuerung den Datenfluss nur zwischen aufeinanderfolgenden Knoten im Übertragungspfad steuert. (Richtig)
+b) Der Unterschied besteht darin, dass End-to-End-Flusssteuerung die Geschwindigkeit zwischen dem Sender und dem entfernten Empfänger anpasst, wohingegen Node-to-Node-Flusssteuerung die Übertragungsgeschwindigkeit schrittweise von einem Knoten zum nächsten kontrolliert. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Welche Aussage erklärt korrekt den Unterschied zwischen End-to-End- und Node-to-Node-Flusssteuerung im Network Layer?
+
+Antwortmöglichkeiten:
+
+a) End-to-End-Flusssteuerung regelt den Datenfluss vom ursprünglichen Sender bis zum endgültigen Empfänger über das gesamte Netzwerk hinweg, während Node-to-Node-Flusssteuerung den Datenfluss nur zwischen aufeinanderfolgenden Knoten im Übertragungspfad steuert. (Richtig)
+b) End-to-End-Flusssteuerung kontrolliert den Fluss zwischen benachbarten Geräten, während Node-to-Node-Flusssteuerung den gesamten Pfad vom Sender zum Empfänger managt. (Falsch)
+c) Der Unterschied besteht darin, dass End-to-End-Flusssteuerung die Geschwindigkeit zwischen dem Sender und dem entfernten Empfänger anpasst, wohingegen Node-to-Node-Flusssteuerung die Übertragungsgeschwindigkeit schrittweise von einem Knoten zum nächsten kontrolliert. (Richtig)
+d) End-to-End-Flusssteuerung ist für die Adressierung verantwortlich, während Node-to-Node-Flusssteuerung das Routing handhabt. (Falsch)
+
+### Source Text:
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.

@@ -1,0 +1,192 @@
+## Open-Ended Question
+
+### Bloom Level: Creating
+
+### Learning Objective
+
+Die Studierenden können auf Basis der Schichtenprinzipien eigene Lösungsvorschläge für Kommunikationsprobleme entwickeln, die den Aufgaben der jeweiligen Schichten entsprechen
+
+### Question Generation
+
+Frage: Entwickeln Sie einen Lösungsvorschlag für die fehlergesicherte Übertragung von Anwendungsdaten zwischen Geräten in unterschiedlichen Netzwerken, der die Kernaufgaben der betroffenen OSI-Schichten integriert und neu organisiert.
+
+### Answer Generation + Union of all
+
+Frage: Entwickeln Sie einen Lösungsvorschlag für die fehlergesicherte Übertragung von Anwendungsdaten zwischen Geräten in unterschiedlichen Netzwerken, der die Kernaufgaben der betroffenen OSI-Schichten integriert und neu organisiert.
+
+Antwort: Um eine fehlergesicherte Übertragung von Anwendungsdaten zwischen Geräten in unterschiedlichen Netzwerken zu gewährleisten, schlage ich ein hybrides Kommunikationsprotokoll vor, das die Kernaufgaben der OSI-Schichten 1 bis 7 integriert und neu organisiert. Der Vorschlag reorganisiert die Schichten in ein modulares Framework mit drei Kernphasen: Vorbereitung und Codierung (neu kombiniert aus Schichten 1, 6 und 7), Sichere Übertragung (integriert Schichten 2, 3 und 4) sowie Sitzungs- und Synchronisationsmanagement (neu organisiert aus Schichten 5 und Teilen von 4). Dieses Framework priorisiert Fehlergesichertheit durch redundante Mechanismen und adaptive Flußsteuerung, die Schichtenaufgaben dynamisch verschiebt, um Netzwerkheterogenität zu adressieren. Im Folgenden wird der Lösungsvorschlag detailliert beschrieben, inklusive der integrierten und neu organisierten Kernaufgaben.
+
+1. **Vorbereitung und Codierung (Neuorganisation von Physical Layer 1, Presentation Layer 6 und Application Layer 7)**:  
+   Diese Phase fusioniert die Codierung und Decodierung von logischen Werten (aus Layer 1) mit der Datendarstellung, Kompression, Verschlüsselung (aus Layer 6) und den anwendungsspezifischen Grundkonzepten, Protokollelementen sowie Verhalten (aus Layer 7). Neu organisiert wird dies zu einem adaptiven Codierungsmodul, das Anwendungsdaten zunächst in komprimierte, verschlüsselte Bitströme umwandelt (z. B. unter Verwendung von Unicode-Konvertierung und AES-Verschlüsselung), bevor sie auf physikalische Größen abgebildet werden (z. B. Manchester-Codierung für mediengebundene Transporte wie Glasfaser). Fehlergesichertheit wird durch integrierte Prüfsummen (neu hinzugefügt aus Layer 2-Ideen) bereits in dieser Phase gewährleistet, um Datenintegrität vor der Übertragung zu prüfen. Beispiel: Für eine Videokonferenz-Anwendung (Layer 7) werden Daten komprimiert und verschlüsselt, dann codiert für drahtlosen Transport (Layer 1), was eine Neuorganisation darstellt, da Layer 7-Verhalten nun direkt die Codierung beeinflusst.
+
+2. **Sichere Übertragung (Integration von Data Link Layer 2, Network Layer 3 und Transport Layer 4)**:  
+   Hier werden die Fehlerkontrolle, Flußkontrolle, Segmentierung, Identifikation und Medienzugriff (aus Layer 2) mit der netzwerkübergreifenden Adressierung, Routing und Flußsteuerung (aus Layer 3) sowie Teilnehmer-Adressierung, Flußsteuerung und Dienstqualität (aus Layer 4) zu einem einheitlichen Übertragungsmodul integriert. Die Neuorganisation erfolgt durch eine hierarchische Fehlerbehandlung: Zuerst segmentiert das Modul Daten in Bytes (Layer 2), adressiert sie netzwerkübergreifend (Layer 3, z. B. IP-Adressen für Routing über Zwischenknoten) und steuert den End-to-End-Fluss mit QoS-Garantien (Layer 4, z. B. Bandbreite-Reservierung für Latenz-sensitive Daten). Fehlergesichertheit wird verstärkt, indem Layer 2-Fehlererkennung (z. B. CRC-Prüfung) mit Layer 3-Node-to-Node-Flußsteuerung kombiniert wird, ergänzt um adaptive Wiederholungsmechanismen aus Layer 4. Beispiel: Bei Übertragung zwischen einem Gerät in einem WLAN-Netz und einem in einem Kabelnetz wird Routing (Layer 3) mit Medienzugriff (Layer 2, z. B. CSMA/CD) neu organisiert, um automatische Umschaltung auf redundante Pfade zu ermöglichen, falls Fehler erkannt werden, und QoS (Layer 4) passt die Flußrate dynamisch an, um Überlastungen zu vermeiden.
+
+3. **Sitzungs- und Synchronisationsmanagement (Neuorganisation von Session Layer 5 und Teilen von Transport Layer 4)**:  
+   Diese Phase integriert das Aufbauen, Verwalten und Beenden von Sitzungen, Synchronisation und Bündelung (aus Layer 5) mit der Dienstqualität und Flußsteuerung (aus Layer 4). Neu organisiert wird dies zu einem synchronisierten Sitzungs-Controller, der Transaktionen bündelt und Zwischenpunkte setzt (Layer 5), während er QoS-Parameter (Layer 4) nutzt, um fehlergesicherte Wiederaufnahme zu ermöglichen. Fehlergesichertheit entsteht durch redundante Synchronisationspunkte, die bei Netzwerkunterbrechungen (z. B. in unterschiedlichen Netzwerken) den Zustand speichern und fortsetzen. Beispiel: Für eine Dateiübertragung wird eine Sitzung aufgebaut (Layer 5), mit Bündelung von Datenpaketen und Synchronisationsmarkern; bei Fehlern (z. B. Paketverlust) nutzt der Controller Layer 4-Flußsteuerung, um nur betroffene Segmente neu zu übertragen, was eine Neuorganisation darstellt, da Layer 5 nun direkt QoS aus Layer 4 einbezieht.
+
+Dieser Lösungsvorschlag schafft ein kohärentes Ganzes, indem er traditionelle Schichtenaufgaben neu organisiert: Statt strikter Schichtentrennung werden Aufgaben modular verschoben (z. B. Fehlerkontrolle nach oben in die Vorbereitungsphase), um Heterogenität zwischen Netzwerken zu bewältigen und Gesamtfehlergesichertheit zu maximieren. Die Umsetzung könnte in einem Protokoll wie einem erweiterten TCP/IP-Stack realisiert werden, mit Tests in simulierten Umgebungen für Validierung. (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

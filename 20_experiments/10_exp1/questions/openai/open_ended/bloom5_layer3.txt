@@ -1,0 +1,50 @@
+## Open-Ended Question
+
+### Bloom Level: Evaluating
+
+### Learning Objective
+
+Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+
+### Question Generation
+
+Frage: Beurteilen Sie anhand der Kriterien Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node), ob ein Netzwerkdesign, das ausschließlich Layer-2-Adressen nutzt, keine Auswahl vermittelnder Zwischenknoten vorsieht und Flusssteuerung nur Node-to-Node implementiert, eine zuverlässige netzwerkübergreifende Kommunikation zwischen Geräten in unterschiedlichen Netzwerken ermöglicht.
+
+### Answer Generation + Union of all
+
+Frage: Beurteilen Sie anhand der Kriterien Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node), ob ein Netzwerkdesign, das ausschließlich Layer-2-Adressen nutzt, keine Auswahl vermittelnder Zwischenknoten vorsieht und Flusssteuerung nur Node-to-Node implementiert, eine zuverlässige netzwerkübergreifende Kommunikation zwischen Geräten in unterschiedlichen Netzwerken ermöglicht.
+
+Antwort: Ein solches Design ermöglicht keine zuverlässige netzwerkübergreifende Kommunikation zwischen Geräten in unterschiedlichen Netzwerken.
+
+Adressierung: Layer-2-Adressen sind nicht als netzwerkübergreifende, hierarchische Adressen ausgelegt, sondern gelten primär innerhalb eines Layer-2-Segments/Broadcast-Domains. Für Kommunikation zwischen unterschiedlichen Netzwerken (insbesondere bei unterschiedlichen Layer-2-Technologien) fehlen damit die notwendigen, netzwerkübergreifenden Adressen, um Endgeräte eindeutig über Netzgrenzen hinweg zu identifizieren und erreichbar zu machen.
+
+Routing: Wenn keine Auswahl vermittelnder Zwischenknoten vorgesehen ist, existiert kein Routing. Damit kann ein Knoten keine Pfade über mehrere Netzwerke bestimmen und Pakete nicht gezielt über Router/Next-Hops in andere Netze weiterleiten. Ohne Routing ist Kommunikation nur innerhalb direkt erreichbarer Layer-2-Reichweite möglich; netzwerkübergreifende Kommunikation ist damit nicht gewährleistet.
+
+Flusssteuerung: Reine Node-to-Node-Flusssteuerung kann höchstens lokale Überlast zwischen jeweils benachbarten Knoten reduzieren, stellt aber keine Ende-zu-Ende-Steuerung vom Sender bis zum entfernten Empfänger sicher. Bei mehreren Zwischenknoten kann es dennoch zu Überlast, Pufferverlusten oder unfairer Ressourcenverteilung kommen, ohne dass Sender und Empfänger dies Ende-zu-Ende koordinieren. Damit trägt Node-to-Node allein nicht zur verlässlichen netzwerkübergreifenden Kommunikation im Sinne einer durchgängigen Kontrolle über die gesamte Verbindung bei.
+
+Gesamturteil: Nach den Layer-3-Kernkriterien fehlt dem Design sowohl die netzwerkübergreifende Adressierung als auch Routing; zudem ist Flusssteuerung nur hop-by-hop und nicht Ende-zu-Ende. Daher kann es die geforderte zuverlässige Kommunikation zwischen Geräten in unterschiedlichen Netzwerken nicht sicherstellen. (Richtig)
+
+### Source Text
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.

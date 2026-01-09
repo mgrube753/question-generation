@@ -1,0 +1,61 @@
+## Open-Ended Question
+
+### Bloom Level: Evaluating
+
+### Learning Objective
+
+Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+
+### Question Generation
+
+Frage: Beurteilen Sie, ob ein Data-Link-Protokoll, das (1) Nutzdaten als kontinuierlichen Bitstrom ohne feste Byte- oder Frame-Grenzen überträgt, (2) pro Übertragungseinheit nur eine Empfängeradresse mitführt, (3) lediglich ein einzelnes Paritätsbit zur Fehlererkennung nutzt und weder Fehlerkorrektur noch eine Fehlersignalisierung vorsieht, (4) ohne Rücksicht auf die Aufnahmefähigkeit des Empfängers sendet und (5) bei gleichzeitigem Sendeversuch zweier Stationen sofort erneut sendet, ohne zu warten oder den Zugriff zu reservieren, eine fehlergesicherte Übertragung über einen potenziell nicht fehlergesicherten Physical Layer leistet, und stützen Sie Ihr Urteil auf die Kriterien Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff.
+
+### Answer Generation + Union of all
+
+Frage: Beurteilen Sie, ob ein Data-Link-Protokoll, das (1) Nutzdaten als kontinuierlichen Bitstrom ohne feste Byte- oder Frame-Grenzen überträgt, (2) pro Übertragungseinheit nur eine Empfängeradresse mitführt, (3) lediglich ein einzelnes Paritätsbit zur Fehlererkennung nutzt und weder Fehlerkorrektur noch eine Fehlersignalisierung vorsieht, (4) ohne Rücksicht auf die Aufnahmefähigkeit des Empfängers sendet und (5) bei gleichzeitigem Sendeversuch zweier Stationen sofort erneut sendet, ohne zu warten oder den Zugriff zu reservieren, eine fehlergesicherte Übertragung über einen potenziell nicht fehlergesicherten Physical Layer leistet, und stützen Sie Ihr Urteil auf die Kriterien Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff.
+
+Antwort: Dieses Protokoll leistet insgesamt keine fehlergesicherte Übertragung über einen potenziell nicht fehlergesicherten Physical Layer, weil es mehrere Kernaufgaben der Sicherungsschicht nach den gegebenen Kriterien nicht ausreichend erfüllt:
+
+Fehlerkontrolle: Ein einzelnes Paritätsbit ermöglicht nur eine sehr eingeschränkte Fehlererkennung (z. B. bleiben viele Mehrbitfehler, insbesondere gerade Anzahlen von Bitfehlern, unerkannt). Entscheidend ist zudem: Es gibt weder Fehlerkorrektur noch eine Fehlersignalisierung (z. B. NACK/ACK, Retransmission-Mechanismus). Damit können erkannte Fehler nicht zuverlässig behoben und nicht einmal zuverlässig kommuniziert werden. Das Kriterium „Erkennen, Beheben oder Signalisieren“ wird somit nicht erfüllt, also kann keine verlässliche Fehlerabsicherung entstehen.
+
+Flusskontrolle: Da ohne Rücksicht auf die Aufnahmefähigkeit des Empfängers gesendet wird, fehlt jede Flusskontrolle. Der Empfänger kann überlaufen (Pufferüberlauf), was zu Datenverlust führt, selbst wenn der Physical Layer fehlerfrei wäre. Damit ist eine gesicherte Übertragung auch aus diesem Grund nicht gegeben.
+
+Segmentierung: Die Übertragung als kontinuierlicher Bitstrom ohne feste Byte- oder Frame-Grenzen erfüllt die Segmentierungsaufgabe nicht. Ohne definierte Einheiten können Daten nicht robust zu größeren Blöcken zusammengefasst und abgegrenzt werden; das erschwert bzw. verhindert, dass Fehlerkontrollinformationen sinnvoll auf klar definierte Übertragungseinheiten bezogen werden, und führt dazu, dass Synchronisations- oder Bitfehler die Auswertung nachfolgender Datenbereiche mit beeinträchtigen können. Damit fehlt eine zentrale Grundlage für eine zuverlässige Sicherung.
+
+Identifikation: Dass pro Übertragungseinheit nur eine Empfängeradresse mitgeführt wird, deckt die Auswahl eines Zielsystems grundsätzlich ab, ist aber für eine sichere Datenübertragung im Mehrstationsbetrieb unvollständig, da keine Senderidentifikation genannt ist. Ohne eindeutige Identifikation beider Kommunikationspartner werden Zustellung, Zuordnung von Übertragungen und ggf. spätere Kontrollmechanismen (z. B. Quittungen) nicht robust unterstützt. Das Kriterium ist höchstens teilweise erfüllt.
+
+Medienzugriff: Bei gleichzeitigem Senden zweier Stationen sofort erneut zu senden, ohne zu warten (Backoff) oder den Zugriff zu reservieren, verletzt die typische Medienzugriffslogik (Senden, Warten, Beheben, Reservieren). Dieses Verhalten führt mit hoher Wahrscheinlichkeit zu wiederholten Kollisionen und damit zu anhaltender Störung (Livelock) sowie massivem Durchsatz- und Zuverlässigkeitsverlust. Ein stabiler, geordneter Zugriff auf das Medium wird nicht erreicht.
+
+Gesamturteil: Da Fehlerkontrolle (insbesondere Beheben/Signalisieren), Flusskontrolle, Segmentierung und Medienzugriff nicht in einer Weise umgesetzt sind, die eine zuverlässige Übertragung über einen potenziell fehlerhaften Physical Layer sicherstellt, erfüllt das Protokoll die Aufgabe der Data Link Layer „fehlergesicherte Übertragung“ nicht. (Richtig)
+
+### Source Text
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.

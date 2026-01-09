@@ -8,25 +8,25 @@ Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Deco
 
 ### Stem Generation:
 
-Frage: Welche drei Kernaufgaben umfasst der Physical Layer 1 zur Übertragung logischer Werte auf physikalischer Ebene?
+Frage: Welche sind die drei Kernaufgaben des Physical Layer 1?
 
 ### Key Generation:
 
 Korrekte Antwort(en):
 
-a) Codierung, Transport und Decodierung (Richtig)
-b) Codierung zur Abbildung logischer Werte auf physikalische Größen, Transport zur Übertragung physikalischer Größen und Decodierung zur Rückinterpretation physikalischer Größen als logische Werte (Richtig)
+a) Codierung, Transport und Decodierung. (Richtig)
+b) Die drei Kernaufgaben sind Codierung, Transport und Decodierung. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche drei Kernaufgaben umfasst der Physical Layer 1 zur Übertragung logischer Werte auf physikalischer Ebene?
+Frage: Welche sind die drei Kernaufgaben des Physical Layer 1?
 
 Antwortmöglichkeiten:
 
-a) Adressierung, Segmentierung und Fehlererkennung (Falsch)
-b) Codierung, Transport und Decodierung (Richtig)
-c) Codierung zur Abbildung logischer Werte auf physikalische Größen, Transport zur Übertragung physikalischer Größen und Decodierung zur Rückinterpretation physikalischer Größen als logische Werte (Richtig)
-d) Verschlüsselung, Routing und Entschlüsselung (Falsch)
+a) Codierung, Transport und Decodierung. (Richtig)
+b) Die drei Kernaufgaben sind Codierung, Transport und Decodierung. (Richtig)
+c) Framing, Error Detection und Flow Control. (Falsch)
+d) Modulation, Demodulation und Amplification. (Falsch)
 
 ### Source Text:
 

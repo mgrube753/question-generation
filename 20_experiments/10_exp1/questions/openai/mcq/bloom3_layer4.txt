@@ -1,0 +1,52 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Stem Generation:
+
+Frage: In einem Netz sollen zwei Teilnehmer so verbunden werden, dass (a) die Endpunkte eindeutig bestimmt sind, (b) der Datenfluss an die begrenzte Empfänger-Charakteristik angepasst wird und (c) garantierte Bandbreite, Latenz, Jitter und Fehlerrate eingehalten werden: Welche drei Kernaufgaben der Transportschicht wenden Sie dafür jeweils an?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) (a) Adressierung der Teilnehmer/Endpunkte, (b) Flusssteuerung zur Anpassung des Sendetempos an die Empfänger-Charakteristik, (c) Dienstqualität (QoS) zur Einhaltung garantierter Bandbreite, Latenz, Jitter und Fehlerrate (Richtig)
+b) (a) Endpunkt-Adressierung zur eindeutigen Bestimmung der Kommunikationspartner, (b) Flusssteuerung zur Begrenzung des Datenflusses gemäß Empfängerfähigkeit, (c) QoS/Dienstqualitäts-Sicherung zur Bereitstellung garantierter Übertragungsparameter (Bandbreite, Latenz, Jitter, Fehlerrate) (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: In einem Netz sollen zwei Teilnehmer so verbunden werden, dass (a) die Endpunkte eindeutig bestimmt sind, (b) der Datenfluss an die begrenzte Empfänger-Charakteristik angepasst wird und (c) garantierte Bandbreite, Latenz, Jitter und Fehlerrate eingehalten werden: Welche drei Kernaufgaben der Transportschicht wenden Sie dafür jeweils an?
+
+Antwortmöglichkeiten:
+
+a) (a) Adressierung der Teilnehmer/Endpunkte, (b) Flusssteuerung zur Anpassung des Sendetempos an die Empfänger-Charakteristik, (c) Dienstqualität (QoS) zur Einhaltung garantierter Bandbreite, Latenz, Jitter und Fehlerrate (Richtig)
+b) (a) Endpunkt-Adressierung zur eindeutigen Bestimmung der Kommunikationspartner, (b) Flusssteuerung zur Begrenzung des Datenflusses gemäß Empfängerfähigkeit, (c) QoS/Dienstqualitäts-Sicherung zur Bereitstellung garantierter Übertragungsparameter (Bandbreite, Latenz, Jitter, Fehlerrate) (Richtig)
+c) (a) IP-Adressierung und Routing zur eindeutigen Pfadwahl, (b) Staukontrolle (Congestion Control) durch Anpassung an Netzüberlast, (c) Paketfragmentierung zur Einhaltung der MTU und damit stabiler Latenz/Jitter (Falsch)
+d) (a) MAC-Adressierung zur eindeutigen Gerätekennung im LAN, (b) Medienzugriffssteuerung (z. B. CSMA/CD) zur Begrenzung der Senderechte, (c) CRC-Fehlererkennung auf Rahmenebene zur Einhaltung der Fehlerrate (Falsch)
+
+### Source Text:
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
