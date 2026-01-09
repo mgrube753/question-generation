@@ -2,19 +2,21 @@
 
 ### Bloom Level: Remembering
 
-### Learning Objective
+### Learning Objective:
 
 Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
 
-### Question Generation
+### Question Generation:
 
-None
+Frage: Nennen Sie die drei Kernaufgaben des Network Layer 3.
 
-### Answer Generation + Union of all
+### Answer Generation + Union of all:
 
-None
+Frage: Nennen Sie die drei Kernaufgaben des Network Layer 3.
 
-### Source Text
+Antwort: Die drei Kernaufgaben des Network Layer 3 sind Adressierung, Routing und Flußsteuerung. (Richtig)
+
+### Source Text:
 
 Network Layer 3
 Beschreibung

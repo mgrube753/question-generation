@@ -10,10 +10,10 @@ EXP2_PATH = os.path.join(EXPERIMENTS_BASE_PATH, "20_exp2")
 
 # LLM Configuration
 LLM_MODEL_IDS = {
-    # "anthropic": "claude-opus-4-5-20251101",
-    # "openai": "gpt-5.2-2025-12-11",
+    "anthropic": "claude-opus-4-5-20251101",
+    "openai": "gpt-5.2-2025-12-11",
     "deepseek": "deepseek-reasoner",
-    # "xai": "grok-4-0709",
+    "xai": "grok-4-0709",
 }
 LLM_NAMES = list(LLM_MODEL_IDS.keys())
 REQUEST_DELAY_SECONDS = 10

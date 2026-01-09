@@ -2,19 +2,21 @@
 
 ### Bloom Level: Understanding
 
-### Learning Objective 
+### Learning Objective: 
 
 Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
 
 ### Stem Generation:
 
-None
+Frage: Erklären Sie, wie die Data Link Layer des ISO-OSI-Modells eine zuverlässige Übertragung über den potenziell fehleranfälligen Physical Layer sicherstellt.
 
 ### Key Generation:
 
-None
+Korrekte Antwort(en):
+a) Der Data Link Layer stellt die Zuverlässigkeit sicher, indem er die vom Physical Layer übertragenen Bits in Frames zusammenfasst (Segmentierung) und Mechanismen zur Fehlererkennung (z.B. CRC) sowie zur Flußkontrolle einsetzt. So können Übertragungsfehler erkannt und die Senderate angepasst werden, um Datenverluste zu vermeiden. (Richtig)
+b) Durch Aufgaben wie Fehlerkontrolle (Erkennung und Signalisierung von Fehlern), Adressierung (Identifikation von Sendern und Empfängern) und Medienzugriffssteuerung gewährleistet der Data Link Layer eine fehlergesicherte Übertragung über den fehleranfälligen Physical Layer, indem er die rohen Bits des Physical Layers in strukturierte, kontrollierte Einheiten umwandelt. (Richtig)
 
-### Distractor Generation + Union of all
+### Distractor Generation + Union of all:
 
 None
 

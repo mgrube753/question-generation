@@ -2,19 +2,21 @@
 
 ### Bloom Level: Remembering
 
-### Learning Objective
+### Learning Objective:
 
 Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
 
-### Question Generation
+### Question Generation:
 
-None
+Frage: Nennen Sie die sieben Schichten des ISO-OSI-Modells in der korrekten Reihenfolge von der untersten zur obersten Schicht und geben Sie die jeweilige Hauptfunktion gemäß der Beschreibung im Lehrmaterial an.
 
-### Answer Generation + Union of all
+### Answer Generation + Union of all:
 
-None
+Frage: Nennen Sie die sieben Schichten des ISO-OSI-Modells in der korrekten Reihenfolge von der untersten zur obersten Schicht und geben Sie die jeweilige Hauptfunktion gemäß der Beschreibung im Lehrmaterial an.
 
-### Source Text
+Antwort: Die sieben Schichten des ISO-OSI-Modells von unten nach oben sind: 1. Physical Layer mit der Hauptfunktion der Bereitstellung einer physikalischen Konzeption für Codierung, Transport und Decodierung logischer Werte; 2. Data Link Layer mit der Hauptfunktion der Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer; 3. Network Layer mit der Hauptfunktion der Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden; 4. Transport Layer mit der Hauptfunktion der Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes; 5. Session Layer mit der Hauptfunktion der Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung; 6. Presentation Layer mit der Hauptfunktion der Kodierung (Darstellung) der Anwendungsdaten als Bitstrom; 7. Application Layer mit der Hauptfunktion der Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten. (Richtig)
+
+### Source Text:
 
 Physical Layer 1
 Beschreibung

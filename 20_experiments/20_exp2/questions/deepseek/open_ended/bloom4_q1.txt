@@ -2,19 +2,19 @@
 
 ### Bloom Level: Analyzing
 
-### Learning Objective
+### Learning Objective:
 
 Die Studierenden können die Aufgabenverteilung zwischen den Schichten analysieren und Unterschiede sowie Zusammenhänge zwischen verwandten Konzepten herausarbeiten
 
-### Question Generation
+### Question Generation:
+
+Frage: Analysieren Sie die charakteristischen Unterschiede in der Flusssteuerung zwischen dem Data Link Layer, dem Network Layer und dem Transport Layer hinsichtlich ihrer Reichweite und der beteiligten Entitäten.
+
+### Answer Generation + Union of all:
 
 None
 
-### Answer Generation + Union of all
-
-None
-
-### Source Text
+### Source Text:
 
 Physical Layer 1
 Beschreibung

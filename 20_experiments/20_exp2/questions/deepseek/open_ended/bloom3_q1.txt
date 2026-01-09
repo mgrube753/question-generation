@@ -2,19 +2,21 @@
 
 ### Bloom Level: Applying
 
-### Learning Objective
+### Learning Objective:
 
 Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
 
-### Question Generation
+### Question Generation:
 
-None
+Frage: Ermitteln Sie, welche Schicht des OSI-Modells für die Fehlerkontrolle bei einer drahtlosen Übertragung verantwortlich ist, und erläutern Sie konkret, wie diese Schicht einen während der Übertragung aufgetretenen Bitfehler beheben kann.
 
-### Answer Generation + Union of all
+### Answer Generation + Union of all:
 
-None
+Frage: Ermitteln Sie, welche Schicht des OSI-Modells für die Fehlerkontrolle bei einer drahtlosen Übertragung verantwortlich ist, und erläutern Sie konkret, wie diese Schicht einen während der Übertragung aufgetretenen Bitfehler beheben kann.
 
-### Source Text
+Antwort: Für die Fehlerkontrolle bei einer drahtlosen Übertragung ist der Data Link Layer (Schicht 2) des OSI-Modells verantwortlich. Diese Schicht kann einen Bitfehler durch folgendes Verfahren beheben: Zunächst wird beim Empfang eines Datenrahmens eine Fehlererkennung durchgeführt, typischerweise mittels einer zyklischen Redundanzprüfung (CRC). Wird ein Bitfehler erkannt, sendet der Empfänger eine negative Bestätigung (NAK) an den Sender zurück und fordert die Wiederholung des fehlerhaften Rahmens an. Der Sender überträgt daraufhin den Rahmen erneut. Dieser Vorgang wird als Automatic Repeat Request (ARQ) bezeichnet und stellt sicher, dass der Bitfehler durch die erneute, fehlerfreie Übertragung korrigiert wird. (Richtig)
+
+### Source Text:
 
 Physical Layer 1
 Beschreibung

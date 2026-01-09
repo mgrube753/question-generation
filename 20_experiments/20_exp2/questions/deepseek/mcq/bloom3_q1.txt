@@ -2,21 +2,31 @@
 
 ### Bloom Level: Applying
 
-### Learning Objective 
+### Learning Objective: 
 
 Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
 
 ### Stem Generation:
 
-None
+Frage: Ein Netzwerkgerät wandelt ASCII-Zeichen in Unicode um, um sie in einer internationalen Anwendung nutzbar zu machen. Welche OSI-Schicht ist für diese Konvertierung der Zeichendarstellung primär verantwortlich?
 
 ### Key Generation:
 
-None
+Korrekte Antwort(en):
 
-### Distractor Generation + Union of all
+a) Presentation Layer (Schicht 6) (Richtig)
+b) Die Präsentationsschicht (Richtig)
 
-None
+### Distractor Generation + Union of all:
+
+Frage: Ein Netzwerkgerät wandelt ASCII-Zeichen in Unicode um, um sie in einer internationalen Anwendung nutzbar zu machen. Welche OSI-Schicht ist für diese Konvertierung der Zeichendarstellung primär verantwortlich?
+
+Antwortmöglichkeiten:
+
+a) Application Layer (Schicht 7) (Falsch)
+b) Die Präsentationsschicht (Richtig)
+c) Presentation Layer (Schicht 6) (Richtig)
+d) Transport Layer (Schicht 
 
 ### Source Text:
 

@@ -2,19 +2,22 @@
 
 ### Bloom Level: Remembering
 
-### Learning Objective 
+### Learning Objective: 
 
 Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
 
 ### Stem Generation:
 
-None
+Frage: Benennen Sie die sieben Schichten des ISO-OSI-Modells in der korrekten Reihenfolge von der untersten bis zur obersten Schicht und nennen Sie jeweils die in diesem Text genannte Hauptfunktion (Beschreibung) einer jeden Schicht.
 
 ### Key Generation:
 
-None
+Korrekte Antwort(en):
 
-### Distractor Generation + Union of all
+a) 1. Physical Layer: Bereitstellung einer physikalischen Konzeption für Codierung, Transport und Decodierung logischer Werte. 2. Data Link Layer: Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer. 3. Network Layer: Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden. 4. Transport Layer: Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes. 5. Session Layer: Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung. 6. Presentation Layer: Kodierung (Darstellung) der Anwendungsdaten als Bitstrom. 7. Application Layer: Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten. (Richtig)
+b) Physical Layer (Schicht 1): Hauptfunktion ist die Bereitstellung einer physikalischen Konzeption für Codierung, Transport und Decodierung logischer Werte. Data Link Layer (2): Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer. Network Layer (3): Bereitstellung einer Übertragung zwischen Geräten in unterschiedlichen Netzwerken verschiedener Layer 2 Technologien. Transport Layer (4): Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes. Session Layer (5): Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept. Presentation Layer (6): Kodierung (Darstellung) der Anwendungsdaten als Bitstrom. Application Layer (7): Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten. (Richtig)
+
+### Distractor Generation + Union of all:
 
 None
 

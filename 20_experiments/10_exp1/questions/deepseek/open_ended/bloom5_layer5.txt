@@ -2,19 +2,19 @@
 
 ### Bloom Level: Evaluating
 
-### Learning Objective
+### Learning Objective:
 
 Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
 
-### Question Generation
+### Question Generation:
 
 None
 
-### Answer Generation + Union of all
+### Answer Generation + Union of all:
 
 None
 
-### Source Text
+### Source Text:
 
 Session Layer 5
 

@@ -2,7 +2,7 @@
 
 ### Bloom Level: Understanding
 
-### Learning Objective 
+### Learning Objective: 
 
 Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
 
@@ -12,11 +12,21 @@ None
 
 ### Key Generation:
 
-None
+Korrekte Antwort(en):
 
-### Distractor Generation + Union of all
+a) Der Data Link Layer stellt eine gesicherte Übertragung zwischen direkt verbundenen Geräten bereit, indem er Bits zu Frames zusammenfasst, Fehler erkennt und den Zugriff auf das Übertragungsmedium regelt, wodurch er auf den rohen Übertragungsdienst des Physical Layer aufbaut. (Richtig)
+b) Der Transport Layer nutzt die routingbasierte Verbindung des Network Layer, um eine Ende-zu-Ende-Kommunikation zwischen Anwendungen zu realisieren, wobei er durch Flusssteuerung und Dienstgüte an die Bedürfnisse der Teilnehmer angepasst wird. (Richtig)
 
-None
+### Distractor Generation + Union of all:
+
+Frage: None
+
+Antwortmöglichkeiten:
+
+a) Der Data Link Layer stellt eine gesicherte Übertragung zwischen direkt verbundenen Geräten bereit, indem er Bits zu Frames zusammenfasst, Fehler erkennt und den Zugriff auf das Übertragungsmedium regelt, wodurch er auf den rohen Übertragungsdienst des Physical Layer aufbaut. (Richtig)
+b) Der Network Layer ist primär für die Ende-zu-Ende-Kommunikation zwischen Anwendungsprozessen verantwortlich, indem er Verbindungen aufbaut und durch Flusssteuerung und Dienstgüte an die Bedürfnisse der Teilnehmer angepasst wird. (Falsch)
+c) Der Physical Layer sorgt für eine gesicherte Übertragung, indem er Bits zu Frames zusammenfasst und Fehler erkennt, wodurch er die Basis für alle höheren Schichten bildet. (Falsch)
+d) Der Transport Layer nutzt die routingbasierte Verbindung des Network Layer, um eine Ende-zu-Ende-Kommunikation zwischen Anwendungen zu realisieren, wobei er durch Flusssteuerung und Dienstgüte an die Bedürfnisse der Teilnehmer angepasst wird. (Richtig)
 
 ### Source Text:
 

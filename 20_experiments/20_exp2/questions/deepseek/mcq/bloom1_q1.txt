@@ -2,21 +2,31 @@
 
 ### Bloom Level: Remembering
 
-### Learning Objective 
+### Learning Objective: 
 
 Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
 
 ### Stem Generation:
 
-None
+Frage: In welcher Schicht des ISO-OSI-Modells ist die Fehlerkontrolle eine Kernaufgabe?
 
 ### Key Generation:
 
-None
+Korrekte Antwort(en):
 
-### Distractor Generation + Union of all
+a) Data Link Layer (Richtig)
+b) Schicht 2 (Richtig)
 
-None
+### Distractor Generation + Union of all:
+
+Frage: In welcher Schicht des ISO-OSI-Modells ist die Fehlerkontrolle eine Kernaufgabe?
+
+Antwortmöglichkeiten:
+
+a) Data Link Layer (Richtig)
+b) Physical Layer (Falsch)
+c) Schicht 2 (Richtig)
+d) Transport Layer (Falsch)
 
 ### Source Text:
 
