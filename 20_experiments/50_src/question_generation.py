@@ -39,6 +39,10 @@ def get_progress():
         return f"Progress [{' | '.join(parts)}]"
 
 
+def get_max_tokens(bloom_level):
+    return constants.MAX_TOKENS_BY_BLOOM.get(bloom_level, constants.DEFAULT_MAX_TOKENS)
+
+
 # === File Management ===
 def clean_questions(exp_path):
     questions_dir = os.path.join(exp_path, "questions")
@@ -169,8 +173,8 @@ def generate_open_ended_question(
     source_text,
     bloom_level,
     bloom_data,
-    learning_objective="",
-    max_tokens=4000,
+    learning_objective,
+    max_tokens,
 ):
     level_data = bloom_data.get(bloom_level, {})
 
@@ -322,7 +326,7 @@ def run_exp1(clients):
                             f"bloom{bloom_idx}_layer{layer_num}.txt",
                         ),
                         f"L{layer_num} MCQ {bloom_level}",
-                        4000,
+                        get_max_tokens(bloom_level),
                     )
                 )
                 csv_rows.append([llm_name, layer_num, "mcq", bloom_idx])
@@ -349,7 +353,7 @@ def run_exp1(clients):
                             f"bloom{bloom_idx}_layer{layer_num}.txt",
                         ),
                         f"L{layer_num} OE {bloom_level}",
-                        4000,
+                        get_max_tokens(bloom_level),
                     )
                 )
                 csv_rows.append([llm_name, layer_num, "open_ended", bloom_idx])
@@ -404,7 +408,7 @@ def run_exp2(clients):
                                 f"bloom{bloom_idx}_q{q_num}.txt",
                             ),
                             f"MCQ B{bloom_idx} Q{q_num}",
-                            4000,
+                            get_max_tokens(bloom_level),
                         )
                     )
                     csv_rows.append([llm_name, "mcq", bloom_idx, q_num])
@@ -433,7 +437,7 @@ def run_exp2(clients):
                                 f"bloom{bloom_idx}_q{q_num}.txt",
                             ),
                             f"OE B{bloom_idx} Q{q_num}",
-                            4000,
+                            get_max_tokens(bloom_level),
                         )
                     )
                     csv_rows.append([llm_name, "open_ended", bloom_idx, q_num])

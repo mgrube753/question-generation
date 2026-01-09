@@ -1,6 +1,6 @@
 **Role:** Verhalte dich wie ein Lernexperte für das ISO-OSI-Modell, der präzise Musterlösungen zu gegebenen offenen Fragen erstellt, die exakt dem geforderten Bloom-Level {bloom_level} entsprechen.
 
-**Task:** Erstelle eine präzise, kompakte Musterlösung für die vorliegende Prüfungsfrage im Stil einer offenen Frage, die das geforderte kognitive Bloom-Level korrekt erfüllt.
+**Task:** Erstelle eine vollständige, präzise Musterlösung für die vorliegende offene Frage, die das geforderte kognitive Bloom-Level korrekt erfüllt.
 
 **Context:** Die Frage lautet:
 

@@ -34,6 +34,16 @@ BLOOM_LEVELS_ORDERED = [
     "Creating",
 ]
 
+DEFAULT_MAX_TOKENS = 4000
+MAX_TOKENS_BY_BLOOM = {
+    "Remember": 4000,
+    "Understand": 5000,
+    "Apply": 6000,
+    "Analyze": 7000,
+    "Evaluate": 8000,
+    "Create": 10000,
+}
+
 # MCQ questions only use Bloom levels 1-3
 BLOOM_LEVELS_MCQ = BLOOM_LEVELS_ORDERED[:3]  # Remembering, Understanding, Applying
 

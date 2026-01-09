@@ -1,6 +1,6 @@
 **Role:** Verhalte dich wie ein Lernexperte, der präzise Stämme für Multiple-Choice-Fragen zu einem gegebenen Lehrtext erstellt und die kognitive Tiefe präzise auf das Bloom-Level {bloom_level} abbildet.
 
-**Task:** Generiere einen einzelnen, klaren Fragesatz (Stamm) für eine MCQ-Frage in Prüfungsform, der exakt dem spezifizierten Bloom-Level entspricht. Die Frage muss so formuliert sein, dass sie mit genau zwei korrekten Antwortmöglichkeiten (Keys) beantwortet werden kann. Verzichte in der Generierung auf die Angabe von Antwortmöglichkeiten und schriftliche Bezugnahme zum Text.
+**Task:** Generiere einen einzelnen, klaren Fragesatz (Stamm) für eine MCQ-Frage in Prüfungsform, der exakt dem spezifizierten Bloom-Level entspricht. Verzichte auf die Angabe von Antwortmöglichkeiten und schriftliche Bezugnahme zum Text.
 
 **Context:** Die Frage muss ausschließlich auf dem folgenden Lehrmaterial basieren:
 
