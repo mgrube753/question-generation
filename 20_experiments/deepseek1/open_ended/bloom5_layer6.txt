@@ -1,0 +1,43 @@
+## Open-Ended Question
+
+### Bloom Level: Evaluating
+
+### Learning Objective:
+
+Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+
+### Question Generation:
+
+Frage: Beurteilen Sie, welche der vier Kernaufgaben des Presentation Layer für die sichere und effiziente Übertragung von patientenbezogenen Gesundheitsdaten zwischen verschiedenen Institutionen priorisiert werden sollte, und begründen Sie Ihre Entscheidung basierend auf etablierten Standards für Datenschutz, Interoperabilität und Ressourceneffizienz.
+
+### Answer Generation + Union of all:
+
+Frage: Beurteilen Sie, welche der vier Kernaufgaben des Presentation Layer für die sichere und effiziente Übertragung von patientenbezogenen Gesundheitsdaten zwischen verschiedenen Institutionen priorisiert werden sollte, und begründen Sie Ihre Entscheidung basierend auf etablierten Standards für Datenschutz, Interoperabilität und Ressourceneffizienz.
+
+Antwort: Für die Übertragung patientenbezogener Gesundheitsdaten ist die Priorisierung der Kernaufgaben des Presentation Layers anhand der Kriterien Datenschutz, Interoperabilität und Ressourceneffizienz wie folgt zu treffen: Höchste Priorität hat die Verschlüsselung, da sie die Vertraulichkeit und Integrität der sensiblen Daten gemäß zwingender gesetzlicher und normativer Vorgaben (z.B. DSGVO, HIPAA, ISO/IEC 27001) gewährleistet und somit die Grundlage für sichere Übertragungen bildet. Als zweitwichtigste Aufgabe ist die Zeichenkonvertierung zu priorisieren, da die Interoperabilität zwischen heterogenen Systemen nur durch einheitliche Zeichenkodierungen (etwa Unicode UTF-8, wie in Standards wie HL7 FHIR oder DICOM vorgesehen) sichergestellt wird und Missinterpretationen vermeidet. Die Konvertierung der Endianness (Datendarstellung) ist für die plattformübergreifende Kompatibilität insbesondere bei binären Formaten relevant, besitzt jedoch eine geringere Priorität, da viele Protokolle bereits eine kanonische Netzwerk-Byte-Reihenfolge definieren. Die Kompression steht an letzter Stelle, da sie zwar die Ressourceneffizienz durch Bandbreitenreduktion erhöhen kann, jedoch oft in Konflikt mit Verschlüsselung steht (da verschlüsselte Daten kaum komprimierbar sind) und ihre Anwendung je nach Datenart (z.B
+
+### Source Text:
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.

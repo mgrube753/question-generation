@@ -123,19 +123,22 @@ def gen_with_deepseek(client, prompt_text, model_id, max_tokens):
             extra_body={"thinking": {"type": "enabled"}},
         )
 
-        if (
-            response.status == "incomplete"
-            and response.incomplete_details.reason == "max_output_tokens"
-        ):
+        # Check if response was truncated due to token limit
+        if response.choices and response.choices[0].finish_reason == "length":
             logger.warning(f"{model_id} ran out of tokens")
-            if response.output_text:
+            if response.choices[0].message.content:
                 logger.info(f"Partial output available for {model_id}")
-                return response.output_text
+                return response.choices[0].message.content
             else:
-                logger.warning(f"{model_id} ran out of tokens during reasoning")
+                logger.warning(f"{model_id} returned no content")
                 return None
 
-        return response.output_text
+        # Return the content if generation completed successfully
+        if response.choices and response.choices[0].message.content:
+            return response.choices[0].message.content
+
+        logger.warning(f"{model_id} returned empty content")
+        return None
 
     except Exception as e:
         logger.error(f"DeepSeek API ({model_id}): {e}")

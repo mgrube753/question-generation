@@ -141,7 +141,7 @@ def generate_mcq_question(
 
 ### Bloom Level: {bloom_level}
 
-### Learning Objective: 
+### Learning Objective 
 
 {learning_objective}
 
@@ -153,7 +153,7 @@ def generate_mcq_question(
 
 {keys_result}
 
-### Distractor Generation + Union of all:
+### Distractor Generation + Union of all
 
 {distractors_result}
 
@@ -209,19 +209,19 @@ def generate_open_ended_question(
 
 ### Bloom Level: {bloom_level}
 
-### Learning Objective:
+### Learning Objective
 
 {learning_objective}
 
-### Question Generation:
+### Question Generation
 
 {question_result}
 
-### Answer Generation + Union of all:
+### Answer Generation + Union of all
 
 {answer_result}
 
-### Source Text:
+### Source Text
 
 {source_text}
 """

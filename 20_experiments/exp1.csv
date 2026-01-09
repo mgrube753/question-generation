@@ -1,0 +1,15 @@
+llm,layer,question_type,bloom_idx
+deepseek,1,mcq,1
+deepseek,4,mcq,1
+deepseek,6,mcq,2
+deepseek,2,mcq,3
+deepseek,3,mcq,3
+deepseek,5,mcq,3
+deepseek,7,mcq,3
+deepseek,3,open_ended,1
+deepseek,1,open_ended,3
+deepseek,2,open_ended,5
+deepseek,4,open_ended,5
+deepseek,5,open_ended,5
+deepseek,6,open_ended,5
+deepseek,7,open_ended,6

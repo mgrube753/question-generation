@@ -1,0 +1,193 @@
+## Open-Ended Question
+
+### Bloom Level: Creating
+
+### Learning Objective:
+
+Die Studierenden können auf Basis der Schichtenprinzipien eigene Lösungsvorschläge für Kommunikationsprobleme entwickeln, die den Aufgaben der jeweiligen Schichten entsprechen
+
+### Question Generation:
+
+Frage: Entwerfen Sie ein neues Kommunikationsprotokoll für ein Szenario mit hohen Anforderungen an Datensicherheit und Echtzeitfähigkeit (z.B. Fernsteuerung kritischer Infrastruktur). Beschreiben Sie detailliert, wie Ihre Protokollspezifikation die spezifischen Kernaufgaben aller sieben OSI-Schichten innovativ umsetzt und integriert.
+
+### Answer Generation + Union of all:
+
+Frage: Entwerfen Sie ein neues Kommunikationsprotokoll für ein Szenario mit hohen Anforderungen an Datensicherheit und Echtzeitfähigkeit (z.B. Fernsteuerung kritischer Infrastruktur). Beschreiben Sie detailliert, wie Ihre Protokollspezifikation die spezifischen Kernaufgaben aller sieben OSI-Schichten innovativ umsetzt und integriert.
+
+Antwort: (Richtig)
+Protokollname: Secure Real-time Infrastructure Control Protocol (SRICP). Dieses Protokoll ist speziell für die Fernsteuerung kritischer Infrastrukturen (z.B. Energieversorgung, Verkehrsleitsysteme) entworfen, wo hohe Datensicherheit und Echtzeitfähigkeit (geringe Latenz, garantierte Zustellung) essentiell sind. Die nachfolgende Spezifikation beschreibt die innovative Umsetzung der Kernaufgaben jeder OSI-Schicht.
+
+**Physical Layer (Schicht 1):**
+- *Codierung*: Verwendung einer modifizierten Manchester-Codierung („Secure-Manchester“), die zusätzlich zu den Datenbits ein periodisches Synchronisationssignal und eine Prüfsumme pro Bitblock (z.B. 10 Bits) einbettet. Dies ermöglicht sofortige Erkennung von Bitfehlern und exakte Taktrückgewinnung, selbst bei gestörten Medien.
+- *Transport*: Primär werden Lichtwellenleiter (Single-Mode-Faser) eingesetzt, die durch physische Abschirmung und kontinuierliche Signalintegritätsprüfung (Dauerlichtmessung) gegen Abhör- und Störangriffe geschützt sind. Als Redundanz kommen gesicherte Richtfunkstrecken (mit Frequenzsprung und Beamforming) zum Einsatz.
+- *Decodierung*: Adaptive Detektionsbereiche basierend auf Signal-to-Noise-Ratio (SNR), die in Echtzeit angepasst werden, um Bitfehlerraten zu minimieren. Eine Hardware-beschleunigte Prüfung der eingebetteten Prüfsumme leitet bei Fehlererkennung sofort eine Neusynchronisation ein.
+
+**Data Link Layer (Schicht 2):**
+- *Fehlerkontrolle*: Jeder Frame enthält eine starke CRC-32-Prüfsumme. Statt aufwändiger Fehlerkorrektur wird ein selektives Wiederholungs-ARQ (Automatic Repeat Request) mit Prioritätsqueues verwendet: Kritische Frames werden sofort wiederholt, während nicht-kritische Frames verworfen werden können, um Latenz niedrig zu halten.
+- *Flusskontrolle*: Ein kreditbasiertes Verfahren mit dynamischen Fenstergrößen, die auf die aktuelle Round-Trip-Time (RTT) reagieren. Der Empfänger kann den Sender anweisen, für bestimmte Prioritätsstufen temporär zu pausieren.
+- *Segmentierung*: Frames haben eine variable Länge (bis zu 256 Bytes), um Overhead zu minimieren. Jeder Frame enthält eine Längenangabe und eine Prioritätskennung im Header.
+- *Identifikation*: 16-Bit-Adressen, wobei die oberen 4 Bits eine Sicherheitsdomäne kennzeichnen. Adressen werden bei
+
+### Source Text:
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

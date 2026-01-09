@@ -1,0 +1,13 @@
+llm,question_type,bloom_idx,question_num
+deepseek,mcq,1,1
+deepseek,mcq,1,2
+deepseek,mcq,2,1
+deepseek,mcq,2,2
+deepseek,mcq,3,1
+deepseek,mcq,3,2
+deepseek,open_ended,1,1
+deepseek,open_ended,2,1
+deepseek,open_ended,3,1
+deepseek,open_ended,4,1
+deepseek,open_ended,5,1
+deepseek,open_ended,6,1
