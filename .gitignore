@@ -46,4 +46,4 @@ _minted/
 **/tables/**/*.csv
 
 # other
-70_archive
+*archive*

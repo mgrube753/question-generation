@@ -8,40 +8,24 @@ Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonze
 
 ### Question Generation
 
-Frage: Entwerfen Sie für eine selbst gewählte Anwendung eine vollständige Spezifikation der Application Layer, indem Sie die zugehörigen Grundkonzepte, Protokollelemente und Verhaltensweisen systematisch zusammenstellen und aufeinander abstimmen.
+Frage: Entwerfen Sie für eine selbst gewählte Anwendung eine vollständige Spezifikation der Anwendungsschicht, in der Sie Grundkonzepte, Protokollelemente und Verhaltensweisen definieren und zu einem schlüssigen Gesamtkonzept zusammenstellen.
 
 ### Answer Generation + Union of all
 
-Frage: Entwerfen Sie für eine selbst gewählte Anwendung eine vollständige Spezifikation der Application Layer, indem Sie die zugehörigen Grundkonzepte, Protokollelemente und Verhaltensweisen systematisch zusammenstellen und aufeinander abstimmen.
+Frage: Entwerfen Sie für eine selbst gewählte Anwendung eine vollständige Spezifikation der Anwendungsschicht, in der Sie Grundkonzepte, Protokollelemente und Verhaltensweisen definieren und zu einem schlüssigen Gesamtkonzept zusammenstellen.
 
-Antwort: Spezifikation der Application Layer für eine Bibliotheksausleihe-Anwendung
+Antwort: Spezifikation für eine Chat-Anwendung auf der Anwendungsschicht (Layer 7):
 
-1. Grundkonzepte:
-- Benutzer: Identifiziert durch Benutzernummer und Name, besitzt ein Ausleihkonto
-- Medium: Buch, Zeitschrift oder DVD mit eindeutiger Mediennummer, Titel und Verfügbarkeitsstatus
-- Ausleihe: Verknüpfung zwischen Benutzer und Medium mit Ausleihdatum und Rückgabedatum
-- Vormerkung: Reservierung eines verliehenen Mediums durch einen Benutzer
-- Ausleihkonto: Enthält aktuelle Ausleihen, Vormerkungen und Mahnstatus eines Benutzers
+Grundkonzepte:
+Ein Benutzer ist eine identifizierbare Entität mit eindeutigem Benutzernamen und Authentifizierungsdaten. Eine Nachricht besteht aus Absender, Empfänger, Zeitstempel und Textinhalt. Ein Chatraum ist ein virtueller Bereich, in dem mehrere Benutzer Nachrichten austauschen. Der Status gibt an, ob ein Benutzer online, offline oder abwesend ist.
 
-2. Protokollelemente:
-- AUTHENTICATE(Benutzernummer, Passwort): Anmeldung am System
-- SEARCH(Suchbegriff, Kategorie): Suche nach Medien im Bestand
-- BORROW(Mediennummer, Benutzernummer): Ausleihe eines Mediums
-- RETURN(Mediennummer): Rückgabe eines Mediums
-- RESERVE(Mediennummer, Benutzernummer): Vormerkung eines verliehenen Mediums
-- GET_ACCOUNT(Benutzernummer): Abruf des Ausleihkontos
-- RENEW(Mediennummer, Benutzernummer): Verlängerung einer Ausleihe
+Protokollelemente:
+LOGIN(benutzername, passwort) zur Authentifizierung. LOGOUT() zum Abmelden. SEND_MESSAGE(empfänger, text) zum Versenden einer Nachricht mit erwartetem Empfängernamen und Nachrichtentext. GET_MESSAGES(chatraum_id, anzahl) zum Abrufen von Nachrichten mit Raumkennung und gewünschter Anzahl. SET_STATUS(statuswert) zur Statusänderung. CREATE_ROOM(raumname, teilnehmerliste) zur Erstellung eines neuen Chatraums.
 
-3. Verhaltensweisen:
-- Bei AUTHENTICATE: Prüfung der Zugangsdaten, bei Erfolg Rückgabe einer Session-ID und Kontoinformationen, bei Fehler Rückgabe von AUTH_FAILED
-- Bei SEARCH: Durchsuchen des Medienbestands, Rückgabe einer Liste mit Mediennummer, Titel, Verfügbarkeitsstatus
-- Bei BORROW: Prüfung der Verfügbarkeit und des Kontostatus, bei Erfolg Änderung des Medienstatus auf ausgeliehen und Rückgabe von BORROW_SUCCESS mit Rückgabedatum, bei Fehler Rückgabe von BORROW_DENIED mit Begründung
-- Bei RETURN: Aktualisierung des Medienstatus auf verfügbar, Prüfung auf Vormerkungen und gegebenenfalls Benachrichtigung des Vormerkenden, Rückgabe von RETURN_SUCCESS oder OVERDUE_NOTICE bei Fristüberschreitung
-- Bei RESERVE: Prüfung ob Medium verliehen, Eintragung in Vormerkungsliste, Rückgabe von RESERVE_SUCCESS mit Warteplatzposition
-- Bei GET_ACCOUNT: Rückgabe aller aktuellen Ausleihen mit Fristen, Vormerkungen und offenen Mahngebühren
-- Bei RENEW: Prüfung auf Vormerkungen und maximale Verlängerungsanzahl, bei Erfolg neues Rückgabedatum, bei Fehler RENEW_DENIED
+Verhalten:
+Bei LOGIN prüft die Anwendung die Anmeldedaten und antwortet mit SUCCESS und Sitzungstoken oder ERROR mit Fehlerbeschreibung. Bei SEND_MESSAGE validiert die Anwendung den Empfänger, speichert die Nachricht mit Zeitstempel und benachrichtigt den Empfänger falls online, andernfalls Zustellung bei nächster Anmeldung. Bei GET_MESSAGES liefert die Anwendung die angeforderten Nachrichten chronologisch sortiert zurück. Bei SET_STATUS aktualisiert die Anwendung den Benutzerstatus und informiert alle Kontakte über die Änderung. Bei CREATE_ROOM erzeugt die Anwendung einen neuen Raum und sendet Einladungen an alle Teilnehmer.
 
-Die drei Bereiche sind aufeinander abgestimmt, da die Grundkonzepte die Datenstrukturen definieren, die Protokollelemente die zulässigen Operationen festlegen und die Verhaltensweisen beschreiben, wie das System konsistent auf diese Operationen reagiert. (Richtig)
+Das Gesamtkonzept verbindet die Grundkonzepte mit den Protokollelementen, wobei jedes Element auf definierten Konzepten operiert und das Verhalten konsistente Reaktionen auf alle Anforderungen sicherstellt. (Richtig)
 
 ### Source Text
 

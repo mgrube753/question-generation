@@ -6,33 +6,29 @@
 
 Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche Aussage erklärt korrekt den Unterschied zwischen End-to-End und Node-to-Node Flusssteuerung im Network Layer 3?
+Frage: Welche beiden Varianten der Flusssteuerung lassen sich im Network Layer 3 klassifizieren?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) End-to-End Flusssteuerung regelt den Datenfluss zwischen dem ursprünglichen Sender und dem endgültigen Empfänger über das gesamte Netzwerk, während Node-to-Node Flusssteuerung den Datenfluss zwischen jeweils zwei direkt benachbarten Knoten steuert. (Richtig)
-
-b) Bei der End-to-End Flusssteuerung wird die Übertragungsgeschwindigkeit zwischen Quell- und Zielgerät über große Distanzen koordiniert, wohingegen Node-to-Node Flusssteuerung die Kommunikation schrittweise zwischen aufeinanderfolgenden Zwischenknoten im Übertragungsweg reguliert. (Richtig)
+a) End-to-End und Node-to-Node (Richtig)
+b) End-to-End-Flusssteuerung, bei der die Steuerung vom Sender zum weit entfernten Empfänger erfolgt, sowie Node-to-Node-Flusssteuerung, bei der die Steuerung von jedem Knoten zum nächsten Knoten stattfindet (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche Aussage erklärt korrekt den Unterschied zwischen End-to-End und Node-to-Node Flusssteuerung im Network Layer 3?
+Frage: Welche beiden Varianten der Flusssteuerung lassen sich im Network Layer 3 klassifizieren?
 
 Antwortmöglichkeiten:
 
-a) Bei der End-to-End Flusssteuerung wird die Übertragungsgeschwindigkeit zwischen Quell- und Zielgerät über große Distanzen koordiniert, wohingegen Node-to-Node Flusssteuerung die Kommunikation schrittweise zwischen aufeinanderfolgenden Zwischenknoten im Übertragungsweg reguliert. (Richtig)
+a) End-to-End und Node-to-Node (Richtig)
+b) End-to-End-Flusssteuerung, bei der die Steuerung vom Sender zum weit entfernten Empfänger erfolgt, sowie Node-to-Node-Flusssteuerung, bei der die Steuerung von jedem Knoten zum nächsten Knoten stattfindet (Richtig)
+c) Hop-to-Hop-Flusssteuerung, bei der Datenpakete zwischen Router-Schnittstellen koordiniert werden, sowie Network-to-Network-Flusssteuerung, bei der ganze Netzwerksegmente synchronisiert werden (Falsch)
+d) Point-to-Point-Flusssteuerung, bei der direkt verbundene Geräte die Übertragungsrate abstimmen, sowie Broadcast-Flusssteuerung, bei der alle Netzwerkteilnehmer gleichzeitig gesteuert werden (Falsch)
 
-b) End-to-End Flusssteuerung bezieht sich auf die Kontrolle des Datenflusses innerhalb eines einzelnen Netzwerksegments, während Node-to-Node Flusssteuerung die Kommunikation zwischen verschiedenen Netzwerken mit unterschiedlichen Layer-2-Technologien regelt. (Falsch)
-
-c) End-to-End Flusssteuerung regelt den Datenfluss zwischen dem ursprünglichen Sender und dem endgültigen Empfänger über das gesamte Netzwerk, während Node-to-Node Flusssteuerung den Datenfluss zwischen jeweils zwei direkt benachbarten Knoten steuert. (Richtig)
-
-d) End-to-End Flusssteuerung und Node-to-Node Flusssteuerung unterscheiden sich hauptsächlich in der verwendeten Adressierungsart, wobei End-to-End ausschließlich logische Netzwerkadressen nutzt und Node-to-Node nur physische Hardwareadressen verwendet. (Falsch)
-
-### Source Text:
+### Source Text
 
 Network Layer 3
 Beschreibung

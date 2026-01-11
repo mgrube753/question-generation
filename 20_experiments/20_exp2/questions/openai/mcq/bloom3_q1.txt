@@ -6,29 +6,29 @@
 
 Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Nutzen Sie das Schichtenmodell, um den folgenden Kommunikationsvorgang der korrekten Schicht zuzuordnen: Vor dem Senden werden Anwendungsdaten von ASCII nach Unicode konvertiert und anschließend komprimiert, bevor sie als Bitstrom übertragen werden.
+Frage: Ermitteln Sie, welche zwei OSI-Schichten zuständig sind, wenn bei einer Kommunikation (1) die Zeichencodierung von ASCII nach Unicode konvertiert und (2) der Übertragungsweg über vermittelnde Zwischenknoten zwischen unterschiedlichen Netzwerken ausgewählt werden muss.
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Schicht 6 – Presentation Layer (Darstellungsschicht): Konvertierung von ASCII nach Unicode und anschließende Kompression vor der Übertragung als Bitstrom (Richtig)
-b) OSI-Layer 6 (Darstellungsschicht/Presentation Layer), da Zeichenkodierung (ASCII→Unicode) und Datenkompression dort erfolgen (Richtig)
+a) (1) Präsentationsschicht (Layer 6) für die Konvertierung der Zeichencodierung (ASCII → Unicode) und (2) Netzwerkschicht (Layer 3) für die Auswahl des Übertragungswegs über vermittelnde Zwischenknoten (Routing) (Richtig)
+b) Für (1) die OSI-Schicht 6 (Presentation Layer: Zeichendarstellung umwandeln, z. B. ASCII/Unicode) und für (2) die OSI-Schicht 3 (Network Layer: Routing zwischen unterschiedlichen Netzwerken) (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Nutzen Sie das Schichtenmodell, um den folgenden Kommunikationsvorgang der korrekten Schicht zuzuordnen: Vor dem Senden werden Anwendungsdaten von ASCII nach Unicode konvertiert und anschließend komprimiert, bevor sie als Bitstrom übertragen werden.
+Frage: Frage: Ermitteln Sie, welche zwei OSI-Schichten zuständig sind, wenn bei einer Kommunikation (1) die Zeichencodierung von ASCII nach Unicode konvertiert und (2) der Übertragungsweg über vermittelnde Zwischenknoten zwischen unterschiedlichen Netzwerken ausgewählt werden muss.
 
 Antwortmöglichkeiten:
 
-a) Schicht 1 – Physical Layer (Bitübertragungsschicht), da die Daten als Bitstrom codiert und über das Medium transportiert werden (Falsch)
-b) Schicht 6 – Presentation Layer (Darstellungsschicht): Konvertierung von ASCII nach Unicode und anschließende Kompression vor der Übertragung als Bitstrom (Richtig)
-c) Schicht 7 – Application Layer (Anwendungsschicht), da die Umwandlung von Zeichenkodierungen und die Kompression anwendungsspezifisch vor dem Senden erfolgt (Falsch)
-d) OSI-Layer 6 (Darstellungsschicht/Presentation Layer), da Zeichenkodierung (ASCII→Unicode) und Datenkompression dort erfolgen (Richtig)
+a) (1) Präsentationsschicht (Layer 6) für die Konvertierung der Zeichencodierung (ASCII → Unicode) und (2) Netzwerkschicht (Layer 3) für die Auswahl des Übertragungswegs über vermittelnde Zwischenknoten (Routing) (Richtig)
+b) Für (1) die OSI-Schicht 6 (Presentation Layer: Zeichendarstellung umwandeln, z. B. ASCII/Unicode) und für (2) die OSI-Schicht 3 (Network Layer: Routing zwischen unterschiedlichen Netzwerken) (Richtig)
+c) (1) Anwendungsschicht (Layer 7) für die Konvertierung der Zeichencodierung (ASCII → Unicode) und (2) Sicherungsschicht (Layer 2) für die Auswahl des Übertragungswegs über Zwischenknoten anhand von MAC-Adressen (Falsch)
+d) (1) Sicherungsschicht (Layer 2) für die Konvertierung der Zeichencodierung (ASCII → Unicode) beim Zusammenfassen von Bits zu Bytes und (2) Transportschicht (Layer 4) für die Auswahl des Übertragungswegs zwischen unterschiedlichen Netzwerken (Falsch)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

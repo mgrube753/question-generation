@@ -6,33 +6,33 @@
 
 Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche Aussage erklärt korrekt, wie die Dienstqualität im Transport Layer auf die Bedürfnisse des jeweiligen Teilnehmers abgestimmt wird?
+Frage: Welche zwei Aussagen erklären korrekt, wie die Kernaufgaben des Transport Layers 4 auf die Teilnehmer eines Netzes ausgerichtet sind?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Die Dienstqualität wird durch die Erbringung eines Kommunikationsdienstes mit spezifischen Garantien für Parameter wie Bandbreite, Latenz, Jitter und Fehlerrate an die individuellen Anforderungen des jeweiligen Teilnehmers angepasst. (Richtig)
+a) Die Adressierung verwendet Teilnehmer-Adressen zur eindeutigen Identifikation, während die Dienstqualität mit Garantien für Bandbreite, Latenz und Fehlerrate auf den jeweiligen Teilnehmer zugeschnitten wird. (Richtig)
 
-b) Der Transport Layer sichert die Quality of Service, indem er einen maßgeschneiderten Kommunikationsdienst bereitstellt, dessen Garantien speziell auf die Bedürfnisse des jeweiligen Teilnehmers zugeschnitten werden. (Richtig)
+b) Die Flusssteuerung nutzt die spezifischen Charakteristiken der einzelnen Teilnehmer, um die Datenübertragung optimal an deren individuelle Eigenschaften und Anforderungen anzupassen. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche Aussage erklärt korrekt, wie die Dienstqualität im Transport Layer auf die Bedürfnisse des jeweiligen Teilnehmers abgestimmt wird?
+Frage: Welche zwei Aussagen erklären korrekt, wie die Kernaufgaben des Transport Layers 4 auf die Teilnehmer eines Netzes ausgerichtet sind?
 
 Antwortmöglichkeiten:
 
-a) Der Transport Layer sichert die Quality of Service, indem er einen maßgeschneiderten Kommunikationsdienst bereitstellt, dessen Garantien speziell auf die Bedürfnisse des jeweiligen Teilnehmers zugeschnitten werden. (Richtig)
+a) Die Adressierung verwendet Hardware-Adressen zur physischen Identifikation, während die Dienstqualität einheitliche Standardparameter für alle Teilnehmer im gesamten Netzwerk bereitstellt. (Falsch)
 
-b) Die Dienstqualität im Transport Layer wird ausschließlich durch die Flusssteuerung reguliert, die automatisch die optimale Bandbreite für jeden Teilnehmer berechnet. (Falsch)
+b) Die Adressierung verwendet Teilnehmer-Adressen zur eindeutigen Identifikation, während die Dienstqualität mit Garantien für Bandbreite, Latenz und Fehlerrate auf den jeweiligen Teilnehmer zugeschnitten wird. (Richtig)
 
-c) Die Dienstqualität wird dadurch gewährleistet, dass der Transport Layer eine einheitliche Übertragungsrate für alle Teilnehmer festlegt, unabhängig von deren individuellen Anforderungen. (Falsch)
+c) Die Flusssteuerung arbeitet unabhängig von den individuellen Teilnehmern und orientiert sich ausschließlich an der aktuellen Netzwerkkapazität, um eine gleichmäßige Datenverteilung im gesamten System sicherzustellen. (Falsch)
 
-d) Die Dienstqualität wird durch die Erbringung eines Kommunikationsdienstes mit spezifischen Garantien für Parameter wie Bandbreite, Latenz, Jitter und Fehlerrate an die individuellen Anforderungen des jeweiligen Teilnehmers angepasst. (Richtig)
+d) Die Flusssteuerung nutzt die spezifischen Charakteristiken der einzelnen Teilnehmer, um die Datenübertragung optimal an deren individuelle Eigenschaften und Anforderungen anzupassen. (Richtig)
 
-### Source Text:
+### Source Text
 
 Transport Layer 4
 Beschreibung

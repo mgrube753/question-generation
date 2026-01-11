@@ -6,29 +6,29 @@
 
 Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche Schicht des OSI-Modells ist für die Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer verantwortlich?
+Frage: Welche Schichten des OSI-Modells umfassen Kernaufgaben zur Codierung?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Data Link Layer (Richtig)
-b) Schicht 2 (Richtig)
+a) Physical Layer und Presentation Layer (Richtig)
+b) Schicht 1 und Schicht 6 (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche Schicht des OSI-Modells ist für die Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer verantwortlich?
+Frage: Welche Schichten des OSI-Modells umfassen Kernaufgaben zur Codierung?
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Richtig)
-b) Schicht 2 (Richtig)
-c) Schicht 4 (Falsch)
-d) Transport Layer (Falsch)
+a) Physical Layer und Data Link Layer (Falsch)
+b) Physical Layer und Presentation Layer (Richtig)
+c) Schicht 1 und Schicht 6 (Richtig)
+d) Schicht 6 und Schicht 7 (Falsch)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

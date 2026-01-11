@@ -2,25 +2,32 @@
 
 ### Bloom Level: Applying
 
-### Learning Objective: 
+### Learning Objective 
 
 Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Ermitteln Sie für eine Streaming-Medien-Anwendung anwendungsspezifische Beispiele für die drei Kernaufgaben der Application Layer 7: Grundkonzepte, Protokollelemente und Verhalten.
+Frage: Ermitteln Sie für eine neue Cloud-Speicher-Anwendung die beiden zentralen Fragestellungen, die bei der Definition der Protokollelemente auf Application Layer 7 zu beantworten sind.
 
-### Key Generation:
+### Key Generation
 
-a) Für eine Streaming-Medien-Anwendung wie Video-on-Demand sind die Grundkonzepte: Medienstream, Codec, Wiedergabepuffer und adaptive Bitrate. Protokollelemente sind Anforderungen wie eine HTTP GET-Anfrage für ein Videosegment (z.B. /movie_chunk1.ts) und die erwarteten Daten wie transportierte TS-Dateien oder Manifestdateien (z.B. M3U8). Das Verhalten umfasst das Reagieren auf diese Anfragen durch kontinuierliche Lieferung von Videosegmenten und die dynamische Anpassung der Stream-Qualität basierend auf der verfügbaren Bandbreite. (Richtig)
+Korrekte Antwort(en):
+a) 1. Welche Anforderungen (z.B. Operationen wie Speichern, Abrufen, Löschen) können an die Cloud-Speicher-Anwendung gestellt werden? 2. Welche Daten (z.B. Dateien, Metadaten, Authentifizierungsinformationen) werden bei diesen Anforderungen erwartet? (Richtig)
+b) 1. Welche konkreten Dienste und Funktionen muss das Anwendungsprotokoll für Cloud-Speicher bereitstellen? 2. Welche Datentypen, -formate und -inhalte sind für den Austausch bei der Nutzung dieser Dienste notwendig? (Richtig)
 
-b) Bei einem Live-Streaming-Dienst sind typische Grundkonzepte: Live-Encoder, CDN, Player und Latenz. Protokollelemente beinhalten Anforderungen wie RTSP SETUP oder PLAY und erwartete Daten wie RTP-Pakete mit Medieninhalten oder RTCP-Steuerpakete. Das Verhalten zeigt sich im Aufbau der Sitzung nach SETUP, Beginn der Medienübertragung nach PLAY und der Sendung von Receiver Reports zur QoS-Anpassung. (Richtig)
+### Distractor Generation + Union of all
 
-### Distractor Generation + Union of all:
+Frage: Ermitteln Sie für eine neue Cloud-Speicher-Anwendung die beiden zentralen Fragestellungen, die bei der Definition der Protokollelemente auf Application Layer 7 zu beantworten sind.
 
-None
+Antwortmöglichkeiten:
 
-### Source Text:
+a) 1. Welche Anforderungen (z.B. Operationen wie Speichern, Abrufen, Löschen) können an die Cloud-Speicher-Anwendung gestellt werden? 2. Welche Daten (z.B. Dateien, Metadaten, Authentifizierungsinformationen) werden bei diesen Anforderungen erwartet? (Richtig)
+b) 1. Welche Transportprotokolle (z.B. TCP oder UDP) und Portnummern sollen für die Verbindung verwendet werden? 2. Wie wird die Authentifizierung und Autorisierung der Benutzer technisch umgesetzt? (Falsch)
+c) 1. Welche konkreten Dienste und Funktionen muss das Anwendungsprotokoll für Cloud-Speicher bereitstellen? 2. Welche Datentypen, -formate und -inhalte sind für den Austausch bei der Nutzung dieser Dienste notwendig? (Richtig)
+d) 1. Welche grundlegenden Begriffe und Entitäten (z.B. Benutzer, Datei, Ordner, Berechtigung) definiert die Anwendungsdomäne? 2. Wie reagiert das Protokoll auf Fehler wie Zeitüberschreitungen oder ungültige Anfragen? (Falsch)
+
+### Source Text
 
 Application Layer 7
 Beschreibung

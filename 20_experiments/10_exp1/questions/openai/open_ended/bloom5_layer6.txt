@@ -8,32 +8,23 @@ Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertrag
 
 ### Question Generation
 
-Frage: Beurteilen Sie anhand etablierter Kriterien (Interoperabilität zwischen little- und big-endian-Systemen, korrekte Zeichendarstellung inkl. Sonderzeichen, Bandbreitenbedarf, Vertraulichkeit), ob die folgende Verarbeitungskette zur Überführung von Anwendungsdaten in einen übertragbaren Bitstrom geeignet ist: Integer-Werte ohne Endian-Konvertierung übernehmen, Text in EBCDIC kodieren, anschließend verschlüsseln und danach komprimieren.
+Frage: Beurteilen Sie für die Übertragung eines großen Textdatensatzes zwischen einem Sender (little-endian, Unicode) und einem Empfänger (big-endian, ASCII) welche Verarbeitungskette geeigneter ist: (A) Endian- und Zeichensatzkonvertierung → Kompression → Verschlüsselung oder (B) Verschlüsselung → Kompression → Endian- und Zeichensatzkonvertierung, und stützen Sie Ihr Urteil auf die Kriterien Interoperabilität, Fehleranfälligkeit, Übertragungsaufwand und Vertraulichkeit.
 
 ### Answer Generation + Union of all
 
-Frage: Beurteilen Sie anhand etablierter Kriterien (Interoperabilität zwischen little- und big-endian-Systemen, korrekte Zeichendarstellung inkl. Sonderzeichen, Bandbreitenbedarf, Vertraulichkeit), ob die folgende Verarbeitungskette zur Überführung von Anwendungsdaten in einen übertragbaren Bitstrom geeignet ist: Integer-Werte ohne Endian-Konvertierung übernehmen, Text in EBCDIC kodieren, anschließend verschlüsseln und danach komprimieren.
+Frage: Beurteilen Sie für die Übertragung eines großen Textdatensatzes zwischen einem Sender (little-endian, Unicode) und einem Empfänger (big-endian, ASCII) welche Verarbeitungskette geeigneter ist: (A) Endian- und Zeichensatzkonvertierung → Kompression → Verschlüsselung oder (B) Verschlüsselung → Kompression → Endian- und Zeichensatzkonvertierung, und stützen Sie Ihr Urteil auf die Kriterien Interoperabilität, Fehleranfälligkeit, Übertragungsaufwand und Vertraulichkeit.
 
-Antwort: Die Verarbeitungskette ist insgesamt nicht geeignet, weil sie zentrale, etablierte Kriterien der Präsentationsschicht (plattformunabhängige Darstellung, korrekte Zeichenrepräsentation, effiziente Übertragung, sinnvolle Reihenfolge von Kompression/Verschlüsselung) verletzt.
+Antwort: Geeigneter ist (A) Endian- und Zeichensatzkonvertierung → Kompression → Verschlüsselung.
 
-1) Interoperabilität little-/big-endian (Integer ohne Endian-Konvertierung)
-Bewertung: Nicht geeignet.
-Begründung: Werden Integer-Werte „roh“ ohne festgelegte Byte-Reihenfolge übernommen, hängt die Bedeutung des Bit-/Byte-Streams von der CPU-Endianness ab. Ein und derselbe Byte-Stream wird auf little-endian- und big-endian-Systemen zu unterschiedlichen Zahlenwerten interpretiert. Etablierter Standard ist eine definierte, architekturunabhängige Darstellung (z.B. „network byte order“/Big-Endian oder ein Serialisierungsformat wie XDR/ASN.1/Protocol Buffers). Ohne Konvertierung ist Interoperabilität nicht gewährleistet.
+Interoperabilität: (A) erzeugt vor der weiteren Verarbeitung eine definierte, empfängerkompatible Darstellung (Unicode little-endian → vereinbarte Byte-/Zeichendarstellung, hier ASCII/big-endian bzw. ein festgelegtes Netzwerkformat). Bei (B) ist eine Konvertierung nach der Verschlüsselung praktisch nicht sinnvoll/zuverlässig, weil Ciphertext beliebige Bytefolgen enthält und keine gültige Zeichen-/Endian-Semantik mehr besitzt; der Empfänger könnte ohne vorherige Entschlüsselung nicht korrekt konvertieren.
 
-2) Korrekte Zeichendarstellung inkl. Sonderzeichen (Text in EBCDIC)
-Bewertung: Eher ungeeignet bzw. nur in sehr homogenen Umgebungen akzeptabel.
-Begründung: EBCDIC ist historisch vor allem im IBM-Mainframe-Umfeld verbreitet; die meisten heutigen Systeme und Protokolle erwarten ASCII/Unicode. Zusätzlich existieren viele EBCDIC-Codepages; ohne exakte Codepage-Festlegung sind Sonderzeichen (Umlaute, €, typografische Zeichen) nicht eindeutig und damit nicht interoperabel. Für internationale Zeichensätze ist Unicode (typisch UTF‑8) der etablierte Standard. EBCDIC erschwert daher die korrekte, standardkonforme Zeichendarstellung zwischen heterogenen Systemen.
+Fehleranfälligkeit: (A) vermeidet Konvertierungsfehler auf Basis von Ciphertext und reduziert damit Prozessabbrüche/Fehlinterpretationen. (B) birgt hohe Wahrscheinlichkeit von Dekodier-/Konvertierungsfehlern bzw. undefiniertem Verhalten, weil Zeichensatz-/Endian-Operationen auf „zufälligen“ verschlüsselten Bytes operieren würden.
 
-3) Bandbreitenbedarf (erst verschlüsseln, dann komprimieren)
-Bewertung: Ungeeignet.
-Begründung: Verschlüsselte Daten haben (bei sicherer Verschlüsselung) eine hohe Entropie und verhalten sich wie Zufallsdaten; sie sind praktisch nicht sinnvoll komprimierbar. Die anschließende Kompression bringt daher kaum bis keinen Gewinn und verursacht zusätzlich Rechenaufwand/Overhead. Etablierte Praxis zur Reduktion der Bandbreite ist: zuerst komprimieren, dann verschlüsseln (Kompression auf strukturierter Klartext-Darstellung wirkt, auf Ciphertext nicht).
+Übertragungsaufwand: (A) komprimiert den strukturierten Klartext wirksam und reduziert Datenmenge. (B) kann verschlüsselten Datenstrom kaum komprimieren (nahezu zufällig), daher höherer Overhead und ineffiziente Übertragung.
 
-4) Vertraulichkeit (Verschlüsselung vor Kompression)
-Bewertung: Grundsätzlich geeignet hinsichtlich Vertraulichkeit, aber mit Einschränkungen im Gesamtdesign.
-Begründung: Das Verschlüsseln stellt Vertraulichkeit her, sofern ein aktuelles, korrekt eingesetztes Verfahren verwendet wird (idealerweise Authenticated Encryption wie AES-GCM/ChaCha20-Poly1305 inkl. IV/Nonce-Management). Die nachgelagerte Kompression schwächt die Vertraulichkeit typischerweise nicht, bringt aber keinen Nutzen. Umgekehrt kann „Kompression vor Verschlüsselung“ in bestimmten interaktiven Szenarien Informationslecks begünstigen (bekannte Seitenkanalangriffe über kompressionsbedingte Längenänderungen), was dann durch Protokolldesign zu mitigieren wäre; das ändert jedoch nichts daran, dass die hier gewählte Reihenfolge aus Bandbreitensicht klar ungünstig ist.
+Vertraulichkeit: (A) entspricht dem etablierten Prinzip „erst komprimieren, dann verschlüsseln“; die Vertraulichkeit wird durch die abschließende Verschlüsselung gewahrt. (B) bietet keine zusätzliche Vertraulichkeit, verschlechtert aber die anderen Kriterien deutlich.
 
-Gesamturteil:
-Die Kette ist nicht geeignet, weil (a) Integers ohne definierte Endianness nicht interoperabel sind, (b) EBCDIC keine robuste, allgemein interoperable Zeichenkodierung für Sonderzeichen in heterogenen Netzen darstellt und (c) „verschlüsseln dann komprimieren“ den Bandbreitenbedarf nicht reduziert. Geeigneter wäre: definierte Endian-Konvertierung/Serialisierung, Unicode (z.B. UTF‑8) für Text, bei Bandbreitenziel Kompression vor Verschlüsselung (unter Beachtung geeigneter Sicherheitsmaßnahmen), und anschließend sichere (authentifizierte) Verschlüsselung. (Richtig)
+Damit ist (A) insgesamt nach den geforderten Kriterien klar vorzuziehen. (Richtig)
 
 ### Source Text
 

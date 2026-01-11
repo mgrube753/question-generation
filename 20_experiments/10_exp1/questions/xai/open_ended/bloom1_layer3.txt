@@ -14,7 +14,7 @@ Frage: Nennen Sie die drei Kernaufgaben des Network Layer 3.
 
 Frage: Nennen Sie die drei Kernaufgaben des Network Layer 3.
 
-Antwort: Die drei Kernaufgaben des Network Layer 3 sind: Adressierung (Netzwerk-übergreifende Adressen), Routing (Auswahl der vermittelnden Zwischenknoten zur Kommunikation nicht direkt verbundenen Knoten) und Flußsteuerung (Strategien, wenn zu schnell gesendet wird; End-to-End: Vom Sender zum weit entfernten Empfänger; Node-to-Node: Von jedem Knoten zum Nächsten). (Richtig)
+Antwort: Die drei Kernaufgaben des Network Layer 3 sind Adressierung (netzwerkübergreifende Adressen), Routing (Auswahl der vermittelnden Zwischenknoten zur Kommunikation nicht direkt verbundener Knoten) und Flusssteuerung (Strategien bei zu schnellem Senden; End-to-End vom Sender zum Empfänger und Node-to-Node von Knoten zu Knoten). (Richtig)
 
 ### Source Text
 

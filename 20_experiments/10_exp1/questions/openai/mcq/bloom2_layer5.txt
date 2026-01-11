@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche Aussage fasst die drei Kernaufgaben der Sitzungsschicht (Layer 5) in einer Kommunikationsbeziehung korrekt zusammen (Sitzungsaufbau/-verwaltung/-zurückweisung/-beendigung, Synchronisation durch Zwischenpunkte und Bündelung zusammengehöriger Transaktionen)?
+Frage: Welche zwei Beschreibungen erklären die Kernaufgaben Synchronisation und Bündelung in der Session Layer 5 korrekt?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Die Sitzungsschicht baut Sitzungen auf, verwaltet, weist sie ggf. zurück und beendet sie; sie setzt Synchronisations-Zwischenpunkte; und sie bündelt zusammengehörige Transaktionen zu einer Gruppe. (Richtig)
-b) Layer 5 stellt das Sitzungskonzept bereit, indem er Sitzungen einrichtet und steuert (inkl. Zurückweisung und Beendigung), Synchronisation über Zwischenpunkte ermöglicht und zusammengehörige Transaktionen bündelt. (Richtig)
+a) Synchronisation bedeutet in Layer 5, dass während einer Sitzung Zwischenpunkte (Checkpoints) gesetzt werden, damit eine Übertragung bei Bedarf ab einem definierten Punkt fortgesetzt werden kann. (Richtig)
+b) Bündelung bedeutet in Layer 5, dass logisch zusammengehörige Transaktionen zu einer Gruppe zusammengefasst werden, um sie innerhalb der Sitzung gemeinsam zu behandeln bzw. zu übertragen. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche Aussage fasst die drei Kernaufgaben der Sitzungsschicht (Layer 5) in einer Kommunikationsbeziehung korrekt zusammen (Sitzungsaufbau/-verwaltung/-zurückweisung/-beendigung, Synchronisation durch Zwischenpunkte und Bündelung zusammengehöriger Transaktionen)?
+Frage: Frage: Welche zwei Beschreibungen erklären die Kernaufgaben Synchronisation und Bündelung in der Session Layer 5 korrekt?
 
 Antwortmöglichkeiten:
 
-a) Die Sitzungsschicht kümmert sich primär um den Sitzungsaufbau und die Sitzungsbeendigung; Synchronisations-Zwischenpunkte und die Bündelung von Transaktionen werden von der Transportschicht übernommen. (Falsch)
-b) Die Sitzungsschicht baut Sitzungen auf, verwaltet, weist sie ggf. zurück und beendet sie; sie setzt Synchronisations-Zwischenpunkte; und sie bündelt zusammengehörige Transaktionen zu einer Gruppe. (Richtig)
-c) Layer 5 übernimmt vor allem die Datenformat-Umwandlung, Kompression und Verschlüsselung und setzt optional Zwischenpunkte zur Synchronisation. (Falsch)
-d) Layer 5 stellt das Sitzungskonzept bereit, indem er Sitzungen einrichtet und steuert (inkl. Zurückweisung und Beendigung), Synchronisation über Zwischenpunkte ermöglicht und zusammengehörige Transaktionen bündelt. (Richtig)
+a) Synchronisation bedeutet in Layer 5, dass Sender und Empfänger ihren Übertragungstakt bzw. die Bit-/Zeitsignale aufeinander abstimmen, damit Daten fehlerfrei „im gleichen Rhythmus“ ankommen. (Falsch)
+b) Synchronisation bedeutet in Layer 5, dass während einer Sitzung Zwischenpunkte (Checkpoints) gesetzt werden, damit eine Übertragung bei Bedarf ab einem definierten Punkt fortgesetzt werden kann. (Richtig)
+c) Bündelung bedeutet in Layer 5, dass logisch zusammengehörige Transaktionen zu einer Gruppe zusammengefasst werden, um sie innerhalb der Sitzung gemeinsam zu behandeln bzw. zu übertragen. (Richtig)
+d) Bündelung bedeutet in Layer 5, dass mehrere einzelne Pakete zu einem größeren Frame zusammengefasst werden, um den Protokoll-Overhead auf dem Übertragungsweg zu reduzieren. (Falsch)
 
-### Source Text:
+### Source Text
 
 Session Layer 5
 

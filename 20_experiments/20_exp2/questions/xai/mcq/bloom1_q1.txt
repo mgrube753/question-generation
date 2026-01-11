@@ -6,29 +6,29 @@
 
 Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche ist die korrekte Reihenfolge der sieben Schichten des ISO-OSI-Modells von der untersten zur obersten Schicht?
+Frage: Welche der folgenden Schichten des OSI-Modells haben Adressierung als eine ihrer Kernaufgaben?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Physical Layer, Data Link Layer, Network Layer, Transport Layer, Session Layer, Presentation Layer, Application Layer (Richtig)
-b) 1. Physical Layer, 2. Data Link Layer, 3. Network Layer, 4. Transport Layer, 5. Session Layer, 6. Presentation Layer, 7. Application Layer (Richtig)
+a) Data Link Layer, Network Layer, Transport Layer (Richtig)
+b) Schicht 2, Schicht 3, Schicht 4 (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche ist die korrekte Reihenfolge der sieben Schichten des ISO-OSI-Modells von der untersten zur obersten Schicht?
+Frage: Welche der folgenden Schichten des OSI-Modells haben Adressierung als eine ihrer Kernaufgaben?
 
 Antwortmöglichkeiten:
 
-a) 1. Physical Layer, 2. Data Link Layer, 3. Network Layer, 4. Transport Layer, 5. Session Layer, 6. Presentation Layer, 7. Application Layer (Richtig)
-b) Application Layer, Presentation Layer, Session Layer, Transport Layer, Network Layer, Data Link Layer, Physical Layer (Falsch)
-c) Physical Layer, Data Link Layer, Network Layer, Transport Layer, Session Layer, Presentation Layer, Application Layer (Richtig)
-d) Physical Layer, Data Link Layer, Transport Layer, Network Layer, Session Layer, Presentation Layer, Application Layer (Falsch)
+a) Data Link Layer, Network Layer, Transport Layer (Richtig)
+b) Physical Layer, Data Link Layer, Network Layer (Falsch)
+c) Schicht 1, Schicht 2, Schicht 3 (Falsch)
+d) Schicht 2, Schicht 3, Schicht 4 (Richtig)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

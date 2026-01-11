@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche Beschreibung erklärt die Funktion der Bündelung auf der Sitzungsschicht korrekt?
+Frage: Welche zwei Aspekte lassen sich als Kernaufgaben des Session Layers klassifizieren?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Bündelung fasst mehrere zusammengehörige Transaktionen zu einer logischen Gruppe zusammen, um sie gemeinsam zu verarbeiten. (Richtig)
-b) Die Bündelung sorgt dafür, dass inhaltlich verbundene Transaktionen als zusammengehörige Einheit behandelt werden. (Richtig)
+a) Synchronisation durch das Setzen von Zwischenpunkten zur Wiederherstellung bei Unterbrechungen (Richtig)
+b) Bündelung zur Gruppierung zusammengehöriger Transaktionen (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche Beschreibung erklärt die Funktion der Bündelung auf der Sitzungsschicht korrekt?
+Frage: Welche zwei Aspekte lassen sich als Kernaufgaben des Session Layers klassifizieren?
 
 Antwortmöglichkeiten:
 
-a) Bündelung fasst mehrere zusammengehörige Transaktionen zu einer logischen Gruppe zusammen, um sie gemeinsam zu verarbeiten. (Richtig)
-b) Bündelung setzt Zwischenpunkte in der Kommunikation, damit nach einem Abbruch an der richtigen Stelle fortgesetzt werden kann. (Falsch)
-c) Die Bündelung kombiniert mehrere Datenpakete zu einem größeren Paket, um die Übertragungseffizienz zu erhöhen. (Falsch)
-d) Die Bündelung sorgt dafür, dass inhaltlich verbundene Transaktionen als zusammengehörige Einheit behandelt werden. (Richtig)
+a) Bündelung zur Gruppierung zusammengehöriger Transaktionen (Richtig)
+b) Flusskontrolle zur Regulierung der Übertragungsgeschwindigkeit zwischen Sender und Empfänger (Falsch)
+c) Synchronisation durch das Setzen von Zwischenpunkten zur Wiederherstellung bei Unterbrechungen (Richtig)
+d) Verschlüsselung zur sicheren Übertragung sensibler Daten zwischen Kommunikationspartnern (Falsch)
 
-### Source Text:
+### Source Text
 
 Session Layer 5
 

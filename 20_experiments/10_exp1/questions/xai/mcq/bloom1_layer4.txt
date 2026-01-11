@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche sind die drei Kernaufgaben der Transport Layer 4?
+Frage: Welche zwei der folgenden Parameter werden durch die Dienstqualität in der Transport Layer 4 gesichert?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Adressierung, Flußsteuerung und Dienstqualität. (Richtig)
-b) Adressierung (Teilnehmer-Adressen), Flußsteuerung (Nutzen der Teilnehmer-Charakteristik) und Dienstqualität (Sicherung der Quality of Service). (Richtig)
+a) Bandbreite und Latenz (Richtig)
+b) Jitter und Fehlerrate (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche sind die drei Kernaufgaben der Transport Layer 4?
+Frage: Welche zwei der folgenden Parameter werden durch die Dienstqualität in der Transport Layer 4 gesichert?
 
 Antwortmöglichkeiten:
 
-a) Adressierung (Teilnehmer-Adressen), Flußsteuerung (Nutzen der Teilnehmer-Charakteristik) und Dienstqualität (Sicherung der Quality of Service). (Richtig)
-b) Adressierung, Flußsteuerung und Dienstqualität. (Richtig)
-c) Adressierung, Routing und Dienstqualität. (Falsch)
-d) Segmentierung, Fehlerkorrektur und Multiplexing. (Falsch)
+a) Bandbreite und Latenz (Richtig)
+b) Buffergröße und Fenstergröße (Falsch)
+c) Jitter und Fehlerrate (Richtig)
+d) Portnummer und Socket (Falsch)
 
-### Source Text:
+### Source Text
 
 Transport Layer 4
 Beschreibung

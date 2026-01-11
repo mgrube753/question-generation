@@ -2,33 +2,32 @@
 
 ### Bloom Level: Applying
 
-### Learning Objective: 
+### Learning Objective 
 
 Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Ein Netzwerkgerät wandelt ASCII-Zeichen in Unicode um, um sie in einer internationalen Anwendung nutzbar zu machen. Welche OSI-Schicht ist für diese Konvertierung der Zeichendarstellung primär verantwortlich?
+Frage: Ermitteln Sie die zwei OSI-Schichten, die primär an der Weiterleitung von Paketen zwischen verschiedenen Netzwerken durch einen Router beteiligt sind.
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
+a) Network Layer (Schicht 3) und Data Link Layer (Schicht 2) (Richtig)
+b) Die Netzwerkschicht und die Sicherungsschicht (Richtig)
 
-a) Presentation Layer (Schicht 6) (Richtig)
-b) Die Präsentationsschicht (Richtig)
+### Distractor Generation + Union of all
 
-### Distractor Generation + Union of all:
-
-Frage: Ein Netzwerkgerät wandelt ASCII-Zeichen in Unicode um, um sie in einer internationalen Anwendung nutzbar zu machen. Welche OSI-Schicht ist für diese Konvertierung der Zeichendarstellung primär verantwortlich?
+Frage: Ermitteln Sie die zwei OSI-Schichten, die primär an der Weiterleitung von Paketen zwischen verschiedenen Netzwerken durch einen Router beteiligt sind.
 
 Antwortmöglichkeiten:
 
-a) Application Layer (Schicht 7) (Falsch)
-b) Die Präsentationsschicht (Richtig)
-c) Presentation Layer (Schicht 6) (Richtig)
-d) Transport Layer (Schicht 
+a) Network Layer (Schicht 3) und Data Link Layer (Schicht 2) (Richtig)
+b) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Falsch)
+c) Die Netzwerkschicht und die Sicherungsschicht (Richtig)
+d) Data Link Layer (Schicht 2) und Physical Layer (Schicht 1) (Falsch)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

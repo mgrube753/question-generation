@@ -1,9 +1,8 @@
 # Todo
 
-- [ ] might fix prompts to avoid "kind-of" same keys in mcq
 - [ ] generate acceptable questions
 - [ ] talk to experts to understand the setup better
-- [ ] finish eval notebook 1 quantitative
+- [ ] refine eval notebook 1 quantitative
 - [ ] finish eval notebook 1 qualitative
 - [ ] finish eval notebook 2 qualitative
 

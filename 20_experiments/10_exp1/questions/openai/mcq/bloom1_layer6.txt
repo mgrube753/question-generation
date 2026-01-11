@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche vier Kernaufgaben der Presentation Layer (Schicht 6) müssen Sie aufzählen, um die Transformation von Anwendungsdaten in übertragbare Bitströme zu beschreiben?
+Frage: Welche zwei Kernaufgaben der Presentation Layer betreffen das Komprimieren/Dekomprimieren sowie das Verschlüsseln/Entschlüsseln von Anwendungsdaten (wählen Sie zwei aus)?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Endian-Ness-Konvertierung, Zeichensatz-/Zeichendarstellungs-Konvertierung, Kompression (Komprimieren/Dekomprimieren), Verschlüsselung (Verschlüsseln/Entschlüsseln) (Richtig)
-b) Konvertieren der Datendarstellung (Endian-Ness), Konvertieren der Zeichendarstellung, Komprimieren/Dekomprimieren, Verschlüsseln/Entschlüsseln (Richtig)
+a) Kompression: Komprimieren und Dekomprimieren von Anwendungsdaten (Richtig)
+b) Verschlüsselung: Verschlüsseln und Entschlüsseln von Anwendungsdaten (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche vier Kernaufgaben der Presentation Layer (Schicht 6) müssen Sie aufzählen, um die Transformation von Anwendungsdaten in übertragbare Bitströme zu beschreiben?
+Frage: Frage: Welche zwei Kernaufgaben der Presentation Layer betreffen das Komprimieren/Dekomprimieren sowie das Verschlüsseln/Entschlüsseln von Anwendungsdaten (wählen Sie zwei aus)?
 
 Antwortmöglichkeiten:
 
-a) Endian-Ness-Konvertierung, Zeichensatz-/Zeichendarstellungs-Konvertierung, Kompression (Komprimieren/Dekomprimieren), Verschlüsselung (Verschlüsseln/Entschlüsseln) (Richtig)
-b) Konvertieren der Datendarstellung (Endian-Ness), Konvertieren der Zeichendarstellung, Komprimieren/Dekomprimieren, Verschlüsseln/Entschlüsseln (Richtig)
-c) Konvertieren der Datendarstellung (Endian-Ness), Segmentierung/Reassemblierung, Komprimieren/Dekomprimieren, Verschlüsseln/Entschlüsseln (Falsch)
-d) Konvertierung der Zeichendarstellung, Komprimieren/Dekomprimieren, Fehlererkennung/-korrektur, Flusskontrolle (Falsch)
+a) Endian-Ness: Konvertieren der Datendarstellung (Falsch)
+b) Kompression: Komprimieren und Dekomprimieren von Anwendungsdaten (Richtig)
+c) Verschlüsselung: Verschlüsseln und Entschlüsseln von Anwendungsdaten (Richtig)
+d) Zeichen: Konvertierung der Zeichendarstellung (Falsch)
 
-### Source Text:
+### Source Text
 
 Presentation Layer 6
 Beschreibung

@@ -19,7 +19,7 @@ Das Lernziel, das mit dieser Frage adressiert werden soll, lautet: {learning_obj
 1. Analysiere den bereitgestellten Kontext sorgfältig.
 2. Untersuche die Frage bezüglich des Originalkontexts und das erforderliche Bloom-Level.
 3. Fokussiere dich auf das angegebene Lernziel.
-4. Formuliere eine vollständige Musterlösung, die alle relevanten Aspekte der Frage abdeckt.
+4. Formuliere eine präzise, kompakte Musterlösung, die alle relevanten Aspekte der Frage abdeckt, ohne unnötige Ausschweifungen.
 5. Stelle sicher, dass die Antwort präzise, vollständig und fachlich korrekt ist.
 6. Stelle sicher, dass die Antwort dem kognitiven Niveau der Frage entspricht.
 

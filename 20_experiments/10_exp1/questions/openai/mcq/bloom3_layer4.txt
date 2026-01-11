@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
 
-### Stem Generation:
+### Stem Generation
 
-Frage: In einem Netz sollen zwei Teilnehmer so verbunden werden, dass (a) die Endpunkte eindeutig bestimmt sind, (b) der Datenfluss an die begrenzte Empfänger-Charakteristik angepasst wird und (c) garantierte Bandbreite, Latenz, Jitter und Fehlerrate eingehalten werden: Welche drei Kernaufgaben der Transportschicht wenden Sie dafür jeweils an?
+Frage: Welche zwei Kernaufgaben der Transportschicht nutzen Sie, wenn Sie eine Übertragung zwischen zwei konkreten Teilnehmern einrichten müssen und die Datenrate so anpassen wollen, dass ein langsamer Empfänger nicht überlastet wird?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) (a) Adressierung der Teilnehmer/Endpunkte, (b) Flusssteuerung zur Anpassung des Sendetempos an die Empfänger-Charakteristik, (c) Dienstqualität (QoS) zur Einhaltung garantierter Bandbreite, Latenz, Jitter und Fehlerrate (Richtig)
-b) (a) Endpunkt-Adressierung zur eindeutigen Bestimmung der Kommunikationspartner, (b) Flusssteuerung zur Begrenzung des Datenflusses gemäß Empfängerfähigkeit, (c) QoS/Dienstqualitäts-Sicherung zur Bereitstellung garantierter Übertragungsparameter (Bandbreite, Latenz, Jitter, Fehlerrate) (Richtig)
+a) Adressierung der konkreten Teilnehmer (Teilnehmer-Adressen) und Flusssteuerung zur Anpassung der Datenrate an den Empfänger (Richtig)
+b) Einrichten der Ende-zu-Ende-Verbindung über Teilnehmeradressierung (z.B. Ports) und Nutzen der Flusssteuerung (z.B. Fenster-/Rate-Anpassung), damit ein langsamer Empfänger nicht überlastet wird (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: In einem Netz sollen zwei Teilnehmer so verbunden werden, dass (a) die Endpunkte eindeutig bestimmt sind, (b) der Datenfluss an die begrenzte Empfänger-Charakteristik angepasst wird und (c) garantierte Bandbreite, Latenz, Jitter und Fehlerrate eingehalten werden: Welche drei Kernaufgaben der Transportschicht wenden Sie dafür jeweils an?
+Frage: Frage: Welche zwei Kernaufgaben der Transportschicht nutzen Sie, wenn Sie eine Übertragung zwischen zwei konkreten Teilnehmern einrichten müssen und die Datenrate so anpassen wollen, dass ein langsamer Empfänger nicht überlastet wird?
 
 Antwortmöglichkeiten:
 
-a) (a) Adressierung der Teilnehmer/Endpunkte, (b) Flusssteuerung zur Anpassung des Sendetempos an die Empfänger-Charakteristik, (c) Dienstqualität (QoS) zur Einhaltung garantierter Bandbreite, Latenz, Jitter und Fehlerrate (Richtig)
-b) (a) Endpunkt-Adressierung zur eindeutigen Bestimmung der Kommunikationspartner, (b) Flusssteuerung zur Begrenzung des Datenflusses gemäß Empfängerfähigkeit, (c) QoS/Dienstqualitäts-Sicherung zur Bereitstellung garantierter Übertragungsparameter (Bandbreite, Latenz, Jitter, Fehlerrate) (Richtig)
-c) (a) IP-Adressierung und Routing zur eindeutigen Pfadwahl, (b) Staukontrolle (Congestion Control) durch Anpassung an Netzüberlast, (c) Paketfragmentierung zur Einhaltung der MTU und damit stabiler Latenz/Jitter (Falsch)
-d) (a) MAC-Adressierung zur eindeutigen Gerätekennung im LAN, (b) Medienzugriffssteuerung (z. B. CSMA/CD) zur Begrenzung der Senderechte, (c) CRC-Fehlererkennung auf Rahmenebene zur Einhaltung der Fehlerrate (Falsch)
+a) Adressierung der konkreten Teilnehmer (Teilnehmer-Adressen) und Flusssteuerung zur Anpassung der Datenrate an den Empfänger (Richtig)
+b) Einrichten der Ende-zu-Ende-Verbindung über Teilnehmeradressierung (z.B. Ports) und Nutzen der Flusssteuerung (z.B. Fenster-/Rate-Anpassung), damit ein langsamer Empfänger nicht überlastet wird (Richtig)
+c) Vergabe von IP-Adressen zur Ende-zu-Ende-Adressierung und Sicherung der Dienstqualität (QoS) durch Bandbreitenreservierung, damit der Empfänger nicht überlastet wird (Falsch)
+d) Nutzung von MAC-Adressen zur Teilnehmeridentifikation und Routing über die Vermittlungsschicht, um die Datenrate an den Empfänger anzupassen (Falsch)
 
-### Source Text:
+### Source Text
 
 Transport Layer 4
 Beschreibung

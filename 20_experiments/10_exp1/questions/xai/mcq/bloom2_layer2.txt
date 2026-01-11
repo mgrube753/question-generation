@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche der folgenden Aussagen erklärt am besten die Strategien der Flusskontrolle im Data Link Layer?
+Frage: Erklären Sie die Kernaufgaben Fehlerkontrolle und Flußkontrolle des Data Link Layers, indem Sie die passenden Beschreibungen auswählen.
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Flusskontrolle umfasst Strategien wie Zwischenpuffern, Herunterregeln der Sende rate und Wartenlassen, um zu verhindern, dass der Sender zu schnell für den Empfänger sendet. (Richtig)
-b) Die Strategien der Flusskontrolle im Data Link Layer adressieren Situationen, in denen der Sender den Empfänger überfordert, durch Maßnahmen wie Puffern, Reduzierung der Geschwindigkeit oder Pausieren. (Richtig)
+a) Fehlerkontrolle umfasst das Erkennen, Beheben oder Signalisieren von Übertragungsfehlern, während Flußkontrolle Strategien wie Zwischenpuffern, Herunterregeln oder Wartenlassen bereitstellt, falls der Sender zu schnell für den Empfänger sendet. (Richtig)
+b) Die Kernaufgabe Fehlerkontrolle beinhaltet das Erkennen und Beheben oder Signalisieren von Fehlern in der Übertragung, wohingegen Flußkontrolle Maßnahmen wie Puffern, Reduzierung der Sendegeschwindigkeit oder Pausieren trifft, wenn der Empfänger überfordert ist. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche der folgenden Aussagen erklärt am besten die Strategien der Flusskontrolle im Data Link Layer?
+Frage: Erklären Sie die Kernaufgaben Fehlerkontrolle und Flußkontrolle des Data Link Layers, indem Sie die passenden Beschreibungen auswählen.
 
 Antwortmöglichkeiten:
 
-a) Die Strategien der Flusskontrolle im Data Link Layer adressieren Situationen, in denen der Sender den Empfänger überfordert, durch Maßnahmen wie Puffern, Reduzierung der Geschwindigkeit oder Pausieren. (Richtig)
-b) Flusskontrolle beinhaltet das Erkennen und Korrigieren von Übertragungsfehlern, um eine fehlerfreie Datenübertragung zu gewährleisten. (Falsch)
-c) Flusskontrolle umfasst Strategien wie Zwischenpuffern, Herunterregeln der Sende rate und Wartenlassen, um zu verhindern, dass der Sender zu schnell für den Empfänger sendet. (Richtig)
-d) Flusskontrolle umfasst die Segmentierung von Daten in kleinere Einheiten und die Adressierung von Sendern und Empfängern, um eine effiziente Übertragung zu ermöglichen. (Falsch)
+a) Fehlerkontrolle umfasst das Erkennen, Beheben oder Signalisieren von Übertragungsfehlern, während Flußkontrolle Strategien wie Zwischenpuffern, Herunterregeln oder Wartenlassen bereitstellt, falls der Sender zu schnell für den Empfänger sendet. (Richtig)
+b) Fehlerkontrolle umfasst die Auswahl bestimmter Sender oder Empfänger durch Adressen, während Flußkontrolle das Zusammenfassen von Bits zu größeren Einheiten wie Bytes beinhaltet. (Falsch)
+c) Die Kernaufgabe Fehlerkontrolle beinhaltet das Erkennen und Beheben oder Signalisieren von Fehlern in der Übertragung, wohingegen Flußkontrolle Maßnahmen wie Puffern, Reduzierung der Sendegeschwindigkeit oder Pausieren trifft, wenn der Empfänger überfordert ist. (Richtig)
+d) Fehlerkontrolle beinhaltet Strategien wie Puffern oder Pausieren, wenn der Sender zu schnell ist, wohingegen Flußkontrolle das Erkennen, Beheben oder Signalisieren von Übertragungsfehlern übernimmt. (Falsch)
 
-### Source Text:
+### Source Text
 
 Data Link Layer 2
 Beschreibung

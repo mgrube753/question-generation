@@ -6,29 +6,29 @@
 
 Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche Aussage stellt die Kernaufgaben des Network Layer (Adressierung, Routing, Flusssteuerung) und des Transport Layer (Teilnehmer-Adressierung, Flusssteuerung, Dienstqualität) korrekt gegenüber?
+Frage: Welche zwei Schichten des ISO-OSI-Modells lassen sich in die Klasse „enthält als Kernaufgabe Adressierung“ klassifizieren?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Network Layer: sorgt für netzwerkübergreifende Adressierung, wählt über Routing geeignete Zwischenknoten zwischen unterschiedlichen Netzen aus und kann Flusssteuerung (z.B. end-to-end oder node-to-node) durchführen; Transport Layer: adressiert konkrete Teilnehmer eines Netzes, regelt die Flusssteuerung anhand der Teilnehmercharakteristik und stellt ggf. Dienstqualität (QoS) mit Garantien wie Bandbreite, Latenz oder Fehlerrate bereit. (Richtig)
-b) Im Network Layer geht es um die Zustellung zwischen Geräten über mehrere (auch verschiedene) Layer‑2‑Netze hinweg: dafür nutzt er globale Adressen, bestimmt den Pfad durch Routing und behandelt Flusssteuerung über mehrere Hops; der Transport Layer arbeitet darüber für die Kommunikation zwischen Endteilnehmern: er verwendet Teilnehmeradressen, passt die Flusssteuerung an Sender/Empfänger an und kann Quality‑of‑Service‑Anforderungen absichern. (Richtig)
+a) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
+b) Schicht 3 (Vermittlung/Network) und Schicht 4 (Transport) (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche Aussage stellt die Kernaufgaben des Network Layer (Adressierung, Routing, Flusssteuerung) und des Transport Layer (Teilnehmer-Adressierung, Flusssteuerung, Dienstqualität) korrekt gegenüber?
+Frage: Frage: Welche zwei Schichten des ISO-OSI-Modells lassen sich in die Klasse „enthält als Kernaufgabe Adressierung“ klassifizieren?
 
 Antwortmöglichkeiten:
 
-a) Im Network Layer geht es um die Zustellung zwischen Geräten über mehrere (auch verschiedene) Layer‑2‑Netze hinweg: dafür nutzt er globale Adressen, bestimmt den Pfad durch Routing und behandelt Flusssteuerung über mehrere Hops; der Transport Layer arbeitet darüber für die Kommunikation zwischen Endteilnehmern: er verwendet Teilnehmeradressen, passt die Flusssteuerung an Sender/Empfänger an und kann Quality‑of‑Service‑Anforderungen absichern. (Richtig)
-b) Network Layer: stellt vor allem Dienstqualität (QoS) wie garantierte Bandbreite und Latenz bereit und adressiert konkrete Teilnehmer (Ports/Prozesse); Transport Layer: übernimmt die netzwerkübergreifende Adressierung, wählt Zwischenknoten per Routing aus und regelt die Flusssteuerung über mehrere Hops. (Falsch)
-c) Network Layer: sorgt für netzwerkübergreifende Adressierung, wählt über Routing geeignete Zwischenknoten zwischen unterschiedlichen Netzen aus und kann Flusssteuerung (z.B. end-to-end oder node-to-node) durchführen; Transport Layer: adressiert konkrete Teilnehmer eines Netzes, regelt die Flusssteuerung anhand der Teilnehmercharakteristik und stellt ggf. Dienstqualität (QoS) mit Garantien wie Bandbreite, Latenz oder Fehlerrate bereit. (Richtig)
-d) Network Layer: arbeitet nur innerhalb eines einzelnen Layer‑2‑Netzes und nutzt dafür hauptsächlich MAC‑Adressen; Routing findet im Transport Layer statt, der außerdem die Verbindung über verschiedene Netze hinweg aufbaut und die Hop‑zu‑Hop‑Flusssteuerung übernimmt. (Falsch)
+a) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
+b) Data Link Layer (Schicht 2) und Network Layer (Schicht 3) (Falsch)
+c) Schicht 3 (Vermittlung/Network) und Schicht 4 (Transport) (Richtig)
+d) Transport Layer (Schicht 4) und Session Layer (Schicht 5) (Falsch)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

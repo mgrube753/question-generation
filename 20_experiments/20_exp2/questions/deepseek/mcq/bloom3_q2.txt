@@ -2,32 +2,32 @@
 
 ### Bloom Level: Applying
 
-### Learning Objective: 
+### Learning Objective 
 
 Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Ein Kommunikationsprotokoll stellt sicher, dass bei einer Unterbrechung einer langen Dateiübertragung an einem zuvor definierten Zwischenpunkt wieder angesetzt werden kann. Welche OSI-Schicht ist primär für die Bereitstellung dieser Funktionalität verantwortlich?
+Frage: Bei der Weiterleitung von Datenpaketen über Router werden zwei Ebenen der Adressierung genutzt: eine für die Identifikation des Zielnetzwerks und eine für die Identifikation des nächsten Knotens. In welchen beiden Schichten des OSI-Modells sind diese Adressierungsebenen primär verankert?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
-a) Session Layer (Richtig)
-b) Schicht 5 (Session Layer) (Richtig)
+a) Die Identifikation des Zielnetzwerks ist primär in der Network Layer (Schicht 3) verankert, während die Identifikation des nächsten Knotens in der Data Link Layer (Schicht 2) erfolgt. (Richtig)
+b) Schicht 3 (Network Layer) für die Zielnetzwerk-Adressierung und Schicht 2 (Data Link Layer) für die Adressierung des nächsten Knotens. (Richtig)
 
-### Distractor Generation + Union of all:
+### Distractor Generation + Union of all
 
-Frage: Ein Kommunikationsprotokoll stellt sicher, dass bei einer Unterbrechung einer langen Dateiübertragung an einem zuvor definierten Zwischenpunkt wieder angesetzt werden kann. Welche OSI-Schicht ist primär für die Bereitstellung dieser Funktionalität verantwortlich?
+Frage: Bei der Weiterleitung von Datenpaketen über Router werden zwei Ebenen der Adressierung genutzt: eine für die Identifikation des Zielnetzwerks und eine für die Identifikation des nächsten Knotens. In welchen beiden Schichten des OSI-Modells sind diese Adressierungsebenen primär verankert?
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2) (Falsch)
-b) Schicht 5 (Session Layer) (Richtig)
-c) Session Layer (Richtig)
-d) Transport Layer (Schicht 4) (Falsch)
+a) Beide Adressierungsebenen sind primär in der Network Layer (Schicht 3) verankert, da Router auf dieser Schicht operieren und sowohl die Zielnetzwerk- als auch die nächste Hop-Adressierung vornehmen. (Falsch)
+b) Die Identifikation des Zielnetzwerks ist primär in der Network Layer (Schicht 3) verankert, während die Identifikation des nächsten Knotens in der Data Link Layer (Schicht 2) erfolgt. (Richtig)
+c) Die Identifikation des Zielnetzwerks erfolgt in der Transport Layer (Schicht 4), während die Identifikation des nächsten Knotens in der Network Layer (Schicht 3) stattfindet. (Falsch)
+d) Schicht 3 (Network Layer) für die Zielnetzwerk-Adressierung und Schicht 2 (Data Link Layer) für die Adressierung des nächsten Knotens. (Richtig)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

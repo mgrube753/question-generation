@@ -1,32 +1,22 @@
-## Multiple-Choice Question
+## Open-Ended Question
 
 ### Bloom Level: Remembering
 
-### Learning Objective: 
+### Learning Objective
 
 Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
 
-### Stem Generation:
+### Question Generation
 
-Frage: Nennen Sie die drei Kernaufgaben der Physical Layer.
+Frage: Nennen Sie die drei Kernaufgaben der Physical Layer 1.
 
-### Key Generation:
+### Answer Generation + Union of all
 
-a) Codierung, Transport, Decodierung. (Richtig)
-b) Die drei Kernaufgaben sind Codierung, Transport und Decodierung. (Richtig)
+Frage: Nennen Sie die drei Kernaufgaben der Physical Layer 1.
 
-### Distractor Generation + Union of all:
+Antwort: Die drei Kernaufgaben der Physical Layer 1 sind Codierung, Transport und Decodierung. (Richtig)
 
-Frage: Frage: Nennen Sie die drei Kernaufgaben der Physical Layer.
-
-Antwortmöglichkeiten:
-
-a) Bitübertragung, Synchronisation, Fehlererkennung. (Falsch)
-b) Codierung, Transport, Decodierung. (Richtig)
-c) Die drei Kernaufgaben sind Codierung, Transport und Decodierung. (Richtig)
-d) Modulation, Übertragung, Demodulation. (Falsch)
-
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

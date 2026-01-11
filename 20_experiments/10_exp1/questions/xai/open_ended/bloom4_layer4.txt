@@ -8,19 +8,13 @@ Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus au
 
 ### Question Generation
 
-Frage: Analysieren Sie die Beziehungen zwischen Adressierung, Flusssteuerung und Dienstqualität bei der teilnehmerorientierten Übertragung im Transport Layer.
+Frage: Analysieren Sie die Beziehungen zwischen Adressierung, Flußsteuerung und Dienstqualität in der teilnehmerorientierten Übertragung des Transport Layers.
 
 ### Answer Generation + Union of all
 
-Frage: Analysieren Sie die Beziehungen zwischen Adressierung, Flusssteuerung und Dienstqualität bei der teilnehmerorientierten Übertragung im Transport Layer.
+Frage: Analysieren Sie die Beziehungen zwischen Adressierung, Flußsteuerung und Dienstqualität in der teilnehmerorientierten Übertragung des Transport Layers.
 
-Antwort: Im Transport Layer des ISO-OSI-Modells ermöglicht die teilnehmerorientierte Übertragung eine End-to-End-Kommunikation zwischen beliebigen Netzteilnehmern, wobei Adressierung, Flusssteuerung und Dienstqualität als Kernaufgaben interagieren. Um diese Beziehungen zu analysieren, zerlegen wir die Komponenten in ihre Bestandteile und bestimmen ihre Verbindungen zueinander sowie ihren Beitrag zur Gesamtstruktur der Übertragung.
-
-Zunächst die Bestandteile: Adressierung beinhaltet die Zuweisung von Teilnehmer-Adressen (z. B. Ports in Protokollen wie TCP oder UDP), um spezifische Endgeräte oder Anwendungen zu identifizieren. Flusssteuerung nutzt die Charakteristiken der Teilnehmer, wie Verarbeitungsgeschwindigkeit oder Puffergröße, um den Datenfluss zu regulieren und Überlastungen zu vermeiden (z. B. durch Sliding-Window-Mechanismen). Dienstqualität (QoS) sichert Garantien für Parameter wie Bandbreite, Latenz, Jitter und Fehlerrate, die individuell auf die Bedürfnisse der Teilnehmer zugeschnitten sind.
-
-Die Beziehungen zwischen diesen Komponenten sind interdependent und dienen dem Gesamtzweck einer effizienten, zuverlässigen Übertragung: Adressierung bildet die Grundlage, da sie die Identifikation der Teilnehmer ermöglicht, was wiederum Flusssteuerung und QoS zielgerichtet anwendbar macht – ohne Adressierung könnte keine differenzierte Steuerung pro Teilnehmer erfolgen. Flusssteuerung interagiert eng mit QoS, indem sie den Datenfluss an Teilnehmer-Charakteristiken anpasst und dadurch QoS-Parameter wie Latenz und Jitter stabilisiert; beispielsweise verhindert sie Paketverluste, die die Fehlerrate erhöhen würden. QoS integriert Adressierung und Flusssteuerung, um Garantien zu erbringen, die auf den jeweiligen Teilnehmer abgestimmt sind – etwa durch priorisierte Bandbreite für adressierte Verbindungen unter Berücksichtigung der Flusssteuerung.
-
-In der Gesamtstruktur tragen diese Beziehungen zum Zweck bei, eine flexible, teilnehmerzentrierte Übertragung zu gewährleisten: Adressierung ermöglicht Personalisierung, Flusssteuerung optimiert die Ressourcennutzung, und QoS stellt die Erfüllung spezifischer Anforderungen sicher, was insgesamt eine robuste End-to-End-Kommunikation schafft, die unabhängig von unteren Schichten funktioniert. (Richtig)
+Antwort: In der teilnehmerorientierten Übertragung des Transport Layers (Layer 4) ermöglicht die Adressierung die Identifikation spezifischer Teilnehmer durch Teilnehmer-Adressen, was die Grundlage für personalisierte Dienste bildet. Die Flußsteuerung baut darauf auf, indem sie Teilnehmer-Charakteristiken (z. B. Verarbeitungskapazitäten) nutzt, um Datenflüsse zu regulieren und Überlastungen zu vermeiden, was wiederum die Dienstqualität (QoS) unterstützt. QoS sichert Garantien wie Bandbreite, Latenz, Jitter und Fehlerrate, die individuell auf Teilnehmer zugeschnitten sind, wobei Adressierung die Zielgerichtetheit und Flußsteuerung die Stabilität gewährleistet. Somit sind diese Elemente interdependent: Adressierung als Enabler, Flußsteuerung als Optimierer und QoS als übergeordnetes Ziel, das eine zuverlässige End-to-End-Kommunikation zwischen beliebigen Netzteilnehmern ermöglicht. (Richtig)
 
 ### Source Text
 

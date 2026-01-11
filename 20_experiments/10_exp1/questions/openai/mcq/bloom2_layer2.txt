@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Ein Sender überträgt Daten schneller, als der Empfänger sie verarbeiten kann; welcher der fünf Kernaufgaben der Data Link Layer klassifiziert diese Situation am treffendsten?
+Frage: Welche zwei Kernaufgaben des Data Link Layer 2 klassifizieren Sie als passend zu den Beschreibungen (1) Auswahl eines bestimmten Senders oder Empfängers über eine Adresse und (2) Aktivieren des Physical Layer für den Zugriff auf das Medium?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Flußkontrolle (Richtig)
-b) Flow Control / Flusskontrolle der Data Link Layer (Richtig)
+a) (1) Identifikation (Adressierung von Sender/Empfänger) und (2) Medienzugriff (Aktivieren des Physical Layer für den Mediumzugriff) (Richtig)
+b) (1) Auswahl über Adresse = Identifikation und (2) Zugriff aufs Übertragungsmedium = Medienzugriff (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Ein Sender überträgt Daten schneller, als der Empfänger sie verarbeiten kann; welcher der fünf Kernaufgaben der Data Link Layer klassifiziert diese Situation am treffendsten?
+Frage: Frage: Welche zwei Kernaufgaben des Data Link Layer 2 klassifizieren Sie als passend zu den Beschreibungen (1) Auswahl eines bestimmten Senders oder Empfängers über eine Adresse und (2) Aktivieren des Physical Layer für den Zugriff auf das Medium?
 
 Antwortmöglichkeiten:
 
-a) Fehlerkontrolle (Falsch)
-b) Flußkontrolle (Richtig)
-c) Medienzugriff (Falsch)
-d) Flow Control / Flusskontrolle der Data Link Layer (Richtig)
+a) (1) Identifikation (Adressierung von Sender/Empfänger) und (2) Medienzugriff (Aktivieren des Physical Layer für den Mediumzugriff) (Richtig)
+b) (1) Auswahl über Adresse = Identifikation und (2) Zugriff aufs Übertragungsmedium = Medienzugriff (Richtig)
+c) (1) Segmentierung (Zusammenfassen von Bits zu Einheiten) und (2) Medienzugriff (Aktivieren des Physical Layer für den Mediumzugriff) (Falsch)
+d) (1) Identifikation (Adressierung von Sender/Empfänger) und (2) Flusskontrolle (Regeln der Senderate bei zu schnellem Senden) (Falsch)
 
-### Source Text:
+### Source Text
 
 Data Link Layer 2
 Beschreibung

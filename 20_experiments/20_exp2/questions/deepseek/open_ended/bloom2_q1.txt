@@ -2,37 +2,25 @@
 
 ### Bloom Level: Understanding
 
-### Learning Objective:
+### Learning Objective
 
 Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
 
-### Question Generation:
+### Question Generation
 
-None
+Frage: Erklären Sie in eigenen Worten, wie die Data Link Layer und die Network Layer im ISO-OSI-Modell zusammenarbeiten, um Daten über unterschiedliche Netzwerke hinweg zu übertragen.
 
-### Answer Generation + Union of all:
+### Answer Generation + Union of all
 
-Frage: Erklären Sie die Beziehungen zwischen den Schichten des ISO-OSI-Modells und beschreiben Sie die Kernaufgaben jeder Schicht in eigenen Worten.
+Frage: Erklären Sie in eigenen Worten, wie die Data Link Layer und die Network Layer im ISO-OSI-Modell zusammenarbeiten, um Daten über unterschiedliche Netzwerke hinweg zu übertragen.
 
-Antwort: Das ISO-OSI-Modell strukturiert die Netzwerkkommunikation in sieben aufeinander aufbauende Schichten (Layer). Jede Schicht erfüllt spezifische Aufgaben und bietet definierte Dienste für die nächsthöhere Schicht an, während sie die Details der darunterliegenden Schicht abstrahiert. Dieses Prinzip der Kapselung und des Dienstzugriffs ist die grundlegende Beziehung zwischen den Schichten.
+Antwort: Der Network Layer (Schicht 3) ist für die übergreifende Adressierung und Wegfindung (Routing) zwischen verschiedenen Netzwerken verantwortlich. Er packt die zu sendenden Daten in Pakete und versieht sie mit einer logischen, netzwerkweiten Adresse (z.B. einer IP-Adresse). Sein Ziel ist es, einen Weg vom Quell- zum Zielnetzwerk zu bestimmen, der über mehrere Zwischenknoten (Router) führen kann.
 
-1.  **Physical Layer (Bitübertragungsschicht):** Diese unterste Schicht stellt die physische Verbindung für den Transport von Rohbits bereit. Ihre Kernaufgaben sind die **Codierung** logischer Nullen und Einsen in physikalische Signale (z.B. Spannungspegel oder Lichtimpulse), der **Transport** dieser Signale über ein Medium (z.B. Kupferkabel oder Funk) und die **Decodierung** der empfangenen Signale zurück in logische Werte. Sie bietet einen potenziell fehlerbehafteten Bitstrom dem Data Link Layer an.
+Der Data Link Layer (Schicht 2) ist für die zuverlässige Übertragung innerhalb eines einzelnen physikalischen Netzwerksegments (z.B. einem Ethernet-Segment) zuständig. Er nimmt die Pakete vom Network Layer, verpackt sie in Frames und versieht sie mit einer hardwarenahen Adresse (z.B. einer MAC-Adresse) für den nächsten direkten Knoten auf dem Weg – das kann der endgültige Empfänger oder der nächste Router sein.
 
-2.  **Data Link Layer (Sicherungsschicht):** Sie organisiert die rohen Bits des Physical Layer zu zuverlässigen, fehlerfreien Übertragungsabschnitten („Links“) zwischen direkt verbundenen Knoten. Kernaufgaben sind die **Fehlerkontrolle** (Erkennung und manchmal Korrektur von Übertragungsfehlern), die **Flusskontrolle** zur Anpassung der Senderate an die Empfängerkapazität, die **Segmentierung** von Bitströmen in Rahmen (Frames), die **Identifikation** von Sendern und Empfängern durch Hardware-Adressen (z.B. MAC) und die Steuerung des **Medienzugriffs** (z.B. wann ein Gerät auf ein gemeinsames Medium senden darf). Sie nutzt den Physical Layer und bietet gesicherte Frames dem Network Layer an.
+Die Zusammenarbeit besteht in einer Arbeitsteilung: Der Network Layer plant die gesamte Reise über verschiedene Netzwerke hinweg und adressiert das finale Ziel. Der Data Link Layer führt dann die einzelnen "Etappen" dieser Reise aus, indem er jeweils die Übertragung zum nächsten direkten Nachbarknoten (dem nächsten Hop) organisiert. Bei jedem Hop (Router) wird der alte Data-Link-Layer-Header abgenommen, der Network-Layer-Header ausgelesen, die nächste Hop-Adresse ermittelt und ein neuer Data-Link-Layer-Header für die nächste Etappe angelegt. So sorgen Schicht 3 für die globale Adressierung und Wegsteuerung und Schicht 2 für die lokale, fehlergesicherte Zustellung von Knoten zu Knoten. (Richtig)
 
-3.  **Network Layer (Vermittlungsschicht):** Diese Schicht ermöglicht die Kommunikation über Netzwerkgrenzen hinweg, auch über verschiedene Layer-2-Technologien. Ihre Hauptaufgaben sind die **Adressierung** mit netzwerkweiten, logischen Adressen (z.B. IP), das **Routing**, also die Bestimmung des Weges eines Pakets durch das Netzwerk über mehrere Zwischenknoten (Router), und die **Flusssteuerung** auf Netzwerkebene. Sie baut auf den Diensten des Data Link Layer auf und liefert Pakete (Packets) dem Transport Layer.
-
-4.  **Transport Layer (Transportschicht):** Sie gewährleistet eine Ende-zu-Ende-Kommunikation zwischen beliebigen Anwendungen auf den beteiligten Hosts. Zu ihren Aufgaben zählen die **Adressierung** von spezifischen Diensten oder Anwendungen auf einem Host (z.B. über Ports), die Ende-zu-Ende-**Flusssteuerung** und die Sicherstellung einer vereinbarten **Dienstqualität** (QoS, z.B. garantierte Bandbreite oder Zuverlässigkeit). Sie nutzt die möglicherweise unzuverlässige Paketübermittlung des Network Layer und bietet darauf aufbauend einen anwendungsgerechten Transportdienst für den Session Layer.
-
-5.  **Session Layer (Sitzungsschicht):** Sie verwaltet dialogorientierte Verbindungen (Sitzungen) zwischen Anwendungen. Ihre Kernaufgaben sind das Steuern des **Sitzungslebenszyklus** (Aufbau, Verwaltung, Abbau), die **Synchronisation** durch Setzen von Prüfpunkten, um bei Unterbrechungen an definierten Stellen fortsetzen zu können, und das **Bündeln** mehrerer zusammengehöriger Nachrichtenströme. Sie nutzt den Transportdienst von Layer 4.
-
-6.  **Presentation Layer (Darstellungsschicht):** Sie ist für die syntaktische und semantische Korrektheit der ausgetauschten Daten zwischen den Anwendungen verantwortlich. Ihre Aufgaben umfassen die **Konvertierung** von Datendarstellungen (z.B. zwischen Little- und Big-Endian), die **Zeichenkodierung** (z.B. ASCII in Unicode), die **Kompression** zur Effizienzsteigerung und die **Verschlüsselung** zur Sicherheit. Sie bereitet die Daten für die Anwendungsschicht einheitlich auf.
-
-7.  **Application Layer (Anwendungsschicht):** Dies ist die Schnittstelle zu den Netzwerkanwendungen des Benutzers. Sie definiert die **Grundkonzepte, Protokollelemente und das Verhalten** für spezifische Dienste wie E-Mail oder Dateitransfer. Sie nutzt die Dienste der Darstellungsschicht, um anwendungsbezogene Nachrichten auszutauschen.
-
-Zusammenfassend besteht die Beziehung zwischen den Schichten darin, dass jede Schicht die Komplexität der darunter liegenden Schichten verbirgt und der darüber liegenden Schicht einen vereinfachten, spezialisierten Dienst anbietet. Die Kommunikation erfolgt vertikal über Schnittstellen zwischen den Schichten auf einem System und horizontal mittels standardisierter Protokolle zwischen gleichen Schichten auf verschiedenen Systemen. (Richtig)
-
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

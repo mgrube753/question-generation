@@ -6,30 +6,29 @@
 
 Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Benennen Sie die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge (1–7) und ordnen Sie jeder Schicht ihre jeweilige Hauptfunktion zu.
+Frage: Benennen Sie die beiden Schichten des ISO-OSI-Modells, die in der Reihenfolge von unten nach oben als Schicht 1 und Schicht 2 auftreten.
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) 1 Physical: Codierung/Transport/Decodierung logischer Werte auf physikalischem Medium; 2 Data Link: fehlergesicherte Übertragung über den Physical Layer (Rahmenbildung/Segmentierung, Fehler- und Flusskontrolle, MAC/Medienzugriff, lokale Adressierung); 3 Network: netzwerkübergreifende Übertragung zwischen unterschiedlichen Netzen (Adressierung, Routing, Flusssteuerung); 4 Transport: Ende-zu-Ende-Übertragung zwischen Teilnehmern (Teilnehmer-/Port-Adressierung, Flusssteuerung, QoS/Dienstqualität); 5 Session: Sitzungen aufbauen/verwalten/beenden (inkl. Synchronisation und Bündelung); 6 Presentation: Darstellung/Kodierung der Anwendungsdaten als Bitstrom (Endianness, Zeichencodierung, Kompression, Verschlüsselung); 7 Application: anwendungsspezifische Elemente/Protokolle/Verhalten festlegen.
-
-b) 1 Bitübertragungsschicht (Physical): Übertragung von Bits als physikalische Signale inkl. Codierung und Decodierung; 2 Sicherungsschicht (Data Link): zuverlässige Verbindung auf Layer 2 durch Fehler- und Flusskontrolle sowie Medienzugriff und Adressierung; 3 Vermittlungsschicht (Network): Weiterleitung zwischen Netzen durch logische Adressen und Routing; 4 Transportschicht (Transport): Transportdienst zwischen Endsystemen/Teilnehmern (Ports), Flusssteuerung und QoS; 5 Sitzungsschicht (Session): Steuerung von Sitzungen (Aufbau, Verwaltung, Abbau) inkl. Synchronisationspunkten/Bündelung; 6 Darstellungsschicht (Presentation): Datenformate umsetzen (Zeichen/Endian), komprimieren und verschlüsseln; 7 Anwendungsschicht (Application): Festlegung der anwendungsbezogenen Konzepte, Protokollelemente und des Anwendungsverhaltens.
+a) Schicht 1: Physical Layer (Bitübertragungsschicht); Schicht 2: Data Link Layer (Sicherungsschicht) (Richtig)
+b) Layer 1: Physikalische Schicht; Layer 2: Sicherungsschicht (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Benennen Sie die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge (1–7) und ordnen Sie jeder Schicht ihre jeweilige Hauptfunktion zu.
+Frage: Frage: Benennen Sie die beiden Schichten des ISO-OSI-Modells, die in der Reihenfolge von unten nach oben als Schicht 1 und Schicht 2 auftreten.
 
 Antwortmöglichkeiten:
 
-a) 1 Bitübertragungsschicht (Physical): Übertragung von Bits als physikalische Signale inkl. Codierung und Decodierung; 2 Sicherungsschicht (Data Link): Weiterleitung zwischen unterschiedlichen Netzen durch logische Adressen und Routing; 3 Vermittlungsschicht (Network): zuverlässige Verbindung auf Layer 2 durch Fehler- und Flusskontrolle sowie Medienzugriff und Adressierung (MAC); 4 Transportschicht (Transport): Transportdienst zwischen Endsystemen/Teilnehmern (Ports), Flusssteuerung und QoS; 5 Sitzungsschicht (Session): Datenformate umsetzen (Zeichen/Endian), komprimieren und verschlüsseln; 6 Darstellungsschicht (Presentation): Steuerung von Sitzungen (Aufbau, Verwaltung, Abbau) inkl. Synchronisationspunkten/Bündelung; 7 Anwendungsschicht (Application): Festlegung der anwendungsbezogenen Konzepte, Protokollelemente und des Anwendungsverhaltens. (Falsch)
-b) 1 Bitübertragungsschicht (Physical): Übertragung von Bits als physikalische Signale inkl. Codierung und Decodierung; 2 Sicherungsschicht (Data Link): zuverlässige Verbindung auf Layer 2 durch Fehler- und Flusskontrolle sowie Medienzugriff und Adressierung; 3 Vermittlungsschicht (Network): Weiterleitung zwischen Netzen durch logische Adressen und Routing; 4 Transportschicht (Transport): Transportdienst zwischen Endsystemen/Teilnehmern (Ports), Flusssteuerung und QoS; 5 Sitzungsschicht (Session): Steuerung von Sitzungen (Aufbau, Verwaltung, Abbau) inkl. Synchronisationspunkten/Bündelung; 6 Darstellungsschicht (Presentation): Datenformate umsetzen (Zeichen/Endian), komprimieren und verschlüsseln; 7 Anwendungsschicht (Application): Festlegung der anwendungsbezogenen Konzepte, Protokollelemente und des Anwendungsverhaltens. (Richtig)
-c) 1 Physical: Codierung/Transport/Decodierung logischer Werte auf physikalischem Medium; 2 Data Link: fehlergesicherte Übertragung über den Physical Layer (Rahmenbildung/Segmentierung, Fehler- und Flusskontrolle, MAC/Medienzugriff, lokale Adressierung); 3 Transport: netzwerkübergreifende Übertragung zwischen unterschiedlichen Netzen (Adressierung, Routing, Flusssteuerung); 4 Network: Ende-zu-Ende-Übertragung zwischen Teilnehmern (Teilnehmer-/Port-Adressierung, Flusssteuerung, QoS/Dienstqualität); 5 Presentation: Sitzungen aufbauen/verwalten/beenden (inkl. Synchronisation und Bündelung); 6 Session: Darstellung/Kodierung der Anwendungsdaten als Bitstrom (Endianness, Zeichencodierung, Kompression, Verschlüsselung); 7 Application: anwendungsspezifische Elemente/Protokolle/Verhalten festlegen. (Falsch)
-d) 1 Physical: Codierung/Transport/Decodierung logischer Werte auf physikalischem Medium; 2 Data Link: fehlergesicherte Übertragung über den Physical Layer (Rahmenbildung/Segmentierung, Fehler- und Flusskontrolle, MAC/Medienzugriff, lokale Adressierung); 3 Network: netzwerkübergreifende Übertragung zwischen unterschiedlichen Netzen (Adressierung, Routing, Flusssteuerung); 4 Transport: Ende-zu-Ende-Übertragung zwischen Teilnehmern (Teilnehmer-/Port-Adressierung, Flusssteuerung, QoS/Dienstqualität); 5 Session: Sitzungen aufbauen/verwalten/beenden (inkl. Synchronisation und Bündelung); 6 Presentation: Darstellung/Kodierung der Anwendungsdaten als Bitstrom (Endianness, Zeichencodierung, Kompression, Verschlüsselung); 7 Application: anwendungsspezifische Elemente/Protokolle/Verhalten festlegen. (Richtig)
+a) Schicht 1: Physical Layer (Bitübertragungsschicht); Schicht 2: Data Link Layer (Sicherungsschicht) (Richtig)
+b) Layer 1: Physikalische Schicht; Layer 2: Sicherungsschicht (Richtig)
+c) Schicht 1: Data Link Layer (Sicherungsschicht); Schicht 2: Network Layer (Vermittlungsschicht) (Falsch)
+d) Layer 1: Physikalische Schicht; Layer 2: Network Layer (Vermittlungsschicht) (Falsch)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

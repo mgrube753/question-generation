@@ -6,29 +6,29 @@
 
 Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche Formulierung erklärt, wie der Data Link Layer auf den Physical Layer aufbaut, indem sie die Kernaufgaben beider Schichten (Codierung/Transport/Decodierung vs. Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff) in eigenen Worten gegenüberstellt?
+Frage: Welche zwei OSI-Schichten würden Sie gegenüberstellen, wenn Sie erklären sollen, welche Schicht Anwendungsdaten in einen Bitstrom kodiert und welche Schicht logische Werte auf physikalische Größen abbildet?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Der Physical Layer sorgt nur dafür, dass 0/1 als physikalische Signale codiert, über ein Medium transportiert und beim Empfänger wieder als Bits decodiert werden; der Data Link Layer nimmt diesen (potenziell fehlerhaften) Bittransport als Grundlage und macht daraus eine geregelte Übertragung, indem er Bits zu Einheiten segmentiert, Sender/Empfänger identifiziert (Adressen), den Medienzugriff steuert und zusätzlich Fehler- sowie Flusskontrolle bereitstellt. (Richtig)
-b) Während der Physical Layer die technische „Signalstrecke“ bereitstellt (wie Bits in elektrische/optische/funkbasierte Größen umgesetzt, übertragen und zurückinterpretiert werden), baut der Data Link Layer darauf auf, indem er diese Bitstrecke aktiviert und organisiert: Er fasst Bits zu größeren Blöcken zusammen, regelt wer wann senden darf, kennzeichnet die beteiligten Stationen und sorgt mit Fehlerkontrolle und Flusskontrolle dafür, dass Übertragung trotz möglicher Störungen zuverlässig abläuft. (Richtig)
+a) Präsentationsschicht (Layer 6) und Bitübertragungsschicht/Physical Layer (Layer 1): Layer 6 kodiert Anwendungsdaten als Bitstrom, Layer 1 bildet logische Werte auf physikalische Signale ab. (Richtig)
+b) OSI-Layer 6 (Presentation) gegenüber OSI-Layer 1 (Physical): Die Präsentationsschicht sorgt für die Darstellung/Kodierung der Daten als Bitfolge, die physikalische Schicht setzt diese logischen Bits in elektrische/optische/funkbasierte Größen um. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche Formulierung erklärt, wie der Data Link Layer auf den Physical Layer aufbaut, indem sie die Kernaufgaben beider Schichten (Codierung/Transport/Decodierung vs. Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff) in eigenen Worten gegenüberstellt?
+Frage: Frage: Welche zwei OSI-Schichten würden Sie gegenüberstellen, wenn Sie erklären sollen, welche Schicht Anwendungsdaten in einen Bitstrom kodiert und welche Schicht logische Werte auf physikalische Größen abbildet?
 
 Antwortmöglichkeiten:
 
-a) Der Physical Layer übernimmt bereits das Zusammenfassen von Bits zu Frames, das Setzen/Interpretieren von MAC-Adressen und die Regelung des Medienzugriffs; der Data Link Layer baut darauf auf, indem er vor allem die Codierung von 0/1 in elektrische/optische Signale sowie deren Transport und Decodierung realisiert. (Falsch)
-b) Der Physical Layer sorgt nur dafür, dass 0/1 als physikalische Signale codiert, über ein Medium transportiert und beim Empfänger wieder als Bits decodiert werden; der Data Link Layer nimmt diesen (potenziell fehlerhaften) Bittransport als Grundlage und macht daraus eine geregelte Übertragung, indem er Bits zu Einheiten segmentiert, Sender/Empfänger identifiziert (Adressen), den Medienzugriff steuert und zusätzlich Fehler- sowie Flusskontrolle bereitstellt. (Richtig)
-c) Der Physical Layer stellt bereits eine fehlergesicherte, flusskontrollierte Verbindung bereit; der Data Link Layer nutzt diese sichere Bitstrecke dann hauptsächlich für netzwerkübergreifendes Routing und die Vergabe von IP-Adressen zwischen unterschiedlichen Netzen. (Falsch)
-d) Während der Physical Layer die technische „Signalstrecke“ bereitstellt (wie Bits in elektrische/optische/funkbasierte Größen umgesetzt, übertragen und zurückinterpretiert werden), baut der Data Link Layer darauf auf, indem er diese Bitstrecke aktiviert und organisiert: Er fasst Bits zu größeren Blöcken zusammen, regelt wer wann senden darf, kennzeichnet die beteiligten Stationen und sorgt mit Fehlerkontrolle und Flusskontrolle dafür, dass Übertragung trotz möglicher Störungen zuverlässig abläuft. (Richtig)
+a) OSI-Layer 2 (Sicherungsschicht/Data Link) und OSI-Layer 1 (Bitübertragungsschicht/Physical): Layer 2 „kodiert“ die Daten als Bitstrom durch Segmentierung/Framing, Layer 1 bildet logische Werte auf physikalische Signale ab. (Falsch)
+b) OSI-Layer 6 (Presentation) gegenüber OSI-Layer 1 (Physical): Die Präsentationsschicht kodiert Anwendungsdaten als Bitstrom, die physikalische Schicht setzt logische Bits in elektrische/optische/funkbasierte Größen um. (Richtig)
+c) Anwendungsschicht (Layer 7) und Bitübertragungsschicht/Physical Layer (Layer 1): Layer 7 kodiert Anwendungsdaten in einen Bitstrom, Layer 1 bildet logische Werte auf physikalische Größen ab. (Falsch)
+d) Präsentationsschicht (Layer 6) und Bitübertragungsschicht/Physical Layer (Layer 1): Layer 6 kodiert Anwendungsdaten als Bitstrom, Layer 1 bildet logische Werte auf physikalische Signale ab. (Richtig)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

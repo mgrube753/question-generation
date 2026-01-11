@@ -8,17 +8,13 @@ Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Mode
 
 ### Question Generation
 
-Frage: Erklären Sie, wie der Data Link Layer auf den Physical Layer aufbaut und welche zusätzliche Funktionalität er durch seine Kernaufgaben bereitstellt.
+Frage: Vergleichen Sie die Adressierungskonzepte auf dem Data Link Layer, dem Network Layer und dem Transport Layer und erklären Sie, warum auf jeder dieser Schichten eine eigenständige Form der Adressierung erforderlich ist.
 
 ### Answer Generation + Union of all
 
-Frage: Erklären Sie, wie der Data Link Layer auf den Physical Layer aufbaut und welche zusätzliche Funktionalität er durch seine Kernaufgaben bereitstellt.
+Frage: Vergleichen Sie die Adressierungskonzepte auf dem Data Link Layer, dem Network Layer und dem Transport Layer und erklären Sie, warum auf jeder dieser Schichten eine eigenständige Form der Adressierung erforderlich ist.
 
-Antwort: Der Data Link Layer baut direkt auf dem Physical Layer auf, indem er dessen grundlegende Fähigkeiten zur Übertragung von Bits nutzt und erweitert. Der Physical Layer stellt die physikalische Grundlage bereit, indem er logische Werte codiert, diese physikalisch transportiert und beim Empfänger wieder decodiert. Allerdings bietet der Physical Layer keine Garantie für eine fehlerfreie Übertragung.
-
-Hier setzt der Data Link Layer an und fügt durch seine fünf Kernaufgaben wichtige zusätzliche Funktionalitäten hinzu: Die Fehlerkontrolle ermöglicht das Erkennen, Beheben oder Signalisieren von Übertragungsfehlern, die auf dem Physical Layer auftreten können. Die Flusskontrolle sorgt dafür, dass ein zu schneller Sender den Empfänger nicht überfordert, etwa durch Zwischenpuffern oder Herunterregeln der Senderate. Die Segmentierung fasst einzelne Bits zu größeren, handhabbaren Einheiten wie Bytes zusammen. Die Identifikation ermöglicht durch Adressen die gezielte Auswahl bestimmter Sender oder Empfänger. Der Medienzugriff regelt schließlich die Aktivierung des Physical Layers und koordiniert das Senden, Warten, Beheben von Kollisionen und Reservieren des Übertragungsmediums.
-
-Zusammenfassend transformiert der Data Link Layer die unzuverlässige Bitübertragung des Physical Layers in eine fehlergesicherte, organisierte Datenübertragung. (Richtig)
+Antwort: Auf dem Data Link Layer (Schicht 2) erfolgt die Identifikation zur Auswahl bestimmter Sender oder Empfänger innerhalb eines lokalen Netzwerksegments. Diese Adressen ermöglichen die direkte Kommunikation zwischen physisch verbundenen Geräten. Auf dem Network Layer (Schicht 3) werden netzwerkübergreifende Adressen verwendet, die eine Kommunikation zwischen Geräten in unterschiedlichen Netzwerken mit möglicherweise verschiedenen Layer-2-Technologien ermöglichen. Auf dem Transport Layer (Schicht 4) kommen Teilnehmer-Adressen zum Einsatz, die einzelne Kommunikationsteilnehmer wie Anwendungen oder Prozesse auf einem Gerät identifizieren. Eine eigenständige Adressierung auf jeder Schicht ist erforderlich, weil jede Schicht einen anderen Geltungsbereich hat: Schicht 2 adressiert Geräte im lokalen Netzwerk, Schicht 3 adressiert Geräte über Netzwerkgrenzen hinweg, und Schicht 4 adressiert die spezifischen Teilnehmer auf einem bereits adressierten Gerät. Ohne diese Trennung wäre es nicht möglich, sowohl das richtige Netzwerk, das richtige Gerät als auch den richtigen Dienst oder Prozess auf diesem Gerät zu erreichen. (Richtig)
 
 ### Source Text
 

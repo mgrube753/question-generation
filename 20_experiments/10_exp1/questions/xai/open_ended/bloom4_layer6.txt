@@ -8,19 +8,13 @@ Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertrag
 
 ### Question Generation
 
-Frage: Unterscheiden Sie die Beziehungen zwischen den Kernaufgaben der Konvertierung, Kompression und Verschlüsselung bei der Transformation von Anwendungsdaten in übertragbare Bitströme in der Presentation Layer.
+Frage: Unterscheiden Sie die Beziehungen zwischen den Kernaufgaben der Präsentationsschicht bei der Transformation von Anwendungsdaten in übertragbare Bitströme.
 
 ### Answer Generation + Union of all
 
-Frage: Unterscheiden Sie die Beziehungen zwischen den Kernaufgaben der Konvertierung, Kompression und Verschlüsselung bei der Transformation von Anwendungsdaten in übertragbare Bitströme in der Presentation Layer.
+Frage: Unterscheiden Sie die Beziehungen zwischen den Kernaufgaben der Präsentationsschicht bei der Transformation von Anwendungsdaten in übertragbare Bitströme.
 
-Antwort: In der Presentation Layer des OSI-Modells werden Anwendungsdaten durch die Kernaufgaben Konvertierung, Kompression und Verschlüsselung in übertragbare Bitströme transformiert. Diese Aufgaben sind interdependent und werden typischerweise in einer sequentiellen Reihenfolge ausgeführt, um Kompatibilität, Effizienz und Sicherheit zu gewährleisten, wobei jede Aufgabe auf den Ergebnissen der vorherigen aufbaut oder diese ergänzt.
-
-Zunächst zerlegt man die Kernaufgaben in ihre Bestandteile: Die Konvertierung umfasst die Anpassung der Datendarstellung (z. B. Endian-Ness wie little-endian zu big-endian) und der Zeichendarstellung (z. B. ASCII zu Unicode), um systemübergreifende Kompatibilität zu ermöglichen. Kompression reduziert die Datenmenge durch Algorithmen wie Huffman-Codierung oder LZW, ohne wesentliche Informationen zu verlieren. Verschlüsselung schützt die Daten durch Verfahren wie AES oder RSA, um Vertraulichkeit und Integrität zu sichern.
-
-Die Beziehungen zueinander ergeben sich aus ihrer Integration in den Transformationsprozess: Konvertierung dient als Grundlage, da sie die Daten in eine einheitliche, übertragbare Form bringt, die für nachfolgende Schritte geeignet ist – ohne Konvertierung könnten Kompression und Verschlüsselung auf inkompatiblen Formaten operieren und zu Fehlern führen. Kompression interagiert mit Konvertierung, indem sie auf den konvertierten Daten angewendet wird, um Bandbreite zu sparen, und muss rückgängig gemacht werden können, bevor die Daten dekodiert werden; sie steht in einer ergänzenden Beziehung zur Verschlüsselung, da komprimierte Daten oft vor der Verschlüsselung verarbeitet werden, um die Effizienz zu maximieren (z. B. "compress-then-encrypt"-Ansatz), wodurch die Gesamtstruktur der Transformation optimiert wird. Verschlüsselung baut auf beiden auf, indem sie die konvertierten und komprimierten Daten schützt, und trägt zum Gesamtzweck bei, indem sie Sicherheitsaspekte in die Übertragung integriert; sie kann jedoch die Kompression beeinträchtigen, wenn nicht richtig sequenziert (z. B. Verschlüsselung vor Kompression würde Redundanz eliminieren und Kompression weniger effektiv machen).
-
-Insgesamt bilden diese Aufgaben eine hierarchische Gesamtstruktur, in der Konvertierung die Basis für Kompatibilität legt, Kompression die Effizienz steigert und Verschlüsselung die Sicherheit gewährleistet, wodurch Anwendungsdaten schrittweise in sichere, effiziente Bitströme umgewandelt werden. (Richtig)
+Antwort: Die Präsentationsschicht (Layer 6) transformiert Anwendungsdaten in übertragbare Bitströme durch vier Kernaufgaben, deren Beziehungen sequentiell und interdependent sind: (1) Endian-Ness-Konvertierung stellt plattformübergreifende Datendarstellung sicher (z. B. Big-Endian zu Little-Endian), bildet die Basis für (2) Zeichenkonvertierung, die Zeichensätze harmonisiert (z. B. ASCII zu Unicode), um semantische Integrität zu wahren. Beide Konvertierungsaufgaben bereiten Daten für (3) Kompression vor, die redundante Bits reduziert und Effizienz steigert, ohne die ursprüngliche Struktur zu verändern. Abschließend interagiert (4) Verschlüsselung mit dem komprimierten Bitstrom, um Sicherheit zu gewährleisten, wobei alle Aufgaben reversibel sind, um beim Empfang die Originaldaten rekonstruieren zu können. Diese Beziehungen zerlegen die Transformation in schrittweise Anpassung (Konvertierung), Optimierung (Kompression) und Schutz (Verschlüsselung), die kollektiv Kompatibilität, Effizienz und Sicherheit zum Gesamtzweck der netzwerkfähigen Übertragung gewährleisten. (Richtig)
 
 ### Source Text
 

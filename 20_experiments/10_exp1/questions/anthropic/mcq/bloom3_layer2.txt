@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Ein Sender überträgt Daten schneller, als der Empfänger diese verarbeiten kann. Welche Strategie des Data Link Layers nutzen Sie, um dieses Problem zu beheben?
+Frage: Ein Sender überträgt Daten schneller, als der Empfänger diese verarbeiten kann. Welche Strategien der Flusskontrolle lassen sich anwenden, um diese Situation zu lösen?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Flusskontrolle anwenden, indem der Sender angewiesen wird zu warten, bis der Empfänger bereit ist (Richtig)
-b) Flusskontrolle durch Zwischenpuffern der eingehenden Daten beim Empfänger einsetzen (Richtig)
+a) Der Empfänger kann die eingehenden Daten zwischenpuffern, um sie temporär zu speichern und später zu verarbeiten, oder den Sender auffordern, die Übertragungsgeschwindigkeit herunterzuregeln. (Richtig)
+b) Der Empfänger kann den Sender warten lassen, bis er zur Verarbeitung weiterer Daten bereit ist, und signalisiert dies durch entsprechende Steuernachrichten. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ein Sender überträgt Daten schneller, als der Empfänger diese verarbeiten kann. Welche Strategie des Data Link Layers nutzen Sie, um dieses Problem zu beheben?
+Frage: Ein Sender überträgt Daten schneller, als der Empfänger diese verarbeiten kann. Welche Strategien der Flusskontrolle lassen sich anwenden, um diese Situation zu lösen?
 
 Antwortmöglichkeiten:
 
-a) Fehlerkontrolle anwenden, um fehlerhafte Pakete erneut zu senden und so den Datenstrom zu verlangsamen (Falsch)
-b) Flusskontrolle anwenden, indem der Sender angewiesen wird zu warten, bis der Empfänger bereit ist (Richtig)
-c) Flusskontrolle durch Zwischenpuffern der eingehenden Daten beim Empfänger einsetzen (Richtig)
-d) Segmentierung verwenden, um die Datenmenge pro Übertragungseinheit zu reduzieren (Falsch)
+a) Der Empfänger kann beschädigte Datenpakete erkennen und eine erneute Übertragung vom Sender anfordern, um die Datenintegrität sicherzustellen. (Falsch)
+b) Der Empfänger kann den Sender warten lassen, bis er zur Verarbeitung weiterer Daten bereit ist, und signalisiert dies durch entsprechende Steuernachrichten. (Richtig)
+c) Der Empfänger kann die eingehenden Daten zwischenpuffern, um sie temporär zu speichern und später zu verarbeiten, oder den Sender auffordern, die Übertragungsgeschwindigkeit herunterzuregeln. (Richtig)
+d) Der Sender kann den Physical Layer deaktivieren und die Übertragung vollständig abbrechen, bis ein neuer Verbindungsaufbau vom Empfänger initiiert wird. (Falsch)
 
-### Source Text:
+### Source Text
 
 Data Link Layer 2
 Beschreibung

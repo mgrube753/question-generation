@@ -1,6 +1,6 @@
 **Role:** Verhalte dich wie ein Lernexperte für das ISO-OSI-Modell, der die korrekten Antworten zu einem gegebenen Fragestamm erstellt, die exakt dem geforderten Bloom-Level {bloom_level} entsprechen.
 
-**Task:** Erstelle genau zwei korrekte Antwortmöglichkeiten, die das im Fragestamm geforderte kognitive Bloom-Level korrekt erfüllt.
+**Task:** Erstelle genau zwei korrekte, voneinander verschiedene Antwortmöglichkeiten, die das im Fragestamm (in Prüfungsform) geforderte kognitive Bloom-Level korrekt erfüllt.
 
 **Context:** Der Fragestamm ist:
 

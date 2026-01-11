@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche Abfolge von Codierung, Transport und Decodierung würden Sie anwenden, um die Bitfolge 10110 über ein Telefonkabel vom Sender zum Empfänger zu übertragen und anschließend wieder als logische Werte zu rekonstruieren?
+Frage: In einem Sender werden logische 0/1-Werte per Manchester in ein elektrisches Signal abgebildet und anschließend über ein Telefonkabel zum Empfänger übertragen; welche zwei Kernaufgaben der Physical Layer 1 nutzen Sie in diesem Sender?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Bitfolge 10110 per NRZ codieren (z.B. 1 → +5 V, 0 → 0 V), die so entstehende Spannungsfolge über das Telefonkabel transportieren, am Empfänger die Leitungsspannung pro Bitzeit abtasten und per Schwellwertentscheidung wieder in logische 1/0 decodieren, sodass 10110 rekonstruiert wird. (Richtig)
-b) Bitfolge 10110 per Manchester codieren (z.B. 1 → Übergang High→Low in der Bitmitte, 0 → Übergang Low→High in der Bitmitte), das resultierende Spannungssignal über das Telefonkabel übertragen, am Empfänger die Übergänge in der Bitmitte detektieren (inkl. Taktrückgewinnung) und daraus die Bits wieder als 10110 decodieren. (Richtig)
+a) Codierung der logischen 0/1-Werte per Manchester in ein elektrisches Signal und Transport dieses elektrischen Signals über das Telefonkabel zum Empfänger. (Richtig)
+b) Abbildung der Bits auf eine physikalische Größe (Manchester-Codierung als Spannungs-/Signalverlauf) sowie die mediengebundene Übertragung dieser physikalischen Größe über das Telefonkabel. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche Abfolge von Codierung, Transport und Decodierung würden Sie anwenden, um die Bitfolge 10110 über ein Telefonkabel vom Sender zum Empfänger zu übertragen und anschließend wieder als logische Werte zu rekonstruieren?
+Frage: Frage: In einem Sender werden logische 0/1-Werte per Manchester in ein elektrisches Signal abgebildet und anschließend über ein Telefonkabel zum Empfänger übertragen; welche zwei Kernaufgaben der Physical Layer 1 nutzen Sie in diesem Sender?
 
 Antwortmöglichkeiten:
 
-a) Bitfolge 10110 per NRZ codieren (z.B. 1 → +5 V, 0 → 0 V), die so entstehende Spannungsfolge über das Telefonkabel transportieren, am Empfänger die Leitungsspannung pro Bitzeit abtasten und per Schwellwertentscheidung wieder in logische 1/0 decodieren, sodass 10110 rekonstruiert wird. (Richtig)
-b) Bitfolge 10110 per Manchester codieren (z.B. 1 → Übergang High→Low in der Bitmitte, 0 → Übergang Low→High in der Bitmitte), das resultierende Spannungssignal über das Telefonkabel übertragen, am Empfänger die Übergänge in der Bitmitte detektieren (inkl. Taktrückgewinnung) und daraus die Bits wieder als 10110 decodieren. (Richtig)
-c) Bitfolge 10110 per NRZ codieren (z.B. 1 → +5 V, 0 → 0 V), die Spannungsfolge über das Telefonkabel transportieren, am Empfänger ausschließlich Übergänge in der Bitmitte wie bei Manchester detektieren (inkl. Taktrückgewinnung) und daraus die Bits als 10110 decodieren. (Falsch)
-d) Bitfolge 10110 per Manchester codieren, das resultierende Spannungssignal über das Telefonkabel übertragen, am Empfänger pro Bitzeit nur einmal den Pegel (z.B. am Bitanfang) abtasten und per Schwellwertentscheidung direkt wieder in logische 1/0 decodieren, sodass 10110 rekonstruiert wird. (Falsch)
+a) Codierung der logischen 0/1-Werte per Manchester und anschließende Decodierung des Spannungs-/Signalverlaufs zurück zu Bits im Sender zur Plausibilitätsprüfung. (Falsch)
+b) Codierung der logischen 0/1-Werte per Manchester in ein elektrisches Signal und Transport dieses elektrischen Signals über das Telefonkabel zum Empfänger. (Richtig)
+c) Rahmenbildung der Bits zu Datenframes inklusive CRC-Fehlererkennung und danach Übertragung der Frames als elektrisches Signal über das Telefonkabel. (Falsch)
+d) Abbildung der Bits auf eine physikalische Größe (Manchester-Codierung als Spannungs-/Signalverlauf) sowie die mediengebundene Übertragung dieser physikalischen Größe über das Telefonkabel. (Richtig)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

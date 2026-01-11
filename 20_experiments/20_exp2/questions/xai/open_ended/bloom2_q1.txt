@@ -8,29 +8,13 @@ Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Mode
 
 ### Question Generation
 
-Frage: Erklären Sie in eigenen Worten die Beziehungen zwischen den Schichten des ISO-OSI-Modells und beschreiben Sie die Kernaufgaben jeder Schicht.
+Frage: Erklären Sie in eigenen Worten die Beziehungen zwischen den Schichten des ISO-OSI-Modells.
 
 ### Answer Generation + Union of all
 
-Frage: Erklären Sie in eigenen Worten die Beziehungen zwischen den Schichten des ISO-OSI-Modells und beschreiben Sie die Kernaufgaben jeder Schicht.
+Frage: Erklären Sie in eigenen Worten die Beziehungen zwischen den Schichten des ISO-OSI-Modells.
 
-Antwort: Das ISO-OSI-Modell ist ein Rahmenwerk, das die Kommunikation in Computernetzwerken in sieben hierarchische Schichten unterteilt. Jede Schicht hat spezifische Aufgaben und baut auf den Funktionen der darunterliegenden Schicht auf, während sie Dienste für die darüberliegende Schicht bereitstellt. Die Schichten arbeiten modular: Eine Schicht kommuniziert vertikal mit der angrenzenden Schicht auf demselben System und horizontal mit ihrer Entsprechung (Peer) auf einem anderen System. Dadurch wird die Komplexität der Netzwerkkommunikation vereinfacht, da Änderungen in einer Schicht die anderen nicht beeinflussen, solange die Schnittstellen gleich bleiben. Die unteren Schichten (1-4) kümmern sich um die physische und logische Übertragung von Daten, während die oberen Schichten (5-7) sich auf die Anwendungsaspekte konzentrieren. Daten fließen von der Anwendungsschicht nach unten, werden in jeder Schicht mit Header-Informationen versehen (Encapsulation), übertragen und auf der Empfängerseite umgekehrt decodiert (Decapsulation).
-
-Die Kernaufgaben jeder Schicht sind wie folgt:
-
-Schicht 1 (Physical Layer): Diese Schicht sorgt für die grundlegende physische Übertragung von Bits. Ihre Kernaufgaben umfassen die Codierung logischer Werte in physische Signale (z. B. durch Verfahren wie NRZ oder Manchester), den Transport dieser Signale über Medien wie Kabel oder drahtlos (z. B. Licht oder Funk) und die Decodierung der Signale zurück in logische Werte durch Abtastung.
-
-Schicht 2 (Data Link Layer): Sie stellt eine fehlerfreie Übertragung über die physische Schicht sicher. Kernaufgaben sind die Fehlerkontrolle (Erkennung und Korrektur von Übertragungsfehlern), die Flußkontrolle (z. B. durch Pufferung, um einen zu schnellen Sender zu bremsen), die Segmentierung (Zusammenfassen von Bits zu Bytes), die Identifikation (Adressierung von Sendern und Empfängern) und der Medienzugriff (Steuerung des Zugriffs auf das Medium, inklusive Senden, Warten, Konfliktlösung und Reservierung).
-
-Schicht 3 (Network Layer): Diese Schicht ermöglicht die Kommunikation zwischen Geräten in verschiedenen Netzwerken. Ihre Kernaufgaben beinhalten die Adressierung (netzwerkübergreifende Adressen), das Routing (Auswahl von Pfaden über Zwischenknoten) und die Flußsteuerung (entweder End-to-End vom Sender zum Empfänger oder Node-to-Node zwischen benachbarten Knoten).
-
-Schicht 4 (Transport Layer): Sie gewährleistet eine zuverlässige Übertragung zwischen Endgeräten. Kernaufgaben sind die Adressierung (von Teilnehmern), die Flußsteuerung (angepasst an die Eigenschaften der Teilnehmer) und die Dienstqualität (Sicherstellung von Garantien wie Bandbreite, Latenz oder Fehlerrate).
-
-Schicht 5 (Session Layer): Diese Schicht verwaltet Kommunikationssitzungen. Ihre Kernaufgaben umfassen das Handhaben von Sitzungen (Aufbau, Verwaltung, Ablehnung und Beendigung), die Synchronisation (Setzen von Checkpoints) und die Bündelung (Gruppierung verwandter Transaktionen).
-
-Schicht 6 (Presentation Layer): Sie kümmert sich um die Darstellung und Kodierung von Daten. Kernaufgaben sind die Handhabung von Endian-Ness (Konvertierung von Datenformaten wie little oder big endian), die Zeichenkodierung (z. B. ASCII zu Unicode), die Kompression (Verkleinerung und Wiederherstellung von Daten) und die Verschlüsselung (Sicherung durch Codierung und Decodierung).
-
-Schicht 7 (Application Layer): Diese Schicht definiert die spezifischen Anwendungen. Ihre Kernaufgaben beinhalten die Festlegung von Grundkonzepten (Begriffe in der Anwendung), Protokollelementen (Anforderungen und erwartete Daten) und dem Verhalten (Reaktion auf Anfragen), was stark von der jeweiligen Anwendung abhängt und daher variabel ist. (Richtig)
+Antwort: Das ISO-OSI-Modell ist ein schichtenbasiertes Konzept für Netzwerkkommunikation, bei dem jede Schicht auf der darunterliegenden aufbaut und Dienste für die darüberliegende bereitstellt. Die Physical Layer (Schicht 1) bildet die Grundlage, indem sie logische Werte in physische Signale umwandelt, transportiert und rückinterpretiert, z. B. über Kabel oder Funk. Darauf aufbauend sorgt die Data Link Layer (Schicht 2) für eine fehlergesicherte Übertragung, indem sie Fehler kontrolliert, den Datenfluss regelt, Bits segmentiert, Adressen identifiziert und den Medienzugriff steuert. Die Network Layer (Schicht 3) erweitert dies auf netzwerkübergreifende Verbindungen durch Adressierung, Routing von Pfaden und Flusssteuerung zwischen Knoten. Die Transport Layer (Schicht 4) ermöglicht ende-zu-ende-Übertragungen zwischen Teilnehmern mit spezifischer Adressierung, angepasster Flusssteuerung und Garantien für Dienstqualität wie Bandbreite oder Latenz. Die Session Layer (Schicht 5) managt Kommunikationssitzungen, indem sie diese aufbaut, synchronisiert und bündelt. Die Presentation Layer (Schicht 6) wandelt Anwendungsdaten in einen einheitlichen Bitstrom um, z. B. durch Konvertierung von Endianness, Zeichenformaten, Kompression und Verschlüsselung. Schließlich definiert die Application Layer (Schicht 7) anwendungsspezifische Elemente wie Konzepte, Protokolle und Verhalten, die auf allen unteren Schichten beruhen. Jede Schicht interagiert nur mit ihren Nachbarn, was Modularität und Unabhängigkeit gewährleistet. (Richtig)
 
 ### Source Text
 

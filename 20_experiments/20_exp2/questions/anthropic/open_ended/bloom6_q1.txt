@@ -8,27 +8,27 @@ Die Studierenden können auf Basis der Schichtenprinzipien eigene Lösungsvorsch
 
 ### Question Generation
 
-Frage: Entwickeln Sie ein Lösungskonzept für die zuverlässige Übertragung zeitkritischer Videodaten zwischen zwei Standorten mit unterschiedlichen Netzwerktechnologien, indem Sie für jede relevante OSI-Schicht spezifische Maßnahmen beschreiben, die deren Kernaufgaben erfüllen.
+Frage: Entwickeln Sie ein Kommunikationskonzept für die zuverlässige Übertragung von verschlüsselten Finanzdaten zwischen zwei Banken in unterschiedlichen Netzwerken und erläutern Sie, welche schichtspezifischen Aufgaben auf den einzelnen OSI-Schichten erfüllt werden müssen.
 
 ### Answer Generation + Union of all
 
-Frage: Entwickeln Sie ein Lösungskonzept für die zuverlässige Übertragung zeitkritischer Videodaten zwischen zwei Standorten mit unterschiedlichen Netzwerktechnologien, indem Sie für jede relevante OSI-Schicht spezifische Maßnahmen beschreiben, die deren Kernaufgaben erfüllen.
+Frage: Entwickeln Sie ein Kommunikationskonzept für die zuverlässige Übertragung von verschlüsselten Finanzdaten zwischen zwei Banken in unterschiedlichen Netzwerken und erläutern Sie, welche schichtspezifischen Aufgaben auf den einzelnen OSI-Schichten erfüllt werden müssen.
 
-Antwort: Lösungskonzept für zeitkritische Videoübertragung zwischen heterogenen Standorten:
+Antwort: Kommunikationskonzept für sichere Finanzdatenübertragung zwischen Banken:
 
-Physical Layer 1: Einsatz von Glasfasertechnologie als primäres Übertragungsmedium für hohe Bandbreite und geringe Latenz. Codierung mittels NRZ-Verfahren für effiziente Signalübertragung. An Standort B erfolgt präzise Decodierung durch definierte Detektionsbereiche zur fehlerfreien Rückgewinnung der logischen Werte.
+Application Layer 7: Definition eines Finanztransaktionsprotokolls mit Grundkonzepten wie Kontonummern, Transaktionsbeträgen und Zeitstempeln. Festlegung von Protokollelementen für Überweisungsanfragen und Bestätigungsnachrichten sowie Verhaltensregeln für die Verarbeitung.
 
-Data Link Layer 2: Implementation von Forward Error Correction zur Fehlerkontrolle ohne Retransmission, da Neuübertragungen bei Echtzeitvideo ungeeignet sind. Segmentierung in optimierte Frame-Größen von 1500 Bytes zur Minimierung von Fragmentierung. Flusskontrolle durch adaptive Pufferung am Empfänger. Eindeutige MAC-Adressierung zur Identifikation der Endgeräte. Priorisierter Medienzugriff für Videodaten durch VLAN-Tagging.
+Presentation Layer 6: Verschlüsselung aller Finanzdaten mittels kryptographischer Verfahren zur Gewährleistung der Vertraulichkeit. Zusätzlich Kompression zur Bandbreitenoptimierung und einheitliche Zeichenkonvertierung für internationale Transaktionen.
 
-Network Layer 3: Zuweisung netzwerkübergreifender IP-Adressen für beide Standorte. Routing über dedizierte Pfade mit minimaler Latenz unter Berücksichtigung der unterschiedlichen Layer-2-Technologien. End-to-End-Flusssteuerung mit Congestion-Avoidance-Mechanismen zur Vermeidung von Paketverlust.
+Session Layer 5: Aufbau gesicherter Sitzungen zwischen den Bankensystemen mit Authentifizierung. Setzen von Synchronisationspunkten zur Wiederaufnahme bei Unterbrechung. Bündelung zusammengehöriger Transaktionen zu Transaktionsgruppen.
 
-Transport Layer 4: Verwendung von UDP mit RTP-Erweiterung als Transportprotokoll mit Port-basierter Teilnehmeradressierung. Dienstqualitätssicherung durch reservierte Bandbreite von mindestens 10 Mbit/s, maximale Latenz von 150ms und Jitter-Begrenzung auf 30ms zur Erfüllung der Echtzeitanforderungen.
+Transport Layer 4: Verwendung verbindungsorientierter Übertragung mit Teilnehmeradressierung über Portnummern. Sicherung der Dienstqualität durch garantierte Bandbreite und niedrige Latenz. Flusssteuerung angepasst an die Kapazität der Banksysteme.
 
-Session Layer 5: Etablierung einer persistenten Sitzung für den kontinuierlichen Videostream mit Mechanismen zum Aufbau und kontrollierten Beenden. Synchronisationspunkte alle 5 Sekunden für mögliche Wiederaufnahme bei Unterbrechung. Bündelung von Video- und Audiodaten zu einer zusammengehörigen Transaktion.
+Network Layer 3: Netzwerkübergreifende IP-Adressierung beider Bankstandorte. Routing über sichere Zwischenknoten zwischen den unterschiedlichen Netzwerken. End-to-End-Flusssteuerung zur Vermeidung von Überlastung.
 
-Presentation Layer 6: Kompression mittels H.264-Codec zur Reduktion der Datenrate bei akzeptabler Qualität. Konvertierung der Datendarstellung in ein einheitliches Format für beide Standorte trotz unterschiedlicher Systemarchitekturen. Optional AES-Verschlüsselung für vertrauliche Videoinhalte.
+Data Link Layer 2: Segmentierung der Daten in Frames. Fehlerkontrolle zur Erkennung und Behebung von Übertragungsfehlern. Lokale Adressierung und Medienzugriffskontrolle innerhalb jedes Netzwerksegments.
 
-Application Layer 7: Definition der Grundkonzepte wie Videostream, Auflösung und Bildrate. Protokollelemente umfassen Start-, Stopp- und Pause-Befehle sowie Qualitätsanpassungsanfragen. Das Anwendungsverhalten reagiert auf Bandbreitenänderungen durch dynamische Qualitätsanpassung und signalisiert Übertragungsstatus an die Benutzer. (Richtig)
+Physical Layer 1: Nutzung dedizierter Standleitungen oder Glasfaserverbindungen für den Transport. Codierung logischer Werte mittels geeigneter Verfahren. Decodierung und Abtastung am Empfänger zur Rückgewinnung der Daten. (Richtig)
 
 ### Source Text
 

@@ -6,29 +6,29 @@
 
 Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Ein System konvertiert während einer Datenübertragung Zeichen von ASCII nach Unicode. Ermitteln Sie, welche OSI-Schicht für diesen Vorgang zuständig ist.
+Frage: Ermitteln Sie, welche zwei Kernaufgaben des Data Link Layers zur Anwendung kommen, wenn bei einer Datenübertragung einzelne Bits zu 8-Bit-Bytes zusammengefasst und auftretende Übertragungsfehler erkannt werden.
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Presentation Layer (Schicht 6), da die Konvertierung der Zeichendarstellung zwischen verschiedenen Formaten wie ASCII und Unicode zu den Kernaufgaben dieser Schicht gehört. (Richtig)
-b) Layer 6 (Darstellungsschicht), weil diese Schicht für die Kodierung der Anwendungsdaten zuständig ist und die Umwandlung zwischen unterschiedlichen Zeichensätzen durchführt. (Richtig)
+a) Segmentierung und Fehlerkontrolle (Richtig)
+b) Fehlerkontrolle und Segmentierung (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ein System konvertiert während einer Datenübertragung Zeichen von ASCII nach Unicode. Ermitteln Sie, welche OSI-Schicht für diesen Vorgang zuständig ist.
+Frage: Ermitteln Sie, welche zwei Kernaufgaben des Data Link Layers zur Anwendung kommen, wenn bei einer Datenübertragung einzelne Bits zu 8-Bit-Bytes zusammengefasst und auftretende Übertragungsfehler erkannt werden.
 
 Antwortmöglichkeiten:
 
-a) Application Layer (Schicht 7), da die Zeichenkonvertierung direkt mit der Anwendung zusammenhängt und Textdaten zu den Grundkonzepten der jeweiligen Anwendung gehören. (Falsch)
-b) Layer 6 (Darstellungsschicht), weil diese Schicht für die Kodierung der Anwendungsdaten zuständig ist und die Umwandlung zwischen unterschiedlichen Zeichensätzen durchführt. (Richtig)
-c) Physical Layer (Schicht 1), da die Codierung von Daten eine Kernaufgabe dieser Schicht ist und die Abbildung logischer Werte auf transportierbare Einheiten dort erfolgt. (Falsch)
-d) Presentation Layer (Schicht 6), da die Konvertierung der Zeichendarstellung zwischen verschiedenen Formaten wie ASCII und Unicode zu den Kernaufgaben dieser Schicht gehört. (Richtig)
+a) Codierung und Fehlerkontrolle (Falsch)
+b) Fehlerkontrolle und Segmentierung (Richtig)
+c) Flusskontrolle und Segmentierung (Falsch)
+d) Segmentierung und Fehlerkontrolle (Richtig)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

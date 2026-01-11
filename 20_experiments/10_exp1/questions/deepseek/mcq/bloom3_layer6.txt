@@ -1,0 +1,54 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+
+### Stem Generation
+
+Frage: Um sowohl die Übertragungseffizienz als auch die Vertraulichkeit von Anwendungsdaten bei der Netzwerkkommunikation zu gewährleisten, welche zwei Kernaufgaben der Presentation Layer sind anzuwenden?
+
+### Key Generation
+
+Korrekte Antwort(en):
+a) Um die Übertragungseffizienz zu gewährleisten, ist die Kompression der Anwendungsdaten anzuwenden, um das Datenvolumen zu reduzieren. Für die Vertraulichkeit ist die Verschlüsselung der Daten anzuwenden, um sie vor unbefugtem Zugriff zu schützen. (Richtig)
+b) Die Anwendung von Datenkompression verringert die zu übertragende Datenmenge und erhöht so die Effizienz. Die Anwendung von Verschlüsselung stellt die Vertraulichkeit sicher, indem die Daten für Unbefugte unlesbar gemacht werden. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Um sowohl die Übertragungseffizienz als auch die Vertraulichkeit von Anwendungsdaten bei der Netzwerkkommunikation zu gewährleisten, welche zwei Kernaufgaben der Presentation Layer sind anzuwenden?
+
+Antwortmöglichkeiten:
+
+a) Um die Übertragungseffizienz zu gewährleisten, ist die Kompression der Anwendungsdaten anzuwenden, um das Datenvolumen zu reduzieren. Für die Vertraulichkeit ist die Verschlüsselung der Daten anzuwenden, um sie vor unbefugtem Zugriff zu schützen. (Richtig)
+b) Die Anwendung von Datenkompression verringert die zu übertragende Datenmenge und erhöht so die Effizienz. Die Anwendung von Verschlüsselung stellt die Vertraulichkeit sicher, indem die Daten für Unbefugte unlesbar gemacht werden. (Richtig)
+c) Die Konvertierung der Zeichendarstellung (z.B. ASCII zu Unicode) erhöht die Übertragungseffizienz durch einheitliche Kodierung, und die Endian-Konvertierung (z.B. little zu big endian) stellt die Vertraulichkeit durch maschinenabhängige Darstellung sicher. (Falsch)
+d) Fehlererkennung und -korrektur (z.B. CRC) gewährleisten die Übertragungseffizienz durch Vermeidung von Wiederholungen, und Authentifizierung der Kommunikationspartner sichert die Vertraulichkeit der Daten. (Falsch)
+
+### Source Text
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.

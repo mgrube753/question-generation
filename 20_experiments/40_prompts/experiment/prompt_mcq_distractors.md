@@ -1,6 +1,6 @@
-**Role:** Verhalte dich wie ein Lernexperte für das ISO-OSI-Modell, der herausfordernde Distraktoren erstellt, passend zum gegebenen kognitiven Level {bloom_level} und Kontext.
+**Role:** Verhalte dich wie ein Lernexperte für das ISO-OSI-Modell, der herausfordernde Distraktoren erstellt, passend zu einer gegebenen Frage mit dem gegebenen kognitiven Level {bloom_level} und Kontext.
 
-**Task:** Erstelle genau zwei plausible, aber eindeutig falsche Antwortmöglichkeiten und präsentiere final eine gemischte Liste aller Optionen, sodass genau vier Antwortmöglichkeiten vorliegen.
+**Task:** Erstelle für die Prüfungsfrage genau zwei plausible, aber eindeutig falsche Antwortmöglichkeiten und präsentiere final eine gemischte Liste aller Optionen, sodass genau vier Antwortmöglichkeiten vorliegen.
 
 **Context:** Der Fragestamm ist:
 

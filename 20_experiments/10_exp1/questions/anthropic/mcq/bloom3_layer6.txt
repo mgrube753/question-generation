@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Ein System muss Textdaten, die in ASCII kodiert vorliegen, an ein Mainframe-System übertragen, das ausschließlich EBCDIC verarbeitet. Welche Kernaufgabe des Presentation Layers wenden Sie an, um die korrekte Datenübertragung zu ermöglichen?
+Frage: Welche zwei Verfahren des Presentation Layers wenden Sie an, wenn Anwendungsdaten für die Übertragung zwischen zwei Systemen mit unterschiedlichen Zeichenkodierungen vorbereitet und gleichzeitig vor unbefugtem Zugriff geschützt werden müssen?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Sie wenden die Kernaufgabe Zeichen an, um die Zeichendarstellung von ASCII nach EBCDIC zu konvertieren. (Richtig)
-b) Sie nutzen die Konvertierung der Zeichendarstellung, um die ASCII-kodierten Textdaten in das EBCDIC-Format des Mainframe-Systems zu übersetzen. (Richtig)
+a) Zeichenkonvertierung zur Anpassung der unterschiedlichen Kodierungen (z.B. ASCII zu Unicode) und Verschlüsselung zum Schutz der Daten vor unbefugtem Zugriff (Richtig)
+b) Konvertierung der Zeichendarstellung für die systemübergreifende Kompatibilität und Verschlüsselung zur Gewährleistung der Vertraulichkeit bei der Übertragung (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ein System muss Textdaten, die in ASCII kodiert vorliegen, an ein Mainframe-System übertragen, das ausschließlich EBCDIC verarbeitet. Welche Kernaufgabe des Presentation Layers wenden Sie an, um die korrekte Datenübertragung zu ermöglichen?
+Frage: Welche zwei Verfahren des Presentation Layers wenden Sie an, wenn Anwendungsdaten für die Übertragung zwischen zwei Systemen mit unterschiedlichen Zeichenkodierungen vorbereitet und gleichzeitig vor unbefugtem Zugriff geschützt werden müssen?
 
 Antwortmöglichkeiten:
 
-a) Sie nutzen die Konvertierung der Zeichendarstellung, um die ASCII-kodierten Textdaten in das EBCDIC-Format des Mainframe-Systems zu übersetzen. (Richtig)
-b) Sie nutzen die Verschlüsselungsfunktion des Presentation Layers, um die ASCII-Daten in das für das Mainframe-System lesbare EBCDIC-Format zu transformieren. (Falsch)
-c) Sie wenden die Kernaufgabe Endian-Ness an, um die Datendarstellung der ASCII-Zeichen für das Mainframe-System anzupassen. (Falsch)
-d) Sie wenden die Kernaufgabe Zeichen an, um die Zeichendarstellung von ASCII nach EBCDIC zu konvertieren. (Richtig)
+a) Kompression zur Reduzierung der Datenmenge und Konvertierung der Datendarstellung (Endian-Ness) zur Anpassung an unterschiedliche Systemarchitekturen (Falsch)
+b) Konvertierung der Datendarstellung (Big Endian zu Little Endian) zur Anpassung der Zeichenkodierungen und Kompression zum Schutz der Daten durch Verkleinerung (Falsch)
+c) Konvertierung der Zeichendarstellung für die systemübergreifende Kompatibilität und Verschlüsselung zur Gewährleistung der Vertraulichkeit bei der Übertragung (Richtig)
+d) Zeichenkonvertierung zur Anpassung der unterschiedlichen Kodierungen (z.B. ASCII zu Unicode) und Verschlüsselung zum Schutz der Daten vor unbefugtem Zugriff (Richtig)
 
-### Source Text:
+### Source Text
 
 Presentation Layer 6
 Beschreibung

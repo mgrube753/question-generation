@@ -8,21 +8,21 @@ Die Studierenden können die Aufgabenverteilung zwischen den Schichten analysier
 
 ### Question Generation
 
-Frage: Differenzieren Sie die Flusskontrolle auf dem Data Link Layer, die Flusssteuerung auf dem Network Layer und die Flusssteuerung auf dem Transport Layer hinsichtlich ihrer jeweiligen Zielsetzungen und Reichweiten.
+Frage: Analysieren Sie die unterschiedlichen Ausprägungen der Flusssteuerung auf dem Data Link Layer, Network Layer und Transport Layer und setzen Sie diese in Beziehung zueinander, indem Sie die jeweiligen Ziele und Strategien differenzieren.
 
 ### Answer Generation + Union of all
 
-Frage: Differenzieren Sie die Flusskontrolle auf dem Data Link Layer, die Flusssteuerung auf dem Network Layer und die Flusssteuerung auf dem Transport Layer hinsichtlich ihrer jeweiligen Zielsetzungen und Reichweiten.
+Frage: Analysieren Sie die unterschiedlichen Ausprägungen der Flusssteuerung auf dem Data Link Layer, Network Layer und Transport Layer und setzen Sie diese in Beziehung zueinander, indem Sie die jeweiligen Ziele und Strategien differenzieren.
 
-Antwort: Die Flusskontrolle auf den drei Schichten unterscheidet sich sowohl in ihrer Zielsetzung als auch in ihrer Reichweite grundlegend:
+Antwort: Die Flusssteuerung existiert auf drei Schichten mit unterschiedlichen Ausprägungen:
 
-Die Flusskontrolle auf dem Data Link Layer zielt darauf ab, die Übertragung zwischen zwei direkt verbundenen Knoten zu regulieren. Ihre Reichweite ist auf eine einzelne physikalische Verbindung beschränkt (Hop-to-Hop). Die Zielsetzung besteht darin, einen schnellen Sender an einen langsameren Empfänger anzupassen, wobei Strategien wie Zwischenpuffern, Herunterregeln oder Warten zum Einsatz kommen. Diese Kontrolle arbeitet im Kontext der fehlergesicherten Übertragung über den Physical Layer.
+Data Link Layer (Schicht 2): Das Ziel ist die Vermeidung von Überlastung zwischen direkt verbundenen Geräten. Die Strategien umfassen Zwischenpuffern, Herunterregeln der Senderate und Warten lassen des Senders. Der Fokus liegt auf der lokalen Punkt-zu-Punkt-Verbindung über einen einzelnen physikalischen Link.
 
-Die Flusssteuerung auf dem Network Layer operiert in zwei verschiedenen Reichweiten: End-to-End vom ursprünglichen Sender zum weit entfernten Empfänger sowie Node-to-Node von jedem Zwischenknoten zum nächsten. Die Zielsetzung ist hier netzwerkübergreifend ausgerichtet und berücksichtigt, dass Daten über verschiedene Netzwerke mit möglicherweise unterschiedlichen Layer-2-Technologien transportiert werden müssen.
+Network Layer (Schicht 3): Das Ziel ist die netzwerkübergreifende Regulierung des Datenflusses. Zwei Strategien werden unterschieden: End-to-End-Steuerung zwischen ursprünglichem Sender und finalem Empfänger sowie Node-to-Node-Steuerung zwischen aufeinanderfolgenden Zwischenknoten. Der Fokus liegt auf der Vermittlung über verschiedene Netzwerke hinweg.
 
-Die Flusssteuerung auf dem Transport Layer fokussiert sich auf die Teilnehmer-Charakteristik. Ihre Reichweite erstreckt sich End-to-End zwischen den eigentlichen Kommunikationsteilnehmern. Die Zielsetzung besteht darin, die spezifischen Eigenschaften und Kapazitäten der kommunizierenden Anwendungen zu berücksichtigen und ist eng mit der Dienstqualität verbunden.
+Transport Layer (Schicht 4): Das Ziel ist die Anpassung an die spezifischen Charakteristiken der Kommunikationsteilnehmer. Die Strategie nutzt teilnehmerspezifische Eigenschaften für eine individuell optimierte Flusssteuerung.
 
-Der zentrale Unterschied liegt darin, dass die Reichweite von lokal (Data Link Layer) über netzwerkübergreifend (Network Layer) bis hin zur Teilnehmerebene (Transport Layer) zunimmt, während sich die Zielsetzung von der hardwarenahen Anpassung zur anwendungsorientierten Optimierung verschiebt. (Richtig)
+Beziehungen zwischen den Ausprägungen: Es besteht eine hierarchische Abhängigkeit, bei der die höheren Schichten auf den Mechanismen der unteren aufbauen. Die Granularität nimmt von unten nach oben zu, von lokaler über netzwerkübergreifende bis zu teilnehmerbezogener Steuerung. Die Funktionen sind komplementär, da jede Schicht unterschiedliche Engpasssituationen adressiert: Schicht 2 behandelt lokale Hardware-Limits, Schicht 3 berücksichtigt Netzwerkkapazitäten und Routing-Pfade, Schicht 4 bezieht individuelle Teilnehmerkapazitäten und Anwendungsanforderungen ein. (Richtig)
 
 ### Source Text
 

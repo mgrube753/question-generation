@@ -2,25 +2,33 @@
 
 ### Bloom Level: Understanding
 
-### Learning Objective: 
+### Learning Objective 
 
 Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Erklären Sie, wie die Data Link Layer des ISO-OSI-Modells eine zuverlässige Übertragung über den potenziell fehleranfälligen Physical Layer sicherstellt.
+Frage: In welchen zwei Schichten des ISO-OSI-Modells ist die Ende-zu-Ende-Flusssteuerung eine Kernaufgabe?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
-a) Der Data Link Layer stellt die Zuverlässigkeit sicher, indem er die vom Physical Layer übertragenen Bits in Frames zusammenfasst (Segmentierung) und Mechanismen zur Fehlererkennung (z.B. CRC) sowie zur Flußkontrolle einsetzt. So können Übertragungsfehler erkannt und die Senderate angepasst werden, um Datenverluste zu vermeiden. (Richtig)
-b) Durch Aufgaben wie Fehlerkontrolle (Erkennung und Signalisierung von Fehlern), Adressierung (Identifikation von Sendern und Empfängern) und Medienzugriffssteuerung gewährleistet der Data Link Layer eine fehlergesicherte Übertragung über den fehleranfälligen Physical Layer, indem er die rohen Bits des Physical Layers in strukturierte, kontrollierte Einheiten umwandelt. (Richtig)
 
-### Distractor Generation + Union of all:
+a) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
+b) Vermittlungsschicht (Schicht 3) und Transportschicht (Schicht 4) (Richtig)
 
-None
+### Distractor Generation + Union of all
 
-### Source Text:
+Frage: In welchen zwei Schichten des ISO-OSI-Modells ist die Ende-zu-Ende-Flusssteuerung eine Kernaufgabe?
+
+Antwortmöglichkeiten:
+
+a) Data Link Layer (Schicht 2) und Transport Layer (Schicht 4) (Falsch)
+b) Network Layer (Schicht 3) und Session Layer (Schicht 5) (Falsch)
+c) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
+d) Vermittlungsschicht (Schicht 3) und Transportschicht (Schicht 4) (Richtig)
+
+### Source Text
 
 Physical Layer 1
 Beschreibung

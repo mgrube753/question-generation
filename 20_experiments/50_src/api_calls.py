@@ -8,11 +8,24 @@ from tenacity import (
     after_log,
 )
 import logging
+from tqdm import tqdm
 from constants import REQUEST_DELAY_SECONDS, LLM_MODEL_IDS, DRY_RUN
+
+
+class TqdmLoggingHandler(logging.Handler):
+    def emit(self, record):
+        try:
+            msg = self.format(record)
+            tqdm.write(msg)
+        except Exception:
+            self.handleError(record)
+
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[TqdmLoggingHandler()],
 )
 
 RETRYABLE_EXCEPTIONS = (

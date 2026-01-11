@@ -6,29 +6,29 @@
 
 Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Ein Netzwerkgerät erkennt, dass der Empfänger die eingehenden Daten nicht schnell genug verarbeiten kann, und puffert daraufhin die Daten zwischen, bis der Empfänger wieder bereit ist. Welcher OSI-Schicht ist dieser Vorgang zuzuordnen?
+Frage: Ermitteln Sie, welche zwei Schichten des OSI-Modells primär beteiligt sind, wenn in einem Kommunikationsvorgang einzelne Bits zu 8-bit Bytes zusammengefasst werden und die Daten anschließend zur Übertragung komprimiert werden.
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Data Link Layer (Schicht 2) (Richtig)
-b) Sicherungsschicht (Layer 2) (Richtig)
+a) Data Link Layer (Schicht 2) für das Zusammenfassen einzelner Bits zu 8-bit Bytes und Presentation Layer (Schicht 6) für die Komprimierung der Daten (Richtig)
+b) Schicht 2 übernimmt die Segmentierung der Bits zu Bytes, Schicht 6 ist für die Kompression zuständig (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ein Netzwerkgerät erkennt, dass der Empfänger die eingehenden Daten nicht schnell genug verarbeiten kann, und puffert daraufhin die Daten zwischen, bis der Empfänger wieder bereit ist. Welcher OSI-Schicht ist dieser Vorgang zuzuordnen?
+Frage: Ermitteln Sie, welche zwei Schichten des OSI-Modells primär beteiligt sind, wenn in einem Kommunikationsvorgang einzelne Bits zu 8-bit Bytes zusammengefasst werden und die Daten anschließend zur Übertragung komprimiert werden.
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2) (Richtig)
-b) Network Layer (Schicht 3) (Falsch)
-c) Sicherungsschicht (Layer 2) (Richtig)
-d) Transport Layer (Schicht 4) (Falsch)
+a) Data Link Layer (Schicht 2) für das Zusammenfassen einzelner Bits zu 8-bit Bytes und Presentation Layer (Schicht 6) für die Komprimierung der Daten (Richtig)
+b) Physical Layer (Schicht 1) für das Zusammenfassen einzelner Bits zu 8-bit Bytes und Application Layer (Schicht 7) für die Komprimierung der Daten (Falsch)
+c) Physical Layer (Schicht 1) für das Zusammenfassen einzelner Bits zu 8-bit Bytes und Session Layer (Schicht 5) für die Komprimierung der Daten (Falsch)
+d) Schicht 2 übernimmt die Segmentierung der Bits zu Bytes, Schicht 6 ist für die Kompression zuständig (Richtig)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

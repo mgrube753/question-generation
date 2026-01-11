@@ -8,21 +8,13 @@ Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adre
 
 ### Question Generation
 
-Frage: Beurteilen Sie anhand der Kriterien Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node), ob ein Netzwerkdesign, das ausschließlich Layer-2-Adressen nutzt, keine Auswahl vermittelnder Zwischenknoten vorsieht und Flusssteuerung nur Node-to-Node implementiert, eine zuverlässige netzwerkübergreifende Kommunikation zwischen Geräten in unterschiedlichen Netzwerken ermöglicht.
+Frage: Beurteilen Sie, ob in einem Verbund aus zwei nicht direkt verbundenen Geräten in unterschiedlichen Layer-2-Technologien eine Lösung, die ausschließlich MAC-Adressen zur Zielidentifikation nutzt, das Routing statisch auf einen Zwischenknoten festlegt und nur End-to-End-Flusssteuerung vorsieht, die Anforderungen an netzwerkübergreifende Kommunikation erfüllt, gemessen an den Kriterien Adressierung, Routing und Flusssteuerung (End-to-End vs. Node-to-Node)?
 
 ### Answer Generation + Union of all
 
-Frage: Beurteilen Sie anhand der Kriterien Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node), ob ein Netzwerkdesign, das ausschließlich Layer-2-Adressen nutzt, keine Auswahl vermittelnder Zwischenknoten vorsieht und Flusssteuerung nur Node-to-Node implementiert, eine zuverlässige netzwerkübergreifende Kommunikation zwischen Geräten in unterschiedlichen Netzwerken ermöglicht.
+Frage: Beurteilen Sie, ob in einem Verbund aus zwei nicht direkt verbundenen Geräten in unterschiedlichen Layer-2-Technologien eine Lösung, die ausschließlich MAC-Adressen zur Zielidentifikation nutzt, das Routing statisch auf einen Zwischenknoten festlegt und nur End-to-End-Flusssteuerung vorsieht, die Anforderungen an netzwerkübergreifende Kommunikation erfüllt, gemessen an den Kriterien Adressierung, Routing und Flusssteuerung (End-to-End vs. Node-to-Node)?
 
-Antwort: Ein solches Design ermöglicht keine zuverlässige netzwerkübergreifende Kommunikation zwischen Geräten in unterschiedlichen Netzwerken.
-
-Adressierung: Layer-2-Adressen sind nicht als netzwerkübergreifende, hierarchische Adressen ausgelegt, sondern gelten primär innerhalb eines Layer-2-Segments/Broadcast-Domains. Für Kommunikation zwischen unterschiedlichen Netzwerken (insbesondere bei unterschiedlichen Layer-2-Technologien) fehlen damit die notwendigen, netzwerkübergreifenden Adressen, um Endgeräte eindeutig über Netzgrenzen hinweg zu identifizieren und erreichbar zu machen.
-
-Routing: Wenn keine Auswahl vermittelnder Zwischenknoten vorgesehen ist, existiert kein Routing. Damit kann ein Knoten keine Pfade über mehrere Netzwerke bestimmen und Pakete nicht gezielt über Router/Next-Hops in andere Netze weiterleiten. Ohne Routing ist Kommunikation nur innerhalb direkt erreichbarer Layer-2-Reichweite möglich; netzwerkübergreifende Kommunikation ist damit nicht gewährleistet.
-
-Flusssteuerung: Reine Node-to-Node-Flusssteuerung kann höchstens lokale Überlast zwischen jeweils benachbarten Knoten reduzieren, stellt aber keine Ende-zu-Ende-Steuerung vom Sender bis zum entfernten Empfänger sicher. Bei mehreren Zwischenknoten kann es dennoch zu Überlast, Pufferverlusten oder unfairer Ressourcenverteilung kommen, ohne dass Sender und Empfänger dies Ende-zu-Ende koordinieren. Damit trägt Node-to-Node allein nicht zur verlässlichen netzwerkübergreifenden Kommunikation im Sinne einer durchgängigen Kontrolle über die gesamte Verbindung bei.
-
-Gesamturteil: Nach den Layer-3-Kernkriterien fehlt dem Design sowohl die netzwerkübergreifende Adressierung als auch Routing; zudem ist Flusssteuerung nur hop-by-hop und nicht Ende-zu-Ende. Daher kann es die geforderte zuverlässige Kommunikation zwischen Geräten in unterschiedlichen Netzwerken nicht sicherstellen. (Richtig)
+Antwort: Nein, die Anforderungen werden insgesamt nicht erfüllt: (1) Adressierung: Reine MAC-Adressen sind Layer-2-spezifisch und nicht als netzwerkübergreifende, technologieunabhängige Adressen ausgelegt; bei unterschiedlichen Layer-2-Technologien fehlt damit eine geeignete Layer-3-Adressierung. (2) Routing: Ein statisch auf genau einen Zwischenknoten festgelegter Pfad erfüllt die Kernaufgabe „Auswahl der vermittelnden Zwischenknoten“ nur eingeschränkt und ist nicht robust/skalierbar bei Topologieänderungen oder Ausfällen; netzwerkübergreifende Kommunikation verlangt prinzipiell eine (zumindest konzeptionell) pfadwahlfähige Vermittlung. (3) Flusssteuerung: Ausschließlich End-to-End-Flusssteuerung lässt Überlastsituationen auf einzelnen Teilstrecken unberücksichtigt; für netzwerkübergreifende Übertragung sind zusätzlich Node-to-Node-Mechanismen (hop-by-hop) als Strategie zur Beherrschung lokaler Engpässe erforderlich bzw. zumindest vorgesehen. (Richtig)
 
 ### Source Text
 

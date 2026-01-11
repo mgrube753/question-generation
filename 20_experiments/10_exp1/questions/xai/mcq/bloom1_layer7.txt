@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche drei Kernaufgaben werden für die Application Layer 7 beschrieben?
+Frage: Welche zwei Fragen werden bei den Protokollelementen der Application Layer 7 gestellt?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Grundkonzepte, Protokollelemente und Verhalten. (Richtig)
-b) Grundkonzepte (Welche Begriffe treten in der Anwendung auf), Protokollelemente (Welche Anforderungen können gestellt werden? Welche Daten werden dabei erwartet?) und Verhalten (Wie reagiert die Anwendung auf die Anforderungen durch diese Protokollelemente?). (Richtig)
+a) Welche Anforderungen können gestellt werden? Welche Daten werden dabei erwartet? (Richtig)
+b) Die Fragen sind: Welche Anforderungen können gestellt werden? Und welche Daten werden dabei erwartet? (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche drei Kernaufgaben werden für die Application Layer 7 beschrieben?
+Frage: Welche zwei Fragen werden bei den Protokollelementen der Application Layer 7 gestellt?
 
 Antwortmöglichkeiten:
 
-a) Datenkonvertierung, Verschlüsselung und Komprimierung. (Falsch)
-b) Grundkonzepte (Welche Begriffe treten in der Anwendung auf), Protokollelemente (Welche Anforderungen können gestellt werden? Welche Daten werden dabei erwartet?) und Verhalten (Wie reagiert die Anwendung auf die Anforderungen durch diese Protokollelemente?). (Richtig)
-c) Grundkonzepte, Protokollelemente und Verhalten. (Richtig)
-d) Syntax, Semantik und Timing. (Falsch)
+a) Die Fragen sind: Welche Anforderungen können gestellt werden? Und welche Daten werden dabei erwartet? (Richtig)
+b) Welche Anforderungen können gestellt werden? Welche Daten werden dabei erwartet? (Richtig)
+c) Welche Begriffe treten in der Anwendung auf? Wie reagiert die Anwendung auf die Anforderungen? (Falsch)
+d) Wie reagiert die Anwendung auf die Anforderungen durch diese Protokollelemente? Welche Kernaufgaben gibt es? (Falsch)
 
-### Source Text:
+### Source Text
 
 Application Layer 7
 Beschreibung

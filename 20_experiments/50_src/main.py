@@ -2,6 +2,10 @@ from api_config import init_clients
 from question_generation import run_exp1, run_exp2
 from prompt_utils import get_bloom
 import constants
+import sys
+
+sys.stdout.reconfigure(line_buffering=True)
+sys.stderr.reconfigure(line_buffering=True)
 
 
 def main():

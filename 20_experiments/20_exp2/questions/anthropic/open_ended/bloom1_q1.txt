@@ -8,27 +8,27 @@ Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter R
 
 ### Question Generation
 
-Frage: Listen Sie die sieben Schichten des ISO-OSI-Modells in aufsteigender Reihenfolge auf und beschreiben Sie zu jeder Schicht deren Hauptfunktion.
+Frage: Zählen Sie die sieben Schichten des ISO-OSI-Modells in aufsteigender Reihenfolge auf und benennen Sie jeweils die Hauptfunktion der einzelnen Schichten.
 
 ### Answer Generation + Union of all
 
-Frage: Listen Sie die sieben Schichten des ISO-OSI-Modells in aufsteigender Reihenfolge auf und beschreiben Sie zu jeder Schicht deren Hauptfunktion.
+Frage: Zählen Sie die sieben Schichten des ISO-OSI-Modells in aufsteigender Reihenfolge auf und benennen Sie jeweils die Hauptfunktion der einzelnen Schichten.
 
-Antwort: Die sieben Schichten des ISO-OSI-Modells in aufsteigender Reihenfolge sind:
+Antwort: Die sieben Schichten des ISO-OSI-Modells in aufsteigender Reihenfolge mit ihren Hauptfunktionen sind:
 
-Schicht 1 - Physical Layer: Bereitstellung einer physikalischen Konzeption für Codierung, Transport und Decodierung logischer Werte.
+1. Physical Layer (Bitübertragungsschicht): Bereitstellung einer physikalischen Konzeption für Codierung, Transport und Decodierung logischer Werte.
 
-Schicht 2 - Data Link Layer: Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer.
+2. Data Link Layer (Sicherungsschicht): Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer.
 
-Schicht 3 - Network Layer: Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen Netzwerken möglicherweise verschiedener Layer 2 Technologien befinden.
+3. Network Layer (Vermittlungsschicht): Bereitstellung einer Übertragung zwischen Geräten in unterschiedlichen Netzwerken verschiedener Layer-2-Technologien.
 
-Schicht 4 - Transport Layer: Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+4. Transport Layer (Transportschicht): Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
 
-Schicht 5 - Session Layer: Bereitstellung der Funktionen für das Sitzungskonzept einer Kommunikationsbeziehung.
+5. Session Layer (Sitzungsschicht): Bereitstellung der Funktionen für das Sitzungskonzept einer Kommunikationsbeziehung.
 
-Schicht 6 - Presentation Layer: Kodierung beziehungsweise Darstellung der Anwendungsdaten als Bitstrom.
+6. Presentation Layer (Darstellungsschicht): Kodierung der Anwendungsdaten als Bitstrom.
 
-Schicht 7 - Application Layer: Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten. (Richtig)
+7. Application Layer (Anwendungsschicht): Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten. (Richtig)
 
 ### Source Text
 

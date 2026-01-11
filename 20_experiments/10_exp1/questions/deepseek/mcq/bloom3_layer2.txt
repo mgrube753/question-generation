@@ -2,32 +2,32 @@
 
 ### Bloom Level: Applying
 
-### Learning Objective: 
+### Learning Objective 
 
 Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
 
-### Stem Generation:
+### Stem Generation
 
-None
+Frage: Nennen Sie zwei Kernaufgaben des Data Link Layers, die angewendet werden müssen, um eine zuverlässige Datenübertragung über einen fehleranfälligen Physical Layer bei unausgeglichenen Sende- und Empfangsgeschwindigkeiten zu gewährleisten.
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
-a) In einem Ethernet-Netzwerk unterteilt der Data Link Layer den eingehenden Bitstrom in Frames, ergänzt jedes Frame mit einer Prüfsumme zur Fehlererkennung und verwendet MAC-Adressen, um die beteiligten Geräte eindeutig zu identifizieren. (Richtig)
-b) Bei einer drahtlosen Übertragung mit stark variierenden Signalstärken setzt der Data Link Layer eine Sliding-Window-Flusskontrolle ein, um Überlastung des Empfängers zu vermeiden, und koordiniert den Medienzugriff durch ein Reservierungsprotokoll, um Kollisionen zu minimieren. (Richtig)
+a) Fehlerkontrolle zur Erkennung und Behebung von Übertragungsfehlern auf dem fehleranfälligen Physical Layer und Flusskontrolle zur Anpassung der Senderate an die langsamere Empfangsgeschwindigkeit, z.B. durch Zwischenpuffern oder Sendeunterbrechung. (Richtig)
+b) Die Anwendung von Fehlerkorrekturverfahren (z.B. CRC-Prüfsummen) für eine fehlergesicherte Übertragung und die Implementierung von Flusskontrollmechanismen (z.B. Stop-and-Wait oder Sliding Window), um bei Geschwindigkeitsdifferenzen einen Datenverlust zu verhindern. (Richtig)
 
-### Distractor Generation + Union of all:
+### Distractor Generation + Union of all
 
-Frage: None
+Frage: Nennen Sie zwei Kernaufgaben des Data Link Layers, die angewendet werden müssen, um eine zuverlässige Datenübertragung über einen fehleranfälligen Physical Layer bei unausgeglichenen Sende- und Empfangsgeschwindigkeiten zu gewährleisten.
 
 Antwortmöglichkeiten:
 
-a) In einem Ethernet-Netzwerk unterteilt der Data Link Layer den eingehenden Bitstrom in Frames, ergänzt jedes Frame mit einer Prüfsumme zur Fehlererkennung und verwendet MAC-Adressen, um die beteiligten Geräte eindeutig zu identifizieren. (Richtig)
-b) Bei einer drahtlosen Übertragung mit stark variierenden Signalstärken setzt der Data Link Layer eine Sliding-Window-Flusskontrolle ein, um Überlastung des Empfängers zu vermeiden, und koordiniert den Medienzugriff durch ein Reservierungsprotokoll, um Kollisionen zu minimieren. (Richtig)
-c) Um bei einer TCP-Verbindung mit hoher Latenz einen Paketverlust zu kompensieren, nutzt der Data Link Layer eine adaptive Timeout-Berechnung und führt eine Neuzusammenstellung der Datenpakete in der korrekten Reihenfolge durch. (Falsch)
-d) Bei der Übermittlung eines IP-Pakets über verschiedene Router-Netzwerke hinweg ist der Data Link Layer für die logische Adressierung mit IP-Adressen und die Fragmentierung der Pakete basierend auf der MTU der Zwischenstrecken verantwortlich. (Falsch)
+a) Segmentierung von Bitströmen in Frames und Adressierung von Netzwerkgeräten zur korrekten Zustellung. (Falsch)
+b) Fehlerkontrolle zur Erkennung und Behebung von Übertragungsfehlern auf dem fehleranfälligen Physical Layer und Flusskontrolle zur Anpassung der Senderate an die langsamere Empfangsgeschwindigkeit, z.B. durch Zwischenpuffern oder Sendeunterbrechung. (Richtig)
+c) Routing von Datenpaketen über verschiedene Netzwerkpfade und Priorisierung von Datenströmen mittels Quality of Service. (Falsch)
+d) Die Anwendung von Fehlerkorrekturverfahren (z.B. CRC-Prüfsummen) für eine fehlergesicherte Übertragung und die Implementierung von Flusskontrollmechanismen (z.B. Stop-and-Wait oder Sliding Window), um bei Geschwindigkeitsdifferenzen einen Datenverlust zu verhindern. (Richtig)
 
-### Source Text:
+### Source Text
 
 Data Link Layer 2
 Beschreibung

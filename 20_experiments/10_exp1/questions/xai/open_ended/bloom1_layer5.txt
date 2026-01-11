@@ -8,11 +8,11 @@ Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwal
 
 ### Question Generation
 
-Frage: Nennen Sie die drei Kernaufgaben der Session Layer 5.
+Frage: Listen Sie die drei Kernaufgaben der Session Layer 5 auf.
 
 ### Answer Generation + Union of all
 
-Frage: Nennen Sie die drei Kernaufgaben der Session Layer 5.
+Frage: Listen Sie die drei Kernaufgaben der Session Layer 5 auf.
 
 Antwort: Die drei Kernaufgaben der Session Layer 5 sind: (1) Sitzungen aufbauen, verwalten, zurückweisen und beenden; (2) Synchronisation durch Setzen von Zwischenpunkten; (3) Bündelung durch Gruppierung zusammengehöriger Transaktionen. (Richtig)
 

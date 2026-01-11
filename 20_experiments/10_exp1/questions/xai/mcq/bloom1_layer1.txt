@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche sind die drei Kernaufgaben des Physical Layer 1?
+Frage: Welche der folgenden sind Beispiele für Codierungsverfahren im Physical Layer?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Codierung, Transport und Decodierung. (Richtig)
-b) Die drei Kernaufgaben sind Codierung, Transport und Decodierung. (Richtig)
+a) NRZ (Richtig)
+b) Manchester (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche sind die drei Kernaufgaben des Physical Layer 1?
+Frage: Frage: Welche der folgenden sind Beispiele für Codierungsverfahren im Physical Layer?
 
 Antwortmöglichkeiten:
 
-a) Codierung, Transport und Decodierung. (Richtig)
-b) Die drei Kernaufgaben sind Codierung, Transport und Decodierung. (Richtig)
-c) Framing, Error Detection und Flow Control. (Falsch)
-d) Modulation, Demodulation und Amplification. (Falsch)
+a) Abtastung (Falsch)
+b) Manchester (Richtig)
+c) NRZ (Richtig)
+d) Telefonkabel (Falsch)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

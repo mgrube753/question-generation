@@ -2,33 +2,43 @@
 
 ### Bloom Level: Creating
 
-### Learning Objective:
+### Learning Objective
 
 Die Studierenden können auf Basis der Schichtenprinzipien eigene Lösungsvorschläge für Kommunikationsprobleme entwickeln, die den Aufgaben der jeweiligen Schichten entsprechen
 
-### Question Generation:
+### Question Generation
 
-Frage: Entwerfen Sie ein neues Kommunikationsprotokoll für ein Szenario mit hohen Anforderungen an Datensicherheit und Echtzeitfähigkeit (z.B. Fernsteuerung kritischer Infrastruktur). Beschreiben Sie detailliert, wie Ihre Protokollspezifikation die spezifischen Kernaufgaben aller sieben OSI-Schichten innovativ umsetzt und integriert.
+Frage: Entwerfen Sie ein Protokollkonzept für die zuverlässige Übertragung von Steuerdaten in einem heterogenen Netzwerk, das sowohl kabelgebundene als auch funkbasierte Segmente umfasst, und erläutern Sie, wie Ihr Entwurf die Kernaufgaben der Physical, Data Link, Network und Transport Layer adressiert.
 
-### Answer Generation + Union of all:
+### Answer Generation + Union of all
 
-Frage: Entwerfen Sie ein neues Kommunikationsprotokoll für ein Szenario mit hohen Anforderungen an Datensicherheit und Echtzeitfähigkeit (z.B. Fernsteuerung kritischer Infrastruktur). Beschreiben Sie detailliert, wie Ihre Protokollspezifikation die spezifischen Kernaufgaben aller sieben OSI-Schichten innovativ umsetzt und integriert.
+Frage: Entwerfen Sie ein Protokollkonzept für die zuverlässige Übertragung von Steuerdaten in einem heterogenen Netzwerk, das sowohl kabelgebundene als auch funkbasierte Segmente umfasst, und erläutern Sie, wie Ihr Entwurf die Kernaufgaben der Physical, Data Link, Network und Transport Layer adressiert.
 
-Antwort: (Richtig)
-Protokollname: Secure Real-time Infrastructure Control Protocol (SRICP). Dieses Protokoll ist speziell für die Fernsteuerung kritischer Infrastrukturen (z.B. Energieversorgung, Verkehrsleitsysteme) entworfen, wo hohe Datensicherheit und Echtzeitfähigkeit (geringe Latenz, garantierte Zustellung) essentiell sind. Die nachfolgende Spezifikation beschreibt die innovative Umsetzung der Kernaufgaben jeder OSI-Schicht.
+Antwort: Das Protokollkonzept "Reliable Control Transport Protocol (RCTP)" ist für die zuverlässige Übertragung von Steuerdaten in heterogenen Netzwerken entworfen. Es adressiert die Kernaufgaben der genannten Schichten wie folgt:
 
-**Physical Layer (Schicht 1):**
-- *Codierung*: Verwendung einer modifizierten Manchester-Codierung („Secure-Manchester“), die zusätzlich zu den Datenbits ein periodisches Synchronisationssignal und eine Prüfsumme pro Bitblock (z.B. 10 Bits) einbettet. Dies ermöglicht sofortige Erkennung von Bitfehlern und exakte Taktrückgewinnung, selbst bei gestörten Medien.
-- *Transport*: Primär werden Lichtwellenleiter (Single-Mode-Faser) eingesetzt, die durch physische Abschirmung und kontinuierliche Signalintegritätsprüfung (Dauerlichtmessung) gegen Abhör- und Störangriffe geschützt sind. Als Redundanz kommen gesicherte Richtfunkstrecken (mit Frequenzsprung und Beamforming) zum Einsatz.
-- *Decodierung*: Adaptive Detektionsbereiche basierend auf Signal-to-Noise-Ratio (SNR), die in Echtzeit angepasst werden, um Bitfehlerraten zu minimieren. Eine Hardware-beschleunigte Prüfung der eingebetteten Prüfsumme leitet bei Fehlererkennung sofort eine Neusynchronisation ein.
+**Physical Layer (1):**
+*   **Codierung/Decodierung:** Für kabelgebundene Segmente (z.B. Ethernet) wird eine robuste Leitungscodierung wie 4B/5B eingesetzt, um Gleichspannungsfreiheit und Taktrückgewinnung zu sichern. Für funkbasierte Segmente (z.B. WLAN) wird eine modulationsrobuste Codierung wie DSSS (Direct Sequence Spread Spectrum) kombiniert mit einer Fehler korrigierenden Vorwärtscodierung (FEC) auf Bit-Ebene verwendet, um Bitfehler durch Interferenzen zu mindern.
+*   **Transport:** Der Layer abstrahiert die spezifischen Medien (Kupfer, Glasfaser, Funk). Für Funksignale werden Verfahren zur adaptiven Leistungsregelung und Frequenzwahl definiert, um Signalstärke zu optimieren und Störungen zu umgehen.
 
-**Data Link Layer (Schicht 2):**
-- *Fehlerkontrolle*: Jeder Frame enthält eine starke CRC-32-Prüfsumme. Statt aufwändiger Fehlerkorrektur wird ein selektives Wiederholungs-ARQ (Automatic Repeat Request) mit Prioritätsqueues verwendet: Kritische Frames werden sofort wiederholt, während nicht-kritische Frames verworfen werden können, um Latenz niedrig zu halten.
-- *Flusskontrolle*: Ein kreditbasiertes Verfahren mit dynamischen Fenstergrößen, die auf die aktuelle Round-Trip-Time (RTT) reagieren. Der Empfänger kann den Sender anweisen, für bestimmte Prioritätsstufen temporär zu pausieren.
-- *Segmentierung*: Frames haben eine variable Länge (bis zu 256 Bytes), um Overhead zu minimieren. Jeder Frame enthält eine Längenangabe und eine Prioritätskennung im Header.
-- *Identifikation*: 16-Bit-Adressen, wobei die oberen 4 Bits eine Sicherheitsdomäne kennzeichnen. Adressen werden bei
+**Data Link Layer (2):**
+*   **Segmentierung/Identifikation:** Daten werden zu variablen, aber maximal großen Frames segmentiert, die eine eindeutige Geräteadresse (MAC-Adresse) im heterogenen Netz tragen. Ein spezieller Frame-Typ kennzeichnet Steuerdaten mit hoher Priorität.
+*   **Fehlerkontrolle:** Jeder Frame enthält eine starke zyklische Redundanzprüfung (CRC-32) zur Fehlererkennung. Auf Funkssegmenten wird ein automatischer Wiederholungsaufruf (ARQ) mit selektivem Wiederholen (Selective Repeat) eingesetzt, um beschädigte Frames gezielt neu anzufordern. Für drahtgebundene, zuverlässigere Segmente kann ARQ optional deaktiviert werden.
+*   **Medienzugriff:** Für kabelgebundene Segmente wird CSMA/CD (bei Halbduplex) bzw. vollduplexer Zugriff verwendet. Für das funkbasierte Segment wird ein zeitgesteuertes, reservierungsbasiertes Zugriffsverfahren (wie TDMA mit Slot-Reservierung) definiert, um deterministische Zugriffszeiten für zeitkritische Steuerdaten zu garantieren und Kollisionen zu vermeiden.
+*   **Flusskontrolle:** Eine fensterbasierte Flusskontrolle auf Verbindungsbasis zwischen direkten Nachbarknoten (Node-to-Node) verhindert die Überlastung von Routern oder Access Points.
 
-### Source Text:
+**Network Layer (3):**
+*   **Adressierung:** Es wird eine hierarchische, netzwerkübergreifende logische Adressierung (z.B. nach IPv6-Prinzip) eingeführt, die Geräte unabhängig von der darunterliegenden Layer-2-Technologie identifiziert.
+*   **Routing:** Ein dynamisches Routing-Protokoll (z.B. ein modifizierter Link-State-Algorithmus) berechnet Pfade unter Berücksichtigung von Metriken wie erwarteter Paketverlustrate (für Funkstrecken), Latenz und Link-Typ. Dies ermöglicht die Wahl zuverlässigerer Pfade für Steuerdaten.
+*   **Flusssteuerung:** Eine End-to-End-Flusssteuerung wird auf dieser Ebene nicht implementiert, um Doppelungen zu vermeiden; dies ist Aufgabe des Transport Layers. Die Node-to-Node-Flusskontrolle erfolgt wie in Layer 2 beschrieben.
+
+**Transport Layer (4):**
+*   **Adressierung:** Der Dienst wird über Port-Adressen (z.B. dedizierter RCTP-Port) für spezifische Steueranwendungen auf den Endgeräten bereitgestellt.
+*   **Zuverlässigkeit & Flusssteuerung:** RCTP stellt eine verbindungsorientierte, zuverlässige Ende-zu-Ende-Übertragung sicher. Es nutzt eine kumulierte Bestätigung und eine kombinierte Paketverlust-Erkennung durch Timeouts und Duplicate ACKs. Die Ende-zu-Ende-Flusssteuerung ist fensterbasiert und passt die Senderate dynamisch an die Applikationscharakteristik des Empfängers und die geschätzte Netzwerkkapazität an.
+*   **Dienstqualität (QoS):** RCTP priorisiert Steuerdatenströme explizit. Es bietet garantierte Minima für Bandbreite und maximale Latenz durch enge Kopplung mit dem QoS-Framework der unterliegenden Netzwerk- und Data-Link-Schichten (z.B. durch Setzen entsprechender DSCP/IP-Precedence Werte). Jitter wird durch einen adaptiven Pufferungsmechanismus auf Empfängerseite ausgeglichen.
+
+(Richtig)
+
+### Source Text
 
 Physical Layer 1
 Beschreibung

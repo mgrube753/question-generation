@@ -8,13 +8,13 @@ Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwal
 
 ### Question Generation
 
-Frage: Veranschaulichen Sie anhand eines Beispiels einer Dateiübertragung, wie Synchronisationspunkte eingesetzt werden können, um bei einem Verbindungsabbruch den Datenverlust zu minimieren.
+Frage: Ermitteln Sie, welche Funktionen der Sitzungsschicht eingesetzt werden müssen, wenn bei einer unterbrochenen Dateiübertragung der Transfer an einem zuvor gesetzten Zwischenpunkt fortgesetzt werden soll, anstatt die Übertragung vollständig neu zu starten.
 
 ### Answer Generation + Union of all
 
-Frage: Veranschaulichen Sie anhand eines Beispiels einer Dateiübertragung, wie Synchronisationspunkte eingesetzt werden können, um bei einem Verbindungsabbruch den Datenverlust zu minimieren.
+Frage: Ermitteln Sie, welche Funktionen der Sitzungsschicht eingesetzt werden müssen, wenn bei einer unterbrochenen Dateiübertragung der Transfer an einem zuvor gesetzten Zwischenpunkt fortgesetzt werden soll, anstatt die Übertragung vollständig neu zu starten.
 
-Antwort: Bei der Übertragung einer großen Datei von beispielsweise 100 MB setzt der Session Layer in regelmäßigen Abständen Synchronisationspunkte. Angenommen, alle 10 MB wird ein solcher Zwischenpunkt gesetzt und von beiden Kommunikationspartnern bestätigt. Nach erfolgreicher Übertragung von 40 MB wird Synchronisationspunkt 4 gesetzt. Während der weiteren Übertragung bei etwa 45 MB tritt ein Verbindungsabbruch auf. Nach Wiederherstellung der Verbindung muss nicht die gesamte Datei erneut übertragen werden. Stattdessen kann die Übertragung beim letzten bestätigten Synchronisationspunkt, also bei 40 MB, fortgesetzt werden. Auf diese Weise gehen nur die 5 MB zwischen dem letzten Synchronisationspunkt und dem Abbruchpunkt verloren, anstatt der bereits übertragenen 45 MB. Der maximale Datenverlust wird somit auf das Intervall zwischen zwei Synchronisationspunkten begrenzt, was den Gesamtaufwand bei Verbindungsproblemen erheblich reduziert und eine effiziente Wiederaufnahme der Sitzung ermöglicht. (Richtig)
+Antwort: Für die Fortsetzung einer unterbrochenen Dateiübertragung an einem Zwischenpunkt müssen zwei Funktionen der Sitzungsschicht eingesetzt werden. Erstens wird die Synchronisationsfunktion benötigt, die das Setzen von Zwischenpunkten während der Übertragung ermöglicht. Diese Synchronisationspunkte markieren den Fortschritt der Datenübertragung und dienen als Wiederaufsetzpunkte. Zweitens muss die Sitzungsverwaltung aktiv sein, um die unterbrochene Sitzung wiederherzustellen und den Transfer ab dem zuletzt gesetzten Zwischenpunkt fortzusetzen. Die Sitzungsverwaltung stellt dabei sicher, dass der Zustand der Kommunikationsbeziehung erhalten bleibt und die Übertragung nicht vollständig neu gestartet werden muss. (Richtig)
 
 ### Source Text
 

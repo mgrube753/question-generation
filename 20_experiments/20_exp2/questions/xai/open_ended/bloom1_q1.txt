@@ -8,11 +8,11 @@ Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter R
 
 ### Question Generation
 
-Frage: Nennen Sie die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge und geben Sie für jede Schicht die jeweilige Hauptfunktion wieder.
+Frage: Nennen Sie die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge und geben Sie die jeweilige Hauptfunktion jeder Schicht wieder.
 
 ### Answer Generation + Union of all
 
-Frage: Nennen Sie die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge und geben Sie für jede Schicht die jeweilige Hauptfunktion wieder.
+Frage: Nennen Sie die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge und geben Sie die jeweilige Hauptfunktion jeder Schicht wieder.
 
 Antwort: Die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge sind:
 

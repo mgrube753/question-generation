@@ -6,33 +6,29 @@
 
 Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche Aussage erklärt korrekt den Unterschied zwischen der Flusssteuerung im Network Layer und der Flusskontrolle im Data Link Layer?
+Frage: Welche zwei Kernaufgaben teilen sich der Network Layer und der Transport Layer im ISO-OSI-Modell?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Die Flusskontrolle im Data Link Layer regelt die Geschwindigkeit zwischen direkt verbundenen Sendern und Empfängern auf einer einzelnen Verbindung, während die Flusssteuerung im Network Layer sowohl End-to-End zwischen weit entfernten Geräten als auch Node-to-Node zwischen benachbarten Zwischenknoten arbeitet. (Richtig)
-
-b) Im Data Link Layer werden bei der Flusskontrolle Strategien wie Zwischenpuffern oder Herunterregeln für eine einzelne Verbindung eingesetzt, während die Flusssteuerung im Network Layer netzwerkübergreifend vom ursprünglichen Sender zum entfernten Empfänger oder von jedem Knoten zum nächsten Knoten operiert. (Richtig)
+a) Adressierung und Flusssteuerung (Richtig)
+b) Die Vergabe von Adressen zur Identifikation sowie Strategien zur Steuerung des Datenflusses bei zu schneller Übertragung (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche Aussage erklärt korrekt den Unterschied zwischen der Flusssteuerung im Network Layer und der Flusskontrolle im Data Link Layer?
+Frage: Welche zwei Kernaufgaben teilen sich der Network Layer und der Transport Layer im ISO-OSI-Modell?
 
 Antwortmöglichkeiten:
 
-a) Beide Layer verwenden identische Mechanismen zur Flusssteuerung, wobei der einzige Unterschied in der verwendeten Adressierung besteht: Der Data Link Layer nutzt lokale Adressen, während der Network Layer netzwerkübergreifende Adressen verwendet. (Falsch)
+a) Adressierung und Flusssteuerung (Richtig)
+b) Die Vergabe von Adressen zur Identifikation sowie Strategien zur Steuerung des Datenflusses bei zu schneller Übertragung (Richtig)
+c) Fehlerkontrolle und Segmentierung (Falsch)
+d) Routing und Dienstqualität (Falsch)
 
-b) Die Flusskontrolle im Data Link Layer arbeitet netzwerkübergreifend End-to-End zwischen entfernten Geräten, während die Flusssteuerung im Network Layer ausschließlich für die Kommunikation zwischen direkt verbundenen Knoten auf einer einzelnen physikalischen Verbindung zuständig ist. (Falsch)
-
-c) Die Flusskontrolle im Data Link Layer regelt die Geschwindigkeit zwischen direkt verbundenen Sendern und Empfängern auf einer einzelnen Verbindung, während die Flusssteuerung im Network Layer sowohl End-to-End zwischen weit entfernten Geräten als auch Node-to-Node zwischen benachbarten Zwischenknoten arbeitet. (Richtig)
-
-d) Im Data Link Layer werden bei der Flusskontrolle Strategien wie Zwischenpuffern oder Herunterregeln für eine einzelne Verbindung eingesetzt, während die Flusssteuerung im Network Layer netzwerkübergreifend vom ursprünglichen Sender zum entfernten Empfänger oder von jedem Knoten zum nächsten Knoten operiert. (Richtig)
-
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

@@ -6,29 +6,29 @@
 
 Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Ermitteln Sie die OSI-Schicht, in der Flußkontrolle angewendet wird, um einen Sender herabzuregeln, der zu schnell für den Empfänger sendet.
+Frage: Welche Schichten des OSI-Modells wenden End-to-End-Flußsteuerung an?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Data Link Layer (Schicht 2) (Richtig)
-b) Transport Layer (Schicht 4) (Richtig)
+a) Schicht 3 (Network Layer) und Schicht 4 (Transport Layer) (Richtig)
+b) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ermitteln Sie die OSI-Schicht, in der Flußkontrolle angewendet wird, um einen Sender herabzuregeln, der zu schnell für den Empfänger sendet.
+Frage: Welche Schichten des OSI-Modells wenden End-to-End-Flußsteuerung an?
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2) (Richtig)
-b) Network Layer (Schicht 3) (Falsch)
-c) Session Layer (Schicht 5) (Falsch)
-d) Transport Layer (Schicht 4) (Richtig)
+a) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
+b) Schicht 2 (Data Link Layer) und Schicht 3 (Network Layer) (Falsch)
+c) Schicht 3 (Network Layer) und Schicht 4 (Transport Layer) (Richtig)
+d) Schicht 4 (Transport Layer) und Schicht 5 (Session Layer) (Falsch)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

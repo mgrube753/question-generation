@@ -34,21 +34,20 @@ BLOOM_LEVELS_ORDERED = [
     "Creating",
 ]
 
-DEFAULT_MAX_TOKENS = 4000
 MAX_TOKENS_BY_BLOOM = {
-    "Remember": 4000,
-    "Understand": 5000,
-    "Apply": 6000,
-    "Analyze": 7000,
-    "Evaluate": 8000,
-    "Create": 10000,
+    "Remembering": 12000,
+    "Understanding": 12000,
+    "Applying": 12000,
+    "Analyzing": 12000,
+    "Evaluating": 12000,
+    "Creating": 12000,
 }
 
 # MCQ questions only use Bloom levels 1-3
-BLOOM_LEVELS_MCQ = BLOOM_LEVELS_ORDERED[:3]  # Remembering, Understanding, Applying
+BLOOM_LEVELS_MCQ = BLOOM_LEVELS_ORDERED[:3]
 
 # Open-ended questions use all 6 Bloom levels
-BLOOM_LEVELS_OPEN_ENDED = BLOOM_LEVELS_ORDERED  # All 6 levels
+BLOOM_LEVELS_OPEN_ENDED = BLOOM_LEVELS_ORDERED
 
 # Prompt file paths for MCQ (3-step process) and Open-Ended (2-step process)
 PROMPT_MCQ_STEM = os.path.join(
@@ -78,14 +77,7 @@ LEARNING_OBJECTIVES_FILE = os.path.join(
     PROMPT_TEMPLATES_PATH, "experiment", "lernziele.md"
 )
 
-# Experiment 1: Content Fidelity
-EXP1_TOTAL_QUESTIONS = 56
-EXP1_SAMPLE_SIZE = 24
-EXP1_BLOOM_LEVELS_PER_TYPE = 3  # 3 Bloom levels per question type
-
 # Experiment 2: Bloom Alignment
-EXP2_TOTAL_QUESTIONS = 48
-EXP2_SAMPLE_SIZE = 24
 EXP2_MCQ_PER_BLOOM = 2  # 2 questions per Bloom level (levels 1-3) = 6 MCQ per LLM
 EXP2_OPEN_ENDED_PER_BLOOM = 1  # 1 question per Bloom level (all 6) = 6 OE per LLM
 

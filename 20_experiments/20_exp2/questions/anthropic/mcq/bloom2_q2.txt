@@ -6,33 +6,29 @@
 
 Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche Aussage erklärt korrekt den Zusammenhang zwischen der Aufgabe des Physical Layer und der Aufgabe des Data Link Layer hinsichtlich der Übertragungssicherheit?
+Frage: Welche zwei Schichten des ISO-OSI-Modells sind für Kodierungsprozesse von Daten zuständig?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Der Physical Layer transportiert Daten auf physikalischer Ebene ohne eigene Fehlerkorrektur, während der Data Link Layer auf dieser möglicherweise unzuverlässigen Übertragung aufbaut und durch Fehlerkontrolle eine gesicherte Kommunikation gewährleistet. (Richtig)
-
-b) Der Data Link Layer gleicht die fehlende Übertragungssicherheit des Physical Layer aus, indem er Mechanismen zur Erkennung, Behebung oder Signalisierung von Übertragungsfehlern bereitstellt, die bei der reinen physikalischen Übertragung auftreten können. (Richtig)
+a) Physical Layer (Schicht 1) und Presentation Layer (Schicht 6) (Richtig)
+b) Die Bitübertragungsschicht, die logische Werte auf physikalische Größen abbildet, und die Darstellungsschicht, die Anwendungsdaten als Bitstrom kodiert (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche Aussage erklärt korrekt den Zusammenhang zwischen der Aufgabe des Physical Layer und der Aufgabe des Data Link Layer hinsichtlich der Übertragungssicherheit?
+Frage: Welche zwei Schichten des ISO-OSI-Modells sind für Kodierungsprozesse von Daten zuständig?
 
 Antwortmöglichkeiten:
 
-a) Der Data Link Layer gleicht die fehlende Übertragungssicherheit des Physical Layer aus, indem er Mechanismen zur Erkennung, Behebung oder Signalisierung von Übertragungsfehlern bereitstellt, die bei der reinen physikalischen Übertragung auftreten können. (Richtig)
+a) Data Link Layer (Schicht 2) und Application Layer (Schicht 7), da diese für Segmentierung von Bits und Festlegung der Anwendungsdaten verantwortlich sind (Falsch)
+b) Die Bitübertragungsschicht, die logische Werte auf physikalische Größen abbildet, und die Darstellungsschicht, die Anwendungsdaten als Bitstrom kodiert (Richtig)
+c) Physical Layer (Schicht 1) und Presentation Layer (Schicht 6) (Richtig)
+d) Transport Layer (Schicht 4) und Session Layer (Schicht 5), da diese für die Dienstqualität und Synchronisation der Datenströme zuständig sind (Falsch)
 
-b) Der Physical Layer stellt bereits durch seine Codierungsverfahren wie Manchester eine vollständige Fehlerkorrektur sicher, weshalb der Data Link Layer sich ausschließlich auf die Identifikation und Adressierung von Sender und Empfänger konzentrieren kann. (Falsch)
-
-c) Der Physical Layer transportiert Daten auf physikalischer Ebene ohne eigene Fehlerkorrektur, während der Data Link Layer auf dieser möglicherweise unzuverlässigen Übertragung aufbaut und durch Fehlerkontrolle eine gesicherte Kommunikation gewährleistet. (Richtig)
-
-d) Die Übertragungssicherheit wird auf beiden Schichten identisch realisiert, wobei der Physical Layer und der Data Link Layer jeweils unabhängig voneinander dieselben Mechanismen zur Fehlererkennung und Fehlerkorrektur implementieren. (Falsch)
-
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

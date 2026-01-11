@@ -40,7 +40,7 @@ def get_progress():
 
 
 def get_max_tokens(bloom_level):
-    return constants.MAX_TOKENS_BY_BLOOM.get(bloom_level, constants.DEFAULT_MAX_TOKENS)
+    return constants.MAX_TOKENS_BY_BLOOM.get(bloom_level, 6000)
 
 
 # === File Management ===
@@ -149,11 +149,11 @@ def generate_mcq_question(
 
 {learning_objective}
 
-### Stem Generation:
+### Stem Generation
 
 {stem_result}
 
-### Key Generation:
+### Key Generation
 
 {keys_result}
 
@@ -161,7 +161,7 @@ def generate_mcq_question(
 
 {distractors_result}
 
-### Source Text:
+### Source Text
 
 {source_text}
 """
@@ -206,7 +206,7 @@ def generate_open_ended_question(
             bloom_level_verbs=level_data.get("verbs", ""),
             learning_objective=learning_objective,
         ),
-        max_tokens=max_tokens // 2,
+        max_tokens=max_tokens,
     )
 
     return f"""## Open-Ended Question
@@ -263,12 +263,12 @@ def generate_task(task_params):
             increment_counter(llm_name)
             return True
     except Exception as e:
-        print(f"[ERROR] {llm_name}: {desc} - {e}")
+        tqdm.write(f"[ERROR] {llm_name}: {desc} - {e}")
     return False
 
 
 def run_tasks(tasks, exp_desc):
-    print(f"\n[INFO] Running {len(tasks)} tasks for {exp_desc}...")
+    tqdm.write(f"\n[INFO] Running {len(tasks)} tasks for {exp_desc}...")
 
     with ThreadPoolExecutor(max_workers=4) as executor:
         futures = {executor.submit(generate_task, task): task for task in tasks}
@@ -282,12 +282,12 @@ def run_tasks(tasks, exp_desc):
 
 # === Experiment 1 ===
 def run_exp1(clients):
-    print("\n[INFO] Experiment 1: Content Fidelity")
-    print(
+    tqdm.write("\n[INFO] Experiment 1: Content Fidelity")
+    tqdm.write(
         "       4 LLMs × 7 Layers × 2 Question Types × 1 Random Bloom Level = 56 questions"
     )
-    print("     MCQ: 1 per LLM per Layer (Bloom 1-3 random)")
-    print("     Open-Ended: 1 per LLM per Layer (Bloom 1-6 random)")
+    tqdm.write("     MCQ: 1 per LLM per Layer (Bloom 1-3 random)")
+    tqdm.write("     Open-Ended: 1 per LLM per Layer (Bloom 1-6 random)")
 
     clean_questions(constants.EXP1_PATH)
     reset_counters()
@@ -362,15 +362,15 @@ def run_exp1(clients):
     create_csvs("exp1", ["llm", "layer", "question_type", "bloom_idx"], csv_rows)
 
     run_tasks(tasks, "Exp 1")
-    print(f"[INFO] Experiment 1 completed: {len(tasks)} questions generated")
+    tqdm.write(f"[INFO] Experiment 1 completed: {len(tasks)} questions generated")
 
 
 # === Experiment 2 ===
 def run_exp2(clients):
-    print("\n[INFO] Experiment 2: Bloom Alignment")
-    print("       4 LLMs × 2 Question Types = 48 questions")
-    print("       MCQ: 6 per LLM (Bloom 1-3, each 2×)")
-    print("       Open-ended: 6 per LLM (Bloom 1-6, each 1×)")
+    tqdm.write("\n[INFO] Experiment 2: Bloom Alignment")
+    tqdm.write("       4 LLMs × 2 Question Types = 48 questions")
+    tqdm.write("       MCQ: 6 per LLM (Bloom 1-3, each 2×)")
+    tqdm.write("       Open-ended: 6 per LLM (Bloom 1-6, each 1×)")
 
     clean_questions(constants.EXP2_PATH)
     reset_counters()
@@ -446,4 +446,4 @@ def run_exp2(clients):
     create_csvs("exp2", ["llm", "question_type", "bloom_idx", "question_num"], csv_rows)
 
     run_tasks(tasks, "Exp 2")
-    print(f"[INFO] Experiment 2 completed: {len(tasks)} questions generated")
+    tqdm.write(f"[INFO] Experiment 2 completed: {len(tasks)} questions generated")

@@ -6,29 +6,29 @@
 
 Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche Aussage erklärt die Beziehung zwischen der Data Link Layer und der Physical Layer am besten?
+Frage: Welche Schichten des OSI-Modells umfassen Kernaufgaben zur Flußsteuerung auf End-to-End-Basis?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Die Data Link Layer baut auf der Physical Layer auf, indem sie eine fehlergesicherte Übertragung ermöglicht, während die Physical Layer die Codierung, den Transport und die Decodierung physischer Signale übernimmt. (Richtig)
-b) Die Physical Layer stellt die grundlegende physische Übertragung von Bits bereit, und die Data Link Layer erweitert dies durch Kernaufgaben wie Fehlerkontrolle und Medienzugriff, um Zuverlässigkeit zu gewährleisten. (Richtig)
+a) Die Network Layer (Schicht 3) und die Transport Layer (Schicht 4) umfassen Kernaufgaben zur Flußsteuerung auf End-to-End-Basis, da sie Strategien bieten, um den Datenfluss vom ursprünglichen Sender bis zum finalen Empfänger zu regulieren, unabhängig von Zwischenschritten. (Richtig)
+b) Im OSI-Modell übernehmen Schicht 3 (Network) und Schicht 4 (Transport) die Flußsteuerung auf End-to-End-Basis als Kernaufgabe, indem sie sicherstellen, dass der Datenstrom zwischen entfernten Endpunkten kontrolliert wird, etwa durch Anpassung an Teilnehmerbedürfnisse oder Routing-Entscheidungen. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche Aussage erklärt die Beziehung zwischen der Data Link Layer und der Physical Layer am besten?
+Frage: Welche Schichten des OSI-Modells umfassen Kernaufgaben zur Flußsteuerung auf End-to-End-Basis?
 
 Antwortmöglichkeiten:
 
-a) Die Data Link Layer baut auf der Physical Layer auf, indem sie eine fehlergesicherte Übertragung ermöglicht, während die Physical Layer die Codierung, den Transport und die Decodierung physischer Signale übernimmt. (Richtig)
-b) Die Data Link Layer ist für die physische Codierung und Decodierung zuständig, während die Physical Layer Fehlerkontrolle und Routing übernimmt, um Netzwerke zu verbinden. (Falsch)
-c) Die Physical Layer stellt die grundlegende physische Übertragung von Bits bereit, und die Data Link Layer erweitert dies durch Kernaufgaben wie Fehlerkontrolle und Medienzugriff, um Zuverlässigkeit zu gewährleisten. (Richtig)
-d) Die Physical Layer handhabt Medienzugriff und Segmentierung, während die Data Link Layer sich auf den Transport physischer Signale konzentriert, ohne direkte Abhängigkeit. (Falsch)
+a) Die Network Layer (Schicht 3) und die Transport Layer (Schicht 4) umfassen Kernaufgaben zur Flußsteuerung auf End-to-End-Basis, da sie Strategien bieten, um den Datenfluss vom ursprünglichen Sender bis zum finalen Empfänger zu regulieren, unabhängig von Zwischenschritten. (Richtig)
+b) Die Data Link Layer (Schicht 2) und die Network Layer (Schicht 3) umfassen Kernaufgaben zur Flußsteuerung auf End-to-End-Basis, da sie Strategien für direkte Verbindungen und netzwerkübergreifende Adressierung kombinieren, um den Datenfluss über entfernte Knoten zu regulieren. (Falsch)
+c) Im OSI-Modell übernehmen Schicht 3 (Network) und Schicht 4 (Transport) die Flußsteuerung auf End-to-End-Basis als Kernaufgabe, indem sie sicherstellen, dass der Datenstrom zwischen entfernten Endpunkten kontrolliert wird, etwa durch Anpassung an Teilnehmerbedürfnisse oder Routing-Entscheidungen. (Richtig)
+d) Die Transport Layer (Schicht 4) und die Session Layer (Schicht 5) umfassen Kernaufgaben zur Flußsteuerung auf End-to-End-Basis, da sie Synchronisation und Teilnehmer-spezifische Anpassungen nutzen, um den Datenfluss zwischen Endpunkten zu managen. (Falsch)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung

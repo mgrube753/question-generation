@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche der folgenden Aussagen erklärt die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung in der Presentation Layer?
+Frage: Welche der folgenden Kernaufgaben der Presentation Layer 6 beinhalten die Konvertierung der Datendarstellung?
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Die Presentation Layer wandelt Anwendungsdaten in einen übertragbaren Bitstrom um, indem sie Konvertierungen wie Endian-Ness und Zeichendarstellungen vornimmt, Daten komprimiert und verschlüsselt. (Richtig)
-b) In der Presentation Layer erfolgt die Transformation von Anwendungsdaten zu Bitströmen durch Konvertierung von Datendarstellungen, Kompression sowie Verschlüsselung und Entschlüsselung. (Richtig)
+a) Endian-Ness: Konvertieren der Datendarstellung. (Richtig)
+b) Zeichen: Konvertierung der Zeichendarstellung. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche der folgenden Aussagen erklärt die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung in der Presentation Layer?
+Frage: Welche der folgenden Kernaufgaben der Presentation Layer 6 beinhalten die Konvertierung der Datendarstellung?
 
 Antwortmöglichkeiten:
 
-a) Die Presentation Layer wandelt Anwendungsdaten in einen übertragbaren Bitstrom um, indem sie Adressierung, Routing und Paketierung vornimmt. (Falsch)
-b) Die Presentation Layer wandelt Anwendungsdaten in einen übertragbaren Bitstrom um, indem sie Konvertierungen wie Endian-Ness und Zeichendarstellungen vornimmt, Daten komprimiert und verschlüsselt. (Richtig)
-c) In der Presentation Layer erfolgt die Transformation von Anwendungsdaten zu Bitströmen durch Etablierung von Verbindungen, Synchronisation und Dialogkontrolle. (Falsch)
-d) In der Presentation Layer erfolgt die Transformation von Anwendungsdaten zu Bitströmen durch Konvertierung von Datendarstellungen, Kompression sowie Verschlüsselung und Entschlüsselung. (Richtig)
+a) Endian-Ness: Konvertieren der Datendarstellung. (Richtig)
+b) Kompression: Komprimieren und Dekomprimieren. (Falsch)
+c) Verschlüsselung: Verschlüsseln und Entschlüsseln. (Falsch)
+d) Zeichen: Konvertierung der Zeichendarstellung. (Richtig)
 
-### Source Text:
+### Source Text
 
 Presentation Layer 6
 Beschreibung

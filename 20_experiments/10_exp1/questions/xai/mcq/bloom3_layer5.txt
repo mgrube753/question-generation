@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
 
-### Stem Generation:
+### Stem Generation
 
-Frage: In einer Kommunikationsbeziehung sollen zusammengehörige Transaktionen gruppiert werden – welche Kernaufgabe der Sitzungsschicht wenden Sie hierfür an?
+Frage: Ermitteln Sie zwei Kernaufgaben der Session Layer, die Sie in einer unterbrochenen Kommunikationsbeziehung anwenden würden, um die Sitzung fortzusetzen.
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Ich wende die Bündelung an, um die zusammengehörigen Transaktionen in der Kommunikationsbeziehung zu gruppieren. (Richtig)
-b) In dieser Situation wende ich die Kernaufgabe Bündelung an, um die Transaktionen zu einer Gruppe zusammenzufassen. (Richtig)
+a) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Sitzungsverwaltung anwenden, um die Sitzung wieder aufzubauen und zu verwalten, sowie die Synchronisation, um Zwischenpunkte zu setzen und die Kommunikation vom letzten Synchronisationspunkt fortzusetzen. (Richtig)
+b) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Synchronisation anwenden, um von gesetzten Zwischenpunkten aus fortzufahren, sowie die Bündelung, um zusammengehörige Transaktionen zu gruppieren und diese effizient nach der Unterbrechung abzuschließen. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: In einer Kommunikationsbeziehung sollen zusammengehörige Transaktionen gruppiert werden – welche Kernaufgabe der Sitzungsschicht wenden Sie hierfür an?
+Frage: Ermitteln Sie zwei Kernaufgaben der Session Layer, die Sie in einer unterbrochenen Kommunikationsbeziehung anwenden würden, um die Sitzung fortzusetzen.
 
 Antwortmöglichkeiten:
 
-a) Ich wende die Bündelung an, um die zusammengehörigen Transaktionen in der Kommunikationsbeziehung zu gruppieren. (Richtig)
-b) Ich wende die Sitzungsverwaltung an, um die zusammengehörigen Transaktionen in der Kommunikationsbeziehung zu gruppieren. (Falsch)
-c) Ich wende die Synchronisation an, um die zusammengehörigen Transaktionen in der Kommunikationsbeziehung zu gruppieren. (Falsch)
-d) In dieser Situation wende ich die Kernaufgabe Bündelung an, um die Transaktionen zu einer Gruppe zusammenzufassen. (Richtig)
+a) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Sitzungsverwaltung anwenden, um die Sitzung wieder aufzubauen und zu verwalten, sowie die Synchronisation, um Zwischenpunkte zu setzen und die Kommunikation vom letzten Synchronisationspunkt fortzusetzen. (Richtig)
+b) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Sitzungsverwaltung anwenden, um die Sitzung wiederherzustellen, sowie die Adressierung, um die korrekten Endpunkte zu identifizieren und die Kommunikation fortzusetzen. (Falsch)
+c) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Synchronisation anwenden, um von gesetzten Zwischenpunkten aus fortzufahren, sowie die Bündelung, um zusammengehörige Transaktionen zu gruppieren und diese effizient nach der Unterbrechung abzuschließen. (Richtig)
+d) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Synchronisation anwenden, um Zwischenpunkte zu setzen, sowie die Segmentierung, um Daten in kleinere Einheiten zu teilen und diese neu zu übertragen. (Falsch)
 
-### Source Text:
+### Source Text
 
 Session Layer 5
 

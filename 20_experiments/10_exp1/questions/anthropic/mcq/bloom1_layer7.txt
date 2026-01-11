@@ -6,29 +6,29 @@
 
 Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
 
-### Stem Generation:
+### Stem Generation
 
-Frage: Welche drei Kernaufgaben werden auf der Application Layer 7 unterschieden?
+Frage: Benennen Sie zwei der drei Kernaufgaben, die im Application Layer 7 definiert werden.
 
-### Key Generation:
+### Key Generation
 
 Korrekte Antwort(en):
 
-a) Grundkonzepte, Protokollelemente und Verhalten (Richtig)
-b) Die Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen (Richtig)
+a) Grundkonzepte und Protokollelemente (Richtig)
+b) Protokollelemente und Verhalten (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche drei Kernaufgaben werden auf der Application Layer 7 unterschieden?
+Frage: Benennen Sie zwei der drei Kernaufgaben, die im Application Layer 7 definiert werden.
 
 Antwortmöglichkeiten:
 
-a) Datenformatierung, Sitzungsmanagement und Protokollelemente (Falsch)
-b) Die Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen (Richtig)
-c) Grundkonzepte, Protokollelemente und Verhalten (Richtig)
-d) Segmentierung, Routing und Fehlerkorrektur (Falsch)
+a) Datenübertragung und Fehlererkennung (Falsch)
+b) Grundkonzepte und Protokollelemente (Richtig)
+c) Protokollelemente und Verhalten (Richtig)
+d) Sitzungsverwaltung und Synchronisation (Falsch)
 
-### Source Text:
+### Source Text
 
 Application Layer 7
 Beschreibung

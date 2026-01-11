@@ -2,21 +2,27 @@
 
 ### Bloom Level: Remembering
 
-### Learning Objective:
+### Learning Objective
 
 Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
 
-### Question Generation:
+### Question Generation
 
-Frage: Nennen Sie die sieben Schichten des ISO-OSI-Modells in der korrekten Reihenfolge von der untersten zur obersten Schicht und geben Sie die jeweilige Hauptfunktion gemäß der Beschreibung im Lehrmaterial an.
+Frage: Nennen Sie die sieben Schichten des ISO-OSI-Modells in der korrekten Reihenfolge und geben Sie die jeweilige Hauptfunktion jeder Schicht an.
 
-### Answer Generation + Union of all:
+### Answer Generation + Union of all
 
-Frage: Nennen Sie die sieben Schichten des ISO-OSI-Modells in der korrekten Reihenfolge von der untersten zur obersten Schicht und geben Sie die jeweilige Hauptfunktion gemäß der Beschreibung im Lehrmaterial an.
+Frage: Nennen Sie die sieben Schichten des ISO-OSI-Modells in der korrekten Reihenfolge und geben Sie die jeweilige Hauptfunktion jeder Schicht an.
 
-Antwort: Die sieben Schichten des ISO-OSI-Modells von unten nach oben sind: 1. Physical Layer mit der Hauptfunktion der Bereitstellung einer physikalischen Konzeption für Codierung, Transport und Decodierung logischer Werte; 2. Data Link Layer mit der Hauptfunktion der Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer; 3. Network Layer mit der Hauptfunktion der Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden; 4. Transport Layer mit der Hauptfunktion der Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes; 5. Session Layer mit der Hauptfunktion der Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung; 6. Presentation Layer mit der Hauptfunktion der Kodierung (Darstellung) der Anwendungsdaten als Bitstrom; 7. Application Layer mit der Hauptfunktion der Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten. (Richtig)
+Antwort: 1. Physical Layer (Bitübertragungsschicht): Bereitstellung einer physikalischen Konzeption für Codierung, Transport und Decodierung logischer Werte.
+2. Data Link Layer (Sicherungsschicht): Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer.
+3. Network Layer (Vermittlungsschicht): Bereitstellung einer Übertragung zwischen Geräten in unterschiedlichen Netzwerken.
+4. Transport Layer (Transportschicht): Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+5. Session Layer (Sitzungsschicht): Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+6. Presentation Layer (Darstellungsschicht): Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+7. Application Layer (Anwendungsschicht): Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten. (Richtig)
 
-### Source Text:
+### Source Text
 
 Physical Layer 1
 Beschreibung
