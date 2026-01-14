@@ -1,0 +1,43 @@
+## Open-Ended Question
+
+### Bloom Level: Applying
+
+### Learning Objective
+
+Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+
+### Question Generation
+
+Frage: Wenden Sie die Kernaufgaben der Darstellungsschicht an, um zu beschreiben, welche Transformationsschritte notwendig sind, wenn eine Anwendung vertrauliche Textdaten von einem Little-Endian-System mit ASCII-Kodierung an ein Big-Endian-System mit Unicode-Kodierung übertragen soll.
+
+### Answer Generation + Union of all
+
+Frage: Wenden Sie die Kernaufgaben der Darstellungsschicht an, um zu beschreiben, welche Transformationsschritte notwendig sind, wenn eine Anwendung vertrauliche Textdaten von einem Little-Endian-System mit ASCII-Kodierung an ein Big-Endian-System mit Unicode-Kodierung übertragen soll.
+
+Antwort: Die Darstellungsschicht führt folgende Transformationsschritte durch: Erstens erfolgt die Zeichenkonvertierung, bei der die ASCII-kodierten Textdaten in Unicode umgewandelt werden, damit das Zielsystem die Zeichen korrekt interpretieren kann. Zweitens wird die Endian-Konvertierung durchgeführt, wobei die Byte-Reihenfolge von Little-Endian nach Big-Endian angepasst wird, da Unicode-Zeichen mehrere Bytes umfassen und die Reihenfolge für das Zielsystem angepasst werden muss. Drittens kann optional eine Kompression der Daten erfolgen, um das Datenvolumen für die Übertragung zu reduzieren. Viertens werden die Daten verschlüsselt, da es sich um vertrauliche Textdaten handelt und deren Vertraulichkeit während der Übertragung geschützt werden muss. Auf der Empfängerseite werden diese Schritte in umgekehrter Reihenfolge rückgängig gemacht. (Richtig)
+
+### Source Text
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.

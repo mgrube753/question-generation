@@ -1,0 +1,38 @@
+## Multiple-Choice-Question
+
+### Lernziel
+
+Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+
+### Formulierte Frage
+
+Frage: Ermitteln Sie für eine neue Cloud-Speicher-Anwendung die beiden zentralen Fragestellungen, die bei der Definition der Protokollelemente auf Application Layer 7 zu beantworten sind.
+
+Antwortmöglichkeiten:
+
+a) 1. Welche Anforderungen (z.B. Operationen wie Speichern, Abrufen, Löschen) können an die Cloud-Speicher-Anwendung gestellt werden? 2. Welche Daten (z.B. Dateien, Metadaten, Authentifizierungsinformationen) werden bei diesen Anforderungen erwartet? (Richtig)
+b) 1. Welche Transportprotokolle (z.B. TCP oder UDP) und Portnummern sollen für die Verbindung verwendet werden? 2. Wie wird die Authentifizierung und Autorisierung der Benutzer technisch umgesetzt? (Falsch)
+c) 1. Welche konkreten Dienste und Funktionen muss das Anwendungsprotokoll für Cloud-Speicher bereitstellen? 2. Welche Datentypen, -formate und -inhalte sind für den Austausch bei der Nutzung dieser Dienste notwendig? (Richtig)
+d) 1. Welche grundlegenden Begriffe und Entitäten (z.B. Benutzer, Datei, Ordner, Berechtigung) definiert die Anwendungsdomäne? 2. Wie reagiert das Protokoll auf Fehler wie Zeitüberschreitungen oder ungültige Anfragen? (Falsch)
+
+### Quelltext
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

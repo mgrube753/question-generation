@@ -1,0 +1,37 @@
+## Offene Frage
+
+### Lernziel
+
+Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+
+### Formulierte Frage
+
+Frage: Unterscheiden Sie die Beziehungen zwischen den Kernaufgaben der Präsentationsschicht bei der Transformation von Anwendungsdaten in übertragbare Bitströme.
+
+Antwort: Die Präsentationsschicht (Layer 6) transformiert Anwendungsdaten in übertragbare Bitströme durch vier Kernaufgaben, deren Beziehungen sequentiell und interdependent sind: (1) Endian-Ness-Konvertierung stellt plattformübergreifende Datendarstellung sicher (z. B. Big-Endian zu Little-Endian), bildet die Basis für (2) Zeichenkonvertierung, die Zeichensätze harmonisiert (z. B. ASCII zu Unicode), um semantische Integrität zu wahren. Beide Konvertierungsaufgaben bereiten Daten für (3) Kompression vor, die redundante Bits reduziert und Effizienz steigert, ohne die ursprüngliche Struktur zu verändern. Abschließend interagiert (4) Verschlüsselung mit dem komprimierten Bitstrom, um Sicherheit zu gewährleisten, wobei alle Aufgaben reversibel sind, um beim Empfang die Originaldaten rekonstruieren zu können. Diese Beziehungen zerlegen die Transformation in schrittweise Anpassung (Konvertierung), Optimierung (Kompression) und Schutz (Verschlüsselung), die kollektiv Kompatibilität, Effizienz und Sicherheit zum Gesamtzweck der netzwerkfähigen Übertragung gewährleisten. (Richtig)
+
+### Quelltext
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.

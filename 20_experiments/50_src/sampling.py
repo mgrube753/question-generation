@@ -198,6 +198,73 @@ def sample_exp2():
     return csv_rows
 
 
+def filter_question_content(content):
+    lines = content.split("\n")
+
+    # Determine question type
+    if "## Multiple-Choice Question" in content:
+        header = "## Multiple-Choice-Question"
+    else:
+        header = "## Offene Frage"
+
+    learning_obj = ""
+    in_learning_obj = False
+    for i, line in enumerate(lines):
+        if (
+            line.strip() == "### Learning Objective"
+            or line.strip() == "### Learning Objective "
+        ):
+            in_learning_obj = True
+            continue
+        if in_learning_obj:
+            if line.startswith("###"):
+                break
+            if line.strip():
+                learning_obj = line.strip()
+                break
+
+    final_question = ""
+    in_final = False
+    for _, line in enumerate(lines):
+        if (
+            "### Distractor Generation + Union" in line
+            or "### Answer Generation + Union" in line
+        ):
+            in_final = True
+            continue
+        if in_final:
+            if line.startswith("### Source Text"):
+                break
+            final_question += line + "\n"
+    final_question = final_question.strip()
+
+    source_text = ""
+    in_source = False
+    for line in lines:
+        if line.startswith("### Source Text"):
+            in_source = True
+            continue
+        if in_source:
+            source_text += line + "\n"
+    source_text = source_text.strip()
+
+    output = f"""{header}
+
+### Lernziel
+
+{learning_obj}
+
+### Formulierte Frage
+
+{final_question}
+
+### Quelltext
+
+{source_text}
+"""
+    return output
+
+
 def rename_and_copy_exp1(df, renamed_base):
     exp1_dest = os.path.join(renamed_base, "10_exp1")
     os.makedirs(exp1_dest, exist_ok=True)
@@ -212,10 +279,15 @@ def rename_and_copy_exp1(df, renamed_base):
             f"bloom{row['bloom_idx']}_layer{row['layer']}.txt",
         )
         if os.path.exists(src_file):
+            with open(src_file, "r", encoding="utf-8") as f:
+                content = f.read()
+            filtered_content = filter_question_content(content)
+
             dest_file = os.path.join(
                 exp1_dest, f"{sample_id}_{row['question_type']}_layer{row['layer']}.txt"
             )
-            shutil.copy2(src_file, dest_file)
+            with open(dest_file, "w", encoding="utf-8") as f:
+                f.write(filtered_content)
         else:
             print(f"[WARNING] Source file not found: {src_file}")
 
@@ -238,10 +310,17 @@ def rename_and_copy_exp2(df, renamed_base):
                 if f.startswith(f"bloom{row['bloom_idx']}_") and f.endswith(".txt")
             ]
             if matching_files:
+                src_file = os.path.join(src_dir, matching_files[0])
+                # Read and filter content
+                with open(src_file, "r", encoding="utf-8") as f:
+                    content = f.read()
+                filtered_content = filter_question_content(content)
+
                 dest_file = os.path.join(
                     exp2_dest, f"{sample_id}_{row['question_type']}_concatenated.txt"
                 )
-                shutil.copy2(os.path.join(src_dir, matching_files[0]), dest_file)
+                with open(dest_file, "w", encoding="utf-8") as f:
+                    f.write(filtered_content)
             else:
                 print(
                     f"[WARNING] No matching file for bloom{row['bloom_idx']} in {src_dir}"

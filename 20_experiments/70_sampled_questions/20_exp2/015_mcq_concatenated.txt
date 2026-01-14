@@ -1,0 +1,180 @@
+## Multiple-Choice-Question
+
+### Lernziel
+
+Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
+
+### Formulierte Frage
+
+Frage: Frage: In einem Firmennetz wird für die Kommunikation zwischen zwei Geräten in unterschiedlichen Netzwerken zunächst die Route über vermittelnde Zwischenknoten festgelegt und anschließend der Zugriff auf das Übertragungsmedium (Senden/Warten/Reservieren) koordiniert; ermitteln Sie die zwei OSI-Schichten, denen diese beiden Vorgänge primär zuzuordnen sind.
+
+Antwortmöglichkeiten:
+
+a) Routing über vermittelnde Zwischenknoten: OSI-Schicht 2 (Data Link Layer); Koordination des Medienzugriffs (Senden/Warten/Reservieren): OSI-Schicht 1 (Physical Layer) (Falsch)
+b) Routing über vermittelnde Zwischenknoten: OSI-Schicht 3 (Network Layer); Koordination des Medienzugriffs (Senden/Warten/Reservieren): OSI-Schicht 2 (Data Link Layer) (Richtig)
+c) Festlegen der Route zwischen Geräten in unterschiedlichen Netzwerken: OSI-Schicht 4 (Transport Layer); Regeln des Zugriffs auf das Übertragungsmedium: OSI-Schicht 3 (Network Layer) (Falsch)
+d) Festlegen der Route zwischen Geräten in unterschiedlichen Netzwerken: Netzwerk-Schicht (Layer 3); Regeln des Zugriffs auf das Übertragungsmedium: Sicherungsschicht/Data-Link-Schicht (Layer 2) (Richtig)
+
+### Quelltext
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

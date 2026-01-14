@@ -1,0 +1,32 @@
+## Offene Frage
+
+### Lernziel
+
+Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+
+### Formulierte Frage
+
+Frage: Analysieren Sie, wie Sitzungsaufbau, -verwaltung, -zurückweisung und -beendigung, das Setzen von Synchronisations-Zwischenpunkten sowie die Bündelung zusammengehöriger Transaktionen innerhalb einer Kommunikationsbeziehung zusammenhängen und welchen Beitrag jede Teilfunktion zum Sitzungskonzept leistet.
+
+Antwort: Das Sitzungskonzept der Schicht 5 stellt eine übergeordnete Kommunikationsbeziehung bereit, in der mehrere fachlich zusammengehörige Austauschvorgänge koordiniert und kontrolliert ablaufen. Der Sitzungsaufbau initiiert diese Beziehung (Aushandlung/Start der Sitzung) und schafft damit den Rahmen, in dem Verwaltung, Synchronisation und Bündelung überhaupt wirksam werden. Die Sitzungsverwaltung hält diesen Rahmen während der Laufzeit konsistent (z. B. Status/Zuordnung der beteiligten Partner, Fortführung der Sitzung, Koordination des Ablaufs) und ist die Klammer, die Synchronisationspunkte und Transaktionsbündel in einen gemeinsamen Kontext einordnet. Die Sitzungszurückweisung ist die negative Gegenfunktion zum Aufbau: Sie verhindert bei nicht erfüllten Bedingungen eine Sitzung und damit auch die Durchführung der vorgesehenen Transaktionsbündel; sie schützt Ressourcen und erzwingt, dass Synchronisations- und Bündelungsmechanismen nur in einer gültigen Sitzung genutzt werden. Das Setzen von Synchronisations-Zwischenpunkten zerlegt den Sitzungsverlauf in kontrollierbare Abschnitte; dadurch kann nach Störungen/Unterbrechungen an einem definierten Punkt fortgesetzt werden, statt die gesamte Sitzung oder alle bisher durchgeführten Aktionen wiederholen zu müssen. Die Bündelung gruppiert zusammengehörige Transaktionen innerhalb der Sitzung zu logisch-atomaren Einheiten (z. B. „gehört als Vorgang zusammen“), wodurch der Ablauf strukturiert wird und eine konsistente Behandlung möglich ist; diese Gruppen können sinnvoll mit Synchronisationspunkten gekoppelt werden (Zwischenpunkt nach Abschluss eines Bündels), um Wiederaufnahme und Fehlerbehandlung auf inhaltlich passenden Grenzen zu ermöglichen. Die Sitzungsbeendigung schließt die Beziehung geordnet ab (Freigabe von Zuständen/Ressourcen, Abschluss), wodurch festgelegt wird, dass keine weiteren Transaktionen oder Synchronisationsmechanismen in diesem Kontext stattfinden. Zusammengenommen: Aufbau/Zurückweisung entscheiden über das Entstehen der Sitzung, Verwaltung steuert die laufende Beziehung, Synchronisationspunkte sichern den Fortschritt in Abschnitten, Bündelung gibt den Austauschvorgängen eine fachliche Struktur innerhalb der Sitzung, und Beendigung setzt den sauberen Endpunkt des gesamten kontrollierten Kommunikationskontexts. (Richtig)
+
+### Quelltext
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.

@@ -1,0 +1,43 @@
+## Multiple-Choice-Question
+
+### Lernziel
+
+Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
+
+### Formulierte Frage
+
+Frage: Frage: Welche der folgenden sind Beispiele für Codierungsverfahren im Physical Layer?
+
+Antwortmöglichkeiten:
+
+a) Abtastung (Falsch)
+b) Manchester (Richtig)
+c) NRZ (Richtig)
+d) Telefonkabel (Falsch)
+
+### Quelltext
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.

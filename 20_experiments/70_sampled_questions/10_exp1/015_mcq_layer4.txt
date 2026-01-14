@@ -1,0 +1,39 @@
+## Multiple-Choice-Question
+
+### Lernziel
+
+Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Formulierte Frage
+
+Frage: Frage: Welche zwei Kernaufgaben der Transportschicht nutzen Sie, wenn Sie eine Übertragung zwischen zwei konkreten Teilnehmern einrichten müssen und die Datenrate so anpassen wollen, dass ein langsamer Empfänger nicht überlastet wird?
+
+Antwortmöglichkeiten:
+
+a) Adressierung der konkreten Teilnehmer (Teilnehmer-Adressen) und Flusssteuerung zur Anpassung der Datenrate an den Empfänger (Richtig)
+b) Einrichten der Ende-zu-Ende-Verbindung über Teilnehmeradressierung (z.B. Ports) und Nutzen der Flusssteuerung (z.B. Fenster-/Rate-Anpassung), damit ein langsamer Empfänger nicht überlastet wird (Richtig)
+c) Vergabe von IP-Adressen zur Ende-zu-Ende-Adressierung und Sicherung der Dienstqualität (QoS) durch Bandbreitenreservierung, damit der Empfänger nicht überlastet wird (Falsch)
+d) Nutzung von MAC-Adressen zur Teilnehmeridentifikation und Routing über die Vermittlungsschicht, um die Datenrate an den Empfänger anzupassen (Falsch)
+
+### Quelltext
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.

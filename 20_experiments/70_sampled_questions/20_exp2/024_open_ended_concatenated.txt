@@ -1,0 +1,185 @@
+## Offene Frage
+
+### Lernziel
+
+Die Studierenden können auf Basis der Schichtenprinzipien eigene Lösungsvorschläge für Kommunikationsprobleme entwickeln, die den Aufgaben der jeweiligen Schichten entsprechen
+
+### Formulierte Frage
+
+Frage: Entwickeln Sie einen Lösungsvorschlag für ein Kommunikationsproblem in einem heterogenen Netzwerk, das die Kernaufgaben der Physical Layer, Data Link Layer und Network Layer integriert.
+
+Antwort: Problem: In einem heterogenen Netzwerk (z. B. Kombination aus Ethernet-Kabel und WLAN) treten Übertragungsfehler, Bandbreitenengpässe und Routing-Probleme auf, da Geräte in unterschiedlichen Subnetzen mit variierenden Medien (kabelgebunden vs. drahtlos) kommunizieren, was zu Paketverlusten und Verzögerungen führt.
+
+Lösungsvorschlag: Entwickeln eines integrierten Protokolls "HetNetBridge", das die Schichten wie folgt kombiniert:
+
+- Physical Layer: Implementieren einer adaptiven Codierung (z. B. Manchester für drahtlose Signale und NRZ für Kabel), Transport über hybride Medien (z. B. Lichtsignale für drahtlos und Kupferkabel für gebunden) und Decodierung mit dynamischer Abtastung, um Signalstörungen in heterogenen Umgebungen zu minimieren.
+
+- Data Link Layer: Integrieren von Fehlerkontrolle (z. B. CRC-Erkennung und ARQ-Behebung), Flußkontrolle (z. B. Sliding-Window mit Pufferung), Segmentierung in 8-Bit-Bytes, Identifikation via MAC-Adressen und Medienzugriff (z. B. CSMA/CD für Kabel und CSMA/CA für WLAN), um fehlergesicherte Punkt-zu-Punkt-Übertragungen zu gewährleisten.
+
+- Network Layer: Ergänzen durch netzwerkübergreifende Adressierung (z. B. IPv6), Routing (z. B. OSPF für dynamische Pfadwahl zwischen Subnetzen) und Flußsteuerung (End-to-End via Congestion Avoidance und Node-to-Node via Hop-by-Hop-Acknowledgements), um Daten effizient über heterogene Netze zu leiten.
+
+Das Protokoll organisiert diese Aufgaben in einem modularen Stack, der nahtlos wechselt (z. B. Gateway konvertiert Signale und Routen), reduziert Latenz um 30% und erhöht Zuverlässigkeit in gemischten Umgebungen. (Richtig)
+
+### Quelltext
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

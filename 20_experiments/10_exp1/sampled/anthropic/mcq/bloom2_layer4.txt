@@ -1,0 +1,56 @@
+## Multiple-Choice Question
+
+### Bloom Level: Understanding
+
+### Learning Objective 
+
+Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Stem Generation
+
+Frage: Welche zwei Aussagen erklären korrekt, wie die Kernaufgaben des Transport Layers 4 auf die Teilnehmer eines Netzes ausgerichtet sind?
+
+### Key Generation
+
+Korrekte Antwort(en):
+
+a) Die Adressierung verwendet Teilnehmer-Adressen zur eindeutigen Identifikation, während die Dienstqualität mit Garantien für Bandbreite, Latenz und Fehlerrate auf den jeweiligen Teilnehmer zugeschnitten wird. (Richtig)
+
+b) Die Flusssteuerung nutzt die spezifischen Charakteristiken der einzelnen Teilnehmer, um die Datenübertragung optimal an deren individuelle Eigenschaften und Anforderungen anzupassen. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Welche zwei Aussagen erklären korrekt, wie die Kernaufgaben des Transport Layers 4 auf die Teilnehmer eines Netzes ausgerichtet sind?
+
+Antwortmöglichkeiten:
+
+a) Die Adressierung verwendet Hardware-Adressen zur physischen Identifikation, während die Dienstqualität einheitliche Standardparameter für alle Teilnehmer im gesamten Netzwerk bereitstellt. (Falsch)
+
+b) Die Adressierung verwendet Teilnehmer-Adressen zur eindeutigen Identifikation, während die Dienstqualität mit Garantien für Bandbreite, Latenz und Fehlerrate auf den jeweiligen Teilnehmer zugeschnitten wird. (Richtig)
+
+c) Die Flusssteuerung arbeitet unabhängig von den individuellen Teilnehmern und orientiert sich ausschließlich an der aktuellen Netzwerkkapazität, um eine gleichmäßige Datenverteilung im gesamten System sicherzustellen. (Falsch)
+
+d) Die Flusssteuerung nutzt die spezifischen Charakteristiken der einzelnen Teilnehmer, um die Datenübertragung optimal an deren individuelle Eigenschaften und Anforderungen anzupassen. (Richtig)
+
+### Source Text
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
