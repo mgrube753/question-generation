@@ -14,7 +14,7 @@ Das ursprüngliche Lehrmaterial war:
 
 1. Analysiere den bereitgestellten Kontext sorgfältig.
 2. Untersuche den Fragestamm bezüglich des Originalkontexts.
-3. Formuliere genau zwei korrekte Antwortmöglichkeiten, die zu der Frage passen und inhaltlich voneinander verschieden sind, und deklariere diese als korrekt.
+3. Formuliere genau zwei korrekte Antwortmöglichkeiten, die zu der Frage passen und inhaltlich voneinander verschiedene Aspekte beleuchten, und deklariere diese als korrekt.
 4. Stelle sicher, dass die Antworten präzise und vollständig sind, sowie unnötige Ausschweifungen vermeiden.
 
 **Output Format:** Die Ausgabe muss wie folgt formatiert sein:
