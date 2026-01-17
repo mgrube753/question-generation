@@ -22,7 +22,7 @@ Das Lernziel, das mit dieser Frage adressiert werden soll, lautet: {learning_obj
 8. Stelle sicher, dass die Frage mit einer präzisen, kompakten Antwort, begrenzt durch maximal 150 Wörter, beantwortet werden kann.
 9. Stelle sicher, dass die Frage direkt formuliert ist, ohne schriftliche Bezugnahme auf den Text.
 
-**Output Format:**
+**Output Format:** Die Ausgabe muss wie folgt formatiert sein:
 
 Frage: [Hier den Frageninhalt einfügen]
 

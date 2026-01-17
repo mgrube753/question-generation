@@ -17,12 +17,12 @@ Das ursprüngliche Lehrmaterial war:
 3. Formuliere eine präzise, kompakte Musterlösung, die alle relevanten Aspekte der Frage abdeckt, ohne unnötige Ausschweifungen.
 4. Stelle sicher, dass die Antwort fachlich korrekt ist, sowie das Maximum von 150 Wörtern nicht überschreitet.
 
-**Output Format:** Die Ausgabe sollte wie folgt formatiert sein:
+**Output Format:** Die Ausgabe muss wie folgt formatiert sein:
 
 Frage: [Hier die Frage einfügen]
 
 Antwort: [Hier die Musterlösung einfügen] (Richtig)
 
-Gib nur den kollektiven Output aus Frage und Antwort im vorgegebenen Format aus. Schreibe keinen zusätzlichen Text und vermeide jegliche Markdown-basierte Formatierung (e.g. Hervorhebungen, Heading-Tags, ...).
+Gib nur Kollektiv aus Frage und Antwort im vorgegebenen Format aus. Schreibe keinen zusätzlichen Text und vermeide jegliche Markdown-basierte Formatierung (e.g. Hervorhebungen, Heading-Tags, ...).
 
 **Stop Conditions:** Stoppe genau nach Erstellung der korrekten Antwort.

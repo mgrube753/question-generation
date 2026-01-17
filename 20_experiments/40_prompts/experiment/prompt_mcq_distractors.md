@@ -24,11 +24,11 @@ Das Lernziel, das mit dieser Frage geprüft werden soll, ist: {learning_objectiv
 2. Verstehe, warum die korrekten Antworten richtig sind.
 3. Verstehe, warum die gegebene Frage und die korrekten Antworten dem gegebenen Bloom-Level entspricht.
 4. Fokussiere dich auf das angegebene Lernziel.
-5. Entwickle genau zwei Distraktoren, die häufige Missverständnisse, verwandte (aber falsche) Konzepte oder logische Fehlschlüsse aus dem Kontext widerspiegeln und Fehler auf dem gegebenen kognitiven Level repräsentieren:
+5. Entwickle genau zwei herausfordernde Distraktoren, die häufige Missverständnisse, verwandte (aber falsche) Konzepte oder logische Fehlschlüsse aus dem Kontext widerspiegeln und Fehler auf dem gegebenen kognitiven Level repräsentieren:
     * Wenn Remembering: Verwechslung ähnlicher Begriffe oder falsches Faktenwissen
     * Wenn Understanding: Fehlinterpretationen oder unvollständiges Verständnis
     * Wenn Applying: Falsche Anwendung, oder Anwendung in einem falschen Kontext
-6. Stelle sicher, dass die Distraktoren plausibel klingen, aber objektiv falsch sind.
+6. Stelle sicher, dass die Distraktoren für Bachelorstudenten unter Zeitdruck plausibel klingen, aber objektiv falsch sind.
 7. Nimm die Liste der korrekten Antworten und die neu erstellten Distraktoren.
 8. Erstelle eine einzelne, gemischte Liste in alphabetischer Reihenfolge, in der die korrekten und falschen Antworten verteilt sind.
 
