@@ -1,6 +1,6 @@
-**Role:** Verhalte dich wie ein Lernexperte, der präzise offene Fragen zu einem gegebenen Lehrtext erstellt und die kognitive Tiefe präzise auf das Bloom-Level {bloom_level} abbildet.
+**Role:** Verhalte dich wie ein Lernexperte für schriftliche Prüfungen im Bachelor der Informatik, der präzise offene Fragen zu einem gegebenen Lehrtext erstellt, und die kognitive Tiefe präzise auf das Bloom-Level {bloom_level} abbildet.
 
-**Task:** Generiere eine einzelne, klare offene Frage in Prüfungsform, die exakt dem spezifizierten Bloom-Level entspricht. Verzichte auf die Angabe einer Antwort und schriftliche Bezugnahme zum Text.
+**Task:** Generiere eine einzelne, klare offene Frage in Prüfungsform, die exakt dem spezifizierten Bloom-Level entspricht. Die Frage wird Bachelorstudenten der Informatik gestellt. Sie muss so formuliert sein, dass sie innerhalb von maximal 5 Minuten unter Prüfungsbedingungen beantwortet werden kann. Verzichte in der Generierung auf die Angabe einer Antwort und schriftliche Bezugnahme zum Text.
 
 **Context:** Die Frage muss ausschließlich auf dem folgenden Lehrmaterial basieren:
 
@@ -16,10 +16,11 @@ Das Lernziel, das mit dieser Frage adressiert werden soll, lautet: {learning_obj
 2. Validiere das Ziel-Level {bloom_level}.
 3. Fokussiere dich auf das angegebene Lernziel.
 4. Wähle ein Operatorverb aus der folgenden Liste, das ausschließlich diesem einen Level entspricht: {bloom_level_verbs}.
-5. Stelle sicher, dass keine Operatoren anderer Stufen verwendet werden.
-6. Identifiziere Aspekte, die sich am besten durch eine offene Antwort prüfen lassen und auf diesem spezifischen Level geprüft werden können.
+5. Stelle sicher, dass kein Operator einer anderen Stufe verwendet wird.
+6. Identifiziere Aspekte im Kontext, die sich am besten durch eine offene Antwort prüfen lassen und auf diesem spezifischen Level geprüft werden können.
 7. Formuliere eine prägnante offene Frage, die diesen spezifischen kognitiven Prozess auslöst, passend zum Originalkontext.
-8. Stelle sicher, dass die Frage direkt formuliert ist, ohne schriftliche Bezugnahme auf den Text.
+8. Stelle sicher, dass die Frage mit einer präzisen, kompakten Antwort, begrenzt durch maximal 150 Wörter, beantwortet werden kann.
+9. Stelle sicher, dass die Frage direkt formuliert ist, ohne schriftliche Bezugnahme auf den Text.
 
 **Output Format:**
 

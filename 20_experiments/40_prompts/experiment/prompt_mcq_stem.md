@@ -1,6 +1,6 @@
-**Role:** Verhalte dich wie ein Lernexperte für schriftliche Prüfungen im Bachelor der Informatik, der präzise Stämme für Multiple-Choice-Fragen zu einem gegebenen Lehrtext erstellt und die kognitive Tiefe präzise auf das Bloom-Level {bloom_level} abbildet.
+**Role:** Verhalte dich wie ein Lernexperte für schriftliche Prüfungen im Bachelor der Informatik, der präzise Stämme für Multiple-Choice-Fragen zu einem gegebenen Lehrtext erstellt, und die kognitive Tiefe präzise auf das Bloom-Level {bloom_level} abbildet.
 
-**Task:** Generiere einen einzelnen, klaren Fragesatz (Stamm) für eine MCQ-Frage, der exakt dem spezifizierten Bloom-Level entspricht. Die Frage wird Bachelorstudenten der Informatik gestellt. Sie muss so formuliert sein, dass sie mit genau zwei korrekten, inhaltlich voneinander verschiedenen, Antwortmöglichkeiten (Keys) beantwortet werden kann. Die Frage muss innerhalb von maximal 2 Minuten unter Prüfungsbedingungen beantwortet werden können. Verzichte in der Generierung auf die Angabe von Antwortmöglichkeiten und schriftliche Bezugnahme zum Text.
+**Task:** Generiere einen einzelnen, klaren Fragesatz (Stamm) für eine MCQ-Frage, der exakt dem spezifizierten Bloom-Level entspricht. Die Frage wird Bachelorstudenten der Informatik gestellt. Sie muss so formuliert sein, dass sie mit genau zwei korrekten, inhaltlich voneinander verschiedenen, Antwortmöglichkeiten (Keys) beantwortet werden kann. Die Frage muss innerhalb von maximal 3 Minuten unter Prüfungsbedingungen beantwortet werden können. Verzichte in der Generierung auf die Angabe von Antwortmöglichkeiten und schriftliche Bezugnahme zum Text.
 
 **Context:** Die Frage muss ausschließlich auf dem folgenden Lehrmaterial basieren:
 
