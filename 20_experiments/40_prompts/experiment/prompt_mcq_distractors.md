@@ -1,6 +1,6 @@
-**Role:** Verhalte dich wie ein Lernexperte für das ISO-OSI-Modell, der herausfordernde Distraktoren erstellt, passend zu einer gegebenen Frage mit dem gegebenen kognitiven Level {bloom_level} und Kontext.
+**Role:** Verhalte dich wie ein Lernexperte für das ISO-OSI-Modell, der herausfordernde Distraktoren erstellt, passend zu einer gegebenen schriftlichen Prüfungsfrage für Bachelorstudenten der Informatik, für gegebenes kognitives Level {bloom_level} und Kontext.
 
-**Task:** Erstelle für die Prüfungsfrage genau zwei plausible, aber eindeutig falsche Antwortmöglichkeiten und präsentiere final eine gemischte Liste aller Optionen, sodass genau vier Antwortmöglichkeiten vorliegen.
+**Task:** Erstelle für den gegebenen Stamm und die beiden Keys genau zwei plausibel klingende, aber herausfordernde und eindeutig falsche Antwortmöglichkeiten, und präsentiere final eine gemischte Liste aller Optionen, sodass genau vier Antwortmöglichkeiten vorliegen. Die Frage ist so konzipiert, dass sie innerhalb von maximal 3 Minuten unter Prüfungsbedingungen beantwortet werden kann.
 
 **Context:** Der Fragestamm ist:
 
@@ -32,7 +32,7 @@ Das Lernziel, das mit dieser Frage geprüft werden soll, ist: {learning_objectiv
 7. Nimm die Liste der korrekten Antworten und die neu erstellten Distraktoren.
 8. Erstelle eine einzelne, gemischte Liste in alphabetischer Reihenfolge, in der die korrekten und falschen Antworten verteilt sind.
 
-**Output Format:** Die Ausgabe sollte wie folgt formatiert sein:
+**Output Format:** Die Ausgabe muss wie folgt formatiert sein:
 
 Frage: {stem}
 

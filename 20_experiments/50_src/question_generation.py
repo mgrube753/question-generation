@@ -18,7 +18,6 @@ llm_counters = defaultdict(int)
 counter_lock = threading.Lock()
 
 
-# === Counter Management ===
 def increment_counter(llm_name):
     with counter_lock:
         llm_counters[llm_name] += 1
@@ -43,7 +42,6 @@ def get_max_tokens(bloom_level):
     return constants.MAX_TOKENS_BY_BLOOM.get(bloom_level, 6000)
 
 
-# === File Management ===
 def clean_questions(exp_path):
     questions_dir = os.path.join(exp_path, "questions")
     if os.path.exists(questions_dir):
@@ -54,7 +52,6 @@ def clean_questions(exp_path):
             print(f"[ERROR] Could not clean questions directory: {e}")
 
 
-# Initial CSVs are not needed anymore?
 def create_csvs(exp_name, headers, rows):
     file_path = os.path.join(
         constants.ANALYSES_PATH, "csv", "initial", f"{exp_name}.csv"
@@ -72,7 +69,6 @@ def create_csvs(exp_name, headers, rows):
         print(f"[ERROR] Could not write to CSV file {file_path}: {e}")
 
 
-# === Source Loading ===
 def load_layer_content(layer_num):
     return load_txt(os.path.join(constants.INPUT_SOURCES_PATH, f"layer{layer_num}.txt"))
 
@@ -83,7 +79,6 @@ def load_concatenated_content():
     )
 
 
-# === Question Generation ===
 def generate_mcq_question(
     llm_name,
     clients,
@@ -280,7 +275,6 @@ def run_tasks(tasks, exp_desc):
                 pbar.update(1)
 
 
-# === Experiment 1 ===
 def run_exp1(clients):
     tqdm.write("\n[INFO] Experiment 1: Content Fidelity")
     tqdm.write(
@@ -365,7 +359,6 @@ def run_exp1(clients):
     tqdm.write(f"[INFO] Experiment 1 completed: {len(tasks)} questions generated")
 
 
-# === Experiment 2 ===
 def run_exp2(clients):
     tqdm.write("\n[INFO] Experiment 2: Bloom Alignment")
     tqdm.write("       4 LLMs × 2 Question Types = 48 questions")
