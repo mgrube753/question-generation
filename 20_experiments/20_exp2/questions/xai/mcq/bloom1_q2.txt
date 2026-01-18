@@ -8,25 +8,25 @@ Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter R
 
 ### Stem Generation
 
-Frage: Welche Schichten des OSI-Modells umfassen Kernaufgaben zur Codierung?
+Frage: Welche zwei Arten der Flußsteuerung werden in der Network Layer unterschieden?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Physical Layer und Presentation Layer (Richtig)
-b) Schicht 1 und Schicht 6 (Richtig)
+a) End-to-End Flußsteuerung (Richtig)
+b) Node-to-Node Flußsteuerung (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche Schichten des OSI-Modells umfassen Kernaufgaben zur Codierung?
+Frage: Welche zwei Arten der Flußsteuerung werden in der Network Layer unterschieden?
 
 Antwortmöglichkeiten:
 
-a) Physical Layer und Data Link Layer (Falsch)
-b) Physical Layer und Presentation Layer (Richtig)
-c) Schicht 1 und Schicht 6 (Richtig)
-d) Schicht 6 und Schicht 7 (Falsch)
+a) End-to-End Flußsteuerung (Richtig)
+b) Node-to-Node Flußsteuerung (Richtig)
+c) Sliding Window Flußsteuerung (Falsch)
+d) Stop-and-Wait Flußsteuerung (Falsch)
 
 ### Source Text
 

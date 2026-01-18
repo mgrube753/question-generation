@@ -8,24 +8,13 @@ Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertra
 
 ### Question Generation
 
-Frage: Entwerfen Sie ein neuartiges Datenlink-Protokoll, das die fünf Kernaufgaben (Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation, Medienzugriff) in einem kohärenten Rahmenwerk so reorganisiert, dass es die Zuverlässigkeit und Effizienz in einem drahtlosen Netzwerk mit hoher Paketverlustrate maximiert.
+Frage: Entwickeln Sie ein Konzept für einen Data Link Layer in einem sensorbasierten Netzwerk mit stark begrenzter Energie. Integrieren Sie dabei die fünf Kernaufgaben Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff so, dass der Energieverbrauch minimiert wird.
 
 ### Answer Generation + Union of all
 
-Frage: Entwerfen Sie ein neuartiges Datenlink-Protokoll, das die fünf Kernaufgaben (Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation, Medienzugriff) in einem kohärenten Rahmenwerk so reorganisiert, dass es die Zuverlässigkeit und Effizienz in einem drahtlosen Netzwerk mit hoher Paketverlustrate maximiert.
+Frage: Entwickeln Sie ein Konzept für einen Data Link Layer in einem sensorbasierten Netzwerk mit stark begrenzter Energie. Integrieren Sie dabei die fünf Kernaufgaben Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff so, dass der Energieverbrauch minimiert wird.
 
-Antwort: Protokollname: Adaptive Integrated Link Protocol (AILP) für Hochverlust-Umgebungen.
-
-1.  **Kohärente Reorganisation der Kernaufgaben:** Die Aufgaben werden nicht nacheinander, sondern integriert und wechselseitig steuernd ausgeführt. Die Kernidee ist ein adaptiver Kontrollloop, bei dem die gemessene Paketverlustrate und Latenz direkt die Parameter der anderen Aufgaben steuern.
-2.  **Identifikation & Medienzugriff (kombiniert):** Einsatz eines reservierungsbasierten, kollisionsfreien Medienzugriffs (z.B. ein adaptives TDMA/CSMA-Hybrid). Jeder Knoten erhält einen eindeutigen, kurzen logischen Slot-Identifier (z.B. 8 Bit). Die Slot-Zuteilung enthält implizit die Adressierung für Sende- und Empfangsphasen, sodass explizite Zieladressen in Datenframes entfallen können und der Overhead minimiert wird. Priorisierte Mini-Slots für steuernde ACKs/NACKs werden garantiert.
-3.  **Segmentierung (adaptiv):** Die Framegröße ist nicht fest, sondern wird dynamisch an die aktuelle Kanalqualität angepasst. Bei hoher Verlustrate wird die Maximum Transmission Unit (MTU) klein gewählt, um die Fehlerwahrscheinlichkeit pro Frame zu senken und die Granularität der Wiederholungen zu erhöhen. Dies geschieht durch fragmentierende Übertragung großer Pakete der darüberliegenden Schicht in viele kleine, sequenzierte AILP-Frames.
-4.  **Fehlerkontrolle & Flusskontrolle (verschmolzen):**
-    *   **Fehlererkennung:** Jeder Frame enthält eine starke CRC.
-    *   **Fehlerbehebung & Flusssteuerung:** Es wird ein **ratenbasiertes, selektives Wiederholen (Selective Repeat ARQ)** mit integrierter **Forward Error Correction (FEC)** verwendet. Der Sender verwaltet ein Fenster von Frames, deren Anzahl (Fenstergröße) und Senderate nicht durch Puffergrößen, sondern durch die geschätzte Kanalkapazität und Verlustrate limitiert werden.
-    *   **Mechanismus:** Jeder empfangene Frame wird sofort per ACK im reservierten Steuer-Slot bestätigt. Fehlende oder fehlerhafte Frames werden per NACK angefordert. Zusätzlich wird jedem Datenframe ein leichtes FEC (z.B. Reed-Solomon) hinzugefügt, um häufige Einzelbitfehler sofort zu korrigieren und damit die Anzahl notwendiger NACKs/Retransmissionen zu verringern. Die Fenstergröße und die Senderate werden dynamisch erhöht, wenn die Verlustrate unter einen Schwellwert fällt, und verringert, wenn sie steigt.
-5.  **Kohärenz und Maximierung von Zuverlässigkeit/Effizienz:** Alle Komponenten dienen dem übergeordneten Ziel, die effektive Datengüte trotz Verlusten hochzuhalten. Die adaptive Fragmentierung reduziert den Bedarf an FEC-Overhead pro Frame. Das integrierte Slot-/Adressschema minimiert Kollisionen und Header-Overhead. Das verschmolzene ARQ/FEC/Flusskontroll-System reagiert schnell auf Änderungen, verhindert Überlastung und nutzt die Bandbreite optimal aus, indem es selektiv nur verlorene Frames neu sendet, während die Rate an die Kanalbedingungen angepasst wird. Dieses integrierte Design stellt sicher, dass die Aufgaben synergistisch und nicht isoliert wirken.
-
-(Richtig)
+Antwort: Das Konzept priorisiert minimale Aktivitätsdauer (Duty Cycling) und niedrigen Overhead. Fehlerkontrolle: Leichte Fehlererkennung via CRC, bei Fehlern verwerfen (keine Retransmission, falls Applikation tolerierbar). Flusskontrolle: Stop-and-Wait, um Puffer zu sparen und Senderrate anzupassen. Segmentierung: Feste, kleine Rahmen (z.B. 64 Byte) mit minimalem Header, um Übertragungszeit und Fehlerwahrscheinlichkeit gering zu halten. Identifikation: Kurze, lokale Cluster-Adressen (2 Byte) statt globaler Adressen. Medienzugriff: TDMA-basiert mit vorab zugeteilten Zeitschlitzen; Knoten schlafen außerhalb ihrer Sende-/Empfangsfenster. Dies minimiert Listening, Kollisionen und Overhead, und integriert alle Aufgaben energieeffizient. (Richtig)
 
 ### Source Text
 

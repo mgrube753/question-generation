@@ -8,24 +8,25 @@ Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adre
 
 ### Stem Generation
 
-Frage: Nennen Sie die beiden Arten der Flusssteuerung, die in der Network Layer 3 unterschieden werden.
+Frage: Nennen Sie die beiden Strategien der Flusssteuerung im Network Layer.
 
 ### Key Generation
 
-Korrekte Antwort(en):
-a) End-to-End und Node-to-Node (Richtig)
-b) Node-to-Node und End-to-End (Richtig)
+Korrekte Antworten:
+
+a) End-to-End (Richtig)
+b) Node-to-Node (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Nennen Sie die beiden Arten der Flusssteuerung, die in der Network Layer 3 unterschieden werden.
+Frage: Nennen Sie die beiden Strategien der Flusssteuerung im Network Layer.
 
 Antwortmöglichkeiten:
 
-a) Adressierung und Routing (Falsch)
-b) End-to-End und Node-to-Node (Richtig)
-c) Node-to-Node und End-to-End (Richtig)
-d) Sliding Window und Stop-and-Wait (Falsch)
+a) Adressierung (Falsch)
+b) End-to-End (Richtig)
+c) Node-to-Node (Richtig)
+d) Routing (Falsch)
 
 ### Source Text
 

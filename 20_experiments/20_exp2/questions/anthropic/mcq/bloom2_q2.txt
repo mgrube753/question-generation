@@ -8,25 +8,25 @@ Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Mode
 
 ### Stem Generation
 
-Frage: Welche zwei Schichten des ISO-OSI-Modells sind für Kodierungsprozesse von Daten zuständig?
+Frage: Welche zwei Schichten des ISO-OSI-Modells haben die Adressierung als eine ihrer Kernaufgaben?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Physical Layer (Schicht 1) und Presentation Layer (Schicht 6) (Richtig)
-b) Die Bitübertragungsschicht, die logische Werte auf physikalische Größen abbildet, und die Darstellungsschicht, die Anwendungsdaten als Bitstrom kodiert (Richtig)
+a) Network Layer (Schicht 3) (Richtig)
+b) Transport Layer (Schicht 4) (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei Schichten des ISO-OSI-Modells sind für Kodierungsprozesse von Daten zuständig?
+Frage: Welche zwei Schichten des ISO-OSI-Modells haben die Adressierung als eine ihrer Kernaufgaben?
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2) und Application Layer (Schicht 7), da diese für Segmentierung von Bits und Festlegung der Anwendungsdaten verantwortlich sind (Falsch)
-b) Die Bitübertragungsschicht, die logische Werte auf physikalische Größen abbildet, und die Darstellungsschicht, die Anwendungsdaten als Bitstrom kodiert (Richtig)
-c) Physical Layer (Schicht 1) und Presentation Layer (Schicht 6) (Richtig)
-d) Transport Layer (Schicht 4) und Session Layer (Schicht 5), da diese für die Dienstqualität und Synchronisation der Datenströme zuständig sind (Falsch)
+a) Application Layer (Schicht 7) (Falsch)
+b) Data Link Layer (Schicht 2) (Falsch)
+c) Network Layer (Schicht 3) (Richtig)
+d) Transport Layer (Schicht 4) (Richtig)
 
 ### Source Text
 

@@ -8,25 +8,29 @@ Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beisp
 
 ### Stem Generation
 
-Frage: Ermitteln Sie, welche zwei Kernaufgaben des Data Link Layers zur Anwendung kommen, wenn bei einer Datenübertragung einzelne Bits zu 8-Bit-Bytes zusammengefasst und auftretende Übertragungsfehler erkannt werden.
+Frage: Ermitteln Sie, welche zwei OSI-Schichten zuständig sind, wenn bei einer Netzwerkkommunikation einerseits die Verschlüsselung der übertragenen Daten durchgeführt und andererseits die Auswahl der vermittelnden Zwischenknoten für nicht direkt verbundene Geräte vorgenommen wird.
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Segmentierung und Fehlerkontrolle (Richtig)
-b) Fehlerkontrolle und Segmentierung (Richtig)
+a) Presentation Layer (Schicht 6) für die Verschlüsselung und Network Layer (Schicht 3) für die Auswahl der vermittelnden Zwischenknoten (Routing) (Richtig)
+
+b) Schicht 6 übernimmt das Verschlüsseln und Entschlüsseln der Daten, Schicht 3 ist für das Routing zur Kommunikation zwischen nicht direkt verbundenen Knoten zuständig (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ermitteln Sie, welche zwei Kernaufgaben des Data Link Layers zur Anwendung kommen, wenn bei einer Datenübertragung einzelne Bits zu 8-Bit-Bytes zusammengefasst und auftretende Übertragungsfehler erkannt werden.
+Frage: Ermitteln Sie, welche zwei OSI-Schichten zuständig sind, wenn bei einer Netzwerkkommunikation einerseits die Verschlüsselung der übertragenen Daten durchgeführt und andererseits die Auswahl der vermittelnden Zwischenknoten für nicht direkt verbundene Geräte vorgenommen wird.
 
 Antwortmöglichkeiten:
 
-a) Codierung und Fehlerkontrolle (Falsch)
-b) Fehlerkontrolle und Segmentierung (Richtig)
-c) Flusskontrolle und Segmentierung (Falsch)
-d) Segmentierung und Fehlerkontrolle (Richtig)
+a) Application Layer (Schicht 7) für die Verschlüsselung und Transport Layer (Schicht 4) für die Auswahl der vermittelnden Zwischenknoten zur Kommunikation nicht direkt verbundener Geräte (Falsch)
+
+b) Presentation Layer (Schicht 6) für die Verschlüsselung und Network Layer (Schicht 3) für die Auswahl der vermittelnden Zwischenknoten (Routing) (Richtig)
+
+c) Schicht 6 übernimmt das Verschlüsseln und Entschlüsseln der Daten, Schicht 3 ist für das Routing zur Kommunikation zwischen nicht direkt verbundenen Knoten zuständig (Richtig)
+
+d) Session Layer (Schicht 5) ist für die Verschlüsselung zuständig, Data Link Layer (Schicht 2) übernimmt das Routing zwischen nicht direkt verbundenen Geräten (Falsch)
 
 ### Source Text
 

@@ -8,25 +8,24 @@ Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter R
 
 ### Stem Generation
 
-Frage: Nennen Sie zwei Schichten des ISO-OSI-Modells, deren Kernaufgaben die Kodierung von Daten umfassen.
+Frage: Welche zwei der folgenden Optionen zählen zu den Kernaufgaben des Data Link Layer im ISO-OSI-Modell?
 
 ### Key Generation
 
-Korrekte Antwort(en):
-
-a) Physical Layer und Presentation Layer (Richtig)
-b) Presentation Layer und Physical Layer (Richtig)
+Korrekte Antworten:
+a) Fehlerkontrolle (Richtig)
+b) Medienzugriff (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Nennen Sie zwei Schichten des ISO-OSI-Modells, deren Kernaufgaben die Kodierung von Daten umfassen.
+Frage: Welche zwei der folgenden Optionen zählen zu den Kernaufgaben des Data Link Layer im ISO-OSI-Modell?
 
 Antwortmöglichkeiten:
 
-a) Application Layer und Session Layer (Falsch)
-b) Data Link Layer und Transport Layer (Falsch)
-c) Physical Layer und Presentation Layer (Richtig)
-d) Presentation Layer und Physical Layer (Richtig)
+a) Fehlerkontrolle (Richtig)
+b) Medienzugriff (Richtig)
+c) Routing (Falsch)
+d) Verschlüsselung (Falsch)
 
 ### Source Text
 

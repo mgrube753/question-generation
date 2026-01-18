@@ -8,25 +8,25 @@ Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Mode
 
 ### Stem Generation
 
-Frage: Welche zwei Kernaufgaben teilen sich der Network Layer und der Transport Layer im ISO-OSI-Modell?
+Frage: Welche zwei Schichten des ISO-OSI-Modells beinhalten Strategien zur Flusssteuerung beziehungsweise Flusskontrolle als Kernaufgabe, um Probleme bei zu schnellem Senden zu adressieren?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Adressierung und Flusssteuerung (Richtig)
-b) Die Vergabe von Adressen zur Identifikation sowie Strategien zur Steuerung des Datenflusses bei zu schneller Übertragung (Richtig)
+a) Data Link Layer (Schicht 2) und Network Layer (Schicht 3) (Richtig)
+b) Sicherungsschicht und Vermittlungsschicht (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei Kernaufgaben teilen sich der Network Layer und der Transport Layer im ISO-OSI-Modell?
+Frage: Welche zwei Schichten des ISO-OSI-Modells beinhalten Strategien zur Flusssteuerung beziehungsweise Flusskontrolle als Kernaufgabe, um Probleme bei zu schnellem Senden zu adressieren?
 
 Antwortmöglichkeiten:
 
-a) Adressierung und Flusssteuerung (Richtig)
-b) Die Vergabe von Adressen zur Identifikation sowie Strategien zur Steuerung des Datenflusses bei zu schneller Übertragung (Richtig)
-c) Fehlerkontrolle und Segmentierung (Falsch)
-d) Routing und Dienstqualität (Falsch)
+a) Data Link Layer (Schicht 2) und Network Layer (Schicht 3) (Richtig)
+b) Physical Layer (Schicht 1) und Transport Layer (Schicht 4) (Falsch)
+c) Session Layer (Schicht 5) und Presentation Layer (Schicht 6) (Falsch)
+d) Sicherungsschicht und Vermittlungsschicht (Richtig)
 
 ### Source Text
 

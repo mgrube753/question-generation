@@ -8,25 +8,25 @@ Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonze
 
 ### Stem Generation
 
-Frage: Wenden Sie die Aufgaben der Application Layer (Layer 7) auf die Erstellung einer Anwendungsspezifikation an: Welche zwei Festlegungen müssen Sie dabei dem Bereich „Protokollelemente“ zuordnen?
+Frage: Nutzen Sie die drei Kernaufgaben der Application Layer (Grundkonzepte, Protokollelemente, Verhalten), um für eine Messenger-Anwendung mit dem Request „sendMessage“ zu entscheiden: Welche zwei der folgenden Aussagen beschreiben Protokollelemente (d. h. Anforderungen an erwartete Daten bzw. zulässige Anforderungen) und nicht Grundkonzepte oder Verhaltensweisen?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Festlegen, welche Anforderungen/Requests (z. B. Operationen/Kommandos wie GET, LOGIN, SEND) die Anwendung über das Protokoll stellen bzw. entgegennehmen darf (Richtig)
-b) Festlegen, welche Daten zu diesen Protokollelementen erwartet werden (z. B. Parameter/Felder, Datentypen, Format/Syntax und notwendige Inhalte) (Richtig)
+a) Der Request „sendMessage“ muss als Datenfelder mindestens eine Empfängerkennung (z. B. recipientId) und den Nachrichtentext (z. B. content) enthalten; optional dürfen z. B. attachmentIds oder eine clientMessageId mitgesendet werden. (Richtig)
+b) Für „sendMessage“ ist als Anforderung zulässig/erwartet, dass der Client einen gültigen Authentifizierungsnachweis (z. B. Authorization-Token) mitsendet und dass Felder wie content formatiert und begrenzt sind (z. B. UTF‑8, maximale Länge). (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Wenden Sie die Aufgaben der Application Layer (Layer 7) auf die Erstellung einer Anwendungsspezifikation an: Welche zwei Festlegungen müssen Sie dabei dem Bereich „Protokollelemente“ zuordnen?
+Frage: Frage: Nutzen Sie die drei Kernaufgaben der Application Layer (Grundkonzepte, Protokollelemente, Verhalten), um für eine Messenger-Anwendung mit dem Request „sendMessage“ zu entscheiden: Welche zwei der folgenden Aussagen beschreiben Protokollelemente (d. h. Anforderungen an erwartete Daten bzw. zulässige Anforderungen) und nicht Grundkonzepte oder Verhaltensweisen?
 
 Antwortmöglichkeiten:
 
-a) Festlegen, welche Daten zu diesen Protokollelementen erwartet werden (z. B. Parameter/Felder, Datentypen, Format/Syntax und notwendige Inhalte) (Richtig)
-b) Festlegen, wie die Anwendung auf die Anforderungen durch diese Protokollelemente reagiert (z. B. Status-/Fehlercodes, Zustandsübergänge, Antwortlogik) (Falsch)
-c) Festlegen, welche Anforderungen/Requests (z. B. Operationen/Kommandos wie GET, LOGIN, SEND) die Anwendung über das Protokoll stellen bzw. entgegennehmen darf (Richtig)
-d) Festlegen, welche Grundkonzepte/Begriffe in der Anwendung vorkommen und wie sie semantisch zu verstehen sind (z. B. „User“, „Session“, „Ressource“) (Falsch)
+a) Der Request „sendMessage“ muss als Datenfelder mindestens eine Empfängerkennung (z. B. recipientId) und den Nachrichtentext (z. B. content) enthalten; optional dürfen z. B. attachmentIds oder eine clientMessageId mitgesendet werden. (Richtig)
+b) Für „sendMessage“ ist als Anforderung zulässig/erwartet, dass der Client einen gültigen Authentifizierungsnachweis (z. B. Authorization-Token) mitsendet und dass Felder wie content formatiert und begrenzt sind (z. B. UTF‑8, maximale Länge). (Richtig)
+c) In der Messenger-Anwendung gibt es die Grundkonzepte Benutzer, Chat (1:1 oder Gruppe) und Nachricht; „sendMessage“ beschreibt fachlich das Erzeugen einer Nachricht innerhalb eines Chats. (Falsch)
+d) Nach Eingang von „sendMessage“ speichert der Server die Nachricht persistent und liefert sie an den/die Empfänger aus; bei ungültiger Authentifizierung wird mit einem Fehler (z. B. 401/403) reagiert. (Falsch)
 
 ### Source Text
 

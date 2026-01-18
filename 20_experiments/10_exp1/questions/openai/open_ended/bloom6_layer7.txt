@@ -8,66 +8,20 @@ Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonze
 
 ### Question Generation
 
-Frage: Entwerfen Sie für eine Online-Paketverfolgungsanwendung eine Application-Layer-Spezifikation, die Grundkonzepte, Protokollelemente (jeweils mit Anforderungen und erwarteten Daten) und das Verhalten der Anwendung auf diese Protokollelemente zu einem konsistenten Ganzen zusammenstellt.
+Frage: Entwerfen Sie für eine einfache Anwendung „Campus-Chat“ (Textnachrichten zwischen zwei Studierenden) eine Application-Layer-7-Spezifikation mit (1) genau drei Grundkonzepten der Anwendung, (2) genau drei Protokollelementen (jeweils Name und erwartete Datenfelder), und (3) dem Verhalten der Anwendung für jedes Protokollelement in je einem Erfolgs- und einem Fehlerfall.
 
 ### Answer Generation + Union of all
 
-Frage: Entwerfen Sie für eine Online-Paketverfolgungsanwendung eine Application-Layer-Spezifikation, die Grundkonzepte, Protokollelemente (jeweils mit Anforderungen und erwarteten Daten) und das Verhalten der Anwendung auf diese Protokollelemente zu einem konsistenten Ganzen zusammenstellt.
+Frage: Entwerfen Sie für eine einfache Anwendung „Campus-Chat“ (Textnachrichten zwischen zwei Studierenden) eine Application-Layer-7-Spezifikation mit (1) genau drei Grundkonzepten der Anwendung, (2) genau drei Protokollelementen (jeweils Name und erwartete Datenfelder), und (3) dem Verhalten der Anwendung für jedes Protokollelement in je einem Erfolgs- und einem Fehlerfall.
 
-Antwort: Grundkonzepte (Objekte/Begriffe):
-- Sendung (Shipment): shipmentId (intern), trackingId (extern), carrier, serviceLevel, shipper, recipient, origin, destination, createdAt.
-- Tracking-Ereignis (Event): eventId, trackingId, timestamp (UTC), statusCode, statusText, location (country/city/geo optional), details (z.B. „Zollprüfung“), source (carrier/system).
-- Statusmodell: REGISTERED, IN_TRANSIT, OUT_FOR_DELIVERY, DELIVERED, EXCEPTION, UNKNOWN; Status ist aus letzter Event-Angabe abgeleitet.
-- Benutzer/Client: clientId, authToken; Rollen: Customer (nur lesen), CarrierSystem (schreiben).
-- Abonnement (Subscription): subscriptionId, trackingId, callbackUrl, secret, eventTypes, expiresAt.
-
-Protokollelemente (Application-Layer über HTTPS; JSON; UTF-8; idempotent wo angegeben):
-1) AuthRequest
-- Anforderung: POST /auth/token
-- Erwartete Daten: clientId, clientSecret
-- Antwortdaten: accessToken (JWT o.ä.), tokenType=Bearer, expiresIn
-2) TrackRequest (Sendung abfragen)
-- Anforderung: GET /track/{trackingId}?language=de-DE&detail=full|summary
-- Header: Authorization: Bearer <token> (optional für öffentliche IDs, verpflichtend für geschützte)
-- Antwortdaten (200): trackingId, currentStatus, lastUpdated, origin, destination (optional), events[] (bei detail=full: timestamp, statusCode, statusText, location, details)
-- Fehler: 404 (unknown trackingId), 401/403 (nicht berechtigt), 429 (rate limit)
-3) BulkTrackRequest
-- Anforderung: POST /track/bulk
-- Erwartete Daten: trackingIds[] (max 100), detail
-- Antwortdaten (200): results[] je trackingId mit success true/false, payload oder errorCode
-4) CreateShipment (optional, falls System selbst Labels/Sendungen erzeugt)
-- Anforderung: POST /shipments (idempotent via Idempotency-Key Header)
-- Erwartete Daten: trackingId (optional, sonst generieren), carrier, shipper, recipient, origin, destination
-- Antwortdaten (201): shipmentId, trackingId, createdAt
-- Fehler: 409 (trackingId bereits vergeben), 400 (Validierung)
-5) PostEvent (Status-Update durch CarrierSystem)
-- Anforderung: POST /track/{trackingId}/events (idempotent via eventId oder Idempotency-Key)
-- Erwartete Daten: eventId, timestamp, statusCode, statusText (optional), location (optional), details (optional)
-- Antwortdaten (202): accepted=true, computedCurrentStatus, lastUpdated
-- Fehler: 404 (trackingId unbekannt), 409 (duplicate eventId), 422 (timestamp in Zukunft außerhalb Toleranz)
-6) SubscribeUpdates (Push)
-- Anforderung: POST /subscriptions
-- Erwartete Daten: trackingId, callbackUrl (HTTPS), secret (für Signatur), eventTypes (z.B. STATUS_CHANGE), expiresAt
-- Antwortdaten (201): subscriptionId, trackingId, expiresAt
-7) Unsubscribe
-- Anforderung: DELETE /subscriptions/{subscriptionId}
-- Antwortdaten (204)
-8) WebhookDelivery (vom System an Client)
-- Anforderung: POST <callbackUrl>
-- Erwartete Daten: subscriptionId, trackingId, event (wie oben), computedCurrentStatus, deliveryTimestamp, signature=HMAC(secret, body)
-- Erwartete Client-Antwort: 200 innerhalb Timeout; sonst Retry mit Exponential Backoff, max N Versuche; danach „dead-letter“-Status.
-9) ErrorResponse (einheitlich)
-- Format: errorCode, message, correlationId, details (optional)
-
-Verhalten der Anwendung (konsistentes Zusammenspiel):
-- Bei AuthRequest prüft Server Credentials, erstellt Token mit Rollen/Scopes (read:track, write:events) und Ablaufzeit.
-- Bei TrackRequest validiert Server trackingId-Format, authorisiert (falls geschützt), liest Sendung+Events, berechnet currentStatus aus letztem Event, liefert je nach detail nur Zusammenfassung oder komplette Historie; setzt ETag/Cache-Control für unveränderte Daten.
-- Bei BulkTrackRequest verarbeitet Server jede ID unabhängig, begrenzt Last (max 100), liefert Teilerfolge im selben Response.
-- Bei CreateShipment legt Server neue Sendung an (oder liefert Konflikt), protokolliert initiales Event REGISTERED, gibt trackingId zurück.
-- Bei PostEvent prüft Server Schreibrechte, validiert Event (Pflichtfelder, StatusCode bekannt), dedupliziert über eventId/Idempotency-Key, speichert Event, aktualisiert currentStatus/lastUpdated; wenn Statuswechsel oder abonnierte EventType, triggert WebhookDelivery an alle aktiven Subscriptions zur trackingId.
-- Bei SubscribeUpdates validiert Server callbackUrl (HTTPS), speichert Subscription, sendet optional ein „challenge“-Test-Event; bei Unsubscribe entfernt Subscription sofort.
-- Bei WebhookDelivery signiert Server Payload, erwartet 2xx; bei Nicht-2xx oder Timeout retryt Server; nach Überschreitung markiert er Subscription als fehlerhaft und liefert bei nächstem TrackRequest einen Hinweis „pushDeliveryDegraded“ (optional).
-- Fehlerbehandlung ist konsistent über ErrorResponse; jeder Request erhält correlationId zur Nachverfolgung; Rate-Limits erzeugen 429 mit Retry-After. (Richtig)
+Antwort: Grundkonzepte (3): Student (studentId), Sitzung (sessionToken), Nachricht (msgId, text, ts).
+Protokollelemente (3):
+1) AUTH_REQ(studentId, password)
+Erfolg: Server prüft Daten, erzeugt Sitzung und antwortet AUTH_OK(sessionToken). Fehler: falsche Daten/gesperrt → AUTH_ERR(reason).
+2) SEND_REQ(sessionToken, toStudentId, msgId, text, ts)
+Erfolg: Server validiert Sitzung, speichert Nachricht, stellt an Empfänger zu und antwortet SEND_OK(msgId). Fehler: ungültige Sitzung/Empfänger unbekannt → SEND_ERR(reason).
+3) FETCH_REQ(sessionToken, sinceTs)
+Erfolg: Server validiert Sitzung, liefert alle neuen Nachrichten: FETCH_OK(list<msgId,text,ts,fromStudentId>). Fehler: ungültige Sitzung → FETCH_ERR(reason). (Richtig)
 
 ### Source Text
 

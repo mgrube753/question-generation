@@ -8,17 +8,13 @@ Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Mode
 
 ### Question Generation
 
-Frage: Erklären Sie in eigenen Worten, wie die Data Link Layer und die Network Layer im ISO-OSI-Modell zusammenarbeiten, um Daten über unterschiedliche Netzwerke hinweg zu übertragen.
+Frage: Erklären Sie die Beziehung zwischen dem Physical Layer und dem Data Link Layer im ISO-OSI-Modell und beschreiben Sie, wie die Kernaufgaben des Data Link Layers auf den Dienstleistungen des Physical Layers aufbauen.
 
 ### Answer Generation + Union of all
 
-Frage: Erklären Sie in eigenen Worten, wie die Data Link Layer und die Network Layer im ISO-OSI-Modell zusammenarbeiten, um Daten über unterschiedliche Netzwerke hinweg zu übertragen.
+Frage: Erklären Sie die Beziehung zwischen dem Physical Layer und dem Data Link Layer im ISO-OSI-Modell und beschreiben Sie, wie die Kernaufgaben des Data Link Layers auf den Dienstleistungen des Physical Layers aufbauen.
 
-Antwort: Der Network Layer (Schicht 3) ist für die übergreifende Adressierung und Wegfindung (Routing) zwischen verschiedenen Netzwerken verantwortlich. Er packt die zu sendenden Daten in Pakete und versieht sie mit einer logischen, netzwerkweiten Adresse (z.B. einer IP-Adresse). Sein Ziel ist es, einen Weg vom Quell- zum Zielnetzwerk zu bestimmen, der über mehrere Zwischenknoten (Router) führen kann.
-
-Der Data Link Layer (Schicht 2) ist für die zuverlässige Übertragung innerhalb eines einzelnen physikalischen Netzwerksegments (z.B. einem Ethernet-Segment) zuständig. Er nimmt die Pakete vom Network Layer, verpackt sie in Frames und versieht sie mit einer hardwarenahen Adresse (z.B. einer MAC-Adresse) für den nächsten direkten Knoten auf dem Weg – das kann der endgültige Empfänger oder der nächste Router sein.
-
-Die Zusammenarbeit besteht in einer Arbeitsteilung: Der Network Layer plant die gesamte Reise über verschiedene Netzwerke hinweg und adressiert das finale Ziel. Der Data Link Layer führt dann die einzelnen "Etappen" dieser Reise aus, indem er jeweils die Übertragung zum nächsten direkten Nachbarknoten (dem nächsten Hop) organisiert. Bei jedem Hop (Router) wird der alte Data-Link-Layer-Header abgenommen, der Network-Layer-Header ausgelesen, die nächste Hop-Adresse ermittelt und ein neuer Data-Link-Layer-Header für die nächste Etappe angelegt. So sorgen Schicht 3 für die globale Adressierung und Wegsteuerung und Schicht 2 für die lokale, fehlergesicherte Zustellung von Knoten zu Knoten. (Richtig)
+Antwort: Der Physical Layer (Layer 1) stellt die physische Übertragung roher Bitströme über ein Medium bereit (Codierung, Transport, Decodierung). Der Data Link Layer (Layer 2) baut direkt darauf auf und nutzt diesen möglicherweise fehlerbehafteten Bitstrom, um eine fehlergesicherte, logische Verbindung zwischen direkt angeschlossenen Knoten zu schaffen. Seine Kernaufgaben bauen wie folgt auf: Die Segmentierung fasst die empfangenen Bits zu Frames (z.B. Bytes) zusammen. Die Fehlerkontrolle ergänzt Prüfsummen, um Übertragungsfehler zu erkennen, die auf physikalischer Ebene entstehen. Die Identifikation (Adressierung) ermöglicht die Auswahl bestimmter Empfänger innerhalb des shared Mediums. Die Medienzugriffskontrolle regelt, wann der Physical Layer aktiv sendet oder wartet, um Kollisionen zu vermeiden. Die Flusskontrolle passt die Senderate an, um den Empfänger nicht zu überlasten, der die physikalisch übertragenen Bits verarbeiten muss. (Richtig)
 
 ### Source Text
 

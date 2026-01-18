@@ -8,25 +8,25 @@ Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adre
 
 ### Stem Generation
 
-Frage: Welche zwei Arten der Flusssteuerung werden im Network Layer 3 unterschieden?
+Frage: Welche zwei Arten der Flusssteuerung werden im Network Layer 3 unterschieden? (Wählen Sie zwei Antworten aus.)
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) End-to-End-Flusssteuerung (Richtig)
-b) Node-to-Node-Flusssteuerung (Richtig)
+a) End-to-End Flusssteuerung (Richtig)
+b) Node-to-Node Flusssteuerung (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche zwei Arten der Flusssteuerung werden im Network Layer 3 unterschieden?
+Frage: Frage: Welche zwei Arten der Flusssteuerung werden im Network Layer 3 unterschieden? (Wählen Sie zwei Antworten aus.)
 
 Antwortmöglichkeiten:
 
-a) End-to-End-Flusssteuerung (Richtig)
-b) Link-to-Link-Flusssteuerung (Falsch)
-c) Node-to-Node-Flusssteuerung (Richtig)
-d) Segment-to-Segment-Flusssteuerung (Falsch)
+a) End-to-End Flusssteuerung (Richtig)
+b) Backpressure-Flusssteuerung (Falsch)
+c) Node-to-Node Flusssteuerung (Richtig)
+d) Sliding-Window-Flusssteuerung (Falsch)
 
 ### Source Text
 

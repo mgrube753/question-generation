@@ -8,25 +8,25 @@ Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter R
 
 ### Stem Generation
 
-Frage: Welche Schichten des ISO-OSI-Modells beinhalten Flußsteuerung als eine ihrer Kernaufgaben?
+Frage: Welche zwei Schichten des ISO-OSI-Modells befinden sich direkt oberhalb des Transport Layers?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
-b) Schicht 3 und Schicht 4 (Richtig)
+a) Session Layer (Schicht 5) und Presentation Layer (Schicht 6) (Richtig)
+b) Sitzungsschicht und Darstellungsschicht (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche Schichten des ISO-OSI-Modells beinhalten Flußsteuerung als eine ihrer Kernaufgaben?
+Frage: Welche zwei Schichten des ISO-OSI-Modells befinden sich direkt oberhalb des Transport Layers?
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2) und Transport Layer (Schicht 4) (Falsch)
-b) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
-c) Schicht 3 und Schicht 4 (Richtig)
-d) Session Layer (Schicht 5) und Presentation Layer (Schicht 6) (Falsch)
+a) Network Layer (Schicht 3) und Data Link Layer (Schicht 2) (Falsch)
+b) Presentation Layer (Schicht 6) und Application Layer (Schicht 7) (Falsch)
+c) Session Layer (Schicht 5) und Presentation Layer (Schicht 6) (Richtig)
+d) Sitzungsschicht und Darstellungsschicht (Richtig)
 
 ### Source Text
 

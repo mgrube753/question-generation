@@ -8,13 +8,17 @@ Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Deco
 
 ### Question Generation
 
-Frage: Bewerten Sie das Zusammenspiel von Codierung, Transport und Decodierung hinsichtlich seiner Wirksamkeit bei der Übertragung logischer Werte auf der physikalischen Ebene.
+Frage: Bewerten Sie die Eignung von Manchester-Codierung im Vergleich zu NRZ für die Übertragung logischer Werte über Funkmedien, unter Berücksichtigung des Zusammenspiels mit Transport und Decodierung.
 
 ### Answer Generation + Union of all
 
-Frage: Bewerten Sie das Zusammenspiel von Codierung, Transport und Decodierung hinsichtlich seiner Wirksamkeit bei der Übertragung logischer Werte auf der physikalischen Ebene.
+Frage: Bewerten Sie die Eignung von Manchester-Codierung im Vergleich zu NRZ für die Übertragung logischer Werte über Funkmedien, unter Berücksichtigung des Zusammenspiels mit Transport und Decodierung.
 
-Antwort: Das Zusammenspiel von Codierung, Transport und Decodierung ist hoch wirksam für die Übertragung logischer Werte auf der physikalischen Ebene, da es eine zuverlässige Abbildung und Rückinterpretation ermöglicht. Basierend auf Kriterien wie Zuverlässigkeit, Fehlerresistenz und Effizienz bewertet sich die Wirksamkeit positiv: Codierung (z. B. NRZ oder Manchester) transformiert logische Werte effizient in physikalische Größen, Transport (mediengebunden wie Kabel oder medienfrei wie Funk) gewährleistet den räumlichen Transfer trotz potenzieller Störungen, und Decodierung (z. B. durch Abtastung) stellt die genaue Rückgewinnung sicher. Schwächen treten bei Störanfälligkeit im Transport auf, die durch robuste Codierverfahren (z. B. Fehlerkorrektur) gemindert werden, was die Gesamtwirksamkeit auf hohem Niveau hält, solange etablierte Standards eingehalten werden. (Richtig)
+Antwort: Manchester-Codierung ist für Funkmedien geeigneter als NRZ. Bei der Codierung mappt NRZ logische Werte direkt auf Spannungspegel (1: hoch, 0: niedrig), was bei langen Bitsequenzen ohne Übergänge zu Synchronisationsverlusten führt. Manchester hingegen erzeugt pro Bit einen Mittelübergang (0: hoch-niedrig, 1: niedrig-hoch), ermöglicht Selbst-Synchronisation und vermeidet DC-Komponenten.
+
+Im Transport über Funk (medienfrei) profitiert Manchester von balancierter Signalform, die AC-Kopplung erleichtert und Bandbreitennutzung optimiert, während NRZ DC-Bias erzeugt, der in drahtlosen Systemen problematisch ist.
+
+Bei der Decodierung erlaubt Manchester einfache Clock-Recovery durch Übergangserkennung, NRZ erfordert externe Synchronisation. Nachteil von Manchester: doppelte Bandbreite. Insgesamt überwiegen Vorteile für Funk. (Richtig)
 
 ### Source Text
 

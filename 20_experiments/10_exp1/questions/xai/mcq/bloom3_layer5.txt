@@ -8,25 +8,25 @@ Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwal
 
 ### Stem Generation
 
-Frage: Ermitteln Sie zwei Kernaufgaben der Session Layer, die Sie in einer unterbrochenen Kommunikationsbeziehung anwenden würden, um die Sitzung fortzusetzen.
+Frage: In einer Anwendung, die unterbrochene Dateiübertragungen fortsetzen soll, indem Transaktionen gruppiert und Wiederaufnahmepunkte gesetzt werden, welche Kernaufgaben der Session Layer nutzen Sie?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Sitzungsverwaltung anwenden, um die Sitzung wieder aufzubauen und zu verwalten, sowie die Synchronisation, um Zwischenpunkte zu setzen und die Kommunikation vom letzten Synchronisationspunkt fortzusetzen. (Richtig)
-b) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Synchronisation anwenden, um von gesetzten Zwischenpunkten aus fortzufahren, sowie die Bündelung, um zusammengehörige Transaktionen zu gruppieren und diese effizient nach der Unterbrechung abzuschließen. (Richtig)
+a) Synchronisation und Bündelung (Richtig)
+b) Setzen von Zwischenpunkten sowie Gruppierung zusammengehöriger Transaktionen (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ermitteln Sie zwei Kernaufgaben der Session Layer, die Sie in einer unterbrochenen Kommunikationsbeziehung anwenden würden, um die Sitzung fortzusetzen.
+Frage: Frage: In einer Anwendung, die unterbrochene Dateiübertragungen fortsetzen soll, indem Transaktionen gruppiert und Wiederaufnahmepunkte gesetzt werden, welche Kernaufgaben der Session Layer nutzen Sie?
 
 Antwortmöglichkeiten:
 
-a) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Sitzungsverwaltung anwenden, um die Sitzung wieder aufzubauen und zu verwalten, sowie die Synchronisation, um Zwischenpunkte zu setzen und die Kommunikation vom letzten Synchronisationspunkt fortzusetzen. (Richtig)
-b) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Sitzungsverwaltung anwenden, um die Sitzung wiederherzustellen, sowie die Adressierung, um die korrekten Endpunkte zu identifizieren und die Kommunikation fortzusetzen. (Falsch)
-c) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Synchronisation anwenden, um von gesetzten Zwischenpunkten aus fortzufahren, sowie die Bündelung, um zusammengehörige Transaktionen zu gruppieren und diese effizient nach der Unterbrechung abzuschließen. (Richtig)
-d) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Synchronisation anwenden, um Zwischenpunkte zu setzen, sowie die Segmentierung, um Daten in kleinere Einheiten zu teilen und diese neu zu übertragen. (Falsch)
+a) Aufbauen und Beenden von Sitzungen (Falsch)
+b) Flow Control und Fehlerkorrektur (Falsch)
+c) Setzen von Zwischenpunkten sowie Gruppierung zusammengehöriger Transaktionen (Richtig)
+d) Synchronisation und Bündelung (Richtig)
 
 ### Source Text
 

@@ -8,25 +8,25 @@ Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Mode
 
 ### Stem Generation
 
-Frage: Welche Schichten des OSI-Modells umfassen Kernaufgaben zur Flußsteuerung auf End-to-End-Basis?
+Frage: Welche Schichten des OSI-Modells umfassen Kernaufgaben zur Codierung von Daten?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Die Network Layer (Schicht 3) und die Transport Layer (Schicht 4) umfassen Kernaufgaben zur Flußsteuerung auf End-to-End-Basis, da sie Strategien bieten, um den Datenfluss vom ursprünglichen Sender bis zum finalen Empfänger zu regulieren, unabhängig von Zwischenschritten. (Richtig)
-b) Im OSI-Modell übernehmen Schicht 3 (Network) und Schicht 4 (Transport) die Flußsteuerung auf End-to-End-Basis als Kernaufgabe, indem sie sicherstellen, dass der Datenstrom zwischen entfernten Endpunkten kontrolliert wird, etwa durch Anpassung an Teilnehmerbedürfnisse oder Routing-Entscheidungen. (Richtig)
+a) Schicht 1 (Physical Layer), da sie die Codierung logischer Werte auf physikalische Größen wie NRZ oder Manchester umfasst. (Richtig)
+b) Schicht 6 (Presentation Layer), da sie die Kodierung von Anwendungsdaten als Bitstrom inklusive Endian-Ness und Zeichendarstellung übernimmt. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche Schichten des OSI-Modells umfassen Kernaufgaben zur Flußsteuerung auf End-to-End-Basis?
+Frage: Frage: Welche Schichten des OSI-Modells umfassen Kernaufgaben zur Codierung von Daten?
 
 Antwortmöglichkeiten:
 
-a) Die Network Layer (Schicht 3) und die Transport Layer (Schicht 4) umfassen Kernaufgaben zur Flußsteuerung auf End-to-End-Basis, da sie Strategien bieten, um den Datenfluss vom ursprünglichen Sender bis zum finalen Empfänger zu regulieren, unabhängig von Zwischenschritten. (Richtig)
-b) Die Data Link Layer (Schicht 2) und die Network Layer (Schicht 3) umfassen Kernaufgaben zur Flußsteuerung auf End-to-End-Basis, da sie Strategien für direkte Verbindungen und netzwerkübergreifende Adressierung kombinieren, um den Datenfluss über entfernte Knoten zu regulieren. (Falsch)
-c) Im OSI-Modell übernehmen Schicht 3 (Network) und Schicht 4 (Transport) die Flußsteuerung auf End-to-End-Basis als Kernaufgabe, indem sie sicherstellen, dass der Datenstrom zwischen entfernten Endpunkten kontrolliert wird, etwa durch Anpassung an Teilnehmerbedürfnisse oder Routing-Entscheidungen. (Richtig)
-d) Die Transport Layer (Schicht 4) und die Session Layer (Schicht 5) umfassen Kernaufgaben zur Flußsteuerung auf End-to-End-Basis, da sie Synchronisation und Teilnehmer-spezifische Anpassungen nutzen, um den Datenfluss zwischen Endpunkten zu managen. (Falsch)
+a) Schicht 1 (Physical Layer), da sie die Codierung logischer Werte auf physikalische Größen wie NRZ oder Manchester umfasst. (Richtig)
+b) Schicht 2 (Data Link Layer), da sie die Segmentierung einzelner Bits zu größeren Einheiten wie Bytes umfasst, was eine Form der Datencodierung darstellt. (Falsch)
+c) Schicht 6 (Presentation Layer), da sie die Kodierung von Anwendungsdaten als Bitstrom inklusive Endian-Ness und Zeichendarstellung übernimmt. (Richtig)
+d) Schicht 7 (Application Layer), da sie die Festlegung von Protokollelementen und Daten umfasst, inklusive Codierungsstandards für Anwendungen. (Falsch)
 
 ### Source Text
 

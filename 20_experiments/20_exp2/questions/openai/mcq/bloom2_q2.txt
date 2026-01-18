@@ -8,25 +8,25 @@ Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Mode
 
 ### Stem Generation
 
-Frage: Welche zwei OSI-Schichten würden Sie gegenüberstellen, wenn Sie erklären sollen, welche Schicht Anwendungsdaten in einen Bitstrom kodiert und welche Schicht logische Werte auf physikalische Größen abbildet?
+Frage: Welche zwei Schichten des ISO-OSI-Modells sind für Adressierung zuständig, wenn einmal netzwerk-übergreifende Adressen und einmal Teilnehmer-Adressen gemeint sind? (Wählen Sie genau zwei.)
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Präsentationsschicht (Layer 6) und Bitübertragungsschicht/Physical Layer (Layer 1): Layer 6 kodiert Anwendungsdaten als Bitstrom, Layer 1 bildet logische Werte auf physikalische Signale ab. (Richtig)
-b) OSI-Layer 6 (Presentation) gegenüber OSI-Layer 1 (Physical): Die Präsentationsschicht sorgt für die Darstellung/Kodierung der Daten als Bitfolge, die physikalische Schicht setzt diese logischen Bits in elektrische/optische/funkbasierte Größen um. (Richtig)
+a) Network Layer (Schicht 3) – Adressierung: netzwerk-übergreifende Adressen (Richtig)
+b) Transport Layer (Schicht 4) – Adressierung: Teilnehmer-Adressen (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche zwei OSI-Schichten würden Sie gegenüberstellen, wenn Sie erklären sollen, welche Schicht Anwendungsdaten in einen Bitstrom kodiert und welche Schicht logische Werte auf physikalische Größen abbildet?
+Frage: Frage: Welche zwei Schichten des ISO-OSI-Modells sind für Adressierung zuständig, wenn einmal netzwerk-übergreifende Adressen und einmal Teilnehmer-Adressen gemeint sind? (Wählen Sie genau zwei.)
 
 Antwortmöglichkeiten:
 
-a) OSI-Layer 2 (Sicherungsschicht/Data Link) und OSI-Layer 1 (Bitübertragungsschicht/Physical): Layer 2 „kodiert“ die Daten als Bitstrom durch Segmentierung/Framing, Layer 1 bildet logische Werte auf physikalische Signale ab. (Falsch)
-b) OSI-Layer 6 (Presentation) gegenüber OSI-Layer 1 (Physical): Die Präsentationsschicht kodiert Anwendungsdaten als Bitstrom, die physikalische Schicht setzt logische Bits in elektrische/optische/funkbasierte Größen um. (Richtig)
-c) Anwendungsschicht (Layer 7) und Bitübertragungsschicht/Physical Layer (Layer 1): Layer 7 kodiert Anwendungsdaten in einen Bitstrom, Layer 1 bildet logische Werte auf physikalische Größen ab. (Falsch)
-d) Präsentationsschicht (Layer 6) und Bitübertragungsschicht/Physical Layer (Layer 1): Layer 6 kodiert Anwendungsdaten als Bitstrom, Layer 1 bildet logische Werte auf physikalische Signale ab. (Richtig)
+a) Data Link Layer (Schicht 2) – Adressierung: Teilnehmer-Adressen über MAC-/Hardwareadressen (Falsch)
+b) Network Layer (Schicht 3) – Adressierung: netzwerk-übergreifende Adressen (Richtig)
+c) Session Layer (Schicht 5) – Adressierung: netzwerk-übergreifende Adressen über Sitzungs-IDs (Falsch)
+d) Transport Layer (Schicht 4) – Adressierung: Teilnehmer-Adressen (Richtig)
 
 ### Source Text
 

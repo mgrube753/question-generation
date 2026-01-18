@@ -8,23 +8,13 @@ Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertrag
 
 ### Question Generation
 
-Frage: Beurteilen Sie für die Übertragung eines großen Textdatensatzes zwischen einem Sender (little-endian, Unicode) und einem Empfänger (big-endian, ASCII) welche Verarbeitungskette geeigneter ist: (A) Endian- und Zeichensatzkonvertierung → Kompression → Verschlüsselung oder (B) Verschlüsselung → Kompression → Endian- und Zeichensatzkonvertierung, und stützen Sie Ihr Urteil auf die Kriterien Interoperabilität, Fehleranfälligkeit, Übertragungsaufwand und Vertraulichkeit.
+Frage: Beurteilen Sie für die plattformübergreifende Übertragung eines Records mit numerischen Feldern (z.B. 32-bit Integer) und Text (inkl. Sonderzeichen) welcher Transformationsablauf geeigneter ist: (A) Endian-Konvertierung → Zeichenkonvertierung → Kompression → Verschlüsselung oder (B) Verschlüsselung → Kompression → Endian-Konvertierung → Zeichenkonvertierung; fällen Sie Ihr Urteil anhand der Kriterien Interoperabilität (korrekte Interpretation auf heterogenen Systemen), Effizienz (Kompressionswirkung) und Sicherheit (Vertraulichkeit) – welcher Ablauf ist zu bevorzugen und warum?
 
 ### Answer Generation + Union of all
 
-Frage: Beurteilen Sie für die Übertragung eines großen Textdatensatzes zwischen einem Sender (little-endian, Unicode) und einem Empfänger (big-endian, ASCII) welche Verarbeitungskette geeigneter ist: (A) Endian- und Zeichensatzkonvertierung → Kompression → Verschlüsselung oder (B) Verschlüsselung → Kompression → Endian- und Zeichensatzkonvertierung, und stützen Sie Ihr Urteil auf die Kriterien Interoperabilität, Fehleranfälligkeit, Übertragungsaufwand und Vertraulichkeit.
+Frage: Beurteilen Sie für die plattformübergreifende Übertragung eines Records mit numerischen Feldern (z.B. 32-bit Integer) und Text (inkl. Sonderzeichen) welcher Transformationsablauf geeigneter ist: (A) Endian-Konvertierung → Zeichenkonvertierung → Kompression → Verschlüsselung oder (B) Verschlüsselung → Kompression → Endian-Konvertierung → Zeichenkonvertierung; fällen Sie Ihr Urteil anhand der Kriterien Interoperabilität (korrekte Interpretation auf heterogenen Systemen), Effizienz (Kompressionswirkung) und Sicherheit (Vertraulichkeit) – welcher Ablauf ist zu bevorzugen und warum?
 
-Antwort: Geeigneter ist (A) Endian- und Zeichensatzkonvertierung → Kompression → Verschlüsselung.
-
-Interoperabilität: (A) erzeugt vor der weiteren Verarbeitung eine definierte, empfängerkompatible Darstellung (Unicode little-endian → vereinbarte Byte-/Zeichendarstellung, hier ASCII/big-endian bzw. ein festgelegtes Netzwerkformat). Bei (B) ist eine Konvertierung nach der Verschlüsselung praktisch nicht sinnvoll/zuverlässig, weil Ciphertext beliebige Bytefolgen enthält und keine gültige Zeichen-/Endian-Semantik mehr besitzt; der Empfänger könnte ohne vorherige Entschlüsselung nicht korrekt konvertieren.
-
-Fehleranfälligkeit: (A) vermeidet Konvertierungsfehler auf Basis von Ciphertext und reduziert damit Prozessabbrüche/Fehlinterpretationen. (B) birgt hohe Wahrscheinlichkeit von Dekodier-/Konvertierungsfehlern bzw. undefiniertem Verhalten, weil Zeichensatz-/Endian-Operationen auf „zufälligen“ verschlüsselten Bytes operieren würden.
-
-Übertragungsaufwand: (A) komprimiert den strukturierten Klartext wirksam und reduziert Datenmenge. (B) kann verschlüsselten Datenstrom kaum komprimieren (nahezu zufällig), daher höherer Overhead und ineffiziente Übertragung.
-
-Vertraulichkeit: (A) entspricht dem etablierten Prinzip „erst komprimieren, dann verschlüsseln“; die Vertraulichkeit wird durch die abschließende Verschlüsselung gewahrt. (B) bietet keine zusätzliche Vertraulichkeit, verschlechtert aber die anderen Kriterien deutlich.
-
-Damit ist (A) insgesamt nach den geforderten Kriterien klar vorzuziehen. (Richtig)
+Antwort: Ablauf (A) ist zu bevorzugen. Interoperabilität: Zuerst werden Zahlen und Text in eine kanonische, plattformunabhängige Darstellung gebracht (endianness/Serialisierung und z.B. UTF‑8). So kann der Empfänger nach Entschlüsselung/Dekompression korrekt rekonstruieren. In (B) wären Endian-/Zeichenkonvertierungen nach der Verschlüsselung praktisch unmöglich bzw. würden Ciphertext verfälschen. Effizienz: Kompression muss vor Verschlüsselung erfolgen, da Verschlüsselung die Redundanz entfernt und Kompression danach kaum wirkt. Sicherheit: Verschlüsselung am Ende schützt den gesamten Bitstrom (inkl. komprimierter Daten); in (B) ist Vertraulichkeit zwar gegeben, aber bei schlechter Kompression unnötig großes Datenvolumen. (Richtig)
 
 ### Source Text
 

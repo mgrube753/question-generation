@@ -8,25 +8,25 @@ Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonze
 
 ### Stem Generation
 
-Frage: Welche zwei Fragen werden bei den Protokollelementen der Application Layer 7 gestellt?
+Frage: Welche zwei Aspekte umfassen die Protokollelemente in der Application Layer?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Welche Anforderungen können gestellt werden? Welche Daten werden dabei erwartet? (Richtig)
-b) Die Fragen sind: Welche Anforderungen können gestellt werden? Und welche Daten werden dabei erwartet? (Richtig)
+a) Welche Anforderungen können gestellt werden? (Richtig)
+b) Welche Daten werden dabei erwartet? (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei Fragen werden bei den Protokollelementen der Application Layer 7 gestellt?
+Frage: Frage: Welche zwei Aspekte umfassen die Protokollelemente in der Application Layer?
 
 Antwortmöglichkeiten:
 
-a) Die Fragen sind: Welche Anforderungen können gestellt werden? Und welche Daten werden dabei erwartet? (Richtig)
-b) Welche Anforderungen können gestellt werden? Welche Daten werden dabei erwartet? (Richtig)
-c) Welche Begriffe treten in der Anwendung auf? Wie reagiert die Anwendung auf die Anforderungen? (Falsch)
-d) Wie reagiert die Anwendung auf die Anforderungen durch diese Protokollelemente? Welche Kernaufgaben gibt es? (Falsch)
+a) Welche Anforderungen können gestellt werden? (Richtig)
+b) Welche Begriffe treten in der Anwendung auf? (Falsch)
+c) Welche Daten werden dabei erwartet? (Richtig)
+d) Wie reagiert die Anwendung auf die Anforderungen? (Falsch)
 
 ### Source Text
 

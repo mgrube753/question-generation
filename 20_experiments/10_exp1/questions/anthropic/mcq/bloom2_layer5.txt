@@ -8,25 +8,25 @@ Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwal
 
 ### Stem Generation
 
-Frage: Welche zwei Aspekte lassen sich als Kernaufgaben des Session Layers klassifizieren?
+Frage: Welche zwei Beschreibungen erklären korrekt die Kernaufgaben des Session Layers im Rahmen des Sitzungskonzepts einer Kommunikationsbeziehung?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Synchronisation durch das Setzen von Zwischenpunkten zur Wiederherstellung bei Unterbrechungen (Richtig)
-b) Bündelung zur Gruppierung zusammengehöriger Transaktionen (Richtig)
+a) Der Session Layer ist für das Aufbauen, Verwalten, Zurückweisen und Beenden von Sitzungen innerhalb einer Kommunikationsbeziehung zuständig. (Richtig)
+b) Der Session Layer ermöglicht die Synchronisation durch das Setzen von Zwischenpunkten sowie die Bündelung zusammengehöriger Transaktionen zu Gruppen. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei Aspekte lassen sich als Kernaufgaben des Session Layers klassifizieren?
+Frage: Welche zwei Beschreibungen erklären korrekt die Kernaufgaben des Session Layers im Rahmen des Sitzungskonzepts einer Kommunikationsbeziehung?
 
 Antwortmöglichkeiten:
 
-a) Bündelung zur Gruppierung zusammengehöriger Transaktionen (Richtig)
-b) Flusskontrolle zur Regulierung der Übertragungsgeschwindigkeit zwischen Sender und Empfänger (Falsch)
-c) Synchronisation durch das Setzen von Zwischenpunkten zur Wiederherstellung bei Unterbrechungen (Richtig)
-d) Verschlüsselung zur sicheren Übertragung sensibler Daten zwischen Kommunikationspartnern (Falsch)
+a) Der Session Layer ermöglicht die Synchronisation durch das Setzen von Zwischenpunkten sowie die Bündelung zusammengehöriger Transaktionen zu Gruppen. (Richtig)
+b) Der Session Layer gewährleistet die zuverlässige Ende-zu-Ende-Übertragung durch Flusskontrolle und Segmentierung der Datenströme. (Falsch)
+c) Der Session Layer ist für das Aufbauen, Verwalten, Zurückweisen und Beenden von Sitzungen innerhalb einer Kommunikationsbeziehung zuständig. (Richtig)
+d) Der Session Layer ist für die Datenkomprimierung und die Konvertierung von Datenformaten zwischen unterschiedlichen Systemen zuständig. (Falsch)
 
 ### Source Text
 

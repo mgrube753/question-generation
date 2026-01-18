@@ -8,13 +8,13 @@ Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Deco
 
 ### Question Generation
 
-Frage: Veranschaulichen Sie anhand der Übertragung einer konkreten Bitfolge über ein Telefonkabel, wie Codierung, Transport und Decodierung auf der physikalischen Ebene zusammenwirken, um die logischen Werte korrekt zu übermitteln.
+Frage: Veranschaulichen Sie anhand eines konkreten Szenarios, wie ein logischer Bitstrom von einem Sender zu einem Empfänger übertragen wird, indem Sie das Zusammenspiel der drei Kernaufgaben des Physical Layer (Codierung, Transport und Decodierung) systematisch durchlaufen und dabei jeweils ein Beispielverfahren oder -medium benennen.
 
 ### Answer Generation + Union of all
 
-Frage: Veranschaulichen Sie anhand der Übertragung einer konkreten Bitfolge über ein Telefonkabel, wie Codierung, Transport und Decodierung auf der physikalischen Ebene zusammenwirken, um die logischen Werte korrekt zu übermitteln.
+Frage: Veranschaulichen Sie anhand eines konkreten Szenarios, wie ein logischer Bitstrom von einem Sender zu einem Empfänger übertragen wird, indem Sie das Zusammenspiel der drei Kernaufgaben des Physical Layer (Codierung, Transport und Decodierung) systematisch durchlaufen und dabei jeweils ein Beispielverfahren oder -medium benennen.
 
-Antwort: Zur Übertragung der Bitfolge 1010 über ein Telefonkabel durchläuft diese drei Phasen auf der physikalischen Ebene. Bei der Codierung werden die logischen Werte auf physikalische Größen abgebildet. Unter Verwendung der NRZ-Codierung wird eine logische 1 als hohe Spannung und eine logische 0 als niedrige Spannung dargestellt. Die Bitfolge 1010 wird somit zur Spannungsfolge hoch-niedrig-hoch-niedrig umgewandelt. Beim Transport werden diese elektrischen Spannungssignale über das Telefonkabel als mediengebundenes Übertragungsmedium von einem Ort zum anderen übertragen. Die Kupferleitung transportiert die analogen Spannungspegel zum Empfänger. Bei der Decodierung erfolgt die Rückinterpretation der physikalischen Größen als logische Werte. Der Empfänger tastet die ankommenden Spannungswerte in definierten Zeitintervallen ab. Anhand festgelegter Detektionsbereiche wird bestimmt, ob ein Spannungswert über oder unter einem Schwellwert liegt. Liegt der Wert über dem Schwellwert, wird eine 1 erkannt, liegt er darunter, eine 0. So wird die ursprüngliche Bitfolge 1010 korrekt rekonstruiert. (Richtig)
+Antwort: Szenario: Übertragung des Bitstroms "1010" zwischen zwei Computern. Zunächst erfolgt die Codierung beim Sender: Der logische Bitstrom wird mittels Manchester-Codierung in physikalische Signale umgewandelt. Eine "1" wird als Spannungsübergang von Low nach High, eine "0" als Übergang von High nach Low dargestellt. Anschließend findet der Transport statt: Die elektrischen Signale werden über ein mediengebundenes Übertragungsmedium, konkret ein Ethernet-Kupferkabel, vom Sender zum Empfänger übertragen. Abschließend erfolgt die Decodierung beim Empfänger: Das ankommende Signal wird durch Abtastung in definierten Zeitintervallen erfasst. Anhand festgelegter Detektionsbereiche werden die Spannungspegel interpretiert und in die ursprünglichen logischen Werte "1010" zurückgewandelt. So wird der Bitstrom vollständig rekonstruiert. (Richtig)
 
 ### Source Text
 

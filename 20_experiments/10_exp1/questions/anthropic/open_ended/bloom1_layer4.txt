@@ -8,13 +8,21 @@ Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus au
 
 ### Question Generation
 
-Frage: Benennen Sie die drei Kernaufgaben der Transportschicht (Layer 4).
+Frage: Benennen Sie die drei Kernaufgaben des Transport Layer 4 und beschreiben Sie jeweils kurz deren Funktion.
 
 ### Answer Generation + Union of all
 
-Frage: Benennen Sie die drei Kernaufgaben der Transportschicht (Layer 4).
+Frage: Benennen Sie die drei Kernaufgaben des Transport Layer 4 und beschreiben Sie jeweils kurz deren Funktion.
 
-Antwort: Die drei Kernaufgaben der Transportschicht sind Adressierung, Flusssteuerung und Dienstqualität. (Richtig)
+Antwort: Die drei Kernaufgaben des Transport Layer 4 sind:
+
+1. Adressierung: Diese Aufgabe umfasst die Verwaltung und Zuweisung von Teilnehmer-Adressen, um eine eindeutige Identifikation der Kommunikationspartner im Netz zu ermöglichen.
+
+2. Flusssteuerung: Diese Funktion dient der Nutzung der Teilnehmer-Charakteristik, um den Datenfluss zwischen Sender und Empfänger optimal anzupassen und Überlastungen zu vermeiden.
+
+3. Dienstqualität: Diese Aufgabe sichert die Quality of Service (QoS) und ermöglicht die Erbringung eines Kommunikationsdienstes mit definierten Garantien für Parameter wie Bandbreite, Latenz, Jitter und Fehlerrate. Die Dienstqualität wird dabei individuell auf den jeweiligen Teilnehmer zugeschnitten.
+
+Insgesamt stellt der Transport Layer 4 eine zuverlässige Übertragung zwischen beliebigen Teilnehmern eines Netzes bereit. (Richtig)
 
 ### Source Text
 

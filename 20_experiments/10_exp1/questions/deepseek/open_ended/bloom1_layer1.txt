@@ -8,13 +8,13 @@ Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Deco
 
 ### Question Generation
 
-Frage: Nennen Sie die drei Kernaufgaben der Physical Layer 1.
+Frage: Nennen Sie für jede der drei Kernaufgaben des Physical Layer (Codierung, Transport, Decodierung) ein konkretes Beispiel.
 
 ### Answer Generation + Union of all
 
-Frage: Nennen Sie die drei Kernaufgaben der Physical Layer 1.
+Frage: Nennen Sie für jede der drei Kernaufgaben des Physical Layer (Codierung, Transport, Decodierung) ein konkretes Beispiel.
 
-Antwort: Die drei Kernaufgaben der Physical Layer 1 sind Codierung, Transport und Decodierung. (Richtig)
+Antwort: Codierung: Manchester-Codierung als Abbildung logischer Werte auf physikalische Signalpegel. Transport: Übertragung elektrischer Signale über ein Kupferkabel (z.B. Telefonkabel) als mediengebundenes Beispiel. Decodierung: Abtastung des empfangenen Signals mit einem Taktgeber zur Rückgewinnung der logischen Werte. (Richtig)
 
 ### Source Text
 

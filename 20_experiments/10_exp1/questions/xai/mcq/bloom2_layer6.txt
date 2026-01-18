@@ -8,25 +8,25 @@ Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertrag
 
 ### Stem Generation
 
-Frage: Welche der folgenden Kernaufgaben der Presentation Layer 6 beinhalten die Konvertierung der Datendarstellung?
+Frage: Welche der folgenden Kernaufgaben der Presentation Layer dienen der Konvertierung der Datendarstellung?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Endian-Ness: Konvertieren der Datendarstellung. (Richtig)
-b) Zeichen: Konvertierung der Zeichendarstellung. (Richtig)
+a) Endian-Ness: Konvertieren der Datendarstellung (z. B. little & big endian). (Richtig)
+b) Zeichen: Konvertierung der Zeichendarstellung (z. B. ASCII, Unicode). (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche der folgenden Kernaufgaben der Presentation Layer 6 beinhalten die Konvertierung der Datendarstellung?
+Frage: Frage: Welche der folgenden Kernaufgaben der Presentation Layer dienen der Konvertierung der Datendarstellung?
 
 Antwortmöglichkeiten:
 
-a) Endian-Ness: Konvertieren der Datendarstellung. (Richtig)
+a) Endian-Ness: Konvertieren der Datendarstellung (z. B. little & big endian). (Richtig)
 b) Kompression: Komprimieren und Dekomprimieren. (Falsch)
 c) Verschlüsselung: Verschlüsseln und Entschlüsseln. (Falsch)
-d) Zeichen: Konvertierung der Zeichendarstellung. (Richtig)
+d) Zeichen: Konvertierung der Zeichendarstellung (z. B. ASCII, Unicode). (Richtig)
 
 ### Source Text
 

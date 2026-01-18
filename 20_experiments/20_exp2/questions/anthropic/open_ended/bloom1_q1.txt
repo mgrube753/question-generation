@@ -8,27 +8,13 @@ Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter R
 
 ### Question Generation
 
-Frage: Zählen Sie die sieben Schichten des ISO-OSI-Modells in aufsteigender Reihenfolge auf und benennen Sie jeweils die Hauptfunktion der einzelnen Schichten.
+Frage: Benennen Sie die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge von Schicht 1 bis Schicht 7 und beschreiben Sie für jede Schicht deren Hauptfunktion.
 
 ### Answer Generation + Union of all
 
-Frage: Zählen Sie die sieben Schichten des ISO-OSI-Modells in aufsteigender Reihenfolge auf und benennen Sie jeweils die Hauptfunktion der einzelnen Schichten.
+Frage: Benennen Sie die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge von Schicht 1 bis Schicht 7 und beschreiben Sie für jede Schicht deren Hauptfunktion.
 
-Antwort: Die sieben Schichten des ISO-OSI-Modells in aufsteigender Reihenfolge mit ihren Hauptfunktionen sind:
-
-1. Physical Layer (Bitübertragungsschicht): Bereitstellung einer physikalischen Konzeption für Codierung, Transport und Decodierung logischer Werte.
-
-2. Data Link Layer (Sicherungsschicht): Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer.
-
-3. Network Layer (Vermittlungsschicht): Bereitstellung einer Übertragung zwischen Geräten in unterschiedlichen Netzwerken verschiedener Layer-2-Technologien.
-
-4. Transport Layer (Transportschicht): Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
-
-5. Session Layer (Sitzungsschicht): Bereitstellung der Funktionen für das Sitzungskonzept einer Kommunikationsbeziehung.
-
-6. Presentation Layer (Darstellungsschicht): Kodierung der Anwendungsdaten als Bitstrom.
-
-7. Application Layer (Anwendungsschicht): Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten. (Richtig)
+Antwort: Schicht 1 - Physical Layer: Codierung, Transport und Decodierung logischer Werte über physikalische Größen. Schicht 2 - Data Link Layer: Fehlergesicherte Übertragung über den Physical Layer mit Fehlerkontrolle, Flusskontrolle und Medienzugriff. Schicht 3 - Network Layer: Übertragung zwischen Geräten in unterschiedlichen Netzwerken mittels Adressierung und Routing. Schicht 4 - Transport Layer: Übertragung zwischen beliebigen Teilnehmern eines Netzes mit Dienstqualitätssicherung. Schicht 5 - Session Layer: Verwaltung von Sitzungen einer Kommunikationsbeziehung (Aufbau, Verwaltung, Beenden). Schicht 6 - Presentation Layer: Kodierung der Anwendungsdaten als Bitstrom, inklusive Kompression und Verschlüsselung. Schicht 7 - Application Layer: Festlegung der anwendungsspezifischen Elemente, Protokollelemente und deren Verhalten. (Richtig)
 
 ### Source Text
 

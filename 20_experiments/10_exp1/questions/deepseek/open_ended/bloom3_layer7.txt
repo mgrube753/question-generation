@@ -8,27 +8,13 @@ Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonze
 
 ### Question Generation
 
-Frage: Ermitteln Sie für die Anwendung "E-Mail-Versand (SMTP/POP3/IMAP)" die anwendungsspezifischen Grundkonzepte, Protokollelemente und Verhaltensweisen gemäß dem Rahmen der Application Layer.
+Frage: Wenden Sie die drei Kernaufgaben der Application Layer auf das Protokoll SSH an. Ermitteln Sie für jede Kernaufgabe ein anwendungsspezifisches Beispiel.
 
 ### Answer Generation + Union of all
 
-Frage: Ermitteln Sie für die Anwendung "E-Mail-Versand (SMTP/POP3/IMAP)" die anwendungsspezifischen Grundkonzepte, Protokollelemente und Verhaltensweisen gemäß dem Rahmen der Application Layer.
+Frage: Wenden Sie die drei Kernaufgaben der Application Layer auf das Protokoll SSH an. Ermitteln Sie für jede Kernaufgabe ein anwendungsspezifisches Beispiel.
 
-Antwort: (Richtig)
-**Grundkonzepte:**
-*   **SMTP (Simple Mail Transfer Protocol):** Mail Transfer Agent (MTA), Sender/Receiver, Mail-Exchanger (MX), Zustellung.
-*   **POP3 (Post Office Protocol Version 3):** Mail User Agent (MUA), Postfach (Inbox), Abholung, Löschen vom Server (typisch standardmäßig nach Abholung).
-*   **IMAP (Internet Message Access Protocol):** Mail User Agent (MUA), Postfach, Ordnerstruktur auf dem Server, Synchronisation, Statusflags (gelesen, beantwortet).
-
-**Protokollelemente (Anforderungen/Daten):**
-*   **SMTP:** Kommando-Dialog (z.B. `HELO/EHLO`, `MAIL FROM:`, `RCPT TO:`, `DATA`, `QUIT`), ASCII-basierter Inhalt, MIME-codierte Anhänge.
-*   **POP3:** Kommandos zur Authentifizierung (`USER`, `PASS`), zum Auflisten (`LIST`, `STAT`) und Abrufen (`RETR`, `DELE`) von Nachrichten.
-*   **IMAP:** Kommandos zur Auswahl eines Postfachs (`SELECT`), zur Suche (`SEARCH`), zum Abruf (`FETCH`) von Nachrichten oder Teilen davon (z.B. nur Header), und zur Verwaltung von Status (`STORE FLAGS`).
-
-**Verhalten (Reaktion auf Anforderungen):**
-*   **SMTP:** Der Server antwortet auf jedes Kommando mit einem dreistelligen Statuscode (z.B. 250 für OK, 550 für Mailbox nicht gefunden). Beim `DATA`-Kommando wird die eigentliche Nachricht bis zur alleinstehenden Zeile mit einem Punkt akzeptiert und dann weitergeleitet oder zugestellt.
-*   **POP3:** Nach erfolgreicher Authentifizierung (`+OK`) erlaubt der Server den Zugriff auf die Nachrichtenliste. Auf `RETR` antwortet er mit dem Nachrichteninhalt. Auf `DELE` markiert er eine Nachricht zur Löschung, die endgültig beim `QUIT` erfolgt.
-*   **IMAP:** Der Server verwaltet den Zustand (z.B. ausgewähltes Postfach). Auf `FETCH` antwortet er mit den angefragten Nachrichtendaten, ohne diese standardmäßig vom Server zu löschen. Statusänderungen durch `STORE` werden permanent auf dem Server gespeichert und sind auf allen Clients synchronisiert.
+Antwort: 1. Grundkonzepte: Definierte Begriffe der Anwendung, z.B. "Authentifizierung via Public-Key-Verfahren". 2. Protokollelemente: Spezifische Nachrichten und deren Daten, z.B. die Client-Anfrage SSH_MSG_USERAUTH_REQUEST mit Nutzername und Public-Key-Daten. 3. Verhalten: Reaktion auf Protokollelemente, z.B. der Server sendet bei ungültigen Credentials SSH_MSG_USERAUTH_FAILURE. (Richtig)
 
 ### Source Text
 

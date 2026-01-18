@@ -8,25 +8,25 @@ Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Deco
 
 ### Stem Generation
 
-Frage: Benennen Sie zwei Codierungsverfahren, die auf dem Physical Layer 1 zur Abbildung logischer Werte auf physikalische Größen eingesetzt werden.
+Frage: Benennen Sie zwei Beispiele für Codierungsverfahren, die auf dem Physical Layer 1 zur Abbildung logischer Werte auf physikalische Größen eingesetzt werden.
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) NRZ (Richtig)
-b) Manchester (Richtig)
+a) NRZ (Non-Return-to-Zero) (Richtig)
+b) Manchester-Codierung (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Benennen Sie zwei Codierungsverfahren, die auf dem Physical Layer 1 zur Abbildung logischer Werte auf physikalische Größen eingesetzt werden.
+Frage: Benennen Sie zwei Beispiele für Codierungsverfahren, die auf dem Physical Layer 1 zur Abbildung logischer Werte auf physikalische Größen eingesetzt werden.
 
 Antwortmöglichkeiten:
 
 a) Abtastung (Falsch)
-b) Funk (Falsch)
-c) Manchester (Richtig)
-d) NRZ (Richtig)
+b) ASCII-Codierung (Falsch)
+c) Manchester-Codierung (Richtig)
+d) NRZ (Non-Return-to-Zero) (Richtig)
 
 ### Source Text
 

@@ -8,25 +8,25 @@ Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beisp
 
 ### Stem Generation
 
-Frage: Ermitteln Sie, welche zwei Schichten des OSI-Modells primär beteiligt sind, wenn in einem Kommunikationsvorgang einzelne Bits zu 8-bit Bytes zusammengefasst werden und die Daten anschließend zur Übertragung komprimiert werden.
+Frage: Ermitteln Sie, welche zwei Kernaufgaben des Data Link Layers zur Anwendung kommen, wenn während einer Datenübertragung Übertragungsfehler erkannt werden müssen und der Empfänger die eingehenden Daten nicht schnell genug verarbeiten kann.
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Data Link Layer (Schicht 2) für das Zusammenfassen einzelner Bits zu 8-bit Bytes und Presentation Layer (Schicht 6) für die Komprimierung der Daten (Richtig)
-b) Schicht 2 übernimmt die Segmentierung der Bits zu Bytes, Schicht 6 ist für die Kompression zuständig (Richtig)
+a) Fehlerkontrolle (Richtig)
+b) Flusskontrolle (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ermitteln Sie, welche zwei Schichten des OSI-Modells primär beteiligt sind, wenn in einem Kommunikationsvorgang einzelne Bits zu 8-bit Bytes zusammengefasst werden und die Daten anschließend zur Übertragung komprimiert werden.
+Frage: Ermitteln Sie, welche zwei Kernaufgaben des Data Link Layers zur Anwendung kommen, wenn während einer Datenübertragung Übertragungsfehler erkannt werden müssen und der Empfänger die eingehenden Daten nicht schnell genug verarbeiten kann.
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2) für das Zusammenfassen einzelner Bits zu 8-bit Bytes und Presentation Layer (Schicht 6) für die Komprimierung der Daten (Richtig)
-b) Physical Layer (Schicht 1) für das Zusammenfassen einzelner Bits zu 8-bit Bytes und Application Layer (Schicht 7) für die Komprimierung der Daten (Falsch)
-c) Physical Layer (Schicht 1) für das Zusammenfassen einzelner Bits zu 8-bit Bytes und Session Layer (Schicht 5) für die Komprimierung der Daten (Falsch)
-d) Schicht 2 übernimmt die Segmentierung der Bits zu Bytes, Schicht 6 ist für die Kompression zuständig (Richtig)
+a) Fehlerkontrolle (Richtig)
+b) Flusskontrolle (Richtig)
+c) Medienzugriff (Falsch)
+d) Segmentierung (Falsch)
 
 ### Source Text
 

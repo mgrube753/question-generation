@@ -8,19 +8,19 @@ Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonze
 
 ### Question Generation
 
-Frage: Entwerfen Sie für eine selbst gewählte Anwendung die anwendungsspezifischen Grundkonzepte, Protokollelemente und Verhaltensweisen im Application Layer 7.
+Frage: Entwerfen Sie eine anwendungsspezifische Definition für den Application Layer einer einfachen E-Mail-Anwendung, die Grundkonzepte, Protokollelemente und Verhaltensweisen umfasst.
 
 ### Answer Generation + Union of all
 
-Frage: Entwerfen Sie für eine selbst gewählte Anwendung die anwendungsspezifischen Grundkonzepte, Protokollelemente und Verhaltensweisen im Application Layer 7.
+Frage: Entwerfen Sie eine anwendungsspezifische Definition für den Application Layer einer einfachen E-Mail-Anwendung, die Grundkonzepte, Protokollelemente und Verhaltensweisen umfasst.
 
-Antwort: Gewählte Anwendung: Webbasierte Dateiübertragung (ähnlich HTTP-basiertem File Transfer).
+Antwort: Für eine einfache E-Mail-Anwendung definiert der Application Layer (Schicht 7) die spezifischen Elemente für E-Mail-Kommunikation.
 
-Grundkonzepte: Client (Datei-Anforderer), Server (Datei-Bereitsteller), Datei-Identifikator (z. B. URL-Pfad), Authentifizierungstoken (z. B. Session-ID), Übertragungsmodus (Upload/Download).
+Grundkonzepte: Begriffe umfassen Absender (From), Empfänger (To/CC/BCC), Betreff (Subject), Nachrichtentext (Body), Anhänge (Attachments) und Header-Informationen wie Datum und MIME-Typen.
 
-Protokollelemente: Anforderungen umfassen "UPLOAD" (Datei hochladen mit Metadaten wie Dateiname und Größe), "DOWNLOAD" (Datei abrufen mit Identifikator); erwartete Daten: Header-Felder (z. B. Content-Type, Authorization), Body (Binärdaten der Datei).
+Protokollelemente: Anforderungen wie Senden (SMTP), Abrufen (POP3/IMAP) und Authentifizierung (z.B. Login). Erwartete Daten: Strukturierte Nachrichten mit Header (z.B. From: user@example.com) und Body (Text/HTML).
 
-Verhalten: Auf "UPLOAD"-Anforderung prüft der Server das Token, speichert die Datei und sendet Bestätigungs-Response mit Statuscode (z. B. 200 OK); auf "DOWNLOAD" holt der Server die Datei, überträgt sie im Body und handhabt Fehler (z. B. 404 Not Found bei fehlender Datei). (Richtig)
+Verhalten: Auf Sende-Anforderung reagiert die Anwendung mit SMTP-Verbindung zum Server, Übermittlung der Nachricht und Bestätigung. Bei Abruf: POP3/IMAP-Query zum Server, Download und Anzeige von E-Mails. Fehlerbehandlung: Bei ungültiger Adresse Rückmeldung an Benutzer. (Richtig)
 
 ### Source Text
 

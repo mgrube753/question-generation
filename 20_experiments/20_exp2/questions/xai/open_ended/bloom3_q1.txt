@@ -8,13 +8,19 @@ Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beisp
 
 ### Question Generation
 
-Frage: Nutzen Sie das Konzept der Flußkontrolle, um in einem Szenario mit unterschiedlichen Übertragungsgeschwindigkeiten zwischen Sender und Empfänger zu erklären, wie eine Überlastung vermieden werden kann.
+Frage: Veranschaulichen Sie die Anwendung der Routing-Funktion in der Network Layer an einem Beispiel für die Kommunikation zwischen zwei Geräten in unterschiedlichen Netzwerken.
 
 ### Answer Generation + Union of all
 
-Frage: Nutzen Sie das Konzept der Flußkontrolle, um in einem Szenario mit unterschiedlichen Übertragungsgeschwindigkeiten zwischen Sender und Empfänger zu erklären, wie eine Überlastung vermieden werden kann.
+Frage: Veranschaulichen Sie die Anwendung der Routing-Funktion in der Network Layer an einem Beispiel für die Kommunikation zwischen zwei Geräten in unterschiedlichen Netzwerken.
 
-Antwort: In einem Szenario, in dem der Sender schneller Daten überträgt als der Empfänger verarbeiten kann (z. B. Sender mit 100 Mbps, Empfänger mit 10 Mbps), wird Überlastung durch Flußkontrolle vermieden. Im Data Link Layer (Schicht 2) erfolgt dies hop-by-hop, indem der Sender pausiert (z. B. durch Zwischenpuffern oder Wartenlassen), bis der Empfänger Bestätigungen sendet. Im Network Layer (Schicht 3) wird end-to-end oder node-to-node gesteuert, z. B. durch Herunterregeln der Sendegeschwindigkeit über Zwischenknoten. Im Transport Layer (Schicht 4) passt die Flußsteuerung die Rate an die Empfänger-Charakteristik an, z. B. mittels Sliding-Window-Mechanismen, um Pufferüberlauf zu verhindern und Datenverlust zu vermeiden. (Richtig)
+Antwort: Beispiel: Gerät A (IP: 192.168.1.10) in Netzwerk 1 sendet Daten an Gerät B (IP: 10.0.0.20) in Netzwerk 2. Die Netzwerke sind über Router verbunden.
+
+In der Network Layer (Layer 3) kapselt A die Daten in ein IP-Paket mit Zieladresse von B. Da B nicht im selben Netzwerk ist, sendet A das Paket an seinen Default-Gateway-Router R1.
+
+R1 prüft die Ziel-IP und konsultiert seine Routing-Tabelle (z.B. statisch oder dynamisch via OSPF). Sie wählt den nächsten Hop (Router R2) aus und leitet das Paket weiter.
+
+R2 routet es最终 zu Netzwerk 2, wo es B erreicht. Routing ermöglicht so die Auswahl vermittelnder Knoten für netzwerkübergreifende Kommunikation. (Richtig)
 
 ### Source Text
 

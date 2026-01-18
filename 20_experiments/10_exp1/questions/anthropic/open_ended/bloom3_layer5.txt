@@ -8,13 +8,13 @@ Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwal
 
 ### Question Generation
 
-Frage: Ermitteln Sie, welche Funktionen der Sitzungsschicht eingesetzt werden müssen, wenn bei einer unterbrochenen Dateiübertragung der Transfer an einem zuvor gesetzten Zwischenpunkt fortgesetzt werden soll, anstatt die Übertragung vollständig neu zu starten.
+Frage: Wenden Sie das Sitzungskonzept des Session Layers an, indem Sie für ein Szenario beschreiben, wie bei einer umfangreichen Dateiübertragung zwischen zwei Systemen die Synchronisationsfunktion durch das Setzen von Zwischenpunkten genutzt werden kann, um nach einem unerwarteten Verbindungsabbruch die Übertragung fortzusetzen.
 
 ### Answer Generation + Union of all
 
-Frage: Ermitteln Sie, welche Funktionen der Sitzungsschicht eingesetzt werden müssen, wenn bei einer unterbrochenen Dateiübertragung der Transfer an einem zuvor gesetzten Zwischenpunkt fortgesetzt werden soll, anstatt die Übertragung vollständig neu zu starten.
+Frage: Wenden Sie das Sitzungskonzept des Session Layers an, indem Sie für ein Szenario beschreiben, wie bei einer umfangreichen Dateiübertragung zwischen zwei Systemen die Synchronisationsfunktion durch das Setzen von Zwischenpunkten genutzt werden kann, um nach einem unerwarteten Verbindungsabbruch die Übertragung fortzusetzen.
 
-Antwort: Für die Fortsetzung einer unterbrochenen Dateiübertragung an einem Zwischenpunkt müssen zwei Funktionen der Sitzungsschicht eingesetzt werden. Erstens wird die Synchronisationsfunktion benötigt, die das Setzen von Zwischenpunkten während der Übertragung ermöglicht. Diese Synchronisationspunkte markieren den Fortschritt der Datenübertragung und dienen als Wiederaufsetzpunkte. Zweitens muss die Sitzungsverwaltung aktiv sein, um die unterbrochene Sitzung wiederherzustellen und den Transfer ab dem zuletzt gesetzten Zwischenpunkt fortzusetzen. Die Sitzungsverwaltung stellt dabei sicher, dass der Zustand der Kommunikationsbeziehung erhalten bleibt und die Übertragung nicht vollständig neu gestartet werden muss. (Richtig)
+Antwort: Bei der Übertragung einer großen Datei (z.B. 10 GB) zwischen zwei Systemen setzt der Session Layer in regelmäßigen Abständen Synchronisationspunkte (Checkpoints). Beispielsweise wird nach jedem erfolgreich übertragenen Gigabyte ein Zwischenpunkt gesetzt und von beiden Seiten bestätigt. Diese Punkte markieren den gesicherten Übertragungsfortschritt. Bricht die Verbindung unerwartet nach 7,5 GB ab, speichert das System den letzten bestätigten Synchronisationspunkt bei 7 GB. Nach Wiederherstellung der Verbindung muss die Sitzung nicht komplett neu gestartet werden. Stattdessen kann die Übertragung ab dem letzten Checkpoint bei 7 GB fortgesetzt werden. Nur die restlichen 3 GB müssen noch übertragen werden, wodurch bereits übertragene Daten nicht erneut gesendet werden müssen und Ressourcen gespart werden. (Richtig)
 
 ### Source Text
 

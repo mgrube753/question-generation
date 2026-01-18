@@ -8,25 +8,25 @@ Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertra
 
 ### Stem Generation
 
-Frage: Welche zwei Kernaufgaben des Data Link Layer 2 klassifizieren Sie als passend zu den Beschreibungen (1) Auswahl eines bestimmten Senders oder Empfängers über eine Adresse und (2) Aktivieren des Physical Layer für den Zugriff auf das Medium?
+Frage: Welche zwei Kernaufgaben des Data Link Layer lassen sich anhand folgender Beschreibungen klassifizieren: (1) Strategien, wenn der Sender für den Empfänger zu schnell sendet; (2) Zusammenfassen einzelner Bits zu größeren Einheiten?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) (1) Identifikation (Adressierung von Sender/Empfänger) und (2) Medienzugriff (Aktivieren des Physical Layer für den Mediumzugriff) (Richtig)
-b) (1) Auswahl über Adresse = Identifikation und (2) Zugriff aufs Übertragungsmedium = Medienzugriff (Richtig)
+a) Flußkontrolle (Flow Control) (Richtig)
+b) Segmentierung (Zusammenfassen von Bits zu größeren Einheiten, z.B. Bytes/Frames) (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche zwei Kernaufgaben des Data Link Layer 2 klassifizieren Sie als passend zu den Beschreibungen (1) Auswahl eines bestimmten Senders oder Empfängers über eine Adresse und (2) Aktivieren des Physical Layer für den Zugriff auf das Medium?
+Frage: Frage: Welche zwei Kernaufgaben des Data Link Layer lassen sich anhand folgender Beschreibungen klassifizieren: (1) Strategien, wenn der Sender für den Empfänger zu schnell sendet; (2) Zusammenfassen einzelner Bits zu größeren Einheiten?
 
 Antwortmöglichkeiten:
 
-a) (1) Identifikation (Adressierung von Sender/Empfänger) und (2) Medienzugriff (Aktivieren des Physical Layer für den Mediumzugriff) (Richtig)
-b) (1) Auswahl über Adresse = Identifikation und (2) Zugriff aufs Übertragungsmedium = Medienzugriff (Richtig)
-c) (1) Segmentierung (Zusammenfassen von Bits zu Einheiten) und (2) Medienzugriff (Aktivieren des Physical Layer für den Mediumzugriff) (Falsch)
-d) (1) Identifikation (Adressierung von Sender/Empfänger) und (2) Flusskontrolle (Regeln der Senderate bei zu schnellem Senden) (Falsch)
+a) Fehlerkontrolle (Erkennen/Beheben oder Signalisieren von Übertragungsfehlern) (Falsch)
+b) Flußkontrolle (Flow Control) (Richtig)
+c) Medienzugriff (Regelung von Senden/Warten/Reservieren des Mediums) (Falsch)
+d) Segmentierung (Zusammenfassen von Bits zu größeren Einheiten, z.B. Bytes/Frames) (Richtig)
 
 ### Source Text
 

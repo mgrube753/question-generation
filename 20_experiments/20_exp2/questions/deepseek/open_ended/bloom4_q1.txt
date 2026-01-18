@@ -8,19 +8,13 @@ Die Studierenden können die Aufgabenverteilung zwischen den Schichten analysier
 
 ### Question Generation
 
-Frage: Analysieren Sie, wie sich die Adressierungsaufgaben und -konzepte zwischen dem Data Link Layer, dem Network Layer und dem Transport Layer unterscheiden und welche spezifische Rolle jede dieser Schichten bei der erfolgreichen Zustellung von Daten an einen bestimmten Endteilnehmer spielt.
+Frage: Differenzieren Sie die Konzepte und Ziele der Flusssteuerung im Data Link Layer, Network Layer und Transport Layer des OSI-Modells anhand ihrer spezifischen Ansätze und Reichweiten.
 
 ### Answer Generation + Union of all
 
-Frage: Analysieren Sie, wie sich die Adressierungsaufgaben und -konzepte zwischen dem Data Link Layer, dem Network Layer und dem Transport Layer unterscheiden und welche spezifische Rolle jede dieser Schichten bei der erfolgreichen Zustellung von Daten an einen bestimmten Endteilnehmer spielt.
+Frage: Differenzieren Sie die Konzepte und Ziele der Flusssteuerung im Data Link Layer, Network Layer und Transport Layer des OSI-Modells anhand ihrer spezifischen Ansätze und Reichweiten.
 
-Antwort: Die drei Schichten erfüllen hierarchisch aufbauende und sich ergänzende Adressierungsaufgaben, die gemeinsam die Zustellung an einen bestimmten Endteilnehmer ermöglichen. Im Data Link Layer (Layer 2) dient die Adressierung der **Identifikation** direkt verbundener Knoten innerhalb desselben physischen Netzes (z.B. via MAC-Adressen). Seine spezifische Rolle ist die fehlergesicherte Übertragung eines Rahmens vom einen zum nächsten Knoten (Hop-to-Hop) auf derselben Layer-2-Technologie. Die Adresse ist hardwarenah und nur lokal signifikant.
-
-Der Network Layer (Layer 3) adressiert logisch und netzwerkübergreifend (z.B. via IP-Adressen). Sein Konzept trennt die Adressierung von der darunterliegenden Übertragungstechnologie. Seine spezifische Rolle ist das **Routing** – die Bestimmung des Pfades über potenziell viele verschiedene Netze hinweg zum Zielnetzwerk. Er ermöglicht so die Ende-zu-Ende-Adressierung auf Netzwerkebene, unabhängig von den spezifischen Layer-2-Technologien der Zwischennetze.
-
-Der Transport Layer (Layer 4) adressiert schließlich **Teilnehmer** (Prozesse oder Dienste) innerhalb eines Endgeräts (z.B. via Port-Nummern). Seine spezifische Rolle ist die Bereitstellung einer Kommunikationsverbindung zwischen den eigentlichen Anwendungsinstanzen auf Sender- und Empfängerseite. Er nutzt die Ende-zu-Ende-Netzwerkadressierung von Layer 3, um die Daten dem richtigen Dienst auf dem identifizierten Zielgerät zuzuordnen.
-
-Zusammenhängend analysiert: Der Transport Layer identifiziert den konkreten Endteilnehmer (Prozess), der Network Layer liefert die Datenpakete zum richtigen Endgerät in seinem Netzwerk, und der Data Link Layer übergibt diese Pakete jeweils an den nächsten physikalischen Knoten auf diesem Weg. Die Adressierung wechselt somit von physikalisch/lokal (Layer 2) über logisch/global (Layer 3) bis hin zu prozessspezifisch (Layer 4).
+Antwort: Im Data Link Layer zielt die Flusssteuerung darauf ab, einen lokalen Pufferüberlauf bei direkt verbundenen Knoten zu verhindern (z.B. via Stop-and-Wait). Ihre Reichweite ist punkt-zu-punkt. Der Network Layer steuert den Datenfluss netzwerkweit, um Überlast in Vermittlungsknoten zu vermeiden; Ansätze sind ende-zu-ende oder knoten-zu-knoten (Hop-by-Hop). Die Reichweite erstreckt sich über mehrere Hops. Der Transport Layer nutzt ende-zu-ende Flusssteuerung (z.B. TCP-Fenster), angepasst an Teilnehmercharakteristiken wie Empfängerkapazität und Netzwerkbedingungen, um faire Ressourcennutzung und Überlastvermeidung im gesamten Endsystem-zu-Endsystem-Pfad zu gewährleisten. (Richtig)
 
 ### Source Text
 

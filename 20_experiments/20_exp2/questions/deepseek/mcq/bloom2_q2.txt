@@ -8,24 +8,25 @@ Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Mode
 
 ### Stem Generation
 
-Frage: Nennen Sie die beiden Schichten des ISO-OSI-Modells, in denen Adressierung explizit als Kernaufgabe definiert ist.
+Frage: Welche zwei Schichten des ISO-OSI-Modells sind primär für die netzwerkübergreifende Adressierung von Geräten und die Adressierung von Anwendungsprozessen verantwortlich?
 
 ### Key Generation
 
-Korrekte Antwort(en):
-a) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
-b) Schicht 3 (Network Layer) und Schicht 4 (Transport Layer) (Richtig)
+Korrekte Antworten:
+
+a) Network Layer (Schicht 3) für die netzwerkübergreifende Adressierung von Geräten und Transport Layer (Schicht 4) für die Adressierung von Anwendungsprozessen. (Richtig)
+b) Die primäre Verantwortung liegt bei Schicht 3 (Network Layer) und Schicht 4 (Transport Layer) des ISO-OSI-Modells. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Nennen Sie die beiden Schichten des ISO-OSI-Modells, in denen Adressierung explizit als Kernaufgabe definiert ist.
+Frage: Welche zwei Schichten des ISO-OSI-Modells sind primär für die netzwerkübergreifende Adressierung von Geräten und die Adressierung von Anwendungsprozessen verantwortlich?
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2) und Network Layer (Schicht 3) (Falsch)
-b) Network Layer (Schicht 3) und Application Layer (Schicht 7) (Falsch)
-c) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
-d) Schicht 3 (Network Layer) und Schicht 4 (Transport Layer) (Richtig)
+a) Data Link Layer (Schicht 2) für die netzwerkübergreifende Adressierung von Geräten und Transport Layer (Schicht 4) für die Adressierung von Anwendungsprozessen. (Falsch)
+b) Die primäre Verantwortung liegt bei Schicht 3 (Network Layer) und Schicht 4 (Transport Layer) des ISO-OSI-Modells. (Richtig)
+c) Network Layer (Schicht 3) für die netzwerkübergreifende Adressierung von Geräten und Application Layer (Schicht 7) für die Adressierung von Anwendungsprozessen. (Falsch)
+d) Network Layer (Schicht 3) für die netzwerkübergreifende Adressierung von Geräten und Transport Layer (Schicht 4) für die Adressierung von Anwendungsprozessen. (Richtig)
 
 ### Source Text
 

@@ -383,7 +383,7 @@ def run_exp2(clients):
                 bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
                 learning_obj = get_learning_objective("exp2", bloom_level=bloom_level)
 
-                for q_num in range(1, constants.EXP2_MCQ_PER_BLOOM + 1):
+                for q_num in range(1, 3):
                     tasks.append(
                         (
                             llm_name,
@@ -412,7 +412,7 @@ def run_exp2(clients):
                 bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
                 learning_obj = get_learning_objective("exp2", bloom_level=bloom_level)
 
-                for q_num in range(1, constants.EXP2_OPEN_ENDED_PER_BLOOM + 1):
+                for q_num in range(1, 2):
                     tasks.append(
                         (
                             llm_name,

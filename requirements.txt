@@ -8,7 +8,7 @@ pandas
 numpy
 scipy
 scikit-learn
-sentence-transformers
+# sentence-transformers
 
 # Statistics
 statsmodels

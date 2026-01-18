@@ -8,25 +8,25 @@ Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertra
 
 ### Stem Generation
 
-Frage: Ein Sender überträgt Daten schneller, als der Empfänger diese verarbeiten kann. Welche Strategien der Flusskontrolle lassen sich anwenden, um diese Situation zu lösen?
+Frage: Ein Sender überträgt im Data Link Layer Daten schneller, als der Empfänger diese verarbeiten kann. Welche Strategien der Flusskontrolle können Sie anwenden, um diese Situation zu lösen?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Der Empfänger kann die eingehenden Daten zwischenpuffern, um sie temporär zu speichern und später zu verarbeiten, oder den Sender auffordern, die Übertragungsgeschwindigkeit herunterzuregeln. (Richtig)
-b) Der Empfänger kann den Sender warten lassen, bis er zur Verarbeitung weiterer Daten bereit ist, und signalisiert dies durch entsprechende Steuernachrichten. (Richtig)
+a) Zwischenpuffern der empfangenen Daten, bis der Empfänger diese verarbeiten kann (Richtig)
+b) Den Sender warten lassen beziehungsweise die Sendegeschwindigkeit herunterregeln (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ein Sender überträgt Daten schneller, als der Empfänger diese verarbeiten kann. Welche Strategien der Flusskontrolle lassen sich anwenden, um diese Situation zu lösen?
+Frage: Ein Sender überträgt im Data Link Layer Daten schneller, als der Empfänger diese verarbeiten kann. Welche Strategien der Flusskontrolle können Sie anwenden, um diese Situation zu lösen?
 
 Antwortmöglichkeiten:
 
-a) Der Empfänger kann beschädigte Datenpakete erkennen und eine erneute Übertragung vom Sender anfordern, um die Datenintegrität sicherzustellen. (Falsch)
-b) Der Empfänger kann den Sender warten lassen, bis er zur Verarbeitung weiterer Daten bereit ist, und signalisiert dies durch entsprechende Steuernachrichten. (Richtig)
-c) Der Empfänger kann die eingehenden Daten zwischenpuffern, um sie temporär zu speichern und später zu verarbeiten, oder den Sender auffordern, die Übertragungsgeschwindigkeit herunterzuregeln. (Richtig)
-d) Der Sender kann den Physical Layer deaktivieren und die Übertragung vollständig abbrechen, bis ein neuer Verbindungsaufbau vom Empfänger initiiert wird. (Falsch)
+a) Den Sender warten lassen beziehungsweise die Sendegeschwindigkeit herunterregeln (Richtig)
+b) Die Datenpakete in kleinere Segmente aufteilen, um die Übertragungsrate zu reduzieren (Falsch)
+c) Erneutes Senden der Datenpakete durch den Sender veranlassen, um dem Empfänger zusätzliche Verarbeitungszeit zu geben (Falsch)
+d) Zwischenpuffern der empfangenen Daten, bis der Empfänger diese verarbeiten kann (Richtig)
 
 ### Source Text
 

@@ -8,25 +8,25 @@ Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beisp
 
 ### Stem Generation
 
-Frage: Ermitteln Sie, welche zwei OSI-Schichten zuständig sind, wenn bei einer Kommunikation (1) die Zeichencodierung von ASCII nach Unicode konvertiert und (2) der Übertragungsweg über vermittelnde Zwischenknoten zwischen unterschiedlichen Netzwerken ausgewählt werden muss.
+Frage: Welche zwei Schichten des 7-Schichten-Modells würden Sie nutzen, um (1) logische Bits mittels Manchester zu codieren und über ein Telefonkabel zu übertragen und (2) Übertragungsfehler auf dieser Verbindung zu erkennen und zu signalisieren?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) (1) Präsentationsschicht (Layer 6) für die Konvertierung der Zeichencodierung (ASCII → Unicode) und (2) Netzwerkschicht (Layer 3) für die Auswahl des Übertragungswegs über vermittelnde Zwischenknoten (Routing) (Richtig)
-b) Für (1) die OSI-Schicht 6 (Presentation Layer: Zeichendarstellung umwandeln, z. B. ASCII/Unicode) und für (2) die OSI-Schicht 3 (Network Layer: Routing zwischen unterschiedlichen Netzwerken) (Richtig)
+a) Physical Layer (Schicht 1) für Manchester-Codierung und Übertragung über Telefonkabel; Data Link Layer (Schicht 2) zur Erkennung und Signalisierung von Übertragungsfehlern (Richtig)
+b) Schicht 1 (Bitübertragungsschicht) für die physikalische Codierung/den Transport der Bits (Manchester, Medium Telefonkabel); Schicht 2 (Sicherungsschicht) für Fehlerkontrolle wie z.B. Fehlererkennung und Fehlermeldung (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Ermitteln Sie, welche zwei OSI-Schichten zuständig sind, wenn bei einer Kommunikation (1) die Zeichencodierung von ASCII nach Unicode konvertiert und (2) der Übertragungsweg über vermittelnde Zwischenknoten zwischen unterschiedlichen Netzwerken ausgewählt werden muss.
+Frage: Frage: Welche zwei Schichten des 7-Schichten-Modells würden Sie nutzen, um (1) logische Bits mittels Manchester zu codieren und über ein Telefonkabel zu übertragen und (2) Übertragungsfehler auf dieser Verbindung zu erkennen und zu signalisieren?
 
 Antwortmöglichkeiten:
 
-a) (1) Präsentationsschicht (Layer 6) für die Konvertierung der Zeichencodierung (ASCII → Unicode) und (2) Netzwerkschicht (Layer 3) für die Auswahl des Übertragungswegs über vermittelnde Zwischenknoten (Routing) (Richtig)
-b) Für (1) die OSI-Schicht 6 (Presentation Layer: Zeichendarstellung umwandeln, z. B. ASCII/Unicode) und für (2) die OSI-Schicht 3 (Network Layer: Routing zwischen unterschiedlichen Netzwerken) (Richtig)
-c) (1) Anwendungsschicht (Layer 7) für die Konvertierung der Zeichencodierung (ASCII → Unicode) und (2) Sicherungsschicht (Layer 2) für die Auswahl des Übertragungswegs über Zwischenknoten anhand von MAC-Adressen (Falsch)
-d) (1) Sicherungsschicht (Layer 2) für die Konvertierung der Zeichencodierung (ASCII → Unicode) beim Zusammenfassen von Bits zu Bytes und (2) Transportschicht (Layer 4) für die Auswahl des Übertragungswegs zwischen unterschiedlichen Netzwerken (Falsch)
+a) Data Link Layer (Schicht 2) für Manchester-Codierung und Übertragung, da er Rahmenbildung/Medienzugriff steuert; Physical Layer (Schicht 1) zur Erkennung und Signalisierung von Übertragungsfehlern über Signalpegel- und Qualitätsprüfung (Falsch)
+b) Physical Layer (Schicht 1) für Manchester-Codierung und Übertragung über Telefonkabel; Data Link Layer (Schicht 2) zur Erkennung und Signalisierung von Übertragungsfehlern (Richtig)
+c) Presentation Layer (Schicht 6) für Manchester-Codierung als „Kodierung in einen Bitstrom“; Transport Layer (Schicht 4) zur Fehlererkennung und -signalisierung auf der Verbindung (z.B. Checksummen/ACK-Mechanismen) (Falsch)
+d) Schicht 1 (Bitübertragungsschicht) für die physikalische Codierung/den Transport der Bits (Manchester, Medium Telefonkabel); Schicht 2 (Sicherungsschicht) für Fehlerkontrolle wie z.B. Fehlererkennung und Fehlermeldung (Richtig)
 
 ### Source Text
 

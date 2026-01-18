@@ -8,25 +8,25 @@ Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter R
 
 ### Stem Generation
 
-Frage: Welche zwei Schichten des ISO-OSI-Modells nennen „Adressierung“ ausdrücklich als eine ihrer Kernaufgaben?
+Frage: Identifizieren Sie die zwei Schichten des ISO-OSI-Modells, deren Kernaufgaben explizit die „Adressierung“ umfassen.
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
-b) Vermittlungsschicht (Layer 3) und Transportschicht (Layer 4) (Richtig)
+a) Network Layer (Schicht 3) – Adressierung: netzwerk-übergreifende Adressen (Richtig)
+b) Transport Layer (Schicht 4) – Adressierung: Teilnehmer-Adressen (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche zwei Schichten des ISO-OSI-Modells nennen „Adressierung“ ausdrücklich als eine ihrer Kernaufgaben?
+Frage: Frage: Identifizieren Sie die zwei Schichten des ISO-OSI-Modells, deren Kernaufgaben explizit die „Adressierung“ umfassen.
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2) und Network Layer (Schicht 3) (Falsch)
-b) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
-c) Presentation Layer (Schicht 6) und Application Layer (Schicht 7) (Falsch)
-d) Vermittlungsschicht (Layer 3) und Transportschicht (Layer 4) (Richtig)
+a) Data Link Layer (Schicht 2) – Identifikation: Auswahl bestimmter Sender oder Empfänger (z. B. MAC-Adresse) (Falsch)
+b) Network Layer (Schicht 3) – Adressierung: netzwerk-übergreifende Adressen (Richtig)
+c) Session Layer (Schicht 5) – Sitzungen: Nutzung von Session-IDs zur „Adressierung“ einer Verbindung (Falsch)
+d) Transport Layer (Schicht 4) – Adressierung: Teilnehmer-Adressen (Richtig)
 
 ### Source Text
 

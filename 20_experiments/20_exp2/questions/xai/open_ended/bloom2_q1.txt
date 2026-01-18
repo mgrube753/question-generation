@@ -8,13 +8,27 @@ Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Mode
 
 ### Question Generation
 
-Frage: Erklären Sie in eigenen Worten die Beziehungen zwischen den Schichten des ISO-OSI-Modells.
+Frage: Erklären Sie in eigenen Worten die Beziehungen zwischen den Schichten des ISO-OSI-Modells und beschreiben Sie die Kernaufgaben jeder Schicht.
 
 ### Answer Generation + Union of all
 
-Frage: Erklären Sie in eigenen Worten die Beziehungen zwischen den Schichten des ISO-OSI-Modells.
+Frage: Erklären Sie in eigenen Worten die Beziehungen zwischen den Schichten des ISO-OSI-Modells und beschreiben Sie die Kernaufgaben jeder Schicht.
 
-Antwort: Das ISO-OSI-Modell ist ein schichtenbasiertes Konzept für Netzwerkkommunikation, bei dem jede Schicht auf der darunterliegenden aufbaut und Dienste für die darüberliegende bereitstellt. Die Physical Layer (Schicht 1) bildet die Grundlage, indem sie logische Werte in physische Signale umwandelt, transportiert und rückinterpretiert, z. B. über Kabel oder Funk. Darauf aufbauend sorgt die Data Link Layer (Schicht 2) für eine fehlergesicherte Übertragung, indem sie Fehler kontrolliert, den Datenfluss regelt, Bits segmentiert, Adressen identifiziert und den Medienzugriff steuert. Die Network Layer (Schicht 3) erweitert dies auf netzwerkübergreifende Verbindungen durch Adressierung, Routing von Pfaden und Flusssteuerung zwischen Knoten. Die Transport Layer (Schicht 4) ermöglicht ende-zu-ende-Übertragungen zwischen Teilnehmern mit spezifischer Adressierung, angepasster Flusssteuerung und Garantien für Dienstqualität wie Bandbreite oder Latenz. Die Session Layer (Schicht 5) managt Kommunikationssitzungen, indem sie diese aufbaut, synchronisiert und bündelt. Die Presentation Layer (Schicht 6) wandelt Anwendungsdaten in einen einheitlichen Bitstrom um, z. B. durch Konvertierung von Endianness, Zeichenformaten, Kompression und Verschlüsselung. Schließlich definiert die Application Layer (Schicht 7) anwendungsspezifische Elemente wie Konzepte, Protokolle und Verhalten, die auf allen unteren Schichten beruhen. Jede Schicht interagiert nur mit ihren Nachbarn, was Modularität und Unabhängigkeit gewährleistet. (Richtig)
+Antwort: Das ISO-OSI-Modell ist ein hierarchisches Schichtenmodell für Netzwerkkommunikation, bei dem jede Schicht auf der darunterliegenden aufbaut und Dienste für die obere bereitstellt. Schichten kommunizieren vertikal (mit angrenzenden Schichten) und horizontal (peer-to-peer mit entsprechenden Schichten am Empfänger). Daten werden von oben nach unten gekapselt und umgekehrt entkapselt.
+
+Schicht 1 (Physical): Codierung, Transport und Decodierung physikalischer Signale (z.B. NRZ, Kabel).
+
+Schicht 2 (Data Link): Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation, Medienzugriff für fehlerfreie Übertragung.
+
+Schicht 3 (Network): Adressierung, Routing, Flusssteuerung für netzwerkübergreifende Verbindungen.
+
+Schicht 4 (Transport): Adressierung, Flusssteuerung, QoS für end-to-end-Übertragung.
+
+Schicht 5 (Session): Sitzungsaufbau/-verwaltung, Synchronisation, Bündelung.
+
+Schicht 6 (Presentation): Endian-Konvertierung, Zeichendarstellung, Kompression, Verschlüsselung.
+
+Schicht 7 (Application): Festlegung von Konzepten, Protokollelementen und Verhalten für spezifische Anwendungen. (Richtig)
 
 ### Source Text
 

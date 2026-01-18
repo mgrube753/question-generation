@@ -8,13 +8,13 @@ Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertrag
 
 ### Question Generation
 
-Frage: Ein 32-Bit-Wert wird im Little-Endian-Format als die Bytefolge 78 56 34 12 (hexadezimal) gespeichert. Wenden Sie die notwendige Konvertierung an, um den Wert im Big-Endian-Format darzustellen.
+Frage: Konvertieren Sie den 32-Bit-Hexadezimalwert 0xA1B2C3D4 aus der Big-Endian- in die Little-Endian-Darstellung. Geben Sie die resultierende Bytefolge in hexadezimaler Form an.
 
 ### Answer Generation + Union of all
 
-Frage: Ein 32-Bit-Wert wird im Little-Endian-Format als die Bytefolge 78 56 34 12 (hexadezimal) gespeichert. Wenden Sie die notwendige Konvertierung an, um den Wert im Big-Endian-Format darzustellen.
+Frage: Konvertieren Sie den 32-Bit-Hexadezimalwert 0xA1B2C3D4 aus der Big-Endian- in die Little-Endian-Darstellung. Geben Sie die resultierende Bytefolge in hexadezimaler Form an.
 
-Antwort: 12 34 56 78 (Richtig)
+Antwort: 0xD4C3B2A1 (Richtig)
 
 ### Source Text
 

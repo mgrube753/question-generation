@@ -8,24 +8,25 @@ Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beisp
 
 ### Stem Generation
 
-Frage: Bei der Weiterleitung von Datenpaketen über Router werden zwei Ebenen der Adressierung genutzt: eine für die Identifikation des Zielnetzwerks und eine für die Identifikation des nächsten Knotens. In welchen beiden Schichten des OSI-Modells sind diese Adressierungsebenen primär verankert?
+Frage: Bei der gesicherten Übertragung vertraulicher Daten mit garantierter Mindestbandbreite sind primär welche zwei Schichten des OSI-Modells für die Verschlüsselung und die Bandbreitengarantie zuständig?
 
 ### Key Generation
 
-Korrekte Antwort(en):
-a) Die Identifikation des Zielnetzwerks ist primär in der Network Layer (Schicht 3) verankert, während die Identifikation des nächsten Knotens in der Data Link Layer (Schicht 2) erfolgt. (Richtig)
-b) Schicht 3 (Network Layer) für die Zielnetzwerk-Adressierung und Schicht 2 (Data Link Layer) für die Adressierung des nächsten Knotens. (Richtig)
+Korrekte Antworten:
+
+a) Presentation Layer (Verschlüsselung) und Transport Layer (Bandbreitengarantie) (Richtig)
+b) Schicht 6 (Verschlüsselung) und Schicht 4 (Bandbreitengarantie) (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Bei der Weiterleitung von Datenpaketen über Router werden zwei Ebenen der Adressierung genutzt: eine für die Identifikation des Zielnetzwerks und eine für die Identifikation des nächsten Knotens. In welchen beiden Schichten des OSI-Modells sind diese Adressierungsebenen primär verankert?
+Frage: Bei der gesicherten Übertragung vertraulicher Daten mit garantierter Mindestbandbreite sind primär welche zwei Schichten des OSI-Modells für die Verschlüsselung und die Bandbreitengarantie zuständig?
 
 Antwortmöglichkeiten:
 
-a) Beide Adressierungsebenen sind primär in der Network Layer (Schicht 3) verankert, da Router auf dieser Schicht operieren und sowohl die Zielnetzwerk- als auch die nächste Hop-Adressierung vornehmen. (Falsch)
-b) Die Identifikation des Zielnetzwerks ist primär in der Network Layer (Schicht 3) verankert, während die Identifikation des nächsten Knotens in der Data Link Layer (Schicht 2) erfolgt. (Richtig)
-c) Die Identifikation des Zielnetzwerks erfolgt in der Transport Layer (Schicht 4), während die Identifikation des nächsten Knotens in der Network Layer (Schicht 3) stattfindet. (Falsch)
-d) Schicht 3 (Network Layer) für die Zielnetzwerk-Adressierung und Schicht 2 (Data Link Layer) für die Adressierung des nächsten Knotens. (Richtig)
+a) Application Layer (Verschlüsselung) und Network Layer (Bandbreitengarantie) (Falsch)
+b) Presentation Layer (Verschlüsselung) und Transport Layer (Bandbreitengarantie) (Richtig)
+c) Data Link Layer (Verschlüsselung) und Transport Layer (Bandbreitengarantie) (Falsch)
+d) Schicht 6 (Verschlüsselung) und Schicht 4 (Bandbreitengarantie) (Richtig)
 
 ### Source Text
 

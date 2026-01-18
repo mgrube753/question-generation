@@ -8,25 +8,25 @@ Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus au
 
 ### Stem Generation
 
-Frage: Welche zwei der folgenden Parameter werden durch die Dienstqualität in der Transport Layer 4 gesichert?
+Frage: Welche zwei der folgenden sind Parameter, für die die Dienstqualität (QoS) im Transport Layer Garantien erbringt?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Bandbreite und Latenz (Richtig)
-b) Jitter und Fehlerrate (Richtig)
+a) Latenz (Richtig)
+b) Jitter (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei der folgenden Parameter werden durch die Dienstqualität in der Transport Layer 4 gesichert?
+Frage: Welche zwei der folgenden sind Parameter, für die die Dienstqualität (QoS) im Transport Layer Garantien erbringt?
 
 Antwortmöglichkeiten:
 
-a) Bandbreite und Latenz (Richtig)
-b) Buffergröße und Fenstergröße (Falsch)
-c) Jitter und Fehlerrate (Richtig)
-d) Portnummer und Socket (Falsch)
+a) Adressierung (Falsch)
+b) Flußsteuerung (Falsch)
+c) Jitter (Richtig)
+d) Latenz (Richtig)
 
 ### Source Text
 

@@ -8,25 +8,25 @@ Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beisp
 
 ### Stem Generation
 
-Frage: Ermitteln Sie die Schichten, in denen End-to-End-Flußsteuerung durchgeführt wird.
+Frage: Ermitteln Sie, welche Schichten des Modells Adressierung als Kernaufgabe ausführen.
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Die End-to-End-Flußsteuerung wird in der Network Layer (Schicht 3) und der Transport Layer (Schicht 4) durchgeführt. (Richtig)
-b) End-to-End-Flußsteuerung findet in Schicht 3 (Network Layer) und Schicht 4 (Transport Layer) statt. (Richtig)
+a) Data Link Layer (Schicht 2), Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
+b) Schicht 2 (Identifikation), Schicht 3 (Netzwerk-übergreifend) und Schicht 4 (Teilnehmer) (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Ermitteln Sie die Schichten, in denen End-to-End-Flußsteuerung durchgeführt wird.
+Frage: Ermitteln Sie, welche Schichten des Modells Adressierung als Kernaufgabe ausführen.
 
 Antwortmöglichkeiten:
 
-a) Die End-to-End-Flußsteuerung wird in der Data Link Layer (Schicht 2) und der Transport Layer (Schicht 4) durchgeführt. (Falsch)
-b) Die End-to-End-Flußsteuerung wird in der Network Layer (Schicht 3) und der Transport Layer (Schicht 4) durchgeführt. (Richtig)
-c) End-to-End-Flußsteuerung findet ausschließlich in der Transport Layer (Schicht 4) statt. (Falsch)
-d) End-to-End-Flußsteuerung findet in Schicht 3 (Network Layer) und Schicht 4 (Transport Layer) statt. (Richtig)
+a) Data Link Layer (Schicht 2), Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
+b) Network Layer (Schicht 3), Transport Layer (Schicht 4) und Application Layer (Schicht 7) (Falsch)
+c) Physical Layer (Schicht 1), Data Link Layer (Schicht 2) und Network Layer (Schicht 3) (Falsch)
+d) Schicht 2 (Identifikation), Schicht 3 (Netzwerk-übergreifend) und Schicht 4 (Teilnehmer) (Richtig)
 
 ### Source Text
 

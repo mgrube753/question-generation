@@ -8,24 +8,25 @@ Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonze
 
 ### Stem Generation
 
-Frage: Ermitteln Sie für eine neue Cloud-Speicher-Anwendung die beiden zentralen Fragestellungen, die bei der Definition der Protokollelemente auf Application Layer 7 zu beantworten sind.
+Frage: Ein Entwickler spezifiziert für eine neue Anwendung die darin auftretenden Begriffe und legt fest, wie die Anwendung auf eingehende Anfragen reagiert. Welche zwei der drei Kernaufgaben der Application Layer erfüllt er damit?
 
 ### Key Generation
 
-Korrekte Antwort(en):
-a) 1. Welche Anforderungen (z.B. Operationen wie Speichern, Abrufen, Löschen) können an die Cloud-Speicher-Anwendung gestellt werden? 2. Welche Daten (z.B. Dateien, Metadaten, Authentifizierungsinformationen) werden bei diesen Anforderungen erwartet? (Richtig)
-b) 1. Welche konkreten Dienste und Funktionen muss das Anwendungsprotokoll für Cloud-Speicher bereitstellen? 2. Welche Datentypen, -formate und -inhalte sind für den Austausch bei der Nutzung dieser Dienste notwendig? (Richtig)
+Korrekte Antworten:
+
+a) Spezifikation der Grundkonzepte (Begriffe) der Anwendung (Richtig)
+b) Definition des Verhaltens der Anwendung auf eingehende Anfragen (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ermitteln Sie für eine neue Cloud-Speicher-Anwendung die beiden zentralen Fragestellungen, die bei der Definition der Protokollelemente auf Application Layer 7 zu beantworten sind.
+Frage: Ein Entwickler spezifiziert für eine neue Anwendung die darin auftretenden Begriffe und legt fest, wie die Anwendung auf eingehende Anfragen reagiert. Welche zwei der drei Kernaufgaben der Application Layer erfüllt er damit?
 
 Antwortmöglichkeiten:
 
-a) 1. Welche Anforderungen (z.B. Operationen wie Speichern, Abrufen, Löschen) können an die Cloud-Speicher-Anwendung gestellt werden? 2. Welche Daten (z.B. Dateien, Metadaten, Authentifizierungsinformationen) werden bei diesen Anforderungen erwartet? (Richtig)
-b) 1. Welche Transportprotokolle (z.B. TCP oder UDP) und Portnummern sollen für die Verbindung verwendet werden? 2. Wie wird die Authentifizierung und Autorisierung der Benutzer technisch umgesetzt? (Falsch)
-c) 1. Welche konkreten Dienste und Funktionen muss das Anwendungsprotokoll für Cloud-Speicher bereitstellen? 2. Welche Datentypen, -formate und -inhalte sind für den Austausch bei der Nutzung dieser Dienste notwendig? (Richtig)
-d) 1. Welche grundlegenden Begriffe und Entitäten (z.B. Benutzer, Datei, Ordner, Berechtigung) definiert die Anwendungsdomäne? 2. Wie reagiert das Protokoll auf Fehler wie Zeitüberschreitungen oder ungültige Anfragen? (Falsch)
+a) Definition der Protokollelemente, d.h. welche Anforderungen gestellt werden können und welche Daten dabei erwartet werden (Falsch)
+b) Definition des Verhaltens der Anwendung auf eingehende Anfragen (Richtig)
+c) Festlegung der Transportdienstparameter für die zuverlässige Übertragung (Falsch)
+d) Spezifikation der Grundkonzepte (Begriffe) der Anwendung (Richtig)
 
 ### Source Text
 
