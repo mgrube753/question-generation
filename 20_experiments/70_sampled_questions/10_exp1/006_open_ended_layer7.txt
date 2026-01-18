@@ -6,20 +6,9 @@ Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonze
 
 ### Formulierte Frage
 
-Frage: Entwerfen Sie für eine selbst gewählte Anwendung eine vollständige Spezifikation der Anwendungsschicht, in der Sie Grundkonzepte, Protokollelemente und Verhaltensweisen definieren und zu einem schlüssigen Gesamtkonzept zusammenstellen.
+Frage: Entwerfen Sie für einen einfachen Benachrichtigungsdienst auf der Anwendungsschicht die vollständige Spezifikation, indem Sie die drei Kernaufgaben (Grundkonzepte, Protokollelemente mit erwarteten Daten und Verhalten) definieren und zu einem zusammenhängenden Konzept verbinden.
 
-Antwort: Spezifikation für eine Chat-Anwendung auf der Anwendungsschicht (Layer 7):
-
-Grundkonzepte:
-Ein Benutzer ist eine identifizierbare Entität mit eindeutigem Benutzernamen und Authentifizierungsdaten. Eine Nachricht besteht aus Absender, Empfänger, Zeitstempel und Textinhalt. Ein Chatraum ist ein virtueller Bereich, in dem mehrere Benutzer Nachrichten austauschen. Der Status gibt an, ob ein Benutzer online, offline oder abwesend ist.
-
-Protokollelemente:
-LOGIN(benutzername, passwort) zur Authentifizierung. LOGOUT() zum Abmelden. SEND_MESSAGE(empfänger, text) zum Versenden einer Nachricht mit erwartetem Empfängernamen und Nachrichtentext. GET_MESSAGES(chatraum_id, anzahl) zum Abrufen von Nachrichten mit Raumkennung und gewünschter Anzahl. SET_STATUS(statuswert) zur Statusänderung. CREATE_ROOM(raumname, teilnehmerliste) zur Erstellung eines neuen Chatraums.
-
-Verhalten:
-Bei LOGIN prüft die Anwendung die Anmeldedaten und antwortet mit SUCCESS und Sitzungstoken oder ERROR mit Fehlerbeschreibung. Bei SEND_MESSAGE validiert die Anwendung den Empfänger, speichert die Nachricht mit Zeitstempel und benachrichtigt den Empfänger falls online, andernfalls Zustellung bei nächster Anmeldung. Bei GET_MESSAGES liefert die Anwendung die angeforderten Nachrichten chronologisch sortiert zurück. Bei SET_STATUS aktualisiert die Anwendung den Benutzerstatus und informiert alle Kontakte über die Änderung. Bei CREATE_ROOM erzeugt die Anwendung einen neuen Raum und sendet Einladungen an alle Teilnehmer.
-
-Das Gesamtkonzept verbindet die Grundkonzepte mit den Protokollelementen, wobei jedes Element auf definierten Konzepten operiert und das Verhalten konsistente Reaktionen auf alle Anforderungen sicherstellt. (Richtig)
+Antwort: Grundkonzepte: Sender, Empfänger, Nachricht (Text, Zeitstempel), Nachrichtenstatus (gesendet, zugestellt, gelesen), Benachrichtigungskanal. Protokollelemente mit erwarteten Daten: SEND (Sender-ID, Empfänger-ID, Nachrichtentext, Zeitstempel), RECEIVE (Empfänger-ID), STATUS (Nachrichten-ID), ACK (Nachrichten-ID, Statuscode), SUBSCRIBE (Nutzer-ID, Kanal), UNSUBSCRIBE (Nutzer-ID, Kanal). Verhalten: Bei SEND validiert der Dienst die Eingaben, speichert die Nachricht, leitet sie an den Empfänger weiter und sendet ACK mit Erfolgs- oder Fehlerstatus. Bei RECEIVE werden alle ungelesenen Nachrichten des Empfängers zurückgegeben und als zugestellt markiert. Bei STATUS wird der aktuelle Zustand einer Nachricht abgefragt. SUBSCRIBE registriert einen Nutzer für Benachrichtigungen, UNSUBSCRIBE entfernt die Registrierung. Zusammenhang: Sender nutzt SEND, Dienst speichert und leitet weiter, Empfänger ruft via RECEIVE ab, beide können STATUS prüfen. (Richtig)
 
 ### Quelltext
 

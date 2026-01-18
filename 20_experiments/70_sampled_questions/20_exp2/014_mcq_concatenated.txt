@@ -6,14 +6,14 @@ Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Mode
 
 ### Formulierte Frage
 
-Frage: Frage: Welche zwei Schichten des ISO-OSI-Modells lassen sich in die Klasse „enthält als Kernaufgabe Adressierung“ klassifizieren?
+Frage: Frage: Welche zwei Schichten des ISO-OSI-Modells würden Sie anhand ihrer Kernaufgaben klassifizieren als (a) zuständig für die Abbildung logischer Werte auf physikalische Größen inkl. Transport und Decodierung sowie (b) zuständig für die Darstellung von Anwendungsdaten als Bitstrom (z.B. Endian-Ness, Zeichenkodierung, Kompression, Verschlüsselung)?
 
 Antwortmöglichkeiten:
 
-a) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
-b) Data Link Layer (Schicht 2) und Network Layer (Schicht 3) (Falsch)
-c) Schicht 3 (Vermittlung/Network) und Schicht 4 (Transport) (Richtig)
-d) Transport Layer (Schicht 4) und Session Layer (Schicht 5) (Falsch)
+a) Application Layer (Schicht 7) (Falsch)
+b) Data Link Layer (Schicht 2) (Falsch)
+c) Physical Layer (Schicht 1) (Richtig)
+d) Presentation Layer (Schicht 6) (Richtig)
 
 ### Quelltext
 

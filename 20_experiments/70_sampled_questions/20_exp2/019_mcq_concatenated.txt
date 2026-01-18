@@ -6,14 +6,14 @@ Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter R
 
 ### Formulierte Frage
 
-Frage: Welche der folgenden Schichten des OSI-Modells haben Adressierung als eine ihrer Kernaufgaben?
+Frage: Welche Schichten des ISO-OSI-Modells haben die folgenden Hauptfunktionen: Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes und Bereitstellung der Funktionen für das Sitzungs-Konzept einer Kommunikationsbeziehung?
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer, Network Layer, Transport Layer (Richtig)
-b) Physical Layer, Data Link Layer, Network Layer (Falsch)
-c) Schicht 1, Schicht 2, Schicht 3 (Falsch)
-d) Schicht 2, Schicht 3, Schicht 4 (Richtig)
+a) Netzwerk-Schicht (Layer 3) und Transport-Schicht (Layer 4) (Falsch)
+b) Schicht 4 (Transport) und Schicht 5 (Session) (Richtig)
+c) Sitzungs-Schicht (Layer 5) und Präsentations-Schicht (Layer 6) (Falsch)
+d) Transport-Schicht (Layer 4) und Sitzungs-Schicht (Layer 5) (Richtig)
 
 ### Quelltext
 

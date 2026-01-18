@@ -6,14 +6,14 @@ Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter R
 
 ### Formulierte Frage
 
-Frage: Frage: In welchen zwei Schichten des ISO-OSI-Modells ist Adressierung eine Kernaufgabe?
+Frage: Frage: Nennen Sie zwei Schichten des ISO-OSI-Modells, deren Kernaufgaben die Codierung bzw. Kodierung von Daten umfassen.
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2) und Network Layer (Schicht 3) (Falsch)
-b) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
-c) Schicht 3 (Network Layer) und Schicht 4 (Transport Layer) (Richtig)
-d) Transport Layer (Schicht 4) und Session Layer (Schicht 5) (Falsch)
+a) Data Link Layer (Falsch)
+b) Physical Layer (Richtig)
+c) Presentation Layer (Richtig)
+d) Transport Layer (Falsch)
 
 ### Quelltext
 

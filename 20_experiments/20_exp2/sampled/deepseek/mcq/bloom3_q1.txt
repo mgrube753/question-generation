@@ -8,24 +8,24 @@ Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beisp
 
 ### Stem Generation
 
-Frage: Ermitteln Sie die zwei OSI-Schichten, die primär an der Weiterleitung von Paketen zwischen verschiedenen Netzwerken durch einen Router beteiligt sind.
+Frage: Bei der komprimierten und verschlüsselten Übertragung von Anwendungsdaten erfüllt der Presentation Layer welche zwei seiner Kernaufgaben?
 
 ### Key Generation
 
-Korrekte Antwort(en):
-a) Network Layer (Schicht 3) und Data Link Layer (Schicht 2) (Richtig)
-b) Die Netzwerkschicht und die Sicherungsschicht (Richtig)
+Korrekte Antworten:
+a) Komprimieren und Dekomprimieren der Anwendungsdaten. (Richtig)
+b) Verschlüsseln und Entschlüsseln der Anwendungsdaten. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ermitteln Sie die zwei OSI-Schichten, die primär an der Weiterleitung von Paketen zwischen verschiedenen Netzwerken durch einen Router beteiligt sind.
+Frage: Bei der komprimierten und verschlüsselten Übertragung von Anwendungsdaten erfüllt der Presentation Layer welche zwei seiner Kernaufgaben?
 
 Antwortmöglichkeiten:
 
-a) Network Layer (Schicht 3) und Data Link Layer (Schicht 2) (Richtig)
-b) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Falsch)
-c) Die Netzwerkschicht und die Sicherungsschicht (Richtig)
-d) Data Link Layer (Schicht 2) und Physical Layer (Schicht 1) (Falsch)
+a) Komprimieren und Dekomprimieren der Anwendungsdaten. (Richtig)
+b) Adressierung der Teilnehmer und Bereitstellung von Dienstgüte (QoS). (Falsch)
+c) Verschlüsseln und Entschlüsseln der Anwendungsdaten. (Richtig)
+d) Fehlererkennung und -behebung auf der Verbindungsebene. (Falsch)
 
 ### Source Text
 

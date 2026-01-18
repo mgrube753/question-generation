@@ -6,9 +6,9 @@ Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter R
 
 ### Formulierte Frage
 
-Frage: Benennen Sie die sieben Schichten des ISO-OSI-Modells in der korrekten Reihenfolge (1–7) und beschreiben Sie zu jeder Schicht kurz die jeweilige Hauptfunktion.
+Frage: Benennen Sie die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge (1–7) und ordnen Sie jeder Schicht jeweils eine zentrale Hauptfunktion zu.
 
-Antwort: 1 Physical Layer (Bitübertragungsschicht): Codierung, Transport und Decodierung logischer Bits über ein physikalisches Medium. 2 Data Link Layer (Sicherungsschicht): Fehlergesicherte Übertragung über den Physical Layer (z. B. Fehler-/Flusskontrolle, Rahmenbildung, MAC-Adressierung, Medienzugriff). 3 Network Layer (Vermittlungsschicht): Netzwerkübergreifende Übertragung zwischen Netzen (Adressierung und Routing). 4 Transport Layer (Transportschicht): Ende-zu-Ende-Übertragung zwischen Teilnehmern (Port-/Teilnehmeradressierung, Flusssteuerung, QoS). 5 Session Layer (Sitzungsschicht): Aufbau, Verwaltung und Beendigung von Sitzungen; Synchronisation und Bündelung von Transaktionen. 6 Presentation Layer (Darstellungsschicht): Darstellung/Kodierung der Anwendungsdaten als Bitstrom (Konvertierung, Kompression, Verschlüsselung). 7 Application Layer (Anwendungsschicht): Anwendungsnahe Protokolle und Konzepte; Festlegung von Protokollelementen und Verhalten der Anwendung. (Richtig)
+Antwort: 1 Physical: physikalische Codierung/Übertragung/Decodierung von Bits über das Medium. 2 Data Link: fehlergesicherte Übertragung auf dem lokalen Link (Frames, MAC, Medienzugriff). 3 Network: netzwerkübergreifende Paketvermittlung inkl. logischer Adressierung und Routing. 4 Transport: Ende-zu-Ende-Transport zwischen Teilnehmern/Prozessen (Ports), Flusskontrolle/QoS. 5 Session: Sitzungen aufbauen, verwalten, synchronisieren, beenden. 6 Presentation: Datendarstellung/Kodierung; Konvertierung, Kompression, Verschlüsselung. 7 Application: anwendungsspezifische Protokolle/Dienste und Semantik der Kommunikation. (Richtig)
 
 ### Quelltext
 

@@ -8,21 +8,23 @@ Die Studierenden können die Aufgabenverteilung zwischen den Schichten analysier
 
 ### Question Generation
 
-Frage: Analysieren Sie die Unterschiede und Zusammenhänge der Flußsteuerung in den Schichten 2, 3 und 4 des OSI-Modells.
+Frage: Analysieren Sie die Unterschiede und Zusammenhänge in der Umsetzung der Flußsteuerung zwischen der Data Link Layer, der Network Layer und der Transport Layer.
 
 ### Answer Generation + Union of all
 
-Frage: Analysieren Sie die Unterschiede und Zusammenhänge der Flußsteuerung in den Schichten 2, 3 und 4 des OSI-Modells.
+Frage: Analysieren Sie die Unterschiede und Zusammenhänge in der Umsetzung der Flußsteuerung zwischen der Data Link Layer, der Network Layer und der Transport Layer.
 
-Antwort: Die Flußsteuerung (Flow Control) im OSI-Modell verhindert Überlastung durch Anpassung der Sende- an die Empfangsrate und wird in Schichten 2, 3 und 4 unterschiedlich umgesetzt, wobei sie hierarchisch aufeinander aufbauen, um eine effiziente, fehlerarme Datenübertragung von lokalen Links bis zu end-to-end-Verbindungen zu gewährleisten.
+Antwort: Die Flußsteuerung (Flow Control) verhindert Überlastung durch zu schnelles Senden. 
 
-In Schicht 2 (Data Link Layer) erfolgt die Flußsteuerung link-lokal zwischen direkt verbundenen Knoten, um zu schnelles Senden zu regulieren, z. B. durch Pufferung, Herunterregeln der Rate oder Pausensignale (wie in Ethernet PAUSE-Frames). Sie adressiert physische Medienbeschränkungen und ist auf einen einzelnen Hop beschränkt.
+**Data Link Layer (Layer 2):** Lokale Flußkontrolle zwischen direkt verbundenen Knoten. Methoden: Pufferung, Herunterregeln oder Warten (z.B. Stop-and-Wait, Sliding Window). Fokus auf physischem Link.
 
-In Schicht 3 (Network Layer) erweitert sich die Flußsteuerung auf netzwerkweite Szenarien mit zwei Varianten: node-to-node (hop-by-hop, z. B. durch Congestion Notification in IP) und end-to-end (vom Quell- zum Zielknoten, z. B. via ICMP Source Quench). Im Unterschied zu Schicht 2 berücksichtigt sie Routing und Zwischenknoten, um Netzwerküberlastung zu vermeiden, ist aber nicht an Endanwendungen gebunden.
+**Network Layer (Layer 3):** Netzwerkweite Steuerung mit End-to-End (Sender zu Empfänger) und Node-to-Node (Knoten zu Knoten). Behandelt Routing und Überlastung in Zwischenknoten, z.B. durch Congestion Control in IP.
 
-In Schicht 4 (Transport Layer) ist die Flußsteuerung end-to-end und nutzt Teilnehmer-spezifische Charakteristika, z. B. Sliding Window in TCP, um Bandbreite, Latenz und Puffergrößen der Endgeräte anzupassen. Sie unterscheidet sich von Schicht 3 durch Fokus auf Dienstqualität (QoS) und Integration mit Fehlerkorrektur, während sie von Schicht 3 abhängt, da sie auf gerouteten Pfaden operiert.
+**Transport Layer (Layer 4):** End-to-End-Steuerung zwischen Anwendungen, nutzt Teilnehmer-Charakteristika (z.B. TCPs Windowing, basierend auf QoS wie Bandbreite).
 
-Zusammenhänge: Die Schichten bilden eine Kette, in der Schicht 2 die Basis für sichere lokale Übertragung liefert, Schicht 3 diese auf Netzwerkebene erweitert und Schicht 4 sie für anwendungsnahe, zuverlässige End-to-End-Kommunikation verfeinert. Unterschiede liegen im Geltungsbereich (lokal vs. hop-by-hop vs. end-to-end) und Fokus (Medien vs. Routing vs. Teilnehmer), was die modulare Aufgabenverteilung des Modells unterstreicht und Engpässe schichtenübergreifend minimiert. (Richtig)
+**Unterschiede:** Layer 2 ist link-spezifisch und fehlerorientiert; Layer 3 routing-basiert und netzwerkübergreifend; Layer 4 applikationsnah und QoS-gestützt. 
+
+**Zusammenhänge:** Schichten bauen aufeinander auf: Layer 2 sichert physische Links, Layer 3 routet, Layer 4 gewährleistet zuverlässige End-to-End-Übertragung. Alle zielen auf Vermeidung von Überlastung ab, mit zunehmender Abstraktion. (Richtig)
 
 ### Source Text
 

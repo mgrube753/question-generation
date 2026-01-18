@@ -6,9 +6,9 @@ Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beisp
 
 ### Formulierte Frage
 
-Frage: Ordnen Sie den folgenden Kommunikationsvorgang der passenden OSI-Schicht zu und begründen Sie Ihre Zuordnung anhand der Kernaufgaben dieser Schicht: "Ein Gerät wandelt einen eingehenden Bitstrom, der in Big-Endian-Format vorliegt, in das lokale Little-Endian-Format um, bevor die Daten an die Anwendung weitergegeben werden."
+Frage: Ermitteln Sie, welche OSI-Schicht für das Setzen von Zwischenpunkten in einer Kommunikationssitzung verantwortlich ist, und nennen Sie die entsprechende Kernaufgabe dieser Schicht.
 
-Antwort: Der Vorgang ist der Presentation Layer (Schicht 6) zuzuordnen. Begründung: Eine Kernaufgabe der Presentation Layer ist die Konvertierung der Datendarstellung (Endian-Ness), wie z.B. die Umwandlung zwischen Little-Endian und Big-Endian. Der beschriebene Vorgang der Endianness-Konvertierung vor der Weitergabe an die Anwendung entspricht genau dieser Aufgabe, um eine einheitliche Interpretation der Daten zwischen unterschiedlichen Systemen sicherzustellen. (Richtig)
+Antwort: Die Session Layer (Schicht 5) ist für das Setzen von Zwischenpunkten verantwortlich. Die entsprechende Kernaufgabe dieser Schicht ist die Synchronisation, welche explizit das Setzen von Zwischenpunkten umfasst, um den Zustand einer Kommunikationssitzung zu markieren und bei Bedarf von dort wieder aufnehmen zu können. (Richtig)
 
 ### Quelltext
 

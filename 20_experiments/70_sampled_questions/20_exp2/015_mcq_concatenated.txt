@@ -6,14 +6,14 @@ Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beisp
 
 ### Formulierte Frage
 
-Frage: Frage: In einem Firmennetz wird für die Kommunikation zwischen zwei Geräten in unterschiedlichen Netzwerken zunächst die Route über vermittelnde Zwischenknoten festgelegt und anschließend der Zugriff auf das Übertragungsmedium (Senden/Warten/Reservieren) koordiniert; ermitteln Sie die zwei OSI-Schichten, denen diese beiden Vorgänge primär zuzuordnen sind.
+Frage: Frage: Ermitteln Sie anhand des OSI-Modells die zwei Schichten, die (1) die Auswahl vermittelnder Zwischenknoten für die Kommunikation nicht direkt verbundener Geräte und (2) das Setzen von Zwischenpunkten innerhalb einer Kommunikationsbeziehung bereitstellen.
 
 Antwortmöglichkeiten:
 
-a) Routing über vermittelnde Zwischenknoten: OSI-Schicht 2 (Data Link Layer); Koordination des Medienzugriffs (Senden/Warten/Reservieren): OSI-Schicht 1 (Physical Layer) (Falsch)
-b) Routing über vermittelnde Zwischenknoten: OSI-Schicht 3 (Network Layer); Koordination des Medienzugriffs (Senden/Warten/Reservieren): OSI-Schicht 2 (Data Link Layer) (Richtig)
-c) Festlegen der Route zwischen Geräten in unterschiedlichen Netzwerken: OSI-Schicht 4 (Transport Layer); Regeln des Zugriffs auf das Übertragungsmedium: OSI-Schicht 3 (Network Layer) (Falsch)
-d) Festlegen der Route zwischen Geräten in unterschiedlichen Netzwerken: Netzwerk-Schicht (Layer 3); Regeln des Zugriffs auf das Übertragungsmedium: Sicherungsschicht/Data-Link-Schicht (Layer 2) (Richtig)
+a) Data Link Layer (Schicht 2) – Switching/Forwarding: Auswahl des nächsten Zwischenknotens über MAC-Adressen zur Kommunikation nicht direkt verbundener Geräte (Falsch)
+b) Network Layer (Schicht 3) – Routing: Auswahl vermittelnder Zwischenknoten zur Kommunikation nicht direkt verbundener Geräte (Richtig)
+c) Session Layer (Schicht 5) – Synchronisation: Setzen von Zwischenpunkten innerhalb einer Kommunikationsbeziehung (Richtig)
+d) Transport Layer (Schicht 4) – Zuverlässigkeit/Flusssteuerung: Setzen von Zwischenpunkten durch Sequenznummern und Bestätigungen (ACKs) innerhalb einer Verbindung (Falsch)
 
 ### Quelltext
 

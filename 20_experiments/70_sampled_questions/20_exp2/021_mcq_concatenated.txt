@@ -6,14 +6,14 @@ Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beisp
 
 ### Formulierte Frage
 
-Frage: Welche Schichten des OSI-Modells wenden End-to-End-Flußsteuerung an?
+Frage: Frage: Ermitteln Sie, in welchen Schichten des Referenzmodells Codierungsaufgaben durchgeführt werden.
 
 Antwortmöglichkeiten:
 
-a) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
-b) Schicht 2 (Data Link Layer) und Schicht 3 (Network Layer) (Falsch)
-c) Schicht 3 (Network Layer) und Schicht 4 (Transport Layer) (Richtig)
-d) Schicht 4 (Transport Layer) und Schicht 5 (Session Layer) (Falsch)
+a) In der Application Layer (Schicht 7), wo anwendungsspezifische Datenformate definiert und codiert werden, wie in HTTP oder FTP. (Falsch)
+b) In der Data Link Layer (Schicht 2), wo Bits in Frames segmentiert und Codierungen für Fehlerkontrolle wie Parität oder CRC durchgeführt werden. (Falsch)
+c) In der Physical Layer (Schicht 1), wo logische Werte auf physikalische Größen abgebildet werden, wie bei NRZ oder Manchester. (Richtig)
+d) In der Presentation Layer (Schicht 6), wo Anwendungsdaten als Bitstrom kodiert werden, einschließlich Endian-Konvertierung, Kompression und Verschlüsselung. (Richtig)
 
 ### Quelltext
 

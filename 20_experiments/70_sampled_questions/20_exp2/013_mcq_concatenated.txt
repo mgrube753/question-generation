@@ -6,14 +6,14 @@ Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter R
 
 ### Formulierte Frage
 
-Frage: Frage: Benennen Sie die beiden Schichten des ISO-OSI-Modells, die in der Reihenfolge von unten nach oben als Schicht 1 und Schicht 2 auftreten.
+Frage: Frage: Welche zwei Schichten des ISO-OSI-Modells nennen ausdrücklich als Kernaufgabe die Kodierung/Abbildung von Daten (entweder logische Werte auf physikalische Größen oder Anwendungsdaten als Bitstrom)?
 
 Antwortmöglichkeiten:
 
-a) Schicht 1: Physical Layer (Bitübertragungsschicht); Schicht 2: Data Link Layer (Sicherungsschicht) (Richtig)
-b) Layer 1: Physikalische Schicht; Layer 2: Sicherungsschicht (Richtig)
-c) Schicht 1: Data Link Layer (Sicherungsschicht); Schicht 2: Network Layer (Vermittlungsschicht) (Falsch)
-d) Layer 1: Physikalische Schicht; Layer 2: Network Layer (Vermittlungsschicht) (Falsch)
+a) Presentation Layer (Schicht 6) – Kodierung/Darstellung der Anwendungsdaten als Bitstrom (Richtig)
+b) Data Link Layer (Schicht 2) – Segmentierung/Framing: Zusammenfassen einzelner Bits zu größeren Einheiten (z.B. Bytes/Frames) (Falsch)
+c) Physical Layer (Schicht 1) – Codierung/Abbildung logischer Werte auf physikalische Größen sowie Decodierung zurück (Richtig)
+d) Application Layer (Schicht 7) – Festlegung von Protokollelementen und Anwendungsdatenformaten (z.B. HTTP/SMTP) (Falsch)
 
 ### Quelltext
 

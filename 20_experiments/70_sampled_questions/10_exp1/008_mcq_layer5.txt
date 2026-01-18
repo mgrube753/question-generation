@@ -6,14 +6,14 @@ Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwal
 
 ### Formulierte Frage
 
-Frage: Ein Online-Buchungssystem, das die Benutzersitzung verwaltet und mehrere Buchungsanfragen zu einer Transaktion zusammenfasst, nutzt welche zwei Kernaufgaben der Session Layer?
+Frage: In einem Kommunikationsszenario werden zur Fehlerwiederherstellung Zwischenpunkte gesetzt und mehrere zusammengehörige Transaktionen zu einer Einheit gruppiert. Welche zwei Kernaufgaben der Session Layer werden hier angewendet?
 
 Antwortmöglichkeiten:
 
-a) Sitzungsverwaltung (Aufbau, Verwaltung, Beendigung der Sitzung) und Bündelung (Gruppierung zusammengehöriger Transaktionen) (Richtig)
-b) Die Verwaltung der Benutzersitzung und das Zusammenfassen mehrerer Buchungsanfragen zu einer Transaktion entsprechen den Kernaufgaben "Sitzungen" und "Bündelung" des Session Layers. (Richtig)
-c) Synchronisation (Setzen von Zwischenpunkten) und Bündelung (Gruppierung zusammengehöriger Transaktionen) (Falsch)
-d) Sitzungen (Aufbau, Verwaltung, Beendigung) und Synchronisation (Setzen von Zwischenpunkten) (Falsch)
+a) Bündelung – Gruppierung zusammengehöriger Transaktionen zu einer Einheit (Richtig)
+b) Sitzungsverwaltung – Aufbauen und Beenden der Verbindung (Falsch)
+c) Synchronisation – Setzen von Zwischenpunkten zur Fehlerwiederherstellung (Richtig)
+d) Verschlüsselung – Sicherstellung der Vertraulichkeit der Transaktionen (Falsch)
 
 ### Quelltext
 

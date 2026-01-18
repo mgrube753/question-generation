@@ -8,25 +8,25 @@ Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Mode
 
 ### Stem Generation
 
-Frage: In welchen Schichten des OSI-Modells ist Codierung eine Kernaufgabe?
+Frage: Welche zwei Arten der Flußsteuerung werden für die Network Layer beschrieben?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Codierung ist eine Kernaufgabe in der Physical Layer (Schicht 1), da sie logische Werte auf physikalische Größen abbildet, und in der Presentation Layer (Schicht 6), wo sie Anwendungsdaten in einen Bitstrom umwandelt, inklusive Konvertierungen wie Endian-Ness oder Zeichendarstellungen. (Richtig)
-b) Im OSI-Modell übernimmt die Schicht 1 (Physical Layer) Codierung durch die Zuordnung von Bits zu physikalischen Signalen wie NRZ oder Manchester, während Schicht 6 (Presentation Layer) Codierung für die Darstellung von Daten handhabt, etwa durch Kompression, Verschlüsselung oder Formatkonvertierungen. (Richtig)
+a) End-to-End (Richtig)
+b) Node-to-Node (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: In welchen Schichten des OSI-Modells ist Codierung eine Kernaufgabe?
+Frage: Welche zwei Arten der Flußsteuerung werden für die Network Layer beschrieben?
 
 Antwortmöglichkeiten:
 
-a) Codierung findet in der Physical Layer (Schicht 1) für Signalübertragung und in der Application Layer (Schicht 7) für die Festlegung von Protokollelementen statt. (Falsch)
-b) Codierung ist eine Kernaufgabe in der Data Link Layer (Schicht 2), da sie Bits zu größeren Einheiten zusammenfasst, und in der Presentation Layer (Schicht 6), wo Daten komprimiert und verschlüsselt werden. (Falsch)
-c) Codierung ist eine Kernaufgabe in der Physical Layer (Schicht 1), da sie logische Werte auf physikalische Größen abbildet, und in der Presentation Layer (Schicht 6), wo sie Anwendungsdaten in einen Bitstrom umwandelt, inklusive Konvertierungen wie Endian-Ness oder Zeichendarstellungen. (Richtig)
-d) Im OSI-Modell übernimmt die Schicht 1 (Physical Layer) Codierung durch die Zuordnung von Bits zu physikalischen Signalen wie NRZ oder Manchester, während Schicht 6 (Presentation Layer) Codierung für die Darstellung von Daten handhabt, etwa durch Kompression, Verschlüsselung oder Formatkonvertierungen. (Richtig)
+a) End-to-End (Richtig)
+b) Host-to-Host (Falsch)
+c) Link-to-Link (Falsch)
+d) Node-to-Node (Richtig)
 
 ### Source Text
 

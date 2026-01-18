@@ -6,23 +6,9 @@ Die Studierenden können auf Basis der Schichtenprinzipien eigene Lösungsvorsch
 
 ### Formulierte Frage
 
-Frage: Entwickeln Sie ein Kommunikationskonzept für die zuverlässige Übertragung von verschlüsselten Finanzdaten zwischen zwei Banken in unterschiedlichen Netzwerken und erläutern Sie, welche schichtspezifischen Aufgaben auf den einzelnen OSI-Schichten erfüllt werden müssen.
+Frage: Entwickeln Sie einen Lösungsvorschlag für folgendes Kommunikationsproblem: Ein Sensor in Netzwerk A soll kontinuierlich Messdaten an einen Server in Netzwerk B übertragen, wobei die Verbindung fehleranfällig ist und der Server die Daten langsamer verarbeiten kann als der Sensor sie sendet. Beschreiben Sie, welche Schichten mit welchen spezifischen Kernaufgaben zur Lösung dieses Problems beitragen müssen.
 
-Antwort: Kommunikationskonzept für sichere Finanzdatenübertragung zwischen Banken:
-
-Application Layer 7: Definition eines Finanztransaktionsprotokolls mit Grundkonzepten wie Kontonummern, Transaktionsbeträgen und Zeitstempeln. Festlegung von Protokollelementen für Überweisungsanfragen und Bestätigungsnachrichten sowie Verhaltensregeln für die Verarbeitung.
-
-Presentation Layer 6: Verschlüsselung aller Finanzdaten mittels kryptographischer Verfahren zur Gewährleistung der Vertraulichkeit. Zusätzlich Kompression zur Bandbreitenoptimierung und einheitliche Zeichenkonvertierung für internationale Transaktionen.
-
-Session Layer 5: Aufbau gesicherter Sitzungen zwischen den Bankensystemen mit Authentifizierung. Setzen von Synchronisationspunkten zur Wiederaufnahme bei Unterbrechung. Bündelung zusammengehöriger Transaktionen zu Transaktionsgruppen.
-
-Transport Layer 4: Verwendung verbindungsorientierter Übertragung mit Teilnehmeradressierung über Portnummern. Sicherung der Dienstqualität durch garantierte Bandbreite und niedrige Latenz. Flusssteuerung angepasst an die Kapazität der Banksysteme.
-
-Network Layer 3: Netzwerkübergreifende IP-Adressierung beider Bankstandorte. Routing über sichere Zwischenknoten zwischen den unterschiedlichen Netzwerken. End-to-End-Flusssteuerung zur Vermeidung von Überlastung.
-
-Data Link Layer 2: Segmentierung der Daten in Frames. Fehlerkontrolle zur Erkennung und Behebung von Übertragungsfehlern. Lokale Adressierung und Medienzugriffskontrolle innerhalb jedes Netzwerksegments.
-
-Physical Layer 1: Nutzung dedizierter Standleitungen oder Glasfaserverbindungen für den Transport. Codierung logischer Werte mittels geeigneter Verfahren. Decodierung und Abtastung am Empfänger zur Rückgewinnung der Daten. (Richtig)
+Antwort: Physical Layer (1): Transport der Messdaten durch Codierung und physikalische Übertragung zwischen den Netzwerken. Data Link Layer (2): Fehlerkontrolle zur Erkennung und Behebung von Übertragungsfehlern auf der fehleranfälligen Verbindung. Erste Stufe der Flusskontrolle durch Zwischenpuffern oder Herunterregeln. Network Layer (3): Adressierung und Routing zur netzwerkübergreifenden Kommunikation zwischen Netzwerk A und B. Flußsteuerung End-to-End zwischen Sensor und Server. Transport Layer (4): Flusskontrolle angepasst an die langsamere Verarbeitungsgeschwindigkeit des Servers durch Nutzung der Teilnehmer-Charakteristik. Dienstqualität zur Sicherung kontinuierlicher Datenübertragung mit Garantien für Bandbreite und Fehlerrate. Die Kombination von Fehler- und Flusskontrolle auf mehreren Schichten löst beide Kernprobleme. (Richtig)
 
 ### Quelltext
 

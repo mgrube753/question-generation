@@ -8,25 +8,25 @@ Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Mode
 
 ### Stem Generation
 
-Frage: In welchen zwei Schichten des ISO-OSI-Modells ist die Ende-zu-Ende-Flusssteuerung eine Kernaufgabe?
+Frage: Welche zwei Schichten des ISO-OSI-Modells sind primär für die Konvertierung von Daten zwischen unterschiedlichen Repräsentationsformen verantwortlich?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
-b) Vermittlungsschicht (Schicht 3) und Transportschicht (Schicht 4) (Richtig)
+a) Physical Layer (Richtig)
+b) Presentation Layer (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: In welchen zwei Schichten des ISO-OSI-Modells ist die Ende-zu-Ende-Flusssteuerung eine Kernaufgabe?
+Frage: Welche zwei Schichten des ISO-OSI-Modells sind primär für die Konvertierung von Daten zwischen unterschiedlichen Repräsentationsformen verantwortlich?
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2) und Transport Layer (Schicht 4) (Falsch)
-b) Network Layer (Schicht 3) und Session Layer (Schicht 5) (Falsch)
-c) Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
-d) Vermittlungsschicht (Schicht 3) und Transportschicht (Schicht 4) (Richtig)
+a) Application Layer (Falsch)
+b) Data Link Layer (Falsch)
+c) Physical Layer (Richtig)
+d) Presentation Layer (Richtig)
 
 ### Source Text
 

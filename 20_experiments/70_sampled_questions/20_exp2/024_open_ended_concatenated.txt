@@ -6,19 +6,9 @@ Die Studierenden können auf Basis der Schichtenprinzipien eigene Lösungsvorsch
 
 ### Formulierte Frage
 
-Frage: Entwickeln Sie einen Lösungsvorschlag für ein Kommunikationsproblem in einem heterogenen Netzwerk, das die Kernaufgaben der Physical Layer, Data Link Layer und Network Layer integriert.
+Frage: Entwickeln Sie einen eigenen Lösungsvorschlag für ein Kommunikationsproblem, bei dem ein Sender Daten zu schnell an einen Empfänger in einem anderen Netzwerk überträgt, unter Integration der Flußsteuerungsaufgaben aus Network Layer und Transport Layer.
 
-Antwort: Problem: In einem heterogenen Netzwerk (z. B. Kombination aus Ethernet-Kabel und WLAN) treten Übertragungsfehler, Bandbreitenengpässe und Routing-Probleme auf, da Geräte in unterschiedlichen Subnetzen mit variierenden Medien (kabelgebunden vs. drahtlos) kommunizieren, was zu Paketverlusten und Verzögerungen führt.
-
-Lösungsvorschlag: Entwickeln eines integrierten Protokolls "HetNetBridge", das die Schichten wie folgt kombiniert:
-
-- Physical Layer: Implementieren einer adaptiven Codierung (z. B. Manchester für drahtlose Signale und NRZ für Kabel), Transport über hybride Medien (z. B. Lichtsignale für drahtlos und Kupferkabel für gebunden) und Decodierung mit dynamischer Abtastung, um Signalstörungen in heterogenen Umgebungen zu minimieren.
-
-- Data Link Layer: Integrieren von Fehlerkontrolle (z. B. CRC-Erkennung und ARQ-Behebung), Flußkontrolle (z. B. Sliding-Window mit Pufferung), Segmentierung in 8-Bit-Bytes, Identifikation via MAC-Adressen und Medienzugriff (z. B. CSMA/CD für Kabel und CSMA/CA für WLAN), um fehlergesicherte Punkt-zu-Punkt-Übertragungen zu gewährleisten.
-
-- Network Layer: Ergänzen durch netzwerkübergreifende Adressierung (z. B. IPv6), Routing (z. B. OSPF für dynamische Pfadwahl zwischen Subnetzen) und Flußsteuerung (End-to-End via Congestion Avoidance und Node-to-Node via Hop-by-Hop-Acknowledgements), um Daten effizient über heterogene Netze zu leiten.
-
-Das Protokoll organisiert diese Aufgaben in einem modularen Stack, der nahtlos wechselt (z. B. Gateway konvertiert Signale und Routen), reduziert Latenz um 30% und erhöht Zuverlässigkeit in gemischten Umgebungen. (Richtig)
+Antwort: Lösungsvorschlag: Implementieren einer hybriden Flusssteuerung, die Network-Layer (L3) und Transport-Layer (L4) integriert. Im L3 erfolgt Node-to-Node-Steuerung durch Zwischenknoten, die Überlast-Signale (z.B. via ICMP-Quellenunterdrückung) senden, um die Senderrate lokal zu drosseln. Ergänzend übernimmt L4 End-to-End-Steuerung (z.B. TCP-ähnlich), indem der Empfänger Acknowledge-Nachrichten mit Fenstergrößen sendet, die auf seiner Pufferkapazität basieren. Integration: L3-Signale triggern L4-Ratenanpassung, z.B. Reduzierung des Sliding Windows. Dadurch wird Übertragung verlangsamt, ohne Datenverlust, unter Berücksichtigung von Netzwerkpfaden und Empfänger-Charakteristika. Vorteil: Effiziente Handhabung heterogener Netze. (Richtig)
 
 ### Quelltext
 

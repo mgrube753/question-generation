@@ -8,13 +8,13 @@ Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adre
 
 ### Question Generation
 
-Frage: Erklären Sie, wie Adressierung, Routing und Flusssteuerung zusammenwirken, um eine Kommunikation zwischen Geräten in unterschiedlichen Netzwerken zu ermöglichen.
+Frage: Erklären Sie den Unterschied zwischen End-to-End und Node-to-Node Flusssteuerung im Kontext der netzwerkübergreifenden Kommunikation.
 
 ### Answer Generation + Union of all
 
-Frage: Erklären Sie, wie Adressierung, Routing und Flusssteuerung zusammenwirken, um eine Kommunikation zwischen Geräten in unterschiedlichen Netzwerken zu ermöglichen.
+Frage: Erklären Sie den Unterschied zwischen End-to-End und Node-to-Node Flusssteuerung im Kontext der netzwerkübergreifenden Kommunikation.
 
-Antwort: Die Adressierung stellt netzwerkübergreifende Adressen bereit, mit denen Geräte auch über verschiedene Netzwerke hinweg eindeutig identifiziert werden können. Das Routing nutzt diese Adressen, um geeignete Zwischenknoten auszuwählen, über die Datenpakete weitergeleitet werden, wenn Sender und Empfänger nicht direkt miteinander verbunden sind. Die Flusssteuerung sorgt dafür, dass der Datenstrom reguliert wird, wenn ein Sender zu schnell sendet. Dies geschieht sowohl End-to-End, also zwischen dem ursprünglichen Sender und dem entfernten Empfänger, als auch Node-to-Node zwischen jedem einzelnen Knoten auf dem Übertragungsweg. Durch das Zusammenspiel dieser drei Funktionen ermöglicht die Netzwerkschicht eine zuverlässige Übertragung zwischen Geräten, die sich in unterschiedlichen Netzwerken mit möglicherweise verschiedenen Layer-2-Technologien befinden. (Richtig)
+Antwort: Die Flusssteuerung auf der Netzwerkschicht dient dazu, Überlastungen zu vermeiden, wenn Daten zu schnell gesendet werden. Dabei werden zwei Ansätze unterschieden: Bei der End-to-End Flusssteuerung erfolgt die Regulierung des Datenflusses direkt zwischen dem ursprünglichen Sender und dem endgültigen Empfänger über das gesamte Netzwerk hinweg. Der Empfänger signalisiert dem Sender seine Verarbeitungskapazität, unabhängig von den Zwischenknoten. Bei der Node-to-Node Flusssteuerung hingegen wird der Datenfluss zwischen jedem einzelnen Knotenpaar auf dem Übertragungsweg separat gesteuert. Jeder Zwischenknoten reguliert die Übertragungsrate mit seinem direkten Nachbarknoten. Dieser Ansatz ermöglicht eine feinere Kontrolle und reagiert schneller auf lokale Engpässe, während End-to-End die Gesamtkapazität des Empfängers berücksichtigt. (Richtig)
 
 ### Source Text
 

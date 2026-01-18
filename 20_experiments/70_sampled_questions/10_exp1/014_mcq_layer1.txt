@@ -6,14 +6,14 @@ Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Deco
 
 ### Formulierte Frage
 
-Frage: Frage: In einem Sender werden logische 0/1-Werte per Manchester in ein elektrisches Signal abgebildet und anschließend über ein Telefonkabel zum Empfänger übertragen; welche zwei Kernaufgaben der Physical Layer 1 nutzen Sie in diesem Sender?
+Frage: Frage: In einem Kommunikationssystem werden logische Bits im Sender mittels Manchester-Verfahren in ein physikalisches Signal umgesetzt und im Empfänger durch Abtastung sowie Detektionsbereiche wieder als Bits rekonstruiert; ermitteln Sie die zwei Kernaufgaben der Physical Layer, die dabei im Sender bzw. im Empfänger ausgeführt werden.
 
 Antwortmöglichkeiten:
 
-a) Codierung der logischen 0/1-Werte per Manchester und anschließende Decodierung des Spannungs-/Signalverlaufs zurück zu Bits im Sender zur Plausibilitätsprüfung. (Falsch)
-b) Codierung der logischen 0/1-Werte per Manchester in ein elektrisches Signal und Transport dieses elektrischen Signals über das Telefonkabel zum Empfänger. (Richtig)
-c) Rahmenbildung der Bits zu Datenframes inklusive CRC-Fehlererkennung und danach Übertragung der Frames als elektrisches Signal über das Telefonkabel. (Falsch)
-d) Abbildung der Bits auf eine physikalische Größe (Manchester-Codierung als Spannungs-/Signalverlauf) sowie die mediengebundene Übertragung dieser physikalischen Größe über das Telefonkabel. (Richtig)
+a) Sender: Rahmung der Bitfolge zu Frames inkl. CRC/Prüfsumme; Empfänger: CRC-Prüfung, Fehlerbehandlung und ggf. Anfordern einer Wiederholung (Falsch)
+b) Codierung im Sender (Abbildung logischer Bits auf physikalische Signalformen, z.B. Manchester) und Decodierung im Empfänger (Rückinterpretation durch Abtastung und Detektionsbereiche zu logischen Bits) (Richtig)
+c) Sender: Aushandlung von Leitungsparametern (z.B. Autonegotiation) und Pegelanpassung; Empfänger: automatische Verstärkungsregelung und reine Taktwiedergewinnung zur Synchronisation (Falsch)
+d) Sender: Umsetzung logischer Werte in physikalische Größen mittels Leitungscodierung (Manchester); Empfänger: Rekonstruktion der logischen Werte aus dem physikalischen Signal durch Sampling/Schwellwert- bzw. Bereichsdetektion (Richtig)
 
 ### Quelltext
 

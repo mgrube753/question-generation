@@ -6,9 +6,9 @@ Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertrag
 
 ### Formulierte Frage
 
-Frage: Unterscheiden Sie die Beziehungen zwischen den Kernaufgaben der Präsentationsschicht bei der Transformation von Anwendungsdaten in übertragbare Bitströme.
+Frage: Analysieren Sie die Beziehungen zwischen Kompression und Verschlüsselung in der Präsentationsschicht hinsichtlich ihrer Beiträge zur Transformation von Anwendungsdaten in übertragbare Bitströme.
 
-Antwort: Die Präsentationsschicht (Layer 6) transformiert Anwendungsdaten in übertragbare Bitströme durch vier Kernaufgaben, deren Beziehungen sequentiell und interdependent sind: (1) Endian-Ness-Konvertierung stellt plattformübergreifende Datendarstellung sicher (z. B. Big-Endian zu Little-Endian), bildet die Basis für (2) Zeichenkonvertierung, die Zeichensätze harmonisiert (z. B. ASCII zu Unicode), um semantische Integrität zu wahren. Beide Konvertierungsaufgaben bereiten Daten für (3) Kompression vor, die redundante Bits reduziert und Effizienz steigert, ohne die ursprüngliche Struktur zu verändern. Abschließend interagiert (4) Verschlüsselung mit dem komprimierten Bitstrom, um Sicherheit zu gewährleisten, wobei alle Aufgaben reversibel sind, um beim Empfang die Originaldaten rekonstruieren zu können. Diese Beziehungen zerlegen die Transformation in schrittweise Anpassung (Konvertierung), Optimierung (Kompression) und Schutz (Verschlüsselung), die kollektiv Kompatibilität, Effizienz und Sicherheit zum Gesamtzweck der netzwerkfähigen Übertragung gewährleisten. (Richtig)
+Antwort: In der Präsentationsschicht (OSI-Layer 6) transformieren Kompression und Verschlüsselung Anwendungsdaten in übertragbare Bitströme. Kompression reduziert die Datenmenge durch Algorithmen wie Huffman oder LZW, um Bandbreite zu sparen und Übertragung effizienter zu machen. Verschlüsselung schützt die Daten vor unbefugtem Zugriff mittels Verfahren wie AES, indem sie den Bitstrom in eine sichere, unleserliche Form umwandelt. Beide sind interdependent: Kompression erfolgt typischerweise vor der Verschlüsselung, da verschlüsselte Daten redundanzarm und schwer komprimierbar sind. Gemeinsam tragen sie zur Standardisierung bei, ergänzt durch Endian-Ness- und Zeichenkodierung, und ermöglichen sichere, effiziente Datenübertragung. (Richtig)
 
 ### Quelltext
 

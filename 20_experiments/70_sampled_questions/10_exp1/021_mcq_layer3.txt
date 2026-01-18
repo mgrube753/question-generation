@@ -6,14 +6,14 @@ Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adre
 
 ### Formulierte Frage
 
-Frage: Welche der folgenden beschreiben die beiden Varianten der Flusssteuerung auf der Network Layer 3?
+Frage: Frage: Welche zwei Arten der Flusssteuerung werden im Network Layer unterschieden?
 
 Antwortmöglichkeiten:
 
-a) Die End-to-End-Variante der Flusssteuerung erfolgt zwischen dem sendenden und dem empfangenden Gerät über das gesamte Netzwerk hinweg, wohingegen die Node-to-Node-Variante zwischen jedem einzelnen Knoten und dem nächsten im Pfad stattfindet. (Richtig)
-b) Die Node-to-Node-Variante regelt den Fluss vom Sender bis zum Empfänger, wohingegen die End-to-End-Variante zwischen aufeinanderfolgenden Knoten stattfindet. (Falsch)
-c) End-to-End-Flusssteuerung dient der Adressierung über Netzwerke, während Node-to-Node das Routing zwischen Knoten managt. (Falsch)
-d) End-to-End-Flusssteuerung regelt den Datenfluss vom ursprünglichen Sender bis zum endgültigen Empfänger, während Node-to-Node-Flusssteuerung den Fluss zwischen aufeinanderfolgenden Knoten im Netzwerk steuert. (Richtig)
+a) End-to-End Flusssteuerung (Richtig)
+b) Host-to-Host Flusssteuerung (Falsch)
+c) Link-to-Link Flusssteuerung (Falsch)
+d) Node-to-Node Flusssteuerung (Richtig)
 
 ### Quelltext
 

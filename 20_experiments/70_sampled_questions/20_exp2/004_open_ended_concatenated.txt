@@ -6,9 +6,15 @@ Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beisp
 
 ### Formulierte Frage
 
-Frage: Bei einer Datenübertragung zwischen zwei Endgeräten in unterschiedlichen Netzwerken werden folgende Vorgänge beobachtet: Die elektrischen Signale werden mittels Manchester-Codierung übertragen, fehlerhafte Datenpakete werden erkannt und eine Neuübertragung angefordert, und die Vermittlung erfolgt über mehrere Zwischenknoten. Ermitteln Sie für jeden dieser drei Vorgänge die zuständige OSI-Schicht und begründen Sie Ihre Zuordnung anhand der jeweiligen Kernaufgaben.
+Frage: In einem Kommunikationsszenario treten folgende Vorgänge auf: (1) Die Nachrichtendaten werden verschlüsselt, (2) es wird eine Fehlerkontrolle der übertragenen Bits durchgeführt, (3) die Daten werden zwischen zwei verschiedenen Netzwerken geroutet, (4) logische Werte werden als elektrische Signale codiert. Ermitteln Sie für jeden dieser vier Vorgänge die zuständige OSI-Schicht und begründen Sie Ihre Zuordnung jeweils anhand einer Kernaufgabe der entsprechenden Schicht.
 
-Antwort: 1. Manchester-Codierung der elektrischen Signale: Physical Layer (Schicht 1). Begründung: Die Codierung ist eine Kernaufgabe des Physical Layers und umfasst die Abbildung logischer Werte auf physikalische Größen. Manchester-Codierung wird im Lehrmaterial explizit als Beispiel für diese Codierungsaufgabe genannt. 2. Erkennung fehlerhafter Datenpakete und Anforderung einer Neuübertragung: Data Link Layer (Schicht 2). Begründung: Die Fehlerkontrolle ist eine Kernaufgabe des Data Link Layers und beinhaltet das Erkennen, Beheben oder Signalisieren von Übertragungsfehlern. Die Anforderung einer Neuübertragung entspricht dem Signalisieren und Beheben von erkannten Fehlern. 3. Vermittlung über mehrere Zwischenknoten: Network Layer (Schicht 3). Begründung: Das Routing ist eine Kernaufgabe des Network Layers und beschreibt die Auswahl der vermittelnden Zwischenknoten zur Kommunikation zwischen nicht direkt verbundenen Knoten. Da sich die Endgeräte in unterschiedlichen Netzwerken befinden, ist eine netzwerkübergreifende Vermittlung erforderlich. (Richtig)
+Antwort: (1) Verschlüsselung: Presentation Layer (Schicht 6). Begründung: Verschlüsseln und Entschlüsseln von Daten ist eine definierte Kernaufgabe dieser Schicht zur Kodierung der Anwendungsdaten.
+
+(2) Fehlerkontrolle: Data Link Layer (Schicht 2). Begründung: Erkennen, Beheben oder Signalisieren von Übertragungsfehlern ist eine Kernaufgabe zur fehlergesicherten Übertragung über den Physical Layer.
+
+(3) Routing zwischen Netzwerken: Network Layer (Schicht 3). Begründung: Routing ist die Kernaufgabe zur Auswahl vermittelnder Zwischenknoten für die Kommunikation nicht direkt verbundener Knoten in verschiedenen Netzwerken.
+
+(4) Codierung logischer Werte als elektrische Signale: Physical Layer (Schicht 1). Begründung: Die Abbildung logischer Werte auf physikalische Größen ist eine Kernaufgabe dieser Schicht. (Richtig)
 
 ### Quelltext
 

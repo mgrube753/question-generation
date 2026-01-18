@@ -8,16 +8,13 @@ Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus au
 
 ### Question Generation
 
-Frage: Ein Teilnehmer möchte einen Echtzeit-Audiostream übertragen, der besonders empfindlich auf Jitter und Paketverlust reagiert. Erläutern Sie, wie Sie die drei Kernaufgaben des Transport Layers (Adressierung, Flusssteuerung, Dienstqualität) anwenden, um diesen dienstspezifischen Anforderungen gerecht zu werden.
+Frage: Ein Cloud-Gaming-Dienst benötigt eine kontinuierliche Datenübertragung mit garantiert niedrigem Jitter und hoher Bandbreite zum Endbenutzer. Wenden Sie die drei Kernaufgaben der Transport Layer (Adressierung, Flusssteuerung, Dienstqualität) an, um zu beschreiben, wie dieser Dienst die teilnehmerorientierte Übertragung technisch umsetzt.
 
 ### Answer Generation + Union of all
 
-Frage: Ein Teilnehmer möchte einen Echtzeit-Audiostream übertragen, der besonders empfindlich auf Jitter und Paketverlust reagiert. Erläutern Sie, wie Sie die drei Kernaufgaben des Transport Layers (Adressierung, Flusssteuerung, Dienstqualität) anwenden, um diesen dienstspezifischen Anforderungen gerecht zu werden.
+Frage: Ein Cloud-Gaming-Dienst benötigt eine kontinuierliche Datenübertragung mit garantiert niedrigem Jitter und hoher Bandbreite zum Endbenutzer. Wenden Sie die drei Kernaufgaben der Transport Layer (Adressierung, Flusssteuerung, Dienstqualität) an, um zu beschreiben, wie dieser Dienst die teilnehmerorientierte Übertragung technisch umsetzt.
 
-Antwort: Zur Übertragung des Echtzeit-Audiostreams wende ich die Kernaufgaben des Transport Layers wie folgt an:
-1. **Adressierung**: Ich verwende spezifische Portnummern (z.B. für RTP/RTCP) in Kombination mit den IP-Adressen, um die kommunizierenden Audio-Endpunkte eindeutig zu identifizieren und den Datenstrom korrekt zuzuordnen. Dies ermöglicht die gleichzeitige Mehrfachnutzung der IP-Verbindung für andere Dienste.
-2. **Flusssteuerung**: Da konstante Datenraten und geringe Latenz kritisch sind, passe ich die Senderate an die Empfangskapazität des Hörers an. Dabei kommen Mechanismen wie eine jitter-tolerante, adaptive Steuerung zum Einsatz (z.B. über RTCP-Feedback), die Paketverluste minimiert, ohne durch nachträgliche Wiederholungen die Echtzeiteigenschaften zu zerstören. Der Puffer am Empfänger wird so dimensioniert, dass Jitter ausgeglichen wird, ohne unnötige Verzögerungen zu verursachen.
-3. **Dienstqualität (QoS)**: Ich sichere die QoS, indem ich für den Audiostream garantierte Parameter (geringer Jitter, minimale Paketverlustrate, ausreichende Bandbreite) durch geeignete Transportmechanismen durchsetze. Konkret bedeutet dies die Auswahl eines geeigneten Transportprotokolls (z.B. RTP über UDP für geringe Overhead-Latenz), die Markierung von Paketen mit hoher Priorität (z.B. DSCP-Codepoints für Echtzeitverkehr) und den optionalen Einsatz von Forward Error Correction (FEC), um Paketverluste ohne retransmissionsbedingte Verzögerung zu kompensieren. So wird der Dienst genau auf die Anforderungen des Audio-Streams zugeschnitten. (Richtig)
+Antwort: Adressierung erfolgt über IP-Adressen und Ports, um den Client und den spezifischen Gaming-Serverdienst eindeutig zu identifizieren und eine Ende-zu-Ende-Verbindung aufzubauen. Flusssteuerung regelt die Senderate dynamisch basierend auf der aktuellen Netzwerkkapazität und der Empfangspuffer des Clients, um Überlastungen zu vermeiden und einen kontinuierlichen Datenstrom zu gewährleisten. Dienstqualität wird durch QoS-Mechanismen wie Paketpriorisierung (z.B. DiffServ), Ressourcenreservierung (z.B. RSVP) und die Wahl geeigneter Protokolle (z.B. RTP über UDP für geringe Latenz) umgesetzt, um garantierte Bandbreite, niedrigen Jitter und eine minimale Fehlerrate sicherzustellen. (Richtig)
 
 ### Source Text
 

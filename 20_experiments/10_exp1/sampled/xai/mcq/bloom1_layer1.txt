@@ -8,18 +8,18 @@ Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Deco
 
 ### Stem Generation
 
-Frage: Welche der folgenden sind Beispiele für Codierungsverfahren im Physical Layer?
+Frage: Welche zwei der folgenden sind Beispiele für Codierung auf der Physical Layer?
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
 a) NRZ (Richtig)
 b) Manchester (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche der folgenden sind Beispiele für Codierungsverfahren im Physical Layer?
+Frage: Welche zwei der folgenden sind Beispiele für Codierung auf der Physical Layer?
 
 Antwortmöglichkeiten:
 

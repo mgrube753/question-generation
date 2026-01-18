@@ -6,9 +6,9 @@ Die Studierenden können die Angemessenheit bestimmter Schichtfunktionen für ge
 
 ### Formulierte Frage
 
-Frage: Bewerten Sie die Angemessenheit der Platzierung der Flußkontrolle im Network Layer im Vergleich zum Transport Layer für eine netzwerkübergreifende Kommunikation mit hohen Latenzanforderungen und begründen Sie Ihr Urteil.
+Frage: Bewerten Sie die Angemessenheit der Platzierung der Flußsteuerung im Network Layer im Vergleich zum Transport Layer für ein Szenario mit hoher Latenz in einem globalen Netzwerk und begründen Sie Ihr Urteil basierend auf den Kernaufgaben der Schichten.
 
-Antwort: Die Platzierung der Flußkontrolle im Transport Layer ist angemessener als im Network Layer für netzwerkübergreifende Kommunikation mit hohen Latenzanforderungen (z. B. Anforderung niedriger Latenz). Begründung: Im Transport Layer erfolgt die Flußkontrolle end-to-end unter Berücksichtigung von Teilnehmer-Charakteristiken und QoS-Garantien für Latenz, was eine effiziente Anpassung an latenzkritische Szenarien ermöglicht. Im Network Layer hingegen ist die Flußkontrolle auf node-to-node und end-to-end Routing fokussiert, was bei hohen Latenzanforderungen weniger präzise ist, da sie Netzwerk-Topologien priorisiert und keine dedizierten QoS-Mechanismen für Latenz bietet, was zu ineffizienter Steuerung und potenziell höherer Verzögerung führt. (Richtig)
+Antwort: Die Platzierung der Flußsteuerung im Network Layer ist für ein Szenario mit hoher Latenz in einem globalen Netzwerk weniger angemessen als im Transport Layer. Im Network Layer umfasst die Flußsteuerung Node-to-Node- und End-to-End-Strategien, die primär Routing und netzwerkübergreifende Adressierung unterstützen, aber bei hoher Latenz (z. B. durch lange Distanzen) ineffizient sind, da sie lokale Knoten priorisieren und die Gesamtverzögerung nicht optimal handhaben. Der Transport Layer integriert Flußsteuerung mit Teilnehmer-Charakteristika und QoS-Garantien (z. B. Latenz, Jitter), was eine ganzheitliche End-to-End-Anpassung ermöglicht und besser für globale, latenzreiche Netze geeignet ist. (Richtig)
 
 ### Quelltext
 

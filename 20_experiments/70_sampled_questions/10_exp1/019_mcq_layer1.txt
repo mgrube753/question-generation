@@ -6,7 +6,7 @@ Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Deco
 
 ### Formulierte Frage
 
-Frage: Frage: Welche der folgenden sind Beispiele für Codierungsverfahren im Physical Layer?
+Frage: Welche zwei der folgenden sind Beispiele für Codierung auf der Physical Layer?
 
 Antwortmöglichkeiten:
 

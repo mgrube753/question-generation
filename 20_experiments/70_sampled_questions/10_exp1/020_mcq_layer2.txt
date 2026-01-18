@@ -6,14 +6,14 @@ Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertra
 
 ### Formulierte Frage
 
-Frage: Erklären Sie die Kernaufgaben Fehlerkontrolle und Flußkontrolle des Data Link Layers, indem Sie die passenden Beschreibungen auswählen.
+Frage: Frage: Welche zwei der folgenden Strategien beschreiben Maßnahmen der Flußkontrolle, wenn der Sender zu schnell für den Empfänger sendet?
 
 Antwortmöglichkeiten:
 
-a) Fehlerkontrolle umfasst das Erkennen, Beheben oder Signalisieren von Übertragungsfehlern, während Flußkontrolle Strategien wie Zwischenpuffern, Herunterregeln oder Wartenlassen bereitstellt, falls der Sender zu schnell für den Empfänger sendet. (Richtig)
-b) Fehlerkontrolle umfasst die Auswahl bestimmter Sender oder Empfänger durch Adressen, während Flußkontrolle das Zusammenfassen von Bits zu größeren Einheiten wie Bytes beinhaltet. (Falsch)
-c) Die Kernaufgabe Fehlerkontrolle beinhaltet das Erkennen und Beheben oder Signalisieren von Fehlern in der Übertragung, wohingegen Flußkontrolle Maßnahmen wie Puffern, Reduzierung der Sendegeschwindigkeit oder Pausieren trifft, wenn der Empfänger überfordert ist. (Richtig)
-d) Fehlerkontrolle beinhaltet Strategien wie Puffern oder Pausieren, wenn der Sender zu schnell ist, wohingegen Flußkontrolle das Erkennen, Beheben oder Signalisieren von Übertragungsfehlern übernimmt. (Falsch)
+a) Erkennen von Übertragungsfehlern durch Prüfsummen (Falsch)
+b) Herunterregeln der Sende rate des Senders durch Rückmeldungen (Richtig)
+c) Segmentierung der Daten in Frames für die Übertragung (Falsch)
+d) Zwischenpuffern von Datenpaketen, um den Empfänger nicht zu überfordern (Richtig)
 
 ### Quelltext
 

@@ -8,25 +8,25 @@ Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertrag
 
 ### Stem Generation
 
-Frage: Welche zwei Kernaufgaben der Presentation Layer betreffen das Komprimieren/Dekomprimieren sowie das Verschlüsseln/Entschlüsseln von Anwendungsdaten (wählen Sie zwei aus)?
+Frage: Wählen Sie die zwei Kernaufgaben der Presentation Layer (Schicht 6) aus, die explizit als Aktion mit zugehöriger Gegenaktion (z. B. X und De‑X) beschrieben werden.
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Kompression: Komprimieren und Dekomprimieren von Anwendungsdaten (Richtig)
-b) Verschlüsselung: Verschlüsseln und Entschlüsseln von Anwendungsdaten (Richtig)
+a) Komprimieren und Dekomprimieren (Richtig)
+b) Verschlüsseln und Entschlüsseln (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche zwei Kernaufgaben der Presentation Layer betreffen das Komprimieren/Dekomprimieren sowie das Verschlüsseln/Entschlüsseln von Anwendungsdaten (wählen Sie zwei aus)?
+Frage: Frage: Wählen Sie die zwei Kernaufgaben der Presentation Layer (Schicht 6) aus, die explizit als Aktion mit zugehöriger Gegenaktion (z. B. X und De‑X) beschrieben werden.
 
 Antwortmöglichkeiten:
 
-a) Endian-Ness: Konvertieren der Datendarstellung (Falsch)
-b) Kompression: Komprimieren und Dekomprimieren von Anwendungsdaten (Richtig)
-c) Verschlüsselung: Verschlüsseln und Entschlüsseln von Anwendungsdaten (Richtig)
-d) Zeichen: Konvertierung der Zeichendarstellung (Falsch)
+a) Framing und Deframing (Falsch)
+b) Komprimieren und Dekomprimieren (Richtig)
+c) Segmentieren und Reassemblieren (Falsch)
+d) Verschlüsseln und Entschlüsseln (Richtig)
 
 ### Source Text
 

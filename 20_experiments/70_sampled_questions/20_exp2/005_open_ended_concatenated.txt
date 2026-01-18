@@ -6,17 +6,9 @@ Die Studierenden können die Aufgabenverteilung zwischen den Schichten analysier
 
 ### Formulierte Frage
 
-Frage: Analysieren Sie die unterschiedlichen Ausprägungen der Flusssteuerung auf dem Data Link Layer, Network Layer und Transport Layer und setzen Sie diese in Beziehung zueinander, indem Sie die jeweiligen Ziele und Strategien differenzieren.
+Frage: Analysieren Sie das Konzept der Flusssteuerung auf dem Data Link Layer, dem Network Layer und dem Transport Layer und arbeiten Sie heraus, wie sich die jeweiligen Ansätze hinsichtlich ihrer Reichweite und Zielsetzung unterscheiden.
 
-Antwort: Die Flusssteuerung existiert auf drei Schichten mit unterschiedlichen Ausprägungen:
-
-Data Link Layer (Schicht 2): Das Ziel ist die Vermeidung von Überlastung zwischen direkt verbundenen Geräten. Die Strategien umfassen Zwischenpuffern, Herunterregeln der Senderate und Warten lassen des Senders. Der Fokus liegt auf der lokalen Punkt-zu-Punkt-Verbindung über einen einzelnen physikalischen Link.
-
-Network Layer (Schicht 3): Das Ziel ist die netzwerkübergreifende Regulierung des Datenflusses. Zwei Strategien werden unterschieden: End-to-End-Steuerung zwischen ursprünglichem Sender und finalem Empfänger sowie Node-to-Node-Steuerung zwischen aufeinanderfolgenden Zwischenknoten. Der Fokus liegt auf der Vermittlung über verschiedene Netzwerke hinweg.
-
-Transport Layer (Schicht 4): Das Ziel ist die Anpassung an die spezifischen Charakteristiken der Kommunikationsteilnehmer. Die Strategie nutzt teilnehmerspezifische Eigenschaften für eine individuell optimierte Flusssteuerung.
-
-Beziehungen zwischen den Ausprägungen: Es besteht eine hierarchische Abhängigkeit, bei der die höheren Schichten auf den Mechanismen der unteren aufbauen. Die Granularität nimmt von unten nach oben zu, von lokaler über netzwerkübergreifende bis zu teilnehmerbezogener Steuerung. Die Funktionen sind komplementär, da jede Schicht unterschiedliche Engpasssituationen adressiert: Schicht 2 behandelt lokale Hardware-Limits, Schicht 3 berücksichtigt Netzwerkkapazitäten und Routing-Pfade, Schicht 4 bezieht individuelle Teilnehmerkapazitäten und Anwendungsanforderungen ein. (Richtig)
+Antwort: Die Flusssteuerung unterscheidet sich auf den drei Layern wie folgt: Auf dem Data Link Layer ist die Reichweite lokal auf direkt verbundene Knoten begrenzt. Zielsetzung ist das Verhindern von Überlastung beim direkten Nachbarn durch Zwischenpuffern, Herunterregeln oder Warten lassen. Auf dem Network Layer existieren zwei Ansätze: Node-to-Node zwischen benachbarten Routern und End-to-End vom Sender zum entfernten Empfänger über Netzwerkgrenzen hinweg. Zielsetzung ist die netzwerkübergreifende Stauvermeidung. Auf dem Transport Layer ist die Reichweite ausschließlich End-to-End zwischen den kommunizierenden Teilnehmern. Die Zielsetzung fokussiert sich auf das Nutzen der spezifischen Teilnehmer-Charakteristik und ist damit anwendungsorientiert. Zusammenfassend erweitert sich die Reichweite von lokal über netzwerkübergreifend bis zu teilnehmerbezogen, während die Zielsetzung von Hardwareebene über Routingoptimierung zur Anwendungsoptimierung fortschreitet. (Richtig)
 
 ### Quelltext
 

@@ -8,25 +8,25 @@ Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertrag
 
 ### Stem Generation
 
-Frage: Welche zwei Verfahren des Presentation Layers wenden Sie an, wenn Anwendungsdaten für die Übertragung zwischen zwei Systemen mit unterschiedlichen Zeichenkodierungen vorbereitet und gleichzeitig vor unbefugtem Zugriff geschützt werden müssen?
+Frage: Ermitteln Sie, welche zwei Kernaufgaben des Presentation Layers angewendet werden müssen, wenn eine Anwendung vertrauliche Daten möglichst bandbreitensparend an ein Zielsystem übertragen soll.
 
 ### Key Generation
 
-Korrekte Antwort(en):
+Korrekte Antworten:
 
-a) Zeichenkonvertierung zur Anpassung der unterschiedlichen Kodierungen (z.B. ASCII zu Unicode) und Verschlüsselung zum Schutz der Daten vor unbefugtem Zugriff (Richtig)
-b) Konvertierung der Zeichendarstellung für die systemübergreifende Kompatibilität und Verschlüsselung zur Gewährleistung der Vertraulichkeit bei der Übertragung (Richtig)
+a) Kompression (Richtig)
+b) Verschlüsselung (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei Verfahren des Presentation Layers wenden Sie an, wenn Anwendungsdaten für die Übertragung zwischen zwei Systemen mit unterschiedlichen Zeichenkodierungen vorbereitet und gleichzeitig vor unbefugtem Zugriff geschützt werden müssen?
+Frage: Ermitteln Sie, welche zwei Kernaufgaben des Presentation Layers angewendet werden müssen, wenn eine Anwendung vertrauliche Daten möglichst bandbreitensparend an ein Zielsystem übertragen soll.
 
 Antwortmöglichkeiten:
 
-a) Kompression zur Reduzierung der Datenmenge und Konvertierung der Datendarstellung (Endian-Ness) zur Anpassung an unterschiedliche Systemarchitekturen (Falsch)
-b) Konvertierung der Datendarstellung (Big Endian zu Little Endian) zur Anpassung der Zeichenkodierungen und Kompression zum Schutz der Daten durch Verkleinerung (Falsch)
-c) Konvertierung der Zeichendarstellung für die systemübergreifende Kompatibilität und Verschlüsselung zur Gewährleistung der Vertraulichkeit bei der Übertragung (Richtig)
-d) Zeichenkonvertierung zur Anpassung der unterschiedlichen Kodierungen (z.B. ASCII zu Unicode) und Verschlüsselung zum Schutz der Daten vor unbefugtem Zugriff (Richtig)
+a) Kompression (Richtig)
+b) Konvertierung der Datendarstellung (Endian-Ness) (Falsch)
+c) Konvertierung der Zeichendarstellung (Falsch)
+d) Verschlüsselung (Richtig)
 
 ### Source Text
 

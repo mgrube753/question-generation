@@ -6,14 +6,14 @@ Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adre
 
 ### Formulierte Frage
 
-Frage: Welche beiden Varianten der Flusssteuerung lassen sich im Network Layer 3 klassifizieren?
+Frage: Welche zwei Varianten der Flusssteuerung lassen sich anhand ihrer Reichweite im Netzwerk klassifizieren?
 
 Antwortmöglichkeiten:
 
-a) End-to-End und Node-to-Node (Richtig)
-b) End-to-End-Flusssteuerung, bei der die Steuerung vom Sender zum weit entfernten Empfänger erfolgt, sowie Node-to-Node-Flusssteuerung, bei der die Steuerung von jedem Knoten zum nächsten Knoten stattfindet (Richtig)
-c) Hop-to-Hop-Flusssteuerung, bei der Datenpakete zwischen Router-Schnittstellen koordiniert werden, sowie Network-to-Network-Flusssteuerung, bei der ganze Netzwerksegmente synchronisiert werden (Falsch)
-d) Point-to-Point-Flusssteuerung, bei der direkt verbundene Geräte die Übertragungsrate abstimmen, sowie Broadcast-Flusssteuerung, bei der alle Netzwerkteilnehmer gleichzeitig gesteuert werden (Falsch)
+a) End-to-End-Flusssteuerung, bei der die Steuerung vom Sender zum weit entfernten Empfänger erfolgt (Richtig)
+b) Network-to-Network-Flusssteuerung, bei der die Steuerung zwischen verschiedenen Netzwerken zur Abstimmung der Übertragungsgeschwindigkeit erfolgt (Falsch)
+c) Node-to-Node-Flusssteuerung, bei der die Steuerung von jedem Knoten zum jeweils nächsten Knoten erfolgt (Richtig)
+d) Segment-to-Segment-Flusssteuerung, bei der die Steuerung innerhalb einzelner Datensegmente zur Pufferoptimierung erfolgt (Falsch)
 
 ### Quelltext
 
