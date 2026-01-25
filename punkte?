@@ -1,6 +1,0 @@
-- jedes bloom level bräuchte andere punktzahlen, zu großer aufwand
-- vergebene punktzahlen können auch mit bloom level kollidieren, da ist viel bedarf an abstimmung nötig
-- es liegen schon sehr viele restriktionen vor
-- man müsste dann die punktevergabe auch bewerten, ist es auch n punkte wert?
-
-lieber auf zeitlimit und ggf. wortlimit setzen

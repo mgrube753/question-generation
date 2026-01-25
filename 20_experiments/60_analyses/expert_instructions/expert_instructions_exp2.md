@@ -22,7 +22,7 @@ In jede Frage wurde ein bestimmtes Lernziel integriert (1/6), angeknüpft an das
 
 ### Schritt 1: Bewertungskriterien verstehen
 
-Lesen Sie die Rubrik `exp_rubric.md`, die folgende Kategorien umfasst (jeweils 1-5 Punkte):
+Lesen Sie die im .docx enthaltene Rubrik durch, die folgende Kategorien umfasst (jeweils 1-5 Punkte):
 
 **Kategorien 0-10 Punkte:**
 
@@ -36,21 +36,14 @@ Lesen Sie die Rubrik `exp_rubric.md`, die folgende Kategorien umfasst (jeweils 1
 Sowie die folgende Kategorie:
 
 **Bloom-Level-Bewertung (Punktevergabe 1-6):**
-Welches kognitive Level wird in dieser Frage erreicht? Nutzen Sie die Beschreibungen und Verben in der Rubrik:
+Welches kognitive Level wird in dieser Frage erreicht? Nutzen Sie die Beschreibungen und Verben in der Rubrik zur Bestimmung des Levels.
 
-1. **Remembering**
-2. **Understanding**
-3. **Applying**
-4. **Analyzing**
-5. **Evaluating**
-6. **Creating**
-
-### Schritt 2: CSV-Struktur verstehen
+### Schritt 2: Tabellen-Struktur verstehen
 
 Jede Klein-Tabelle zu der jeweiligen Frage enthält:
 
 - Die 6 Bewertungsspalten aus Schritt 1 (1-5 Punkte), sowie
-- `bloom_rating`: Ihr bewertetes Bloom-Level (1-6)
+- `bloom_rating`: Ihr bewertetes Bloom-Level (Level 1-6)
 - `answer_problems`: Für problematische Antworten
 - `comments`: Für zusätzliche Anmerkungen
 
@@ -61,7 +54,7 @@ Jede Klein-Tabelle zu der jeweiligen Frage enthält:
 3. Für jede Frage:
    - Lesen Sie die Frage sorgfältig
    - Bewerten Sie nach den 6 Kategorien der Rubrik (1-5 Punkte)
-   - Bestimmen Sie das erreichte Bloom-Level (1-6) basierend auf der Rubrik
+   - Bestimmen Sie das erreichte Bloom-Level (Level 1-6) basierend auf der Rubrik
    - Notieren Sie Ihre Bewertungen entsprechend in die Tabelle
    - Notieren Sie gegebenenfalls problematische Antworten/Antwortoptionen in `answer_problems`
    - Ergänzen Sie bei Bedarf Kommentare
