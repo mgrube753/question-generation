@@ -1,16 +1,10 @@
 ## Open-Ended Question
 
-### Bloom Level: Understanding
-
-### Learning Objective
+### Lernziel
 
 Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
 
-### Question Generation
-
-Frage: Erklären Sie in eigenen Worten die Beziehungen zwischen den Schichten des ISO-OSI-Modells und beschreiben Sie die Kernaufgaben jeder Schicht.
-
-### Answer Generation + Union of all
+### Formulierte Frage
 
 Frage: Erklären Sie in eigenen Worten die Beziehungen zwischen den Schichten des ISO-OSI-Modells und beschreiben Sie die Kernaufgaben jeder Schicht.
 
@@ -30,7 +24,7 @@ Schicht 6 (Presentation): Endian-Konvertierung, Zeichendarstellung, Kompression,
 
 Schicht 7 (Application): Festlegung von Konzepten, Protokollelementen und Verhalten für spezifische Anwendungen. (Richtig)
 
-### Source Text
+### Quelltext
 
 Physical Layer 1
 Beschreibung
@@ -56,6 +50,8 @@ Decodierung:
 
 Rückinterpretation physikalischer Größen als logische Werte.
 Bsp: Abtastung, Detektionsbereiche.
+
+---
 
 Data Link Layer 2
 Beschreibung
@@ -87,6 +83,8 @@ Medienzugriff:
 Aktivieren des Physical Layer.
 4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
 
+---
+
 Network Layer 3
 Beschreibung
 Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
@@ -110,6 +108,8 @@ End-to-End:
 Vom Sender zum weit entfernten Empfänger.
 Node-to-Node: Von jedem Knoten zum Nächsten.
 
+---
+
 Transport Layer 4
 Beschreibung
 Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
@@ -131,6 +131,8 @@ Erbringung eines Kommunikationsdienstes mit Garantien
 für Bandbreite, Latenz, Jitter, Fehlerrate usw.
 Zugeschnitten auf den jeweiligen Teilnehmer.
 
+---
+
 Session Layer 5
 
 Beschreibung
@@ -149,6 +151,8 @@ Setzen von Zwischenpunkten.
 Bündelung
 
 Gruppierung zusammengehöriger Transaktionen.
+
+---
 
 Presentation Layer 6
 Beschreibung
@@ -173,6 +177,8 @@ Komprimieren und Dekomprimieren.
 Verschlüsselung:
 
 Verschlüsseln und Entschlüsseln.
+
+---
 
 Application Layer 7
 Beschreibung

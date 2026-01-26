@@ -1,23 +1,10 @@
 ## Multiple-Choice Question
 
-### Bloom Level: Remembering
-
-### Learning Objective 
+### Lernziel
 
 Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
 
-### Stem Generation
-
-Frage: Nennen Sie die beiden Strategien der Flusssteuerung im Network Layer.
-
-### Key Generation
-
-Korrekte Antworten:
-
-a) End-to-End (Richtig)
-b) Node-to-Node (Richtig)
-
-### Distractor Generation + Union of all
+### Formulierte Frage
 
 Frage: Nennen Sie die beiden Strategien der Flusssteuerung im Network Layer.
 
@@ -28,7 +15,7 @@ b) End-to-End (Richtig)
 c) Node-to-Node (Richtig)
 d) Routing (Falsch)
 
-### Source Text
+### Quelltext
 
 Network Layer 3
 Beschreibung

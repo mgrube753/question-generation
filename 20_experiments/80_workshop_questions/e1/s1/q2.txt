@@ -1,22 +1,16 @@
 ## Open-Ended Question
 
-### Bloom Level: Evaluating
-
-### Learning Objective
+### Lernziel
 
 Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
 
-### Question Generation
-
-Frage: Beurteilen Sie, welche der fünf Kernaufgaben des Data Link Layer den größten Beitrag zur Gewährleistung einer fehlergesicherten Übertragung über einen nicht fehlergesicherten Physical Layer leistet, und begründen Sie Ihre Einschätzung anhand der jeweiligen Funktionen.
-
-### Answer Generation + Union of all
+### Formulierte Frage
 
 Frage: Beurteilen Sie, welche der fünf Kernaufgaben des Data Link Layer den größten Beitrag zur Gewährleistung einer fehlergesicherten Übertragung über einen nicht fehlergesicherten Physical Layer leistet, und begründen Sie Ihre Einschätzung anhand der jeweiligen Funktionen.
 
 Antwort: Die Fehlerkontrolle leistet den größten Beitrag zur fehlergesicherten Übertragung. Sie adressiert direkt das Kernproblem des nicht fehlergesicherten Physical Layers, indem sie Übertragungsfehler erkennt, behebt oder signalisiert. Die anderen vier Aufgaben unterstützen zwar die Kommunikation, zielen jedoch nicht primär auf Fehlersicherung ab: Die Flusskontrolle regelt lediglich Geschwindigkeitsunterschiede zwischen Sender und Empfänger. Die Segmentierung strukturiert Bitströme zu handhabbaren Einheiten. Die Identifikation ermöglicht Adressierung von Kommunikationspartnern. Der Medienzugriff koordiniert die Nutzung des Physical Layers. Nur die Fehlerkontrolle kompensiert aktiv die Unzuverlässigkeit des Physical Layers und transformiert damit eine unsichere in eine sichere Verbindung, was der zentralen Beschreibung des Data Link Layers entspricht. (Richtig)
 
-### Source Text
+### Quelltext
 
 Data Link Layer 2
 Beschreibung

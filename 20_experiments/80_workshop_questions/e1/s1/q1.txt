@@ -1,23 +1,10 @@
 ## Multiple-Choice Question
 
-### Bloom Level: Understanding
-
-### Learning Objective 
+### Lernziel
 
 Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
 
-### Stem Generation
-
-Frage: Welche zwei Beschreibungen erklären korrekt die Kernaufgaben des Session Layers im Rahmen des Sitzungskonzepts einer Kommunikationsbeziehung?
-
-### Key Generation
-
-Korrekte Antworten:
-
-a) Der Session Layer ist für das Aufbauen, Verwalten, Zurückweisen und Beenden von Sitzungen innerhalb einer Kommunikationsbeziehung zuständig. (Richtig)
-b) Der Session Layer ermöglicht die Synchronisation durch das Setzen von Zwischenpunkten sowie die Bündelung zusammengehöriger Transaktionen zu Gruppen. (Richtig)
-
-### Distractor Generation + Union of all
+### Formulierte Frage
 
 Frage: Welche zwei Beschreibungen erklären korrekt die Kernaufgaben des Session Layers im Rahmen des Sitzungskonzepts einer Kommunikationsbeziehung?
 
@@ -28,7 +15,7 @@ b) Der Session Layer gewährleistet die zuverlässige Ende-zu-Ende-Übertragung 
 c) Der Session Layer ist für das Aufbauen, Verwalten, Zurückweisen und Beenden von Sitzungen innerhalb einer Kommunikationsbeziehung zuständig. (Richtig)
 d) Der Session Layer ist für die Datenkomprimierung und die Konvertierung von Datenformaten zwischen unterschiedlichen Systemen zuständig. (Falsch)
 
-### Source Text
+### Quelltext
 
 Session Layer 5
 

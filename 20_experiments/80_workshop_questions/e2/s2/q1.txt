@@ -1,23 +1,10 @@
 ## Multiple-Choice Question
 
-### Bloom Level: Applying
-
-### Learning Objective 
+### Lernziel
 
 Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
 
-### Stem Generation
-
-Frage: Ermitteln Sie, welche Schichten des Modells Adressierung als Kernaufgabe ausführen.
-
-### Key Generation
-
-Korrekte Antworten:
-
-a) Data Link Layer (Schicht 2), Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
-b) Schicht 2 (Identifikation), Schicht 3 (Netzwerk-übergreifend) und Schicht 4 (Teilnehmer) (Richtig)
-
-### Distractor Generation + Union of all
+### Formulierte Frage
 
 Frage: Ermitteln Sie, welche Schichten des Modells Adressierung als Kernaufgabe ausführen.
 
@@ -28,7 +15,7 @@ b) Network Layer (Schicht 3), Transport Layer (Schicht 4) und Application Layer 
 c) Physical Layer (Schicht 1), Data Link Layer (Schicht 2) und Network Layer (Schicht 3) (Falsch)
 d) Schicht 2 (Identifikation), Schicht 3 (Netzwerk-übergreifend) und Schicht 4 (Teilnehmer) (Richtig)
 
-### Source Text
+### Quelltext
 
 Physical Layer 1
 Beschreibung
@@ -54,6 +41,8 @@ Decodierung:
 
 Rückinterpretation physikalischer Größen als logische Werte.
 Bsp: Abtastung, Detektionsbereiche.
+
+---
 
 Data Link Layer 2
 Beschreibung
@@ -85,6 +74,8 @@ Medienzugriff:
 Aktivieren des Physical Layer.
 4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
 
+---
+
 Network Layer 3
 Beschreibung
 Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
@@ -108,6 +99,8 @@ End-to-End:
 Vom Sender zum weit entfernten Empfänger.
 Node-to-Node: Von jedem Knoten zum Nächsten.
 
+---
+
 Transport Layer 4
 Beschreibung
 Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
@@ -129,6 +122,8 @@ Erbringung eines Kommunikationsdienstes mit Garantien
 für Bandbreite, Latenz, Jitter, Fehlerrate usw.
 Zugeschnitten auf den jeweiligen Teilnehmer.
 
+---
+
 Session Layer 5
 
 Beschreibung
@@ -147,6 +142,8 @@ Setzen von Zwischenpunkten.
 Bündelung
 
 Gruppierung zusammengehöriger Transaktionen.
+
+---
 
 Presentation Layer 6
 Beschreibung
@@ -171,6 +168,8 @@ Komprimieren und Dekomprimieren.
 Verschlüsselung:
 
 Verschlüsseln und Entschlüsseln.
+
+---
 
 Application Layer 7
 Beschreibung

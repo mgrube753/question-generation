@@ -1,22 +1,16 @@
 ## Open-Ended Question
 
-### Bloom Level: Applying
-
-### Learning Objective
+### Lernziel
 
 Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
 
-### Question Generation
-
-Frage: Nutzen Sie das OSI-Schichtenmodell, um für die folgenden Vorgänge jeweils die passende Schichtnummer (1–7) einzutragen: (a) Ein Bitstrom wird per Manchester-Codierung in Spannungspegel umgesetzt. (b) Ein WLAN-Gerät entscheidet, ob es senden darf oder warten muss (Medienzugriff). (c) Ein Datenrahmen wird mit Empfängeradresse versehen und per CRC auf Übertragungsfehler geprüft. (d) Ein Paket wird über mehrere Zwischenknoten in ein anderes Netzwerk weitergeleitet (Routing). (e) Eine Anwendung unterscheidet mehrere parallele Verbindungen über Teilnehmer-Adressen innerhalb eines Endsystems (z. B. Ports) und steuert den Sendefluss. (f) Nutzdaten werden verschlüsselt und vor dem Senden in ein einheitliches Zeichenformat (z. B. Unicode) gebracht.
-
-### Answer Generation + Union of all
+### Formulierte Frage
 
 Frage: Nutzen Sie das OSI-Schichtenmodell, um für die folgenden Vorgänge jeweils die passende Schichtnummer (1–7) einzutragen: (a) Ein Bitstrom wird per Manchester-Codierung in Spannungspegel umgesetzt. (b) Ein WLAN-Gerät entscheidet, ob es senden darf oder warten muss (Medienzugriff). (c) Ein Datenrahmen wird mit Empfängeradresse versehen und per CRC auf Übertragungsfehler geprüft. (d) Ein Paket wird über mehrere Zwischenknoten in ein anderes Netzwerk weitergeleitet (Routing). (e) Eine Anwendung unterscheidet mehrere parallele Verbindungen über Teilnehmer-Adressen innerhalb eines Endsystems (z. B. Ports) und steuert den Sendefluss. (f) Nutzdaten werden verschlüsselt und vor dem Senden in ein einheitliches Zeichenformat (z. B. Unicode) gebracht.
 
 Antwort: (a) 1 (Physical: Codierung Manchester). (b) 2 (Data Link: Medienzugriff/MAC). (c) 2 (Data Link: Frame mit L2-Adresse + CRC/Fehlerkontrolle). (d) 3 (Network: Routing/Weiterleitung zwischen Netzen). (e) 4 (Transport: Ports/Teilnehmer-Adressierung + Flusssteuerung end-to-end). (f) 6 (Presentation: Verschlüsselung + Zeichenformat-Konvertierung). (Richtig)
 
-### Source Text
+### Quelltext
 
 Physical Layer 1
 Beschreibung
@@ -42,6 +36,8 @@ Decodierung:
 
 Rückinterpretation physikalischer Größen als logische Werte.
 Bsp: Abtastung, Detektionsbereiche.
+
+---
 
 Data Link Layer 2
 Beschreibung
@@ -73,6 +69,8 @@ Medienzugriff:
 Aktivieren des Physical Layer.
 4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
 
+---
+
 Network Layer 3
 Beschreibung
 Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
@@ -96,6 +94,8 @@ End-to-End:
 Vom Sender zum weit entfernten Empfänger.
 Node-to-Node: Von jedem Knoten zum Nächsten.
 
+---
+
 Transport Layer 4
 Beschreibung
 Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
@@ -117,6 +117,8 @@ Erbringung eines Kommunikationsdienstes mit Garantien
 für Bandbreite, Latenz, Jitter, Fehlerrate usw.
 Zugeschnitten auf den jeweiligen Teilnehmer.
 
+---
+
 Session Layer 5
 
 Beschreibung
@@ -135,6 +137,8 @@ Setzen von Zwischenpunkten.
 Bündelung
 
 Gruppierung zusammengehöriger Transaktionen.
+
+---
 
 Presentation Layer 6
 Beschreibung
@@ -159,6 +163,8 @@ Komprimieren und Dekomprimieren.
 Verschlüsselung:
 
 Verschlüsseln und Entschlüsseln.
+
+---
 
 Application Layer 7
 Beschreibung

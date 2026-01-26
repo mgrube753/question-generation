@@ -1,22 +1,16 @@
 ## Open-Ended Question
 
-### Bloom Level: Creating
-
-### Learning Objective
+### Lernziel
 
 Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
 
-### Question Generation
-
-Frage: Entwickeln Sie ein Konzept für einen Data Link Layer in einem sensorbasierten Netzwerk mit stark begrenzter Energie. Integrieren Sie dabei die fünf Kernaufgaben Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff so, dass der Energieverbrauch minimiert wird.
-
-### Answer Generation + Union of all
+### Formulierte Frage
 
 Frage: Entwickeln Sie ein Konzept für einen Data Link Layer in einem sensorbasierten Netzwerk mit stark begrenzter Energie. Integrieren Sie dabei die fünf Kernaufgaben Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff so, dass der Energieverbrauch minimiert wird.
 
 Antwort: Das Konzept priorisiert minimale Aktivitätsdauer (Duty Cycling) und niedrigen Overhead. Fehlerkontrolle: Leichte Fehlererkennung via CRC, bei Fehlern verwerfen (keine Retransmission, falls Applikation tolerierbar). Flusskontrolle: Stop-and-Wait, um Puffer zu sparen und Senderrate anzupassen. Segmentierung: Feste, kleine Rahmen (z.B. 64 Byte) mit minimalem Header, um Übertragungszeit und Fehlerwahrscheinlichkeit gering zu halten. Identifikation: Kurze, lokale Cluster-Adressen (2 Byte) statt globaler Adressen. Medienzugriff: TDMA-basiert mit vorab zugeteilten Zeitschlitzen; Knoten schlafen außerhalb ihrer Sende-/Empfangsfenster. Dies minimiert Listening, Kollisionen und Overhead, und integriert alle Aufgaben energieeffizient. (Richtig)
 
-### Source Text
+### Quelltext
 
 Data Link Layer 2
 Beschreibung
