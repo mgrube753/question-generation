@@ -72,18 +72,6 @@
 * **1 - Ungenügend:** Schwer verständlich oder unangemessen
   * Bsp.: "Im Kontext der vielschichtigen und diversen Betrachtungsweise der Aufgabenbereiche, die dem Physical Layer im Rahmen des OSI-Referenzmodells zugeschrieben werden können, erläutern Sie diese unter Berücksichtigung sämtlicher relevanter Aspekte."
 
-## Korrektheit/Correctness
-
-**Fragestellung:** Wie korrekt sind die in der Frage selbst enthaltenen Aussagen, Annahmen oder impliziten Behauptungen bezogen auf den Text?
-
-* **5 - Vollständig korrekt:** Alle Aussagen entsprechen dem Textinhalt
-  * Bsp.: "Beschreiben Sie, wie der Network Layer die Kommunikation zwischen Geräten in unterschiedlichen Netzen ermöglicht."
-* **4 - Überwiegend korrekt:** Überwiegend korrekt, minimale Ungenauigkeiten
-* **3 - Teilweise korrekt:** Erkennbare Ungenauigkeiten in der Frage
-* **2 - Größtenteils inkorrekt:** Mehrere falsche Aussagen oder Missverständnisse
-* **1 - Völlig inkorrekt:** Frage enthält grundlegend falsche Behauptungen
-  * Bsp.: "Warum ist der Physical Layer für die Verschlüsselung von Daten zuständig?"
-
 ## Bloom's Level (Stufen 1-6)
 
 **Fragestellung:** Welche kognitive Stufe der Bloom'schen Taxonomie wird durch die Frage angesprochen?
