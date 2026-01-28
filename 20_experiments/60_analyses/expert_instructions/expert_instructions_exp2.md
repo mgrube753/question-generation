@@ -24,8 +24,6 @@ In jede Frage wurde ein bestimmtes Lernziel integriert (1/6), angeknüpft an das
 
 Lesen Sie die im .docx enthaltene Rubrik durch, die folgende Kategorien umfasst (jeweils 1-5 Punkte):
 
-**Kategorien 0-10 Punkte:**
-
 - **Relevanz:** Bezug zum ISO-OSI-Modell
 - **Klarheit:** Eindeutigkeit der Formulierung
 - **Beantwortbarkeit:** Verfügbarkeit der Informationen im Text
