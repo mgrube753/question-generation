@@ -1,9 +1,11 @@
 # Todo
 
-- [ ] generate acceptable questions
-- [ ] talk to experts to understand the setup better
+- [x] generate acceptable questions
+- [ ] workshop1: talk to experts to understand the setup better
+- [ ] workshop2
 - [ ] refine eval notebook 1 quantitative
 - [ ] finish eval notebook 1 qualitative
 - [ ] finish eval notebook 2 qualitative
 
 - (Notebooks need e.g. the needed agreement/reliability measures)
+- Sampling question set hard to reproduce, since it was dependant of all directories, instead of the important one(s)

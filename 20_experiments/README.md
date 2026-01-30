@@ -1,90 +1,94 @@
 # Experiments
 
-> NOT THE RECENT STATUS OF THE CURRENT WORK, SINCE THIS WAS USED IN THE THESIS.
-
-This directory contains the experimental framework for evaluating Large Language Model capabilities in educational question generation, focusing on the two assessments of content adherence and Bloom's Taxonomy alignment.
+This directory contains the experimental framework for evaluating Large Language Model capabilities in educational question generation, focusing on content adherence assessment and Bloom's Taxonomy alignment.
 
 ## Structure Overview
 
-### Question Paths
+### Experiment Directories
 
-- **[`10_exp1/`](10_exp1/)** - Content Adherence & Error Detection
-  - [`run_a_content/`](10_exp1/run_a_content/) - Questions from original source materials
-  - [`run_b_error/`](10_exp1/run_b_error/) - Questions from manipulated source materials
-- **[`20_exp2/`](20_exp2/)** - Question Types & Bloom's Taxonomy
-  - [`run_a_type/`](20_exp2/run_a_type/) - Format-specific question generation
-  - [`run_b_bloom/`](20_exp2/run_b_bloom/) - Cognitive level-targeted questions
-  - [`run_c_both/`](20_exp2/run_c_both/) - Combined format and taxonomy specification
+- **[`10_exp1/`](10_exp1/)** - Content Adherence Experiment
+  - [`questions/`](10_exp1/questions/) - Generated questions organized by LLM and type
+  - [`sampled/`](10_exp1/sampled/) - Sampled questions for expert evaluation
+- **[`20_exp2/`](20_exp2/)** - Bloom's Taxonomy Alignment Experiment
+  - [`questions/`](20_exp2/questions/) - Generated questions targeting specific cognitive levels
+  - [`sampled/`](20_exp2/sampled/) - Sampled questions for student evaluation
 
 ### Supporting Infrastructure
 
-- **[`30_input_sources/`](30_input_sources/)** - Source materials (script, transcript, Tanenbaum excerpts)
+- **[`30_input_sources/`](30_input_sources/)** - Source materials (OSI layer descriptions)
 - **[`40_prompts/`](40_prompts/)** - Prompt templates for generation and evaluation
 - **[`50_src/`](50_src/)** - Python implementation and evaluation notebooks
-- **[`60_analyses/`](60_analyses/)** - Obtained analyses data used for evaluation purposes
-- **[`70_samples/`](70_samples/)** - Representative question samples
-- **[`80_samples_renamed/`](80_samples_renamed/)** - Processed question collections used for manual review
+- **[`60_analyses/`](60_analyses/)** - Analysis data and expert/student instructions
+- **[`70_sampled_questions/`](70_sampled_questions/)** - Renamed sample collections for blind evaluation
+- **[`80_workshop/`](80_workshop/)** - Workshop materials and notes
 
 ## Experimental Design
 
 ### Models Used
 
-- **Anthropic Claude 3.7 Sonnet**
-- **Google Gemini 2.5 Flash**
-- **OpenAI o3**
-- **DeepSeek R1**
+- **Anthropic** Claude Opus 4.5
+- **OpenAI** GPT-5.2
+- **DeepSeek** V3.2 Thinking Mode
+- **xAI** Grok-4
 
-### Source Materials (converted to TXT)
+### Source Materials
 
-- **Script**: Lecture content from the primary supervisor: "Referenzarchitekturen"
-- **Transcript**: Audio-to-text conversion of lecture content
-- **Tanenbaum**: Excerpts from "Computer Networks" textbook by Andrew S. Tanenbaum
-- **Manipulated Script**: Intentionally altered lecture content for error detection testing
-- **(Concatenated Script)**: Instead of using each layer separately, in Experiment 2, all layers were used together to generate questions; and since DeepSeek was prompted manually in this thesis, the script was used as a single file
+Both experiments use extracted text from lecture materials about the ISO-OSI reference model, stored in **[`30_input_sources/`](30_input_sources/)**:
+
+- `layer1.txt` - Physical Layer
+- `layer2.txt` - Data Link Layer
+- `layer3.txt` - Network Layer
+- `layer4.txt` - Transport Layer
+- `layer5.txt` - Session Layer
+- `layer6.txt` - Presentation Layer
+- `layer7.txt` - Application Layer
+
+The second experiment used all these layers combined into a single file, `concatenated_common.txt`.
 
 ## Implementation Framework
 
-### Prompt Engineering
+### Prompt Templates
 
-- **[`40_prompts/experiment/`](40_prompts/experiment/)** - Generation templates
-  - [`exp1_common_prompt.md`](40_prompts/experiment/exp1_common_prompt.md) - Basic question generation
-  - [`exp1_complex_prompt.md`](40_prompts/experiment/exp1_complex_prompt.md) - Advanced cognitive prompting
-  - [`exp2_type.md`](40_prompts/experiment/exp2_type.md) - Format-specific generation
-  - [`exp2_bloom.md`](40_prompts/experiment/exp2_bloom.md) - Taxonomy-aligned generation
-  - [`exp2_both.md`](40_prompts/experiment/exp2_both.md) - Combined specification
+Located in **[`40_prompts/`](40_prompts/)**:
 
-### Evaluation Prompts
+- **[`experiment/`](40_prompts/experiment/)** - Question generation prompts
+  - [`prompt_mcq_stem.md`](40_prompts/experiment/prompt_mcq_stem.md) - MCQ stem generation
+  - [`prompt_mcq_keys.md`](40_prompts/experiment/prompt_mcq_keys.md) - MCQ answer key generation
+  - [`prompt_mcq_distractors.md`](40_prompts/experiment/prompt_mcq_distractors.md) - MCQ distractor generation
+  - [`prompt_open_ended_q.md`](40_prompts/experiment/prompt_open_ended_q.md) - Open-ended question generation
+  - [`prompt_open_ended_a.md`](40_prompts/experiment/prompt_open_ended_a.md) - Open-ended answer generation
+  - [`bloom.md`](40_prompts/experiment/bloom.md) - Bloom's Taxonomy definitions
+  - [`lernziele.md`](40_prompts/experiment/lernziele.md) - Learning objectives
 
-- **[`40_prompts/evaluation/`](40_prompts/evaluation/)** - Assessment rubrics
-  - [`exp_eval.md`](40_prompts/evaluation/exp_eval.md) - Expert evaluation template
-  - [`exp1a_rubric.md`](40_prompts/evaluation/exp1a_rubric.md) - Content adherence criteria
-  - [`exp1b_rubric.md`](40_prompts/evaluation/exp1b_rubric.md) - Error detection criteria
-  - [`exp2_rubric.md`](40_prompts/evaluation/exp2_rubric.md) - Format-taxonomy assessment
+- **[`evaluation/`](40_prompts/evaluation/)** - Assessment prompts and rubrics
+  - [`exp1_adherence_eval.md`](40_prompts/evaluation/exp1_adherence_eval.md) - Adherence evaluation prompt for LLMs in first experiment
+  - [`exp1_rubric.md`](40_prompts/evaluation/exp1_rubric.md) - Categories for first experiment
+  - [`exp2_rubric.md`](40_prompts/evaluation/exp2_rubric.md) - Categories for second experiment
 
-### Fundamental Scripts
+### Core Scripts
 
-- **[`50_src/check_truncation.py`](50_src/check_truncation.py)** - Token length validation for TXT files
-  - Verifies source materials and generated questions fit within model limits for semantic similarity check
-  - Uses the model's tokenizer to ensure that the content does not exceed the maximum token length before analyzing
-  - Generates report in [`note_truncation.md`](50_src/note_truncation.md)
+Located in **[`50_src/`](50_src/)**:
 
-- **[`50_src/main.py`](50_src/main.py)** - Main execution script
-  - Initializes LLM clients (OpenAI, Anthropic, Google, DeepSeek)
-  - Executes all question generation experiments (exp1a, exp1b, exp2a, exp2b, exp2c)
-  - Coordinates the entire experimental workflow using several utility scripts
-    - **[`50_src/api_calls.py`](50_src/api_calls.py)** - LLM API interactions
-    - **[`50_src/prompt_utils.py`](50_src/prompt_utils.py)** - Prompt parsing and generation
-    - **[`50_src/question_generation.py`](50_src/question_generation.py)** - Question generation logic
+| Script | Purpose |
+|--------|---------|
+| [`main.py`](50_src/main.py) | Main execution entry point |
+| [`question_generation.py`](50_src/question_generation.py) | Question generation logic |
+| [`api_config.py`](50_src/api_config.py) | LLM client initialization |
+| [`api_calls.py`](50_src/api_calls.py) | LLM API interactions |
+| [`prompt_utils.py`](50_src/prompt_utils.py) | Prompt parsing and Bloom data handling |
+| [`file_utils.py`](50_src/file_utils.py) | File I/O utilities |
+| [`constants.py`](50_src/constants.py) | Configuration constants |
+| [`analysis_quantitative.py`](50_src/analysis_quantitative.py) | Quantitative analysis for Experiment 1 |
+| [`sampling.py`](50_src/sampling.py) | Sample selection for manual evaluation |
+| [`check_truncation.py`](50_src/check_truncation.py) | Token length validation |
 
-- **[`50_src/analysis_quantitative.py`](50_src/analysis_quantitative.py)** - Experiment 1 quantitative analysis
-  - Calculates cosine similarity between questions and source materials
-  - Generates adherence scores between questions and source materials using o3 model and Claude 3.7 Sonnet
-  - Processes experiments exp1a, exp1b, and exp1a_no_source
+### Evaluation Notebooks
 
-- **[`50_src/sampling.py`](50_src/sampling.py)** - Sample selection for manual review
-  - Randomly samples questions for expert evaluation
-  - Generates structured CSV templates for qualitative assessment
-  - Creates renamed sample collections for blind evaluation
+| Notebook | Purpose |
+|----------|---------|
+| [`evaluation1_quan.ipynb`](50_src/evaluation1_quan.ipynb) | Experiment 1 quantitative analysis |
+| [`evaluation1_qual.ipynb`](50_src/evaluation1_qual.ipynb) | Experiment 1 qualitative analysis |
+| [`evaluation2_qual.ipynb`](50_src/evaluation2_qual.ipynb) | Experiment 2 qualitative analysis |
 
 ## Bloom's Taxonomy Integration
 
@@ -101,46 +105,90 @@ The second experiment utilizes Bloom's Taxonomy, described and used via [`40_pro
 
 Each level includes specific German descriptions and action verbs for each Bloom level to construct the prompts, properly parsed via [`50_src/prompt_utils.py`](50_src/prompt_utils.py) for systematic question generation targeting specific cognitive demands + question type constraints.
 
+Moreover, learning objectives from [`40_prompts/experiment/lernziele.md`](40_prompts/experiment/lernziele.md) are integrated to guide question generation aligned with goals for each experiment.
+
 ## Usage Instructions
 
-### Basic Execution
+### Prerequisites
+
+1. Create a `.env` file in the project root with API keys:
+
+   ```sh
+   ANTHROPIC_API_KEY=your_key
+   OPENAI_API_KEY=your_key
+   DEEPSEEK_API_KEY=your_key
+   XAI_API_KEY=your_key
+   ```
+
+2. Install dependencies from root directory:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Running the Experiments
 
 All data were generated using the scripts in this directory. \
 To run the Python files and the notebooks, go to the [`50_src/`](50_src/) directory and execute the following commands:
 
 ```bash
-python check_truncation.py        # Optional: Perform first truncation check for source materials
 python main.py                    # Generate questions
-python check_truncation.py        # Re-check after generating questions to check for truncation
 python analysis_quantitative.py   # Quantitative analysis for Experiment 1
-python sampling.py                # Sample questions for manual review (experts in exp1, students in exp2)
+python sampling.py                # Sample questions for manual review
 ```
 
-This workflow will not work if the `.env` file is not set up with the necessary API keys for the LLMs. \
-The `.env` file should contain the keys for OpenAI, Anthropic, and Google, to ensure the scripts can access the LLMs for question generation and analysis.
+### Running the Evaluation Notebooks
 
-The script [`50_src/analysis_qualitative.py`](50_src/analysis_qualitative.py), which would have been LLM-based (using all questions instead of sampled ones), was not used as the qualitative analysis was performed manually by experts instead (using sample sets). This approach was used in the archived experimental run in [`../70_prior_exp_run/`](../70_prior_exp_run/) for both thesis experiments.
-
-**Particularly useful for viewers**: Whether all ratings are available, run the Jupyter notebooks:
-
-- [`50_src/evaluation1_quan.ipynb`](50_src/evaluation1_quan.ipynb) - Quantitative analysis of Experiment 1
-- [`50_src/evaluation1_qual.ipynb`](50_src/evaluation1_qual.ipynb) - Qualitative analysis of Experiment 1
-- [`50_src/evaluation2_qual.ipynb`](50_src/evaluation2_qual.ipynb) - Qualitative analysis of Experiment 2
-
-Then, the notebooks' insights are available in [`../40_evaluation/`](../40_evaluation/).
-
-### Notebook Conversion for Documentation
-
-To include the notebooks in the thesis PDF, the following command was used (at [`50_src/`](50_src/)) to convert them to Python scripts:
+Open and execute the Jupyter notebooks in [`50_src/`](50_src/):
 
 ```bash
-jupyter nbconvert --output-dir='nb_to_py' --to script evaluation*.ipynb
+jupyter notebook evaluation1_quan.ipynb  # Quantitative results
+jupyter notebook evaluation1_qual.ipynb  # Qualitative results (Exp 1)
+jupyter notebook evaluation2_qual.ipynb  # Qualitative results (Exp 2)
 ```
 
-These generated Python scripts in [`50_src/nb_to_py/`](50_src/nb_to_py/) are then included in the thesis PDF after compilation.
+Evaluation outputs are saved to [`../40_evaluation/`](../40_evaluation/).
 
-### Configuration Requirements
+<!-- ### Notebook Conversion for Documentation -->
 
-- **API Keys**: OpenAI, Anthropic, Google configured via environment variables
-- **Dependencies**: Listed in root [`requirements.txt`](../requirements.txt)
-- **DeepSeek**: Manual prompting via [web interface](https://chat.deepseek.com) (R1 model access)
+<!-- To include the notebooks in the thesis PDF, the following command was used (at [`50_src/`](50_src/)) to convert them to Python scripts: -->
+
+<!-- ```bash -->
+<!-- jupyter nbconvert --output-dir='nb_to_py' --to script evaluation*.ipynb -->
+<!-- ``` -->
+
+<!-- These generated Python scripts in [`50_src/nb_to_py/`](50_src/nb_to_py/) are then included in the thesis PDF after compilation. -->
+
+## Evaluation Data
+
+### Expert and Student Instructions
+
+Instruction files for the raters are located in [`60_analyses/expert_instructions/`](60_analyses/expert_instructions/):
+
+- [`expert_instructions_exp1.md`](60_analyses/expert_instructions/expert_instructions_exp1.md) - Guidelines for Experiment 1 experts
+- [`expert_instructions_exp2.md`](60_analyses/expert_instructions/expert_instructions_exp2.md) - Guidelines for Experiment 2 students
+
+### Analysis Data
+
+The raters' data were collected and stored in [`60_analyses/csv/`](60_analyses/csv/):
+
+- `quantitative/exp1/` - LLM-based adherence scorings
+- `qualitative/exp1/experts/` - Expert evaluation ratings
+- `qualitative/exp2/students/` - Student evaluation ratings
+
+This data was used in the evaluation notebooks for evaluation. The resulting tables and plots are saved in [`../40_evaluation/`](../40_evaluation/) as follows:
+
+```sh
+40_evaluation/
+├── exp1/
+│   ├── qualitative/
+│   │   ├── plots/
+│   │   └── tables/
+│   └── quantitative/
+│       ├── plots/
+│       └── tables/
+└── exp2/
+    └── qualitative/
+        ├── plots/
+        └── tables/
+```
