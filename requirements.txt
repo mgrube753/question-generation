@@ -8,7 +8,6 @@ pandas
 numpy
 scipy
 scikit-learn
-# sentence-transformers
 
 # Statistics
 statsmodels
@@ -24,6 +23,3 @@ ipython
 # Utilities
 tenacity
 tqdm
-
-# Development
-python-dotenv
