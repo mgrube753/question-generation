@@ -38,11 +38,13 @@
   * Bsp: "Welche Kernaufgaben hat der Presentation Layer?"
 * **4 - Gut beantwortbar:** Die meisten Infos im Text
 * **3 - Teilweise beantwortbar:** Grundinfos vorhanden
-* **2 - Schwer beantwortbar:** Wenige relevante Infos
+* **2 - Schwer beantwortbar:** Wenige Infos zur Beantwortung vorhanden
 * **1 - Nicht beantwortbar:** Benötigte Informationen fehlen
   * Bsp.: "Vergleichen Sie die Effizienz des ISO-OSI-Modells mit modernen Software-Defined-Networking-Ansätzen."
 
 ## Herausforderung/Challenging
+
+WAS MACHEN KODIERER FÜR ÜBERLEGUNGEN, EHER PASSEND FÜR ANTWORTEN FF3?
 
 **Fragestellung:** Wie viel Zeit und kognitive Anstrengung erfordert die Beantwortung der Frage aus Studierendenperspektive? (Bewerter: Cap & Rubach Team)
 
@@ -60,7 +62,7 @@
 
 **Fragestellung:** Wie zentral ist aus Dozierendenperspektive das in der Frage behandelte Fachkonzept für das angestrebte Lernziel des Moduls? (Bewerter: Beide Teams)
 
-*Hinweis: Diese Kategorie bewertet, wie gut die Frage dazu beiträgt, die Lernziele des Moduls zu erreichen.*
+*Hinweis: Diese Kategorie bewertet, wie gut die Frage dazu beiträgt, das Lernziel des Moduls zu erreichen.*
 
 * **5 - Sehr Hoch:** Behandelt Kernkonzept und zentrales Lernziel (hochrelevant)
   * Bsp.: "Erklären Sie das Zusammenspiel von Codierung, Transport und Decodierung bei der Übertragung logischer Werte auf physikalischer Ebene."
@@ -86,9 +88,11 @@
 
 ## Korrektheit/Correctness
 
-**Fragestellung:** Wie korrekt sind aus Dozierendenperspektive die in der Frage selbst enthaltenen Aussagen, Annahmen oder impliziten Behauptungen bezogen auf den Text? (Bewerter: Cap)
+EVENTUELL 2 KATEGORIEN?
 
-*Hinweis: Diese Kategorie bewertet die Antworten, nicht die Frage selbst.*
+**Fragestellung:** Wie korrekt entspricht aus Dozierendenperspektive die generierte Antwort dem Textinhalt? (Bewerter: Cap)
+
+*Hinweis: Diese Kategorie bewertet die Passung der Antwort zu Textinhalt und Frage.*
 
 * **5 - Vollständig korrekt:** Antwort entspricht vollständig dem Textinhalt
   * Bsp.: "Beschreiben Sie, wie der Network Layer die Kommunikation zwischen Geräten in unterschiedlichen Netzen ermöglicht."
