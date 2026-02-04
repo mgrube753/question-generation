@@ -1,11 +1,12 @@
 # Todo
 
-- [x] generate acceptable questions
-- [ ] workshop1: talk to experts to understand the setup better
-- [ ] workshop2
-- [ ] refine eval notebook 1 quantitative
+- [ ] workshop1: have two eye-to-eye meetings for both experiment groups to let them understand the setup better
+- [ ] workshop2 with both experiment groups (distinct meetings) with refined setup, to be well-prepared for sampled question analysis
+- [ ] csv generation setup has to be refined, based on upcoming outcomes and decisions (including different rating categories, etc.); little problematic, since it is bound to the question generation pipeline on the one hand
+- [ ] rethink about quantitative evaluation setup, really feasible from my side to handle this evaluation as well?
+- [ ] (refine eval notebook 1 quantitative)
 - [ ] finish eval notebook 1 qualitative
 - [ ] finish eval notebook 2 qualitative
 
 - (Notebooks need e.g. the needed agreement/reliability measures)
-- Sampling question set hard to reproduce, since it was dependant of all directories, instead of the important one(s)
+- *Sampling question set hard to reproduce, since it was dependant of all directories, instead of the important ones --> can be fixed afterwards, but it's afterwards*
