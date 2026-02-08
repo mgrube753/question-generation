@@ -53,9 +53,9 @@ Die Datei `exp1.csv` enthält:
 1. Öffnen Sie `exp1.csv`
 2. Für jede Zeile:
    - Öffnen Sie die entsprechende Fragendatei und lesen Sie die Frage sorgfältig
-   - Prüfen Sie den Quelltext, welcher direkt unter der Frage angegeben ist
-   - Bewerten Sie nach den 6 Kategorien der Rubrik für die Frage (1-5 Punkte)
-   - Bewerten Sie nach den 3 Kategorien der Rubrik für die Antworten (1-5 Punkte)
+   - Prüfen Sie den Quelltext (direkt unter der Frage angegeben)
+   - Bewerten Sie nach den 6 Kategorien der Rubrik für die Frage
+   - Bewerten Sie nach den 3 Kategorien der Rubrik für die Antworten
    - Notieren Sie Ihre Bewertungen entsprechend in die CSV
    - Notieren Sie gegebenenfalls problematische Antworten/Antwortoptionen in `answer_problems`, und warum diese problematisch sind
    - Ergänzen Sie bei Bedarf weitere Kommentare in `comments`

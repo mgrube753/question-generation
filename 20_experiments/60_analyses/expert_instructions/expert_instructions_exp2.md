@@ -6,13 +6,11 @@ Dieses Experiment testet die Fähigkeit von vier Large Language Models (LLMs), F
 
 **Eingabequelle:** Extrahierte Textauszüge aller 7 OSI-Layer als ein zusammengefügter Text, basierend auf einer Vorlesungs-PDF meines Professors.
 
-**Material-Aufbereitung:**
+**Material-Aufbereitung:** Zusammenfügen der Informationen aller 7 Layer zu einem Text, welcher in das vorliegende .docx Dokument integriert wurde
 
-- Zusammenfügen der Informationen aller 7 Layer zu einem Text, welcher in das vorliegende .docx Dokument integriert wurde
+**Wertigkeit der Fragen:**
 
-**Generierte Fragen:**
-
-In jede Frage wurde ein bestimmtes Lernziel integriert (1/6), angeknüpft an das jeweilige Bloom-Level. Das Einhalten des Lernziels soll mit der **Wertigkeit**-Kategorie in der Rubrik bewertet werden. Dies wurde eingebunden, da die Wertigkeit einer Frage ein wichtiger Aspekt der Fragequalität ist, jedoch nicht über eine Zahl allein abgebildet werden kann.
+In jede Frage wurde ein bestimmtes Lernziel integriert, an das jeweilige Bloom-Level geknüpft (1/6). Das Einhalten des Lernziels soll mit der **Wertigkeit**-Kategorie in der Rubrik bewertet werden. Dies wurde eingebunden, da die Wertigkeit einer Frage ein wichtiger Aspekt der Fragequalität ist, jedoch nicht über eine Zahl allein abgebildet werden kann.
 
 ## Anleitung für Experten
 
@@ -28,7 +26,7 @@ Lesen Sie die im .docx enthaltene Rubrik durch, die folgende Kategorien umfasst 
 - **Sprachqualität:** Verständlichkeit und Angemessenheit
 - **Bloom-Level:** Welches kognitive Level wird in dieser Frage erreicht?
 
-***Antwortbewertung:**
+**Antwortbewertung:**
 
 - **Klarheit:** Eindeutigkeit der Formulierung
 - **Sprachqualität:** Verständlichkeit und Angemessenheit
@@ -49,8 +47,8 @@ Jede Klein-Tabelle zu der jeweiligen Frage enthält:
 2. Verschaffen Sie sich einen Überblick über die ISO-OSI-Layer-Inhalte durch das Lesen des Textes im Dokument
 3. Für jedes Fragenkonstrukt:
    - Lesen Sie die Frage sorgfältig
-   - Bewerten Sie nach den 5 Kategorien der Rubrik für die Frage (1-5 Punkte)
-   - Bewerten Sie nach den 3 Kategorien der Rubrik für die Antworten (1-5 Punkte)
+   - Bewerten Sie nach den 5 Kategorien der Rubrik für die Frage
+   - Bewerten Sie nach den 3 Kategorien der Rubrik für die Antworten
    - Notieren Sie Ihre Bewertungen entsprechend in die Tabelle
    - Notieren Sie gegebenenfalls problematische Antworten/Antwortoptionen in `answer_problems`, und warum diese problematisch sind
    - Ergänzen Sie bei Bedarf weitere Kommentare in `comments`
