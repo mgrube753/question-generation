@@ -12,50 +12,48 @@ Dieses Experiment testet die Fähigkeit von vier Large Language Models (LLMs), F
 
 **Generierte Fragen:**
 
-In jede Frage wurde ein bestimmtes Lernziel integriert (1/6), angeknüpft an das jeweilige Bloom-Level. Das Einhalten des Lernziels soll mit der **Wertigkeit**-Kategorie in der Rubrik bewertet werden.
+In jede Frage wurde ein bestimmtes Lernziel integriert (1/6), angeknüpft an das jeweilige Bloom-Level. Das Einhalten des Lernziels soll mit der **Wertigkeit**-Kategorie in der Rubrik bewertet werden. Dies wurde eingebunden, da die Wertigkeit einer Frage ein wichtiger Aspekt der Fragequalität ist, jedoch nicht über eine Zahl allein abgebildet werden kann.
 
-- 4 LLMs × 12 Fragen = 48 Fragen gesamt
-- Pro LLM: 6 MCQ (Bloom 1-3, je 2 Fragen) + 6 Open-Ended (Bloom 1-6, je 1 Frage)
-- Sample für Bewertung: 24 Fragen (6 pro LLM: 3 MCQ + 3 Open-Ended)
-
-## Anleitung für Studierende
+## Anleitung für Experten
 
 ### Schritt 1: Bewertungskriterien verstehen
 
-Lesen Sie die im .docx enthaltene Rubrik durch, die folgende Kategorien umfasst (jeweils 1-5 Punkte):
+Lesen Sie die im .docx enthaltene Rubrik durch, die folgende Kategorien umfasst (jeweils 1-5 Punkte). Bestimmte Kategorien fokussieren sich auf die Bewertung der Fragen selbst, andere auf die Bewertung der Antworten.
 
-- **Relevanz:** Bezug zum ISO-OSI-Modell
+**Fragenbewertung:**
+
 - **Klarheit:** Eindeutigkeit der Formulierung
-- **Beantwortbarkeit:** Verfügbarkeit der Informationen im Text
 - **Herausforderung:** Anspruchsniveau der Frage
 - **Wertigkeit:** Bedeutung für vorgegebenes Lernziel
 - **Sprachqualität:** Verständlichkeit und Angemessenheit
+- **Bloom-Level:** Welches kognitive Level wird in dieser Frage erreicht?
 
-Sowie die folgende Kategorie:
+***Antwortbewertung:**
 
-**Bloom-Level-Bewertung (Punktevergabe 1-6):**
-Welches kognitive Level wird in dieser Frage erreicht? Nutzen Sie die Beschreibungen und Verben in der Rubrik zur Bestimmung des Levels.
+- **Klarheit:** Eindeutigkeit der Formulierung
+- **Sprachqualität:** Verständlichkeit und Angemessenheit
+- **Bloom-Level:** Welches kognitive Level wird durch die Antwort umgesetzt?
 
 ### Schritt 2: Tabellen-Struktur verstehen
 
 Jede Klein-Tabelle zu der jeweiligen Frage enthält:
 
-- Die 6 Bewertungsspalten aus Schritt 1 (1-5 Punkte), sowie
-- `bloom_rating`: Ihr bewertetes Bloom-Level (Level 1-6)
-- `answer_problems`: Für problematische Antworten
+- Die 5 Bewertungszeilen für die Fragenbewertung (Klarheit, Herausforderung, Wertigkeit, Sprachqualität, Bloom-Level)
+- Die 3 Bewertungszeilen für die Antwortenbewertung (Klarheit, Sprachqualität, Bloom-Level)
+- `answer_problems`: Sind gewisse Antworten problematisch? Warum?
 - `comments`: Für zusätzliche Anmerkungen
 
 ### Schritt 3: Bewertung durchführen
 
 1. Schauen Sie das Experiment-Dokument an
 2. Verschaffen Sie sich einen Überblick über die ISO-OSI-Layer-Inhalte durch das Lesen des Textes im Dokument
-3. Für jede Frage:
+3. Für jedes Fragenkonstrukt:
    - Lesen Sie die Frage sorgfältig
-   - Bewerten Sie nach den 6 Kategorien der Rubrik (1-5 Punkte)
-   - Bestimmen Sie das erreichte Bloom-Level (Level 1-6) basierend auf der Rubrik
+   - Bewerten Sie nach den 5 Kategorien der Rubrik für die Frage (1-5 Punkte)
+   - Bewerten Sie nach den 3 Kategorien der Rubrik für die Antworten (1-5 Punkte)
    - Notieren Sie Ihre Bewertungen entsprechend in die Tabelle
-   - Notieren Sie gegebenenfalls problematische Antworten/Antwortoptionen in `answer_problems`
-   - Ergänzen Sie bei Bedarf Kommentare
+   - Notieren Sie gegebenenfalls problematische Antworten/Antwortoptionen in `answer_problems`, und warum diese problematisch sind
+   - Ergänzen Sie bei Bedarf weitere Kommentare in `comments`
 
 **Bewertungsfokus:**
 
