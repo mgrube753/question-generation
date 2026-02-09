@@ -2,7 +2,7 @@
 
 ## Relevanz/Relevance
 
-**Fragestellung:** Wie gut bezieht sich die Frage aus Dozierendenperspektive auf zentrale Fachkonzepte, Themen und Fachbegriffe des bereitgestellten Textes? (Bewerter: Cap Team)
+**Fragestellung:** Wie gut bezieht sich die Frage aus Dozierendenperspektive auf zentrale Fachkonzepte, Themen und Fachbegriffe des bereitgestellten Textes?
 
 *Hinweis: Hier geht es nicht darum, ob der Inhalt korrekt abgebildet wird, sondern nur um den thematischen Bezug.*
 
@@ -16,21 +16,21 @@
 
 ## Klarheit/Clarity
 
-**Fragestellung:** Wie präzise und inhaltlich eindeutig ist die Frage aus Dozierendenperspektive formuliert? (Bewerter: Rubach & Cap)
+**Fragestellung:** Wie präzise und inhaltlich eindeutig ist die Frage aus Dozierendenperspektive formuliert? Bewerten Sie auch die inhaltliche Klarheit im Nachhinein für die Beantwortung der Frage.
 
 *Hinweis: Hier geht es um inhaltliche Verständlichkeit und Eindeutigkeit, nicht um sprachliche Formulierungen.*
 
-* **5 - Sehr klar:** Präzise formuliert, inhaltlich eindeutig, keine Mehrdeutigkeiten
+* **5 - Sehr klar:** Inhaltlich präzise und eindeutig formuliert, keine Mehrdeutigkeiten
   * Bsp.: "Nennen Sie die Kernaufgaben des Session Layer und erläutern Sie jeweils deren Funktion."
 * **4 - Klar:** Inhaltlich verständlich mit minimalen Unklarheiten
 * **3 - Mäßig klar:** Enthält einige inhaltlich unklare Formulierungen
 * **2 - Unklar:** Enthält mehrere mehrdeutige oder verwirrende inhaltliche Elemente
-* **1 - Sehr unklar:** Inhaltlich unverständlich, Intention der Frage nicht erkennbar
+* **1 - Sehr unklar:** Inhaltlich unverständlich, Fragenintention nicht erkennbar
   * Bsp.: "Inwiefern spielt die Schicht eine Rolle bei dem, was passiert, wenn Kommunikation stattfindet?"
 
 ## Beantwortbarkeit/Answerability
 
-**Fragestellung:** Hat man aus der Studierendenperspektive ausreichend Informationen im bereitgestellten Text, um die Frage vollständig zu beantworten? (Bewerter: Cap)
+**Fragestellung:** Hat man aus der Studierendenperspektive ausreichend Informationen im bereitgestellten Text, um die Frage vollständig zu beantworten?
 
 *Hinweis: Hier geht es nicht um die Schwierigkeit der Frage, sondern nur um die Verfügbarkeit der benötigten Informationen.*
 
@@ -44,25 +44,23 @@
 
 ## Herausforderung/Challenging
 
-WAS MACHEN KODIERER FÜR ÜBERLEGUNGEN, EHER PASSEND FÜR ANTWORTEN FF3?
-
-**Fragestellung:** Wie viel Zeit und kognitive Anstrengung erfordert die Beantwortung der Frage aus Studierendenperspektive? (Bewerter: Cap & Rubach Team)
+**Fragestellung:** Wie viel kognitive Anstrengung erfordert die Beantwortung der Frage aus Studierendenperspektive?
 
 *Hinweis: Nicht die Bloom-Taxonomie als Grundlage nehmen, sondern die tatsächlich benötigte kognitive Last einschätzen.*
 
-* **5 - Sehr herausfordernd:** Sehr hoher Zeitaufwand; erfordert mehrfaches Lesen des gesamten Textes und Verknüpfung vieler Informationen
+* **5 - Sehr herausfordernd:** Erfordert mehrfaches Lesen des gesamten Textes und Verknüpfung vieler Informationen
   * Bsp.: "Analysieren Sie, warum Flusssteuerung auf mehreren OSI-Schichten implementiert wird, und bewerten Sie die Notwendigkeit dieser Redundanz."
-* **4 - Herausfordernd:** Mittlerer bis hoher Zeitaufwand; erfordert Zusammenführen von Informationen aus verschiedenen Textabschnitten
-* **3 - Mäßig herausfordernd:** Moderater Zeitaufwand; erfordert Nachdenken und eigenes Formulieren, nicht nur Ablesen
-* **2 - Wenig herausfordernd:** Geringer Zeitaufwand; erfordert gezieltes Suchen und Wiedergeben einer Textstelle
-* **1 - Nicht herausfordernd:** Minimaler Zeitaufwand; Antwort kann direkt abgelesen oder mit einem Wort beantwortet werden
+* **4 - Herausfordernd:** Erfordert Zusammenführen von Informationen aus verschiedenen Textabschnitten
+* **3 - Mäßig herausfordernd:** Erfordert Nachdenken und eigenes Formulieren, nicht nur Ablesen
+* **2 - Wenig herausfordernd:** Erfordert gezieltes Suchen und Wiedergeben einer Textstelle
+* **1 - Nicht herausfordernd:** Antwort kann direkt abgelesen oder mit einem Wort beantwortet werden
   * Bsp.: "Wie viele Kernaufgaben hat der Physical Layer?"
 
 ## Wertigkeit/Value bzgl. Lernzielintegration
 
-**Fragestellung:** Wie zentral ist aus Dozierendenperspektive das in der Frage behandelte Fachkonzept für das angestrebte Lernziel des Moduls? (Bewerter: Beide Teams)
+**Fragestellung:** Wie zentral ist das in der Frage behandelte Fachkonzept für das angestrebte Lernziel des Moduls? Nehmen Sie bei der Bewertung die Perspektive der Dozierenden ein.
 
-*Hinweis: Diese Kategorie bewertet, wie gut die Frage dazu beiträgt, das Lernziel des Moduls zu erreichen.*
+*Hinweis: Diese Kategorie bewertet, wie gut die Frage dazu beiträgt, das beschriebene Lernziel des Moduls zu erreichen.*
 
 * **5 - Sehr Hoch:** Behandelt Kernkonzept und zentrales Lernziel (hochrelevant)
   * Bsp.: "Erklären Sie das Zusammenspiel von Codierung, Transport und Decodierung bei der Übertragung logischer Werte auf physikalischer Ebene."
@@ -74,7 +72,7 @@ WAS MACHEN KODIERER FÜR ÜBERLEGUNGEN, EHER PASSEND FÜR ANTWORTEN FF3?
 
 ## Sprachqualität/Language
 
-**Fragestellung:** Wie angemessen ist aus Dozierendenperspektive die sprachliche Formulierung hinsichtlich Grammatik und Verständlichkeit? (Bewerter: Cap & Rubach)
+**Fragestellung:** Wie angemessen ist aus Dozierendenperspektive die sprachliche Formulierung hinsichtlich Grammatik und Verständlichkeit? Bewerten Sie auch die sprachliche Präzision im Nachhinein für die Beantwortung der Frage.
 
 *Hinweis: Hier geht es ausschließlich um die sprachliche Form und Präzision, nicht um den Inhalt.*
 
@@ -84,13 +82,11 @@ WAS MACHEN KODIERER FÜR ÜBERLEGUNGEN, EHER PASSEND FÜR ANTWORTEN FF3?
 * **3 - Befriedigend:** Umständlich oder unpräzise
 * **2 - Mangelhaft:** Schwerfällig, weitschweifig oder unnötig komplex
 * **1 - Ungenügend:** Gar nicht verständlich
-  * Bsp.: "Im Kontext der vielschichtigen und diversen Betrachtungsweise der Aufgabenbereiche, die dem Physical Layer im Rahmen des OSI-Referenzmodells zugeschrieben werden können, erläutern Sie diese unter Berücksichtigung sämtlicher relevanter Aspekte."
+  * Bsp.: "Im Kontext der vielschichtigen und diversen Betrachtungsweise der Aufgabenbereiche, die dem Physical Layer im Rahmen des OSI-Referenzmodells zugeschrieben werden können, erläutern Sie diese unter Berücksichtigung relevanter Aspekte."
 
 ## Korrektheit/Correctness
 
-EVENTUELL 2 KATEGORIEN?
-
-**Fragestellung:** Wie korrekt entspricht aus Dozierendenperspektive die generierte Antwort dem Textinhalt? (Bewerter: Cap)
+**Fragestellung:** Wie korrekt ist die generierte Antwort auf Basis des Textinhalts? Nehmen Sie bei der Bewertung die Perspektive der Dozierenden ein.
 
 *Hinweis: Diese Kategorie bewertet die Passung der Antwort zu Textinhalt und Frage.*
 

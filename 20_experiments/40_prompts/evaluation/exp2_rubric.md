@@ -1,68 +1,38 @@
 # Bewertungsrubrik für LLM-generierte Fragen
 
-## Relevanz/Relevance
-
-**Fragestellung:** Wie gut bezieht sich die Frage aus Dozierendenperspektive auf zentrale Fachkonzepte, Themen und Fachbegriffe des bereitgestellten Textes? (Bewerter: Cap Team)
-
-*Hinweis: Hier geht es nicht darum, ob der Inhalt korrekt abgebildet wird, sondern nur um den thematischen Bezug.*
-
-* **5 - Überaus relevant:** Bezieht sich auf zentrale Themen und korrekte Fachbegriffe
-  * Bsp.: "Welche Kernaufgaben erfüllt der Data Link Layer und worin unterscheiden sich diese hinsichtlich ihrer Zielsetzung?"
-* **4 - Relevant:** Bezieht sich auf wichtige Fachkonzepte des Textes
-* **3 - Mäßig relevant:** Behandelt eher nebensächliche Aspekte oder Randthemen des Textes
-* **2 - Weniger relevant:** Nur oberflächlicher Bezug zu Fachkonzepten
-* **1 - Nicht relevant:** Kein Bezug zu den im Text behandelten Fachkonzepten
-  * Bsp.: "Welche Programmiersprache wird am häufigsten für die Implementierung von Netzwerkprotokollen verwendet?"
-
 ## Klarheit/Clarity
 
-**Fragestellung:** Wie präzise und inhaltlich eindeutig ist die Frage aus Dozierendenperspektive formuliert? (Bewerter: Rubach & Cap)
+**Fragestellung:** Wie präzise und inhaltlich eindeutig ist die Frage aus Dozierendenperspektive formuliert? Bewerten Sie auch die inhaltliche Klarheit im Nachhinein für die Beantwortung der Frage.
 
 *Hinweis: Hier geht es um inhaltliche Verständlichkeit und Eindeutigkeit, nicht um sprachliche Formulierungen.*
 
-* **5 - Sehr klar:** Präzise formuliert, inhaltlich eindeutig, keine Mehrdeutigkeiten
+* **5 - Sehr klar:** Inhaltlich präzise und eindeutig formuliert, keine Mehrdeutigkeiten
   * Bsp.: "Nennen Sie die Kernaufgaben des Session Layer und erläutern Sie jeweils deren Funktion."
 * **4 - Klar:** Inhaltlich verständlich mit minimalen Unklarheiten
 * **3 - Mäßig klar:** Enthält einige inhaltlich unklare Formulierungen
 * **2 - Unklar:** Enthält mehrere mehrdeutige oder verwirrende inhaltliche Elemente
-* **1 - Sehr unklar:** Inhaltlich unverständlich, Intention der Frage nicht erkennbar
+* **1 - Sehr unklar:** Inhaltlich unverständlich, Fragenintention nicht erkennbar
   * Bsp.: "Inwiefern spielt die Schicht eine Rolle bei dem, was passiert, wenn Kommunikation stattfindet?"
-
-## Beantwortbarkeit/Answerability
-
-**Fragestellung:** Hat man aus der Studierendenperspektive ausreichend Informationen im bereitgestellten Text, um die Frage vollständig zu beantworten? (Bewerter: Cap)
-
-*Hinweis: Hier geht es nicht um die Schwierigkeit der Frage, sondern nur um die Verfügbarkeit der benötigten Informationen.*
-
-* **5 - Vollständig beantwortbar:** Alle Infos explizit im Text verfügbar
-  * Bsp: "Welche Kernaufgaben hat der Presentation Layer?"
-* **4 - Gut beantwortbar:** Die meisten Infos im Text
-* **3 - Teilweise beantwortbar:** Grundinfos vorhanden
-* **2 - Schwer beantwortbar:** Wenige Infos zur Beantwortung vorhanden
-* **1 - Nicht beantwortbar:** Benötigte Informationen fehlen
-  * Bsp.: "Vergleichen Sie die Effizienz des ISO-OSI-Modells mit modernen Software-Defined-Networking-Ansätzen."
 
 ## Herausforderung/Challenging
 
-WAS MACHEN KODIERER FÜR ÜBERLEGUNGEN, EHER PASSEND FÜR ANTWORTEN FF3?
-
-**Fragestellung:** Wie viel Zeit und kognitive Anstrengung erfordert die Beantwortung der Frage aus Studierendenperspektive? (Bewerter: Cap & Rubach Team)
+**Fragestellung:** Wie viel kognitive Anstrengung erfordert die Beantwortung der Frage aus Studierendenperspektive?
 
 *Hinweis: Nicht die Bloom-Taxonomie als Grundlage nehmen, sondern die tatsächlich benötigte kognitive Last einschätzen.*
 
-* **5 - Sehr herausfordernd:** Sehr hoher Zeitaufwand; erfordert mehrfaches Lesen des gesamten Textes und Verknüpfung vieler Informationen
+* **5 - Sehr herausfordernd:** Erfordert mehrfaches Lesen des gesamten Textes und Verknüpfung vieler Informationen
   * Bsp.: "Analysieren Sie, warum Flusssteuerung auf mehreren OSI-Schichten implementiert wird, und bewerten Sie die Notwendigkeit dieser Redundanz."
-* **4 - Herausfordernd:** Mittlerer bis hoher Zeitaufwand; erfordert Zusammenführen von Informationen aus verschiedenen Textabschnitten
-* **3 - Mäßig herausfordernd:** Moderater Zeitaufwand; erfordert Nachdenken und eigenes Formulieren, nicht nur Ablesen
-* **2 - Wenig herausfordernd:** Geringer Zeitaufwand; erfordert gezieltes Suchen und Wiedergeben einer Textstelle
-* **1 - Nicht herausfordernd:** Minimaler Zeitaufwand; Antwort kann direkt abgelesen oder mit einem Wort beantwortet werden
+* **4 - Herausfordernd:** Erfordert Zusammenführen von Informationen aus verschiedenen Textabschnitten
+* **3 - Mäßig herausfordernd:** Erfordert Nachdenken und eigenes Formulieren, nicht nur Ablesen
+* **2 - Wenig herausfordernd:** Erfordert gezieltes Suchen und Wiedergeben einer Textstelle
+* **1 - Nicht herausfordernd:** Antwort kann direkt abgelesen oder mit einem Wort beantwortet werden
   * Bsp.: "Wie viele Kernaufgaben hat der Physical Layer?"
 
 ## Wertigkeit/Value bzgl. Lernzielintegration
 
-**Fragestellung:** Wie zentral ist aus Dozierendenperspektive das in der Frage behandelte Fachkonzept für das angestrebte Lernziel des Moduls? (Bewerter: Beide Teams)
+**Fragestellung:** Wie zentral ist das in der Frage behandelte Fachkonzept für das angestrebte Lernziel des Moduls? Nehmen Sie bei der Bewertung die Perspektive der Dozierenden ein.
 
-*Hinweis: Diese Kategorie bewertet, wie gut die Frage dazu beiträgt, das Lernziel des Moduls zu erreichen.*
+*Hinweis: Diese Kategorie bewertet, wie gut die Frage dazu beiträgt, das beschriebene Lernziel des Moduls zu erreichen.*
 
 * **5 - Sehr Hoch:** Behandelt Kernkonzept und zentrales Lernziel (hochrelevant)
   * Bsp.: "Erklären Sie das Zusammenspiel von Codierung, Transport und Decodierung bei der Übertragung logischer Werte auf physikalischer Ebene."
@@ -74,7 +44,7 @@ WAS MACHEN KODIERER FÜR ÜBERLEGUNGEN, EHER PASSEND FÜR ANTWORTEN FF3?
 
 ## Sprachqualität/Language
 
-**Fragestellung:** Wie angemessen ist aus Dozierendenperspektive die sprachliche Formulierung hinsichtlich Grammatik und Verständlichkeit? (Bewerter: Cap & Rubach)
+**Fragestellung:** Wie angemessen ist aus Dozierendenperspektive die sprachliche Formulierung hinsichtlich Grammatik und Verständlichkeit? Bewerten Sie auch die sprachliche Präzision im Nachhinein für die Beantwortung der Frage.
 
 *Hinweis: Hier geht es ausschließlich um die sprachliche Form und Präzision, nicht um den Inhalt.*
 
@@ -84,13 +54,13 @@ WAS MACHEN KODIERER FÜR ÜBERLEGUNGEN, EHER PASSEND FÜR ANTWORTEN FF3?
 * **3 - Befriedigend:** Umständlich oder unpräzise
 * **2 - Mangelhaft:** Schwerfällig, weitschweifig oder unnötig komplex
 * **1 - Ungenügend:** Gar nicht verständlich
-  * Bsp.: "Im Kontext der vielschichtigen und diversen Betrachtungsweise der Aufgabenbereiche, die dem Physical Layer im Rahmen des OSI-Referenzmodells zugeschrieben werden können, erläutern Sie diese unter Berücksichtigung sämtlicher relevanter Aspekte."
+  * Bsp.: "Im Kontext der vielschichtigen und diversen Betrachtungsweise der Aufgabenbereiche, die dem Physical Layer im Rahmen des OSI-Referenzmodells zugeschrieben werden können, erläutern Sie diese unter Berücksichtigung relevanter Aspekte."
 
 ## Bloom's Level (Stufen 1-6)
 
-**Fragestellung:** Welche kognitive Stufe der Bloom'schen Taxonomie wird aus Dozierendenperspektive durch die Frage angesprochen? (Bewerter: Cap? & Rubach)
+**Fragestellung:** Welche kognitive Stufe der Bloom'schen Taxonomie wird aus Dozierendenperspektive durch die Frage angesprochen? Bewerten Sie auch das Level im Nachhinein für die Beantwortung der Frage.
 
-*Hinweis: Die Bloom-Taxonomie klassifiziert kognitive Fähigkeiten in sechs Stufen, von einfachen Erinnerungsaufgaben bis hin zu komplexem, erschaffendem Denken.*
+*Hinweis: Es kann eine Diskrepanz zwischen dem Bloom-Level der Frage und dem der Antwort vorliegen. Deswegen müssen beide Bestandteile bewertet werden.*
 
 1. **Remembering:** Abruf relevanten Wissens aus dem Langzeitgedächtnis, indem der Schwerpunkt auf dem Erkennen und Erinnern von Fakten liegt.
    * Verben: Definieren, beschreiben, aufzählen, identifizieren, auflisten, zuordnen, benennen, skizzieren, zitieren, auswählen
@@ -104,5 +74,3 @@ WAS MACHEN KODIERER FÜR ÜBERLEGUNGEN, EHER PASSEND FÜR ANTWORTEN FF3?
    * Verben: Bewerten, schlussfolgern, kritisieren, verteidigen, bewerten, benoten, interpretieren, beurteilen, begründen, überprüfen
 6. **Creating:** Zusammenfügen oder Neuorganisieren von Elementen zu einem zusammenhängenden Ganzen.
    * Verben: Zusammenstellen, codieren, kompilieren, konstruieren, erstellen, entwerfen, entwickeln, erweitern, verbessern, reorganisieren
-
-''Letzteres hat Gesprächsbedarf, da in Docx-Notiz als Kategorie für Bloom drin steht: "Passung Antwort zu Bloom", und "Bewerter:innen: Rubach & Cap"...
