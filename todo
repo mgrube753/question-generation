@@ -3,6 +3,8 @@
 - [x] workshop1: have two eye-to-eye meetings for both experiment groups to let them understand the setup better
 - [ ] workshop2: refine docx files and print them for the second workshop
 - [ ] workshop2 with both experiment groups (distinct meetings) with refined setup, to be well-prepared for sampled question analysis
+- [ ] enhance learning objectives for at least experiment 2 (let's see what both workshops in phase2 bring up), so it is achievable with the desired question type/bloom level/ONE single question (currently, the learning objectives might be too big for one question, and hard to measure with the current design)
+- [ ] think about bloom rating --> 5 points while being perfectly aligned with desired bloom level, 2.5 if one-off, 0 otherwise. but what to do with bloom in the answer? is rated separately. suppose the alignment of the question is off, so how to rate the answer? could be dependant of the question bloom RATING, e.g. if bloom was 3, rater said 1 for the question, and answer is also rated 1, the answer bloom rating still could be 5/5, maybe
 
 ---
 
