@@ -16,7 +16,7 @@ In jede Frage wurde ein bestimmtes Lernziel integriert, an das jeweilige Bloom-L
 
 ### Schritt 1: Bewertungskriterien verstehen
 
-Lesen Sie die im .docx enthaltene Rubrik durch, die folgende Kategorien umfasst (jeweils 1-5 Punkte). Bestimmte Kategorien fokussieren sich auf die Bewertung der Fragen selbst, andere auf die Bewertung der Antworten.
+Lesen Sie die im .docx enthaltene Rubrik durch, die folgende Kategorien umfasst (jeweils 1-5 Punkte). Bestimmte Kategorien fokussieren sich auf die Bewertung der Fragen selbst, andere auf die Bewertung der Antworten. Beide Bestandteile sollen unmittelbar nach dem Lesen des jeweiligen Frage- / Antwort-Texts bewertet werden.
 
 **Fragenbewertung:**
 
@@ -34,7 +34,7 @@ Lesen Sie die im .docx enthaltene Rubrik durch, die folgende Kategorien umfasst 
 
 ### Schritt 2: Tabellen-Struktur verstehen
 
-Jede Klein-Tabelle zu der jeweiligen Frage enthält:
+Jede Klein-Tabelle unter der jeweiligen Frage enthält:
 
 - Die 5 Bewertungszeilen für die Fragenbewertung (Klarheit, Herausforderung, Wertigkeit, Sprachqualität, Bloom-Level)
 - Die 3 Bewertungszeilen für die Antwortenbewertung (Klarheit, Sprachqualität, Bloom-Level)
@@ -44,12 +44,13 @@ Jede Klein-Tabelle zu der jeweiligen Frage enthält:
 ### Schritt 3: Bewertung durchführen
 
 1. Schauen Sie das Experiment-Dokument an
-2. Verschaffen Sie sich einen Überblick über die ISO-OSI-Layer-Inhalte durch das Lesen des Textes im Dokument
+2. Verschaffen Sie sich einen Überblick über die ISO-OSI-Layer-Inhalte durch das Lesen des Textes im Dokument, auf den sich die Fragen beziehen
 3. Für jedes Fragenkonstrukt:
-   - Lesen Sie die Frage sorgfältig
-   - Bewerten Sie nach den 5 Kategorien der Rubrik für die Frage
-   - Bewerten Sie nach den 3 Kategorien der Rubrik für die Antworten
-   - Notieren Sie Ihre Bewertungen entsprechend in die Tabelle
+   - Schauen Sie sich das Lernziel für die jeweilige Frage an
+   - Lesen Sie die Frage sorgfältig. Lassen Sie dabei die Antwort noch außer Acht
+   - Bewerten Sie nach den 5 Kategorien der Rubrik für die Frage und notieren Sie Ihre Bewertungen in die Tabelle
+   - Lesen Sie nun die Antwort(en) zur Frage sorgfältig durch
+   - Bewerten Sie nach den 3 Kategorien der Rubrik für die Antworten und notieren Sie Ihre Bewertungen in die Tabelle
    - Notieren Sie gegebenenfalls problematische Antworten/Antwortoptionen in `answer_problems`, und warum diese problematisch sind
    - Ergänzen Sie bei Bedarf weitere Kommentare in `comments`
 

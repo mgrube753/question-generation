@@ -19,7 +19,7 @@ In jede Frage wurde ein bestimmtes Lernziel integriert, basierend auf dem jeweil
 
 ### Schritt 1: Bewertungskriterien verstehen
 
-Lesen Sie die Rubrik `exp1_rubric.md`, die folgende Kategorien umfasst (jeweils 1-5 Punkte). Bestimmte Kategorien fokussieren sich auf die Bewertung der Fragen selbst, andere auf die Bewertung der Antworten.
+Lesen Sie die Rubrik `exp1_rubric.md`, die folgende Kategorien umfasst (jeweils 1-5 Punkte). Bestimmte Kategorien fokussieren sich auf die Bewertung der Fragen selbst, andere auf die Bewertung der Antworten. Beide Bestandteile sollen unmittelbar nach dem Lesen des jeweiligen Frage- / Antwort-Texts bewertet werden.
 
 **Fragenbewertung:**
 
@@ -52,11 +52,12 @@ Die Datei `exp1.csv` enthält:
 
 1. Öffnen Sie `exp1.csv`
 2. Für jede Zeile:
-   - Öffnen Sie die entsprechende Fragendatei und lesen Sie die Frage sorgfältig
-   - Prüfen Sie den Quelltext (direkt unter der Frage angegeben)
-   - Bewerten Sie nach den 6 Kategorien der Rubrik für die Frage
-   - Bewerten Sie nach den 3 Kategorien der Rubrik für die Antworten
-   - Notieren Sie Ihre Bewertungen entsprechend in die CSV
+   - Öffnen Sie die entsprechende Fragendatei und schauen Sie sich das Lernziel für diese Frage an
+   - Lesen Sie die Frage sorgfältig. Lassen Sie dabei die Antwort noch außer Acht
+   - Prüfen Sie den Quelltext am unteren Ende der Datei
+   - Bewerten Sie nach den 6 Kategorien der Rubrik für die Frage und notieren Sie Ihre Bewertungen in die CSV
+   - Lesen Sie nun die Antwort(en) zur Frage sorgfältig durch
+   - Bewerten Sie nach den 3 Kategorien der Rubrik für die Antwort(en) und notieren Sie Ihre Bewertungen in die CSV
    - Notieren Sie gegebenenfalls problematische Antworten/Antwortoptionen in `answer_problems`, und warum diese problematisch sind
    - Ergänzen Sie bei Bedarf weitere Kommentare in `comments`
 
