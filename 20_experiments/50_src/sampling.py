@@ -374,47 +374,50 @@ def create_evaluation_csv(
             index=False,
         )
 
-    print(
-        f"       {exp_label.capitalize()} {evaluator_prefix.upper()} CSVs created ({n_evaluators} evaluators)"
-    )
+    print(f"       {exp_label.capitalize()} CSVs created ({n_evaluators} evaluators)")
 
 
 def generate_expert_evaluation_csvs():
     print("\n[INFO] Generating expert evaluation CSV templates...")
 
-    # Exp1: 5 experts
+    # Exp1: 3 experts for used content
     create_evaluation_csv(
         os.path.join(constants.ANALYSES_PATH, "csv", "sampled", "exp1_sampled.csv"),
         [
-            "relevance",
-            "clarity",
-            "answerability",
-            "challenging",
-            "value",
-            "language",
-            "correctness",
+            "q_relevance",
+            "q_clarity",
+            "q_answerability",
+            "q_challenging",
+            "q_value",
+            "q_language",
+            "a_clarity",
+            "a_language",
+            "a_correctness",
+            "answer_problems",
             "comments",
         ],
-        5,
+        3,
         "e",
         "exp1",
     )
 
-    # Exp2: 3 students
+    # Exp2: 3 experts for pedagogical aspects
     create_evaluation_csv(
         os.path.join(constants.ANALYSES_PATH, "csv", "sampled", "exp2_sampled.csv"),
         [
-            "relevance",
-            "clarity",
-            "answerability",
-            "challenging",
-            "value",
-            "language",
-            "bloom_rating",
+            "q_clarity",
+            "q_challenging",
+            "q_value",
+            "q_language",
+            "q_bloom_rating",
+            "a_clarity",
+            "a_language",
+            "a_bloom_rating",
+            "answer_problems",
             "comments",
         ],
         3,
-        "s",
+        "e",
         "exp2",
     )
 
