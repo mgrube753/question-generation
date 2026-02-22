@@ -16,7 +16,7 @@ In jede Frage wurde ein bestimmtes Lernziel integriert, an das jeweilige Bloom-L
 
 ### Schritt 1: Bewertungskriterien verstehen
 
-Lesen Sie die im .docx enthaltene Rubrik durch, die folgende Kategorien umfasst (jeweils 1-5 Punkte). Bestimmte Kategorien fokussieren sich auf die Bewertung der Fragen selbst, andere auf die Bewertung der Antworten. Beide Bestandteile sollen unmittelbar nach dem Lesen des jeweiligen Frage- / Antwort-Texts bewertet werden.
+Lesen Sie die im .docx enthaltene Rubrik durch, die folgende Kategorien umfasst (jeweils 1-5 Punkte). Bestimmte Kategorien fokussieren sich auf die Bewertung der Fragen selbst, andere auf die Bewertung der Antworten. Beide Bestandteile sollen unmittelbar nach dem Lesen des jeweiligen Teils bewertet werden.
 
 **Fragenbewertung:**
 
