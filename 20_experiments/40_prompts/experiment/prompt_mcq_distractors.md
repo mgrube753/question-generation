@@ -34,7 +34,7 @@ Das Lernziel, das mit dieser Frage geprüft werden soll, ist: {learning_objectiv
 
 **Output Format:** Die Ausgabe muss wie folgt formatiert sein:
 
-Frage: {stem}
+{stem}
 
 Antwortmöglichkeiten:
 

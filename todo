@@ -21,4 +21,4 @@
 
 ---
 
-- [ ] *Sampling question set hard to reproduce, since it was dependant of all directories, instead of the important ones --> can be fixed afterwards, but it's afterwards*
+- [x] *Sampling question set hard to reproduce, since it was dependant of all directories, instead of the important ones --> can be fixed afterwards, but it's afterwards*

@@ -42,7 +42,7 @@ def collect_exp1_questions():
             if not os.path.exists(type_dir):
                 continue
 
-            for filename in os.listdir(type_dir):
+            for filename in sorted(os.listdir(type_dir)):
                 if not filename.endswith(".txt") or not filename.startswith("bloom"):
                     continue
 
@@ -136,12 +136,12 @@ def sample_bloom_files(src_dir, dest_dir, bloom_levels, llm_name, q_type):
     if not os.path.exists(src_dir):
         return []
 
-    files = [f for f in os.listdir(src_dir) if f.endswith(".txt")]
+    files = sorted([f for f in os.listdir(src_dir) if f.endswith(".txt")])
     csv_rows = []
 
     for bloom_level in bloom_levels:
         bloom_idx = constants.BLOOM_LEVELS_ORDERED.index(bloom_level) + 1
-        level_files = [f for f in files if f.startswith(f"bloom{bloom_idx}_")]
+        level_files = sorted([f for f in files if f.startswith(f"bloom{bloom_idx}_")])
 
         if level_files:
             selected = random.choice(level_files)
@@ -304,11 +304,13 @@ def rename_and_copy_exp2(df, renamed_base):
         src_dir = os.path.join(sample_path, row["llm"], row["question_type"])
 
         if os.path.exists(src_dir):
-            matching_files = [
-                f
-                for f in os.listdir(src_dir)
-                if f.startswith(f"bloom{row['bloom_idx']}_") and f.endswith(".txt")
-            ]
+            matching_files = sorted(
+                [
+                    f
+                    for f in os.listdir(src_dir)
+                    if f.startswith(f"bloom{row['bloom_idx']}_") and f.endswith(".txt")
+                ]
+            )
             if matching_files:
                 src_file = os.path.join(src_dir, matching_files[0])
                 # Read and filter content
