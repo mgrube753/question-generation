@@ -1,4 +1,6 @@
-# Notizen
+# Workshop1 für Experiment 2, 20.02.2026 mit Anne-Kathrin Hirsch
+
+## Annotationen zu Frage 1
 
 - es gibt das Problem mit "Frage: Frage" bei frage1 (MCQ)
 - das entsteht dadurch, weil ich im `prompt_mcq_distractors.md` die Frage mit `{stem}` einfüge im Output Format
@@ -15,6 +17,9 @@
   - kein gendern integriert, nur aufgefallen
   - eine frage sollte auf einem verb enden oder in der MCQ z.b. mit dem "zuständig". sie ist etwas wirr formuliert in Bausteinreihenfolge.
   - es war fraglich, ob die Distraktoren kompletter Unfug sind, oder ob diese in sich korrekt sind, nur nicht für die Frage explizit. Ist bei der frage auch der fall gewesen, dass sie korrekt waren. sonst hätte man eben ausschließen können "die funktion gibt es bei dem layer nicht, muss falsch sein"
+
+## Annotationen zu Frage 2
+
 - annotationen zu frage2:
   - lernziel auch nicht optimal formuliert. im MCQ lernziel hieß es "kernaufgaben" und hier ist es "konzepte"; nicht alle schichten werden explizit gefordert in Frage; zwei verschiedene bloom-levels im lernziel (anwenden3 und zuordnen1) --> modell hat sich für ein bloom3 verb (nutzen) entschieden, aber letztendlich level1 nur erreicht
     - bloom-based lernziele (experiment2) sind zu groß für die eine frage formuliert. zumal lernziele 1-3 momentan nicht unbedingt mit MCQ gedeckt werden können
@@ -29,7 +34,7 @@
   - a ist gut, b: wlan-gerät "entscheidet"? prüfen und regeln wäre besser. gewisse tasks sind weniger akademisch formuliert als andere
   - es gibt je nach ereignis auch etwas in klammern in frage, oder gar ein "z.b.", auch nicht konsistent über die elemente in der frage hinweg
 
----
+## Bewertung von Frage 1
 
 - frage1:
   - q_clarity: inhaltlich war sie im Grunde eindeutig, 5
@@ -41,6 +46,8 @@
   - a_language: möglichkeiten sind sprachlich passend formuliert; die falschen haben noch "über ..."; 5
   - a_bloom: 1, liegt keine Diskrepanz zwischen Frage und Antwort vor
   
+## Bewertung von Frage 2
+
 - frage2:
   - q_clarity: keine 5, aber eine 4
   - q_challenging: nicht alle schichten sind drin, etwas fiese umsetzung, 2

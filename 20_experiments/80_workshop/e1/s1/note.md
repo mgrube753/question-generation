@@ -1,14 +1,19 @@
-# Note
+# Workshop1 für Experiment 1, 20.02.2026 mit Thomas Mundt
+
+## Annotationen zu Frage 1
+
+- frage 1: man ist auf begrifflichkeiten in der frage aus, die man eigentlich nicht mal verstehen muss. am besten schließt der ab, der sich dumm stellt, und die begriffe sucht. gilt als form von kritik, aber irgendwie muss man ja auch fragen erstellen.
+
+## Annotationen zu Frage 2
 
 - es sollte noch klargestellt werden, dass man zuerst Frage lesen, dann bewerten soll, dann Antwort lesen, dann bewerten soll. ist bei frage 2 erkennbar geworden
-- frage 1: man ist auf begrifflichkeiten in der frage aus, die man eigentlich nicht mal verstehen muss. am besten schließt der ab, der sich dumm stellt, und die begriffe sucht. gilt als form von kritik, aber irgendwie muss man ja auch fragen erstellen.
 - lernziel bei frage 2 (open-ended) passte nicht so optimal zur frage; die frage forderte nur eine kernaufgabe des data link layers. das lernziel fordert aber das beherrschen aller data link kernaufgaben. und in der antwort wurden dann die anderen auch in Vergleich gesetzt... Die frage selbst hat dabei das Lernziel aber nicht ganz erreicht. WICHTIG: bei der beantwortung war dem llm das lernziel mit allen kernaufgaben nicht bekannt. auf das betrachten aller in der antwort käme man nicht drauf.
   - frage 2 ist eine gesinnungsfrage (durch "größten Beitrag"), da beurteilung hier etwas offen steht. Hängt von individuellen kritierien ab ("welches ist die beste programmiersprache")
   - es scheint, als wäre der fokus der frage eher die "begründung" als die "beurteilung". wird eigentlich nur die kompetenz "begründung" gefordert, nicht wissenskompetenz sozusagen.
-  - EIGENE NOTIZ: in der antwort werden die 4 anderen kernaufgaben abgewogen gegenüber der Fehlerkontrolle. anhand der fragestellung ist das nicht ganz klar. interessant, dass im antwortschritt die anderen kernaufgaben mit einbezogen werden. was ist gemeint mit "anhand der jeweiligen funktionen"? das könnte man auf "funktionen der aufgabe mit dem größten beitrag" beziehen, oder auf "funktionen = die 4 anderen kernaufgaben". eine unklare formulierung, die somit GGF. das lernziel verfehlen.
+  - EIGENE NOTIZ: in der antwort werden die 4 anderen kernaufgaben abgewogen gegenüber der Fehlerkontrolle. anhand der fragestellung ist das nicht ganz klar. interessant, dass im antwortschritt die anderen 4 kernaufgaben mit einbezogen werden. was ist gemeint mit "anhand der jeweiligen funktionen"? das könnte man auf "funktionen der aufgabe mit dem größten beitrag" beziehen, oder auf "funktionen = die 4 anderen kernaufgaben". eine unklare formulierung, die somit GGF. das lernziel verfehlen.
   - begriff "verbindung" passt dabei nicht optimal. im bereich der netzwerke andere bedeutung --> ist einfach kommunikationskanal
 
----
+## Bewertung von Frage 1
 
 - frage 1:
   - q_relevance: eher eine 3
@@ -21,7 +26,7 @@
   - a_language: die sprache ist eindeutig für muttersprachler. haben keine 6-fachen verneinungen, oder ähnliches drin: 5
   - a_correctness: basierend auf dem text ist antwort soweit korrekt. nach kurzer sprechpause gibt es "doch" eine 5.
 
-  ---
+## Bewertung von Frage 2
 
 - frage 2:
   - q_relevance: 3 ohne große begründung; ist etwas verwirrend das Fragesetup
