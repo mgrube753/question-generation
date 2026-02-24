@@ -15,26 +15,34 @@
 
 ## Bewertung von Frage 1
 
-- frage 1:
-  - q_relevance: eher eine 3
-  - q_clarity: keine sechsfache verneinung drin, genau nach 2 gefragt, inhaltlich klar: 5
-  - q_answerability: man ist gezwungen als student, auswendigzulernen. so ist diese basierend auf dem text leicht beantwortbar: 5. wenn man auswendig gelernt hat, und weiß, wie die frage zu verstehen ist und dass man sich mit dem fachkonzept auskennt
-  - q_challenging: schon mäßig bis viel, ist keine ja-nein frage, man zielt auf richtig oder falsch ab. man muss frageninhalt mit dem, was auswendig gelernt wurde, in bezug setzen. fordert nicht sonderbar viel intelligenz, aber fordert viel auswendiggelerntes. so wäre es für eine MCQ eine 4. karteikartenlerner haben vorteile bei solch einer frage.
-  - q_value: auf das lernziel bezogen, schafft es diese frage nur auf eine 3, mäßiger fokus auf lernziel.
-  - q_language: vernünftige sprache, 5
-  - a_clarity: antwort ist an vielerlei aufschmückende adjektive gebunden. ist von inhaltlicher klarheit her eine 4, noch nicht ganz perfekt. für die antwort wäre es am besten zu sagen "ja / nein". WICHTIG: habe als Viewer noch drauf hingewiesen, dass man etwas vorsichtiger zwischen Klarheit und Sprache trennen sollte.
-  - a_language: die sprache ist eindeutig für muttersprachler. haben keine 6-fachen verneinungen, oder ähnliches drin: 5
-  - a_correctness: basierend auf dem text ist antwort soweit korrekt. nach kurzer sprechpause gibt es "doch" eine 5.
+### Fragebewertung 1
+
+- `q_relevance`: eher eine 3
+- `q_clarity`: keine sechsfache verneinung drin, genau nach 2 gefragt, inhaltlich klar: 5
+- `q_answerability`: man ist gezwungen als student, auswendigzulernen. so ist diese basierend auf dem text leicht beantwortbar: 5. wenn man auswendig gelernt hat, und weiß, wie die frage zu verstehen ist und dass man sich mit dem fachkonzept auskennt
+- `q_challenging`: schon mäßig bis viel, ist keine ja-nein frage, man zielt auf richtig oder falsch ab. man muss frageninhalt mit dem, was auswendig gelernt wurde, in bezug setzen. fordert nicht sonderbar viel intelligenz, aber fordert viel auswendiggelerntes. so wäre es für eine MCQ eine 4. karteikartenlerner haben vorteile bei solch einer frage.
+- `q_value`: auf das lernziel bezogen, schafft es diese frage nur auf eine 3, mäßiger fokus auf lernziel.
+- `q_language`: vernünftige sprache, 5
+
+### Antwortbewertung 1
+
+- `a_clarity`: antwort ist an vielerlei aufschmückende adjektive gebunden. ist von inhaltlicher klarheit her eine 4, noch nicht ganz perfekt. für die antwort wäre es am besten zu sagen "ja / nein". WICHTIG: habe als Viewer noch drauf hingewiesen, dass man etwas vorsichtiger zwischen Klarheit und Sprache trennen sollte.
+- `a_language`: die sprache ist eindeutig für muttersprachler. haben keine 6-fachen verneinungen, oder ähnliches drin: 5
+- `a_correctness`: basierend auf dem text ist antwort soweit korrekt. nach kurzer sprechpause gibt es "doch" eine 5.
 
 ## Bewertung von Frage 2
 
-- frage 2:
-  - q_relevance: 3 ohne große begründung; ist etwas verwirrend das Fragesetup
-  - q_clarity: 3, da "beurteilen sie welche", "begründen sie" problematik. fordert viel an "rumeiern", um eine sinnvolle angabe zu machen. man hätte halt theoretisch geantwortet "fehlerkontrolle, weil". hätte man dafür volle punkte bekommen?
-  - q_answerability: 3, da man bei der frage solch eine komplexe antwort nicht gegeben hätte. WICHTIG: hier ist das frage-antwort-problem aufgetreten. antwort gibt abhängiges ergebnis zur frage
-  - q_challenging: 5, man muss das kauderwelsch der frage erstmal verstehen
-  - q_value: 2, man ist (gegebenenfalls) mit der frage stark abgedriftet vom lernziel. es wird ein konzept erfragt. die anderen muss man höchstens nennen und dann vielleicht wissen, was sie nicht tun. anhand der frage ist es nicht eindeutig geklärt, dass man darauf kommen soll.
-  - q_language: mehr in teilsätzen lieber formuliert / in kleinere leichtere teilkomponenten runtergebrochen. für deutsch-abiturienten trotzdem verständlich, 4.
-  - a_clarity: da kam die kritik für die unklare bearbeitungsreihenfolge von frage und antwort. muss klarer in der anleitung formuliert werden. es kommt eine 3 raus, was durch unklare Harmonie von Lernziel, Frage und Antwort zustande kommt.
-  - a_language: ist eine 4, Antwort ist relativ guter Fließtext
-  - a_correctness: korrekt ist die antwort, aber "Verbindung" ist ein schwieriger Begriff. 5, knapp an der Grenze. Verbindung hat andere Bedeutung in dem Kontext
+### Fragebewertung 2
+
+- `q_relevance`: 3 ohne große begründung; ist etwas verwirrend das Fragesetup
+- `q_clarity`: 3, da "beurteilen sie welche", "begründen sie" problematik. fordert viel an "rumeiern", um eine sinnvolle angabe zu machen. man hätte halt theoretisch geantwortet "fehlerkontrolle, weil". hätte man dafür volle punkte bekommen?
+- `q_answerability`: 3, da man bei der frage solch eine komplexe antwort nicht gegeben hätte. WICHTIG: hier ist das frage-antwort-problem aufgetreten. antwort gibt abhängiges ergebnis zur frage
+- `q_challenging`: 5, man muss das kauderwelsch der frage erstmal verstehen
+- `q_value`: 2, man ist (gegebenenfalls) mit der frage stark abgedriftet vom lernziel. es wird ein konzept erfragt. die anderen muss man höchstens nennen und dann vielleicht wissen, was sie nicht tun. anhand der frage ist es nicht eindeutig geklärt, dass man darauf kommen soll.
+- `q_language`: mehr in teilsätzen lieber formuliert / in kleinere leichtere teilkomponenten runtergebrochen. für deutsch-abiturienten trotzdem verständlich, 4.
+  
+### Antwortbewertung 2
+
+- `a_clarity`: da kam die kritik für die unklare bearbeitungsreihenfolge von frage und antwort. muss klarer in der anleitung formuliert werden. es kommt eine 3 raus, was durch unklare Harmonie von Lernziel, Frage und Antwort zustande kommt.
+- `a_language`: ist eine 4, Antwort ist relativ guter Fließtext
+- `a_correctness`: korrekt ist die antwort, aber "Verbindung" ist ein schwieriger Begriff. 5, knapp an der Grenze. Verbindung hat andere Bedeutung in dem Kontext
