@@ -15,7 +15,7 @@
 
 ## Annotationen zu Frage 2
 
-- bei der offenen frage ist laut Thomas der aufwand für die beantwortung nicht abschätzbar. sie ist zu interpretierbar. so eine art von frage "enwtickeln sie ein konzept für..." würden die teilnehmenden **nicht** in einer klausur so stellen. daher bei thomas sowohl in klarheit als auch beantwortbarkeit eine 1. er findet, dass die art der gesuchten antwort unklar ist
+- bei der offenen frage ist laut Thomas der aufwand für die beantwortung nicht abschätzbar. sie ist zu interpretierbar. so eine art von frage "enwtickeln sie ein konzept für..." würden die teilnehmenden **nicht** in einer klausur so stellen. daher bei thomas sowohl in klarheit als auch beantwortbarkeit eine **1**. er findet, dass die art der gesuchten antwort unklar ist
 - die frage ist relativ gleich bewertet unterhalb der teilnehmenden
 - hohen zuspruch gibt es zumeist für lernzieleinhaltung (value: 5, 5, **4** "frage passt zwar gut, ist aber evtl. übertrieben" laut Frank)
 - beantwortbarkeit ist laut Frank eine 2, da keine Details zu Energie/Energiesparen im quelltext vorliegen
@@ -51,8 +51,8 @@
 | Kategorie        | Thomas | Marvin | Frank |
 | ---------------- | ------ | ------ | ----- |
 | `q_relevance`    | 5      | 5      | 5     |
-| `q_clarity`      | 1      | 4      | 4     |
-| `q_anwerability` | 1      | 2      | **2** |
+| `q_clarity`      | **1**  | 4      | 4     |
+| `q_anwerability` | **1**  | 2      | **2** |
 | `q_challenging`  | 5      | 5      | 5     |
 | `q_value`        | 5      | 5      | **4** |
 | `q_language`     | 3      | 5      | 5     |
