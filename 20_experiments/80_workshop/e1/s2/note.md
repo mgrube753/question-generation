@@ -2,26 +2,29 @@
 
 ## Annotationen zu Frage 1
 
-- die mcq stellt letztendlich eine ganz einfache aufgabe dar, die stur dem quelltext folgt
-- die rater sind sicht uneinig bzw. gar einig, dass die kurze skript-beschreibung von Prof. Cap etwas zu kurz ist, um die frage sinnvoll zu stellen. laut skript haben wir für den network layer 3 als dritte kernaufgabe "flußsteuerung". es heißt "strategien, wenn zu schnell gesendet wird". es folgt "end-to-end" und "node-to-node". sind das wirklich die strategien? es klingt nach wegen, um bestimmte strategien anzuwenden. längere source texte aber zu verwenden ist schlichtweg nicht möglich, da es zu viel information ist, die die Rater dann zu verarbeiten haben.
-  - heißt laut Marvin: "inhaltlich fragwürdig, aber passend zum quelltext"
+- die MCQ stellt letztendlich eine ganz einfache Aufgabe dar, die stur dem Quelltext folgt
+- Rater sind sicht uneinig bzw. gar einig, dass die kurze Skript-Beschreibung von Prof. Cap etwas zu kurz ist, um die Frage sinnvoll zu stellen
+  - laut skript haben wir für den Network Layer 3 als dritte Kernaufgabe "Flußsteuerung"
+  - es heißt "Strategien, wenn zu schnell gesendet wird"... es folgt "End-to-End" und "Node-to-Node"
+  - sind das wirklich die "Strategien"? klingt nach Wegen, um bestimmte Strategien anzuwenden
+  - längere Source Texts zu verwenden ist schlichtweg nicht möglich, da zu viel information, die die Rater dann zu verarbeiten haben
+  - heißt laut Marvin: "inhaltlich fragwürdig, aber passend zum Quelltext"
   - laut Frank: "unsicher über eigentlichen Sinn des Ausgangstextes"
-- insgesamt deckt die mcq das lernziel nicht so gut ab (value: 3, **5**, **2** "kein verständnis über konzepte nötig" laut Frank), da sie zu flach ist.
-- quelltext wurde solide eingebaut und frage und antwort (relevanz: alle 4, beantwortbar: alle 5)
-- sie ist nur sehr leicht (challenging: 3, 1, **1** "einfach nur benennung" laut Frank)
-- sprache und klarheit sind soweit passend (alles 5)
-- marvin hatte bei value erst eine 5 geschrieben. per kommentar aber eine tiefere bewertung als sinnvoller empfunden, da value sich am lernziel orientiert, und dieses nicht so gut abgedeckt wird mit der mcq.
-- es gibt hier auch die problematik, dass gewisse fragen schlichtweg die jetzigen lernziele nicht erfüllen können, da diese groß gefasst sind, und der quelltext pro layer kurz erscheint.
+- insgesamt deckt die MCQ das Lernziel nicht so gut ab (value: 3, **5** (Marvin verstand Value im Nachhinein besser), **2** "kein verständnis über konzepte nötig" laut Frank), da sie zu flach ist
+- Quelltext wurde solide eingebaut; hohe Einigkeit bei Bewertung, s. Relevanz, Klarheit, Beantwortbarkeit, Sprache, Korrektheit
+- Frage sehr leicht (Challenging: 3, 1, **1** "einfach nur benennung" laut Frank)
+- Marvin hatte bei Value erst 5... per Kommentar aber tiefere Bewertung als sinnvoller empfunden, da Value sich am Lernziel orientiert, und dieses nicht so gut abgedeckt wird mit der MCQ
+- gibt auch Problematik, dass gewisse Fragen schlichtweg die jetzigen Lernziele nicht erfüllen können, da diese groß gefasst... Quelltext pro Layer recht kurz
 
 ## Annotationen zu Frage 2
 
-- bei der offenen frage ist laut Thomas der aufwand für die beantwortung nicht abschätzbar. sie ist zu interpretierbar. so eine art von frage "enwtickeln sie ein konzept für..." würden die teilnehmenden **nicht** in einer klausur so stellen. daher bei thomas sowohl in klarheit als auch beantwortbarkeit eine **1**. er findet, dass die art der gesuchten antwort unklar ist
-- die frage ist relativ gleich bewertet unterhalb der teilnehmenden
-- hohen zuspruch gibt es zumeist für lernzieleinhaltung (value: 5, 5, **4** "frage passt zwar gut, ist aber evtl. übertrieben" laut Frank)
-- beantwortbarkeit ist laut Frank eine 2, da keine Details zu Energie/Energiesparen im quelltext vorliegen
-- die frage ist letztendlich schwer zu beantworten
-- es wird angezweifelt, ob die antwort zur frage so wirklich funktionieren würde (so  Frank, der bei correctness nur 4 gab). Marvin meint, es kann richtig sein, aber nicht aus dem Quelltext hervorgehend (gab jedoch eine 5)
-- es sollte vor oder zum senden der sampled questions noch eine feedback-mail an die teilnehmenden geben, welche darlegt, was beim bewerten nochmals wichtig ist (e.g. antwort-correctness bzgl. der frage und dem quelltext beachten; value bzgl. lernziel beachten)
+- bei der offenen Frage laut Thomas "Aufwand für die Beantwortung nicht abschätzbar"... ist zu interpretierbar --> so eine Art von Frage "enwtickeln sie ein konzept für..." würden die Teilnehmenden **nicht** in Klausur so stellen... daher bei Thomas in Klarheit & Beantwortbarkeit eine **1**... er findet, dass Art der gesuchten Antwort unklar ist
+- Frage ist relativ gleich bewertet innerhalb der Teilnehmenden
+- hohen Zuspruch gibt es zumeist für Lernzieleinhaltung (Value: 5, 5, **4** "Frage passt zwar gut, ist aber evtl. übertrieben" laut Frank)
+- Beantwortbarkeit laut Frank eine 2, da keine Details zu Energie/Energiesparen im Quelltext vorliegen
+- Frage letztendlich schwer zu beantworten
+- wird angezweifelt, ob die Antwort zur Frage so wirklich funktionieren würde (so Frank, der bei Correctness nur 4 gab). Marvin meint, es kann richtig sein, aber nicht aus dem Quelltext hervorgehend (gab jedoch eine 5)
+- es sollte vor oder zum Senden der Sampled Questions noch eine Feedback-Mail an die Teilnehmenden geben, welche darlegt, was beim Bewerten nochmals wichtig ist (e.g. Antwort-Correctness bzgl. **Frage & Quelltext** beachten; Value bzgl. Lernziel beachten)
 
 ## Bewertung von Frage 1
 
