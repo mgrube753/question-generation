@@ -1,4 +1,4 @@
-# Workshop2 für Experiment 1, 23.02.2026 mit IuK
+# Workshop2 für Experiment 1, 23.02.2026 mit IuK-Team
 
 ## Annotationen zu Frage 1
 
