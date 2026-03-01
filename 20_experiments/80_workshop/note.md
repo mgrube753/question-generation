@@ -1,33 +1,97 @@
-## Description
+# Workshop-Ergebnisse: Strukturierte Analyse
 
-These questions have to be disjunct from those in the sampled question sets used in the main experiments 1 and 2.
+## Kritisches
 
-For both workshop stages of the two experiments each, we will take a look at 2 questions: one Multiple Choice and one Open-Ended. This results in 8 questions in total.
+### 1. Lernziele zu groß & nicht messbar
 
-The first stage will focus on an one-to-one session with one volunteer for each experiment. The second stage will focus on a group session with the whole team for each experiment.
+`e2/s1/note.md`, `e1/s1/note.md`
 
-## Questions
+- Lernziele können nicht mit **einer einzelnen Frage** abgedeckt werden, da ich GROBziele statt Feinziele formuliert habe
+- Lernziele enthalten ggf. mehrere Bloom-Level gleichzeitig (z.B. "anwenden" UND "zuordnen")
+- **Lösung:** Lernziele müssen **spezifischer, messbarer und auf ein Bloom-Level fokussiert** sein
 
-### Experiment 1
+### 2. Bewertungsreihenfolge unklar
 
-#### Workshop Stage 1 (~ 1 hour)
+`e1/s1/note.md`, `e1/s2/note.md`
 
-1. 20_experiments/10_exp1/questions/anthropic/mcq/bloom2_layer5.txt
-2. 20_experiments/10_exp1/questions/anthropic/open_ended/bloom5_layer2.txt
+- Rater wussten nicht, dass Frage und Antwort **nacheinander** bewertet werden sollen --> Abhängigkeitsprobleme teils entstanden
+- **Lösung:** Klare Anleitung... Erst Frage lesen → Frage bewerten → Dann Antwort lesen → Antwort bewerten... zudem Feedback-Email vor dem Sampling mit klaren Instruktionen
 
-#### Workshop Stage 2 (~ 2 hours)
+## Methodische Probleme
 
-1. 20_experiments/10_exp1/questions/deepseek/mcq/bloom1_layer3.txt
-2. 20_experiments/10_exp1/questions/deepseek/open_ended/bloom6_layer2.txt
+### 3. Bloom-Beschreibungen inkonsistent
 
-### Experiment 2
+`e2/s2/note.md`
 
-#### Workshop Stage 1 (~ 1 hour) II
+- Krathwohl-Beschreibungen passen nicht zu Verben und Leveln
+- Bloom-Levels bauen somit nicht linear aufeinander auf, sondern "verlaufen durcheinander"
+- **Lösung:** Rubrik-Beschreibungen überarbeiten siehe Bloom 1956
 
-1. 20_experiments/20_exp2/questions/openai/mcq/bloom2_q2.txt
-2. 20_experiments/20_exp2/questions/openai/open_ended/bloom3_q1.txt
+### 4. "Challenging"-Kategorie problematisch
 
-#### Workshop Stage 2 (~ 2 hours) II
+`e2/s2/note.md`
 
-1. 20_experiments/20_exp2/questions/xai/mcq/bloom3_q2.txt
-2. 20_experiments/20_exp2/questions/xai/open_ended/bloom2_q1.txt
+- Punkt-Vergabe 4 ("Erfordert Zusammenführen aus verschiedenen Textabschnitten") passt nicht
+- Linearität zwischen Stufen 3 und 4 gebrochen
+- Sollte heißen: "Erfordert Zusammenführen von **Wissen**"
+- Man kann auch stattdessen nur Punkte 3 und 4 tauschen
+
+### 5. "Value"-Kategorie prolematisch
+
+`e1/s2/note.md`, `e2/s1/note.md`
+
+- Rater bewerteten teils Value unterschiedlich (z.B. 2, 3, 5 für dieselbe Frage)
+- Problem: Value bezieht sich auf **Lernziel**, aber diese selbst sind problematisch
+- Nach Diskussion besseres Verständnis (innerhalb diverser Kategorien), aber initiale Bewertungen variierten ggf. stark
+- Vor allem MCQ decken Lernziele oft zu oberflächlich ab
+  - Man bräuchte für die jetzigen LOs mehrere aufbauende Fragen
+  - Die Grobziele passen für eine einzelne Frage oft nicht
+
+---
+
+## Generierungsprobleme
+
+### 6. "Frage: Frage" Output
+
+`e2/s1/note.md`
+
+- Entstand durch `Frage: {stem}` im Prompt-Template
+- Häufig bei OpenAI und xAI, 1x bei DeepSeek
+- **Fix:** Nur `{stem}` im Output Format angeben
+
+### 7. Distraktoren bei MCQs inkonsistent
+
+**Quelle:** `e2/s1/note.md`
+
+- Richtige Antworten sind oft **kürzer** als falsche, statt andersherum / oder gleich
+- Reihenfolge der Antwortmöglichkeiten nicht nach Layer-Logik sortiert (z.B. "2 3 5 4" statt "2 3 4 5")
+
+### 8. Sprachliche Schwächen
+
+`e2/s2/note.md`, `e1/s1/note.md`
+
+- "Beziehungen" zwischen Schichten als schwacher Begriff
+- Komplexe Sätze sollten in Teilsätze aufgebrochen werden
+- Teilweise "Kauderwelsch" in Frageformulierungen, was analysiert werden muss
+
+---
+
+## Positives
+
+### 9. Hohe Einigkeit
+
+`e1/s2/note.md`
+
+- **Relevanz, Klarheit, Beantwortbarkeit, Sprache, Korrektheit** mit hoher Übereinstimmung
+- Beispiel Frage 1: 4/4 bei Relevance, 5/5 bei Clarity/Answerability/Language
+- Beispiel Antwort 1: Alle geben 5/5 für Clarity, Language, Correctness
+
+### 10. Workshop-Diskussionen für besseres Verständnis
+
+`e1/s2/note.md`, `e2/s2/note.md`
+
+- Nach den 1:1-Gesprächen gab es diverse Outcomes
+- Nach den Gruppengesprächen ebenso
+- Konnten durch Diskussionen die Bewertungen teilweise konvergieren
+- e.g. Marvin verstand Value im Nachhinein besser → initiale 3 zu 5
+- Workshops erfüllten Schulungszweck, sodass Rater das Setup danach besser verstanden haben
