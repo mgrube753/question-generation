@@ -2,7 +2,7 @@
 
 ## Kritisches
 
-### 1. Lernziele zu groß & nicht messbar
+### 1. Lernziele zu groß / nicht messbar
 
 `e2/s1/note.md`, `e1/s1/note.md`
 
@@ -61,7 +61,7 @@
 
 ### 7. Distraktoren bei MCQs inkonsistent
 
-**Quelle:** `e2/s1/note.md`
+`e2/s1/note.md`
 
 - Richtige Antworten sind oft **kürzer** als falsche, statt andersherum / oder gleich
 - Reihenfolge der Antwortmöglichkeiten nicht nach Layer-Logik sortiert (z.B. "2 3 5 4" statt "2 3 4 5")

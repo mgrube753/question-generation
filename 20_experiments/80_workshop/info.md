@@ -31,3 +31,7 @@ The first stage will focus on an one-to-one session with one volunteer for each 
 
 1. 20_experiments/20_exp2/questions/xai/mcq/bloom3_q2.txt
 2. 20_experiments/20_exp2/questions/xai/open_ended/bloom2_q1.txt
+
+## Base Files
+
+Based on [rubric04-02-26_CR.docx](rubrik04-02-26_CR.docx) and [workshop1-1_CR.docx](workshop1-1_CR.docx), the workshop files in the sub-directories were finally created.

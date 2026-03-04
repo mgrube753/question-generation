@@ -50,8 +50,8 @@
 
 * **5 - Sehr herausfordernd:** Erfordert mehrfaches Lesen des gesamten Textes und Verknüpfung vieler Informationen
   * Bsp.: "Analysieren Sie, warum Flusssteuerung auf mehreren OSI-Schichten implementiert wird, und bewerten Sie die Notwendigkeit dieser Redundanz."
-* **4 - Herausfordernd:** Erfordert Zusammenführen von Informationen aus verschiedenen Textabschnitten
-* **3 - Mäßig herausfordernd:** Erfordert Nachdenken und eigenes Formulieren, nicht nur Ablesen
+* **4 - Herausfordernd:** Erfordert Nachdenken und eigenes Formulieren, nicht nur Ablesen
+* **3 - Mäßig herausfordernd:** Erfordert Zusammenführen von Informationen aus verschiedenen Textabschnitten
 * **2 - Wenig herausfordernd:** Erfordert gezieltes Suchen und Wiedergeben einer Textstelle
 * **1 - Nicht herausfordernd:** Antwort kann direkt abgelesen oder mit einem Wort beantwortet werden
   * Bsp.: "Wie viele Kernaufgaben hat der Physical Layer?"
@@ -60,7 +60,7 @@
 
 **Fragestellung:** Wie zentral ist das in der Frage behandelte Fachkonzept für das angestrebte Lernziel des Moduls? Nehmen Sie bei der Bewertung die Perspektive der Dozierenden ein.
 
-*Hinweis: Diese Kategorie bewertet, wie gut die Frage dazu beiträgt, das beschriebene Lernziel des Moduls zu erreichen.*
+*Hinweis: Diese Kategorie bewertet, wie gut die Frage dazu beiträgt, das beschriebene Lernziel des Moduls zu erreichen. Es wird nicht beabsichtigt, dass die Frage das komplette Lernziel abdeckt, sondern ein passendes Beispiel für das Lernziel sein soll.*
 
 * **5 - Sehr Hoch:** Behandelt Kernkonzept und zentrales Lernziel (hochrelevant)
   * Bsp.: "Erklären Sie das Zusammenspiel von Codierung, Transport und Decodierung bei der Übertragung logischer Werte auf physikalischer Ebene."
