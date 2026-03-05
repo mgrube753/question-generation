@@ -34,4 +34,8 @@ The first stage will focus on an one-to-one session with one volunteer for each 
 
 ## Base Files
 
-Based on [rubric04-02-26_CR.docx](rubrik04-02-26_CR.docx) and [workshop1-1_CR.docx](workshop1-1_CR.docx), the workshop files in the sub-directories were finally created.
+Based on [rubric04-02-26_CR.docx](initial/rubrik04-02-26_CR.docx) and [workshop1-1_CR.docx](initial/workshop1-1_CR.docx) in [initial](initial/), the workshop files in the sub-directories were finally created.
+
+## Final Adjustments
+
+Diverse changes are made to finally obtain the final sampled question files for the rater experts, as illustrated as diffs in [afterwards/](afterwards/).

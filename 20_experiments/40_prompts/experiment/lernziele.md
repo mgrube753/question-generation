@@ -48,7 +48,7 @@ Die Studierenden können die Unterschiede zwischen verwandten Konzepten auf vers
 
 ### Bloom 5
 
-Die Studierenden können die Eignung einer ISO-OSI-Schichtfunktion für ein gegebenes Anforderungsszenario beurteilen und ihr Urteil begründen
+Die Studierenden können die Eignung einer ISO-OSI-Schichtfunktion für ein gegebenes Anforderungsszenario begründet beurteilen
 
 ### Bloom 6
 
