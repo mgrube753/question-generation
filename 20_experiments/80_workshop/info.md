@@ -38,4 +38,4 @@ Based on [rubric04-02-26_CR.docx](initial/rubrik04-02-26_CR.docx) and [workshop1
 
 ## Final Adjustments
 
-Diverse changes are made to finally obtain the final sampled question files for the rater experts, as illustrated as diffs in [afterwards/](afterwards/).
+Diverse changes are made to finally obtain the final sampled question files for the rater experts, as illustrated as diffs in [afterwards/](afterwards/). Changes done after the meeting were additionally shown in [afterwards/changes_on_top.md](afterwards/changes_on_top.md).

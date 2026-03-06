@@ -1,11 +1,11 @@
 ## Descriptions
 
-- Remembering: Erinnern von Spezifischem und Universellem, von Methoden und Prozessen, eines Musters, einer Struktur oder eines Kontextes.
-- Understanding: Verstehen oder erfassen, was vermittelt wird, sowie das vermittelte Material oder die Idee nutzen können, ohne es notwendig mit anderem Material zu verbinden.
-- Applying: Verwenden von Abstraktionen (allgemeine Ideen, Regeln oder Methoden) in konkreten Situationen, wobei auch technische Ideen und Prinzpien gemerkt und angewendet werden können.
-- Analyzing: Zerlegung von Material in seine Bestandteile, sodass relative Hierarchie oder Beziehungen zwischen den Bestandteilen klar werden.
-- Evaluating: Beurteilung von Material und Methoden anhand selbst festgelegter oder vorgegebener Kriterien bzgl. Qualität und Zweckerfüllung.
-- Creating: Zusammenfügen von Elementen und Teilen zu einem Ganzen, sodass ein Muster oder eine Struktur entsteht, die vorher nicht deutlich erkennbar war.
+- Remembering: Abgespeicherte Inhalte aus dem Gedächtnis abrufen. Die Lernenden geben dabei wieder, was sie vorher gelernt haben.
+- Understanding: Aus vorliegenden Materialien direkt ablesbare Inhalte wiedergeben können. Das Verständnis zeigt sich darin, dass die Lernenden das Gelernte auch in einem Kontext präsent haben, der sich vom Kontext unterscheidet, in dem gelernt worden ist.
+- Applying: Ein gegebenes Problem auf eine vorgegebene Art lösen. Die Lernenden wenden etwas Gelerntes in einer neuen Situation an, die bisher nicht vorgekommen ist.
+- Analyzing: Die Beziehung von Teilen zueinander und zu einer übergeordneten Struktur erläutern können. Die Lernenden zerlegen dabei Modelle, Verfahren oder anderes in deren Bestandteile und müssen in komplexen Sachverhalten die Aufbauprinzipien oder inneren Strukturen entdecken.
+- Evaluating: Auf Basis von selbstgewählten Kriterien ein begründetes Urteil treffen. Die Lernenden beurteilen ein Modell, eine Lösung, einen Ansatz, ein Verfahren oder etwas Ähnliches insgesamt in Hinsicht auf dessen Zweckmässigkeit oder innere Struktur.
+- Creating: Inhalte für einen selbst neu weiterentwickeln. Die Lernenden zeigen eine konstruktive Leistung, bei der sie verschiedene Teile zusammenfügen müssen, die sie noch nicht zusammen erlebt oder gesehen haben.
 
 ## Verbs
 
