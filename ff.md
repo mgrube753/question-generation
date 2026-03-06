@@ -1,3 +1,3 @@
 FF1: How effectively can LLMs be constrained to generate questions based on instructional materials?
-FF2: To what extent does the restriction to a certain question format influence LLMs in achieving a desired cognitive level?
-FF3: ... TODO
+FF2: Does the restriction to a question format influence achieving the cognitive level in generating questions?
+FF3: Do the answers of the LLM fit the generated questions?

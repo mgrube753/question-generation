@@ -32,7 +32,7 @@ Die Studierenden verstehen die anwendungsspezifische Definition von Grundkonzept
 
 ### Bloom 1
 
-Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge auflisten und jeder Schicht ihre Hauptfunktion zuordnen
+Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge auflisten und zu jeder Schicht ihre Hauptfunktion beschreiben
 
 ### Bloom 2
 
@@ -44,7 +44,7 @@ Die Studierenden können das ISO-OSI-Modell anwenden, um für einen gegebenen Ko
 
 ### Bloom 4
 
-Die Studierenden können die Unterschiede zwischen verwandten Konzepten auf verschiedenen ISO-OSI-Schichten differenzieren
+Die Studierenden können die Gemeinsamkeiten und Unterschiede zwischen verwandten Konzepten auf verschiedenen ISO-OSI-Schichten gegenüberstellen
 
 ### Bloom 5
 
