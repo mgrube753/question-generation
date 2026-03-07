@@ -4,29 +4,29 @@
 
 ### Learning Objective
 
-Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
+Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge auflisten und zu jeder Schicht ihre Hauptfunktion beschreiben
 
 ### Question Generation
 
-Frage: Nennen Sie die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge und geben Sie für jede Schicht die jeweilige Hauptfunktion wieder.
+Frage: Listen Sie die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge auf und beschreiben Sie zu jeder Schicht ihre Hauptfunktion.
 
 ### Answer Generation + Union of all
 
-Frage: Nennen Sie die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge und geben Sie für jede Schicht die jeweilige Hauptfunktion wieder.
+Frage: Listen Sie die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge auf und beschreiben Sie zu jeder Schicht ihre Hauptfunktion.
 
-Antwort: 1. Physical Layer: Bereitstellung einer physikalischen Konzeption für Codierung, Transport und Decodierung logischer Werte.
+Antwort: 1. Physical Layer: Bereitstellung einer physikalischen Konzeption für Codierung, Transport und Decodierung logischer Werte (z.B. NRZ, Manchester; Medien wie Kabel oder Funk).
 
-2. Data Link Layer: Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer.
+2. Data Link Layer: Bereitstellung einer fehlergesicherten Übertragung über möglicherweise fehlerhaften Physical Layer (Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation, Medienzugriff).
 
-3. Network Layer: Bereitstellung einer Übertragung zwischen Geräten in unterschiedlichen Netzwerken (möglicherweise verschiedener Layer-2-Technologien).
+3. Network Layer: Bereitstellung einer Übertragung zwischen Geräten in unterschiedlichen Netzwerken (Adressierung, Routing, Flusssteuerung end-to-end oder node-to-node).
 
-4. Transport Layer: Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+4. Transport Layer: Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern (Adressierung, Flusssteuerung, Dienstqualität mit QoS-Garantien wie Bandbreite, Latenz).
 
-5. Session Layer: Bereitstellung der Funktionen für das Sitzungskonzept einer Kommunikationsbeziehung.
+5. Session Layer: Bereitstellung von Funktionen für das Sitzungskonzept (Aufbau/Verwaltung/Beendigung von Sitzungen, Synchronisation, Bündelung von Transaktionen).
 
-6. Presentation Layer: Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+6. Presentation Layer: Kodierung der Anwendungsdaten als Bitstrom (Endian-Ness-Konvertierung, Zeichenkonvertierung, Kompression, Verschlüsselung).
 
-7. Application Layer: Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten. (Richtig)
+7. Application Layer: Festlegung von Elementen für spezifische Anwendungen (Grundkonzepte, Protokollelemente, Verhalten; anwendungsabhängig). (Richtig)
 
 ### Source Text
 

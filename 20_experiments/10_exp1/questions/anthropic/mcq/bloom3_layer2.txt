@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+Die Studierenden verstehen die Verfahren zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
 
 ### Stem Generation
 
-Frage: Ein Sender überträgt im Data Link Layer Daten schneller, als der Empfänger diese verarbeiten kann. Welche Strategien der Flusskontrolle können Sie anwenden, um diese Situation zu lösen?
+Frage: Ein schneller Sender überträgt kontinuierlich Daten an einen langsamen Empfänger, wobei zusätzlich Bitfehler während der Übertragung auftreten. Ermitteln Sie, welche zwei Kernaufgaben des Data Link Layers in diesem Szenario anzuwenden sind.
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Zwischenpuffern der empfangenen Daten, bis der Empfänger diese verarbeiten kann (Richtig)
-b) Den Sender warten lassen beziehungsweise die Sendegeschwindigkeit herunterregeln (Richtig)
+a) Flusskontrolle, da der Sender schneller sendet als der Empfänger verarbeiten kann und Strategien wie Zwischenpuffern oder Herunterregeln erforderlich sind (Richtig)
+b) Fehlerkontrolle, da Bitfehler während der Übertragung auftreten und diese erkannt, behoben oder signalisiert werden müssen (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ein Sender überträgt im Data Link Layer Daten schneller, als der Empfänger diese verarbeiten kann. Welche Strategien der Flusskontrolle können Sie anwenden, um diese Situation zu lösen?
+Frage: Ein schneller Sender überträgt kontinuierlich Daten an einen langsamen Empfänger, wobei zusätzlich Bitfehler während der Übertragung auftreten. Ermitteln Sie, welche zwei Kernaufgaben des Data Link Layers in diesem Szenario anzuwenden sind.
 
 Antwortmöglichkeiten:
 
-a) Den Sender warten lassen beziehungsweise die Sendegeschwindigkeit herunterregeln (Richtig)
-b) Die Datenpakete in kleinere Segmente aufteilen, um die Übertragungsrate zu reduzieren (Falsch)
-c) Erneutes Senden der Datenpakete durch den Sender veranlassen, um dem Empfänger zusätzliche Verarbeitungszeit zu geben (Falsch)
-d) Zwischenpuffern der empfangenen Daten, bis der Empfänger diese verarbeiten kann (Richtig)
+a) Fehlerkontrolle, da Bitfehler während der Übertragung auftreten und diese erkannt, behoben oder signalisiert werden müssen (Richtig)
+b) Flusskontrolle, da der Sender schneller sendet als der Empfänger verarbeiten kann und Strategien wie Zwischenpuffern oder Herunterregeln erforderlich sind (Richtig)
+c) Medienzugriff, da durch das Aktivieren des Physical Layers und Strategien wie Warten der Sender kontrolliert und die Übertragungsrate angepasst werden kann (Falsch)
+d) Segmentierung, da durch das Zusammenfassen einzelner Bits zu größeren Einheiten die Datenrate reduziert und somit die Geschwindigkeitsdifferenz zwischen Sender und Empfänger ausgeglichen wird (Falsch)
 
 ### Source Text
 

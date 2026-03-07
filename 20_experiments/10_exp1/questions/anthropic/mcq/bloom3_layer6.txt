@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+Die Studierenden verstehen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
 
 ### Stem Generation
 
-Frage: Ermitteln Sie, welche zwei Kernaufgaben des Presentation Layers angewendet werden müssen, wenn eine Anwendung vertrauliche Daten möglichst bandbreitensparend an ein Zielsystem übertragen soll.
+Frage: Ermitteln Sie, welche zwei Kernaufgaben der Darstellungsschicht angewendet werden müssen, wenn ein Big-Endian-System umfangreiche Anwendungsdaten platzsparend an ein Little-Endian-System übertragen soll.
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Kompression (Richtig)
-b) Verschlüsselung (Richtig)
+a) Endian-Ness: Konvertierung der Datendarstellung von Big-Endian nach Little-Endian Format (Richtig)
+b) Kompression: Komprimieren der umfangreichen Anwendungsdaten für die platzsparende Übertragung (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ermitteln Sie, welche zwei Kernaufgaben des Presentation Layers angewendet werden müssen, wenn eine Anwendung vertrauliche Daten möglichst bandbreitensparend an ein Zielsystem übertragen soll.
+Frage: Ermitteln Sie, welche zwei Kernaufgaben der Darstellungsschicht angewendet werden müssen, wenn ein Big-Endian-System umfangreiche Anwendungsdaten platzsparend an ein Little-Endian-System übertragen soll.
 
 Antwortmöglichkeiten:
 
-a) Kompression (Richtig)
-b) Konvertierung der Datendarstellung (Endian-Ness) (Falsch)
-c) Konvertierung der Zeichendarstellung (Falsch)
-d) Verschlüsselung (Richtig)
+a) Endian-Ness: Konvertierung der Datendarstellung von Big-Endian nach Little-Endian Format (Richtig)
+b) Kompression: Komprimieren der umfangreichen Anwendungsdaten für die platzsparende Übertragung (Richtig)
+c) Verschlüsselung: Verschlüsseln der Anwendungsdaten zur sicheren Übertragung zwischen den unterschiedlichen Systemarchitekturen (Falsch)
+d) Zeichen: Konvertierung der Zeichendarstellung von ASCII nach Unicode zur Gewährleistung der Systemkompatibilität (Falsch)
 
 ### Source Text
 

@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+Die Studierenden verstehen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
 
 ### Stem Generation
 
-Frage: Benennen Sie zwei der drei Kernaufgaben, die im Application Layer 7 festgelegt werden.
+Frage: Welche Aspekte zählen zu den drei Kernaufgaben des Application Layer 7?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Grundkonzepte: Festlegung, welche Begriffe in der Anwendung auftreten (Richtig)
-b) Protokollelemente: Definition, welche Anforderungen gestellt werden können und welche Daten dabei erwartet werden (Richtig)
+a) Grundkonzepte, die festlegen, welche Begriffe in der Anwendung auftreten (Richtig)
+b) Verhalten, das beschreibt, wie die Anwendung auf Anforderungen durch Protokollelemente reagiert (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Benennen Sie zwei der drei Kernaufgaben, die im Application Layer 7 festgelegt werden.
+Frage: Welche Aspekte zählen zu den drei Kernaufgaben des Application Layer 7?
 
 Antwortmöglichkeiten:
 
-a) Adressierung: Festlegung, wie Anwendungen im Netzwerk eindeutig identifiziert werden (Falsch)
-b) Grundkonzepte: Festlegung, welche Begriffe in der Anwendung auftreten (Richtig)
-c) Protokollelemente: Definition, welche Anforderungen gestellt werden können und welche Daten dabei erwartet werden (Richtig)
-d) Sitzungsverwaltung: Steuerung des Verbindungsaufbaus und der Synchronisation zwischen Kommunikationspartnern (Falsch)
+a) Datenkodierung, die festlegt, wie Informationen für die Übertragung formatiert werden (Falsch)
+b) Grundkonzepte, die festlegen, welche Begriffe in der Anwendung auftreten (Richtig)
+c) Sitzungsverwaltung, die den Auf- und Abbau von Verbindungen zwischen Anwendungen steuert (Falsch)
+d) Verhalten, das beschreibt, wie die Anwendung auf Anforderungen durch Protokollelemente reagiert (Richtig)
 
 ### Source Text
 

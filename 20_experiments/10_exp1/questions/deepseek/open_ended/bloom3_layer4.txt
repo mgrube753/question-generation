@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+Die Studierenden verstehen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
 
 ### Question Generation
 
-Frage: Ein Cloud-Gaming-Dienst benötigt eine kontinuierliche Datenübertragung mit garantiert niedrigem Jitter und hoher Bandbreite zum Endbenutzer. Wenden Sie die drei Kernaufgaben der Transport Layer (Adressierung, Flusssteuerung, Dienstqualität) an, um zu beschreiben, wie dieser Dienst die teilnehmerorientierte Übertragung technisch umsetzt.
+Frage: Ein Teilnehmer in einem Netzwerk erlebt während einer großen Dateiübertragung Paketverlust. Lösen Sie dieses Problem, indem Sie erläutern, wie die Transport Layer mit ihren drei Kernaufgaben (Adressierung, Flusssteuerung, Dienstqualität) die Übertragung verbessern kann.
 
 ### Answer Generation + Union of all
 
-Frage: Ein Cloud-Gaming-Dienst benötigt eine kontinuierliche Datenübertragung mit garantiert niedrigem Jitter und hoher Bandbreite zum Endbenutzer. Wenden Sie die drei Kernaufgaben der Transport Layer (Adressierung, Flusssteuerung, Dienstqualität) an, um zu beschreiben, wie dieser Dienst die teilnehmerorientierte Übertragung technisch umsetzt.
+Frage: Ein Teilnehmer in einem Netzwerk erlebt während einer großen Dateiübertragung Paketverlust. Lösen Sie dieses Problem, indem Sie erläutern, wie die Transport Layer mit ihren drei Kernaufgaben (Adressierung, Flusssteuerung, Dienstqualität) die Übertragung verbessern kann.
 
-Antwort: Adressierung erfolgt über IP-Adressen und Ports, um den Client und den spezifischen Gaming-Serverdienst eindeutig zu identifizieren und eine Ende-zu-Ende-Verbindung aufzubauen. Flusssteuerung regelt die Senderate dynamisch basierend auf der aktuellen Netzwerkkapazität und der Empfangspuffer des Clients, um Überlastungen zu vermeiden und einen kontinuierlichen Datenstrom zu gewährleisten. Dienstqualität wird durch QoS-Mechanismen wie Paketpriorisierung (z.B. DiffServ), Ressourcenreservierung (z.B. RSVP) und die Wahl geeigneter Protokolle (z.B. RTP über UDP für geringe Latenz) umgesetzt, um garantierte Bandbreite, niedrigen Jitter und eine minimale Fehlerrate sicherzustellen. (Richtig)
+Antwort: Die Transport Layer verbessert die Übertragung durch ihre drei Kernaufgaben. Adressierung (z.B. Ports) stellt sicher, dass Pakete beim korrekten Anwendungsprozess ankommen und Verwechslungen ausschließen. Flusssteuerung passt die Senderate dynamisch an die Empfängerkapazität an, um Pufferüberlauf und daraus resultierenden Paketverlust zu verhindern. Dienstqualität (QoS) reserviert Netzwerkressourcen wie Bandbreite, begrenzt Latenz und Jitter und bietet bei Protokollen wie TCP zuverlässige Übertragung durch Fehlererkennung und Retransmission verlorener Pakete. Zusammen minimieren diese Maßnahmen Paketverlust und optimieren die Dateiübertragung.
 
 ### Source Text
 

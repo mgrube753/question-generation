@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+Die Studierenden verstehen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
 
 ### Question Generation
 
-Frage: Analysieren Sie die Beziehungen zwischen Kompression und Verschlüsselung in der Präsentationsschicht hinsichtlich ihrer Beiträge zur Transformation von Anwendungsdaten in übertragbare Bitströme.
+Frage: Analysieren Sie, wie die Kernaufgaben der Presentation Layer zusammenwirken, um Anwendungsdaten in übertragbare Bitströme zu transformieren.
 
 ### Answer Generation + Union of all
 
-Frage: Analysieren Sie die Beziehungen zwischen Kompression und Verschlüsselung in der Präsentationsschicht hinsichtlich ihrer Beiträge zur Transformation von Anwendungsdaten in übertragbare Bitströme.
+Frage: Analysieren Sie, wie die Kernaufgaben der Presentation Layer zusammenwirken, um Anwendungsdaten in übertragbare Bitströme zu transformieren.
 
-Antwort: In der Präsentationsschicht (OSI-Layer 6) transformieren Kompression und Verschlüsselung Anwendungsdaten in übertragbare Bitströme. Kompression reduziert die Datenmenge durch Algorithmen wie Huffman oder LZW, um Bandbreite zu sparen und Übertragung effizienter zu machen. Verschlüsselung schützt die Daten vor unbefugtem Zugriff mittels Verfahren wie AES, indem sie den Bitstrom in eine sichere, unleserliche Form umwandelt. Beide sind interdependent: Kompression erfolgt typischerweise vor der Verschlüsselung, da verschlüsselte Daten redundanzarm und schwer komprimierbar sind. Gemeinsam tragen sie zur Standardisierung bei, ergänzt durch Endian-Ness- und Zeichenkodierung, und ermöglichen sichere, effiziente Datenübertragung. (Richtig)
+Antwort: Die Presentation Layer (OSI-Schicht 6) transformiert Anwendungsdaten durch vier Kernaufgaben in einen übertragbaren Bitstrom. Zunächst wird die Zeichendarstellung konvertiert (z. B. von Unicode zu ASCII), um Kompatibilität zu gewährleisten. Anschließend passt die Endian-Ness die Byte-Reihenfolge an (z. B. Little-Endian zu Big-Endian), um plattformübergreifende Serialisierung zu ermöglichen. Danach erfolgt die Kompression, die Datengröße reduziert und Bandbreite spart. Abschließend wird die Verschlüsselung angewendet, um Sicherheit zu bieten. Diese Aufgaben wirken sequentiell zusammen: Konvertierung standardisiert, Endian-Ness serialisiert, Kompression optimiert und Verschlüsselung schützt den Bitstrom für die Übertragung. Am Empfänger werden sie umgekehrt (Dekompression, Entschlüsselung usw.) ausgeführt. (Richtig)
 
 ### Source Text
 

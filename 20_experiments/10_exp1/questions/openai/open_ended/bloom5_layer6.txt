@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+Die Studierenden verstehen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
 
 ### Question Generation
 
-Frage: Beurteilen Sie für die plattformübergreifende Übertragung eines Records mit numerischen Feldern (z.B. 32-bit Integer) und Text (inkl. Sonderzeichen) welcher Transformationsablauf geeigneter ist: (A) Endian-Konvertierung → Zeichenkonvertierung → Kompression → Verschlüsselung oder (B) Verschlüsselung → Kompression → Endian-Konvertierung → Zeichenkonvertierung; fällen Sie Ihr Urteil anhand der Kriterien Interoperabilität (korrekte Interpretation auf heterogenen Systemen), Effizienz (Kompressionswirkung) und Sicherheit (Vertraulichkeit) – welcher Ablauf ist zu bevorzugen und warum?
+Frage: Bewerten Sie für die Übertragung von (a) Ganzzahlen und (b) internationalen Texten über ein heterogenes Netzwerk mit knapper Bandbreite und Vertraulichkeitsanforderung, welche der folgenden Präsentationsschicht-Pipelines insgesamt zweckmäßiger ist: Pipeline A: feste Byte-Reihenfolge (Big Endian) + UTF‑8 + Kompression vor Verschlüsselung; Pipeline B: feste Byte-Reihenfolge (Little Endian) + ASCII + Verschlüsselung vor Kompression; treffen Sie Ihr Urteil anhand selbstgewählter Kriterien (z.B. Interoperabilität, Effizienz, Fehlertoleranz, Sicherheit).
 
 ### Answer Generation + Union of all
 
-Frage: Beurteilen Sie für die plattformübergreifende Übertragung eines Records mit numerischen Feldern (z.B. 32-bit Integer) und Text (inkl. Sonderzeichen) welcher Transformationsablauf geeigneter ist: (A) Endian-Konvertierung → Zeichenkonvertierung → Kompression → Verschlüsselung oder (B) Verschlüsselung → Kompression → Endian-Konvertierung → Zeichenkonvertierung; fällen Sie Ihr Urteil anhand der Kriterien Interoperabilität (korrekte Interpretation auf heterogenen Systemen), Effizienz (Kompressionswirkung) und Sicherheit (Vertraulichkeit) – welcher Ablauf ist zu bevorzugen und warum?
+Frage: Bewerten Sie für die Übertragung von (a) Ganzzahlen und (b) internationalen Texten über ein heterogenes Netzwerk mit knapper Bandbreite und Vertraulichkeitsanforderung, welche der folgenden Präsentationsschicht-Pipelines insgesamt zweckmäßiger ist: Pipeline A: feste Byte-Reihenfolge (Big Endian) + UTF‑8 + Kompression vor Verschlüsselung; Pipeline B: feste Byte-Reihenfolge (Little Endian) + ASCII + Verschlüsselung vor Kompression; treffen Sie Ihr Urteil anhand selbstgewählter Kriterien (z.B. Interoperabilität, Effizienz, Fehlertoleranz, Sicherheit).
 
-Antwort: Ablauf (A) ist zu bevorzugen. Interoperabilität: Zuerst werden Zahlen und Text in eine kanonische, plattformunabhängige Darstellung gebracht (endianness/Serialisierung und z.B. UTF‑8). So kann der Empfänger nach Entschlüsselung/Dekompression korrekt rekonstruieren. In (B) wären Endian-/Zeichenkonvertierungen nach der Verschlüsselung praktisch unmöglich bzw. würden Ciphertext verfälschen. Effizienz: Kompression muss vor Verschlüsselung erfolgen, da Verschlüsselung die Redundanz entfernt und Kompression danach kaum wirkt. Sicherheit: Verschlüsselung am Ende schützt den gesamten Bitstrom (inkl. komprimierter Daten); in (B) ist Vertraulichkeit zwar gegeben, aber bei schlechter Kompression unnötig großes Datenvolumen. (Richtig)
+Antwort: (a) Ganzzahlen: Beide sind interoperabel, weil die Byte-Reihenfolge fest definiert ist; Big Endian entspricht jedoch „Network Byte Order“ und ist damit üblicher. Für knappe Bandbreite ist A klar effizienter, da nur vor der Verschlüsselung sinnvoll komprimiert werden kann; nach Verschlüsselung ist Kompression praktisch wirkungslos. Sicherheit: beide bieten Vertraulichkeit, A leakt höchstens Längeninfos. Insgesamt A zweckmäßiger. (b) Internationale Texte: B scheidet praktisch aus, da ASCII keine Umlaute/Unicode-Zeichen trägt (Informationsverlust/Fehler). UTF‑8 in A ist standardisiert und global kompatibel; zudem bringt Kompression vor Verschlüsselung echte Bandbreitenersparnis. Insgesamt eindeutig A. (Richtig)
 
 ### Source Text
 

@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
+Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge auflisten und zu jeder Schicht ihre Hauptfunktion beschreiben
 
 ### Stem Generation
 
-Frage: Nennen Sie zwei Schichten des ISO-OSI-Modells, deren Kernaufgaben die Codierung bzw. Kodierung von Daten umfassen.
+Frage: Nennen Sie zwei Kernaufgaben der Schicht 1 (Physical Layer) im ISO-OSI-Modell.
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Physical Layer (Richtig)
-b) Presentation Layer (Richtig)
+a) Codierung: Abbildung logischer Werte auf physikalische Größen (Richtig)
+b) Transport: Übertragung physikalischer Größen von einem Ort zum anderen (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Nennen Sie zwei Schichten des ISO-OSI-Modells, deren Kernaufgaben die Codierung bzw. Kodierung von Daten umfassen.
+Frage: Nennen Sie zwei Kernaufgaben der Schicht 1 (Physical Layer) im ISO-OSI-Modell.
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Falsch)
-b) Physical Layer (Richtig)
-c) Presentation Layer (Richtig)
-d) Transport Layer (Falsch)
+a) Codierung: Abbildung logischer Werte auf physikalische Größen (Richtig)
+b) Fehlerkontrolle: Erkennung und Korrektur von Übertragungsfehlern (Falsch)
+c) Medienzugriff: Steuerung des Zugriffs auf das Übertragungsmedium (Falsch)
+d) Transport: Übertragung physikalischer Größen von einem Ort zum anderen (Richtig)
 
 ### Source Text
 

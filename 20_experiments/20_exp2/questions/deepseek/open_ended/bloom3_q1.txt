@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
+Die Studierenden können das ISO-OSI-Modell anwenden, um für einen gegebenen Kommunikationsvorgang die zuständige Schicht zu ermitteln
 
 ### Question Generation
 
-Frage: Ermitteln Sie, welche OSI-Schicht für das Setzen von Zwischenpunkten in einer Kommunikationssitzung verantwortlich ist, und nennen Sie die entsprechende Kernaufgabe dieser Schicht.
+Frage: Ein Gateway konvertiert Daten zwischen Little-Endian- und Big-Endian-Format. Ermitteln Sie, welche Schicht des ISO-OSI-Modells für diese Konvertierung zuständig ist.
 
 ### Answer Generation + Union of all
 
-Frage: Ermitteln Sie, welche OSI-Schicht für das Setzen von Zwischenpunkten in einer Kommunikationssitzung verantwortlich ist, und nennen Sie die entsprechende Kernaufgabe dieser Schicht.
+Frage: Ein Gateway konvertiert Daten zwischen Little-Endian- und Big-Endian-Format. Ermitteln Sie, welche Schicht des ISO-OSI-Modells für diese Konvertierung zuständig ist.
 
-Antwort: Die Session Layer (Schicht 5) ist für das Setzen von Zwischenpunkten verantwortlich. Die entsprechende Kernaufgabe dieser Schicht ist die Synchronisation, welche explizit das Setzen von Zwischenpunkten umfasst, um den Zustand einer Kommunikationssitzung zu markieren und bei Bedarf von dort wieder aufnehmen zu können. (Richtig)
+Antwort: Die Konvertierung zwischen Little-Endian und Big-Endian erfolgt in der Darstellungsschicht (Presentation Layer, Schicht 6) des ISO-OSI-Modells. Diese Schicht ist für die Kodierung der Anwendungsdaten als Bitstrom zuständig und umfasst laut Lehrmaterial explizit "Endian-Ness" als eine ihrer Kernaufgaben, nämlich das Konvertieren der Datendarstellung. (Richtig)
 
 ### Source Text
 

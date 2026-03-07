@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+Die Studierenden verstehen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
 
 ### Question Generation
 
-Frage: Setzen Sie die Kernaufgaben Adressierung, Flusssteuerung und Dienstqualität (QoS) des Transport Layers in Beziehung, indem Sie herausarbeiten, welche teilnehmerbezogenen Informationen bzw. Charakteristiken jeweils benötigt werden und wie sich die drei Aufgaben gegenseitig beeinflussen, um eine Übertragung zwischen beliebigen Teilnehmern mit garantierten Eigenschaften (z.B. Bandbreite, Latenz, Jitter, Fehlerrate) bereitzustellen.
+Frage: Setzen Sie die drei Kernaufgaben des Transport Layers (Adressierung, Flusssteuerung, Dienstqualität) in Beziehung: Welche typische Information/Entscheidung ist jeweils einer dieser Aufgaben zuzuordnen, und welche wechselseitigen Abhängigkeiten ergeben sich zwischen den drei Aufgaben bei einer teilnehmerorientierten Übertragung mit Garantien für Bandbreite, Latenz, Jitter und Fehlerrate?
 
 ### Answer Generation + Union of all
 
-Frage: Setzen Sie die Kernaufgaben Adressierung, Flusssteuerung und Dienstqualität (QoS) des Transport Layers in Beziehung, indem Sie herausarbeiten, welche teilnehmerbezogenen Informationen bzw. Charakteristiken jeweils benötigt werden und wie sich die drei Aufgaben gegenseitig beeinflussen, um eine Übertragung zwischen beliebigen Teilnehmern mit garantierten Eigenschaften (z.B. Bandbreite, Latenz, Jitter, Fehlerrate) bereitzustellen.
+Frage: Setzen Sie die drei Kernaufgaben des Transport Layers (Adressierung, Flusssteuerung, Dienstqualität) in Beziehung: Welche typische Information/Entscheidung ist jeweils einer dieser Aufgaben zuzuordnen, und welche wechselseitigen Abhängigkeiten ergeben sich zwischen den drei Aufgaben bei einer teilnehmerorientierten Übertragung mit Garantien für Bandbreite, Latenz, Jitter und Fehlerrate?
 
-Antwort: Adressierung ordnet Daten eindeutig Teilnehmern/Endpunkten zu (z.B. IP+Port/Socket) und identifiziert damit den konkreten Transportfluss, für den Parameter gelten. Flusssteuerung nutzt Teilnehmer-Charakteristiken, v.a. Empfangsfenster/Puffer, Verarbeitungsgeschwindigkeit und aktuelle Last, um die Senderate so zu begrenzen, dass der Empfänger nicht überläuft (Vermeidung von Verlusten/Neusendungen). QoS benötigt teilnehmer- bzw. anwendungsbezogene Anforderungen/Serviceklasse (Bandbreite, max. Latenz, Jitter, Fehlerrate, Priorität) und ggf. verhandelte/ reservierte Ressourcen. Zusammenhang: Adressierung bestimmt, welchem Teilnehmer/Flow welche QoS- und Flusssteuerungsregeln zugeordnet werden. QoS setzt Zielwerte und ggf. zulässige Raten/ Prioritäten; Flusssteuerung setzt diese praktisch um und stabilisiert QoS (weniger Stau → bessere Latenz/Jitter). Zu aggressive Rate verletzt QoS, zu strikte Flusssteuerung unterschreitet garantierte Bandbreite. (Richtig)
+Antwort: Adressierung: Zuordnung der Daten zu konkreten Endpunkten (Teilnehmer-/Socket/Port-/TSAP-Adresse) und damit zur richtigen Verbindung/Instanz. Flusssteuerung: Entscheidung über Sendetempo/Window/Credit anhand Empfänger- und Sendercharakteristik (Puffer, Verarbeitung, RTT), um Überlauf zu vermeiden. Dienstqualität (QoS): Entscheidung über Dienstklasse/Parameter und ggf. Reservierung/Admission Control/Scheduling zur Einhaltung garantierter Bandbreite, Latenz, Jitter, Fehlerrate. Abhängigkeiten: Adressierung bestimmt, welcher Teilnehmerprofil-/QoS-Vertrag gilt. QoS-Vorgaben begrenzen und steuern die Flusssteuerung (min. Rate für Bandbreite, max. Burst für Jitter/Latenz). Umgekehrt muss Flusssteuerung die QoS einhalten; fehlende Empfängerressourcen können QoS-Garantien verhindern bzw. zur Ablehnung/Neu-Verhandlung führen. (Richtig)
 
 ### Source Text
 

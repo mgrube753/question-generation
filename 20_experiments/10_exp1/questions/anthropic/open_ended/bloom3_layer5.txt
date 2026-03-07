@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+Die Studierenden verstehen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
 
 ### Question Generation
 
-Frage: Wenden Sie das Sitzungskonzept des Session Layers an, indem Sie für ein Szenario beschreiben, wie bei einer umfangreichen Dateiübertragung zwischen zwei Systemen die Synchronisationsfunktion durch das Setzen von Zwischenpunkten genutzt werden kann, um nach einem unerwarteten Verbindungsabbruch die Übertragung fortzusetzen.
+Frage: Ein Unternehmen entwickelt ein System für Online-Bankübertragungen, bei dem große Datenmengen zwischen Filialen übertragen werden und bei Verbindungsabbrüchen die Übertragung nicht von vorne beginnen soll. Veranschaulichen Sie, wie die drei Kernaufgaben des Session Layers in diesem Szenario angewendet werden können, um eine zuverlässige Kommunikation zu gewährleisten.
 
 ### Answer Generation + Union of all
 
-Frage: Wenden Sie das Sitzungskonzept des Session Layers an, indem Sie für ein Szenario beschreiben, wie bei einer umfangreichen Dateiübertragung zwischen zwei Systemen die Synchronisationsfunktion durch das Setzen von Zwischenpunkten genutzt werden kann, um nach einem unerwarteten Verbindungsabbruch die Übertragung fortzusetzen.
+Frage: Ein Unternehmen entwickelt ein System für Online-Bankübertragungen, bei dem große Datenmengen zwischen Filialen übertragen werden und bei Verbindungsabbrüchen die Übertragung nicht von vorne beginnen soll. Veranschaulichen Sie, wie die drei Kernaufgaben des Session Layers in diesem Szenario angewendet werden können, um eine zuverlässige Kommunikation zu gewährleisten.
 
-Antwort: Bei der Übertragung einer großen Datei (z.B. 10 GB) zwischen zwei Systemen setzt der Session Layer in regelmäßigen Abständen Synchronisationspunkte (Checkpoints). Beispielsweise wird nach jedem erfolgreich übertragenen Gigabyte ein Zwischenpunkt gesetzt und von beiden Seiten bestätigt. Diese Punkte markieren den gesicherten Übertragungsfortschritt. Bricht die Verbindung unerwartet nach 7,5 GB ab, speichert das System den letzten bestätigten Synchronisationspunkt bei 7 GB. Nach Wiederherstellung der Verbindung muss die Sitzung nicht komplett neu gestartet werden. Stattdessen kann die Übertragung ab dem letzten Checkpoint bei 7 GB fortgesetzt werden. Nur die restlichen 3 GB müssen noch übertragen werden, wodurch bereits übertragene Daten nicht erneut gesendet werden müssen und Ressourcen gespart werden. (Richtig)
+Antwort: Die drei Kernaufgaben des Session Layers werden wie folgt angewendet: Erstens Sitzungsverwaltung: Zwischen den Filialen wird eine sichere Kommunikationssitzung aufgebaut, während der Übertragung verwaltet und nach erfolgreicher Transaktion ordnungsgemäß beendet. Unautorisierte Verbindungsversuche können zurückgewiesen werden. Zweitens Synchronisation: Während der Übertragung großer Datenmengen werden regelmäßig Synchronisationspunkte gesetzt. Bei einem Verbindungsabbruch kann die Übertragung am letzten Zwischenpunkt fortgesetzt werden, ohne von vorne beginnen zu müssen. Drittens Bündelung: Zusammengehörige Bankübertragungen werden als Transaktionsgruppe behandelt. Dies stellt sicher, dass alle Teildaten einer Überweisung als logische Einheit verarbeitet werden und die Datenintegrität gewährleistet bleibt. (Richtig)
 
 ### Source Text
 

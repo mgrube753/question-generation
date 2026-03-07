@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
+Die Studierenden können die Kernaufgaben aller ISO-OSI-Schichten in eigenen Worten erklären
 
 ### Stem Generation
 
-Frage: Welche zwei Schichten des ISO-OSI-Modells würden Sie anhand ihrer Kernaufgaben klassifizieren als (a) zuständig für die Abbildung logischer Werte auf physikalische Größen inkl. Transport und Decodierung sowie (b) zuständig für die Darstellung von Anwendungsdaten als Bitstrom (z.B. Endian-Ness, Zeichenkodierung, Kompression, Verschlüsselung)?
+Frage: Welche zwei der folgenden Aufgaben sind im ISO-OSI-Modell der Network Layer (Schicht 3) zuzuordnen?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Physical Layer (Schicht 1) (Richtig)
-b) Presentation Layer (Schicht 6) (Richtig)
+a) Netzwerkübergreifende Adressierung (z.B. IP-Adressen) zur Identifikation von Endgeräten in unterschiedlichen Netzen (Richtig)
+b) Routing: Auswahl der vermittelnden Zwischenknoten bzw. des Pfades zur Kommunikation zwischen nicht direkt verbundenen Knoten (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche zwei Schichten des ISO-OSI-Modells würden Sie anhand ihrer Kernaufgaben klassifizieren als (a) zuständig für die Abbildung logischer Werte auf physikalische Größen inkl. Transport und Decodierung sowie (b) zuständig für die Darstellung von Anwendungsdaten als Bitstrom (z.B. Endian-Ness, Zeichenkodierung, Kompression, Verschlüsselung)?
+Frage: Welche zwei der folgenden Aufgaben sind im ISO-OSI-Modell der Network Layer (Schicht 3) zuzuordnen?
 
 Antwortmöglichkeiten:
 
-a) Application Layer (Schicht 7) (Falsch)
-b) Data Link Layer (Schicht 2) (Falsch)
-c) Physical Layer (Schicht 1) (Richtig)
-d) Presentation Layer (Schicht 6) (Richtig)
+a) Netzwerkübergreifende Adressierung (z.B. IP-Adressen) zur Identifikation von Endgeräten in unterschiedlichen Netzen (Richtig)
+b) Routing: Auswahl der vermittelnden Zwischenknoten bzw. des Pfades zur Kommunikation zwischen nicht direkt verbundenen Knoten (Richtig)
+c) Fehlerkontrolle auf Rahmenebene (z.B. CRC/ARQ), um Übertragungsfehler zu erkennen und zu beheben (Falsch)
+d) Identifikation von Sendern/Empfängern innerhalb eines lokalen Netzes über MAC-Adressen (Layer-2-Adressierung) (Falsch)
 
 ### Source Text
 

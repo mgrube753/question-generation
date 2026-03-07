@@ -4,17 +4,19 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+Die Studierenden verstehen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung
 
 ### Question Generation
 
-Frage: Bewerten Sie für die netzwerkübergreifende Kommunikation zwischen einem Sender in Netzwerk A (Ethernet) und einem Empfänger in Netzwerk B (WLAN) über zwei Router, ob eine Node-to-Node-Flusssteuerung gegenüber einer reinen End-to-End-Flusssteuerung die geeignetere Wahl ist, und stützen Sie Ihr Urteil mit höchstens zwei klaren Kriterien aus den Bereichen Adressierung, Routing und Flusssteuerung.
+Frage: Bewerten Sie die Zweckmäßigkeit eines Layer-3-Designs, das für die Kommunikation zwischen Hosts in unterschiedlichen Layer-2-Netzen nur netzwerkübergreifende Adressierung und Routing vorsieht, aber keine Flusssteuerung implementiert; stützen Sie Ihr Urteil auf zwei selbstgewählte Kriterien und berücksichtigen Sie dabei End-to-End- sowie Node-to-Node-Sicht.
 
 ### Answer Generation + Union of all
 
-Frage: Bewerten Sie für die netzwerkübergreifende Kommunikation zwischen einem Sender in Netzwerk A (Ethernet) und einem Empfänger in Netzwerk B (WLAN) über zwei Router, ob eine Node-to-Node-Flusssteuerung gegenüber einer reinen End-to-End-Flusssteuerung die geeignetere Wahl ist, und stützen Sie Ihr Urteil mit höchstens zwei klaren Kriterien aus den Bereichen Adressierung, Routing und Flusssteuerung.
+Frage: Bewerten Sie die Zweckmäßigkeit eines Layer-3-Designs, das für die Kommunikation zwischen Hosts in unterschiedlichen Layer-2-Netzen nur netzwerkübergreifende Adressierung und Routing vorsieht, aber keine Flusssteuerung implementiert; stützen Sie Ihr Urteil auf zwei selbstgewählte Kriterien und berücksichtigen Sie dabei End-to-End- sowie Node-to-Node-Sicht.
 
-Antwort: Node-to-Node-Flusssteuerung ist hier geeigneter als eine reine End-to-End-Flusssteuerung. (1) Flusssteuerung: Ethernet und WLAN haben typischerweise stark unterschiedliche Bandbreite/Latenz und WLAN ist variabler; hop-by-hop kann pro Link die Sende­rate anpassen und Routerpuffer vor Überlauf schützen. Eine reine End-to-End-Steuerung reagiert erst zwischen Sender und Empfänger und verhindert nicht, dass die Router als Zwischenknoten überlastet werden. (2) Routing: Da die Kommunikation über zwei Router (mehrere Hops) läuft, entstehen Engpässe an jedem Hop; Node-to-Node stabilisiert jeden einzelnen Abschnitt der gewählten Route und reduziert Verlust/Backpressure entlang des Pfads. (Richtig)
+Antwort: Kriterium 1 (Skalierbarkeit/Komplexität): Zweckmäßig, weil L3 sich auf Adressierung und Routing konzentriert; Router bleiben einfach, zustandsarm und interoperabel über verschiedene L2-Technologien. Das unterstützt große, heterogene Netze (Best-Effort-Ansatz wie IP).
+
+Kriterium 2 (Robustheit bei Überlast/Performance): Kritisch, da ohne Flusssteuerung bei zu hoher Senderrate Pufferüberläufe, Paketverlust, Latenzanstieg und ggf. Congestion Collapse auftreten können. End-to-End kann Fluss-/Staukontrolle durch Transportprotokolle (z.B. TCP) erfolgen; bei reinen UDP/Realtime-Anwendungen fehlt sie oft. Node-to-Node fehlt eine per-hop Drosselung auf L3-Ebene; sie muss dann auf L2 (MAC/Link-Flow-Control) oder durch Queue-Management/Policing in Routern kompensiert werden. Insgesamt zweckmäßig, aber nur mit Kompensation in anderen Schichten. (Richtig)
 
 ### Source Text
 

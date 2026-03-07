@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+Die Studierenden verstehen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
 
 ### Stem Generation
 
-Frage: Welche zwei der folgenden sind Parameter, für die die Dienstqualität (QoS) im Transport Layer Garantien erbringt?
+Frage: Welche zwei der folgenden Parameter werden durch die Dienstqualität in der Transportschicht garantiert?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Latenz (Richtig)
-b) Jitter (Richtig)
+a) Bandbreite (Richtig)
+b) Latenz (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei der folgenden sind Parameter, für die die Dienstqualität (QoS) im Transport Layer Garantien erbringt?
+Frage: Welche zwei der folgenden Parameter werden durch die Dienstqualität in der Transportschicht garantiert?
 
 Antwortmöglichkeiten:
 
-a) Adressierung (Falsch)
-b) Flußsteuerung (Falsch)
-c) Jitter (Richtig)
-d) Latenz (Richtig)
+a) Bandbreite (Richtig)
+b) Latenz (Richtig)
+c) Portnummer (Falsch)
+d) Sequenznummer (Falsch)
 
 ### Source Text
 

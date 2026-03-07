@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+Die Studierenden verstehen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
 
 ### Stem Generation
 
-Frage: Ein Entwickler spezifiziert für eine neue Anwendung die darin auftretenden Begriffe und legt fest, wie die Anwendung auf eingehende Anfragen reagiert. Welche zwei der drei Kernaufgaben der Application Layer erfüllt er damit?
+Frage: In der Analyse eines neuen Protokolls für automatische Software-Updates ermitteln Sie, welche Kommandos gesendet werden können und wie der Client auf diese Kommandos reagiert. Welche zwei Kernaufgaben der Application Layer wenden Sie dabei an?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Spezifikation der Grundkonzepte (Begriffe) der Anwendung (Richtig)
-b) Definition des Verhaltens der Anwendung auf eingehende Anfragen (Richtig)
+a) Identifikation der Protokollelemente (welche Kommandos/Anforderungen gestellt werden können) (Richtig)
+b) Analyse des Verhaltens (wie der Client auf diese Kommandos reagiert) (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ein Entwickler spezifiziert für eine neue Anwendung die darin auftretenden Begriffe und legt fest, wie die Anwendung auf eingehende Anfragen reagiert. Welche zwei der drei Kernaufgaben der Application Layer erfüllt er damit?
+Frage: In der Analyse eines neuen Protokolls für automatische Software-Updates ermitteln Sie, welche Kommandos gesendet werden können und wie der Client auf diese Kommandos reagiert. Welche zwei Kernaufgaben der Application Layer wenden Sie dabei an?
 
 Antwortmöglichkeiten:
 
-a) Definition der Protokollelemente, d.h. welche Anforderungen gestellt werden können und welche Daten dabei erwartet werden (Falsch)
-b) Definition des Verhaltens der Anwendung auf eingehende Anfragen (Richtig)
-c) Festlegung der Transportdienstparameter für die zuverlässige Übertragung (Falsch)
-d) Spezifikation der Grundkonzepte (Begriffe) der Anwendung (Richtig)
+a) Identifikation der Protokollelemente (welche Kommandos/Anforderungen gestellt werden können) (Richtig)
+b) Festlegung der Datenformate und Kodierung (Falsch)
+c) Analyse des Verhaltens (wie der Client auf diese Kommandos reagiert) (Richtig)
+d) Aufbau und Verwaltung der Kommunikationssitzung (Falsch)
 
 ### Source Text
 

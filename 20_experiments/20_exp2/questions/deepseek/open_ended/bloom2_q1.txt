@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
+Die Studierenden können die Kernaufgaben aller ISO-OSI-Schichten in eigenen Worten erklären
 
 ### Question Generation
 
-Frage: Erklären Sie die Beziehung zwischen dem Physical Layer und dem Data Link Layer im ISO-OSI-Modell und beschreiben Sie, wie die Kernaufgaben des Data Link Layers auf den Dienstleistungen des Physical Layers aufbauen.
+Frage: Ein Kommilitone versteht nicht, warum das ISO/OSI-Modell in sieben Schichten unterteilt ist. Erklären Sie ihm in eigenen Worten, was die wesentliche Aufgabe jeder einzelnen dieser Schichten ist.
 
 ### Answer Generation + Union of all
 
-Frage: Erklären Sie die Beziehung zwischen dem Physical Layer und dem Data Link Layer im ISO-OSI-Modell und beschreiben Sie, wie die Kernaufgaben des Data Link Layers auf den Dienstleistungen des Physical Layers aufbauen.
+Frage: Ein Kommilitone versteht nicht, warum das ISO/OSI-Modell in sieben Schichten unterteilt ist. Erklären Sie ihm in eigenen Worten, was die wesentliche Aufgabe jeder einzelnen dieser Schichten ist.
 
-Antwort: Der Physical Layer (Layer 1) stellt die physische Übertragung roher Bitströme über ein Medium bereit (Codierung, Transport, Decodierung). Der Data Link Layer (Layer 2) baut direkt darauf auf und nutzt diesen möglicherweise fehlerbehafteten Bitstrom, um eine fehlergesicherte, logische Verbindung zwischen direkt angeschlossenen Knoten zu schaffen. Seine Kernaufgaben bauen wie folgt auf: Die Segmentierung fasst die empfangenen Bits zu Frames (z.B. Bytes) zusammen. Die Fehlerkontrolle ergänzt Prüfsummen, um Übertragungsfehler zu erkennen, die auf physikalischer Ebene entstehen. Die Identifikation (Adressierung) ermöglicht die Auswahl bestimmter Empfänger innerhalb des shared Mediums. Die Medienzugriffskontrolle regelt, wann der Physical Layer aktiv sendet oder wartet, um Kollisionen zu vermeiden. Die Flusskontrolle passt die Senderate an, um den Empfänger nicht zu überlasten, der die physikalisch übertragenen Bits verarbeiten muss. (Richtig)
+Antwort: Das Modell unterteilt die komplexe Netzwerkkommunikation in überschaubare, spezialisierte Aufgaben. Schicht 1 (Physical) überträgt rohe Bits über ein Medium. Schicht 2 (Data Link) stellt eine fehlerfreie Verbindung zwischen zwei direkt verbundenen Geräten her (z.B. via MAC-Adressen). Schicht 3 (Network) routet Datenpakete über mehrere Netzwerke hinweg (IP-Adressen). Schicht 4 (Transport) gewährleistet eine Ende-zu-Ende-Verbindung zwischen Anwendungen (z.B. mit TCP). Schicht 5 (Session) verwaltet Kommunikationssitzungen (Aufbau, Abbau). Schicht 6 (Presentation) übersetzt Daten in ein einheitliches Format (z.B. Verschlüsselung, Kodierung). Schicht 7 (Application) bietet die Schnittstelle für die Anwendungsprogramme (z.B. HTTP, FTP).
 
 ### Source Text
 

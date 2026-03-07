@@ -4,28 +4,28 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+Die Studierenden verstehen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
 
 ### Stem Generation
 
-Frage: Ein Programm auf einem Little-Endian-System muss eine Nachricht, die nationale Sonderzeichen enthält, an ein Big-Endian-System senden. Welche zwei Kernaufgaben des Presentation Layer müssen angewendet werden, um die Nachricht in einen übertragbaren Bitstrom zu transformieren?
+Frage: Ein System muss große Mengen an vertraulichen Messdaten über ein Netzwerk mit begrenzter Bandbreite übertragen. Lösen Sie dieses Problem, indem Sie zwei Kernaufgaben des Presentation Layers nennen, die hierfür angewendet werden müssen.
 
 ### Key Generation
 
 Korrekte Antworten:
-a) Endian-Ness: Konvertieren der Datendarstellung zwischen Little-Endian und Big-Endian. (Richtig)
-b) Zeichen: Konvertierung der Zeichendarstellung, z.B. für nationale Sonderzeichen. (Richtig)
+a) Kompression (Richtig)
+b) Verschlüsselung (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ein Programm auf einem Little-Endian-System muss eine Nachricht, die nationale Sonderzeichen enthält, an ein Big-Endian-System senden. Welche zwei Kernaufgaben des Presentation Layer müssen angewendet werden, um die Nachricht in einen übertragbaren Bitstrom zu transformieren?
+Frage: Ein System muss große Mengen an vertraulichen Messdaten über ein Netzwerk mit begrenzter Bandbreite übertragen. Lösen Sie dieses Problem, indem Sie zwei Kernaufgaben des Presentation Layers nennen, die hierfür angewendet werden müssen.
 
 Antwortmöglichkeiten:
 
-a) Endian-Ness: Konvertieren der Datendarstellung zwischen Little-Endian und Big-Endian. (Richtig)
-b) Kompression: Komprimieren der Nachricht, um die Datenmenge für die Übertragung zu reduzieren. (Falsch)
-c) Verschlüsselung: Verschlüsseln der Nachricht zur Sicherstellung der Vertraulichkeit während der Übertragung. (Falsch)
-d) Zeichen: Konvertierung der Zeichendarstellung, z.B. für nationale Sonderzeichen. (Richtig)
+a) Kompression (Richtig)
+b) Konvertierung der Datendarstellung (Endianness) (Falsch)
+c) Konvertierung der Zeichendarstellung (Falsch)
+d) Verschlüsselung (Richtig)
 
 ### Source Text
 

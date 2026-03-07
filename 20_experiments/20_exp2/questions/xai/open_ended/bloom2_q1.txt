@@ -4,31 +4,31 @@
 
 ### Learning Objective
 
-Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
+Die Studierenden können die Kernaufgaben aller ISO-OSI-Schichten in eigenen Worten erklären
 
 ### Question Generation
 
-Frage: Erklären Sie in eigenen Worten die Beziehungen zwischen den Schichten des ISO-OSI-Modells und beschreiben Sie die Kernaufgaben jeder Schicht.
+Frage: Erklären Sie in eigenen Worten die Kernaufgaben der einzelnen Schichten des OSI-Modells.
 
 ### Answer Generation + Union of all
 
-Frage: Erklären Sie in eigenen Worten die Beziehungen zwischen den Schichten des ISO-OSI-Modells und beschreiben Sie die Kernaufgaben jeder Schicht.
+Frage: Erklären Sie in eigenen Worten die Kernaufgaben der einzelnen Schichten des OSI-Modells.
 
-Antwort: Das ISO-OSI-Modell ist ein hierarchisches Schichtenmodell für Netzwerkkommunikation, bei dem jede Schicht auf der darunterliegenden aufbaut und Dienste für die obere bereitstellt. Schichten kommunizieren vertikal (mit angrenzenden Schichten) und horizontal (peer-to-peer mit entsprechenden Schichten am Empfänger). Daten werden von oben nach unten gekapselt und umgekehrt entkapselt.
+Antwort: Das OSI-Modell gliedert Netzwerkkommunikation in 7 Schichten. 
 
-Schicht 1 (Physical): Codierung, Transport und Decodierung physikalischer Signale (z.B. NRZ, Kabel).
+Schicht 1 (Physical): Codierung logischer Werte in physikalische Signale (z.B. NRZ), Transport über Medien (z.B. Kabel, Funk) und Decodierung zurück zu Bits.
 
-Schicht 2 (Data Link): Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation, Medienzugriff für fehlerfreie Übertragung.
+Schicht 2 (Data Link): Fehlerkontrolle (Erkennung/Behebung), Flusskontrolle (z.B. Puffern), Segmentierung (z.B. Bytes), Identifikation (Adressen) und Medienzugriff (Senden/Warten).
 
-Schicht 3 (Network): Adressierung, Routing, Flusssteuerung für netzwerkübergreifende Verbindungen.
+Schicht 3 (Network): Adressierung (netzwerkübergreifend), Routing (Pfadwahl) und Flusssteuerung (End-to-End oder Node-to-Node).
 
-Schicht 4 (Transport): Adressierung, Flusssteuerung, QoS für end-to-end-Übertragung.
+Schicht 4 (Transport): Adressierung (Teilnehmer), Flusssteuerung (nutzerbasiert) und Dienstqualität (QoS-Garantien wie Bandbreite).
 
-Schicht 5 (Session): Sitzungsaufbau/-verwaltung, Synchronisation, Bündelung.
+Schicht 5 (Session): Sitzungsmanagement (Aufbau/Beendigung), Synchronisation (Zwischenpunkte) und Bündelung (Transaktionsgruppen).
 
-Schicht 6 (Presentation): Endian-Konvertierung, Zeichendarstellung, Kompression, Verschlüsselung.
+Schicht 6 (Presentation): Endian-Konvertierung, Zeichenkodierung (z.B. ASCII), Kompression und Verschlüsselung.
 
-Schicht 7 (Application): Festlegung von Konzepten, Protokollelementen und Verhalten für spezifische Anwendungen. (Richtig)
+Schicht 7 (Application): Definition von Konzepten, Protokollelementen (Anforderungen/Daten) und Verhalten (Reaktionen), anwendungsabhängig. (Richtig)
 
 ### Source Text
 

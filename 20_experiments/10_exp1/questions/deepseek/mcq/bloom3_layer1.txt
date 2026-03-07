@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
+Die Studierenden verstehen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
 
 ### Stem Generation
 
-Frage: Für ein Kommunikationssystem, das logische Werte über ein Telefonkabel mit NRZ-Codierung überträgt, sind welche beiden weiteren Kernaufgaben der Physical Layer anzuwenden, um die Übertragung zu vollenden?
+Frage: Bei der Nutzung einer bereits installierten Kupferdoppelader für die digitale Kommunikation müssen an den Endpunkten zwei spezifische Prozesse der physikalischen Schicht durchgeführt werden, um die logischen Werte erfolgreich zu übertragen. Nennen Sie diese.
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Transport der physikalischen Größen über das Medium (z.B. Telefonkabel). (Richtig)
-b) Decodierung der physikalischen Größen zurück in logische Werte. (Richtig)
+a) Codierung der logischen Werte in physikalische Signale am sendenden Endpunkt (Richtig)
+b) Decodierung der physikalischen Signale zurück in logische Werte am empfangenden Endpunkt (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Für ein Kommunikationssystem, das logische Werte über ein Telefonkabel mit NRZ-Codierung überträgt, sind welche beiden weiteren Kernaufgaben der Physical Layer anzuwenden, um die Übertragung zu vollenden?
+Frage: Bei der Nutzung einer bereits installierten Kupferdoppelader für die digitale Kommunikation müssen an den Endpunkten zwei spezifische Prozesse der physikalischen Schicht durchgeführt werden, um die logischen Werte erfolgreich zu übertragen. Nennen Sie diese.
 
 Antwortmöglichkeiten:
 
-a) Bereitstellung einer mechanischen und elektrischen Verbindung zum Telefonkabel. (Falsch)
-b) Decodierung der physikalischen Größen zurück in logische Werte. (Richtig)
-c) Sicherstellung der Bit-Synchronisation zwischen Sender und Empfänger. (Falsch)
-d) Transport der physikalischen Größen über das Medium (z.B. Telefonkabel). (Richtig)
+a) Codierung der logischen Werte in physikalische Signale am sendenden Endpunkt. (Richtig)
+b) Transport der physikalischen Signale über das Medium zwischen den Endpunkten. (Falsch)
+c) Decodierung der physikalischen Signale zurück in logische Werte am empfangenden Endpunkt. (Richtig)
+d) Fehlererkennung durch Prüfsummen auf der Sicherungsschicht. (Falsch)
 
 ### Source Text
 

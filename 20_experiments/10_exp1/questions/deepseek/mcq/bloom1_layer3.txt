@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+Die Studierenden verstehen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung
 
 ### Stem Generation
 
-Frage: Nennen Sie die beiden Strategien der Flusssteuerung im Network Layer.
+Frage: Nennen Sie die beiden grundlegenden Ansätze zur Flusssteuerung, die in der Netzwerkschicht 3 unterschieden werden.
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) End-to-End (Richtig)
-b) Node-to-Node (Richtig)
+a) End-to-End-Flusssteuerung (Richtig)
+b) Node-to-Node-Flusssteuerung (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Nennen Sie die beiden Strategien der Flusssteuerung im Network Layer.
+Frage: Nennen Sie die beiden grundlegenden Ansätze zur Flusssteuerung, die in der Netzwerkschicht 3 unterschieden werden.
 
 Antwortmöglichkeiten:
 
-a) Adressierung (Falsch)
-b) End-to-End (Richtig)
-c) Node-to-Node (Richtig)
-d) Routing (Falsch)
+a) End-to-End-Flusssteuerung (Richtig)
+b) Link-by-Link-Flusssteuerung (Falsch)
+c) Node-to-Node-Flusssteuerung (Richtig)
+d) Router-zu-Router-Flusssteuerung (Falsch)
 
 ### Source Text
 

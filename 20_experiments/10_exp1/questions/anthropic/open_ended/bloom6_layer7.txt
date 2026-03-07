@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+Die Studierenden verstehen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
 
 ### Question Generation
 
-Frage: Entwerfen Sie für einen einfachen Benachrichtigungsdienst auf der Anwendungsschicht die vollständige Spezifikation, indem Sie die drei Kernaufgaben (Grundkonzepte, Protokollelemente mit erwarteten Daten und Verhalten) definieren und zu einem zusammenhängenden Konzept verbinden.
+Frage: Entwerfen Sie für eine einfache Ticketreservierungsanwendung die drei Kernaufgaben der Application Layer, indem Sie geeignete Grundkonzepte, Protokollelemente mit erwarteten Daten sowie das zugehörige Verhalten der Anwendung entwickeln.
 
 ### Answer Generation + Union of all
 
-Frage: Entwerfen Sie für einen einfachen Benachrichtigungsdienst auf der Anwendungsschicht die vollständige Spezifikation, indem Sie die drei Kernaufgaben (Grundkonzepte, Protokollelemente mit erwarteten Daten und Verhalten) definieren und zu einem zusammenhängenden Konzept verbinden.
+Frage: Entwerfen Sie für eine einfache Ticketreservierungsanwendung die drei Kernaufgaben der Application Layer, indem Sie geeignete Grundkonzepte, Protokollelemente mit erwarteten Daten sowie das zugehörige Verhalten der Anwendung entwickeln.
 
-Antwort: Grundkonzepte: Sender, Empfänger, Nachricht (Text, Zeitstempel), Nachrichtenstatus (gesendet, zugestellt, gelesen), Benachrichtigungskanal. Protokollelemente mit erwarteten Daten: SEND (Sender-ID, Empfänger-ID, Nachrichtentext, Zeitstempel), RECEIVE (Empfänger-ID), STATUS (Nachrichten-ID), ACK (Nachrichten-ID, Statuscode), SUBSCRIBE (Nutzer-ID, Kanal), UNSUBSCRIBE (Nutzer-ID, Kanal). Verhalten: Bei SEND validiert der Dienst die Eingaben, speichert die Nachricht, leitet sie an den Empfänger weiter und sendet ACK mit Erfolgs- oder Fehlerstatus. Bei RECEIVE werden alle ungelesenen Nachrichten des Empfängers zurückgegeben und als zugestellt markiert. Bei STATUS wird der aktuelle Zustand einer Nachricht abgefragt. SUBSCRIBE registriert einen Nutzer für Benachrichtigungen, UNSUBSCRIBE entfernt die Registrierung. Zusammenhang: Sender nutzt SEND, Dienst speichert und leitet weiter, Empfänger ruft via RECEIVE ab, beide können STATUS prüfen. (Richtig)
+Antwort: Grundkonzepte: Ticket, Veranstaltung, Sitzplatz, Kunde, Reservierung, Preis, Datum. Protokollelemente mit erwarteten Daten: SEARCH_EVENT erwartet Datum, Ort, Kategorie. GET_AVAILABILITY erwartet Event-ID. RESERVE_TICKET erwartet Event-ID, Sitzplatz-ID, Kunden-ID. CANCEL_RESERVATION erwartet Reservierungs-ID. CONFIRM_BOOKING erwartet Reservierungs-ID und Zahlungsdaten. Verhalten: Bei SEARCH_EVENT liefert die Anwendung eine Liste passender Veranstaltungen. Bei GET_AVAILABILITY werden verfügbare Sitzplätze zurückgegeben. Bei RESERVE_TICKET wird der gewählte Platz temporär gesperrt und eine Reservierung mit Timeout erstellt. Bei CANCEL_RESERVATION wird die Reservierung gelöscht und der Platz wieder freigegeben. Bei CONFIRM_BOOKING wird die Zahlung verarbeitet, die Buchung finalisiert und ein Ticket mit eindeutiger ID generiert. (Richtig)
 
 ### Source Text
 

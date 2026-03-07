@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
+Die Studierenden können das ISO-OSI-Modell anwenden, um für einen gegebenen Kommunikationsvorgang die zuständige Schicht zu ermitteln
 
 ### Stem Generation
 
-Frage: Welche zwei Schichten des 7-Schichten-Modells würden Sie nutzen, um (1) logische Bits mittels Manchester zu codieren und über ein Telefonkabel zu übertragen und (2) Übertragungsfehler auf dieser Verbindung zu erkennen und zu signalisieren?
+Frage: Ein System wandelt Anwendungsdaten von Unicode nach ASCII um und sendet den daraus entstehenden Bitstrom anschließend als Lichtsignal durch die Luft zu einem entfernten Gerät; welche zwei OSI-Schichten sind für diese beiden Teilaufgaben jeweils primär zuständig?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Physical Layer (Schicht 1) für Manchester-Codierung und Übertragung über Telefonkabel; Data Link Layer (Schicht 2) zur Erkennung und Signalisierung von Übertragungsfehlern (Richtig)
-b) Schicht 1 (Bitübertragungsschicht) für die physikalische Codierung/den Transport der Bits (Manchester, Medium Telefonkabel); Schicht 2 (Sicherungsschicht) für Fehlerkontrolle wie z.B. Fehlererkennung und Fehlermeldung (Richtig)
+a) Darstellungsschicht (Layer 6) für Unicode→ASCII; Bitübertragungsschicht/Physical Layer (Layer 1) für das Senden als Lichtsignal durch die Luft (Richtig)
+b) Presentation Layer (Schicht 6) für Zeichensatzkonvertierung (Unicode/ASCII); Physical Layer (Schicht 1) für Codierung/Transport des Bitstroms als optisches Funksignal (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche zwei Schichten des 7-Schichten-Modells würden Sie nutzen, um (1) logische Bits mittels Manchester zu codieren und über ein Telefonkabel zu übertragen und (2) Übertragungsfehler auf dieser Verbindung zu erkennen und zu signalisieren?
+Frage: Ein System wandelt Anwendungsdaten von Unicode nach ASCII um und sendet den daraus entstehenden Bitstrom anschließend als Lichtsignal durch die Luft zu einem entfernten Gerät; welche zwei OSI-Schichten sind für diese beiden Teilaufgaben jeweils primär zuständig?
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2) für Manchester-Codierung und Übertragung, da er Rahmenbildung/Medienzugriff steuert; Physical Layer (Schicht 1) zur Erkennung und Signalisierung von Übertragungsfehlern über Signalpegel- und Qualitätsprüfung (Falsch)
-b) Physical Layer (Schicht 1) für Manchester-Codierung und Übertragung über Telefonkabel; Data Link Layer (Schicht 2) zur Erkennung und Signalisierung von Übertragungsfehlern (Richtig)
-c) Presentation Layer (Schicht 6) für Manchester-Codierung als „Kodierung in einen Bitstrom“; Transport Layer (Schicht 4) zur Fehlererkennung und -signalisierung auf der Verbindung (z.B. Checksummen/ACK-Mechanismen) (Falsch)
-d) Schicht 1 (Bitübertragungsschicht) für die physikalische Codierung/den Transport der Bits (Manchester, Medium Telefonkabel); Schicht 2 (Sicherungsschicht) für Fehlerkontrolle wie z.B. Fehlererkennung und Fehlermeldung (Richtig)
+a) Application Layer (Schicht 7) für Unicode→ASCII; Physical Layer (Schicht 1) für das Senden als Lichtsignal durch die Luft (Falsch)
+b) Darstellungsschicht (Layer 6) für Unicode→ASCII; Bitübertragungsschicht/Physical Layer (Layer 1) für das Senden als Lichtsignal durch die Luft (Richtig)
+c) Presentation Layer (Schicht 6) für Zeichensatzkonvertierung (Unicode/ASCII); Sicherungsschicht/Data Link Layer (Schicht 2) für das Senden des Bitstroms als Lichtsignal durch die Luft (Falsch)
+d) Presentation Layer (Schicht 6) für Zeichensatzkonvertierung (Unicode/ASCII); Physical Layer (Schicht 1) für Codierung/Transport des Bitstroms als optisches Funksignal (Richtig)
 
 ### Source Text
 

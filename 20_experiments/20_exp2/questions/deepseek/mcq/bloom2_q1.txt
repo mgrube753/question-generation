@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
+Die Studierenden können die Kernaufgaben aller ISO-OSI-Schichten in eigenen Worten erklären
 
 ### Stem Generation
 
-Frage: Welche zwei Schichten des ISO-OSI-Modells sind primär für die Konvertierung von Daten zwischen unterschiedlichen Repräsentationsformen verantwortlich?
+Frage: Welche zwei OSI-Schichten definieren Adressierung als eine ihrer Kernaufgaben?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Physical Layer (Richtig)
-b) Presentation Layer (Richtig)
+a) Data Link Layer und Network Layer (Richtig)
+b) Network Layer und Transport Layer (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei Schichten des ISO-OSI-Modells sind primär für die Konvertierung von Daten zwischen unterschiedlichen Repräsentationsformen verantwortlich?
+Frage: Welche zwei OSI-Schichten definieren Adressierung als eine ihrer Kernaufgaben?
 
 Antwortmöglichkeiten:
 
-a) Application Layer (Falsch)
-b) Data Link Layer (Falsch)
-c) Physical Layer (Richtig)
-d) Presentation Layer (Richtig)
+a) Data Link Layer und Network Layer (Richtig)
+b) Data Link Layer und Session Layer (Falsch)
+c) Network Layer und Presentation Layer (Falsch)
+d) Network Layer und Transport Layer (Richtig)
 
 ### Source Text
 

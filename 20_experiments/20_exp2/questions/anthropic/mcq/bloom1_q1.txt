@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
+Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge auflisten und zu jeder Schicht ihre Hauptfunktion beschreiben
 
 ### Stem Generation
 
-Frage: Welche zwei Schichten des ISO-OSI-Modells befinden sich direkt oberhalb des Transport Layers?
+Frage: Welche zwei Codierungsverfahren werden als Beispiele für die Kernaufgabe Codierung im Physical Layer genannt?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Session Layer (Schicht 5) und Presentation Layer (Schicht 6) (Richtig)
-b) Sitzungsschicht und Darstellungsschicht (Richtig)
+a) NRZ (Richtig)
+b) Manchester (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei Schichten des ISO-OSI-Modells befinden sich direkt oberhalb des Transport Layers?
+Frage: Welche zwei Codierungsverfahren werden als Beispiele für die Kernaufgabe Codierung im Physical Layer genannt?
 
 Antwortmöglichkeiten:
 
-a) Network Layer (Schicht 3) und Data Link Layer (Schicht 2) (Falsch)
-b) Presentation Layer (Schicht 6) und Application Layer (Schicht 7) (Falsch)
-c) Session Layer (Schicht 5) und Presentation Layer (Schicht 6) (Richtig)
-d) Sitzungsschicht und Darstellungsschicht (Richtig)
+a) Abtastung (Falsch)
+b) ASCII (Falsch)
+c) Manchester (Richtig)
+d) NRZ (Richtig)
 
 ### Source Text
 

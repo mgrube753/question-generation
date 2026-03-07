@@ -4,11 +4,11 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
+Die Studierenden verstehen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
 
 ### Stem Generation
 
-Frage: Benennen Sie zwei Beispiele für Codierungsverfahren, die auf dem Physical Layer 1 zur Abbildung logischer Werte auf physikalische Größen eingesetzt werden.
+Frage: Welche zwei Codierungsverfahren werden auf dem Physical Layer zur Abbildung logischer Werte auf physikalische Größen eingesetzt?
 
 ### Key Generation
 
@@ -19,12 +19,12 @@ b) Manchester-Codierung (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Benennen Sie zwei Beispiele für Codierungsverfahren, die auf dem Physical Layer 1 zur Abbildung logischer Werte auf physikalische Größen eingesetzt werden.
+Frage: Welche zwei Codierungsverfahren werden auf dem Physical Layer zur Abbildung logischer Werte auf physikalische Größen eingesetzt?
 
 Antwortmöglichkeiten:
 
 a) Abtastung (Falsch)
-b) ASCII-Codierung (Falsch)
+b) Hamming-Codierung (Falsch)
 c) Manchester-Codierung (Richtig)
 d) NRZ (Non-Return-to-Zero) (Richtig)
 

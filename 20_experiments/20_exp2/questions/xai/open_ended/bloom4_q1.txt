@@ -4,27 +4,22 @@
 
 ### Learning Objective
 
-Die Studierenden können die Aufgabenverteilung zwischen den Schichten analysieren und Unterschiede sowie Zusammenhänge zwischen verwandten Konzepten herausarbeiten
+Die Studierenden können die Gemeinsamkeiten und Unterschiede zwischen verwandten Konzepten auf verschiedenen ISO-OSI-Schichten gegenüberstellen
 
 ### Question Generation
 
-Frage: Analysieren Sie die Unterschiede und Zusammenhänge in der Umsetzung der Flußsteuerung zwischen der Data Link Layer, der Network Layer und der Transport Layer.
+Frage: Unterscheiden Sie die Konzepte der Flußkontrolle bzw. Flußsteuerung auf den OSI-Schichten 2, 3 und 4 hinsichtlich ihrer Gemeinsamkeiten und Unterschiede.
 
 ### Answer Generation + Union of all
 
-Frage: Analysieren Sie die Unterschiede und Zusammenhänge in der Umsetzung der Flußsteuerung zwischen der Data Link Layer, der Network Layer und der Transport Layer.
+Frage: Unterscheiden Sie die Konzepte der Flußkontrolle bzw. Flußsteuerung auf den OSI-Schichten 2, 3 und 4 hinsichtlich ihrer Gemeinsamkeiten und Unterschiede.
 
-Antwort: Die Flußsteuerung (Flow Control) verhindert Überlastung durch zu schnelles Senden. 
+Antwort: Gemeinsamkeiten: Auf allen Schichten dient die Flußkontrolle der Regulierung des Datenflusses, um Überlastung des Empfängers zu vermeiden, wenn der Sender zu schnell sendet. Strategien umfassen Pufferung, Herunterregeln oder Warten.
 
-**Data Link Layer (Layer 2):** Lokale Flußkontrolle zwischen direkt verbundenen Knoten. Methoden: Pufferung, Herunterregeln oder Warten (z.B. Stop-and-Wait, Sliding Window). Fokus auf physischem Link.
-
-**Network Layer (Layer 3):** Netzwerkweite Steuerung mit End-to-End (Sender zu Empfänger) und Node-to-Node (Knoten zu Knoten). Behandelt Routing und Überlastung in Zwischenknoten, z.B. durch Congestion Control in IP.
-
-**Transport Layer (Layer 4):** End-to-End-Steuerung zwischen Anwendungen, nutzt Teilnehmer-Charakteristika (z.B. TCPs Windowing, basierend auf QoS wie Bandbreite).
-
-**Unterschiede:** Layer 2 ist link-spezifisch und fehlerorientiert; Layer 3 routing-basiert und netzwerkübergreifend; Layer 4 applikationsnah und QoS-gestützt. 
-
-**Zusammenhänge:** Schichten bauen aufeinander auf: Layer 2 sichert physische Links, Layer 3 routet, Layer 4 gewährleistet zuverlässige End-to-End-Übertragung. Alle zielen auf Vermeidung von Überlastung ab, mit zunehmender Abstraktion. (Richtig)
+Unterschiede: 
+- Schicht 2 (Data Link): Hop-by-Hop zwischen benachbarten Knoten; medienbezogen, z. B. Zwischenpuffern oder Warten auf Bestätigung (z. B. Stop-and-Wait).
+- Schicht 3 (Network): End-to-End (Sender zu Empfänger) oder Node-to-Node (Knoten zu Knoten); netzwerkübergreifend, berücksichtigt Routing und Zwischenknoten.
+- Schicht 4 (Transport): End-to-End zwischen Teilnehmern; nutzt Teilnehmer-spezifische Charakteristiken, integriert QoS (z. B. Bandbreite, Latenz) für zuverlässige Dienste wie TCP. (Richtig)
 
 ### Source Text
 

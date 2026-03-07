@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
+Die Studierenden können die Kernaufgaben aller ISO-OSI-Schichten in eigenen Worten erklären
 
 ### Stem Generation
 
-Frage: Welche zwei Schichten des ISO-OSI-Modells sind primär für die netzwerkübergreifende Adressierung von Geräten und die Adressierung von Anwendungsprozessen verantwortlich?
+Frage: In einem Netzwerk kann es vorkommen, dass ein Sender zu schnell für einen Empfänger sendet oder dass Übertragungsfehler auftreten. Welche zwei Kernaufgaben des Data Link Layer adressieren diese Probleme?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Network Layer (Schicht 3) für die netzwerkübergreifende Adressierung von Geräten und Transport Layer (Schicht 4) für die Adressierung von Anwendungsprozessen. (Richtig)
-b) Die primäre Verantwortung liegt bei Schicht 3 (Network Layer) und Schicht 4 (Transport Layer) des ISO-OSI-Modells. (Richtig)
+a) Fehlerkontrolle (Richtig)
+b) Flußkontrolle (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei Schichten des ISO-OSI-Modells sind primär für die netzwerkübergreifende Adressierung von Geräten und die Adressierung von Anwendungsprozessen verantwortlich?
+Frage: In einem Netzwerk kann es vorkommen, dass ein Sender zu schnell für einen Empfänger sendet oder dass Übertragungsfehler auftreten. Welche zwei Kernaufgaben des Data Link Layer adressieren diese Probleme?
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2) für die netzwerkübergreifende Adressierung von Geräten und Transport Layer (Schicht 4) für die Adressierung von Anwendungsprozessen. (Falsch)
-b) Die primäre Verantwortung liegt bei Schicht 3 (Network Layer) und Schicht 4 (Transport Layer) des ISO-OSI-Modells. (Richtig)
-c) Network Layer (Schicht 3) für die netzwerkübergreifende Adressierung von Geräten und Application Layer (Schicht 7) für die Adressierung von Anwendungsprozessen. (Falsch)
-d) Network Layer (Schicht 3) für die netzwerkübergreifende Adressierung von Geräten und Transport Layer (Schicht 4) für die Adressierung von Anwendungsprozessen. (Richtig)
+a) Fehlerkontrolle (Richtig)
+b) Flußkontrolle (Richtig)
+c) Medienzugriff (Falsch)
+d) Segmentierung (Falsch)
 
 ### Source Text
 

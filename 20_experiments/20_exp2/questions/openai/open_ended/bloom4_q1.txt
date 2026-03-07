@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden können die Aufgabenverteilung zwischen den Schichten analysieren und Unterschiede sowie Zusammenhänge zwischen verwandten Konzepten herausarbeiten
+Die Studierenden können die Gemeinsamkeiten und Unterschiede zwischen verwandten Konzepten auf verschiedenen ISO-OSI-Schichten gegenüberstellen
 
 ### Question Generation
 
-Frage: Analysieren Sie in einem Kommunikationsfall „Host A sendet Daten an Host B in einem anderen Netzwerk“ die Rollen der Layer-2-Identifikation, der Layer-3-Adressierung und der Layer-4-Adressierung hinsichtlich (1) welches konkrete Kommunikationsziel jeweils ausgewählt wird, (2) in welchem Gültigkeitsbereich die jeweilige Adresse wirkt (lokaler Link vs. netzwerkübergreifend vs. Teilnehmer), und (3) wie diese Adressen mit Routing und Medienzugriff zusammenhängen.
+Frage: Differenzieren Sie die Flusskontrolle in Data Link Layer 2, Network Layer 3 und Transport Layer 4 hinsichtlich (a) Ziel/Problemstellung, (b) Reichweite der Regelung (z. B. zwischen direkt verbundenen Knoten vs. Ende-zu-Ende), und (c) typischer Strategie/Ansatz, und setzen Sie die Unterschiede jeweils in Beziehung zur übergeordneten Aufgabe der jeweiligen Schicht.
 
 ### Answer Generation + Union of all
 
-Frage: Analysieren Sie in einem Kommunikationsfall „Host A sendet Daten an Host B in einem anderen Netzwerk“ die Rollen der Layer-2-Identifikation, der Layer-3-Adressierung und der Layer-4-Adressierung hinsichtlich (1) welches konkrete Kommunikationsziel jeweils ausgewählt wird, (2) in welchem Gültigkeitsbereich die jeweilige Adresse wirkt (lokaler Link vs. netzwerkübergreifend vs. Teilnehmer), und (3) wie diese Adressen mit Routing und Medienzugriff zusammenhängen.
+Frage: Differenzieren Sie die Flusskontrolle in Data Link Layer 2, Network Layer 3 und Transport Layer 4 hinsichtlich (a) Ziel/Problemstellung, (b) Reichweite der Regelung (z. B. zwischen direkt verbundenen Knoten vs. Ende-zu-Ende), und (c) typischer Strategie/Ansatz, und setzen Sie die Unterschiede jeweils in Beziehung zur übergeordneten Aufgabe der jeweiligen Schicht.
 
-Antwort: Layer 2 (Identifikation, z.B. MAC): Ziel ist der nächste Hop auf dem lokalen Link (typisch: Default-Gateway-MAC, nicht B). Gültigkeit: nur im lokalen Broadcast-/Link-Segment. Zusammenhang: wird per ARP ermittelt, Switches leiten anhand MAC, und Medienzugriff (Senden/Warten) passiert hier (Frame auf das Medium). Layer 3 (Adressierung, z.B. IP): Ziel ist Host B (IP-Adresse) netzwerkübergreifend. Gültigkeit: über mehrere Netze/Technologien hinweg. Zusammenhang: Router wählen Route/Next Hop anhand IP (Routing) und kapseln pro Hop neu in L2. Layer 4 (Adressierung, Ports): Ziel ist ein konkreter Teilnehmer/Prozess auf B (z.B. TCP/UDP-Port). Gültigkeit: End-to-End zwischen Anwendungen. Zusammenhang: Router ignorieren i.d.R. Ports; sie dienen der Demultiplexierung/QoS/Flusssteuerung auf Endsystemen. (Richtig)
+Antwort: Layer 2 (Data Link): (a) Ziel: Empfänger auf einer einzelnen Verbindung nicht überfordern (Pufferüberlauf), ggf. zusammen mit fehlergesicherter Übertragung über unsicheren Physical Layer. (b) Reichweite: hop-by-hop zwischen direkt verbundenen Knoten. (c) Strategie: lokale Regelung durch Warten/Herunterregeln, Pufferung, Stop-and-Wait bzw. Sliding-Window/ACK-basierte Verfahren. Bezug: sorgt für stabile, zuverlässige Link-Übertragung. Layer 3 (Network): (a) Ziel: Überlast/Kongestion im Netz vermeiden beim Vermitteln über mehrere Netze. (b) Reichweite: sowohl node-to-node (Router zu Router) als auch end-to-end über Pfade. (c) Strategie: Queue-/Traffic-Management, Drosseln/Droppen, explizite Signalisierung; eng gekoppelt an Routing/Weiterleitung. Layer 4 (Transport): (a) Ziel: Ende-zu-Ende Fluss zwischen Teilnehmern/Prozessen an deren Kapazität/QoS anpassen. (b) Reichweite: strikt end-to-end zwischen Transport-Endpunkten (Ports). (c) Strategie: Fenster-/Credit-basierte Flusskontrolle (z. B. Receive Window), oft kombiniert mit Rate-/Congestion-Control. (Richtig)
 
 ### Source Text
 

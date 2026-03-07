@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
+Die Studierenden können die Kernaufgaben aller ISO-OSI-Schichten in eigenen Worten erklären
 
 ### Stem Generation
 
-Frage: Welche Schichten des OSI-Modells umfassen Kernaufgaben zur Codierung von Daten?
+Frage: Welche Kernaufgaben sind sowohl in der Network Layer als auch in der Transport Layer des OSI-Modells enthalten?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Schicht 1 (Physical Layer), da sie die Codierung logischer Werte auf physikalische Größen wie NRZ oder Manchester umfasst. (Richtig)
-b) Schicht 6 (Presentation Layer), da sie die Kodierung von Anwendungsdaten als Bitstrom inklusive Endian-Ness und Zeichendarstellung übernimmt. (Richtig)
+a) Adressierung (Richtig)
+b) Flußsteuerung (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche Schichten des OSI-Modells umfassen Kernaufgaben zur Codierung von Daten?
+Frage: Welche Kernaufgaben sind sowohl in der Network Layer als auch in der Transport Layer des OSI-Modells enthalten?
 
 Antwortmöglichkeiten:
 
-a) Schicht 1 (Physical Layer), da sie die Codierung logischer Werte auf physikalische Größen wie NRZ oder Manchester umfasst. (Richtig)
-b) Schicht 2 (Data Link Layer), da sie die Segmentierung einzelner Bits zu größeren Einheiten wie Bytes umfasst, was eine Form der Datencodierung darstellt. (Falsch)
-c) Schicht 6 (Presentation Layer), da sie die Kodierung von Anwendungsdaten als Bitstrom inklusive Endian-Ness und Zeichendarstellung übernimmt. (Richtig)
-d) Schicht 7 (Application Layer), da sie die Festlegung von Protokollelementen und Daten umfasst, inklusive Codierungsstandards für Anwendungen. (Falsch)
+a) Adressierung (Richtig)
+b) Dienstqualität (Falsch)
+c) Flußsteuerung (Richtig)
+d) Routing (Falsch)
 
 ### Source Text
 

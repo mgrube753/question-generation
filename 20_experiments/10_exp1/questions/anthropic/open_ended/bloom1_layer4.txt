@@ -4,25 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+Die Studierenden verstehen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
 
 ### Question Generation
 
-Frage: Benennen Sie die drei Kernaufgaben des Transport Layer 4 und beschreiben Sie jeweils kurz deren Funktion.
+Frage: Benennen Sie die drei Kernaufgaben der Transportschicht und beschreiben Sie jeweils kurz, worauf diese abzielen.
 
 ### Answer Generation + Union of all
 
-Frage: Benennen Sie die drei Kernaufgaben des Transport Layer 4 und beschreiben Sie jeweils kurz deren Funktion.
+Frage: Benennen Sie die drei Kernaufgaben der Transportschicht und beschreiben Sie jeweils kurz, worauf diese abzielen.
 
-Antwort: Die drei Kernaufgaben des Transport Layer 4 sind:
-
-1. Adressierung: Diese Aufgabe umfasst die Verwaltung und Zuweisung von Teilnehmer-Adressen, um eine eindeutige Identifikation der Kommunikationspartner im Netz zu ermöglichen.
-
-2. Flusssteuerung: Diese Funktion dient der Nutzung der Teilnehmer-Charakteristik, um den Datenfluss zwischen Sender und Empfänger optimal anzupassen und Überlastungen zu vermeiden.
-
-3. Dienstqualität: Diese Aufgabe sichert die Quality of Service (QoS) und ermöglicht die Erbringung eines Kommunikationsdienstes mit definierten Garantien für Parameter wie Bandbreite, Latenz, Jitter und Fehlerrate. Die Dienstqualität wird dabei individuell auf den jeweiligen Teilnehmer zugeschnitten.
-
-Insgesamt stellt der Transport Layer 4 eine zuverlässige Übertragung zwischen beliebigen Teilnehmern eines Netzes bereit. (Richtig)
+Antwort: Die drei Kernaufgaben der Transportschicht sind Adressierung, Flusssteuerung und Dienstqualität. Die Adressierung zielt auf die eindeutige Identifikation von Teilnehmern im Netz ab, um eine korrekte Zustellung der Daten an die richtigen Kommunikationspartner zu ermöglichen. Die Flusssteuerung zielt darauf ab, die Charakteristik der einzelnen Teilnehmer zu nutzen und den Datenfluss entsprechend anzupassen, um Überlastungen zu vermeiden. Die Dienstqualität zielt auf die Sicherung der Quality of Service ab. Dabei wird ein Kommunikationsdienst mit Garantien für Parameter wie Bandbreite, Latenz, Jitter und Fehlerrate erbracht. Dieser Service wird auf den jeweiligen Teilnehmer zugeschnitten, um dessen spezifische Anforderungen zu erfüllen. (Richtig)
 
 ### Source Text
 

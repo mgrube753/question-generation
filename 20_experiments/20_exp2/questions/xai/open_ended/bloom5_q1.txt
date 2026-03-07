@@ -4,17 +4,24 @@
 
 ### Learning Objective
 
-Die Studierenden können die Angemessenheit bestimmter Schichtfunktionen für gegebene Anforderungen bewerten und begründete Urteile über Design-Entscheidungen im ISO-OSI-Modell abgeben
+Die Studierenden können die Eignung einer ISO-OSI-Schichtfunktion für ein gegebenes Anforderungsszenario begründet beurteilen
 
 ### Question Generation
 
-Frage: Bewerten Sie die Angemessenheit der Platzierung der Flußsteuerung im Network Layer im Vergleich zum Transport Layer für ein Szenario mit hoher Latenz in einem globalen Netzwerk und begründen Sie Ihr Urteil basierend auf den Kernaufgaben der Schichten.
+Frage: Beurteilen Sie die Eignung der Fehlerkontrolle im Data Link Layer für ein Szenario, in dem Daten über ein potenziell fehleranfälliges physikalisches Medium übertragen werden, und begründen Sie Ihr Urteil anhand selbstgewählter Kriterien.
 
 ### Answer Generation + Union of all
 
-Frage: Bewerten Sie die Angemessenheit der Platzierung der Flußsteuerung im Network Layer im Vergleich zum Transport Layer für ein Szenario mit hoher Latenz in einem globalen Netzwerk und begründen Sie Ihr Urteil basierend auf den Kernaufgaben der Schichten.
+Frage: Beurteilen Sie die Eignung der Fehlerkontrolle im Data Link Layer für ein Szenario, in dem Daten über ein potenziell fehleranfälliges physikalisches Medium übertragen werden, und begründen Sie Ihr Urteil anhand selbstgewählter Kriterien.
 
-Antwort: Die Platzierung der Flußsteuerung im Network Layer ist für ein Szenario mit hoher Latenz in einem globalen Netzwerk weniger angemessen als im Transport Layer. Im Network Layer umfasst die Flußsteuerung Node-to-Node- und End-to-End-Strategien, die primär Routing und netzwerkübergreifende Adressierung unterstützen, aber bei hoher Latenz (z. B. durch lange Distanzen) ineffizient sind, da sie lokale Knoten priorisieren und die Gesamtverzögerung nicht optimal handhaben. Der Transport Layer integriert Flußsteuerung mit Teilnehmer-Charakteristika und QoS-Garantien (z. B. Latenz, Jitter), was eine ganzheitliche End-to-End-Anpassung ermöglicht und besser für globale, latenzreiche Netze geeignet ist. (Richtig)
+Antwort: Die Fehlerkontrolle im Data Link Layer ist hochgradig geeignet für Übertragungen über fehleranfällige physikalische Medien, da sie explizit eine fehlergesicherte Übertragung über einen potenziell unsicheren Physical Layer bereitstellt.
+
+Begründung anhand dreier Kriterien:
+1. Fehlererkennung und -korrektur: Methoden wie CRC oder ARQ erkennen und beheben Bitfehler (z.B. durch Rauschen in Funkmedien), was direkte Kompensation physikalischer Störungen ermöglicht.
+2. Nähe zum Physical Layer: Als Layer 2 handhabt sie Fehler lokal zwischen benachbarten Knoten, minimiert Latenz und Overhead im Vergleich zu höheren Layern.
+3. Effizienz: Sie unterstützt Segmentierung und Adressierung, was in fehleranfälligen Szenarien (z.B. WLAN) Retransmissionen effizient steuert, ohne Netzwerk-übergreifende Routing-Belastung.
+
+Insgesamt gewährleistet sie Zuverlässigkeit bei minimalem Aufwand. (Richtig)
 
 ### Source Text
 

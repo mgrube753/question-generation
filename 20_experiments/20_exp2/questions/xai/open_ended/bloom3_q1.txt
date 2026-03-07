@@ -4,23 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
+Die Studierenden können das ISO-OSI-Modell anwenden, um für einen gegebenen Kommunikationsvorgang die zuständige Schicht zu ermitteln
 
 ### Question Generation
 
-Frage: Veranschaulichen Sie die Anwendung der Routing-Funktion in der Network Layer an einem Beispiel für die Kommunikation zwischen zwei Geräten in unterschiedlichen Netzwerken.
+Frage: Ermitteln Sie die zuständige Schicht im ISO-OSI-Modell für den Vorgang, bei dem logische Werte in physikalische Größen wie NRZ oder Manchester umgewandelt werden, und begründen Sie Ihre Entscheidung kurz.
 
 ### Answer Generation + Union of all
 
-Frage: Veranschaulichen Sie die Anwendung der Routing-Funktion in der Network Layer an einem Beispiel für die Kommunikation zwischen zwei Geräten in unterschiedlichen Netzwerken.
+Frage: Ermitteln Sie die zuständige Schicht im ISO-OSI-Modell für den Vorgang, bei dem logische Werte in physikalische Größen wie NRZ oder Manchester umgewandelt werden, und begründen Sie Ihre Entscheidung kurz.
 
-Antwort: Beispiel: Gerät A (IP: 192.168.1.10) in Netzwerk 1 sendet Daten an Gerät B (IP: 10.0.0.20) in Netzwerk 2. Die Netzwerke sind über Router verbunden.
-
-In der Network Layer (Layer 3) kapselt A die Daten in ein IP-Paket mit Zieladresse von B. Da B nicht im selben Netzwerk ist, sendet A das Paket an seinen Default-Gateway-Router R1.
-
-R1 prüft die Ziel-IP und konsultiert seine Routing-Tabelle (z.B. statisch oder dynamisch via OSPF). Sie wählt den nächsten Hop (Router R2) aus und leitet das Paket weiter.
-
-R2 routet es最终 zu Netzwerk 2, wo es B erreicht. Routing ermöglicht so die Auswahl vermittelnder Knoten für netzwerkübergreifende Kommunikation. (Richtig)
+Antwort: Die zuständige Schicht ist die Physical Layer (Schicht 1). Begründung: Sie übernimmt die Codierung, also die Abbildung logischer Werte auf physikalische Größen wie NRZ oder Manchester, um den Transport und die Decodierung zu ermöglichen. Dies ist eine Kernaufgabe der Physical Layer, im Gegensatz zu höheren Schichten, die sich auf Fehlerkontrolle, Routing oder Anwendungsdaten konzentrieren. (Richtig)
 
 ### Source Text
 

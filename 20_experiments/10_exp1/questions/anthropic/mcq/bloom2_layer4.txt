@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+Die Studierenden verstehen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
 
 ### Stem Generation
 
-Frage: Welche zwei Parameter können im Rahmen der Dienstqualität des Transport Layers für einen Kommunikationsdienst garantiert werden?
+Frage: Welche zwei Kernaufgaben der Transport-Schicht sind speziell auf die individuellen Charakteristika der Kommunikationsteilnehmer ausgerichtet?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Bandbreite (Richtig)
-b) Latenz (Richtig)
+a) Flußsteuerung (Richtig)
+b) Dienstqualität (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei Parameter können im Rahmen der Dienstqualität des Transport Layers für einen Kommunikationsdienst garantiert werden?
+Frage: Welche zwei Kernaufgaben der Transport-Schicht sind speziell auf die individuellen Charakteristika der Kommunikationsteilnehmer ausgerichtet?
 
 Antwortmöglichkeiten:
 
-a) Adressauflösung (Falsch)
-b) Bandbreite (Richtig)
-c) Latenz (Richtig)
-d) Paketgröße (Falsch)
+a) Adressierung (Falsch)
+b) Dienstqualität (Richtig)
+c) Flußsteuerung (Richtig)
+d) Segmentierung (Falsch)
 
 ### Source Text
 

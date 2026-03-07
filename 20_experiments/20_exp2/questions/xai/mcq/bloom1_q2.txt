@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
+Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge auflisten und zu jeder Schicht ihre Hauptfunktion beschreiben
 
 ### Stem Generation
 
-Frage: Welche zwei Arten der Flußsteuerung werden in der Network Layer unterschieden?
+Frage: Welche zwei Schichten des ISO-OSI-Modells haben Codierung als Kernaufgabe?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) End-to-End Flußsteuerung (Richtig)
-b) Node-to-Node Flußsteuerung (Richtig)
+a) Physical Layer (Layer 1) und Presentation Layer (Layer 6), da Layer 1 logische Werte auf physikalische Größen abbildet und Layer 6 Anwendungsdaten als Bitstrom kodiert. (Richtig)
+b) Schicht 1 (Physical) und Schicht 6 (Presentation), wobei Schicht 1 Codierung wie NRZ oder Manchester umfasst und Schicht 6 Aspekte wie Endianness oder Zeichenkodierung behandelt. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei Arten der Flußsteuerung werden in der Network Layer unterschieden?
+Frage: Welche zwei Schichten des ISO-OSI-Modells haben Codierung als Kernaufgabe?
 
 Antwortmöglichkeiten:
 
-a) End-to-End Flußsteuerung (Richtig)
-b) Node-to-Node Flußsteuerung (Richtig)
-c) Sliding Window Flußsteuerung (Falsch)
-d) Stop-and-Wait Flußsteuerung (Falsch)
+a) Data Link Layer (Layer 2) und Presentation Layer (Layer 6), da Layer 2 Bits zu Frames codiert und Layer 6 Datenformatierung handhabt. (Falsch)
+b) Physical Layer (Layer 1) und Application Layer (Layer 7), da Layer 1 physikalische Codierung durchführt und Layer 7 anwendungsspezifische Daten codiert. (Falsch)
+c) Physical Layer (Layer 1) und Presentation Layer (Layer 6), da Layer 1 logische Werte auf physikalische Größen abbildet und Layer 6 Anwendungsdaten als Bitstrom kodiert. (Richtig)
+d) Schicht 1 (Physical) und Schicht 6 (Presentation), wobei Schicht 1 Codierung wie NRZ oder Manchester umfasst und Schicht 6 Aspekte wie Endianness oder Zeichenkodierung behandelt. (Richtig)
 
 ### Source Text
 

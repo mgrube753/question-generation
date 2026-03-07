@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
+Die Studierenden können das ISO-OSI-Modell anwenden, um für einen gegebenen Kommunikationsvorgang die zuständige Schicht zu ermitteln
 
 ### Stem Generation
 
-Frage: Ermitteln Sie, welche Schichten des Modells Adressierung als Kernaufgabe ausführen.
+Frage: Ermitteln Sie die Schichten des OSI-Modells, die für die End-to-End-Flußsteuerung zuständig sind.
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Data Link Layer (Schicht 2), Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
-b) Schicht 2 (Identifikation), Schicht 3 (Netzwerk-übergreifend) und Schicht 4 (Teilnehmer) (Richtig)
+a) Network Layer und Transport Layer (Richtig)
+b) Schicht 3 und Schicht 4 (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ermitteln Sie, welche Schichten des Modells Adressierung als Kernaufgabe ausführen.
+Frage: Ermitteln Sie die Schichten des OSI-Modells, die für die End-to-End-Flußsteuerung zuständig sind.
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2), Network Layer (Schicht 3) und Transport Layer (Schicht 4) (Richtig)
-b) Network Layer (Schicht 3), Transport Layer (Schicht 4) und Application Layer (Schicht 7) (Falsch)
-c) Physical Layer (Schicht 1), Data Link Layer (Schicht 2) und Network Layer (Schicht 3) (Falsch)
-d) Schicht 2 (Identifikation), Schicht 3 (Netzwerk-übergreifend) und Schicht 4 (Teilnehmer) (Richtig)
+a) Data Link Layer und Network Layer (Falsch)
+b) Network Layer und Transport Layer (Richtig)
+c) Schicht 2 und Schicht 3 (Falsch)
+d) Schicht 3 und Schicht 4 (Richtig)
 
 ### Source Text
 

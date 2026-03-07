@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+Die Studierenden verstehen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
 
 ### Stem Generation
 
-Frage: Welche der folgenden Kernaufgaben der Presentation Layer dienen der Konvertierung der Datendarstellung?
+Frage: Welche zwei Arten der Konvertierung werden in der Presentation Layer durchgeführt?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Endian-Ness: Konvertieren der Datendarstellung (z. B. little & big endian). (Richtig)
-b) Zeichen: Konvertierung der Zeichendarstellung (z. B. ASCII, Unicode). (Richtig)
+a) Konvertierung der Datendarstellung (z. B. Endian-Ness) und Konvertierung der Zeichendarstellung (z. B. ASCII zu Unicode). (Richtig)
+b) Konvertierung von Serialisierungsformaten und Umwandlung nationaler Sonderzeichen in standardisierte Kodierungen. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche der folgenden Kernaufgaben der Presentation Layer dienen der Konvertierung der Datendarstellung?
+Frage: Welche zwei Arten der Konvertierung werden in der Presentation Layer durchgeführt?
 
 Antwortmöglichkeiten:
 
-a) Endian-Ness: Konvertieren der Datendarstellung (z. B. little & big endian). (Richtig)
-b) Kompression: Komprimieren und Dekomprimieren. (Falsch)
-c) Verschlüsselung: Verschlüsseln und Entschlüsseln. (Falsch)
-d) Zeichen: Konvertierung der Zeichendarstellung (z. B. ASCII, Unicode). (Richtig)
+a) Konvertierung der Datendarstellung (z. B. Endian-Ness) und Konvertierung der Zeichendarstellung (z. B. ASCII zu Unicode). (Richtig)
+b) Konvertierung der Datenkompression (z. B. ZIP) und Konvertierung der Datenverschlüsselung (z. B. AES). (Falsch)
+c) Konvertierung der Netzwerkadressen (z. B. IP) und Konvertierung der Transportports (z. B. TCP). (Falsch)
+d) Konvertierung von Serialisierungsformaten und Umwandlung nationaler Sonderzeichen in standardisierte Kodierungen. (Richtig)
 
 ### Source Text
 

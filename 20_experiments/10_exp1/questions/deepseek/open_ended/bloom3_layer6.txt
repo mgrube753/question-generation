@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+Die Studierenden verstehen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
 
 ### Question Generation
 
-Frage: Konvertieren Sie den 32-Bit-Hexadezimalwert 0xA1B2C3D4 aus der Big-Endian- in die Little-Endian-Darstellung. Geben Sie die resultierende Bytefolge in hexadezimaler Form an.
+Frage: Ein Little-Endian System speichert den 32-Bit-Hexadezimalwert 0xDEADBEEF. Wie lautet die exakte Byte-Reihenfolge (in Hexadezimalschreibweise), die ein Big-Endian System für denselben Wert verwenden würde?
 
 ### Answer Generation + Union of all
 
-Frage: Konvertieren Sie den 32-Bit-Hexadezimalwert 0xA1B2C3D4 aus der Big-Endian- in die Little-Endian-Darstellung. Geben Sie die resultierende Bytefolge in hexadezimaler Form an.
+Frage: Ein Little-Endian System speichert den 32-Bit-Hexadezimalwert 0xDEADBEEF. Wie lautet die exakte Byte-Reihenfolge (in Hexadezimalschreibweise), die ein Big-Endian System für denselben Wert verwenden würde?
 
-Antwort: 0xD4C3B2A1 (Richtig)
+Antwort: Die Byte-Reihenfolge im Big-Endian-System lautet: DE AD BE EF. (Richtig)
 
 ### Source Text
 

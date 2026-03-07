@@ -4,21 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+Die Studierenden verstehen die Verfahren zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
 
 ### Question Generation
 
-Frage: Beurteilen Sie die Wirksamkeit der Flusskontrolle im Data Link Layer im Vergleich zur Fehlerkontrolle hinsichtlich ihrer Beiträge zur fehlergesicherten Datenübertragung.
+Frage: Bewerten Sie die Zweckmässigkeit der Flusskontrolle im Data Link Layer hinsichtlich der Vermeidung von Datenverlusten bei unterschiedlichen Geschwindigkeiten von Sender und Empfänger.
 
 ### Answer Generation + Union of all
 
-Frage: Beurteilen Sie die Wirksamkeit der Flusskontrolle im Data Link Layer im Vergleich zur Fehlerkontrolle hinsichtlich ihrer Beiträge zur fehlergesicherten Datenübertragung.
+Frage: Bewerten Sie die Zweckmässigkeit der Flusskontrolle im Data Link Layer hinsichtlich der Vermeidung von Datenverlusten bei unterschiedlichen Geschwindigkeiten von Sender und Empfänger.
 
-Antwort: Die Fehlerkontrolle im Data Link Layer trägt direkt zur fehlergesicherten Datenübertragung bei, indem sie Übertragungsfehler erkennt, behebt oder signalisiert, z. B. durch Prüfsummen oder Retransmission. Sie adressiert physische Störungen im Physical Layer und gewährleistet Datenintegrität.
-
-Die Flusskontrolle hingegen verhindert indirekt Fehler, indem sie den Sender bei zu hoher Geschwindigkeit bremst (z. B. durch Puffern oder Warten), um Überlastung des Empfängers und damit verbundenen Datenverlust zu vermeiden. Sie unterstützt die Fehlerfreiheit, ist aber nicht primär auf Fehlerkorrektur ausgerichtet.
-
-Vergleich: Fehlerkontrolle ist wirksamer für tatsächliche Fehlerbehebung und zentral für die Gesamtsicherheit. Flusskontrolle ist ergänzend, weniger wirksam allein, da sie keine Fehler erkennt, sondern nur potenzielle Verluste durch Überlast verhindert. Beide zusammen maximieren die Zuverlässigkeit. (Richtig)
+Antwort: Die Flusskontrolle im Data Link Layer ist hochgradig zweckmäßig zur Vermeidung von Datenverlusten bei Geschwindigkeitsunterschieden. Sie adressiert das Problem, dass ein schnellerer Sender den Empfänger überfordert, was zu Pufferüberlauf und Datenverlust führen würde. Strategien wie Zwischenpuffern, Herunterregeln der Sendegeschwindigkeit oder Warten (z. B. via Stop-and-Wait oder Sliding-Window-Protokolle) sorgen dafür, dass der Empfänger Daten in seinem Tempo verarbeiten kann. Dies gewährleistet eine fehlergesicherte Übertragung über potenziell unzuverlässige physische Schichten, minimiert Verluste und optimiert die Ressourcennutzung. Insgesamt ist sie essenziell für effiziente, verlustfreie Kommunikation in Netzwerken. (Richtig)
 
 ### Source Text
 

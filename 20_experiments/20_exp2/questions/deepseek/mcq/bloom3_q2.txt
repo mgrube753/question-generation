@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
+Die Studierenden können das ISO-OSI-Modell anwenden, um für einen gegebenen Kommunikationsvorgang die zuständige Schicht zu ermitteln
 
 ### Stem Generation
 
-Frage: Bei der gesicherten Übertragung vertraulicher Daten mit garantierter Mindestbandbreite sind primär welche zwei Schichten des OSI-Modells für die Verschlüsselung und die Bandbreitengarantie zuständig?
+Frage: Ein Kommunikationssystem verschlüsselt die zu übertragenden Daten und fasst einzelne Bits zu größeren Einheiten zusammen. Ermitteln Sie die beiden Schichten des ISO-OSI-Modells, die primär für diese Aufgaben verantwortlich sind.
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Presentation Layer (Verschlüsselung) und Transport Layer (Bandbreitengarantie) (Richtig)
-b) Schicht 6 (Verschlüsselung) und Schicht 4 (Bandbreitengarantie) (Richtig)
+a) Data Link Layer (Richtig)
+b) Presentation Layer (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Bei der gesicherten Übertragung vertraulicher Daten mit garantierter Mindestbandbreite sind primär welche zwei Schichten des OSI-Modells für die Verschlüsselung und die Bandbreitengarantie zuständig?
+Frage: Ein Kommunikationssystem verschlüsselt die zu übertragenden Daten und fasst einzelne Bits zu größeren Einheiten zusammen. Ermitteln Sie die beiden Schichten des ISO-OSI-Modells, die primär für diese Aufgaben verantwortlich sind.
 
 Antwortmöglichkeiten:
 
-a) Application Layer (Verschlüsselung) und Network Layer (Bandbreitengarantie) (Falsch)
-b) Presentation Layer (Verschlüsselung) und Transport Layer (Bandbreitengarantie) (Richtig)
-c) Data Link Layer (Verschlüsselung) und Transport Layer (Bandbreitengarantie) (Falsch)
-d) Schicht 6 (Verschlüsselung) und Schicht 4 (Bandbreitengarantie) (Richtig)
+a) Application Layer (Falsch)
+b) Data Link Layer (Richtig)
+c) Presentation Layer (Richtig)
+d) Transport Layer (Falsch)
 
 ### Source Text
 

@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
+Die Studierenden können das ISO-OSI-Modell anwenden, um für einen gegebenen Kommunikationsvorgang die zuständige Schicht zu ermitteln
 
 ### Stem Generation
 
-Frage: Ermitteln Sie anhand des OSI-Modells die zwei Schichten, die (1) die Auswahl vermittelnder Zwischenknoten für die Kommunikation nicht direkt verbundener Geräte und (2) das Setzen von Zwischenpunkten innerhalb einer Kommunikationsbeziehung bereitstellen.
+Frage: Ermitteln Sie, welche zwei OSI-Schichten jeweils zuständig sind, wenn ein Sender (1) vor der Übertragung 32‑Bit-Messwerte von little-endian in big-endian umwandelt und (2) für die Kommunikation zu einem Empfänger in einem anderen Netzwerk vermittelnde Zwischenknoten zur Weiterleitung ausgewählt werden müssen.
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Network Layer (Schicht 3) – Routing: Auswahl vermittelnder Zwischenknoten zur Kommunikation nicht direkt verbundener Geräte (Richtig)
-b) Session Layer (Schicht 5) – Synchronisation: Setzen von Zwischenpunkten innerhalb einer Kommunikationsbeziehung (Richtig)
+a) (1) Presentation Layer (Schicht 6) für Endian-Konvertierung, (2) Network Layer (Schicht 3) für Routing/Weiterleitungs-Auswahl über Zwischenknoten (Richtig)
+b) (1) Darstellungsschicht: Umwandlung little-endian ↔ big-endian (OSI 6), (2) Vermittlungsschicht: Auswahl vermittelnder Knoten zur netzübergreifenden Kommunikation (OSI 3) (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Ermitteln Sie anhand des OSI-Modells die zwei Schichten, die (1) die Auswahl vermittelnder Zwischenknoten für die Kommunikation nicht direkt verbundener Geräte und (2) das Setzen von Zwischenpunkten innerhalb einer Kommunikationsbeziehung bereitstellen.
+Frage: Ermitteln Sie, welche zwei OSI-Schichten jeweils zuständig sind, wenn ein Sender (1) vor der Übertragung 32‑Bit-Messwerte von little-endian in big-endian umwandelt und (2) für die Kommunikation zu einem Empfänger in einem anderen Netzwerk vermittelnde Zwischenknoten zur Weiterleitung ausgewählt werden müssen.
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2) – Switching/Forwarding: Auswahl des nächsten Zwischenknotens über MAC-Adressen zur Kommunikation nicht direkt verbundener Geräte (Falsch)
-b) Network Layer (Schicht 3) – Routing: Auswahl vermittelnder Zwischenknoten zur Kommunikation nicht direkt verbundener Geräte (Richtig)
-c) Session Layer (Schicht 5) – Synchronisation: Setzen von Zwischenpunkten innerhalb einer Kommunikationsbeziehung (Richtig)
-d) Transport Layer (Schicht 4) – Zuverlässigkeit/Flusssteuerung: Setzen von Zwischenpunkten durch Sequenznummern und Bestätigungen (ACKs) innerhalb einer Verbindung (Falsch)
+a) (1) Application Layer (Schicht 7) für Endian-Konvertierung als Teil der Anwendungsserialisierung, (2) Transport Layer (Schicht 4) für die Auswahl des Kommunikationspfads über Zwischenknoten (Falsch)
+b) (1) Darstellungsschicht: Umwandlung little-endian ↔ big-endian (OSI 6), (2) Vermittlungsschicht: Auswahl vermittelnder Knoten zur netzübergreifenden Kommunikation (OSI 3) (Richtig)
+c) (1) Data Link Layer (Schicht 2) für Umordnung der Byte-Reihenfolge beim Zusammenfassen von Bits zu Bytes, (2) Network Layer (Schicht 3) für Routing/Weiterleitungs-Auswahl über Zwischenknoten (Falsch)
+d) (1) Presentation Layer (Schicht 6) für Endian-Konvertierung, (2) Network Layer (Schicht 3) für Routing/Weiterleitungs-Auswahl über Zwischenknoten (Richtig)
 
 ### Source Text
 

@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+Die Studierenden verstehen die Verfahren zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
 
 ### Question Generation
 
-Frage: Entwickeln Sie ein Konzept für einen Data Link Layer in einem sensorbasierten Netzwerk mit stark begrenzter Energie. Integrieren Sie dabei die fünf Kernaufgaben Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff so, dass der Energieverbrauch minimiert wird.
+Frage: Entwerfen Sie ein neuartiges Data-Link-Layer-Protokoll für eine Punkt-zu-Punkt-Verbindung über einen fehleranfälligen Kanal mit asymmetrischen Bandbreiten. Beschreiben Sie konkret, wie Ihr Protokoll die fünf Kernaufgaben Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff umsetzt.
 
 ### Answer Generation + Union of all
 
-Frage: Entwickeln Sie ein Konzept für einen Data Link Layer in einem sensorbasierten Netzwerk mit stark begrenzter Energie. Integrieren Sie dabei die fünf Kernaufgaben Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff so, dass der Energieverbrauch minimiert wird.
+Frage: Entwerfen Sie ein neuartiges Data-Link-Layer-Protokoll für eine Punkt-zu-Punkt-Verbindung über einen fehleranfälligen Kanal mit asymmetrischen Bandbreiten. Beschreiben Sie konkret, wie Ihr Protokoll die fünf Kernaufgaben Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff umsetzt.
 
-Antwort: Das Konzept priorisiert minimale Aktivitätsdauer (Duty Cycling) und niedrigen Overhead. Fehlerkontrolle: Leichte Fehlererkennung via CRC, bei Fehlern verwerfen (keine Retransmission, falls Applikation tolerierbar). Flusskontrolle: Stop-and-Wait, um Puffer zu sparen und Senderrate anzupassen. Segmentierung: Feste, kleine Rahmen (z.B. 64 Byte) mit minimalem Header, um Übertragungszeit und Fehlerwahrscheinlichkeit gering zu halten. Identifikation: Kurze, lokale Cluster-Adressen (2 Byte) statt globaler Adressen. Medienzugriff: TDMA-basiert mit vorab zugeteilten Zeitschlitzen; Knoten schlafen außerhalb ihrer Sende-/Empfangsfenster. Dies minimiert Listening, Kollisionen und Overhead, und integriert alle Aufgaben energieeffizient. (Richtig)
+Antwort: Protokoll: "Adaptive Asymmetric Link Protocol (AALP)". Fehlerkontrolle: 32-Bit-CRC zur Erkennung; selektive Wiederholung (Selective Repeat ARQ) mit NACKs auf dem langsameren Rückkanal für Fehlerbehebung. Flusskontrolle: Adaptives Fenster, basierend auf empfangenen Pufferinformationen und gemessener Asymmetrie; Sender passt Rate an langsamerem Kanal an. Segmentierung: Variable Framegröße bis 1500 Byte Nutzdaten; Header mit Längenfeld, Bit-Stuffing zur Rahmengrenzkennung. Identifikation: 1-Byte-Adressfeld (z.B. 0x01 für A, 0x02 für B) identifiziert Sender/Empfänger. Medienzugriff: Vollduplex auf separaten Leitungen; jede Station aktiviert PHY kontinuierlich zum Senden/Empfangen, keine Kollisionsbehandlung nötig.
 
 ### Source Text
 

@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden können die Angemessenheit bestimmter Schichtfunktionen für gegebene Anforderungen bewerten und begründete Urteile über Design-Entscheidungen im ISO-OSI-Modell abgeben
+Die Studierenden können die Eignung einer ISO-OSI-Schichtfunktion für ein gegebenes Anforderungsszenario begründet beurteilen
 
 ### Question Generation
 
-Frage: Bewerten Sie, ob die Aufgabe der Datenkompression im ISO-OSI-Modell sinnvollerweise dem Presentation Layer zugeordnet ist oder ob der Application Layer hierfür besser geeignet wäre. Begründen Sie Ihr Urteil anhand der definierten Kernaufgaben der beiden Schichten.
+Frage: Beurteilen Sie, ob für die garantierte Übertragung von Echtzeit-Sprachdaten mit minimaler Latenz und konstanter Bandbreite die Dienstgüte-Funktion (QoS) des Transport Layer ausreichend ist oder ob zusätzliche Maßnahmen auf niedrigeren Schichten notwendig erscheinen. Begründen Sie Ihr Urteil.
 
 ### Answer Generation + Union of all
 
-Frage: Bewerten Sie, ob die Aufgabe der Datenkompression im ISO-OSI-Modell sinnvollerweise dem Presentation Layer zugeordnet ist oder ob der Application Layer hierfür besser geeignet wäre. Begründen Sie Ihr Urteil anhand der definierten Kernaufgaben der beiden Schichten.
+Frage: Beurteilen Sie, ob für die garantierte Übertragung von Echtzeit-Sprachdaten mit minimaler Latenz und konstanter Bandbreite die Dienstgüte-Funktion (QoS) des Transport Layer ausreichend ist oder ob zusätzliche Maßnahmen auf niedrigeren Schichten notwendig erscheinen. Begründen Sie Ihr Urteil.
 
-Antwort: Die Datenkompression ist sinnvollerweise dem Presentation Layer (Schicht 6) zuzuordnen. Seine definierte Kernaufgabe ist die Kodierung der Anwendungsdaten als Bitstrom, wozu explizit Kompression gehört, ebenso wie Zeichenkodierung und Verschlüsselung. Diese Aufgaben transformieren die Datendarstellung anwendungsunabhängig für die Übertragung. Der Application Layer (Schicht 7) ist dagegen für anwendungsspezifische Elemente, Protokolle und Verhalten verantwortlich. Eine Zuordnung der Kompression dorthin würde den Dienst unnötig an einzelne Anwendungen binden, obwohl er ein generischer, darstellungsorientierter Dienst ist, der vielen Anwendungen gleichermaßen nutzt. Daher ist die Zuordnung zum Presentation Layer konsequent. (Richtig)
+Antwort: Die QoS des Transport Layer ist allein nicht ausreichend. Zwar garantiert sie Parameter wie Latenz und Bandbreite auf Ende-zu-Ende-Ebene, setzt jedoch voraus, dass die darunterliegenden Schichten diese Garantien unterstützen. Echtzeit-Sprachdaten benötigen jedoch extrem niedrige und stabile Latenz, was nur durch durchgängige Priorisierung und Ressourcenreservierung in allen Schichten erreicht werden kann. Auf Network Layer müssen Traffic-Shaping und QoS-Routing (z.B. DiffServ) Paketverluste und -verzögerungen minimieren. Der Data Link Layer muss durch Medienzugriffskontrolle (z.B. TDMA) Kollisionen vermeiden und garantierte Zeitslots bieten. Der Physical Layer benötigt geeignete Codierung mit geringem Overhead. Ohne diese niedrigschichtigen Maßnahmen können variable Verzögerungen (Jitter) und Paketverluste die Transport-QoS untergraben, sodass zusätzliche Maßnahmen unverzichtbar sind.
 
 ### Source Text
 

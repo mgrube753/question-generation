@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
+Die Studierenden verstehen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
 
 ### Question Generation
 
-Frage: Veranschaulichen Sie anhand eines konkreten Szenarios, wie ein logischer Bitstrom von einem Sender zu einem Empfänger übertragen wird, indem Sie das Zusammenspiel der drei Kernaufgaben des Physical Layer (Codierung, Transport und Decodierung) systematisch durchlaufen und dabei jeweils ein Beispielverfahren oder -medium benennen.
+Frage: Veranschaulichen Sie am Beispiel der Übertragung einer Bitfolge über eine Funkverbindung, wie Codierung, Transport und Decodierung im Physical Layer zusammenwirken, um logische Werte von einem Sender zu einem Empfänger zu übermitteln.
 
 ### Answer Generation + Union of all
 
-Frage: Veranschaulichen Sie anhand eines konkreten Szenarios, wie ein logischer Bitstrom von einem Sender zu einem Empfänger übertragen wird, indem Sie das Zusammenspiel der drei Kernaufgaben des Physical Layer (Codierung, Transport und Decodierung) systematisch durchlaufen und dabei jeweils ein Beispielverfahren oder -medium benennen.
+Frage: Veranschaulichen Sie am Beispiel der Übertragung einer Bitfolge über eine Funkverbindung, wie Codierung, Transport und Decodierung im Physical Layer zusammenwirken, um logische Werte von einem Sender zu einem Empfänger zu übermitteln.
 
-Antwort: Szenario: Übertragung des Bitstroms "1010" zwischen zwei Computern. Zunächst erfolgt die Codierung beim Sender: Der logische Bitstrom wird mittels Manchester-Codierung in physikalische Signale umgewandelt. Eine "1" wird als Spannungsübergang von Low nach High, eine "0" als Übergang von High nach Low dargestellt. Anschließend findet der Transport statt: Die elektrischen Signale werden über ein mediengebundenes Übertragungsmedium, konkret ein Ethernet-Kupferkabel, vom Sender zum Empfänger übertragen. Abschließend erfolgt die Decodierung beim Empfänger: Das ankommende Signal wird durch Abtastung in definierten Zeitintervallen erfasst. Anhand festgelegter Detektionsbereiche werden die Spannungspegel interpretiert und in die ursprünglichen logischen Werte "1010" zurückgewandelt. So wird der Bitstrom vollständig rekonstruiert. (Richtig)
+Antwort: Bei der Übertragung einer Bitfolge (z.B. 1010) über Funk wirken die drei Kernaufgaben des Physical Layers zusammen. Bei der Codierung werden die logischen Werte 0 und 1 auf physikalische Größen abgebildet. Eine 1 könnte beispielsweise durch eine hohe Amplitude und eine 0 durch eine niedrige Amplitude eines Trägersignals dargestellt werden. Der Transport erfolgt medienfrei durch Aussendung elektromagnetischer Wellen vom Sender zum Empfänger. Die modulierten Funksignale breiten sich durch den Raum aus. Bei der Decodierung empfängt der Empfänger die Funksignale und interpretiert sie zurück in logische Werte. Durch Abtastung zu definierten Zeitpunkten und festgelegte Detektionsbereiche wird bestimmt, ob das empfangene Signal oberhalb oder unterhalb eines Schwellwerts liegt, um die ursprüngliche Bitfolge zu rekonstruieren. (Richtig)
 
 ### Source Text
 

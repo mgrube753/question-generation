@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+Die Studierenden verstehen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
 
 ### Stem Generation
 
-Frage: Welche zwei Kernaufgaben der OSI-Sitzungsschicht (Layer 5) betreffen nicht das Aufbauen, Verwalten, Zurückweisen oder Beenden von Sitzungen?
+Frage: Welche zwei Kernaufgaben der Sitzungsschicht (Layer 5) sind in einem System erforderlich, das (1) während einer längeren Datenübertragung regelmäßig Zwischenpunkte setzt, um nach Unterbrechungen an definierter Stelle fortzusetzen, und (2) mehrere zusammengehörige Nachrichtenfolgen zu einer gemeinsamen, zusammenhängenden Transaktionseinheit gruppiert?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Synchronisation: Setzen von Zwischenpunkten (Richtig)
-b) Bündelung: Gruppierung zusammengehöriger Transaktionen (Richtig)
+a) Synchronisation durch Setzen von Zwischenpunkten (Checkpoints), um nach Unterbrechungen an definierter Stelle fortzusetzen (Richtig)
+b) Bündelung: Gruppierung zusammengehöriger Nachrichtenfolgen/Transaktionen zu einer gemeinsamen Transaktionseinheit (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche zwei Kernaufgaben der OSI-Sitzungsschicht (Layer 5) betreffen nicht das Aufbauen, Verwalten, Zurückweisen oder Beenden von Sitzungen?
+Frage: Welche zwei Kernaufgaben der Sitzungsschicht (Layer 5) sind in einem System erforderlich, das (1) während einer längeren Datenübertragung regelmäßig Zwischenpunkte setzt, um nach Unterbrechungen an definierter Stelle fortzusetzen, und (2) mehrere zusammengehörige Nachrichtenfolgen zu einer gemeinsamen, zusammenhängenden Transaktionseinheit gruppiert?
 
 Antwortmöglichkeiten:
 
-a) Bündelung: Gruppierung zusammengehöriger Transaktionen (Richtig)
-b) Dialogsteuerung: Aushandeln und Steuern von Halb-/Vollduplex-Kommunikation (Falsch)
-c) Synchronisation: Setzen von Zwischenpunkten (Richtig)
-d) Token-Management: Vergabe eines „Sprechrechts“ zur Koordination des Zugriffs (Falsch)
+a) Bündelung: Gruppierung zusammengehöriger Nachrichtenfolgen/Transaktionen zu einer gemeinsamen Transaktionseinheit (Richtig)
+b) Fluss- und Fehlerkontrolle durch Sequenznummern sowie erneutes Senden verlorener Segmente (Falsch)
+c) Synchronisation durch Setzen von Zwischenpunkten (Checkpoints), um nach Unterbrechungen an definierter Stelle fortzusetzen (Richtig)
+d) Sitzungsverwaltung: Aufbau, Steuerung und Beenden einer Sitzung (z.B. Session-Handshake/Keep-Alive) (Falsch)
 
 ### Source Text
 

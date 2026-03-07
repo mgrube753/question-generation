@@ -4,17 +4,27 @@
 
 ### Learning Objective
 
-Die Studierenden können auf Basis der Schichtenprinzipien eigene Lösungsvorschläge für Kommunikationsprobleme entwickeln, die den Aufgaben der jeweiligen Schichten entsprechen
+Die Studierenden können für ein gegebenes Kommunikationsproblem einen Lösungsvorschlag entwickeln, der die Aufgaben der relevanten ISO-OSI-Schichten berücksichtigt
 
 ### Question Generation
 
-Frage: Entwickeln Sie einen eigenen Lösungsvorschlag für ein Kommunikationsproblem, bei dem ein Sender Daten zu schnell an einen Empfänger in einem anderen Netzwerk überträgt, unter Integration der Flußsteuerungsaufgaben aus Network Layer und Transport Layer.
+Frage: Entwickeln Sie einen Lösungsvorschlag für ein Kommunikationsproblem, bei dem sensible Anwendungsdaten fehlergesichert über heterogene Netzwerke mit unterschiedlichen Medien übertragen werden sollen, und integrieren Sie dabei die relevanten Aufgaben der ISO-OSI-Schichten 1 bis 4.
 
 ### Answer Generation + Union of all
 
-Frage: Entwickeln Sie einen eigenen Lösungsvorschlag für ein Kommunikationsproblem, bei dem ein Sender Daten zu schnell an einen Empfänger in einem anderen Netzwerk überträgt, unter Integration der Flußsteuerungsaufgaben aus Network Layer und Transport Layer.
+Frage: Entwickeln Sie einen Lösungsvorschlag für ein Kommunikationsproblem, bei dem sensible Anwendungsdaten fehlergesichert über heterogene Netzwerke mit unterschiedlichen Medien übertragen werden sollen, und integrieren Sie dabei die relevanten Aufgaben der ISO-OSI-Schichten 1 bis 4.
 
-Antwort: Lösungsvorschlag: Implementieren einer hybriden Flusssteuerung, die Network-Layer (L3) und Transport-Layer (L4) integriert. Im L3 erfolgt Node-to-Node-Steuerung durch Zwischenknoten, die Überlast-Signale (z.B. via ICMP-Quellenunterdrückung) senden, um die Senderrate lokal zu drosseln. Ergänzend übernimmt L4 End-to-End-Steuerung (z.B. TCP-ähnlich), indem der Empfänger Acknowledge-Nachrichten mit Fenstergrößen sendet, die auf seiner Pufferkapazität basieren. Integration: L3-Signale triggern L4-Ratenanpassung, z.B. Reduzierung des Sliding Windows. Dadurch wird Übertragung verlangsamt, ohne Datenverlust, unter Berücksichtigung von Netzwerkpfaden und Empfänger-Charakteristika. Vorteil: Effiziente Handhabung heterogener Netze. (Richtig)
+Antwort: Für die fehlergesicherte Übertragung sensibler Anwendungsdaten über heterogene Netzwerke schlage ich eine schichtenbasierte OSI-Architektur vor: 
+
+Schicht 1 (Physical): Codierung logischer Werte auf physikalische Größen (z.B. Manchester), Transport über mediengebundene (Kabel) oder -freie (Funk) Kanäle und Decodierung, um heterogene Medien zu handhaben.
+
+Schicht 2 (Data Link): Fehlerkontrolle durch Erkennung und Korrektur (z.B. CRC), Flußkontrolle (z.B. Stop-and-Wait), Segmentierung in Bytes, Adressierung und Medienzugriff (z.B. CSMA/CD) für fehlergesicherte Punkt-zu-Punkt-Übertragung.
+
+Schicht 3 (Network): Netzwerkübergreifende Adressierung (z.B. IP), Routing (z.B. OSPF) für Pfadwahl über heterogene Netze und node-to-node Flußsteuerung zur Vermeidung von Überlastung.
+
+Schicht 4 (Transport): Teilnehmer-Adressierung (z.B. Ports), end-to-end Flußsteuerung (z.B. TCP) und QoS-Sicherung (z.B. garantierte Latenz/Fehlerrate) für zuverlässige, sensible Datenübertragung.
+
+Dies gewährleistet Integrität und Zuverlässigkeit. (Richtig)
 
 ### Source Text
 

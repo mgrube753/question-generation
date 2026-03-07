@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
+Die Studierenden können die Kernaufgaben aller ISO-OSI-Schichten in eigenen Worten erklären
 
 ### Question Generation
 
-Frage: Erklären Sie, wie der Data Link Layer auf dem Physical Layer aufbaut und welche zusätzlichen Funktionen er bereitstellt, um eine zuverlässigere Datenübertragung zu ermöglichen.
+Frage: Erklären Sie, wie sich die Adressierung auf den Schichten 2, 3 und 4 des ISO-OSI-Modells in Bezug auf ihren jeweiligen Zweck unterscheidet.
 
 ### Answer Generation + Union of all
 
-Frage: Erklären Sie, wie der Data Link Layer auf dem Physical Layer aufbaut und welche zusätzlichen Funktionen er bereitstellt, um eine zuverlässigere Datenübertragung zu ermöglichen.
+Frage: Erklären Sie, wie sich die Adressierung auf den Schichten 2, 3 und 4 des ISO-OSI-Modells in Bezug auf ihren jeweiligen Zweck unterscheidet.
 
-Antwort: Der Data Link Layer (Schicht 2) baut direkt auf dem Physical Layer (Schicht 1) auf. Während der Physical Layer nur die physikalische Codierung, den Transport und die Decodierung logischer Werte über ein Medium bereitstellt, fügt der Data Link Layer Mechanismen für eine fehlergesicherte Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer hinzu. Die fünf zusätzlichen Kernfunktionen sind: Fehlerkontrolle (Erkennen, Beheben oder Signalisieren von Übertragungsfehlern), Flusskontrolle (Strategien bei zu schnellem Senden wie Zwischenpuffern oder Herunterregeln), Segmentierung (Zusammenfassen einzelner Bits zu größeren Einheiten wie 8-bit Bytes), Identifikation (Adressierung bestimmter Sender oder Empfänger) und Medienzugriff (Aktivieren des Physical Layers durch Senden, Warten, Beheben und Reservieren). Diese Funktionen ermöglichen eine zuverlässige Kommunikation trotz eines unzuverlässigen physikalischen Übertragungswegs. (Richtig)
+Antwort: Die Adressierung auf den drei Schichten unterscheidet sich im Geltungsbereich und Zweck. Auf Schicht 2 (Data Link Layer) dient die Adressierung der Identifikation von Sender und Empfänger innerhalb eines lokalen Netzwerksegments. Der Zweck ist die Auswahl bestimmter Kommunikationspartner auf direkter Verbindungsebene. Auf Schicht 3 (Network Layer) ermöglicht die Adressierung netzwerk-übergreifende Kommunikation. Sie identifiziert Geräte eindeutig über verschiedene Netzwerke hinweg und ermöglicht Routing zwischen unterschiedlichen Layer-2-Technologien. Auf Schicht 4 (Transport Layer) adressiert man nicht mehr Geräte, sondern Teilnehmer beziehungsweise Prozesse auf einem Gerät. Dies ermöglicht die Unterscheidung mehrerer Kommunikationsverbindungen auf demselben Gerät. Zusammengefasst: Schicht 2 adressiert lokal, Schicht 3 adressiert global über Netzwerke, Schicht 4 adressiert Anwendungen oder Dienste innerhalb eines Geräts. (Richtig)
 
 ### Source Text
 

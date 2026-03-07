@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+Die Studierenden verstehen die Verfahren zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
 
 ### Stem Generation
 
-Frage: Welche zwei der folgenden Strategien beschreiben Maßnahmen der Flußkontrolle, wenn der Sender zu schnell für den Empfänger sendet?
+Frage: Welche der folgenden werden durch die Identifikation im Data Link Layer ausgewählt?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Zwischenpuffern von Datenpaketen, um den Empfänger nicht zu überfordern (Richtig)
-b) Herunterregeln der Sende rate des Senders durch Rückmeldungen (Richtig)
+a) Bestimmte Sender (Richtig)
+b) Bestimmte Empfänger (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche zwei der folgenden Strategien beschreiben Maßnahmen der Flußkontrolle, wenn der Sender zu schnell für den Empfänger sendet?
+Frage: Welche der folgenden werden durch die Identifikation im Data Link Layer ausgewählt?
 
 Antwortmöglichkeiten:
 
-a) Erkennen von Übertragungsfehlern durch Prüfsummen (Falsch)
-b) Herunterregeln der Sende rate des Senders durch Rückmeldungen (Richtig)
-c) Segmentierung der Daten in Frames für die Übertragung (Falsch)
-d) Zwischenpuffern von Datenpaketen, um den Empfänger nicht zu überfordern (Richtig)
+a) Bestimmte Bits (Falsch)
+b) Bestimmte Empfänger (Richtig)
+c) Bestimmte Medien (Falsch)
+d) Bestimmte Sender (Richtig)
 
 ### Source Text
 

@@ -4,23 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
+Die Studierenden können das ISO-OSI-Modell anwenden, um für einen gegebenen Kommunikationsvorgang die zuständige Schicht zu ermitteln
 
 ### Question Generation
 
-Frage: In einem Kommunikationsszenario treten folgende Vorgänge auf: (1) Die Nachrichtendaten werden verschlüsselt, (2) es wird eine Fehlerkontrolle der übertragenen Bits durchgeführt, (3) die Daten werden zwischen zwei verschiedenen Netzwerken geroutet, (4) logische Werte werden als elektrische Signale codiert. Ermitteln Sie für jeden dieser vier Vorgänge die zuständige OSI-Schicht und begründen Sie Ihre Zuordnung jeweils anhand einer Kernaufgabe der entsprechenden Schicht.
+Frage: Ein Server in Frankfurt muss Daten an einen Client in München übertragen, wobei die Pakete über mehrere Zwischenknoten in verschiedenen Netzwerken geleitet werden müssen. Ermitteln Sie die OSI-Schicht, die für die Auswahl des Übertragungsweges über diese vermittelnden Zwischenknoten zuständig ist, und begründen Sie Ihre Entscheidung anhand der Kernaufgaben dieser Schicht.
 
 ### Answer Generation + Union of all
 
-Frage: In einem Kommunikationsszenario treten folgende Vorgänge auf: (1) Die Nachrichtendaten werden verschlüsselt, (2) es wird eine Fehlerkontrolle der übertragenen Bits durchgeführt, (3) die Daten werden zwischen zwei verschiedenen Netzwerken geroutet, (4) logische Werte werden als elektrische Signale codiert. Ermitteln Sie für jeden dieser vier Vorgänge die zuständige OSI-Schicht und begründen Sie Ihre Zuordnung jeweils anhand einer Kernaufgabe der entsprechenden Schicht.
+Frage: Ein Server in Frankfurt muss Daten an einen Client in München übertragen, wobei die Pakete über mehrere Zwischenknoten in verschiedenen Netzwerken geleitet werden müssen. Ermitteln Sie die OSI-Schicht, die für die Auswahl des Übertragungsweges über diese vermittelnden Zwischenknoten zuständig ist, und begründen Sie Ihre Entscheidung anhand der Kernaufgaben dieser Schicht.
 
-Antwort: (1) Verschlüsselung: Presentation Layer (Schicht 6). Begründung: Verschlüsseln und Entschlüsseln von Daten ist eine definierte Kernaufgabe dieser Schicht zur Kodierung der Anwendungsdaten.
-
-(2) Fehlerkontrolle: Data Link Layer (Schicht 2). Begründung: Erkennen, Beheben oder Signalisieren von Übertragungsfehlern ist eine Kernaufgabe zur fehlergesicherten Übertragung über den Physical Layer.
-
-(3) Routing zwischen Netzwerken: Network Layer (Schicht 3). Begründung: Routing ist die Kernaufgabe zur Auswahl vermittelnder Zwischenknoten für die Kommunikation nicht direkt verbundener Knoten in verschiedenen Netzwerken.
-
-(4) Codierung logischer Werte als elektrische Signale: Physical Layer (Schicht 1). Begründung: Die Abbildung logischer Werte auf physikalische Größen ist eine Kernaufgabe dieser Schicht. (Richtig)
+Antwort: Die zuständige OSI-Schicht ist der Network Layer (Schicht 3). Diese Schicht ist für die Übertragung zwischen Geräten in unterschiedlichen Netzwerken verantwortlich. Die Kernaufgabe Routing beschreibt explizit die Auswahl der vermittelnden Zwischenknoten zur Kommunikation nicht direkt verbundener Knoten. Da Server und Client in verschiedenen Städten liegen und die Pakete über mehrere Zwischenknoten geleitet werden müssen, ist genau diese Routing-Funktionalität erforderlich. Zusätzlich ermöglicht die netzwerkübergreifende Adressierung des Network Layers die eindeutige Identifikation von Sender und Empfänger über verschiedene Netzwerke hinweg. Die Flusssteuerung dieser Schicht regelt zudem die Übertragungsgeschwindigkeit sowohl End-to-End als auch Node-to-Node. (Richtig)
 
 ### Source Text
 

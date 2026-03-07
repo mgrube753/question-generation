@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
+Die Studierenden können das ISO-OSI-Modell anwenden, um für einen gegebenen Kommunikationsvorgang die zuständige Schicht zu ermitteln
 
 ### Stem Generation
 
-Frage: Ermitteln Sie, welche zwei Kernaufgaben des Data Link Layers zur Anwendung kommen, wenn während einer Datenübertragung Übertragungsfehler erkannt werden müssen und der Empfänger die eingehenden Daten nicht schnell genug verarbeiten kann.
+Frage: Ein Kommunikationsvorgang erfordert sowohl die Konvertierung der Datendarstellung zwischen unterschiedlichen Endian-Formaten als auch die Auswahl geeigneter Zwischenknoten zur Weiterleitung von Daten zwischen nicht direkt verbundenen Geräten. Ermitteln Sie die beiden zuständigen OSI-Schichten.
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Fehlerkontrolle (Richtig)
-b) Flusskontrolle (Richtig)
+a) Network Layer (Schicht 3) und Presentation Layer (Schicht 6) (Richtig)
+b) Schicht 6 für die Endian-Konvertierung und Schicht 3 für das Routing zur Auswahl der Zwischenknoten (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ermitteln Sie, welche zwei Kernaufgaben des Data Link Layers zur Anwendung kommen, wenn während einer Datenübertragung Übertragungsfehler erkannt werden müssen und der Empfänger die eingehenden Daten nicht schnell genug verarbeiten kann.
+Frage: Ein Kommunikationsvorgang erfordert sowohl die Konvertierung der Datendarstellung zwischen unterschiedlichen Endian-Formaten als auch die Auswahl geeigneter Zwischenknoten zur Weiterleitung von Daten zwischen nicht direkt verbundenen Geräten. Ermitteln Sie die beiden zuständigen OSI-Schichten.
 
 Antwortmöglichkeiten:
 
-a) Fehlerkontrolle (Richtig)
-b) Flusskontrolle (Richtig)
-c) Medienzugriff (Falsch)
-d) Segmentierung (Falsch)
+a) Data Link Layer (Schicht 2) für die Weiterleitung über Zwischenknoten und Application Layer (Schicht 7) für die Endian-Konvertierung (Falsch)
+b) Network Layer (Schicht 3) und Presentation Layer (Schicht 6) (Richtig)
+c) Schicht 6 für die Endian-Konvertierung und Schicht 3 für das Routing zur Auswahl der Zwischenknoten (Richtig)
+d) Transport Layer (Schicht 4) für die Flusssteuerung zwischen Knoten und Session Layer (Schicht 5) für die Synchronisation der Datendarstellung (Falsch)
 
 ### Source Text
 

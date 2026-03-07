@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+Die Studierenden verstehen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
 
 ### Stem Generation
 
-Frage: In einer Anwendung, die unterbrochene Dateiübertragungen fortsetzen soll, indem Transaktionen gruppiert und Wiederaufnahmepunkte gesetzt werden, welche Kernaufgaben der Session Layer nutzen Sie?
+Frage: Nutzen Sie das Konzept der Session Layer, um in einem Szenario mit unterbrochener Datenübertragung zwischen zwei Systemen zu ermitteln, welche Kernaufgaben für die Fortsetzung und Gruppierung der Transaktionen angewendet werden.
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Synchronisation und Bündelung (Richtig)
-b) Setzen von Zwischenpunkten sowie Gruppierung zusammengehöriger Transaktionen (Richtig)
+a) Die Kernaufgabe der Synchronisation in der Session Layer ermöglicht durch das Setzen von Zwischenpunkten die Fortsetzung der Datenübertragung nach einer Unterbrechung. (Richtig)
+b) Die Kernaufgabe der Bündelung in der Session Layer gruppiert zusammengehörige Transaktionen, um diese als Einheit zu verwalten und fortzusetzen. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: In einer Anwendung, die unterbrochene Dateiübertragungen fortsetzen soll, indem Transaktionen gruppiert und Wiederaufnahmepunkte gesetzt werden, welche Kernaufgaben der Session Layer nutzen Sie?
+Frage: Nutzen Sie das Konzept der Session Layer, um in einem Szenario mit unterbrochener Datenübertragung zwischen zwei Systemen zu ermitteln, welche Kernaufgaben für die Fortsetzung und Gruppierung der Transaktionen angewendet werden.
 
 Antwortmöglichkeiten:
 
-a) Aufbauen und Beenden von Sitzungen (Falsch)
-b) Flow Control und Fehlerkorrektur (Falsch)
-c) Setzen von Zwischenpunkten sowie Gruppierung zusammengehöriger Transaktionen (Richtig)
-d) Synchronisation und Bündelung (Richtig)
+a) Die Kernaufgabe der Synchronisation in der Session Layer ermöglicht durch das Setzen von Zwischenpunkten die Fortsetzung der Datenübertragung nach einer Unterbrechung. (Richtig)
+b) Die Kernaufgabe der Bündelung in der Session Layer setzt Zwischenpunkte, um die Fortsetzung nach Unterbrechung zu ermöglichen und Transaktionen zu synchronisieren. (Falsch)
+c) Die Kernaufgabe der Bündelung in der Session Layer gruppiert zusammengehörige Transaktionen, um diese als Einheit zu verwalten und fortzusetzen. (Richtig)
+d) Die Kernaufgabe der Sitzungsverwaltung in der Session Layer baut die Sitzung neu auf und verwaltet Transaktionen einzeln für eine Gruppierung nach Unterbrechung. (Falsch)
 
 ### Source Text
 

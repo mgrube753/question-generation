@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden können die Aufgabenverteilung zwischen den Schichten analysieren und Unterschiede sowie Zusammenhänge zwischen verwandten Konzepten herausarbeiten
+Die Studierenden können die Gemeinsamkeiten und Unterschiede zwischen verwandten Konzepten auf verschiedenen ISO-OSI-Schichten gegenüberstellen
 
 ### Question Generation
 
-Frage: Analysieren Sie das Konzept der Flusssteuerung auf dem Data Link Layer, dem Network Layer und dem Transport Layer und arbeiten Sie heraus, wie sich die jeweiligen Ansätze hinsichtlich ihrer Reichweite und Zielsetzung unterscheiden.
+Frage: Unterscheiden Sie das Konzept der Flusskontrolle bzw. Flusssteuerung auf den ISO-OSI-Schichten 2, 3 und 4 hinsichtlich ihrer jeweiligen Zielsetzung und Reichweite.
 
 ### Answer Generation + Union of all
 
-Frage: Analysieren Sie das Konzept der Flusssteuerung auf dem Data Link Layer, dem Network Layer und dem Transport Layer und arbeiten Sie heraus, wie sich die jeweiligen Ansätze hinsichtlich ihrer Reichweite und Zielsetzung unterscheiden.
+Frage: Unterscheiden Sie das Konzept der Flusskontrolle bzw. Flusssteuerung auf den ISO-OSI-Schichten 2, 3 und 4 hinsichtlich ihrer jeweiligen Zielsetzung und Reichweite.
 
-Antwort: Die Flusssteuerung unterscheidet sich auf den drei Layern wie folgt: Auf dem Data Link Layer ist die Reichweite lokal auf direkt verbundene Knoten begrenzt. Zielsetzung ist das Verhindern von Überlastung beim direkten Nachbarn durch Zwischenpuffern, Herunterregeln oder Warten lassen. Auf dem Network Layer existieren zwei Ansätze: Node-to-Node zwischen benachbarten Routern und End-to-End vom Sender zum entfernten Empfänger über Netzwerkgrenzen hinweg. Zielsetzung ist die netzwerkübergreifende Stauvermeidung. Auf dem Transport Layer ist die Reichweite ausschließlich End-to-End zwischen den kommunizierenden Teilnehmern. Die Zielsetzung fokussiert sich auf das Nutzen der spezifischen Teilnehmer-Charakteristik und ist damit anwendungsorientiert. Zusammenfassend erweitert sich die Reichweite von lokal über netzwerkübergreifend bis zu teilnehmerbezogen, während die Zielsetzung von Hardwareebene über Routingoptimierung zur Anwendungsoptimierung fortschreitet. (Richtig)
+Antwort: Die Flusskontrolle unterscheidet sich auf den drei Schichten wie folgt: Schicht 2 (Data Link Layer) regelt die Flusskontrolle zwischen direkt verbundenen Nachbarknoten auf einem einzelnen physischen Link. Zielsetzung ist der Schutz des direkten Empfängers vor Überlastung durch Maßnahmen wie Zwischenpuffern oder Herunterregeln. Die Reichweite ist auf Hop-to-Hop begrenzt. Schicht 3 (Network Layer) erweitert die Flusssteuerung auf netzwerkübergreifende Kommunikation. Die Reichweite umfasst sowohl End-to-End (vom ursprünglichen Sender zum entfernten Empfänger) als auch Node-to-Node (zwischen allen Zwischenknoten). Schicht 4 (Transport Layer) fokussiert auf die Flusssteuerung zwischen Kommunikationsteilnehmern unter Berücksichtigung ihrer spezifischen Charakteristiken. Die Reichweite ist End-to-End zwischen den eigentlichen Anwendungsteilnehmern, zugeschnitten auf deren individuelle Kapazitäten und Anforderungen. (Richtig)
 
 ### Source Text
 

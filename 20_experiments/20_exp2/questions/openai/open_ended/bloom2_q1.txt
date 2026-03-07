@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
+Die Studierenden können die Kernaufgaben aller ISO-OSI-Schichten in eigenen Worten erklären
 
 ### Question Generation
 
-Frage: Fassen Sie die Beziehungen zwischen den Schichten 1–7 des ISO-OSI-Modells zusammen. Ihre Antwort soll für jede Schicht jeweils (a) die Kernaufgaben und (b) den Bezug zur direkt darunterliegenden Schicht enthalten.
+Frage: Erklären Sie in eigenen Worten die Kernaufgabe jeder ISO-OSI-Schicht (1–7) beim Versand eines Fotos per Messenger von Smartphone A zu Smartphone B über WLAN und das Internet; formulieren Sie pro Schicht genau einen kurzen Satz.
 
 ### Answer Generation + Union of all
 
-Frage: Fassen Sie die Beziehungen zwischen den Schichten 1–7 des ISO-OSI-Modells zusammen. Ihre Antwort soll für jede Schicht jeweils (a) die Kernaufgaben und (b) den Bezug zur direkt darunterliegenden Schicht enthalten.
+Frage: Erklären Sie in eigenen Worten die Kernaufgabe jeder ISO-OSI-Schicht (1–7) beim Versand eines Fotos per Messenger von Smartphone A zu Smartphone B über WLAN und das Internet; formulieren Sie pro Schicht genau einen kurzen Satz.
 
-Antwort: L1 Physical: Codierung/Transport/Decodierung von Bits als physikalische Signale; unterste Schicht, keine darunter. L2 Data Link: Fehler- und Flusskontrolle, Segmentierung zu Frames, MAC-Identifikation, Medienzugriff; nutzt L1 zur Bitübertragung auf einem Medium. L3 Network: logische Adressierung, Routing, Flusssteuerung über Netze; nutzt L2 für hop-by-hop Zustellung zwischen Nachbarn. L4 Transport: Endpunkt-/Portadressierung, End-to-End-Flusskontrolle, QoS; nutzt L3 für host-zu-host Pakettransport. L5 Session: Sitzungen aufbauen/verwalten/beenden, Synchronisation, Bündelung; nutzt L4 Transportdienst. L6 Presentation: Darstellung/Serialisierung (Endian/Zeichen), Kompression, Verschlüsselung; nutzt L5 als Kommunikationskontext. L7 Application: anwendungsspezifische Konzepte, Protokollelemente, Verhalten; nutzt L6 codierten Datenstrom. (Richtig)
+Antwort: 1: Wandelt Bits in physikalische Funk-/Kabelsignale, überträgt sie über WLAN/Leitungen und dekodiert sie wieder. 2: Packt Bits zu Frames, regelt Medienzugriff im WLAN, nutzt MAC-Adressen und erkennt/korrigiert Linkfehler. 3: Verwendet IP-Adressen und routet Pakete über Router durch verschiedene Netze bis zum Zielnetz von Smartphone B. 4: Stellt Ende-zu-Ende-Transport per TCP/UDP mit Ports bereit und sorgt für Flusskontrolle sowie ggf. zuverlässige Zustellung. 5: Baut, verwaltet und beendet die Messenger-Sitzung inkl. Synchronisationspunkten/Wiederaufnahme. 6: Kodiert/serialisiert, komprimiert und verschlüsselt/entschlüsselt die Fotodaten für die Übertragung. 7: Definiert die Messenger-Anwendung („Foto senden/empfangen“) und verarbeitet bzw. präsentiert das Bild. (Richtig)
 
 ### Source Text
 

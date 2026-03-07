@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+Die Studierenden verstehen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
 
 ### Stem Generation
 
-Frage: Welche zwei Beschreibungen erklären korrekt die Kernaufgaben des Session Layers im Rahmen des Sitzungskonzepts einer Kommunikationsbeziehung?
+Frage: Welche Funktionen lassen sich als Kernaufgaben des Session Layers klassifizieren?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Der Session Layer ist für das Aufbauen, Verwalten, Zurückweisen und Beenden von Sitzungen innerhalb einer Kommunikationsbeziehung zuständig. (Richtig)
-b) Der Session Layer ermöglicht die Synchronisation durch das Setzen von Zwischenpunkten sowie die Bündelung zusammengehöriger Transaktionen zu Gruppen. (Richtig)
+a) Das Aufbauen, Verwalten, Zurückweisen und Beenden von Sitzungen (Richtig)
+b) Die Synchronisation durch Setzen von Zwischenpunkten sowie die Bündelung zusammengehöriger Transaktionen (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei Beschreibungen erklären korrekt die Kernaufgaben des Session Layers im Rahmen des Sitzungskonzepts einer Kommunikationsbeziehung?
+Frage: Welche Funktionen lassen sich als Kernaufgaben des Session Layers klassifizieren?
 
 Antwortmöglichkeiten:
 
-a) Der Session Layer ermöglicht die Synchronisation durch das Setzen von Zwischenpunkten sowie die Bündelung zusammengehöriger Transaktionen zu Gruppen. (Richtig)
-b) Der Session Layer gewährleistet die zuverlässige Ende-zu-Ende-Übertragung durch Flusskontrolle und Segmentierung der Datenströme. (Falsch)
-c) Der Session Layer ist für das Aufbauen, Verwalten, Zurückweisen und Beenden von Sitzungen innerhalb einer Kommunikationsbeziehung zuständig. (Richtig)
-d) Der Session Layer ist für die Datenkomprimierung und die Konvertierung von Datenformaten zwischen unterschiedlichen Systemen zuständig. (Falsch)
+a) Das Aufbauen, Verwalten, Zurückweisen und Beenden von Sitzungen (Richtig)
+b) Die Flusskontrolle zur Regulierung des Datenstroms sowie die Fehlererkennung bei der Übertragung (Falsch)
+c) Die Konvertierung von Datenformaten sowie die Verschlüsselung und Komprimierung der übertragenen Daten (Falsch)
+d) Die Synchronisation durch Setzen von Zwischenpunkten sowie die Bündelung zusammengehöriger Transaktionen (Richtig)
 
 ### Source Text
 

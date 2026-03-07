@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+Die Studierenden verstehen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
 
 ### Question Generation
 
-Frage: Beurteilen Sie, ob für die Zuverlässigkeit einer Datenübertragung in der Sitzungsschicht die Synchronisation durch Zwischenpunkte oder die Bündelung zusammengehöriger Transaktionen entscheidender ist. Legen Sie Ihre Bewertung anhand der spezifischen Funktionen beider Mechanismen dar.
+Frage: Beurteilen Sie, welche der drei Kernaufgaben der Sitzungsschicht (Sitzungsverwaltung, Synchronisation, Bündelung) für die Gewährleistung der Datenkonsistenz in einer verteilten Transaktion am wichtigsten ist. Begründen Sie Ihre Entscheidung.
 
 ### Answer Generation + Union of all
 
-Frage: Beurteilen Sie, ob für die Zuverlässigkeit einer Datenübertragung in der Sitzungsschicht die Synchronisation durch Zwischenpunkte oder die Bündelung zusammengehöriger Transaktionen entscheidender ist. Legen Sie Ihre Bewertung anhand der spezifischen Funktionen beider Mechanismen dar.
+Frage: Beurteilen Sie, welche der drei Kernaufgaben der Sitzungsschicht (Sitzungsverwaltung, Synchronisation, Bündelung) für die Gewährleistung der Datenkonsistenz in einer verteilten Transaktion am wichtigsten ist. Begründen Sie Ihre Entscheidung.
 
-Antwort: Die Synchronisation durch Zwischenpunkte ist für die Zuverlässigkeit entscheidender. Sie setzt Kontrollpunkte im Datenstrom, von denen aus bei einer Unterbrechung die Übertragung effizient wiederaufgenommen werden kann, anstatt sie ganz neu zu starten. Dies schützt vor Datenverlust und gewährleistet Fortschritt. Die Bündelung gruppiert zwar logisch zusammenhängende Transaktionen, was die Verwaltung erleichtert und Konsistenz innerhalb der Gruppe fördern kann. Ihr primärer Beitrag liegt jedoch in der Organisation und nicht in der Fehlerwiederherstellung. Daher adressiert die Synchronisation direkt das Kernproblem der zuverlässigen Datenübertragung nach Störungen. (Richtig)
+Antwort: Die Synchronisation ist am wichtigsten. Sie setzt Zwischenpunkte (Checkpoints) in der Transaktion. Bei einem Fehler kann der Prozess zu einem solchen konsistenten Zwischenzustand zurückgesetzt werden, anstatt von vorne zu starten oder inkonsistent zu enden. Dies gewährleistet Atomarität und Wiederherstellbarkeit, die Kernvoraussetzungen für Datenkonsistenz sind. Die Sitzungsverwaltung steuert nur die Kommunikationsbeziehung, nicht den inhaltlichen Zustand. Die Bündelung gruppiert zwar Transaktionen, bietet aber keinen Mechanismus zur Sicherstellung eines konsistenten Systemzustands nach Fehlern. (Richtig)
 
 ### Source Text
 

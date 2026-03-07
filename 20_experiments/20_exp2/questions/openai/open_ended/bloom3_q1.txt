@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
+Die Studierenden können das ISO-OSI-Modell anwenden, um für einen gegebenen Kommunikationsvorgang die zuständige Schicht zu ermitteln
 
 ### Question Generation
 
-Frage: Nutzen Sie das OSI-Schichtenmodell, um für die folgenden Vorgänge jeweils die passende Schichtnummer (1–7) einzutragen: (a) Ein Bitstrom wird per Manchester-Codierung in Spannungspegel umgesetzt. (b) Ein WLAN-Gerät entscheidet, ob es senden darf oder warten muss (Medienzugriff). (c) Ein Datenrahmen wird mit Empfängeradresse versehen und per CRC auf Übertragungsfehler geprüft. (d) Ein Paket wird über mehrere Zwischenknoten in ein anderes Netzwerk weitergeleitet (Routing). (e) Eine Anwendung unterscheidet mehrere parallele Verbindungen über Teilnehmer-Adressen innerhalb eines Endsystems (z. B. Ports) und steuert den Sendefluss. (f) Nutzdaten werden verschlüsselt und vor dem Senden in ein einheitliches Zeichenformat (z. B. Unicode) gebracht.
+Frage: Ermitteln Sie für jede der folgenden Funktionen die zuständige ISO-OSI-Schicht (1–7): (a) logische Bits werden per Manchester-Codierung in ein Funksignal umgesetzt und übertragen; (b) einzelne Bits werden zu 8‑Bit‑Bytes zusammengefasst und der Zugriff auf das Übertragungsmedium gesteuert; (c) ein Übertragungsfehler auf einer Verbindung wird erkannt und dem Sender signalisiert; (d) zwischen zwei Hosts in unterschiedlichen Netzwerken werden geeignete Zwischenknoten für die Weiterleitung ausgewählt; (e) Anwendungsdaten werden komprimiert und anschließend verschlüsselt; (f) eine Kommunikationssitzung wird aufgebaut, es werden Synchronisationspunkte gesetzt und die Sitzung wieder beendet.
 
 ### Answer Generation + Union of all
 
-Frage: Nutzen Sie das OSI-Schichtenmodell, um für die folgenden Vorgänge jeweils die passende Schichtnummer (1–7) einzutragen: (a) Ein Bitstrom wird per Manchester-Codierung in Spannungspegel umgesetzt. (b) Ein WLAN-Gerät entscheidet, ob es senden darf oder warten muss (Medienzugriff). (c) Ein Datenrahmen wird mit Empfängeradresse versehen und per CRC auf Übertragungsfehler geprüft. (d) Ein Paket wird über mehrere Zwischenknoten in ein anderes Netzwerk weitergeleitet (Routing). (e) Eine Anwendung unterscheidet mehrere parallele Verbindungen über Teilnehmer-Adressen innerhalb eines Endsystems (z. B. Ports) und steuert den Sendefluss. (f) Nutzdaten werden verschlüsselt und vor dem Senden in ein einheitliches Zeichenformat (z. B. Unicode) gebracht.
+Frage: Ermitteln Sie für jede der folgenden Funktionen die zuständige ISO-OSI-Schicht (1–7): (a) logische Bits werden per Manchester-Codierung in ein Funksignal umgesetzt und übertragen; (b) einzelne Bits werden zu 8‑Bit‑Bytes zusammengefasst und der Zugriff auf das Übertragungsmedium gesteuert; (c) ein Übertragungsfehler auf einer Verbindung wird erkannt und dem Sender signalisiert; (d) zwischen zwei Hosts in unterschiedlichen Netzwerken werden geeignete Zwischenknoten für die Weiterleitung ausgewählt; (e) Anwendungsdaten werden komprimiert und anschließend verschlüsselt; (f) eine Kommunikationssitzung wird aufgebaut, es werden Synchronisationspunkte gesetzt und die Sitzung wieder beendet.
 
-Antwort: (a) 1 (Physical: Codierung Manchester). (b) 2 (Data Link: Medienzugriff/MAC). (c) 2 (Data Link: Frame mit L2-Adresse + CRC/Fehlerkontrolle). (d) 3 (Network: Routing/Weiterleitung zwischen Netzen). (e) 4 (Transport: Ports/Teilnehmer-Adressierung + Flusssteuerung end-to-end). (f) 6 (Presentation: Verschlüsselung + Zeichenformat-Konvertierung). (Richtig)
+Antwort: (a) Schicht 1 (Physical): Manchester-Codierung und Funkübertragung. (b) Schicht 2 (Data Link): Segmentierung zu Bytes und Medienzugriff (MAC). (c) Schicht 2 (Data Link): Fehlerkontrolle/Fehlersignalisierung auf der Verbindung. (d) Schicht 3 (Network): Routing/Auswahl von Zwischenknoten zwischen Netzen. (e) Schicht 6 (Presentation): Kompression und Verschlüsselung von Anwendungsdaten. (f) Schicht 5 (Session): Sitzung aufbauen/verwalten/beenden und Synchronisationspunkte setzen. (Richtig)
 
 ### Source Text
 

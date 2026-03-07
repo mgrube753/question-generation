@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
+Die Studierenden können die Kernaufgaben aller ISO-OSI-Schichten in eigenen Worten erklären
 
 ### Stem Generation
 
-Frage: Welche zwei Schichten des ISO-OSI-Modells beinhalten Strategien zur Flusssteuerung beziehungsweise Flusskontrolle als Kernaufgabe, um Probleme bei zu schnellem Senden zu adressieren?
+Frage: Welche zwei unterschiedlichen Strategien der Flußsteuerung werden auf dem Network Layer unterschieden?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Data Link Layer (Schicht 2) und Network Layer (Schicht 3) (Richtig)
-b) Sicherungsschicht und Vermittlungsschicht (Richtig)
+a) End-to-End: Flusssteuerung vom Sender zum weit entfernten Empfänger (Richtig)
+b) Node-to-Node: Flusssteuerung von jedem Knoten zum nächsten Knoten (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei Schichten des ISO-OSI-Modells beinhalten Strategien zur Flusssteuerung beziehungsweise Flusskontrolle als Kernaufgabe, um Probleme bei zu schnellem Senden zu adressieren?
+Frage: Welche zwei unterschiedlichen Strategien der Flußsteuerung werden auf dem Network Layer unterschieden?
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Schicht 2) und Network Layer (Schicht 3) (Richtig)
-b) Physical Layer (Schicht 1) und Transport Layer (Schicht 4) (Falsch)
-c) Session Layer (Schicht 5) und Presentation Layer (Schicht 6) (Falsch)
-d) Sicherungsschicht und Vermittlungsschicht (Richtig)
+a) End-to-End: Flusssteuerung vom Sender zum weit entfernten Empfänger (Richtig)
+b) Node-to-Node: Flusssteuerung von jedem Knoten zum nächsten Knoten (Richtig)
+c) Participant-to-Participant: Flusssteuerung basierend auf der Teilnehmer-Charakteristik (Falsch)
+d) Point-to-Point: Flusssteuerung zwischen zwei direkt verbundenen Geräten im selben Netzwerk (Falsch)
 
 ### Source Text
 

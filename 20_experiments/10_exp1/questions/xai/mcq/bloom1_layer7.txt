@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+Die Studierenden verstehen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
 
 ### Stem Generation
 
-Frage: Welche zwei Aspekte umfassen die Protokollelemente in der Application Layer?
+Frage: Welche der folgenden sind Aspekte der Protokollelemente in der Application Layer 7?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Welche Anforderungen können gestellt werden? (Richtig)
-b) Welche Daten werden dabei erwartet? (Richtig)
+a) Welche Anforderungen können an die Anwendung gestellt werden? (Richtig)
+b) Welche Daten werden bei diesen Anforderungen erwartet? (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche zwei Aspekte umfassen die Protokollelemente in der Application Layer?
+Frage: Welche der folgenden sind Aspekte der Protokollelemente in der Application Layer 7?
 
 Antwortmöglichkeiten:
 
-a) Welche Anforderungen können gestellt werden? (Richtig)
+a) Welche Anforderungen können an die Anwendung gestellt werden? (Richtig)
 b) Welche Begriffe treten in der Anwendung auf? (Falsch)
-c) Welche Daten werden dabei erwartet? (Richtig)
-d) Wie reagiert die Anwendung auf die Anforderungen? (Falsch)
+c) Welche Daten werden bei diesen Anforderungen erwartet? (Richtig)
+d) Wie reagiert die Anwendung auf die Anforderungen durch diese Protokollelemente? (Falsch)
 
 ### Source Text
 

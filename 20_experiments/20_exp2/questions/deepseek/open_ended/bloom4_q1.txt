@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden können die Aufgabenverteilung zwischen den Schichten analysieren und Unterschiede sowie Zusammenhänge zwischen verwandten Konzepten herausarbeiten
+Die Studierenden können die Gemeinsamkeiten und Unterschiede zwischen verwandten Konzepten auf verschiedenen ISO-OSI-Schichten gegenüberstellen
 
 ### Question Generation
 
-Frage: Differenzieren Sie die Konzepte und Ziele der Flusssteuerung im Data Link Layer, Network Layer und Transport Layer des OSI-Modells anhand ihrer spezifischen Ansätze und Reichweiten.
+Frage: Vergleichen Sie das Konzept der Flusskontrolle, wie es in den Schichten 2 (Data Link Layer), 3 (Network Layer) und 4 (Transport Layer) des OSI-Referenzmodells realisiert wird, indem Sie den jeweils spezifischen Zweck und die charakteristische Ausprägung auf jeder dieser Schichten gegenüberstellen.
 
 ### Answer Generation + Union of all
 
-Frage: Differenzieren Sie die Konzepte und Ziele der Flusssteuerung im Data Link Layer, Network Layer und Transport Layer des OSI-Modells anhand ihrer spezifischen Ansätze und Reichweiten.
+Frage: Vergleichen Sie das Konzept der Flusskontrolle, wie es in den Schichten 2 (Data Link Layer), 3 (Network Layer) und 4 (Transport Layer) des OSI-Referenzmodells realisiert wird, indem Sie den jeweils spezifischen Zweck und die charakteristische Ausprägung auf jeder dieser Schichten gegenüberstellen.
 
-Antwort: Im Data Link Layer zielt die Flusssteuerung darauf ab, einen lokalen Pufferüberlauf bei direkt verbundenen Knoten zu verhindern (z.B. via Stop-and-Wait). Ihre Reichweite ist punkt-zu-punkt. Der Network Layer steuert den Datenfluss netzwerkweit, um Überlast in Vermittlungsknoten zu vermeiden; Ansätze sind ende-zu-ende oder knoten-zu-knoten (Hop-by-Hop). Die Reichweite erstreckt sich über mehrere Hops. Der Transport Layer nutzt ende-zu-ende Flusssteuerung (z.B. TCP-Fenster), angepasst an Teilnehmercharakteristiken wie Empfängerkapazität und Netzwerkbedingungen, um faire Ressourcennutzung und Überlastvermeidung im gesamten Endsystem-zu-Endsystem-Pfad zu gewährleisten. (Richtig)
+Antwort: (Richtig) Die Flusskontrolle dient auf Schicht 2 (Data Link Layer) dazu, einen zu schnellen Sender auf Link-Ebene zu bremsen, um einen direkten Empfänger nicht zu überlasten. Charakteristisch sind punkt-zu-punkt Mechanismen wie Pause-Frames oder sliding windows (z.B. HDLC). Auf Schicht 3 (Network Layer) zielt die Flusssteuerung auf die Vermeidung von Überlastung im Netzwerk (Congestion Control) und regelt den Datenfluss entlang der Route zwischen Knoten (node-to-node) oder end-to-end über mehrere Hops. Typische Ausprägungen sind Queue-Management in Routern oder ICMP-Quellentlastung. Auf Schicht 4 (Transport Layer) erfolgt eine end-to-end Flusskontrolle zwischen den Endteilnehmern, angepasst an deren Ressourcen (z.B. Puffergröße). Charakteristisch sind adaptive Fenstermechanismen wie bei TCP, gesteuert durch ACKs und Window-Size.
 
 ### Source Text
 

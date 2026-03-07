@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+Die Studierenden verstehen die Verfahren zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
 
 ### Stem Generation
 
-Frage: Ein Data Link Layer Protokoll hat einen Übertragungsfehler erkannt. Nennen Sie zwei unterschiedliche Verfahren, die es nun anwenden kann, um mit diesem Fehler umzugehen.
+Frage: Um sowohl Übertragungsfehler zu erkennen als auch eine Überlastung des Empfängers zu verhindern, müssen welche zwei Kernaufgaben des Data Link Layer angewendet werden?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Fehlerbehebung durch automatische Wiederholungsanfrage (ARQ) (Richtig)
-b) Signalisierung des Fehlers an die nächsthöhere Schicht (z.B. durch Verwerfen des Frames) (Richtig)
+a) Fehlerkontrolle und Flußkontrolle (Richtig)
+b) Die Erkennung von Übertragungsfehlern sowie die Steuerung der Senderate zur Vermeidung einer Überlastung (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Ein Data Link Layer Protokoll hat einen Übertragungsfehler erkannt. Nennen Sie zwei unterschiedliche Verfahren, die es nun anwenden kann, um mit diesem Fehler umzugehen.
+Frage: Um sowohl Übertragungsfehler zu erkennen als auch eine Überlastung des Empfängers zu verhindern, müssen welche zwei Kernaufgaben des Data Link Layer angewendet werden?
 
 Antwortmöglichkeiten:
 
-a) Fehlerbehebung durch automatische Wiederholungsanfrage (ARQ) (Richtig)
-b) Durchführung einer Flusskontrolle, um die Senderate zu reduzieren (Falsch)
-c) Signalisierung des Fehlers an die nächsthöhere Schicht (z.B. durch Verwerfen des Frames) (Richtig)
-d) Segmentierung des Frames in kleinere Einheiten zur Fehlerreduzierung (Falsch)
+a) Die Erkennung von Übertragungsfehlern sowie die Steuerung der Senderate zur Vermeidung einer Überlastung (Richtig)
+b) Fehlerkontrolle und Flußkontrolle (Richtig)
+c) Identifikation und Medienzugriff (Falsch)
+d) Segmentierung und Flußkontrolle (Falsch)
 
 ### Source Text
 

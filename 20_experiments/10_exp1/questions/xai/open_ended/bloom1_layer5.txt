@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+Die Studierenden verstehen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
 
 ### Question Generation
 
-Frage: Nennen Sie die drei Kernaufgaben der Session Layer.
+Frage: Nennen Sie die drei Kernaufgaben der Session Layer 5.
 
 ### Answer Generation + Union of all
 
-Frage: Nennen Sie die drei Kernaufgaben der Session Layer.
+Frage: Nennen Sie die drei Kernaufgaben der Session Layer 5.
 
-Antwort: Die drei Kernaufgaben der Session Layer sind: 1. Sitzungen aufbauen, verwalten, zurückweisen und beenden. 2. Synchronisation durch Setzen von Zwischenpunkten. 3. Bündelung durch Gruppierung zusammengehöriger Transaktionen. (Richtig)
+Antwort: Die drei Kernaufgaben der Session Layer 5 sind: 1. Sitzungen aufbauen, verwalten, zurückweisen und beenden. 2. Synchronisation durch Setzen von Zwischenpunkten. 3. Bündelung durch Gruppierung zusammengehöriger Transaktionen. (Richtig)
 
 ### Source Text
 

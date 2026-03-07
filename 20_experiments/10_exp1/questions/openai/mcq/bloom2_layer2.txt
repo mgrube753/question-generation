@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+Die Studierenden verstehen die Verfahren zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
 
 ### Stem Generation
 
-Frage: Welche zwei Kernaufgaben des Data Link Layer lassen sich anhand folgender Beschreibungen klassifizieren: (1) Strategien, wenn der Sender für den Empfänger zu schnell sendet; (2) Zusammenfassen einzelner Bits zu größeren Einheiten?
+Frage: Klassifizieren Sie die folgenden zwei Situationen jeweils als eine der Kernaufgaben der Data Link Layer: (1) Der Sender überträgt schneller, als der Empfänger die Daten verarbeiten kann, sodass Strategien wie Puffern oder Warten nötig werden. (2) Ein Rahmen soll gezielt an einen bestimmten Empfänger gesendet werden, der über eine Adresse ausgewählt wird. Welche zwei Kernaufgaben sind dafür jeweils zuständig?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Flußkontrolle (Flow Control) (Richtig)
-b) Segmentierung (Zusammenfassen von Bits zu größeren Einheiten, z.B. Bytes/Frames) (Richtig)
+a) (1) Flußkontrolle; (2) Identifikation (Adressierung eines bestimmten Empfängers) (Richtig)
+b) Situation 1 fällt unter Flußkontrolle (Sender drosseln/Empfänger puffern bzw. warten); Situation 2 unter Identifikation (Rahmen per Adresse an Zielknoten auswählen) (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: Welche zwei Kernaufgaben des Data Link Layer lassen sich anhand folgender Beschreibungen klassifizieren: (1) Strategien, wenn der Sender für den Empfänger zu schnell sendet; (2) Zusammenfassen einzelner Bits zu größeren Einheiten?
+Frage: Klassifizieren Sie die folgenden zwei Situationen jeweils als eine der Kernaufgaben der Data Link Layer: (1) Der Sender überträgt schneller, als der Empfänger die Daten verarbeiten kann, sodass Strategien wie Puffern oder Warten nötig werden. (2) Ein Rahmen soll gezielt an einen bestimmten Empfänger gesendet werden, der über eine Adresse ausgewählt wird. Welche zwei Kernaufgaben sind dafür jeweils zuständig?
 
 Antwortmöglichkeiten:
 
-a) Fehlerkontrolle (Erkennen/Beheben oder Signalisieren von Übertragungsfehlern) (Falsch)
-b) Flußkontrolle (Flow Control) (Richtig)
-c) Medienzugriff (Regelung von Senden/Warten/Reservieren des Mediums) (Falsch)
-d) Segmentierung (Zusammenfassen von Bits zu größeren Einheiten, z.B. Bytes/Frames) (Richtig)
+a) (1) Medienzugriff (z.B. Warten/Reservieren des Mediums); (2) Identifikation (Adressierung eines bestimmten Empfängers) (Falsch)
+b) (1) Flußkontrolle; (2) Identifikation (Adressierung eines bestimmten Empfängers) (Richtig)
+c) (1) Fehlerkontrolle (z.B. Wiederholung bei Problemen); (2) Segmentierung (Zusammenfassen von Bits zu Einheiten) (Falsch)
+d) Situation 1 fällt unter Flußkontrolle (Sender drosseln/Empfänger puffern bzw. warten); Situation 2 unter Identifikation (Rahmen per Adresse an Zielknoten auswählen) (Richtig)
 
 ### Source Text
 
