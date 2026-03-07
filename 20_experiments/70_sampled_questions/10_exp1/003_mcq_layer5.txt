@@ -1,0 +1,37 @@
+## Multiple-Choice-Question
+
+### Lernziel
+
+Die Studierenden verstehen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+
+### Formulierte Frage
+
+Frage: Welche Funktionen lassen sich als Kernaufgaben des Session Layers klassifizieren?
+
+Antwortmöglichkeiten:
+
+a) Das Aufbauen, Verwalten, Zurückweisen und Beenden von Sitzungen (Richtig)
+b) Die Flusskontrolle zur Regulierung des Datenstroms sowie die Fehlererkennung bei der Übertragung (Falsch)
+c) Die Konvertierung von Datenformaten sowie die Verschlüsselung und Komprimierung der übertragenen Daten (Falsch)
+d) Die Synchronisation durch Setzen von Zwischenpunkten sowie die Bündelung zusammengehöriger Transaktionen (Richtig)
+
+### Quelltext
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.

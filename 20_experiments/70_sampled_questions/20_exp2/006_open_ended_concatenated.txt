@@ -2,13 +2,13 @@
 
 ### Lernziel
 
-Die Studierenden können auf Basis der Schichtenprinzipien eigene Lösungsvorschläge für Kommunikationsprobleme entwickeln, die den Aufgaben der jeweiligen Schichten entsprechen
+Die Studierenden können für ein gegebenes Kommunikationsproblem einen Lösungsvorschlag entwickeln, der die Aufgaben der relevanten ISO-OSI-Schichten berücksichtigt
 
 ### Formulierte Frage
 
-Frage: Entwickeln Sie einen Lösungsvorschlag für folgendes Kommunikationsproblem: Ein Sensor in Netzwerk A soll kontinuierlich Messdaten an einen Server in Netzwerk B übertragen, wobei die Verbindung fehleranfällig ist und der Server die Daten langsamer verarbeiten kann als der Sensor sie sendet. Beschreiben Sie, welche Schichten mit welchen spezifischen Kernaufgaben zur Lösung dieses Problems beitragen müssen.
+Frage: Entwickeln Sie einen Lösungsvorschlag für folgendes Kommunikationsproblem: Ein mobiles Endgerät soll Messdaten an einen Server in einem entfernten Netzwerk übertragen. Die Übertragung erfolgt per Funk, die Daten müssen komprimiert, verschlüsselt und fehlerfrei beim Empfänger ankommen, wobei eine bestimmte Bandbreite garantiert werden muss. Beschreiben Sie, welche Aufgaben welcher ISO-OSI-Schichten Sie zur Lösung dieses Problems einsetzen würden.
 
-Antwort: Physical Layer (1): Transport der Messdaten durch Codierung und physikalische Übertragung zwischen den Netzwerken. Data Link Layer (2): Fehlerkontrolle zur Erkennung und Behebung von Übertragungsfehlern auf der fehleranfälligen Verbindung. Erste Stufe der Flusskontrolle durch Zwischenpuffern oder Herunterregeln. Network Layer (3): Adressierung und Routing zur netzwerkübergreifenden Kommunikation zwischen Netzwerk A und B. Flußsteuerung End-to-End zwischen Sensor und Server. Transport Layer (4): Flusskontrolle angepasst an die langsamere Verarbeitungsgeschwindigkeit des Servers durch Nutzung der Teilnehmer-Charakteristik. Dienstqualität zur Sicherung kontinuierlicher Datenübertragung mit Garantien für Bandbreite und Fehlerrate. Die Kombination von Fehler- und Flusskontrolle auf mehreren Schichten löst beide Kernprobleme. (Richtig)
+Antwort: Physical Layer (Schicht 1): Medienfreier Transport der Daten per Funk sowie Codierung und Decodierung der logischen Werte in physikalische Signale. Data Link Layer (Schicht 2): Fehlerkontrolle zur Erkennung und Behebung von Übertragungsfehlern, um fehlerfreie Übertragung zu gewährleisten. Network Layer (Schicht 3): Routing zur Auswahl der Zwischenknoten für die Übertragung zwischen mobilem Endgerät und entferntem Server in unterschiedlichen Netzwerken. Transport Layer (Schicht 4): Dienstqualität (QoS) zur Garantie der geforderten Bandbreite. Presentation Layer (Schicht 6): Kompression der Messdaten sowie Verschlüsselung zur sicheren Datenübertragung. Application Layer (Schicht 7): Definition der Anwendungsprotokolle für die Messdatenübertragung. (Richtig)
 
 ### Quelltext
 

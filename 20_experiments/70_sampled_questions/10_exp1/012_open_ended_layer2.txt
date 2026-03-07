@@ -1,0 +1,43 @@
+## Offene Frage
+
+### Lernziel
+
+Die Studierenden verstehen die Verfahren zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+
+### Formulierte Frage
+
+Frage: Entwerfen Sie ein neuartiges Data-Link-Layer-Protokoll für eine Punkt-zu-Punkt-Verbindung über einen fehleranfälligen Kanal mit asymmetrischen Bandbreiten. Beschreiben Sie konkret, wie Ihr Protokoll die fünf Kernaufgaben Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff umsetzt.
+
+Antwort: Protokoll: "Adaptive Asymmetric Link Protocol (AALP)". Fehlerkontrolle: 32-Bit-CRC zur Erkennung; selektive Wiederholung (Selective Repeat ARQ) mit NACKs auf dem langsameren Rückkanal für Fehlerbehebung. Flusskontrolle: Adaptives Fenster, basierend auf empfangenen Pufferinformationen und gemessener Asymmetrie; Sender passt Rate an langsamerem Kanal an. Segmentierung: Variable Framegröße bis 1500 Byte Nutzdaten; Header mit Längenfeld, Bit-Stuffing zur Rahmengrenzkennung. Identifikation: 1-Byte-Adressfeld (z.B. 0x01 für A, 0x02 für B) identifiziert Sender/Empfänger. Medienzugriff: Vollduplex auf separaten Leitungen; jede Station aktiviert PHY kontinuierlich zum Senden/Empfangen, keine Kollisionsbehandlung nötig.
+
+### Quelltext
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.

@@ -2,18 +2,18 @@
 
 ### Lernziel
 
-Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+Die Studierenden verstehen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung
 
 ### Formulierte Frage
 
-Frage: Frage: Welche zwei Arten der Flusssteuerung werden im Network Layer unterschieden?
+Frage: Welche zwei Typen der Flusssteuerung werden im Network Layer unterschieden?
 
 Antwortmöglichkeiten:
 
-a) End-to-End Flusssteuerung (Richtig)
-b) Host-to-Host Flusssteuerung (Falsch)
-c) Link-to-Link Flusssteuerung (Falsch)
-d) Node-to-Node Flusssteuerung (Richtig)
+a) End-to-End und Node-to-Node (Richtig)
+b) Ende-zu-Ende und Knoten-zu-Knoten (Richtig)
+c) Open Loop und Closed Loop (Falsch)
+d) Stop-and-Wait und Sliding Window (Falsch)
 
 ### Quelltext
 

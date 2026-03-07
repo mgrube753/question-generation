@@ -2,18 +2,18 @@
 
 ### Lernziel
 
-Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
+Die Studierenden können das ISO-OSI-Modell anwenden, um für einen gegebenen Kommunikationsvorgang die zuständige Schicht zu ermitteln
 
 ### Formulierte Frage
 
-Frage: Frage: Ermitteln Sie, in welchen Schichten des Referenzmodells Codierungsaufgaben durchgeführt werden.
+Frage: Ermitteln Sie die zwei Schichten des OSI-Modells, die in einem Szenario, in dem ein Gerät in einem lokalen Netzwerk mit einem Prozess auf einem Gerät in einem entfernten Netzwerk kommunizieren soll, für die Adressierung zuständig sind.
 
 Antwortmöglichkeiten:
 
-a) In der Application Layer (Schicht 7), wo anwendungsspezifische Datenformate definiert und codiert werden, wie in HTTP oder FTP. (Falsch)
-b) In der Data Link Layer (Schicht 2), wo Bits in Frames segmentiert und Codierungen für Fehlerkontrolle wie Parität oder CRC durchgeführt werden. (Falsch)
-c) In der Physical Layer (Schicht 1), wo logische Werte auf physikalische Größen abgebildet werden, wie bei NRZ oder Manchester. (Richtig)
-d) In der Presentation Layer (Schicht 6), wo Anwendungsdaten als Bitstrom kodiert werden, einschließlich Endian-Konvertierung, Kompression und Verschlüsselung. (Richtig)
+a) Data Link Layer (Layer 2) und Transport Layer (Layer 4) (Falsch)
+b) Die Schicht für netzwerkübergreifende Geräteadressierung und die Schicht für prozessspezifische Teilnehmeradressierung (Richtig)
+c) Network Layer (Layer 3) und Application Layer (Layer 7) (Falsch)
+d) Network Layer (Layer 3) und Transport Layer (Layer 4) (Richtig)
 
 ### Quelltext
 

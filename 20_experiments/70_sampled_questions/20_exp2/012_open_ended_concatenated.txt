@@ -2,13 +2,17 @@
 
 ### Lernziel
 
-Die Studierenden können auf Basis der Schichtenprinzipien eigene Lösungsvorschläge für Kommunikationsprobleme entwickeln, die den Aufgaben der jeweiligen Schichten entsprechen
+Die Studierenden können für ein gegebenes Kommunikationsproblem einen Lösungsvorschlag entwickeln, der die Aufgaben der relevanten ISO-OSI-Schichten berücksichtigt
 
 ### Formulierte Frage
 
-Frage: Entwerfen Sie ein auf zwei funktionale Schichten reduziertes Kommunikationsmodell für eine direkte, verkabelte Punkt-zu-Punkt-Verbindung zwischen zwei Rechnern. Weisen Sie jeder Ihrer zwei Schichten mindestens drei spezifische Kernaufgaben aus dem OSI-Referenzmodell zu und begründen Sie, warum dieses reduzierte Modell für dieses Szenario ausreichend ist.
+Frage: Entwerfen Sie einen Protokollentwurf für ein Sensornetz, in dem batteriebetriebene Temperatursensoren ihre Messwerte energieeffizient und zuverlässig über eine Funkstrecke an eine Basisstation senden. Benennen Sie für die Schichten 1 bis 4 des OSI-Modells jeweils eine passende Kernaufgabe und skizzieren Sie konkret, wie diese in Ihrem Entwurf umgesetzt wird, um die Ziele Energieeffizienz und Zuverlässigkeit zu erreichen.
 
-Antwort: Reduziertes Modell: Physikalische Schicht (Layer 1) und Sicherungsschicht (Layer 2). Layer 1: Codierung (Umwandlung logischer Werte in physikalische Signale), Transport (Übertragung über Medium), Decodierung (Rückwandlung in logische Werte). Layer 2: Fehlerkontrolle (Erkennung/Behebung von Übertragungsfehlern), Flusskontrolle (Anpassung der Senderate), Segmentierung (Zusammenfassung von Bits zu Frames). Begründung: Bei direkter Punkt-zu-Punkt-Verbindung entfallen höhere Schichtfunktionen: Kein Routing (Layer 3) nötig, da keine Vermittlung; keine End-to-End-Transportkontrolle (Layer 4), da nur ein Hop; Session-, Presentation- und Application-Layer-Funktionen können in den Anwendungen integriert sein. Layer 1 und 2 stellen die grundlegende zuverlässige Bitübertragung bereit, was für dieses Szenario ausreicht. (Richtig)
+Antwort: (Richtig)
+Schicht 1 (Physical Layer): Kernaufgabe Codierung. Umsetzung: Verwendung einer einfachen Modulation (z.B. OOK) mit niedriger Datenrate, um Sendeleistung und -dauer zu minimieren (Energieeffizienz). Robuste Signalpegel für zuverlässige Erkennung.
+Schicht 2 (Data Link Layer): Kernaufgabe Fehlerkontrolle & Medienzugriff. Umsetzung: Leichte Frame-Checksummen (z.B. CRC) für Fehlererkennung mit selektiver Wiederholung bei Fehlern (Zuverlässigkeit). Zeitgesteuerter Medienzugriff (TDMA), wo Sensoren nur in zugewiesenen, kurzen Slots senden/die Funkstrecke aktivieren (Energieeffizienz durch Vermeidung von Kollisionen und Listen).
+Schicht 3 (Network Layer): Kernaufgabe Routing. Umsetzung: Einfaches Flooding mit Hop-Count-Limit, da Sensoren typisch statisch und einstufig zur Basisstation kommunizieren. Dies vermeidet energieintensiven Routing-Tabellenaustausch.
+Schicht 4 (Transport Layer): Kernaufgabe Adressierung & einfache Ende-zu-Ende-Kontrolle. Umsetzung: Logische Sensor-ID im Paketheader. Die Basisstation bestätigt (ACK) erfolgreichen Empfang; bei Ausbleiben wiederholt der Sensor nach Timeout (erhöht Zuverlässigkeit). Keine komplexe Flußkontrolle nötig.
 
 ### Quelltext
 

@@ -2,21 +2,18 @@
 
 ### Lernziel
 
-Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
+Die Studierenden können das ISO-OSI-Modell anwenden, um für einen gegebenen Kommunikationsvorgang die zuständige Schicht zu ermitteln
 
 ### Formulierte Frage
 
-Frage: Ermitteln Sie, welche zwei OSI-Schichten zuständig sind, wenn bei einer Netzwerkkommunikation einerseits die Verschlüsselung der übertragenen Daten durchgeführt und andererseits die Auswahl der vermittelnden Zwischenknoten für nicht direkt verbundene Geräte vorgenommen wird.
+Frage: Ermitteln Sie, welche beiden Schichten des ISO-OSI-Modells zuständig sind, wenn bei einer Datenübertragung zwischen zwei Geräten in unterschiedlichen Netzwerken sowohl die Auswahl der vermittelnden Zwischenknoten erfolgen muss als auch Übertragungsfehler erkannt werden sollen.
 
 Antwortmöglichkeiten:
 
-a) Application Layer (Schicht 7) für die Verschlüsselung und Transport Layer (Schicht 4) für die Auswahl der vermittelnden Zwischenknoten zur Kommunikation nicht direkt verbundener Geräte (Falsch)
-
-b) Presentation Layer (Schicht 6) für die Verschlüsselung und Network Layer (Schicht 3) für die Auswahl der vermittelnden Zwischenknoten (Routing) (Richtig)
-
-c) Schicht 6 übernimmt das Verschlüsseln und Entschlüsseln der Daten, Schicht 3 ist für das Routing zur Kommunikation zwischen nicht direkt verbundenen Knoten zuständig (Richtig)
-
-d) Session Layer (Schicht 5) ist für die Verschlüsselung zuständig, Data Link Layer (Schicht 2) übernimmt das Routing zwischen nicht direkt verbundenen Geräten (Falsch)
+a) Network Layer (Schicht 3) und Data Link Layer (Schicht 2) (Richtig)
+b) Schicht 3 übernimmt das Routing zur Auswahl der Zwischenknoten bei netzwerkübergreifender Kommunikation, Schicht 2 ist für die Fehlerkontrolle zur Erkennung von Übertragungsfehlern zuständig (Richtig)
+c) Session Layer (Schicht 5) und Network Layer (Schicht 3), da Schicht 5 die Kommunikationsbeziehung zwischen den Geräten verwaltet und Schicht 3 durch Synchronisationspunkte Übertragungsfehler erkennt (Falsch)
+d) Transport Layer (Schicht 4) und Physical Layer (Schicht 1), da Schicht 4 durch Dienstqualitätsgarantien die Wegauswahl steuert und Schicht 1 fehlerhafte Signale bei der Decodierung erkennt (Falsch)
 
 ### Quelltext
 

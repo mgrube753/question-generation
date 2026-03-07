@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+Die Studierenden verstehen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung
 
 ### Stem Generation
 
-Frage: Welche zwei Varianten der Flusssteuerung lassen sich anhand ihrer Reichweite im Netzwerk klassifizieren?
+Frage: Welche zwei Strategien der Flusssteuerung werden im Network Layer 3 unterschieden, um auf unterschiedliche Reichweiten der Datenübertragung zu reagieren?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) End-to-End-Flusssteuerung, bei der die Steuerung vom Sender zum weit entfernten Empfänger erfolgt (Richtig)
-b) Node-to-Node-Flusssteuerung, bei der die Steuerung von jedem Knoten zum jeweils nächsten Knoten erfolgt (Richtig)
+a) End-to-End: Flusssteuerung vom Sender zum weit entfernten Empfänger (Richtig)
+b) Node-to-Node: Flusssteuerung von jedem Knoten zum nächsten Knoten (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Welche zwei Varianten der Flusssteuerung lassen sich anhand ihrer Reichweite im Netzwerk klassifizieren?
+Frage: Welche zwei Strategien der Flusssteuerung werden im Network Layer 3 unterschieden, um auf unterschiedliche Reichweiten der Datenübertragung zu reagieren?
 
 Antwortmöglichkeiten:
 
-a) End-to-End-Flusssteuerung, bei der die Steuerung vom Sender zum weit entfernten Empfänger erfolgt (Richtig)
-b) Network-to-Network-Flusssteuerung, bei der die Steuerung zwischen verschiedenen Netzwerken zur Abstimmung der Übertragungsgeschwindigkeit erfolgt (Falsch)
-c) Node-to-Node-Flusssteuerung, bei der die Steuerung von jedem Knoten zum jeweils nächsten Knoten erfolgt (Richtig)
-d) Segment-to-Segment-Flusssteuerung, bei der die Steuerung innerhalb einzelner Datensegmente zur Pufferoptimierung erfolgt (Falsch)
+a) End-to-End: Flusssteuerung vom Sender zum weit entfernten Empfänger (Richtig)
+b) Hop-by-Hop: Flusssteuerung über alle Zwischenknoten der gesamten Route hinweg (Falsch)
+c) Node-to-Node: Flusssteuerung von jedem Knoten zum nächsten Knoten (Richtig)
+d) Segment-to-Segment: Flusssteuerung zwischen logischen Netzwerksegmenten unterschiedlicher Technologien (Falsch)
 
 ### Source Text
 

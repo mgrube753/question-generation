@@ -1,0 +1,37 @@
+## Offene Frage
+
+### Lernziel
+
+Die Studierenden verstehen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+
+### Formulierte Frage
+
+Frage: Ein Little-Endian System speichert den 32-Bit-Hexadezimalwert 0xDEADBEEF. Wie lautet die exakte Byte-Reihenfolge (in Hexadezimalschreibweise), die ein Big-Endian System für denselben Wert verwenden würde?
+
+Antwort: Die Byte-Reihenfolge im Big-Endian-System lautet: DE AD BE EF. (Richtig)
+
+### Quelltext
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.

@@ -2,13 +2,13 @@
 
 ### Lernziel
 
-Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
+Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge auflisten und zu jeder Schicht ihre Hauptfunktion beschreiben
 
 ### Formulierte Frage
 
-Frage: Benennen Sie die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge (1–7) und ordnen Sie jeder Schicht jeweils eine zentrale Hauptfunktion zu.
+Frage: Listen Sie die sieben Schichten des ISO-OSI-Modells in der korrekten Reihenfolge (1–7) auf und beschreiben Sie zu jeder Schicht jeweils in einem kurzen Satz ihre Hauptfunktion.
 
-Antwort: 1 Physical: physikalische Codierung/Übertragung/Decodierung von Bits über das Medium. 2 Data Link: fehlergesicherte Übertragung auf dem lokalen Link (Frames, MAC, Medienzugriff). 3 Network: netzwerkübergreifende Paketvermittlung inkl. logischer Adressierung und Routing. 4 Transport: Ende-zu-Ende-Transport zwischen Teilnehmern/Prozessen (Ports), Flusskontrolle/QoS. 5 Session: Sitzungen aufbauen, verwalten, synchronisieren, beenden. 6 Presentation: Datendarstellung/Kodierung; Konvertierung, Kompression, Verschlüsselung. 7 Application: anwendungsspezifische Protokolle/Dienste und Semantik der Kommunikation. (Richtig)
+Antwort: 1 Physical Layer: Codiert/transportiert/decodiert Bits als physikalische Signale über ein Medium. 2 Data Link Layer: Sichert die Übertragung über den physikalischen Kanal durch Rahmenbildung, Adressierung, Medienzugriff sowie Fehler- und Flusskontrolle. 3 Network Layer: Ermöglicht netzübergreifende Kommunikation durch logische Adressierung und Routing zwischen Teilnetzen. 4 Transport Layer: Stellt Ende-zu-Ende-Transport zwischen Prozessen bereit (z.B. Ports), inkl. Flusssteuerung und QoS-Aspekten. 5 Session Layer: Baut Sitzungen auf, verwaltet und beendet sie, inkl. Synchronisationspunkten und Bündelung von Transaktionen. 6 Presentation Layer: Wandelt Anwendungsdaten in eine gemeinsame Darstellung um (Kodierung, Zeichenformate, Kompression, Verschlüsselung). 7 Application Layer: Definiert anwendungsspezifische Protokolle, Daten und Verhalten der Kommunikation. (Richtig)
 
 ### Quelltext
 

@@ -2,13 +2,13 @@
 
 ### Lernziel
 
-Die Studierenden können die Angemessenheit bestimmter Schichtfunktionen für gegebene Anforderungen bewerten und begründete Urteile über Design-Entscheidungen im ISO-OSI-Modell abgeben
+Die Studierenden können die Eignung einer ISO-OSI-Schichtfunktion für ein gegebenes Anforderungsszenario begründet beurteilen
 
 ### Formulierte Frage
 
-Frage: Ein Protokollentwurf für ein Echtzeit‑Monitoring über heterogene Netze legt fest: (1) Fehlerkontrolle wird ausschließlich im Physical Layer realisiert, (2) End‑to‑End‑Flußsteuerung wird im Data Link Layer implementiert, (3) QoS‑Garantien (Bandbreite/Latenz/Jitter) werden im Network Layer bereitgestellt, (4) Verschlüsselung wird im Presentation Layer durchgeführt. Beurteilen Sie die Angemessenheit dieser Zuordnungen zu den jeweiligen ISO‑OSI‑Schichten und stützen Sie Ihr Urteil zu jedem Punkt jeweils auf ein schichtbezogenes Kriterium (z.B. Mediengebundenheit, Node‑to‑Node vs End‑to‑End, Teilnehmer‑ vs Netzwerkbezug, Dienstqualität).
+Frage: Beurteilen Sie den Entwurf, bei einer verteilten Anwendung die Funktionen „Setzen von Zwischenpunkten zur Wiederaufnahme nach Abbruch“ und „Gruppierung zusammengehöriger Transaktionen“ ausschließlich im Transport Layer umzusetzen; legen Sie fest, welcher OSI-Layer dafür zweckmäßiger ist, und stützen Sie Ihr Urteil auf zwei selbstgewählte Kriterien.
 
-Antwort: (1) Unangemessen: Physical Layer ist mediengebunden und liefert Codierung/Transport/Decodierung; Fehlerkontrolle braucht Rahmen/Prüfsummen und ist typisch Data Link (Node‑to‑Node über einen Link). (2) Unangemessen: Data Link arbeitet nur zwischen direkt benachbarten Knoten; End‑to‑End‑Flußsteuerung gehört schichtenmäßig höher (Network/insb. Transport), da sie Sender‑zu‑entferntem Empfänger über mehrere Hops regelt. (3) Eher unangemessen: Network Layer ist netzwerkbezogen (Adressierung/Routing) und kann höchstens QoS‑fähige Pfade wählen, aber echte Garantien für Bandbreite/Latenz/Jitter sind Dienstqualität für Teilnehmer und damit Transport Layer. (4) Angemessen: Presentation Layer behandelt Datenrepräsentation inkl. Verschlüsselung; teilnehmerbezogen und unabhängig vom Netz/Medium. (Richtig)
+Antwort: Der Entwurf ist unzweckmäßig: Transport Layer (L4) bietet v. a. Ende-zu-Ende-Übertragung, Flusssteuerung und QoS, kennt aber keine Anwendungs-/Transaktionssemantik. Zwischenpunkte und das Gruppieren zusammengehöriger Transaktionen sind klassische Session-Layer-(L5)-Aufgaben (Synchronisation, Bündelung) und sollten dort (bzw. mangels L5 in der Praxis in der Anwendungsschicht) umgesetzt werden. Kriterium 1 (Schichtenprinzip/Separation of Concerns): L4 würde um Sitzungslogik „aufgebläht“, verletzt klare Verantwortlichkeiten und erschwert Fehlersuche/Wartung. Kriterium 2 (Wiederverwendbarkeit/Interoperabilität): L5-Lösungen sind protokoll- und transportunabhängig; eine L4-Spezialimplementierung koppelt die Anwendung an ein bestimmtes Transportsystem und erschwert Austausch/Integration. (Richtig)
 
 ### Quelltext
 

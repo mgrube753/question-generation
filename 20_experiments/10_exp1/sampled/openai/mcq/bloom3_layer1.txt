@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
+Die Studierenden verstehen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
 
 ### Stem Generation
 
-Frage: In einem Kommunikationssystem werden logische Bits im Sender mittels Manchester-Verfahren in ein physikalisches Signal umgesetzt und im Empfänger durch Abtastung sowie Detektionsbereiche wieder als Bits rekonstruiert; ermitteln Sie die zwei Kernaufgaben der Physical Layer, die dabei im Sender bzw. im Empfänger ausgeführt werden.
+Frage: Ein Modul erhält ein bereits codiertes Lichtsignal und soll dieses durch die Luft zum Empfänger übertragen; dort werden die Signalpegel per Abtastung in Detektionsbereichen wieder als 0/1 interpretiert – welche zwei Kernaufgaben der physikalischen Schicht können Sie in diesem Ablauf ermitteln?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Codierung im Sender (Abbildung logischer Bits auf physikalische Signalformen, z.B. Manchester) und Decodierung im Empfänger (Rückinterpretation durch Abtastung und Detektionsbereiche zu logischen Bits) (Richtig)
-b) Sender: Umsetzung logischer Werte in physikalische Größen mittels Leitungscodierung (Manchester); Empfänger: Rekonstruktion der logischen Werte aus dem physikalischen Signal durch Sampling/Schwellwert- bzw. Bereichsdetektion (Richtig)
+a) Transport: Übertragung des physikalischen Lichtsignals durch ein medienfreies Übertragungsmedium (Luft) vom Sender zum Empfänger. (Richtig)
+b) Decodierung: Abtastung/Detektion der Signalpegel am Empfänger und Rückinterpretation in logische 0/1-Werte anhand von Detektionsbereichen. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: In einem Kommunikationssystem werden logische Bits im Sender mittels Manchester-Verfahren in ein physikalisches Signal umgesetzt und im Empfänger durch Abtastung sowie Detektionsbereiche wieder als Bits rekonstruiert; ermitteln Sie die zwei Kernaufgaben der Physical Layer, die dabei im Sender bzw. im Empfänger ausgeführt werden.
+Frage: Ein Modul erhält ein bereits codiertes Lichtsignal und soll dieses durch die Luft zum Empfänger übertragen; dort werden die Signalpegel per Abtastung in Detektionsbereichen wieder als 0/1 interpretiert – welche zwei Kernaufgaben der physikalischen Schicht können Sie in diesem Ablauf ermitteln?
 
 Antwortmöglichkeiten:
 
-a) Sender: Rahmung der Bitfolge zu Frames inkl. CRC/Prüfsumme; Empfänger: CRC-Prüfung, Fehlerbehandlung und ggf. Anfordern einer Wiederholung (Falsch)
-b) Codierung im Sender (Abbildung logischer Bits auf physikalische Signalformen, z.B. Manchester) und Decodierung im Empfänger (Rückinterpretation durch Abtastung und Detektionsbereiche zu logischen Bits) (Richtig)
-c) Sender: Aushandlung von Leitungsparametern (z.B. Autonegotiation) und Pegelanpassung; Empfänger: automatische Verstärkungsregelung und reine Taktwiedergewinnung zur Synchronisation (Falsch)
-d) Sender: Umsetzung logischer Werte in physikalische Größen mittels Leitungscodierung (Manchester); Empfänger: Rekonstruktion der logischen Werte aus dem physikalischen Signal durch Sampling/Schwellwert- bzw. Bereichsdetektion (Richtig)
+a) Decodierung: Abtastung/Detektion der Signalpegel am Empfänger und Rückinterpretation in logische 0/1-Werte anhand von Detektionsbereichen. (Richtig)
+b) Fehlererkennung: Bildung und Prüfung einer Prüfsumme (z.B. CRC), um Bitfehler nach der Übertragung zu erkennen. (Falsch)
+c) Transport: Übertragung des physikalischen Lichtsignals durch ein medienfreies Übertragungsmedium (Luft) vom Sender zum Empfänger. (Richtig)
+d) Codierung: (Neu-)Abbildung logischer 0/1-Werte auf physikalische Signalformen (z.B. Manchester), bevor das Lichtsignal gesendet wird. (Falsch)
 
 ### Source Text
 

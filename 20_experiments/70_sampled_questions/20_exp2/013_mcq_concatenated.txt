@@ -2,18 +2,18 @@
 
 ### Lernziel
 
-Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
+Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge auflisten und zu jeder Schicht ihre Hauptfunktion beschreiben
 
 ### Formulierte Frage
 
-Frage: Frage: Welche zwei Schichten des ISO-OSI-Modells nennen ausdrücklich als Kernaufgabe die Kodierung/Abbildung von Daten (entweder logische Werte auf physikalische Größen oder Anwendungsdaten als Bitstrom)?
+Frage: Welche zwei Schichten des ISO-OSI-Modells haben als Kernaufgabe die Adressierung?
 
 Antwortmöglichkeiten:
 
-a) Presentation Layer (Schicht 6) – Kodierung/Darstellung der Anwendungsdaten als Bitstrom (Richtig)
-b) Data Link Layer (Schicht 2) – Segmentierung/Framing: Zusammenfassen einzelner Bits zu größeren Einheiten (z.B. Bytes/Frames) (Falsch)
-c) Physical Layer (Schicht 1) – Codierung/Abbildung logischer Werte auf physikalische Größen sowie Decodierung zurück (Richtig)
-d) Application Layer (Schicht 7) – Festlegung von Protokollelementen und Anwendungsdatenformaten (z.B. HTTP/SMTP) (Falsch)
+a) Data Link Layer (Schicht 2) (Falsch)
+b) Network Layer (Schicht 3) (Richtig)
+c) Session Layer (Schicht 5) (Falsch)
+d) Transport Layer (Schicht 4) (Richtig)
 
 ### Quelltext
 

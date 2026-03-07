@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+Die Studierenden verstehen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
 
 ### Question Generation
 
-Frage: Wenden Sie die drei Kernaufgaben der Application Layer auf das Protokoll SSH an. Ermitteln Sie für jede Kernaufgabe ein anwendungsspezifisches Beispiel.
+Frage: Wenden Sie die drei Kernaufgaben der Application Layer 7 auf die Anwendung "Video-Streaming-Dienst" an, indem Sie für diese spezifische Anwendung die Grundkonzepte, die Protokollelemente und das Verhalten beschreiben.
 
 ### Answer Generation + Union of all
 
-Frage: Wenden Sie die drei Kernaufgaben der Application Layer auf das Protokoll SSH an. Ermitteln Sie für jede Kernaufgabe ein anwendungsspezifisches Beispiel.
+Frage: Wenden Sie die drei Kernaufgaben der Application Layer 7 auf die Anwendung "Video-Streaming-Dienst" an, indem Sie für diese spezifische Anwendung die Grundkonzepte, die Protokollelemente und das Verhalten beschreiben.
 
-Antwort: 1. Grundkonzepte: Definierte Begriffe der Anwendung, z.B. "Authentifizierung via Public-Key-Verfahren". 2. Protokollelemente: Spezifische Nachrichten und deren Daten, z.B. die Client-Anfrage SSH_MSG_USERAUTH_REQUEST mit Nutzername und Public-Key-Daten. 3. Verhalten: Reaktion auf Protokollelemente, z.B. der Server sendet bei ungültigen Credentials SSH_MSG_USERAUTH_FAILURE. (Richtig)
+Antwort: Grundkonzepte: Client, Server, Streaming-Session, Medienpuffer, adaptive Bitratenauswahl (ABR) und Manifest/Playlist (z.B. HLS m3u8, DASH MPD). Protokollelemente: Anforderungen umfassen HTTP-GET für Manifestdateien und Videosegmente (Chunks). Erwartete Daten sind die Manifestdatei (enthält Verfügbarkeit und URLs der Segmente) sowie die videocodierten Segmente selbst (z.B. TS- oder fMP4-Fragmente). Verhalten: Der Server reagiert auf Client-Anfragen, indem er das Manifest und angeforderte Segmente liefert. Der Client analysiert das Manifest, wählt basierend auf aktueller Netzwerkbandbreite und Pufferfüllstand eine geeignete Bitrate aus, fordert die entsprechenden Segmente an, puffert sie und decodiert sie zur Wiedergabe. (Richtig)
 
 ### Source Text
 

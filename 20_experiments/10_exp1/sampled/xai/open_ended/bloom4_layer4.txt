@@ -4,17 +4,17 @@
 
 ### Learning Objective
 
-Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+Die Studierenden verstehen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
 
 ### Question Generation
 
-Frage: Analysieren Sie, wie die Kernaufgaben Adressierung, Flusssteuerung und Dienstqualität der Transportebene miteinander in Beziehung stehen, um eine teilnehmerorientierte Übertragung zu ermöglichen.
+Frage: Analysieren Sie, wie die Kernaufgaben Adressierung, Flusssteuerung und Dienstqualität im Transport Layer miteinander in Beziehung stehen, um eine teilnehmerorientierte Übertragung zu ermöglichen.
 
 ### Answer Generation + Union of all
 
-Frage: Analysieren Sie, wie die Kernaufgaben Adressierung, Flusssteuerung und Dienstqualität der Transportebene miteinander in Beziehung stehen, um eine teilnehmerorientierte Übertragung zu ermöglichen.
+Frage: Analysieren Sie, wie die Kernaufgaben Adressierung, Flusssteuerung und Dienstqualität im Transport Layer miteinander in Beziehung stehen, um eine teilnehmerorientierte Übertragung zu ermöglichen.
 
-Antwort: Die Transportebene (Layer 4) ermöglicht teilnehmerorientierte Übertragung durch drei Kernaufgaben, die eng verknüpft sind. Adressierung identifiziert Teilnehmer via Adressen (z. B. Ports), um gezielte Verbindungen herzustellen. Flusssteuerung nutzt Teilnehmer-Charakteristiken (z. B. Puffergröße, Verarbeitungsgeschwindigkeit), um Datenfluss zu regulieren und Überlastung zu vermeiden. Dienstqualität (QoS) gewährleistet Garantien für Bandbreite, Latenz, Jitter und Fehlerrate, angepasst an individuelle Teilnehmerbedürfnisse. Diese Aufgaben interagieren: Adressierung bildet die Basis für zielgerichtete Kommunikation, Flusssteuerung optimiert den Fluss basierend auf Adressen und Charakteristiken, während QoS die Qualität sichert – zusammen ermöglichen sie eine effiziente, auf Teilnehmer zugeschnittene Übertragung zwischen beliebigen Netzteilnehmern. (Richtig)
+Antwort: Im Transport Layer ermöglichen die Kernaufgaben Adressierung, Flusssteuerung und Dienstqualität (QoS) eine teilnehmerorientierte Übertragung. Adressierung identifiziert Teilnehmer durch Adressen (z. B. Ports), um gezielte Kommunikation zwischen beliebigen Endpunkten zu etablieren. Flusssteuerung nutzt Teilnehmer-Charakteristiken, wie Verarbeitungskapazität, um Datenfluss anzupassen und Überlastungen zu vermeiden. QoS sichert Garantien für Parameter wie Bandbreite, Latenz, Jitter und Fehlerrate, zugeschnitten auf individuelle Anforderungen. Diese Aufgaben interagieren: Adressierung legt die Basis für zielgerichtete Verbindungen, Flusssteuerung optimiert den Datenfluss basierend auf Teilnehmerprofilen, und QoS integriert beides, um eine zuverlässige, angepasste Dienstleistung zu gewährleisten. So entsteht eine end-to-end-Übertragung, die auf Teilnehmerbedürfnisse abgestimmt ist. (Richtig)
 
 ### Source Text
 

@@ -1,0 +1,34 @@
+## Offene Frage
+
+### Lernziel
+
+Die Studierenden verstehen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Formulierte Frage
+
+Frage: Benennen Sie die drei Kernaufgaben der Transportschicht und beschreiben Sie jeweils kurz, worauf diese abzielen.
+
+Antwort: Die drei Kernaufgaben der Transportschicht sind Adressierung, Flusssteuerung und Dienstqualität. Die Adressierung zielt auf die eindeutige Identifikation von Teilnehmern im Netz ab, um eine korrekte Zustellung der Daten an die richtigen Kommunikationspartner zu ermöglichen. Die Flusssteuerung zielt darauf ab, die Charakteristik der einzelnen Teilnehmer zu nutzen und den Datenfluss entsprechend anzupassen, um Überlastungen zu vermeiden. Die Dienstqualität zielt auf die Sicherung der Quality of Service ab. Dabei wird ein Kommunikationsdienst mit Garantien für Parameter wie Bandbreite, Latenz, Jitter und Fehlerrate erbracht. Dieser Service wird auf den jeweiligen Teilnehmer zugeschnitten, um dessen spezifische Anforderungen zu erfüllen. (Richtig)
+
+### Quelltext
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.

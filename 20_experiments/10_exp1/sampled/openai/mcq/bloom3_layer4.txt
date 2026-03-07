@@ -4,29 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+Die Studierenden verstehen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
 
 ### Stem Generation
 
-Frage: In einem Netzwerkdienst soll eine Übertragung zwischen zwei eindeutig bestimmten Teilnehmern erfolgen und es müssen garantierte Werte für Bandbreite und maximale Latenz eingehalten werden; welche zwei Kernaufgaben der Transportschicht nutzen Sie dafür?
+Frage: In einem Transportprotokoll sollen Daten von Teilnehmer A an Teilnehmer B übertragen werden, wobei B nur eine begrenzte Verarbeitungsrate hat, aber keine Garantien für Bandbreite, Latenz, Jitter oder Fehlerrate gefordert sind: Welche zwei Kernaufgaben der Transportschicht sind in diesem Szenario anzuwenden?
 
 ### Key Generation
 
 Korrekte Antworten:
 
-a) Adressierung der Teilnehmer (eindeutige Teilnehmer-Adressen zur Kommunikation zwischen genau bestimmten Endpunkten) (Richtig)
-b) Dienstqualität / QoS-Sicherung (Garantien für Bandbreite und maximale Latenz einhalten) (Richtig)
+a) Adressierung der Teilnehmer (Identifikation/Zuordnung von A und B für die Übertragung) (Richtig)
+b) Flußsteuerung zur Anpassung der Sende-/Empfangsrate an die begrenzte Verarbeitungsrate von B (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Frage: In einem Netzwerkdienst soll eine Übertragung zwischen zwei eindeutig bestimmten Teilnehmern erfolgen und es müssen garantierte Werte für Bandbreite und maximale Latenz eingehalten werden; welche zwei Kernaufgaben der Transportschicht nutzen Sie dafür?
+Frage: In einem Transportprotokoll sollen Daten von Teilnehmer A an Teilnehmer B übertragen werden, wobei B nur eine begrenzte Verarbeitungsrate hat, aber keine Garantien für Bandbreite, Latenz, Jitter oder Fehlerrate gefordert sind: Welche zwei Kernaufgaben der Transportschicht sind in diesem Szenario anzuwenden?
 
 Antwortmöglichkeiten:
 
-a) Dienstqualität / QoS-Sicherung (Garantien für Bandbreite und maximale Latenz einhalten) (Richtig)
-b) Flußsteuerung (Anpassung der Senderate an die Teilnehmer-Charakteristik zur Vermeidung von Überlast) (Falsch)
-c) Adressierung der Teilnehmer (eindeutige Teilnehmer-Adressen zur Kommunikation zwischen genau bestimmten Endpunkten) (Richtig)
-d) Routing / Wegewahl (Bestimmen des Pfads durch das Netz zur Einhaltung von Latenzvorgaben) (Falsch)
+a) Dienstqualität (QoS): Zusicherung/Reservierung von Bandbreite, Latenz, Jitter oder Fehlerrate für die Übertragung (Falsch)
+b) Flußsteuerung zur Anpassung der Sende-/Empfangsrate an die begrenzte Verarbeitungsrate von B (Richtig)
+c) Routing/Wegewahl im Netz zur Bestimmung des Pfads, über den die Daten von A nach B übertragen werden (Falsch)
+d) Adressierung der Teilnehmer (Identifikation/Zuordnung von A und B für die Übertragung) (Richtig)
 
 ### Source Text
 

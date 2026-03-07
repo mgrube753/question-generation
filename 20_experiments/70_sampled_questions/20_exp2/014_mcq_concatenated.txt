@@ -2,18 +2,18 @@
 
 ### Lernziel
 
-Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
+Die Studierenden können die Kernaufgaben aller ISO-OSI-Schichten in eigenen Worten erklären
 
 ### Formulierte Frage
 
-Frage: Frage: Welche zwei Schichten des ISO-OSI-Modells würden Sie anhand ihrer Kernaufgaben klassifizieren als (a) zuständig für die Abbildung logischer Werte auf physikalische Größen inkl. Transport und Decodierung sowie (b) zuständig für die Darstellung von Anwendungsdaten als Bitstrom (z.B. Endian-Ness, Zeichenkodierung, Kompression, Verschlüsselung)?
+Frage: Klassifizieren Sie die ISO-OSI-Schichten, deren Kernaufgaben sowohl „Adressierung“ als auch „Flußsteuerung“ umfassen (wählen Sie genau zwei aus).
 
 Antwortmöglichkeiten:
 
-a) Application Layer (Schicht 7) (Falsch)
-b) Data Link Layer (Schicht 2) (Falsch)
-c) Physical Layer (Schicht 1) (Richtig)
-d) Presentation Layer (Schicht 6) (Richtig)
+a) Data Link Layer (Schicht 2) (Falsch)
+b) Network Layer (Schicht 3) (Richtig)
+c) Session Layer (Schicht 5) (Falsch)
+d) Transport Layer (Schicht 4) (Richtig)
 
 ### Quelltext
 

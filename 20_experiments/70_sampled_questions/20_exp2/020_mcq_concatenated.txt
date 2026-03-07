@@ -2,18 +2,18 @@
 
 ### Lernziel
 
-Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
+Die Studierenden können die Kernaufgaben aller ISO-OSI-Schichten in eigenen Worten erklären
 
 ### Formulierte Frage
 
-Frage: Welche zwei Arten der Flußsteuerung werden für die Network Layer beschrieben?
+Frage: Welche Kernaufgaben sind sowohl in der Network Layer als auch in der Transport Layer des OSI-Modells enthalten?
 
 Antwortmöglichkeiten:
 
-a) End-to-End (Richtig)
-b) Host-to-Host (Falsch)
-c) Link-to-Link (Falsch)
-d) Node-to-Node (Richtig)
+a) Adressierung (Richtig)
+b) Dienstqualität (Falsch)
+c) Flußsteuerung (Richtig)
+d) Routing (Falsch)
 
 ### Quelltext
 

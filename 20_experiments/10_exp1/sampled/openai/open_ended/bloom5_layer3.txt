@@ -1,0 +1,44 @@
+## Open-Ended Question
+
+### Bloom Level: Evaluating
+
+### Learning Objective
+
+Die Studierenden verstehen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung
+
+### Question Generation
+
+Frage: Bewerten Sie die Zweckmäßigkeit eines Layer-3-Designs, das für die Kommunikation zwischen Hosts in unterschiedlichen Layer-2-Netzen nur netzwerkübergreifende Adressierung und Routing vorsieht, aber keine Flusssteuerung implementiert; stützen Sie Ihr Urteil auf zwei selbstgewählte Kriterien und berücksichtigen Sie dabei End-to-End- sowie Node-to-Node-Sicht.
+
+### Answer Generation + Union of all
+
+Frage: Bewerten Sie die Zweckmäßigkeit eines Layer-3-Designs, das für die Kommunikation zwischen Hosts in unterschiedlichen Layer-2-Netzen nur netzwerkübergreifende Adressierung und Routing vorsieht, aber keine Flusssteuerung implementiert; stützen Sie Ihr Urteil auf zwei selbstgewählte Kriterien und berücksichtigen Sie dabei End-to-End- sowie Node-to-Node-Sicht.
+
+Antwort: Kriterium 1 (Skalierbarkeit/Komplexität): Zweckmäßig, weil L3 sich auf Adressierung und Routing konzentriert; Router bleiben einfach, zustandsarm und interoperabel über verschiedene L2-Technologien. Das unterstützt große, heterogene Netze (Best-Effort-Ansatz wie IP).
+
+Kriterium 2 (Robustheit bei Überlast/Performance): Kritisch, da ohne Flusssteuerung bei zu hoher Senderrate Pufferüberläufe, Paketverlust, Latenzanstieg und ggf. Congestion Collapse auftreten können. End-to-End kann Fluss-/Staukontrolle durch Transportprotokolle (z.B. TCP) erfolgen; bei reinen UDP/Realtime-Anwendungen fehlt sie oft. Node-to-Node fehlt eine per-hop Drosselung auf L3-Ebene; sie muss dann auf L2 (MAC/Link-Flow-Control) oder durch Queue-Management/Policing in Routern kompensiert werden. Insgesamt zweckmäßig, aber nur mit Kompensation in anderen Schichten. (Richtig)
+
+### Source Text
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.

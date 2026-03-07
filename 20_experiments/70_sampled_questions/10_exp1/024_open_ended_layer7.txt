@@ -1,0 +1,39 @@
+## Offene Frage
+
+### Lernziel
+
+Die Studierenden verstehen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+
+### Formulierte Frage
+
+Frage: Entwerfen Sie eine neue, einfache Anwendung auf der Application Layer 7, indem Sie anwendungsspezifische Grundkonzepte, Protokollelemente und Verhaltensweisen definieren und diese zu einem kohärenten Ganzen zusammenfügen.
+
+Antwort: Ich entwerfe eine einfache Anwendung "EchoChat" für Echtzeit-Nachrichten-Echos zwischen Clients über einen Server auf der Application Layer 7.
+
+Grundkonzepte: User (Absender/Empfänger), Message (Textnachricht), Timestamp (Zeitstempel), Echo (Rückgabe der Nachricht).
+
+Protokollelemente: Anforderungen umfassen "SendMessage" (erwartete Daten: User-ID, Message-Text, Timestamp als JSON) und "ReceiveEcho" (erwartete Daten: Echo-Message mit Timestamp).
+
+Verhalten: Auf "SendMessage" reagiert der Server, indem er die Nachricht speichert, einen Timestamp hinzufügt und als "ReceiveEcho" an den User zurücksendet. Bei Fehlern (z.B. ungültige JSON) wird eine Error-Message gesendet. Dies ermöglicht ein kohärentes Echo-System für einfache Kommunikation, basierend auf HTTP-ähnlichen Requests. (Richtig)
+
+### Quelltext
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

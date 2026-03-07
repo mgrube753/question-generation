@@ -2,20 +2,13 @@
 
 ### Lernziel
 
-Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+Die Studierenden verstehen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
 
 ### Formulierte Frage
 
-Frage: Entwerfen Sie für eine einfache Anwendung „Campus-Chat“ (Textnachrichten zwischen zwei Studierenden) eine Application-Layer-7-Spezifikation mit (1) genau drei Grundkonzepten der Anwendung, (2) genau drei Protokollelementen (jeweils Name und erwartete Datenfelder), und (3) dem Verhalten der Anwendung für jedes Protokollelement in je einem Erfolgs- und einem Fehlerfall.
+Frage: Entwerfen Sie für eine selbstgewählte einfache Anwendung (z.B. Mini-Chat oder Terminbuchung) eine anwendungsspezifische Spezifikation der Application Layer (Schicht 7), bestehend aus (1) 3–5 Grundkonzepten als zentrale Begriffe der Anwendung, (2) 2–3 Protokollelementen als Anforderungen inkl. der dabei erwarteten Datenfelder, und (3) je Protokollelement einer Verhaltensregel, die die Reaktion der Anwendung auf die Anforderung festlegt, in höchstens 150 Wörtern.
 
-Antwort: Grundkonzepte (3): Student (studentId), Sitzung (sessionToken), Nachricht (msgId, text, ts).
-Protokollelemente (3):
-1) AUTH_REQ(studentId, password)
-Erfolg: Server prüft Daten, erzeugt Sitzung und antwortet AUTH_OK(sessionToken). Fehler: falsche Daten/gesperrt → AUTH_ERR(reason).
-2) SEND_REQ(sessionToken, toStudentId, msgId, text, ts)
-Erfolg: Server validiert Sitzung, speichert Nachricht, stellt an Empfänger zu und antwortet SEND_OK(msgId). Fehler: ungültige Sitzung/Empfänger unbekannt → SEND_ERR(reason).
-3) FETCH_REQ(sessionToken, sinceTs)
-Erfolg: Server validiert Sitzung, liefert alle neuen Nachrichten: FETCH_OK(list<msgId,text,ts,fromStudentId>). Fehler: ungültige Sitzung → FETCH_ERR(reason). (Richtig)
+Antwort: Anwendung: Mini-Chat. Grundkonzepte: Benutzer, Chatraum, Nachricht, Zeitstempel, Sitzungstoken. Protokollelemente: (1) JOIN_ROOM {userName, roomId, password?}. Verhalten: Prüfe Raum/Passwort, lege Benutzer+Token an und antworte {status=OK, token} oder {status=ERROR, reason}. (2) SEND_MESSAGE {token, roomId, text, clientMsgId}. Verhalten: Validieren (Token gültig, Benutzer im Raum, Textlänge), speichere Nachricht mit serverTimestamp, sende an alle Teilnehmer; Antwort {status=OK, serverMsgId, serverTimestamp} sonst ERROR. (3) FETCH_MESSAGES {token, roomId, sinceTimestamp, limit}. Verhalten: Bei gültigem Token liefere Nachrichten aufsteigend nach Zeitstempel ab sinceTimestamp, max limit; Antwort {status=OK, messages[]} sonst ERROR. (Richtig)
 
 ### Quelltext
 

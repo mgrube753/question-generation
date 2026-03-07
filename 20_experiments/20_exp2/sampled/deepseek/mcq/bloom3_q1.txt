@@ -4,28 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden können die Konzepte der einzelnen Schichten auf konkrete Beispiele anwenden, indem sie Kommunikationsvorgänge der korrekten Schicht zuordnen
+Die Studierenden können das ISO-OSI-Modell anwenden, um für einen gegebenen Kommunikationsvorgang die zuständige Schicht zu ermitteln
 
 ### Stem Generation
 
-Frage: Bei der komprimierten und verschlüsselten Übertragung von Anwendungsdaten erfüllt der Presentation Layer welche zwei seiner Kernaufgaben?
+Frage: Für die Anpassung der physikalischen Signalcodierung und die netzwerkübergreifende Adressierung bei der Weiterleitung durch einen Router sind im ISO/OSI-Modell welche zwei Schichten verantwortlich?
 
 ### Key Generation
 
 Korrekte Antworten:
-a) Komprimieren und Dekomprimieren der Anwendungsdaten. (Richtig)
-b) Verschlüsseln und Entschlüsseln der Anwendungsdaten. (Richtig)
+
+a) Physical Layer und Network Layer (Richtig)
+b) Schicht 1 (Physical Layer) und Schicht 3 (Network Layer) (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: Bei der komprimierten und verschlüsselten Übertragung von Anwendungsdaten erfüllt der Presentation Layer welche zwei seiner Kernaufgaben?
+Frage: Für die Anpassung der physikalischen Signalcodierung und die netzwerkübergreifende Adressierung bei der Weiterleitung durch einen Router sind im ISO/OSI-Modell welche zwei Schichten verantwortlich?
 
 Antwortmöglichkeiten:
 
-a) Komprimieren und Dekomprimieren der Anwendungsdaten. (Richtig)
-b) Adressierung der Teilnehmer und Bereitstellung von Dienstgüte (QoS). (Falsch)
-c) Verschlüsseln und Entschlüsseln der Anwendungsdaten. (Richtig)
-d) Fehlererkennung und -behebung auf der Verbindungsebene. (Falsch)
+a) Physical Layer und Network Layer (Richtig)
+b) Data Link Layer und Network Layer (Falsch)
+c) Schicht 1 (Physical Layer) und Schicht 3 (Network Layer) (Richtig)
+d) Physical Layer und Transport Layer (Falsch)
 
 ### Source Text
 

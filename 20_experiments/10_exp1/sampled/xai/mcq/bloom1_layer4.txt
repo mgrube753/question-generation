@@ -1,0 +1,52 @@
+## Multiple-Choice Question
+
+### Bloom Level: Remembering
+
+### Learning Objective 
+
+Die Studierenden verstehen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Stem Generation
+
+Frage: Welche zwei der folgenden Parameter werden durch die Dienstqualität in der Transportschicht garantiert?
+
+### Key Generation
+
+Korrekte Antworten:
+
+a) Bandbreite (Richtig)
+b) Latenz (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Welche zwei der folgenden Parameter werden durch die Dienstqualität in der Transportschicht garantiert?
+
+Antwortmöglichkeiten:
+
+a) Bandbreite (Richtig)
+b) Latenz (Richtig)
+c) Portnummer (Falsch)
+d) Sequenznummer (Falsch)
+
+### Source Text
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.

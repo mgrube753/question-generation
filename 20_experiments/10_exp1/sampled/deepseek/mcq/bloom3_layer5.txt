@@ -4,28 +4,29 @@
 
 ### Learning Objective 
 
-Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+Die Studierenden verstehen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
 
 ### Stem Generation
 
-Frage: In einem Kommunikationsszenario werden zur Fehlerwiederherstellung Zwischenpunkte gesetzt und mehrere zusammengehörige Transaktionen zu einer Einheit gruppiert. Welche zwei Kernaufgaben der Session Layer werden hier angewendet?
+Frage: Ein Entwickler entwirft ein System, das nach einem Verbindungsabbruch an einem definierten Punkt fortgesetzt werden kann und logisch zusammengehörige Operationen als eine Einheit behandelt. Welche zwei Kernaufgaben der Sitzungsschicht werden für diese spezifischen Anforderungen implementiert?
 
 ### Key Generation
 
 Korrekte Antworten:
-a) Synchronisation – Setzen von Zwischenpunkten zur Fehlerwiederherstellung (Richtig)
-b) Bündelung – Gruppierung zusammengehöriger Transaktionen zu einer Einheit (Richtig)
+
+a) Synchronisation durch Setzen von Zwischenpunkten, um nach einem Abbruch an einem definierten Punkt fortfahren zu können. (Richtig)
+b) Bündelung zusammengehöriger Operationen, um sie als eine logische Einheit zu behandeln. (Richtig)
 
 ### Distractor Generation + Union of all
 
-Frage: In einem Kommunikationsszenario werden zur Fehlerwiederherstellung Zwischenpunkte gesetzt und mehrere zusammengehörige Transaktionen zu einer Einheit gruppiert. Welche zwei Kernaufgaben der Session Layer werden hier angewendet?
+Frage: Ein Entwickler entwirft ein System, das nach einem Verbindungsabbruch an einem definierten Punkt fortgesetzt werden kann und logisch zusammengehörige Operationen als eine Einheit behandelt. Welche zwei Kernaufgaben der Sitzungsschicht werden für diese spezifischen Anforderungen implementiert?
 
 Antwortmöglichkeiten:
 
-a) Bündelung – Gruppierung zusammengehöriger Transaktionen zu einer Einheit (Richtig)
-b) Sitzungsverwaltung – Aufbauen und Beenden der Verbindung (Falsch)
-c) Synchronisation – Setzen von Zwischenpunkten zur Fehlerwiederherstellung (Richtig)
-d) Verschlüsselung – Sicherstellung der Vertraulichkeit der Transaktionen (Falsch)
+a) Aufbauen, Verwalten und Beenden von Sitzungen zwischen den Kommunikationspartnern. (Falsch)
+b) Bündelung zusammengehöriger Operationen, um sie als eine logische Einheit zu behandeln. (Richtig)
+c) Sicherstellung der zuverlässigen Ende-zu-Ende-Übertragung durch Fehlerkontrolle und Flusssteuerung. (Falsch)
+d) Synchronisation durch Setzen von Zwischenpunkten, um nach einem Abbruch an einem definierten Punkt fortfahren zu können. (Richtig)
 
 ### Source Text
 

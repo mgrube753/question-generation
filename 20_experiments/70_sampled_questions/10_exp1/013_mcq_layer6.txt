@@ -2,17 +2,17 @@
 
 ### Lernziel
 
-Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+Die Studierenden verstehen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
 
 ### Formulierte Frage
 
-Frage: Frage: Wählen Sie die zwei Kernaufgaben der Presentation Layer (Schicht 6) aus, die explizit als Aktion mit zugehöriger Gegenaktion (z. B. X und De‑X) beschrieben werden.
+Frage: Identifizieren Sie die zwei Kernaufgaben der Presentation Layer, die jeweils als Paar aus einer Verarbeitung und ihrer Umkehrung (z.B. „… und …“) benannt werden.
 
 Antwortmöglichkeiten:
 
-a) Framing und Deframing (Falsch)
-b) Komprimieren und Dekomprimieren (Richtig)
-c) Segmentieren und Reassemblieren (Falsch)
+a) Komprimieren und Dekomprimieren (Richtig)
+b) Konvertieren und Rückkonvertieren der Zeichendarstellung (z.B. ASCII ↔ Unicode) (Falsch)
+c) Serialisieren und Deserialisieren (Falsch)
 d) Verschlüsseln und Entschlüsseln (Richtig)
 
 ### Quelltext

@@ -2,18 +2,18 @@
 
 ### Lernziel
 
-Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
+Die Studierenden verstehen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
 
 ### Formulierte Frage
 
-Frage: Welche zwei der folgenden sind Beispiele für Codierung auf der Physical Layer?
+Frage: Welche der folgenden sind Beispiele für Codierungsverfahren im Physical Layer?
 
 Antwortmöglichkeiten:
 
-a) Abtastung (Falsch)
+a) Hamming Code (Falsch)
 b) Manchester (Richtig)
 c) NRZ (Richtig)
-d) Telefonkabel (Falsch)
+d) Parity Bit (Falsch)
 
 ### Quelltext
 

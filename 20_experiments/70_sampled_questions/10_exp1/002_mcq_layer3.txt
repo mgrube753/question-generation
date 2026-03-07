@@ -1,0 +1,41 @@
+## Multiple-Choice-Question
+
+### Lernziel
+
+Die Studierenden verstehen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung
+
+### Formulierte Frage
+
+Frage: Welche zwei Strategien der Flusssteuerung werden im Network Layer 3 unterschieden, um auf unterschiedliche Reichweiten der Datenübertragung zu reagieren?
+
+Antwortmöglichkeiten:
+
+a) End-to-End: Flusssteuerung vom Sender zum weit entfernten Empfänger (Richtig)
+b) Hop-by-Hop: Flusssteuerung über alle Zwischenknoten der gesamten Route hinweg (Falsch)
+c) Node-to-Node: Flusssteuerung von jedem Knoten zum nächsten Knoten (Richtig)
+d) Segment-to-Segment: Flusssteuerung zwischen logischen Netzwerksegmenten unterschiedlicher Technologien (Falsch)
+
+### Quelltext
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.

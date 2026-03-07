@@ -2,18 +2,18 @@
 
 ### Lernziel
 
-Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
+Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge auflisten und zu jeder Schicht ihre Hauptfunktion beschreiben
 
 ### Formulierte Frage
 
-Frage: Identifizieren Sie zwei Schichten des ISO-OSI-Modells, bei denen die Codierung bzw. Kodierung von Daten zur Hauptfunktion gehört.
+Frage: Welche zwei Codierungsverfahren werden als Beispiele für die Kernaufgabe Codierung im Physical Layer genannt?
 
 Antwortmöglichkeiten:
 
-a) Application Layer (Schicht 7) - Codierung der Anwendungsdaten in Protokollformate (Falsch)
-b) Data Link Layer (Schicht 2) - Codierung von Datenrahmen für die Fehlerkontrolle (Falsch)
-c) Physical Layer (Schicht 1) - Codierung logischer Werte auf physikalische Größen (Richtig)
-d) Presentation Layer (Schicht 6) - Kodierung der Anwendungsdaten als Bitstrom (Richtig)
+a) Abtastung (Falsch)
+b) ASCII (Falsch)
+c) Manchester (Richtig)
+d) NRZ (Richtig)
 
 ### Quelltext
 

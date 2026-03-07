@@ -2,18 +2,18 @@
 
 ### Lernziel
 
-Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge benennen und die jeweilige Hauptfunktion jeder Schicht wiedergeben
+Die Studierenden können die sieben Schichten des ISO-OSI-Modells in korrekter Reihenfolge auflisten und zu jeder Schicht ihre Hauptfunktion beschreiben
 
 ### Formulierte Frage
 
-Frage: Frage: Nennen Sie zwei Schichten des ISO-OSI-Modells, deren Kernaufgaben die Codierung bzw. Kodierung von Daten umfassen.
+Frage: Welche zwei der folgenden Aufgaben zählen zu den Kernaufgaben des Presentation Layer im ISO-OSI-Modell?
 
 Antwortmöglichkeiten:
 
-a) Data Link Layer (Falsch)
-b) Physical Layer (Richtig)
-c) Presentation Layer (Richtig)
-d) Transport Layer (Falsch)
+a) Adressierung (Falsch)
+b) Konvertierung der Zeichendarstellung (z.B. ASCII, Unicode) (Richtig)
+c) Synchronisation (Falsch)
+d) Verschlüsseln und Entschlüsseln von Daten (Richtig)
 
 ### Quelltext
 

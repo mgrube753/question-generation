@@ -1,0 +1,39 @@
+## Multiple-Choice-Question
+
+### Lernziel
+
+Die Studierenden verstehen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Formulierte Frage
+
+Frage: Welche zwei der folgenden Parameter werden durch die Dienstqualität in der Transportschicht garantiert?
+
+Antwortmöglichkeiten:
+
+a) Bandbreite (Richtig)
+b) Latenz (Richtig)
+c) Portnummer (Falsch)
+d) Sequenznummer (Falsch)
+
+### Quelltext
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
