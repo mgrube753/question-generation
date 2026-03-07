@@ -4,7 +4,7 @@ Dieses Experiment testet die Fähigkeit von vier Large Language Models (LLMs), F
 
 ## Experimentaufbau
 
-**Eingabequelle:** Extrahierte Textauszüge aller 7 OSI-Layer als ein zusammengefügter Text, basierend auf einer Vorlesungs-PDF meines Professors.
+**Eingabequelle:** Extrahierte Textauszüge aller 7 ISO-OSI-Layer als ein zusammengefügter Text, basierend auf einer Vorlesungs-PDF meines Professors.
 
 **Material-Aufbereitung:** Zusammenfügen der Informationen aller 7 Layer zu einem Text, welcher in das vorliegende .docx Dokument integriert wurde
 
@@ -16,7 +16,7 @@ In jede Frage wurde ein bestimmtes Lernziel integriert, an das jeweilige Bloom-L
 
 ### Schritt 1: Bewertungskriterien verstehen
 
-Lesen Sie die im .docx enthaltene Rubrik durch, die folgende Kategorien umfasst (jeweils 1-5 Punkte). Bestimmte Kategorien fokussieren sich auf die Bewertung der Fragen selbst, andere auf die Bewertung der Antworten. Beide Bestandteile sollen unmittelbar nach dem Lesen des jeweiligen Teils bewertet werden.
+Lesen Sie die PDF mit der Rubrik durch, die folgende Kategorien umfasst (jeweils 1-5 Punkte, außer bei der Bloom-Level-Bestimmung). Bestimmte Kategorien fokussieren sich auf die Bewertung der Fragen selbst, andere auf die Bewertung der Antworten. Beide Bestandteile sollen unmittelbar nach dem Lesen des jeweiligen Teils bewertet werden.
 
 **Fragenbewertung:**
 
@@ -32,33 +32,29 @@ Lesen Sie die im .docx enthaltene Rubrik durch, die folgende Kategorien umfasst 
 - **Sprachqualität:** Verständlichkeit und Angemessenheit
 - **Bloom-Level:** Welches kognitive Level wird durch die Antwort umgesetzt?
 
-### Schritt 2: Tabellen-Struktur verstehen
+### Schritt 2: CSV-Struktur verstehen
 
-Jede Klein-Tabelle unter der jeweiligen Frage enthält:
+Die Datei `exp2.csv` enthält:
 
-- Die 5 Bewertungszeilen für die Fragenbewertung (Klarheit, Herausforderung, Wertigkeit, Sprachqualität, Bloom-Level)
-- Die 3 Bewertungszeilen für die Antwortenbewertung (Klarheit, Sprachqualität, Bloom-Level)
+- `sample_id`: Eindeutige ID (001-024) für Zuordnung zur Frage
+- `question_type`: `mcq` oder `open_ended`
+- Die 5 Bewertungsspalten für die Fragenbewertung (q_clarity, q_challenging, q_value, q_language, q_bloom_rating)
+- Die 3 Bewertungsspalten für die Antwortenbewertung (a_clarity, a_language, a_bloom_rating)
 - `answer_problems`: Sind gewisse Antworten problematisch? Warum?
 - `comments`: Für zusätzliche Anmerkungen
 
 ### Schritt 3: Bewertung durchführen
 
-1. Schauen Sie das Experiment-Dokument an
-2. Verschaffen Sie sich einen Überblick über die ISO-OSI-Layer-Inhalte durch das Lesen des Textes im Dokument, auf den sich die Fragen beziehen
-3. Für jedes Fragenkonstrukt:
+1. Schauen Sie das PDF-Dokument mit den Fragen an
+2. Verschaffen Sie sich einen Überblick über die ISO-OSI-Layer-Inhalte (separates PDF), auf die sich die Fragen beziehen
+3. Öffnen Sie `exp2.csv`
+4. Für jede Zeile:
    - Schauen Sie sich das Lernziel für die jeweilige Frage an
    - Lesen Sie die Frage sorgfältig. Lassen Sie dabei die Antwort noch außer Acht
-   - Bewerten Sie nach den 5 Kategorien der Rubrik für die Frage und notieren Sie Ihre Bewertungen in die Tabelle
+   - Bewerten Sie nach den 5 Kategorien der Rubrik für die Frage und notieren Sie Ihre Bewertungen in die CSV
    - Lesen Sie nun die Antwort(en) zur Frage sorgfältig durch
-   - Bewerten Sie nach den 3 Kategorien der Rubrik für die Antworten und notieren Sie Ihre Bewertungen in die Tabelle
+   - Bewerten Sie nach den 3 Kategorien der Rubrik für die Antworten und notieren Sie Ihre Bewertungen in die CSV
    - Notieren Sie gegebenenfalls problematische Antworten/Antwortoptionen in `answer_problems`, und warum diese problematisch sind
    - Ergänzen Sie bei Bedarf weitere Kommentare in `comments`
-
-**Bewertungsfokus:**
-
-- Welches Bloom-Level wird tatsächlich erreicht?
-- Gibt es bestimmte qualitative Unterschiede zwischen MCQ und Open-Ended Fragen?
-
-## Dankbarkeit
 
 Vielen Dank für Ihre Unterstützung bei der Evaluation! Ihre Einschätzungen sind wertvoll für die Forschung.

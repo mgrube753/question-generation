@@ -61,11 +61,4 @@ Die Datei `exp1.csv` enthält:
    - Notieren Sie gegebenenfalls problematische Antworten/Antwortoptionen in `answer_problems`, und warum diese problematisch sind
    - Ergänzen Sie bei Bedarf weitere Kommentare in `comments`
 
-**Bewertungsfokus:**
-
-- Ist die Frage fachlich korrekt bezogen auf den Layer-Text?
-- Sind alle im Text enthaltenen Informationen richtig wiedergegeben?
-
-## Dankbarkeit
-
 Vielen Dank für Ihre Unterstützung bei der Evaluation! Ihre Einschätzungen sind wertvoll für die Forschung.
