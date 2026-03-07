@@ -62,15 +62,15 @@
 
 *Hinweis: Es kann eine Diskrepanz zwischen dem Bloom-Level der Frage und dem der Antwort vorliegen. Deswegen müssen beide Bestandteile bewertet werden.*
 
-1. **Remembering:** Abruf relevanten Wissens aus dem Langzeitgedächtnis, indem der Schwerpunkt auf dem Erkennen und Erinnern von Fakten liegt.
+1. **Remembering:** Abgespeicherte Inhalte aus dem Gedächtnis abrufen. Die Lernenden geben dabei wieder, was sie vorher gelernt haben.
    * Verben: Definieren, beschreiben, aufzählen, identifizieren, auflisten, zuordnen, benennen, skizzieren, zitieren, auswählen
-2. **Understanding:** Erkennen der Bedeutung von Anweisungen, z.B. mündlicher, schriftlicher und grafischer Kommunikation.
+2. **Understanding:** Aus vorliegenden Materialien direkt ablesbare Inhalte wiedergeben können. Das Verständnis zeigt sich darin, dass die Lernenden das Gelernte auch in einem Kontext präsent haben, der sich vom Kontext unterscheidet, in dem gelernt worden ist.
    * Verben: Klarstellen, klassifizieren, vergleichen, gegenüberstellen, detaillieren, erklären, umschreiben, neu schreiben, zusammenfassen, übersetzen
-3. **Applying:** Durchführen oder Anwenden eines Verfahrens in einer bestimmten Situation.
+3. **Applying:** Ein gegebenes Problem auf eine vorgegebene Art lösen. Die Lernenden wenden etwas Gelerntes in einer neuen Situation an, die bisher nicht vorgekommen ist.
    * Verben: Anwenden, Berechnen, Vorführen, Ermitteln, Untersuchen, Veranschaulichen, Verändern, Simulieren, Lösen, Nutzen
-4. **Analyzing:** Zerlegung von Material in seine Bestandteile und Bestimmung ihrer Beziehungen zueinander oder zu einer Gesamtstruktur oder einem Gesamtzweck.
+4. **Analyzing:** Die Beziehung von Teilen zueinander und zu einer übergeordneten Struktur erläutern können. Die Lernenden zerlegen dabei Modelle, Verfahren oder anderes in deren Bestandteile und müssen in komplexen Sachverhalten die Aufbauprinzipien oder inneren Strukturen entdecken.
    * Verben: Analysieren, zerlegen, erkennen, differenzieren, unterscheiden, prüfen, untersuchen, optimieren, in Beziehung setzen, trennen
-5. **Evaluating:** Urteile auf der Grundlage etablierter Kriterien und Standards fällen.
+5. **Evaluating:** Auf Basis von selbstgewählten Kriterien ein begründetes Urteil treffen. Die Lernenden beurteilen ein Modell, eine Lösung, einen Ansatz, ein Verfahren oder etwas Ähnliches insgesamt in Hinsicht auf dessen Zweckmässigkeit oder innere Struktur.
    * Verben: Bewerten, schlussfolgern, kritisieren, verteidigen, bewerten, benoten, interpretieren, beurteilen, begründen, überprüfen
-6. **Creating:** Zusammenfügen oder Neuorganisieren von Elementen zu einem zusammenhängenden Ganzen.
+6. **Creating:** Inhalte für einen selbst neu weiterentwickeln. Die Lernenden zeigen eine konstruktive Leistung, bei der sie verschiedene Teile zusammenfügen müssen, die sie noch nicht zusammen erlebt oder gesehen haben.
    * Verben: Zusammenstellen, codieren, kompilieren, konstruieren, erstellen, entwerfen, entwickeln, erweitern, verbessern, reorganisieren

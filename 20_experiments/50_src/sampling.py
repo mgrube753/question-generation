@@ -30,7 +30,7 @@ def parse_question_filename(filename):
         return None, None
 
 
-def collect_exp1_questions():
+def collect_questions_exp1():
     questions_path = os.path.join(constants.EXP1_PATH, "questions")
     questions_by_llm_type = {
         llm: {"mcq": [], "open_ended": []} for llm in constants.LLM_NAMES
@@ -63,7 +63,7 @@ def collect_exp1_questions():
     return questions_by_llm_type
 
 
-def sample_questions_per_llm(questions_by_llm_type, n_per_type=3):
+def sample_questions_exp1_per_llm(questions_by_llm_type, n_per_type=3):
     sampled = []
     for llm_name in constants.LLM_NAMES:
         for q_type in ["mcq", "open_ended"]:
@@ -77,7 +77,7 @@ def sample_questions_per_llm(questions_by_llm_type, n_per_type=3):
     return sampled
 
 
-def copy_sampled_questions(sampled_questions, sample_path):
+def copy_sampled_questions_exp1(sampled_questions, sample_path):
     csv_rows = []
     for q in sampled_questions:
         dest_dir = os.path.join(sample_path, q["llm"], q["question_type"])
@@ -87,7 +87,7 @@ def copy_sampled_questions(sampled_questions, sample_path):
     return csv_rows
 
 
-def print_exp1_statistics(sampled_questions):
+def print_sampling_statistics_exp1(sampled_questions):
     print("\n       Distribution per LLM:")
     for llm_name in constants.LLM_NAMES:
         llm_q = [q for q in sampled_questions if q["llm"] == llm_name]
@@ -101,14 +101,14 @@ def print_exp1_statistics(sampled_questions):
     print(f"\n       Layer distribution: {dict(sorted(layer_dist.items()))}")
 
 
-def sample_exp1():
+def sample_questions_exp1():
     print("\n[INFO] Sampling Experiment 1 questions...")
     print("       Target: 24 questions (6 per LLM: 3 MCQ + 3 Open-Ended)")
 
     clean_samples(constants.EXP1_PATH)
 
-    questions_by_llm_type = collect_exp1_questions()
-    sampled_questions = sample_questions_per_llm(questions_by_llm_type)
+    questions_by_llm_type = collect_questions_exp1()
+    sampled_questions = sample_questions_exp1_per_llm(questions_by_llm_type)
 
     print(f"       Sampled: {len(sampled_questions)} questions")
     if not sampled_questions:
@@ -116,8 +116,8 @@ def sample_exp1():
         return []
 
     sample_path = os.path.join(constants.EXP1_PATH, "sampled")
-    csv_rows = copy_sampled_questions(sampled_questions, sample_path)
-    print_exp1_statistics(sampled_questions)
+    csv_rows = copy_sampled_questions_exp1(sampled_questions, sample_path)
+    print_sampling_statistics_exp1(sampled_questions)
 
     # Save CSV
     csv_path = os.path.join(
@@ -132,7 +132,7 @@ def sample_exp1():
     return sampled_questions
 
 
-def sample_bloom_files(src_dir, dest_dir, bloom_levels, llm_name, q_type):
+def sample_bloom_files_exp2(src_dir, dest_dir, bloom_levels, llm_name, q_type):
     if not os.path.exists(src_dir):
         return []
 
@@ -154,7 +154,7 @@ def sample_bloom_files(src_dir, dest_dir, bloom_levels, llm_name, q_type):
     return csv_rows
 
 
-def sample_exp2():
+def sample_questions_exp2():
     print("\n[INFO] Sampling Experiment 2 questions...")
     print("       Target: 24 questions (6 per LLM)")
 
@@ -164,7 +164,7 @@ def sample_exp2():
 
     for llm_name in constants.LLM_NAMES:
         # MCQ: all 3 Bloom levels (1-3)
-        mcq_rows = sample_bloom_files(
+        mcq_rows = sample_bloom_files_exp2(
             os.path.join(questions_path, llm_name, "mcq"),
             os.path.join(sample_path, llm_name, "mcq"),
             constants.BLOOM_LEVELS_MCQ,
@@ -174,7 +174,7 @@ def sample_exp2():
         csv_rows.extend(mcq_rows)
 
         # Open-ended: 3 random Bloom levels (1-6)
-        oe_rows = sample_bloom_files(
+        oe_rows = sample_bloom_files_exp2(
             os.path.join(questions_path, llm_name, "open_ended"),
             os.path.join(sample_path, llm_name, "open_ended"),
             random.sample(constants.BLOOM_LEVELS_OPEN_ENDED, 3),
@@ -265,7 +265,7 @@ def filter_question_content(content):
     return output
 
 
-def rename_and_copy_exp1(df, renamed_base):
+def create_renamed_samples_exp1(df, renamed_base):
     exp1_dest = os.path.join(renamed_base, "10_exp1")
     os.makedirs(exp1_dest, exist_ok=True)
     sample_path = os.path.join(constants.EXP1_PATH, "sampled")
@@ -294,7 +294,7 @@ def rename_and_copy_exp1(df, renamed_base):
     print(f"       Exp1: {len(df)} files created in 70_sampled_questions/10_exp1")
 
 
-def rename_and_copy_exp2(df, renamed_base):
+def create_renamed_samples_exp2(df, renamed_base):
     exp2_dest = os.path.join(renamed_base, "20_exp2")
     os.makedirs(exp2_dest, exist_ok=True)
     sample_path = os.path.join(constants.EXP2_PATH, "sampled")
@@ -342,14 +342,14 @@ def create_renamed_samples():
         constants.ANALYSES_PATH, "csv", "sampled", "exp1_sampled.csv"
     )
     if os.path.exists(exp1_csv):
-        rename_and_copy_exp1(pd.read_csv(exp1_csv), renamed_base)
+        create_renamed_samples_exp1(pd.read_csv(exp1_csv), renamed_base)
 
     # Exp2
     exp2_csv = os.path.join(
         constants.ANALYSES_PATH, "csv", "sampled", "exp2_sampled.csv"
     )
     if os.path.exists(exp2_csv):
-        rename_and_copy_exp2(pd.read_csv(exp2_csv), renamed_base)
+        create_renamed_samples_exp2(pd.read_csv(exp2_csv), renamed_base)
 
 
 def create_evaluation_csv(
@@ -433,8 +433,8 @@ def run_sampling():
     clean_samples(constants.EXP2_PATH)
     clean_renamed_samples()
 
-    sample_exp1()
-    sample_exp2()
+    sample_questions_exp1()
+    sample_questions_exp2()
     create_renamed_samples()
     generate_expert_evaluation_csvs()
 
