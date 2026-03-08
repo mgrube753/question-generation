@@ -2,7 +2,7 @@
 
 ## Relevanz/Relevance
 
-**Fragestellung:** Wie gut bezieht sich die Frage aus Dozierendenperspektive auf zentrale Fachkonzepte, Themen und Fachbegriffe des bereitgestellten Textes?
+Wie gut bezieht sich die Frage aus Dozierendenperspektive auf zentrale Fachkonzepte, Themen und Fachbegriffe des bereitgestellten Textes?
 
 *Hinweis: Hier geht es nicht darum, ob der Inhalt korrekt abgebildet wird, sondern nur um den thematischen Bezug.*
 
@@ -16,7 +16,7 @@
 
 ## Klarheit/Clarity
 
-**Fragestellung:** Wie präzise und inhaltlich eindeutig ist die Frage aus Dozierendenperspektive formuliert? Bewerten Sie auch die inhaltliche Klarheit im Nachhinein für die Beantwortung der Frage.
+Wie präzise und inhaltlich eindeutig ist die Frage aus Dozierendenperspektive formuliert? Bewerten Sie auch die inhaltliche Klarheit im Nachhinein für die Beantwortung der Frage.
 
 *Hinweis: Hier geht es um inhaltliche Verständlichkeit und Eindeutigkeit, nicht um sprachliche Formulierungen.*
 
@@ -30,7 +30,7 @@
 
 ## Beantwortbarkeit/Answerability
 
-**Fragestellung:** Hat man aus der Studierendenperspektive ausreichend Informationen im bereitgestellten Text, um die Frage vollständig zu beantworten?
+Hat man aus der Studierendenperspektive ausreichend Informationen im bereitgestellten Text, um die Frage vollständig zu beantworten?
 
 *Hinweis: Hier geht es nicht um die Schwierigkeit der Frage, sondern nur um die Verfügbarkeit der benötigten Informationen.*
 
@@ -44,7 +44,7 @@
 
 ## Herausforderung/Challenging
 
-**Fragestellung:** Wie viel kognitive Anstrengung erfordert die Beantwortung der Frage aus Studierendenperspektive?
+Wie viel kognitive Anstrengung erfordert die Beantwortung der Frage aus Studierendenperspektive?
 
 *Hinweis: Nicht die Bloom-Taxonomie als Grundlage nehmen, sondern die tatsächlich benötigte kognitive Last einschätzen.*
 
@@ -58,7 +58,7 @@
 
 ## Wertigkeit/Value bzgl. Lernzielintegration
 
-**Fragestellung:** Wie zentral ist das in der Frage behandelte Fachkonzept für das angestrebte Lernziel des Moduls? Nehmen Sie bei der Bewertung die Perspektive der Dozierenden ein.
+Wie zentral ist das in der Frage behandelte Fachkonzept für das angestrebte Lernziel des Moduls? Nehmen Sie bei der Bewertung die Perspektive der Dozierenden ein.
 
 *Hinweis: Diese Kategorie bewertet, wie gut die Frage dazu beiträgt, das beschriebene Lernziel des Moduls zu erreichen. Es wird nicht beabsichtigt, dass die Frage das komplette Lernziel abdeckt, sondern ein passendes Beispiel für das Lernziel sein soll.*
 
@@ -72,7 +72,7 @@
 
 ## Sprachqualität/Language
 
-**Fragestellung:** Wie angemessen ist aus Dozierendenperspektive die sprachliche Formulierung hinsichtlich Grammatik und Verständlichkeit? Bewerten Sie auch die sprachliche Präzision im Nachhinein für die Beantwortung der Frage.
+Wie angemessen ist aus Dozierendenperspektive die sprachliche Formulierung hinsichtlich Grammatik und Verständlichkeit? Bewerten Sie auch die sprachliche Präzision im Nachhinein für die Beantwortung der Frage.
 
 *Hinweis: Hier geht es ausschließlich um die sprachliche Form und Präzision, nicht um den Inhalt.*
 
@@ -86,7 +86,7 @@
 
 ## Korrektheit/Correctness
 
-**Fragestellung:** Wie korrekt ist die generierte Antwort auf Basis des Textinhalts? Nehmen Sie bei der Bewertung die Perspektive der Dozierenden ein.
+Wie korrekt ist die generierte Antwort auf Basis des Textinhalts? Nehmen Sie bei der Bewertung die Perspektive der Dozierenden ein.
 
 *Hinweis: Diese Kategorie bewertet die Passung der Antwort zu Textinhalt und Frage.*
 

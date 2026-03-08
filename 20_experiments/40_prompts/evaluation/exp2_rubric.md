@@ -2,7 +2,7 @@
 
 ## Klarheit/Clarity
 
-**Fragestellung:** Wie präzise und inhaltlich eindeutig ist die Frage aus Dozierendenperspektive formuliert? Bewerten Sie auch die inhaltliche Klarheit im Nachhinein für die Beantwortung der Frage.
+Wie präzise und inhaltlich eindeutig ist die Frage aus Dozierendenperspektive formuliert? Bewerten Sie auch die inhaltliche Klarheit im Nachhinein für die Beantwortung der Frage.
 
 *Hinweis: Hier geht es um inhaltliche Verständlichkeit und Eindeutigkeit, nicht um sprachliche Formulierungen.*
 
@@ -16,7 +16,7 @@
 
 ## Herausforderung/Challenging
 
-**Fragestellung:** Wie viel kognitive Anstrengung erfordert die Beantwortung der Frage aus Studierendenperspektive?
+Wie viel kognitive Anstrengung erfordert die Beantwortung der Frage aus Studierendenperspektive?
 
 *Hinweis: Nicht die Bloom-Taxonomie als Grundlage nehmen, sondern die tatsächlich benötigte kognitive Last einschätzen.*
 
@@ -30,7 +30,7 @@
 
 ## Wertigkeit/Value bzgl. Lernzielintegration
 
-**Fragestellung:** Wie zentral ist das in der Frage behandelte Fachkonzept für das angestrebte Lernziel des Moduls? Nehmen Sie bei der Bewertung die Perspektive der Dozierenden ein.
+Wie zentral ist das in der Frage behandelte Fachkonzept für das angestrebte Lernziel des Moduls? Nehmen Sie bei der Bewertung die Perspektive der Dozierenden ein.
 
 *Hinweis: Diese Kategorie bewertet, wie gut die Frage dazu beiträgt, das beschriebene Lernziel des Moduls zu erreichen. Es wird nicht beabsichtigt, dass die Frage das komplette Lernziel abdeckt, sondern ein passendes Beispiel für das Lernziel sein soll.*
 
@@ -44,7 +44,7 @@
 
 ## Sprachqualität/Language
 
-**Fragestellung:** Wie angemessen ist aus Dozierendenperspektive die sprachliche Formulierung hinsichtlich Grammatik und Verständlichkeit? Bewerten Sie auch die sprachliche Präzision im Nachhinein für die Beantwortung der Frage.
+Wie angemessen ist aus Dozierendenperspektive die sprachliche Formulierung hinsichtlich Grammatik und Verständlichkeit? Bewerten Sie auch die sprachliche Präzision im Nachhinein für die Beantwortung der Frage.
 
 *Hinweis: Hier geht es ausschließlich um die sprachliche Form und Präzision, nicht um den Inhalt.*
 
@@ -58,7 +58,7 @@
 
 ## Bloom's Level (Stufen 1-6)
 
-**Fragestellung:** Welche kognitive Stufe der Bloom'schen Taxonomie wird aus Dozierendenperspektive durch die Frage angesprochen? Bewerten Sie auch das Level im Nachhinein für die Beantwortung der Frage.
+Welche kognitive Stufe der Bloom'schen Taxonomie wird aus Dozierendenperspektive durch die Frage angesprochen? Bewerten Sie auch das Level im Nachhinein für die Beantwortung der Frage.
 
 *Hinweis: Es kann eine Diskrepanz zwischen dem Bloom-Level der Frage und dem der Antwort vorliegen. Deswegen müssen beide Bestandteile bewertet werden.*
 
