@@ -1,25 +1,25 @@
 sample_id,layer,question_type,q_relevance,q_clarity,q_answerability,q_challenging,q_value,q_language,a_clarity,a_language,a_correctness,answer_problems,comments
-001,1,mcq,,,,,,,,,,,
-002,3,mcq,,,,,,,,,,,
-003,5,mcq,,,,,,,,,,,
-004,4,open_ended,,,,,,,,,,,
-005,6,open_ended,,,,,,,,,,,
-006,2,open_ended,,,,,,,,,,,
-007,4,mcq,,,,,,,,,,,
-008,5,mcq,,,,,,,,,,,
-009,6,mcq,,,,,,,,,,,
-010,6,open_ended,,,,,,,,,,,
-011,7,open_ended,,,,,,,,,,,
-012,2,open_ended,,,,,,,,,,,
-013,6,mcq,,,,,,,,,,,
-014,1,mcq,,,,,,,,,,,
-015,4,mcq,,,,,,,,,,,
-016,2,open_ended,,,,,,,,,,,
-017,3,open_ended,,,,,,,,,,,
-018,7,open_ended,,,,,,,,,,,
-019,1,mcq,,,,,,,,,,,
-020,4,mcq,,,,,,,,,,,
-021,3,mcq,,,,,,,,,,,
-022,3,open_ended,,,,,,,,,,,
-023,4,open_ended,,,,,,,,,,,
-024,7,open_ended,,,,,,,,,,,
+1,1,mcq,4,4,5,1,2,5,5,5,5,,„Physikalische Größen“ — etwas merkwürdige Formulierung
+2,3,mcq,4,5,5,1,2,5,5,5,5,,"Basierend auf Input korrekte Antworten, aber Richtigkeit fragwürdig, wie schon beim Treffen mal besprochen."
+3,5,mcq,4,5,5,2,3,5,5,5,5,,
+4,4,open_ended,5,5,5,3,4,5,5,5,5,,
+5,6,open_ended,3,5,5,3,5,5,5,3,4,"Bin mir nicht so sicher, ob Kompression hier angewendet werden sollte. Kommt auf das Anwendungsszenario an.",„Erstens … Zweitens …“ etc. gefällt mir nicht so gut. Aber naja meckern auf sehr hohem Niveau würde ich sagen.
+6,2,open_ended,2,5,2,4,3,5,5,5,3,"Wenig Input aus Quelltext, Korrektheit fragwürdig",Nur eins von vier Aspekten für das Lernziel betrachtet
+7,4,mcq,5,5,5,2,2,5,5,5,5,,
+8,5,mcq,4,5,5,2,3,5,5,5,5,,
+9,6,mcq,4,5,5,2,1,5,5,5,5,,
+10,6,open_ended,3,2,3,1,2,5,5,5,3,Korrektheit aufgrund von komisch formulierter Frage nicht bestimmbar,Fragestellung nicht eindeutig.
+11,7,open_ended,4,2,1,5,3,5,5,5,4,"Viel „ausgedachtes“, also nicht aus dem Input",Lernziel zu ungenau. Mit Input nicht beantwortbar
+12,2,open_ended,5,5,1,5,5,5,3,5,3,Fragwürdige Annahmen getroffen,Mit Quelltext nicht beantwortbar. Frage viel zu schwer und breit gefächert.
+13,6,mcq,3,3,4,1,2,3,4,5,5,,Frage erst nach mehrmaligem Lesen verstanden. Dann aber viel zu einfach
+14,1,mcq,4,5,5,2,3,5,5,5,5,,
+15,4,mcq,4,5,5,2,3,5,5,5,2,"Flusssteuerung wird hier doch nicht benötigt, oder?",
+16,2,open_ended,3,4,2,5,5,4,4,3,5,Kein Fließtext,Nur mit Input schwer beantwortbar
+17,3,open_ended,3,3,2,5,5,3,5,4,4,Korrektheit so ad-hoc nicht 100%-ig bestimmbar,Wieder nur mit Input nicht beantwortbar
+18,7,open_ended,2,4,1,5,5,5,3,3,3,Ausgedachtes Konzept,"Fast nur kreative Arbeit notwendig. Limitierung auf 150 Wörter fragwürdig, limitiert Textfluss"
+19,1,mcq,5,5,5,1,1,5,5,5,5,,
+20,4,mcq,5,5,5,1,1,5,5,5,5,,
+21,3,mcq,5,5,5,1,1,5,5,2,5,"Zwei Antworten gleich, nur andere Sprache",
+22,3,open_ended,5,5,5,3,3,5,5,5,5,,
+23,4,open_ended,5,5,2,4,5,5,5,4,5,,Schwer mit nur dem Input-Text
+24,7,open_ended,5,2,2,5,5,3,4,4,2,"In „Ich-Perspektive“ geantwortet, Grundkonzepte nicht korrekt (?)",Aufgabe wird nicht eindeutig genug formuliert
