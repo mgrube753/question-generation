@@ -11,7 +11,7 @@ This directory contains the experimental framework for evaluating Large Language
   - [`sampled/`](10_exp1/sampled/) - Sampled questions for expert evaluation
 - **[`20_exp2/`](20_exp2/)** - Bloom's Taxonomy Alignment Experiment
   - [`questions/`](20_exp2/questions/) - Generated questions targeting specific cognitive levels
-  - [`sampled/`](20_exp2/sampled/) - Sampled questions for student evaluation
+  - [`sampled/`](20_exp2/sampled/) - Sampled questions for expert evaluation
 
 ### Supporting Infrastructure
 
@@ -78,7 +78,6 @@ Located in **[`50_src/`](50_src/)**:
 | [`prompt_utils.py`](50_src/prompt_utils.py) | Prompt parsing and Bloom data handling |
 | [`file_utils.py`](50_src/file_utils.py) | File I/O utilities |
 | [`constants.py`](50_src/constants.py) | Configuration constants |
-| [`analysis_quantitative.py`](50_src/analysis_quantitative.py) | Quantitative analysis for Experiment 1 |
 | [`sampling.py`](50_src/sampling.py) | Sample selection for manual evaluation |
 | [`check_truncation.py`](50_src/check_truncation.py) | Token length validation |
 
@@ -86,7 +85,6 @@ Located in **[`50_src/`](50_src/)**:
 
 | Notebook | Purpose |
 |----------|---------|
-| [`evaluation1_quan.ipynb`](50_src/evaluation1_quan.ipynb) | Experiment 1 quantitative analysis |
 | [`evaluation1_qual.ipynb`](50_src/evaluation1_qual.ipynb) | Experiment 1 qualitative analysis |
 | [`evaluation2_qual.ipynb`](50_src/evaluation2_qual.ipynb) | Experiment 2 qualitative analysis |
 
@@ -133,7 +131,6 @@ To run the Python files and the notebooks, go to the [`50_src/`](50_src/) direct
 
 ```bash
 python main.py                    # Generate questions
-python analysis_quantitative.py   # Quantitative analysis for Experiment 1
 python sampling.py                # Sample questions for manual review
 ```
 
@@ -142,7 +139,6 @@ python sampling.py                # Sample questions for manual review
 Open and execute the Jupyter notebooks in [`50_src/`](50_src/):
 
 ```bash
-jupyter notebook evaluation1_quan.ipynb  # Quantitative results
 jupyter notebook evaluation1_qual.ipynb  # Qualitative results (Exp 1)
 jupyter notebook evaluation2_qual.ipynb  # Qualitative results (Exp 2)
 ```
@@ -161,30 +157,26 @@ Evaluation outputs are saved to [`../40_evaluation/`](../40_evaluation/).
 
 ## Evaluation Data
 
-### Expert and Student Instructions
+### Expert Instructions
 
 Instruction files for the raters are located in [`60_analyses/expert_instructions/`](60_analyses/expert_instructions/):
 
 - [`expert_instructions_exp1.md`](60_analyses/expert_instructions/expert_instructions_exp1.md) - Guidelines for Experiment 1 experts
-- [`expert_instructions_exp2.md`](60_analyses/expert_instructions/expert_instructions_exp2.md) - Guidelines for Experiment 2 students
+- [`expert_instructions_exp2.md`](60_analyses/expert_instructions/expert_instructions_exp2.md) - Guidelines for Experiment 2 experts
 
 ### Analysis Data
 
 The raters' data were collected and stored in [`60_analyses/csv/`](60_analyses/csv/):
 
-- `quantitative/exp1/` - LLM-based adherence scorings
-- `qualitative/exp1/experts/` - Expert evaluation ratings
-- `qualitative/exp2/students/` - Student evaluation ratings
+- `qualitative/exp1/` - Experiment 1 evaluation ratings
+- `qualitative/exp2/` - Experiment 2 evaluation ratings
 
 This data was used in the evaluation notebooks for evaluation. The resulting tables and plots are saved in [`../40_evaluation/`](../40_evaluation/) as follows:
 
 ```sh
 40_evaluation/
 ├── exp1/
-│   ├── qualitative/
-│   │   ├── plots/
-│   │   └── tables/
-│   └── quantitative/
+│   └── qualitative/
 │       ├── plots/
 │       └── tables/
 └── exp2/
