@@ -1,25 +1,25 @@
 sample_id,question_type,q_clarity,q_challenging,q_value,q_language,q_bloom_rating,a_clarity,a_language,a_bloom_rating,answer_problems,comments
-001,mcq,,,,,,,,,,
-002,mcq,,,,,,,,,,
-003,mcq,,,,,,,,,,
-004,open_ended,,,,,,,,,,
-005,open_ended,,,,,,,,,,
-006,open_ended,,,,,,,,,,
-007,mcq,,,,,,,,,,
-008,mcq,,,,,,,,,,
-009,mcq,,,,,,,,,,
-010,open_ended,,,,,,,,,,
-011,open_ended,,,,,,,,,,
-012,open_ended,,,,,,,,,,
-013,mcq,,,,,,,,,,
-014,mcq,,,,,,,,,,
-015,mcq,,,,,,,,,,
-016,open_ended,,,,,,,,,,
-017,open_ended,,,,,,,,,,
-018,open_ended,,,,,,,,,,
-019,mcq,,,,,,,,,,
-020,mcq,,,,,,,,,,
-021,mcq,,,,,,,,,,
-022,open_ended,,,,,,,,,,
-023,open_ended,,,,,,,,,,
-024,open_ended,,,,,,,,,,
+1,mcq,5,2,2,5,1,5,1,5,,"Das LZ passt wieder nicht zu der Frage. Sie identifizieren hier keine Hauptfunktion, sondern ein Beispiel für die Kernaufgabe - das ist ein kleines Deatil und nicht der Kernaspekt."
+2,mcq,5,2,4,5,2,4,5,1,,"bei ""Zeichen"" steht ja ""Konvertierung von Zeichendarstellung"" nicht Datendarstellung, wusste nicht ganz, wo ich den Unterschied hinschreiben kann. Und klassifizieren ist laut Bloom Stufe 2, aber die Aufgabe ist eigentlich Stufe 1"
+3,mcq,5,3,5,5,3,2,4,2,,"2 bei a_clarity, weil bei a) nicht gesagt wird für was welche Schicht verantwortlich ist und b) das ja nochmal erklärt - also warum doppelt?"
+4,open_ended,5,4,5,5,3;5,5,5,5,"q_bloomrating fand ich schwer, weil der erste Teil ist stufe 3 und begründen stufe 5",
+5,open_ended,5,3,5,5,2,5,5,2,,
+6,open_ended,5,4,5,5,3,4,4,1,,Im Antworttext wurde nicht in Sätzen geschrieben und auch nur wiedergegeben ohne auf das Problem einzugehen.
+7,mcq,5,1,2,5,1,5,5,1,,"2 bei value, weil Hauptfunktion ist nicht gleich Kernaufgabe"
+8,mcq,5,2,5,5,2,5,5,2,,
+9,mcq,5,3,5,5,1,5,5,1,,
+10,open_ended,5,2,5,5,2,5,5,2,,
+11,open_ended,5,4,5,5,5,5,5,5,,
+12,open_ended,5,5,5,5,6,5,3,6,,"Mir gefällt der Antwortstil nicht, da nicht in Sätzen geschrieben wurde."
+13,mcq,5,1,2,5,1,3,5,1,"3 bei a_clarity, weil theoretisch nach den beiden schichten gefragt wurde, aber nur eine jeweils genannt wird","2 bei value, weil Hauptfunktion ist nicht gleich Kernaufgabe"
+14,mcq,5,1,4,4,1,5,5,1,,
+15,mcq,5,2,5,4,2,5,4,2,,
+16,open_ended,5,2,5,5,1,5,5,1,,
+17,open_ended,5,4,5,4,5,5,3,5,,finde die Antwort ist sehr umständlich geschrieben
+18,open_ended,4,4,5,4,6,2,2,6,,
+19,mcq,5,1,2,5,1,2,4,1,,"2 bei q_value, weil Hauptfunktion ist nicht gleich Kernaufgabe und bei a_value, weil wieder zwei Antworten mit demselben Inhalt da stehen"
+20,mcq,5,3,4,5,1,5,5,1,,
+21,mcq,5,3,5,3,1,5,5,1,,"3 bei q_language, weil ich es sehr umständlich geschrieben fand"
+22,open_ended,5,4,5,4,2,4,3,2,,"4 bei q_language, weil ich das doppelt gemoppelt fand mit unterscheiden Sie… und dann hinsichtlich ihrer Gemeinsamkeiten und Unterschiede und 3/4 bei der Antwort, weil ich es nicht ganz verständlich und sauer erklärt fand"
+23,open_ended,5,4,5,4,5,5,5,5,,"4 bei q_language, weil ich es bisschen umständlich formuliert finde"
+24,open_ended,5,5,5,5,6,5,5,6,,
