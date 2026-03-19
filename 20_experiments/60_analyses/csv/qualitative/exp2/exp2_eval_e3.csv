@@ -1,25 +1,25 @@
-sample_id,question_type,q_clarity,q_challenging,q_value,q_language,q_bloom_rating,a_clarity,a_language,a_bloom_rating,answer_problems,comments
-001,mcq,,,,,,,,,,
-002,mcq,,,,,,,,,,
-003,mcq,,,,,,,,,,
-004,open_ended,,,,,,,,,,
-005,open_ended,,,,,,,,,,
-006,open_ended,,,,,,,,,,
-007,mcq,,,,,,,,,,
-008,mcq,,,,,,,,,,
-009,mcq,,,,,,,,,,
-010,open_ended,,,,,,,,,,
-011,open_ended,,,,,,,,,,
-012,open_ended,,,,,,,,,,
-013,mcq,,,,,,,,,,
-014,mcq,,,,,,,,,,
-015,mcq,,,,,,,,,,
-016,open_ended,,,,,,,,,,
-017,open_ended,,,,,,,,,,
-018,open_ended,,,,,,,,,,
-019,mcq,,,,,,,,,,
-020,mcq,,,,,,,,,,
-021,mcq,,,,,,,,,,
-022,open_ended,,,,,,,,,,
-023,open_ended,,,,,,,,,,
-024,open_ended,,,,,,,,,,
+"sample_id","question_type","q_clarity","q_challenging","q_value","q_language","q_bloom_rating","a_clarity","a_language","a_bloom_rating","answer_problems","comments"
+"001","mcq",5,1,2,5,1,5,5,1,siehe PDF
+"002","mcq",4,1,4,4,1,5,5,1,siehe PDF
+"003","mcq",5,1,4,4,1,2,5,1,siehe PDF
+"004","open_ended",5,4,4,4,2,5,5,2,siehe PDF
+"005","open_ended",5,4,5,5,2,5,5,2,siehe PDF
+"006","open_ended",5,4,5,5,3,5,5,2,siehe PDF
+"007","mcq",5,1,4,5,1,5,5,1,siehe PDF
+"008","mcq",5,1,4,5,1,5,4,1,siehe PDF
+"009","mcq",5,1,4,4,1,5,5,1,siehe PDF
+"010","open_ended",5,2,4,4,2,5,5,2,siehe PDF
+"011","open_ended",5,5,5,5,5,5,5,5,siehe PDF
+"012","open_ended",5,4,5,5,6,5,5,5,siehe PDF
+"013","mcq",5,1,4,5,1,5,5,1,siehe PDF
+"014","mcq",5,1,3,5,1,5,5,1,siehe PDF
+"015","mcq",5,1,4,5,1,4,4,1,siehe PDF
+"016","open_ended",5,4,5,5,2,5,5,2,siehe PDF
+"017","open_ended",3,4,4,3,5,3,4,5,siehe PDF
+"018","open_ended",4,5,5,4,6,3,4,2,siehe PDF
+"019","mcq",5,1,4,5,1,5,5,1,siehe PDF
+"020","mcq",5,1,3,5,1,5,5,1,siehe PDF
+"021","mcq",3,1,4,2,1,5,5,1,siehe PDF
+"022","open_ended",5,4,5,5,4,5,5,2,siehe PDF
+"023","open_ended",5,5,5,3,5,4,5,5,siehe PDF
+"024","open_ended",5,5,4,5,4,5,5,5,siehe PDF
