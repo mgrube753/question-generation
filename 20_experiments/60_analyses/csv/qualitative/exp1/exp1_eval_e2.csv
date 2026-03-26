@@ -1,25 +1,25 @@
 sample_id,layer,question_type,q_relevance,q_clarity,q_answerability,q_challenging,q_value,q_language,a_clarity,a_language,a_correctness,answer_problems,comments
-001,1,mcq,,,,,,,,,,,
-002,3,mcq,,,,,,,,,,,
-003,5,mcq,,,,,,,,,,,
-004,4,open_ended,,,,,,,,,,,
-005,6,open_ended,,,,,,,,,,,
-006,2,open_ended,,,,,,,,,,,
-007,4,mcq,,,,,,,,,,,
-008,5,mcq,,,,,,,,,,,
-009,6,mcq,,,,,,,,,,,
-010,6,open_ended,,,,,,,,,,,
-011,7,open_ended,,,,,,,,,,,
-012,2,open_ended,,,,,,,,,,,
-013,6,mcq,,,,,,,,,,,
-014,1,mcq,,,,,,,,,,,
-015,4,mcq,,,,,,,,,,,
-016,2,open_ended,,,,,,,,,,,
-017,3,open_ended,,,,,,,,,,,
-018,7,open_ended,,,,,,,,,,,
-019,1,mcq,,,,,,,,,,,
-020,4,mcq,,,,,,,,,,,
-021,3,mcq,,,,,,,,,,,
-022,3,open_ended,,,,,,,,,,,
-023,4,open_ended,,,,,,,,,,,
-024,7,open_ended,,,,,,,,,,,
+1,1,mcq,5,5,5,1,2,5,5,5,5,,
+2,3,mcq,5,1,5,2,3,4,4,5,5,b) ist inhaltlich gefährlich nah an a) dran,"Unklar, was “unterschiedliche Reichweite der Datenübertragung” bedeuten soll"
+3,5,mcq,5,5,5,1,5,5,5,5,5,,
+4,4,open_ended,5,5,3,1,5,3,5,5,5,"Der Quelltext gibt den Inhalt der Antwort nicht her, auch wenn inhaltlich richtig.",“Worauf diese abzielen” empfinde ich als unübliche/unpassende Wortwahl
+5,6,open_ended,5,5,2,4,5,5,5,5,3,Notwendigkeit von Komprimierung ist nicht aus der Aufgabenstellung ersichtlich. Auch ohne deutsche Umlaute muss eine geeignete Zeichenkodierung verwendet werden.,
+6,2,open_ended,5,2,1,4,4,5,5,5,3,"Antwort ohne Kontext, Warten lassen ist oft gar keine Option, aber es ist ja auch keiner in der Aufgabe gegeben","Ressourcen sind immer begrenzt. Was sollen das für Kriterien sein, nach denen begründet wird? Wahl der Strategie wäre abhängig von den Rahmenbedingungen, die weder in der Frage noch in der Quelle gegeben sind."
+7,4,mcq,5,4,3,4,5,5,5,5,5,,Finde “Anpassen von Kernaufgaben” etwas unübliche Formulierung. “Von besonderer Bedeutung” wäre wohl passender
+8,5,mcq,5,5,5,2,2,5,5,5,5,,Frage ist merkwürdig ohne Sinn “falsch herum” gestellt um mehr oder weniger arbiträre Oberbegriffe abzufragen. 
+9,6,mcq,5,4,5,3,4,5,5,5,4,b) und c) könnten trotzdem noch notwendig sein,Der erste Satz ließt sich nicht nach einem Problem.
+10,6,open_ended,5,4,1,4,5,5,4,5,5,,
+11,7,open_ended,5,3,1,5,2,5,5,5,5,Auch nur kleiner Ausschnitt der eigentlichen Komplexität dieser Beispielanwendung. Ob die Antwort wirklich vollständig korrekt ist kann ich allerdings auch nicht beurteilen.,Dadurch dass die “Kernaufgaben” hier sehr wortwörtlich abgefragt werden für so eine komplexe Anwendung macht die Frage kaum Sinn. Video Streaming Dienst umfasst viele Protokolle.
+12,2,open_ended,5,2,1,5,1,5,2,5,5,,"Völlig ungeeignete Frage, viel zu allgemein und viel zu großer Umfang."
+13,6,mcq,4,1,5,1,1,3,5,5,5,,"Unsinnige Frage, das Beispiel in Klammern auch Blödsinn"
+14,1,mcq,5,4,4,3,4,4,5,5,3,Codierung ist definitiv auch notwendig hier,
+15,4,mcq,5,3,4,3,3,4,5,5,5,, 
+16,2,open_ended,5,4,1,5,3,5,5,5,5,,Welche Mechanismen zu den jeweiligen Kernaufgaben zum Einsatz kommen im Quellmaterial nicht enthalten. Merkwürdige Aufgabenstellung. Im Grunde nur eine Frage nach dem Sinn der verschiedenen Aufgaben nur in kompliziert gestellt.
+17,3,open_ended,5,4,1,5,3,5,5,5,5,,
+18,7,open_ended,4,1,1,5,2,3,4,5,5,,
+19,1,mcq,5,5,5,1,4,5,5,5,5,,
+20,4,mcq,5,5,5,1,4,5,5,5,5,,
+21,3,mcq,5,5,5,1,3,5,5,5,5,,
+22,3,open_ended,5,5,5,2,5,5,5,5,5,,
+23,4,open_ended,5,5,2,4,5,5,4,5,4,"So richtig erkenne ich hier nicht, wie eine Beziehung zwischen den Kernaufgaben hergestellt wurde.",
+24,7,open_ended,5,5,2,5,5,5,5,5,5,,"Sowas denkt man sich nicht (ohne einiges an Erfahrung) mal eben schnell in einer Prüfung aus, ohne irgendwelche weiteren Vorgaben."
