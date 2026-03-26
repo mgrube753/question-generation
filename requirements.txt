@@ -11,6 +11,7 @@ scikit-learn
 
 # Statistics
 statsmodels
+pingouin
 
 # Visualization
 matplotlib
