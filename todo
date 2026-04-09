@@ -1,29 +1,13 @@
 # Todo
 
-- [ ] Finish preparing rating setups
-  - collect guide md, rubric md, question txt files, and csv file
-  - set up everything as distinct pdf files (guide, rubric, question file) for exp2, but the raters wanted a csv file to rate in
-- [x] workshop1: have two eye-to-eye meetings for both experiment groups to let them understand the setup better
-- [x] workshop2: refine docx files and print them for the second workshop
-- [x] workshop2 with second experiment group left with refined setup, to be well-prepared for sampled question analysis
-- [x] enhance all workshop note files
-- [x] enhance learning objectives for at least experiment 2 (let's see what both workshops in phase2 bring up), so it is achievable with the desired question type/bloom level/ONE single question (currently, the learning objectives might be too big for one question, and hard to measure with the current design); exp2 learning objectives should only contain the wanted bloom level, not multiple ones; wording across the 6 objectives should be more consistent
-  - [x] speak with supervisors about it, let's change the LOs together
-- [x] redo question generation based on workshops
-
----
-
-- [x] csv generation setup has to be refined, based on upcoming outcomes and decisions (including different rating categories, etc.); little problematic, since it is bound to the question generation pipeline on the one hand --> new run overall should be conducted
-- [x] rethink about quantitative evaluation setup, really feasible from my side to handle this evaluation as well? --> should be left out, i suppose
-  - [x] (refine eval notebook 1 quantitative)
-- [x] think about bloom rating --> 5 points while being perfectly aligned with desired bloom level, 2.5 if one-off, 0 otherwise. but what to do with bloom in the answer? is rated separately. suppose the alignment of the question is off, so how to rate the answer? could be dependant of the question bloom RATING, e.g. if bloom was 3, rater said 1 for the question, and answer is also rated 1, the answer bloom rating still could be 5/5, maybe
-
----
-
-- [ ] finish eval notebook 1 qualitative
-- [ ] finish eval notebook 2 qualitative
-- (Notebooks need e.g. the desired agreement/reliability measures)
-
----
-
-- [x] *Sampling question set hard to reproduce, since it was dependant of all directories, instead of the important ones --> can be fixed afterwards, but it's afterwards*
+- [ ] 1. Introduction? Not my deal right now
+- [ ] 2. Background information? In my thesis + halfway in literature review
+- [x] 3. Literature? Check
+- [x] 4. Methodology? Check via [20_experiments/](20_experiments/) and its [README](20_experiments/README.md)
+- [ ] Speak more about details like the workshop itself
+- [ ] In the end, it has to be clear where to find what
+- [ ] Check if everything which is needed is saved as csv tables of the 2 notebooks
+- [ ] Try to answer research questions based on qualitative evaluation results for both experiments
+- [ ] Set up main README file
+- [ ] Include archives and review why the former data had to be archived (based on roadmap)
+- [ ] refine roadmap to reflect the workflow for the research questions
