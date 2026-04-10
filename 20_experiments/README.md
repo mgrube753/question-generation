@@ -12,6 +12,8 @@ This directory contains the experimental framework for evaluating Large Language
 - **[`20_exp2/`](20_exp2/)** - Bloom's Taxonomy Alignment Experiment
   - [`questions/`](20_exp2/questions/) - Generated questions targeting specific cognitive levels
   - [`sampled/`](20_exp2/sampled/) - Sampled questions for expert evaluation
+  
+Here, the `sampled/` questions are still sorted by LLM and question type, not suitable for blind testing.
 
 ### Supporting Infrastructure
 
@@ -19,7 +21,7 @@ This directory contains the experimental framework for evaluating Large Language
 - **[`40_prompts/`](40_prompts/)** - Prompt templates for generation and evaluation
 - **[`50_src/`](50_src/)** - Python implementation and evaluation notebooks
 - **[`60_analyses/`](60_analyses/)** - Analysis data and expert/student instructions
-- **[`70_sampled_questions/`](70_sampled_questions/)** - Renamed sample collections for blind evaluation
+- **[`70_sampled_questions/`](70_sampled_questions/)** - Renamed sample collections for the raters, properly organized for blind testing and analysis
 - **[`80_workshop/`](80_workshop/)** - Workshop materials and notes
 
 ## Experimental Design
@@ -61,7 +63,6 @@ Located in **[`40_prompts/`](40_prompts/)**:
   - [`lernziele.md`](40_prompts/experiment/lernziele.md) - Learning objectives
 
 - **[`evaluation/`](40_prompts/evaluation/)** - Assessment prompts and rubrics
-  - [`exp1_adherence_eval.md`](40_prompts/evaluation/exp1_adherence_eval.md) - Adherence evaluation prompt for LLMs in first experiment
   - [`exp1_rubric.md`](40_prompts/evaluation/exp1_rubric.md) - Categories for first experiment
   - [`exp2_rubric.md`](40_prompts/evaluation/exp2_rubric.md) - Categories for second experiment
 
@@ -79,7 +80,6 @@ Located in **[`50_src/`](50_src/)**:
 | [`file_utils.py`](50_src/file_utils.py) | File I/O utilities |
 | [`constants.py`](50_src/constants.py) | Configuration constants |
 | [`sampling.py`](50_src/sampling.py) | Sample selection for manual evaluation |
-| [`check_truncation.py`](50_src/check_truncation.py) | Token length validation |
 
 ### Evaluation Notebooks
 
@@ -145,17 +145,20 @@ jupyter notebook evaluation2_qual.ipynb  # Qualitative results (Exp 2)
 
 Evaluation outputs are saved to [`../40_evaluation/`](../40_evaluation/).
 
-<!-- ### Notebook Conversion for Documentation -->
-
-<!-- To include the notebooks in the thesis PDF, the following command was used (at [`50_src/`](50_src/)) to convert them to Python scripts: -->
-
-<!-- ```bash -->
-<!-- jupyter nbconvert --output-dir='nb_to_py' --to script evaluation*.ipynb -->
-<!-- ``` -->
-
-<!-- These generated Python scripts in [`50_src/nb_to_py/`](50_src/nb_to_py/) are then included in the thesis PDF after compilation. -->
-
 ## Evaluation Data
+
+### Expert Workshops
+
+The `80_workshop/` directory contains materials and protocols from performed expert workshops for both experiment groups. These sessions were highly important for refining the evaluation criteria and analyzing the generated questions and answers.
+
+The first phase was a preparatory session with one expert from each group (eye-to-eye) to conduct an initial review of the setup. The second phase was a joint workshop with all experts of each group to gain more insights on the experimental setup.
+
+In this directory, you can find:
+
+- **`info.md` & `note.md`**: To exactly understand the directory setup and gain insights on the workshop process and outcomes.
+- **`initial/`**: Discussion material between the authors to prepare the two phases of both workshops.
+- **`e1/` & `e2/`**: Specific reviews and notes according to Experiment 1 and Experiment 2.
+- **`afterwards/`**: Post-workshop synthesis, plus `changes_on_top.md` documenting final decisions and rubric refinements agreed upon during another author discussion.
 
 ### Expert Instructions
 

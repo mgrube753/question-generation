@@ -1,13 +1,13 @@
 # Todo
 
-- [ ] 1. Introduction? Not my deal right now
-- [ ] 2. Background information? In my thesis + halfway in literature review
+- [?] 1. Introduction? Not my deal right now. Can be watched after other work is done.
+- [x] 2. Background information? In my thesis + halfway in literature review
 - [x] 3. Literature? Check
 - [x] 4. Methodology? Check via [20_experiments/](20_experiments/) and its [README](20_experiments/README.md)
-- [ ] Speak more about details like the workshop itself
+- [x] Speak more about details like the workshop itself
+- [x] Check if everything which is needed is saved as csv tables of the 2 notebooks
 - [ ] In the end, it has to be clear where to find what
-- [ ] Check if everything which is needed is saved as csv tables of the 2 notebooks
 - [ ] Try to answer research questions based on qualitative evaluation results for both experiments
 - [ ] Set up main README file
 - [ ] Include archives and review why the former data had to be archived (based on roadmap)
-- [ ] refine roadmap to reflect the workflow for the research questions
+- [ ] Refine roadmap to reflect the workflow for the research questions
