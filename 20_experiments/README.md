@@ -1,6 +1,6 @@
 # Experiments
 
-This directory contains the experimental framework for evaluating Large Language Model capabilities in educational question generation, focusing on content adherence assessment and Bloom's Taxonomy alignment.
+This directory contains the experimental framework for evaluating Large Language Model capabilities in educational question generation. We focus on both content adherence assessment (Experiment 1) and Bloom's Taxonomy alignment (Experiment 2).
 
 ## Structure Overview
 
@@ -13,14 +13,14 @@ This directory contains the experimental framework for evaluating Large Language
   - [`questions/`](20_exp2/questions/) - Generated questions targeting specific cognitive levels
   - [`sampled/`](20_exp2/sampled/) - Sampled questions for expert evaluation
   
-Here, the `sampled/` questions are still sorted by LLM and question type, not suitable for blind testing.
+Here, the `sampled/` questions are still sorted by LLM and question type in a structured directory format, not suitable for blind testing.
 
 ### Supporting Infrastructure
 
-- **[`30_input_sources/`](30_input_sources/)** - Source materials (OSI layer descriptions)
-- **[`40_prompts/`](40_prompts/)** - Prompt templates for generation and evaluation
+- **[`30_input_sources/`](30_input_sources/)** - Source materials (ISO-OSI layer descriptions)
+- **[`40_prompts/`](40_prompts/)** - Prompt templates for generation + rater rubrics for evaluation
 - **[`50_src/`](50_src/)** - Python implementation and evaluation notebooks
-- **[`60_analyses/`](60_analyses/)** - Analysis data and expert/student instructions
+- **[`60_analyses/`](60_analyses/)** - Analysis data and expert instructions for both experiments
 - **[`70_sampled_questions/`](70_sampled_questions/)** - Renamed sample collections for the raters, properly organized for blind testing and analysis
 - **[`80_workshop/`](80_workshop/)** - Workshop materials and notes
 
@@ -76,10 +76,10 @@ Located in **[`50_src/`](50_src/)**:
 | [`question_generation.py`](50_src/question_generation.py) | Question generation logic |
 | [`api_config.py`](50_src/api_config.py) | LLM client initialization |
 | [`api_calls.py`](50_src/api_calls.py) | LLM API interactions |
-| [`prompt_utils.py`](50_src/prompt_utils.py) | Prompt parsing and Bloom data handling |
+| [`prompt_utils.py`](50_src/prompt_utils.py) | Prompt parsing and data handling |
 | [`file_utils.py`](50_src/file_utils.py) | File I/O utilities |
 | [`constants.py`](50_src/constants.py) | Configuration constants |
-| [`sampling.py`](50_src/sampling.py) | Sample selection for manual evaluation |
+| [`sampling.py`](50_src/sampling.py) | Sample selection for qualitative evaluations |
 
 ### Evaluation Notebooks
 
@@ -101,9 +101,12 @@ The second experiment utilizes Bloom's Taxonomy, described and used via [`40_pro
 
 ### Description & Verb Integration
 
-Each level includes specific German descriptions and action verbs for each Bloom level to construct the prompts, properly parsed via [`50_src/prompt_utils.py`](50_src/prompt_utils.py) for systematic question generation targeting specific cognitive demands + question type constraints.
+Each level includes specific German descriptions and action verbs for each Bloom level to construct the prompts, properly parsed via [`50_src/prompt_utils.py`](50_src/prompt_utils.py). This was done for systematic question generation targeting specific cognitive demands + question type constraints.
 
-Moreover, learning objectives from [`40_prompts/experiment/lernziele.md`](40_prompts/experiment/lernziele.md) are integrated to guide question generation aligned with goals for each experiment.
+Moreover, learning objectives from [`40_prompts/experiment/lernziele.md`](40_prompts/experiment/lernziele.md) are integrated to guide question generation aligned with goals for each experiment:
+
+- **Experiment 1:** One learning objective for each of the 7 ISO-OSI layers
+- **Experiment 2:** One learning objective for each of the 6 Bloom levels
 
 ## Usage Instructions
 
@@ -149,7 +152,7 @@ Evaluation outputs are saved to [`../40_evaluation/`](../40_evaluation/).
 
 ### Expert Workshops
 
-The `80_workshop/` directory contains materials and protocols from performed expert workshops for both experiment groups. These sessions were highly important for refining the evaluation criteria and analyzing the generated questions and answers.
+Before the actual evaluation, the `80_workshop/` directory was created. It contains materials and protocols from performed expert workshops for both experiment groups. These sessions were highly important for refining the rating criteria and analyzing the generated questions and answers.
 
 The first phase was a preparatory session with one expert from each group (eye-to-eye) to conduct an initial review of the setup. The second phase was a joint workshop with all experts of each group to gain more insights on the experimental setup.
 
@@ -159,6 +162,8 @@ In this directory, you can find:
 - **`initial/`**: Discussion material between the authors to prepare the two phases of both workshops.
 - **`e1/` & `e2/`**: Specific reviews and notes according to Experiment 1 and Experiment 2.
 - **`afterwards/`**: Post-workshop synthesis, plus `changes_on_top.md` documenting final decisions and rubric refinements agreed upon during another author discussion.
+
+This workshop led to a new generation run for both experiments, which then formed the basis for the blind test and the subsequent qualitative evaluation.
 
 ### Expert Instructions
 
