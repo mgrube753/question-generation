@@ -47,6 +47,22 @@ Both experiments use extracted text from lecture materials about the ISO-OSI ref
 
 The second experiment used all these layers combined into a single file, `concatenated_common.txt`.
 
+### Generation & Sampling
+
+To ensure a balanced evaluation, we applied a the following generation and sampling procedure for the experiments across our 4 LLMs:
+
+**Experiment 1:**
+
+- **Generation:** 56 total questions. For each of the 7 ISO-OSI layers, we generated 1 MCQ and 1 Open-Ended OE question per LLM. A random Bloom's Taxonomy level was assigned to each question, while MCQs were primarily designed to target Bloom levels 1-3. This was done by double prompting the models for MCQs to create the same amount of questions for both types.
+- **Sampling:** From the 56 generated questions, we sampled 24 questions for human evaluation (6 per LLM: 3 MCQs and 3 OE questions).
+
+**Experiment 2:**
+
+- **Generation:** 48 total questions, based on the complete ISO-OSI script. For Open-Ended questions, we targeted all 6 Bloom levels. For MCQs, we applied double prompting per level in this experiment as well for Bloom levels 1-3.
+- **Sampling:** From the 48 generated questions, we sampled 24 questions (again 6 per LLM: 3 MCQs and 3 OE questions).
+
+[This resource](https://teachingtools.uzh.ch/de/tools/lernziel-taxonomien) of University of Zurich shows in a tabular format which Bloom levels are suitable for which question types and how well they fit. Based on this, we designed the generation process.
+
 ## Implementation Framework
 
 ### Prompt Templates
@@ -60,7 +76,7 @@ Located in **[`40_prompts/`](40_prompts/)**:
   - [`prompt_open_ended_q.md`](40_prompts/experiment/prompt_open_ended_q.md) - Open-ended question generation
   - [`prompt_open_ended_a.md`](40_prompts/experiment/prompt_open_ended_a.md) - Open-ended answer generation
   - [`bloom.md`](40_prompts/experiment/bloom.md) - Bloom's Taxonomy definitions
-  - [`lernziele.md`](40_prompts/experiment/lernziele.md) - Learning objectives
+  - [`learning_objectives.md`](40_prompts/experiment/learning_objectives.md) - Learning objectives
 
 - **[`evaluation/`](40_prompts/evaluation/)** - Assessment prompts and rubrics
   - [`exp1_rubric.md`](40_prompts/evaluation/exp1_rubric.md) - Categories for first experiment
@@ -103,7 +119,7 @@ The second experiment utilizes Bloom's Taxonomy, described and used via [`40_pro
 
 Each level includes specific German descriptions and action verbs for each Bloom level to construct the prompts, properly parsed via [`50_src/prompt_utils.py`](50_src/prompt_utils.py). This was done for systematic question generation targeting specific cognitive demands + question type constraints.
 
-Moreover, learning objectives from [`40_prompts/experiment/lernziele.md`](40_prompts/experiment/lernziele.md) are integrated to guide question generation aligned with goals for each experiment:
+Moreover, learning objectives from [`40_prompts/experiment/learning_objectives.md`](40_prompts/experiment/learning_objectives.md) are integrated to guide question generation aligned with goals for each experiment:
 
 - **Experiment 1:** One learning objective for each of the 7 ISO-OSI layers
 - **Experiment 2:** One learning objective for each of the 6 Bloom levels

@@ -74,7 +74,7 @@ PROMPT_OPEN_ENDED_ANSWER = os.path.join(
 BLOOM_DATA_FILE = os.path.join(PROMPT_TEMPLATES_PATH, "experiment", "bloom.md")
 
 LEARNING_OBJECTIVES_FILE = os.path.join(
-    PROMPT_TEMPLATES_PATH, "experiment", "lernziele.md"
+    PROMPT_TEMPLATES_PATH, "experiment", "learning_objectives.md"
 )
 
 RANDOM_SEED = 2026

@@ -5,12 +5,18 @@
 
 This repository contains the official implementation, prompts, datasets, and evaluation data for the paper **"..."** by Clemens Cap, Charlott Rubach, and Malte Grube.
 
-## Abstract
+## Overview
 
-We present a comprehensive study to evaluate Large Language Models in generating questions (Multiple-Choice and Open-Ended). Our research focuses on two main areas:
+We present a comprehensive study to evaluate Large Language Models in generating questions (Multiple-Choice and Open-Ended). Our research is driven by the following research questions:
 
-1. **Experiment 1:** Content Adherence Assessment
-2. **Experiment 2:** Bloom's Taxonomy Alignment
+* **RQ1:** How effectively can LLMs be constrained to generate questions based on instructional materials?
+* **RQ2:** Does the restriction to a question format influence achieving the cognitive level in generating questions?
+* **RQ3:** Do the answers of the LLMs fit the generated questions?
+
+To address these questions, our framework focuses on two main areas:
+
+1. **Experiment 1:** Content Adherence Assessment (addressing RQ1 & RQ3)
+2. **Experiment 2:** Bloom's Taxonomy Alignment (addressing RQ2 & RQ3)
 
 Our framework supports generation, sampling, and evaluation (via blind test rating) across multiple state-of-the-art models:
 
@@ -70,7 +76,7 @@ To run the codebase or evaluate the generated data, set up the Python environmen
 
 ## Reproducibility & Execution
 
-For detailed instructions on how the experiments are structured, how the prompts are designed, and how to execute the Python scripts (`main.py`, `sampling.py`), please refer to the comprehensive guide in **[`20_experiments/README.md`](20_experiments/README.md)**.
+For detailed instructions on how the experiments are structured, how the prompts are designed, and how to execute the Python scripts (`main.py`, `sampling.py`) properly, please refer to the comprehensive guide in **[`20_experiments/README.md`](20_experiments/README.md)**.
 
 ## Citation
 
