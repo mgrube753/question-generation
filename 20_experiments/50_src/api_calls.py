@@ -34,14 +34,16 @@ RETRYABLE_EXCEPTIONS = (
     Exception,
 )
 
-
-@retry(
+api_retry = retry(
     stop=stop_after_attempt(5),
     wait=wait_exponential(multiplier=2, min=4, max=60),
     retry=retry_if_exception_type(RETRYABLE_EXCEPTIONS),
     before_sleep=before_sleep_log(logger, logging.WARNING),
     after=after_log(logger, logging.INFO),
 )
+
+
+@api_retry
 def gen_with_anthropic(client, prompt_text, model_id, max_tokens):
     try:
         response = client.messages.create(
@@ -51,6 +53,7 @@ def gen_with_anthropic(client, prompt_text, model_id, max_tokens):
             max_tokens=max_tokens,
         )
 
+        # https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons
         if response.stop_reason == "max_tokens":
             logger.warning(f"{model_id} ran out of tokens")
             for block in response.content:
@@ -64,12 +67,13 @@ def gen_with_anthropic(client, prompt_text, model_id, max_tokens):
             if block.type == "text":
                 return block.text
 
+    # https://platform.claude.com/docs/en/api/errors
     except Exception as e:
         logger.error(f"Claude API ({model_id}): {e}")
         if hasattr(e, "status_code") and e.status_code == 429:
             logger.warning(f"Rate limit hit for {model_id}, will retry...")
             raise  # Retry
-        if hasattr(e, "status_code") and e.status_code in [429, 500, 502, 503, 504]:
+        if hasattr(e, "status_code") and e.status_code in [500, 502, 503, 504]:
             logger.warning(
                 f"Server error {e.status_code} for {model_id}, will retry..."
             )
@@ -77,13 +81,7 @@ def gen_with_anthropic(client, prompt_text, model_id, max_tokens):
         return None
 
 
-@retry(
-    stop=stop_after_attempt(5),
-    wait=wait_exponential(multiplier=2, min=4, max=60),
-    retry=retry_if_exception_type(RETRYABLE_EXCEPTIONS),
-    before_sleep=before_sleep_log(logger, logging.WARNING),
-    after=after_log(logger, logging.INFO),
-)
+@api_retry
 def gen_with_openai(client, prompt_text, model_id, max_tokens):
     try:
         response = client.responses.create(
@@ -93,6 +91,8 @@ def gen_with_openai(client, prompt_text, model_id, max_tokens):
             max_output_tokens=max_tokens,
         )
 
+        # Might be outdated, new website:
+        # https://developers.openai.com/api/reference/resources/responses
         if (
             response.status == "incomplete"
             and response.incomplete_details.reason == "max_output_tokens"
@@ -107,6 +107,8 @@ def gen_with_openai(client, prompt_text, model_id, max_tokens):
 
         return response.output_text
 
+    # Might be outdated, new website:
+    # https://developers.openai.com/api/docs/guides/error-codes
     except Exception as e:
         logger.error(f"OpenAI API ({model_id}): {e}")
         # Check for retryable errors
@@ -118,13 +120,7 @@ def gen_with_openai(client, prompt_text, model_id, max_tokens):
         return None
 
 
-@retry(
-    stop=stop_after_attempt(5),
-    wait=wait_exponential(multiplier=2, min=4, max=60),
-    retry=retry_if_exception_type(RETRYABLE_EXCEPTIONS),
-    before_sleep=before_sleep_log(logger, logging.WARNING),
-    after=after_log(logger, logging.INFO),
-)
+@api_retry
 def gen_with_deepseek(client, prompt_text, model_id, max_tokens):
     # https://api-docs.deepseek.com/guides/thinking_mode
     # https://api-docs.deepseek.com/guides/reasoning_model
@@ -136,7 +132,6 @@ def gen_with_deepseek(client, prompt_text, model_id, max_tokens):
             extra_body={"thinking": {"type": "enabled"}},
         )
 
-        # Check if response was truncated due to token limit
         if response.choices and response.choices[0].finish_reason == "length":
             logger.warning(f"{model_id} ran out of tokens")
             if response.choices[0].message.content:
@@ -146,7 +141,6 @@ def gen_with_deepseek(client, prompt_text, model_id, max_tokens):
                 logger.warning(f"{model_id} returned no content")
                 return None
 
-        # Return the content if generation completed successfully
         if response.choices and response.choices[0].message.content:
             return response.choices[0].message.content
 
@@ -164,13 +158,7 @@ def gen_with_deepseek(client, prompt_text, model_id, max_tokens):
         return None
 
 
-@retry(
-    stop=stop_after_attempt(5),
-    wait=wait_exponential(multiplier=2, min=4, max=60),
-    retry=retry_if_exception_type(RETRYABLE_EXCEPTIONS),
-    before_sleep=before_sleep_log(logger, logging.WARNING),
-    after=after_log(logger, logging.INFO),
-)
+@api_retry
 def gen_with_xai(client, prompt_text, model_id, max_tokens):
     try:
         response = client.responses.create(
@@ -179,6 +167,7 @@ def gen_with_xai(client, prompt_text, model_id, max_tokens):
             max_output_tokens=max_tokens,
         )
 
+        # https://docs.x.ai/developers/rest-api-reference/inference/chat#chat-completions
         if (
             response.status == "incomplete"
             and response.incomplete_details.reason == "max_output_tokens"
@@ -193,9 +182,9 @@ def gen_with_xai(client, prompt_text, model_id, max_tokens):
 
         return response.output_text
 
+    # https://docs.x.ai/llms.txt
     except Exception as e:
         logger.error(f"xAI/Grok API ({model_id}): {e}")
-        # Check for retryable errors
         if hasattr(e, "status_code") and e.status_code in [429, 500, 502, 503, 504]:
             logger.warning(
                 f"Retryable error {e.status_code} for {model_id}, will retry..."

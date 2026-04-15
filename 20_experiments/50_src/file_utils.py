@@ -20,7 +20,3 @@ def save_result(file_path, content):
             f.write(content)
     except Exception as e:
         print(" " * 7 + f"Error saving file {file_path}: {e}\n")
-
-
-def slugify(text):
-    return text.lower().replace(" ", "_").replace("-", "_")
