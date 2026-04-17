@@ -1,9 +1,9 @@
-# Paper Title
+# AI for exam preparation: A good idea for educators and students in higher education?
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python3.10+](https://img.shields.io/badge/python-3.10%2B-green.svg)](https://www.python.org/downloads/release/python-3100/)
 
-This repository contains the official implementation, prompts, datasets, and evaluation data for the paper **"..."** by Clemens Cap, Charlott Rubach, and Malte Grube.
+This repository contains the official implementation, prompts, datasets, and evaluation data for the paper **"AI for exam preparation: A good idea for educators and students in higher education?** by Clemens Cap, Charlott Rubach, and Malte Grube.
 
 ## Overview
 
