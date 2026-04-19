@@ -8,11 +8,11 @@ Loading environment variables and securely initializing instances of various LLM
 
 ## Core Functions
 
-- **`load_api_keys()`**  
+- **`load_api_keys()`**
   Uses `dotenv` to load the `.env` file and extracts API keys for Anthropic, OpenAI, DeepSeek, and xAI. Raises a `ValueError` if any configured key is missing.  
   **Returns:** `dict` of parsed API keys.
 
-- **`init_clients()`**  
+- **`init_clients()`**
   Instantiates the API clients using the keys obtained from `load_api_keys()`. It also configures custom URLs for non-standard endpoints (DeepSeek and xAI using the OpenAI SDK).  
   **Returns:** `dict` mapping LLM provider names (`anthropic`, `openai`, `deepseek`, `xai`) to the client objects.
 

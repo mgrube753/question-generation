@@ -10,7 +10,7 @@ Wraps the SDK clients for the LLMs used. Ensures proper network-based communicat
 
 - **Logging:** A custom `TqdmLoggingHandler` to format logs compatibly alongside `tqdm` progress bars dynamically.
 
-- **`@api_retry`**  
+- **`@api_retry`**
   A `tenacity` retry wrapper applied to API errors (`ConnectionError`, `TimeoutError`, `Exception`). Injects retries on 429, 500, 502, 503, 504 status codes if needed.
 
 ## Core Functions
@@ -20,7 +20,7 @@ Wraps the SDK clients for the LLMs used. Ensures proper network-based communicat
 
 ---
 
-- **`llm_generation(llm_name, clients, prompt_text, max_tokens)`**  
+- **`llm_generation(llm_name, clients, prompt_text, max_tokens)`**
   The central router for API interactions. Each `prompt_text` is routed to the designated `gen_with_<client>()` wrapper via `llm_name`.  
   **Note:** Logic is bypassed entirely using empty strings if `DRY_RUN` (see `constants.py`) is True. Delays iterations based on `REQUEST_DELAY_SECONDS`.
 
