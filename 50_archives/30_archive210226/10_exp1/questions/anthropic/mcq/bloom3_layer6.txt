@@ -1,0 +1,55 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+
+### Stem Generation
+
+Frage: Ermitteln Sie, welche zwei Kernaufgaben des Presentation Layers angewendet werden müssen, wenn eine Anwendung vertrauliche Daten möglichst bandbreitensparend an ein Zielsystem übertragen soll.
+
+### Key Generation
+
+Korrekte Antworten:
+
+a) Kompression (Richtig)
+b) Verschlüsselung (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Ermitteln Sie, welche zwei Kernaufgaben des Presentation Layers angewendet werden müssen, wenn eine Anwendung vertrauliche Daten möglichst bandbreitensparend an ein Zielsystem übertragen soll.
+
+Antwortmöglichkeiten:
+
+a) Kompression (Richtig)
+b) Konvertierung der Datendarstellung (Endian-Ness) (Falsch)
+c) Konvertierung der Zeichendarstellung (Falsch)
+d) Verschlüsselung (Richtig)
+
+### Source Text
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.

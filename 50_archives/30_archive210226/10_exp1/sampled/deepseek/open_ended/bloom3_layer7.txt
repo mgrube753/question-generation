@@ -1,0 +1,39 @@
+## Open-Ended Question
+
+### Bloom Level: Applying
+
+### Learning Objective
+
+Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+
+### Question Generation
+
+Frage: Wenden Sie die drei Kernaufgaben der Application Layer auf das Protokoll SSH an. Ermitteln Sie für jede Kernaufgabe ein anwendungsspezifisches Beispiel.
+
+### Answer Generation + Union of all
+
+Frage: Wenden Sie die drei Kernaufgaben der Application Layer auf das Protokoll SSH an. Ermitteln Sie für jede Kernaufgabe ein anwendungsspezifisches Beispiel.
+
+Antwort: 1. Grundkonzepte: Definierte Begriffe der Anwendung, z.B. "Authentifizierung via Public-Key-Verfahren". 2. Protokollelemente: Spezifische Nachrichten und deren Daten, z.B. die Client-Anfrage SSH_MSG_USERAUTH_REQUEST mit Nutzername und Public-Key-Daten. 3. Verhalten: Reaktion auf Protokollelemente, z.B. der Server sendet bei ungültigen Credentials SSH_MSG_USERAUTH_FAILURE. (Richtig)
+
+### Source Text
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

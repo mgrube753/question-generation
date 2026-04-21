@@ -1,0 +1,181 @@
+## Open-Ended Question
+
+### Bloom Level: Understanding
+
+### Learning Objective
+
+Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
+
+### Question Generation
+
+Frage: Erklären Sie in eigenen Worten die Kernaufgaben der Schichten 1 bis 7 des ISO-OSI-Modells und wie diese Schichten funktional aufeinander aufbauen.
+
+### Answer Generation + Union of all
+
+Frage: Erklären Sie in eigenen Worten die Kernaufgaben der Schichten 1 bis 7 des ISO-OSI-Modells und wie diese Schichten funktional aufeinander aufbauen.
+
+Antwort: Schicht 1 (Physical) überträgt einzelne Bits, indem sie logische Werte in physikalische Signale codiert, über ein Medium transportiert und beim Empfänger wieder decodiert. Schicht 2 (Data Link) macht die Übertragung auf einer direkten Verbindung zuverlässiger: Sie fasst Bits zu Frames/Einheiten zusammen, regelt den Medienzugriff, adressiert Geräte auf dem lokalen Medium, steuert den Fluss und erkennt bzw. behandelt Fehler. Schicht 3 (Network) ermöglicht Kommunikation über mehrere Netze hinweg: Sie verwendet netzwerkweite Adressen, wählt Wege (Routing) über Zwischenknoten und steuert den Fluss über Knoten- bzw. Ende-zu-Ende-Strecken. Schicht 4 (Transport) stellt Ende-zu-Ende-Kommunikation zwischen Teilnehmern bereit: Sie adressiert Teilnehmer (z.B. über Ports), passt die Flusssteuerung an die Endsysteme an und kann Dienstqualität (QoS) absichern. Schicht 5 (Session) organisiert die Sitzung zwischen Anwendungen: Sie baut Sitzungen auf, verwaltet und beendet sie, setzt Synchronisationspunkte und bündelt zusammengehörige Transaktionen. Schicht 6 (Presentation) sorgt dafür, dass Anwendungsdaten in eine passende Darstellung für die Übertragung kommen: Konvertierung von Datenformaten (z.B. Endianess), Zeichensätzen, sowie Kompression und Verschlüsselung/Entschlüsselung. Schicht 7 (Application) definiert anwendungsspezifische Konzepte, Protokollelemente/Anfragen und das erwartete Verhalten der Anwendung. Funktionaler Aufbau: Jede höhere Schicht nutzt die Dienste der darunterliegenden (z.B. Anwendung nutzt Darstellung/Sitzung/Transport), abstrahiert deren Details und liefert nach oben einen besser nutzbaren Kommunikationsdienst; nach unten gibt sie Anforderungen weiter, bis diese auf Schicht 1 als physikalische Signale übertragen werden. (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

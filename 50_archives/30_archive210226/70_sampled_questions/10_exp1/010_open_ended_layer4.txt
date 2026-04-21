@@ -1,0 +1,34 @@
+## Offene Frage
+
+### Lernziel
+
+Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Formulierte Frage
+
+Frage: Ein Cloud-Gaming-Dienst benötigt eine kontinuierliche Datenübertragung mit garantiert niedrigem Jitter und hoher Bandbreite zum Endbenutzer. Wenden Sie die drei Kernaufgaben der Transport Layer (Adressierung, Flusssteuerung, Dienstqualität) an, um zu beschreiben, wie dieser Dienst die teilnehmerorientierte Übertragung technisch umsetzt.
+
+Antwort: Adressierung erfolgt über IP-Adressen und Ports, um den Client und den spezifischen Gaming-Serverdienst eindeutig zu identifizieren und eine Ende-zu-Ende-Verbindung aufzubauen. Flusssteuerung regelt die Senderate dynamisch basierend auf der aktuellen Netzwerkkapazität und der Empfangspuffer des Clients, um Überlastungen zu vermeiden und einen kontinuierlichen Datenstrom zu gewährleisten. Dienstqualität wird durch QoS-Mechanismen wie Paketpriorisierung (z.B. DiffServ), Ressourcenreservierung (z.B. RSVP) und die Wahl geeigneter Protokolle (z.B. RTP über UDP für geringe Latenz) umgesetzt, um garantierte Bandbreite, niedrigen Jitter und eine minimale Fehlerrate sicherzustellen. (Richtig)
+
+### Quelltext
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.

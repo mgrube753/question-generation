@@ -1,0 +1,61 @@
+## Multiple-Choice Question
+
+### Bloom Level: Understanding
+
+### Learning Objective 
+
+Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+
+### Stem Generation
+
+Frage: Welche zwei Kernaufgaben des Data Link Layer 2 klassifizieren Sie als passend zu den Beschreibungen (1) Auswahl eines bestimmten Senders oder Empfängers über eine Adresse und (2) Aktivieren des Physical Layer für den Zugriff auf das Medium?
+
+### Key Generation
+
+Korrekte Antwort(en):
+
+a) (1) Identifikation (Adressierung von Sender/Empfänger) und (2) Medienzugriff (Aktivieren des Physical Layer für den Mediumzugriff) (Richtig)
+b) (1) Auswahl über Adresse = Identifikation und (2) Zugriff aufs Übertragungsmedium = Medienzugriff (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: Welche zwei Kernaufgaben des Data Link Layer 2 klassifizieren Sie als passend zu den Beschreibungen (1) Auswahl eines bestimmten Senders oder Empfängers über eine Adresse und (2) Aktivieren des Physical Layer für den Zugriff auf das Medium?
+
+Antwortmöglichkeiten:
+
+a) (1) Identifikation (Adressierung von Sender/Empfänger) und (2) Medienzugriff (Aktivieren des Physical Layer für den Mediumzugriff) (Richtig)
+b) (1) Auswahl über Adresse = Identifikation und (2) Zugriff aufs Übertragungsmedium = Medienzugriff (Richtig)
+c) (1) Segmentierung (Zusammenfassen von Bits zu Einheiten) und (2) Medienzugriff (Aktivieren des Physical Layer für den Mediumzugriff) (Falsch)
+d) (1) Identifikation (Adressierung von Sender/Empfänger) und (2) Flusskontrolle (Regeln der Senderate bei zu schnellem Senden) (Falsch)
+
+### Source Text
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.

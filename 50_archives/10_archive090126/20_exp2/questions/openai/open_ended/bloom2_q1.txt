@@ -1,0 +1,195 @@
+## Open-Ended Question
+
+### Bloom Level: Understanding
+
+### Learning Objective
+
+Die Studierenden können die Beziehungen zwischen den Schichten des ISO-OSI-Modells erklären und die Kernaufgaben jeder Schicht in eigenen Worten beschreiben
+
+### Question Generation
+
+Frage: Erklären Sie die Beziehung zwischen den Schichten 1 bis 7 des ISO-OSI-Modells und erklären Sie die Kernaufgaben jeder Schicht in eigenen Worten.
+
+### Answer Generation + Union of all
+
+Frage: Erklären Sie die Beziehung zwischen den Schichten 1 bis 7 des ISO-OSI-Modells und erklären Sie die Kernaufgaben jeder Schicht in eigenen Worten.
+
+Antwort: Das ISO-OSI-Modell teilt Datenkommunikation in sieben aufeinander aufbauende Schichten. Jede Schicht hat klar abgegrenzte Aufgaben, nutzt die Dienste der darunterliegenden Schicht und stellt der darüberliegenden Schicht eigene Dienste bereit. Dadurch wird Komplexität reduziert: Unten geht es um die reine Übertragung von Bits über ein Medium, oben um anwendungsspezifische Bedeutungen und Abläufe. Daten werden dabei typischerweise schrittweise „verpackt“ (jede Schicht ergänzt Informationen), beim Empfänger in umgekehrter Reihenfolge wieder „ausgepackt“. Änderungen in einer Schicht sollen die anderen Schichten möglichst wenig beeinflussen, solange die Schnittstellen (Dienste) gleich bleiben.
+
+Schicht 1 – Physical Layer (Bitübertragungsschicht): Diese Schicht sorgt dafür, dass logische 0/1 als physikalische Signale übertragen werden können. Kernaufgaben: (1) Codierung: Übersetzen von Bits in physikalische Signalformen (z.B. bestimmte Leitungs- oder Funk-Signalverläufe). (2) Transport: Tatsächliche Übertragung dieser physikalischen Größen über ein Medium oder medienfrei (z.B. Kabel, Licht, Funk). (3) Decodierung: Aus den empfangenen physikalischen Signalen wieder Bits rekonstruieren (Abtasten/Entscheiden, was als 0 bzw. 1 gilt).
+
+Schicht 2 – Data Link Layer (Sicherungsschicht): Baut auf Schicht 1 auf und macht eine einzelne Verbindung (Link) zuverlässiger und geordneter, auch wenn Schicht 1 fehleranfällig ist. Kernaufgaben: (1) Fehlerkontrolle: Übertragungsfehler erkennen, korrigieren oder zumindest melden. (2) Flusskontrolle: Regeln, was passiert, wenn der Sender schneller ist als der Empfänger (z.B. puffern, bremsen, warten). (3) Segmentierung: Bits zu größeren Einheiten zusammenfassen (typisch: Bytes/Frames). (4) Identifikation: Adressierung auf Link-Ebene, um Sender/Empfänger auf diesem Übertragungsabschnitt auszuwählen. (5) Medienzugriff: Regeln, wie das gemeinsame Medium genutzt wird (wann senden, wann warten, Kollisionen/Probleme beheben, ggf. Medium reservieren).
+
+Schicht 3 – Network Layer (Vermittlungsschicht): Ermöglicht Kommunikation über mehrere Netzwerke hinweg, auch wenn dort unterschiedliche Layer-2-Technologien verwendet werden. Kernaufgaben: (1) Adressierung: Netzwerkweite, netzwerkübergreifende Adressen bereitstellen. (2) Routing: Pfadwahl über Zwischenknoten (Router), damit nicht direkt verbundene Geräte kommunizieren können. (3) Flusssteuerung: Überlast vermeiden, entweder Ende-zu-Ende (vom Sender bis zum entfernten Empfänger) oder Knoten-zu-Knoten (von Hop zu Hop).
+
+Schicht 4 – Transport Layer (Transportschicht): Stellt eine Ende-zu-Ende-Kommunikation zwischen konkreten Teilnehmern innerhalb eines Netzes bereit (nicht nur zwischen Netzen). Kernaufgaben: (1) Adressierung: Teilnehmer/Anwendungsendpunkte identifizieren (damit Daten beim richtigen Kommunikationspartner ankommen). (2) Flusssteuerung: Übertragungsrate an die Eigenschaften der Endsysteme anpassen (damit Empfänger nicht überfordert werden). (3) Dienstqualität (QoS): Kommunikationsdienst mit bestimmten Garantien bereitstellen, z.B. Bandbreite, Verzögerung, Jitter oder Fehlerrate, passend zu den Bedürfnissen des Teilnehmers.
+
+Schicht 5 – Session Layer (Sitzungsschicht): Organisiert und steuert die „Sitzung“ als logischen Zusammenhang einer Kommunikation, also den Ablauf einer längeren Interaktion. Kernaufgaben: (1) Sitzungen: Aufbauen, verwalten, ggf. zurückweisen und sauber beenden. (2) Synchronisation: Zwischenpunkte/Checkpoints setzen, um Kommunikation bei Bedarf geordnet fortsetzen zu können. (3) Bündelung: Zusammengehörige Aktionen/Transaktionen zu einer Einheit gruppieren.
+
+Schicht 6 – Presentation Layer (Darstellungsschicht): Sorgt dafür, dass Anwendungsdaten in eine übertragbare, eindeutig interpretierbare Darstellung als Bitstrom gebracht werden. Kernaufgaben: (1) Endian-Ness/Serialisierung: Umwandeln unterschiedlicher Zahlen- und Datenrepräsentationen (z.B. little/big endian oder andere Formate). (2) Zeichendarstellung: Umsetzen von Zeichencodierungen (z.B. ASCII, Unicode, EBCDIC, Sonderzeichen). (3) Kompression: Daten komprimieren und beim Empfänger wieder dekomprimieren. (4) Verschlüsselung: Daten verschlüsseln und entschlüsseln, um Vertraulichkeit zu erreichen.
+
+Schicht 7 – Application Layer (Anwendungsschicht): Definiert, was eine konkrete Anwendung kommunikativ „bedeutet“ und welche fachlichen Nachrichten/Operationen es gibt. Kernaufgaben: (1) Grundkonzepte: Festlegen, welche Begriffe/Objekte in der Anwendung vorkommen (z.B. „Benutzer“, „Datei“, „Nachricht“). (2) Protokollelemente: Definieren, welche Anforderungen/Anfragen möglich sind und welche Daten dazu gehören. (3) Verhalten: Festlegen, wie die Anwendung auf diese Anforderungen reagiert (welche Antworten/Schritte folgen). Da dies stark von der jeweiligen Anwendung abhängt, ist diese Schicht weniger allgemeingültig standardisierbar als die unteren Schichten. (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

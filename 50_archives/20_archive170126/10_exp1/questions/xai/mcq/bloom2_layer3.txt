@@ -1,0 +1,54 @@
+## Multiple-Choice Question
+
+### Bloom Level: Understanding
+
+### Learning Objective 
+
+Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+
+### Stem Generation
+
+Frage: Welche der folgenden beschreiben die beiden Varianten der Flusssteuerung auf der Network Layer 3?
+
+### Key Generation
+
+Korrekte Antwort(en):
+
+a) End-to-End-Flusssteuerung regelt den Datenfluss vom ursprünglichen Sender bis zum endgültigen Empfänger, während Node-to-Node-Flusssteuerung den Fluss zwischen aufeinanderfolgenden Knoten im Netzwerk steuert. (Richtig)
+b) Die End-to-End-Variante der Flusssteuerung erfolgt zwischen dem sendenden und dem empfangenden Gerät über das gesamte Netzwerk hinweg, wohingegen die Node-to-Node-Variante zwischen jedem einzelnen Knoten und dem nächsten im Pfad stattfindet. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Welche der folgenden beschreiben die beiden Varianten der Flusssteuerung auf der Network Layer 3?
+
+Antwortmöglichkeiten:
+
+a) Die End-to-End-Variante der Flusssteuerung erfolgt zwischen dem sendenden und dem empfangenden Gerät über das gesamte Netzwerk hinweg, wohingegen die Node-to-Node-Variante zwischen jedem einzelnen Knoten und dem nächsten im Pfad stattfindet. (Richtig)
+b) Die Node-to-Node-Variante regelt den Fluss vom Sender bis zum Empfänger, wohingegen die End-to-End-Variante zwischen aufeinanderfolgenden Knoten stattfindet. (Falsch)
+c) End-to-End-Flusssteuerung dient der Adressierung über Netzwerke, während Node-to-Node das Routing zwischen Knoten managt. (Falsch)
+d) End-to-End-Flusssteuerung regelt den Datenfluss vom ursprünglichen Sender bis zum endgültigen Empfänger, während Node-to-Node-Flusssteuerung den Fluss zwischen aufeinanderfolgenden Knoten im Netzwerk steuert. (Richtig)
+
+### Source Text
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.

@@ -1,0 +1,41 @@
+## Multiple-Choice-Question
+
+### Lernziel
+
+Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+
+### Formulierte Frage
+
+Frage: Welche beiden Varianten der Flusssteuerung lassen sich im Network Layer 3 klassifizieren?
+
+Antwortmöglichkeiten:
+
+a) End-to-End und Node-to-Node (Richtig)
+b) End-to-End-Flusssteuerung, bei der die Steuerung vom Sender zum weit entfernten Empfänger erfolgt, sowie Node-to-Node-Flusssteuerung, bei der die Steuerung von jedem Knoten zum nächsten Knoten stattfindet (Richtig)
+c) Hop-to-Hop-Flusssteuerung, bei der Datenpakete zwischen Router-Schnittstellen koordiniert werden, sowie Network-to-Network-Flusssteuerung, bei der ganze Netzwerksegmente synchronisiert werden (Falsch)
+d) Point-to-Point-Flusssteuerung, bei der direkt verbundene Geräte die Übertragungsrate abstimmen, sowie Broadcast-Flusssteuerung, bei der alle Netzwerkteilnehmer gleichzeitig gesteuert werden (Falsch)
+
+### Quelltext
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.

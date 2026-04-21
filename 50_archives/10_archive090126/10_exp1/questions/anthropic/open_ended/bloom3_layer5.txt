@@ -1,0 +1,38 @@
+## Open-Ended Question
+
+### Bloom Level: Applying
+
+### Learning Objective
+
+Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+
+### Question Generation
+
+Frage: Veranschaulichen Sie anhand eines Beispiels einer Dateiübertragung, wie Synchronisationspunkte eingesetzt werden können, um bei einem Verbindungsabbruch den Datenverlust zu minimieren.
+
+### Answer Generation + Union of all
+
+Frage: Veranschaulichen Sie anhand eines Beispiels einer Dateiübertragung, wie Synchronisationspunkte eingesetzt werden können, um bei einem Verbindungsabbruch den Datenverlust zu minimieren.
+
+Antwort: Bei der Übertragung einer großen Datei von beispielsweise 100 MB setzt der Session Layer in regelmäßigen Abständen Synchronisationspunkte. Angenommen, alle 10 MB wird ein solcher Zwischenpunkt gesetzt und von beiden Kommunikationspartnern bestätigt. Nach erfolgreicher Übertragung von 40 MB wird Synchronisationspunkt 4 gesetzt. Während der weiteren Übertragung bei etwa 45 MB tritt ein Verbindungsabbruch auf. Nach Wiederherstellung der Verbindung muss nicht die gesamte Datei erneut übertragen werden. Stattdessen kann die Übertragung beim letzten bestätigten Synchronisationspunkt, also bei 40 MB, fortgesetzt werden. Auf diese Weise gehen nur die 5 MB zwischen dem letzten Synchronisationspunkt und dem Abbruchpunkt verloren, anstatt der bereits übertragenen 45 MB. Der maximale Datenverlust wird somit auf das Intervall zwischen zwei Synchronisationspunkten begrenzt, was den Gesamtaufwand bei Verbindungsproblemen erheblich reduziert und eine effiziente Wiederaufnahme der Sitzung ermöglicht. (Richtig)
+
+### Source Text
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.

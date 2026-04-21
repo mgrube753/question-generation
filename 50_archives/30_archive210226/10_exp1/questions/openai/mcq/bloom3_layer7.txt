@@ -1,0 +1,51 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+
+### Stem Generation
+
+Frage: Nutzen Sie die drei Kernaufgaben der Application Layer (Grundkonzepte, Protokollelemente, Verhalten), um für eine Messenger-Anwendung mit dem Request „sendMessage“ zu entscheiden: Welche zwei der folgenden Aussagen beschreiben Protokollelemente (d. h. Anforderungen an erwartete Daten bzw. zulässige Anforderungen) und nicht Grundkonzepte oder Verhaltensweisen?
+
+### Key Generation
+
+Korrekte Antworten:
+
+a) Der Request „sendMessage“ muss als Datenfelder mindestens eine Empfängerkennung (z. B. recipientId) und den Nachrichtentext (z. B. content) enthalten; optional dürfen z. B. attachmentIds oder eine clientMessageId mitgesendet werden. (Richtig)
+b) Für „sendMessage“ ist als Anforderung zulässig/erwartet, dass der Client einen gültigen Authentifizierungsnachweis (z. B. Authorization-Token) mitsendet und dass Felder wie content formatiert und begrenzt sind (z. B. UTF‑8, maximale Länge). (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: Nutzen Sie die drei Kernaufgaben der Application Layer (Grundkonzepte, Protokollelemente, Verhalten), um für eine Messenger-Anwendung mit dem Request „sendMessage“ zu entscheiden: Welche zwei der folgenden Aussagen beschreiben Protokollelemente (d. h. Anforderungen an erwartete Daten bzw. zulässige Anforderungen) und nicht Grundkonzepte oder Verhaltensweisen?
+
+Antwortmöglichkeiten:
+
+a) Der Request „sendMessage“ muss als Datenfelder mindestens eine Empfängerkennung (z. B. recipientId) und den Nachrichtentext (z. B. content) enthalten; optional dürfen z. B. attachmentIds oder eine clientMessageId mitgesendet werden. (Richtig)
+b) Für „sendMessage“ ist als Anforderung zulässig/erwartet, dass der Client einen gültigen Authentifizierungsnachweis (z. B. Authorization-Token) mitsendet und dass Felder wie content formatiert und begrenzt sind (z. B. UTF‑8, maximale Länge). (Richtig)
+c) In der Messenger-Anwendung gibt es die Grundkonzepte Benutzer, Chat (1:1 oder Gruppe) und Nachricht; „sendMessage“ beschreibt fachlich das Erzeugen einer Nachricht innerhalb eines Chats. (Falsch)
+d) Nach Eingang von „sendMessage“ speichert der Server die Nachricht persistent und liefert sie an den/die Empfänger aus; bei ungültiger Authentifizierung wird mit einem Fehler (z. B. 401/403) reagiert. (Falsch)
+
+### Source Text
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

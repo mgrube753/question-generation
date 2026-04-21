@@ -1,0 +1,42 @@
+## Open-Ended Question
+
+### Bloom Level: Evaluating
+
+### Learning Objective
+
+Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+
+### Question Generation
+
+Frage: Beurteilen Sie, ob in einem Verbund aus zwei nicht direkt verbundenen Geräten in unterschiedlichen Layer-2-Technologien eine Lösung, die ausschließlich MAC-Adressen zur Zielidentifikation nutzt, das Routing statisch auf einen Zwischenknoten festlegt und nur End-to-End-Flusssteuerung vorsieht, die Anforderungen an netzwerkübergreifende Kommunikation erfüllt, gemessen an den Kriterien Adressierung, Routing und Flusssteuerung (End-to-End vs. Node-to-Node)?
+
+### Answer Generation + Union of all
+
+Frage: Beurteilen Sie, ob in einem Verbund aus zwei nicht direkt verbundenen Geräten in unterschiedlichen Layer-2-Technologien eine Lösung, die ausschließlich MAC-Adressen zur Zielidentifikation nutzt, das Routing statisch auf einen Zwischenknoten festlegt und nur End-to-End-Flusssteuerung vorsieht, die Anforderungen an netzwerkübergreifende Kommunikation erfüllt, gemessen an den Kriterien Adressierung, Routing und Flusssteuerung (End-to-End vs. Node-to-Node)?
+
+Antwort: Nein, die Anforderungen werden insgesamt nicht erfüllt: (1) Adressierung: Reine MAC-Adressen sind Layer-2-spezifisch und nicht als netzwerkübergreifende, technologieunabhängige Adressen ausgelegt; bei unterschiedlichen Layer-2-Technologien fehlt damit eine geeignete Layer-3-Adressierung. (2) Routing: Ein statisch auf genau einen Zwischenknoten festgelegter Pfad erfüllt die Kernaufgabe „Auswahl der vermittelnden Zwischenknoten“ nur eingeschränkt und ist nicht robust/skalierbar bei Topologieänderungen oder Ausfällen; netzwerkübergreifende Kommunikation verlangt prinzipiell eine (zumindest konzeptionell) pfadwahlfähige Vermittlung. (3) Flusssteuerung: Ausschließlich End-to-End-Flusssteuerung lässt Überlastsituationen auf einzelnen Teilstrecken unberücksichtigt; für netzwerkübergreifende Übertragung sind zusätzlich Node-to-Node-Mechanismen (hop-by-hop) als Strategie zur Beherrschung lokaler Engpässe erforderlich bzw. zumindest vorgesehen. (Richtig)
+
+### Source Text
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.

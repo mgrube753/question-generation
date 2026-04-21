@@ -1,0 +1,187 @@
+## Open-Ended Question
+
+### Bloom Level: Evaluating
+
+### Learning Objective:
+
+Die Studierenden können die Angemessenheit bestimmter Schichtfunktionen für gegebene Anforderungen bewerten und begründete Urteile über Design-Entscheidungen im ISO-OSI-Modell abgeben
+
+### Question Generation:
+
+Frage: Bewerten Sie, ob für die garantierte Übertragung von Echtzeit-Sprachdaten über ein paketvermitteltes Netzwerk die Dienstqualität (QoS) primär durch den Transport Layer oder den Network Layer sichergestellt werden sollte, und begründen Sie Ihre Entscheidung anhand der spezifischen Kernaufgaben dieser Schichten.
+
+### Answer Generation + Union of all:
+
+Frage: Bewerten Sie, ob für die garantierte Übertragung von Echtzeit-Sprachdaten über ein paketvermitteltes Netzwerk die Dienstqualität (QoS) primär durch den Transport Layer oder den Network Layer sichergestellt werden sollte, und begründen Sie Ihre Entscheidung anhand der spezifischen Kernaufgaben dieser Schichten.
+
+Antwort: Für die garantierte Übertragung von Echtzeit-Sprachdaten (z.B. Voice over IP) über ein paketvermitteltes Netzwerk sollte die Dienstqualität (QoS) primär durch den Transport Layer sichergestellt werden. Diese Bewertung basiert auf einem Abwägen der spezifischen Kernaufgaben beider Schichten im ISO-OSI-Modell und den Anforderungen der Echtzeit-Sprachübertragung (niedrige Latenz, geringer Jitter, garantierte Bandbreite, tolerante Fehlerrate).
+
+Begründet wird dies wie folgt: Laut den definierten Kernaufgaben ist die "Sicherung der Quality of Service (QoS)" eine explizite und zentrale Aufgabe des Transport Layers (Layer 4). Diese Schicht ist dafür verantwortlich, einen Kommunikationsdienst mit Garantien für Bandbreite, Latenz, Jitter und Fehlerrate bereitzustellen, und zwar zugeschnitten auf den jeweiligen Endteilnehmer. Der Transport Layer arbeitet somit end-to-end und kann mittels geeigneter Protokolle (z.B. verbindungsorientiert mit Reservierung) direkte Garantien für den Anwendungsdatenstrom geben. Die anderen Kernaufgaben dieser Schicht, nämlich die teilnehmerbezogene Adressierung und die an die Teilnehmercharakteristik angepasste Flußsteuerung, unterstützen diese QoS-Sicherung.
+
+Demgegenüber sind die Kernaufgaben des Network Layers (Layer 3) die netzwerkübergreifende Adressierung, das Routing (Wegauswahl) und die Flußsteuerung (end-to-end oder node-to-node). Während diese Funktionen für den Transport der Pakete durch verschiedene Netze grundlegend sind und durch Techniken wie QoS-Routing oder priorisierende Paketweiterleitung indirekt zur Dienstgüte beitragen können, ist die Sicherung von QoS mit spezifischen Garantieparametern nicht als Kernaufgabe dieser Schicht definiert. Der Network Layer sorgt primär für die universelle Vermittlung und Zustellung von Paketen, nicht jedoch für die anwendungs- oder teilnerspezifische Qualitätsgarantie.
+
+Daher fällt das Urteil zugunsten des Transport Layers aus: Für die garantierte Echtzeit-Sprachübertragung muss die primäre Verantwortung zur QoS-Sicherung bei der Schicht liegen, deren architektonischer Auftrag und
+
+### Source Text:
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

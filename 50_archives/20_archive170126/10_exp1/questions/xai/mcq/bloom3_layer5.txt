@@ -1,0 +1,50 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+
+### Stem Generation
+
+Frage: Ermitteln Sie zwei Kernaufgaben der Session Layer, die Sie in einer unterbrochenen Kommunikationsbeziehung anwenden würden, um die Sitzung fortzusetzen.
+
+### Key Generation
+
+Korrekte Antwort(en):
+
+a) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Sitzungsverwaltung anwenden, um die Sitzung wieder aufzubauen und zu verwalten, sowie die Synchronisation, um Zwischenpunkte zu setzen und die Kommunikation vom letzten Synchronisationspunkt fortzusetzen. (Richtig)
+b) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Synchronisation anwenden, um von gesetzten Zwischenpunkten aus fortzufahren, sowie die Bündelung, um zusammengehörige Transaktionen zu gruppieren und diese effizient nach der Unterbrechung abzuschließen. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Ermitteln Sie zwei Kernaufgaben der Session Layer, die Sie in einer unterbrochenen Kommunikationsbeziehung anwenden würden, um die Sitzung fortzusetzen.
+
+Antwortmöglichkeiten:
+
+a) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Sitzungsverwaltung anwenden, um die Sitzung wieder aufzubauen und zu verwalten, sowie die Synchronisation, um Zwischenpunkte zu setzen und die Kommunikation vom letzten Synchronisationspunkt fortzusetzen. (Richtig)
+b) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Sitzungsverwaltung anwenden, um die Sitzung wiederherzustellen, sowie die Adressierung, um die korrekten Endpunkte zu identifizieren und die Kommunikation fortzusetzen. (Falsch)
+c) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Synchronisation anwenden, um von gesetzten Zwischenpunkten aus fortzufahren, sowie die Bündelung, um zusammengehörige Transaktionen zu gruppieren und diese effizient nach der Unterbrechung abzuschließen. (Richtig)
+d) In einer unterbrochenen Kommunikationsbeziehung würde ich die Kernaufgabe der Synchronisation anwenden, um Zwischenpunkte zu setzen, sowie die Segmentierung, um Daten in kleinere Einheiten zu teilen und diese neu zu übertragen. (Falsch)
+
+### Source Text
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.

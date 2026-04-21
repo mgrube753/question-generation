@@ -1,0 +1,187 @@
+## Open-Ended Question
+
+### Bloom Level: Analyzing
+
+### Learning Objective
+
+Die Studierenden können die Aufgabenverteilung zwischen den Schichten analysieren und Unterschiede sowie Zusammenhänge zwischen verwandten Konzepten herausarbeiten
+
+### Question Generation
+
+Frage: Unterscheiden Sie anhand der Aufgabenverteilung die Flusskontrolle im Data Link Layer von der Flusssteuerung im Network Layer und setzen Sie beide in Beziehung zur Flusssteuerung im Transport Layer, indem Sie die jeweiligen beteiligten Kommunikationspartner und Reichweiten (lokal vs. End-to-End) analytisch herausarbeiten.
+
+### Answer Generation + Union of all
+
+Frage: Unterscheiden Sie anhand der Aufgabenverteilung die Flusskontrolle im Data Link Layer von der Flusssteuerung im Network Layer und setzen Sie beide in Beziehung zur Flusssteuerung im Transport Layer, indem Sie die jeweiligen beteiligten Kommunikationspartner und Reichweiten (lokal vs. End-to-End) analytisch herausarbeiten.
+
+Antwort: Flusskontrolle im Data Link Layer (Layer 2) ist eine lokale, verbindungsbezogene Schutzfunktion auf einer einzelnen direkten Übertragungsstrecke: Kommunikationspartner sind immer zwei direkt benachbarte Knoten, die über denselben Physical Layer gekoppelt sind (z.B. Host–Switch/Router, Router–Router über ein Kabel/Funk). Aufgabe ist es, auf genau dieser einen Link-Strecke zu verhindern, dass der Sender den unmittelbar angeschlossenen Empfänger überfordert (z.B. durch Wartenlassen, Herunterregeln oder Puffern). Reichweite und Verantwortungsbereich sind damit strikt link-lokal (hop-lokal): Jede Link-Strecke kann ihre eigene Layer-2-Flusskontrolle haben, die sich nicht automatisch auf den restlichen Pfad ausdehnt.
+
+Flusssteuerung im Network Layer (Layer 3) bezieht sich auf die Übertragung über mehrere Netze und Zwischenknoten hinweg und kann deshalb zwei unterschiedliche Reichweiten/Partnerkonstellationen haben: (1) Node-to-Node (hop-by-hop) zwischen jeweils zwei benachbarten Layer-3-Knoten entlang des Pfads (z.B. Router A zu Router B, danach Router B zu Router C). Das ähnelt in der Reichweite der Layer-2-Flusskontrolle, ist aber auf der Layer-3-Aufgabenebene angesiedelt, d.h. bezogen auf die Weiterleitung/Überlast zwischen Netzwerkknoten über Netzgrenzen und unabhängig von der konkreten Layer-2-Technologie. (2) End-to-End auf Layer 3 zwischen dem sendenden Endsystem und dem entfernten empfangenden Endsystem (IP-Quellknoten zu IP-Zielknoten) über die gesamte Route hinweg. Damit umfasst Layer 3 (laut Aufgabenbeschreibung) sowohl lokale Steuerung je Weiterleitungsschritt als auch eine prinzipielle End-to-End-Steuerung auf Netzwerkebene.
+
+Die Flusssteuerung im Transport Layer (Layer 4) ist dagegen eindeutig end-to-end und teilnehmerorientiert: Kommunikationspartner sind die Transport-Teilnehmer an den Endsystemen (typisch Prozesse/Anwendungen über Transport-Endpunkte), Zwischenknoten wie Router wirken daran nicht mit. Aufgabe ist die Anpassung der Sendemenge an die Charakteristik des entfernten Teilnehmers (insbesondere dessen Aufnahmekapazität), also End-to-End über die gesamte Kommunikationsbeziehung.
+
+Beziehung und Abgrenzung: Layer 2 adressiert ausschließlich das „zu schnell auf genau diesem Link“ zwischen direkt Nachbarn (lokal). Layer 3 adressiert „zu schnell im Netz“ entweder hop-by-hop zwischen Netzwerkknoten oder (konzeptionell) end-to-end zwischen den IP-Endknoten über mehrere Hops. Layer 4 realisiert die End-to-End-Flusssteuerung auf der Ebene der eigentlichen Kommunikationspartner (Teilnehmer/Prozesse) und ist damit die Schicht, die die End-to-End-Sicht zuverlässig anwendungsnah abbildet; lokale Steuerungen in Layer 2 (und ggf. hop-by-hop in Layer 3) können dabei unterstützend wirken, ersetzen aber die End-to-End-Flusssteuerung des Transport Layers nicht, weil sie jeweils nur Teilstrecken bzw. Zwischenknoten betreffen. (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

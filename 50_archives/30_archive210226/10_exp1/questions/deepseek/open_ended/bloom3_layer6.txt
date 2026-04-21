@@ -1,0 +1,43 @@
+## Open-Ended Question
+
+### Bloom Level: Applying
+
+### Learning Objective
+
+Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+
+### Question Generation
+
+Frage: Konvertieren Sie den 32-Bit-Hexadezimalwert 0xA1B2C3D4 aus der Big-Endian- in die Little-Endian-Darstellung. Geben Sie die resultierende Bytefolge in hexadezimaler Form an.
+
+### Answer Generation + Union of all
+
+Frage: Konvertieren Sie den 32-Bit-Hexadezimalwert 0xA1B2C3D4 aus der Big-Endian- in die Little-Endian-Darstellung. Geben Sie die resultierende Bytefolge in hexadezimaler Form an.
+
+Antwort: 0xD4C3B2A1 (Richtig)
+
+### Source Text
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.

@@ -1,0 +1,44 @@
+## Open-Ended Question
+
+### Bloom Level: Remembering
+
+### Learning Objective
+
+Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
+
+### Question Generation
+
+Frage: Nennen Sie für jede der drei Kernaufgaben des Physical Layer (Codierung, Transport, Decodierung) ein konkretes Beispiel.
+
+### Answer Generation + Union of all
+
+Frage: Nennen Sie für jede der drei Kernaufgaben des Physical Layer (Codierung, Transport, Decodierung) ein konkretes Beispiel.
+
+Antwort: Codierung: Manchester-Codierung als Abbildung logischer Werte auf physikalische Signalpegel. Transport: Übertragung elektrischer Signale über ein Kupferkabel (z.B. Telefonkabel) als mediengebundenes Beispiel. Decodierung: Abtastung des empfangenen Signals mit einem Taktgeber zur Rückgewinnung der logischen Werte. (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.

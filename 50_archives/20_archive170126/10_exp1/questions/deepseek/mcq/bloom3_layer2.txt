@@ -1,0 +1,60 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+
+### Stem Generation
+
+Frage: Nennen Sie zwei Kernaufgaben des Data Link Layers, die angewendet werden müssen, um eine zuverlässige Datenübertragung über einen fehleranfälligen Physical Layer bei unausgeglichenen Sende- und Empfangsgeschwindigkeiten zu gewährleisten.
+
+### Key Generation
+
+Korrekte Antwort(en):
+a) Fehlerkontrolle zur Erkennung und Behebung von Übertragungsfehlern auf dem fehleranfälligen Physical Layer und Flusskontrolle zur Anpassung der Senderate an die langsamere Empfangsgeschwindigkeit, z.B. durch Zwischenpuffern oder Sendeunterbrechung. (Richtig)
+b) Die Anwendung von Fehlerkorrekturverfahren (z.B. CRC-Prüfsummen) für eine fehlergesicherte Übertragung und die Implementierung von Flusskontrollmechanismen (z.B. Stop-and-Wait oder Sliding Window), um bei Geschwindigkeitsdifferenzen einen Datenverlust zu verhindern. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Nennen Sie zwei Kernaufgaben des Data Link Layers, die angewendet werden müssen, um eine zuverlässige Datenübertragung über einen fehleranfälligen Physical Layer bei unausgeglichenen Sende- und Empfangsgeschwindigkeiten zu gewährleisten.
+
+Antwortmöglichkeiten:
+
+a) Segmentierung von Bitströmen in Frames und Adressierung von Netzwerkgeräten zur korrekten Zustellung. (Falsch)
+b) Fehlerkontrolle zur Erkennung und Behebung von Übertragungsfehlern auf dem fehleranfälligen Physical Layer und Flusskontrolle zur Anpassung der Senderate an die langsamere Empfangsgeschwindigkeit, z.B. durch Zwischenpuffern oder Sendeunterbrechung. (Richtig)
+c) Routing von Datenpaketen über verschiedene Netzwerkpfade und Priorisierung von Datenströmen mittels Quality of Service. (Falsch)
+d) Die Anwendung von Fehlerkorrekturverfahren (z.B. CRC-Prüfsummen) für eine fehlergesicherte Übertragung und die Implementierung von Flusskontrollmechanismen (z.B. Stop-and-Wait oder Sliding Window), um bei Geschwindigkeitsdifferenzen einen Datenverlust zu verhindern. (Richtig)
+
+### Source Text
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.

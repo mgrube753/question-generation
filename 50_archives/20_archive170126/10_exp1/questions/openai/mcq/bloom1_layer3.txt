@@ -1,0 +1,54 @@
+## Multiple-Choice Question
+
+### Bloom Level: Remembering
+
+### Learning Objective 
+
+Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+
+### Stem Generation
+
+Frage: Welche zwei Arten der Flusssteuerung werden im Network Layer 3 unterschieden?
+
+### Key Generation
+
+Korrekte Antwort(en):
+
+a) End-to-End-Flusssteuerung (Richtig)
+b) Node-to-Node-Flusssteuerung (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: Welche zwei Arten der Flusssteuerung werden im Network Layer 3 unterschieden?
+
+Antwortmöglichkeiten:
+
+a) End-to-End-Flusssteuerung (Richtig)
+b) Link-to-Link-Flusssteuerung (Falsch)
+c) Node-to-Node-Flusssteuerung (Richtig)
+d) Segment-to-Segment-Flusssteuerung (Falsch)
+
+### Source Text
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.

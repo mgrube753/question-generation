@@ -1,0 +1,58 @@
+## Multiple-Choice Question
+
+### Bloom Level: Understanding
+
+### Learning Objective 
+
+Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+
+### Stem Generation:
+
+Frage: Welche Aussage erklärt korrekt den Unterschied zwischen End-to-End und Node-to-Node Flusssteuerung im Network Layer 3?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) End-to-End Flusssteuerung regelt den Datenfluss zwischen dem ursprünglichen Sender und dem endgültigen Empfänger über das gesamte Netzwerk, während Node-to-Node Flusssteuerung den Datenfluss zwischen jeweils zwei direkt benachbarten Knoten steuert. (Richtig)
+
+b) Bei der End-to-End Flusssteuerung wird die Übertragungsgeschwindigkeit zwischen Quell- und Zielgerät über große Distanzen koordiniert, wohingegen Node-to-Node Flusssteuerung die Kommunikation schrittweise zwischen aufeinanderfolgenden Zwischenknoten im Übertragungsweg reguliert. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Welche Aussage erklärt korrekt den Unterschied zwischen End-to-End und Node-to-Node Flusssteuerung im Network Layer 3?
+
+Antwortmöglichkeiten:
+
+a) Bei der End-to-End Flusssteuerung wird die Übertragungsgeschwindigkeit zwischen Quell- und Zielgerät über große Distanzen koordiniert, wohingegen Node-to-Node Flusssteuerung die Kommunikation schrittweise zwischen aufeinanderfolgenden Zwischenknoten im Übertragungsweg reguliert. (Richtig)
+
+b) End-to-End Flusssteuerung bezieht sich auf die Kontrolle des Datenflusses innerhalb eines einzelnen Netzwerksegments, während Node-to-Node Flusssteuerung die Kommunikation zwischen verschiedenen Netzwerken mit unterschiedlichen Layer-2-Technologien regelt. (Falsch)
+
+c) End-to-End Flusssteuerung regelt den Datenfluss zwischen dem ursprünglichen Sender und dem endgültigen Empfänger über das gesamte Netzwerk, während Node-to-Node Flusssteuerung den Datenfluss zwischen jeweils zwei direkt benachbarten Knoten steuert. (Richtig)
+
+d) End-to-End Flusssteuerung und Node-to-Node Flusssteuerung unterscheiden sich hauptsächlich in der verwendeten Adressierungsart, wobei End-to-End ausschließlich logische Netzwerkadressen nutzt und Node-to-Node nur physische Hardwareadressen verwendet. (Falsch)
+
+### Source Text:
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.

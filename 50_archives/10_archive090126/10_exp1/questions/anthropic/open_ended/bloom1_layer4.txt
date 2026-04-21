@@ -1,0 +1,40 @@
+## Open-Ended Question
+
+### Bloom Level: Remembering
+
+### Learning Objective
+
+Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Question Generation
+
+Frage: Nennen Sie die drei Kernaufgaben des Transport Layers.
+
+### Answer Generation + Union of all
+
+Frage: Nennen Sie die drei Kernaufgaben des Transport Layers.
+
+Antwort: Die drei Kernaufgaben des Transport Layers sind Adressierung, Flusssteuerung und Dienstqualität. (Richtig)
+
+### Source Text
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.

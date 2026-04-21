@@ -1,0 +1,43 @@
+## Open-Ended Question
+
+### Bloom Level: Evaluating
+
+### Learning Objective
+
+Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+
+### Question Generation
+
+Frage: Beurteilen Sie für die plattformübergreifende Übertragung eines Records mit numerischen Feldern (z.B. 32-bit Integer) und Text (inkl. Sonderzeichen) welcher Transformationsablauf geeigneter ist: (A) Endian-Konvertierung → Zeichenkonvertierung → Kompression → Verschlüsselung oder (B) Verschlüsselung → Kompression → Endian-Konvertierung → Zeichenkonvertierung; fällen Sie Ihr Urteil anhand der Kriterien Interoperabilität (korrekte Interpretation auf heterogenen Systemen), Effizienz (Kompressionswirkung) und Sicherheit (Vertraulichkeit) – welcher Ablauf ist zu bevorzugen und warum?
+
+### Answer Generation + Union of all
+
+Frage: Beurteilen Sie für die plattformübergreifende Übertragung eines Records mit numerischen Feldern (z.B. 32-bit Integer) und Text (inkl. Sonderzeichen) welcher Transformationsablauf geeigneter ist: (A) Endian-Konvertierung → Zeichenkonvertierung → Kompression → Verschlüsselung oder (B) Verschlüsselung → Kompression → Endian-Konvertierung → Zeichenkonvertierung; fällen Sie Ihr Urteil anhand der Kriterien Interoperabilität (korrekte Interpretation auf heterogenen Systemen), Effizienz (Kompressionswirkung) und Sicherheit (Vertraulichkeit) – welcher Ablauf ist zu bevorzugen und warum?
+
+Antwort: Ablauf (A) ist zu bevorzugen. Interoperabilität: Zuerst werden Zahlen und Text in eine kanonische, plattformunabhängige Darstellung gebracht (endianness/Serialisierung und z.B. UTF‑8). So kann der Empfänger nach Entschlüsselung/Dekompression korrekt rekonstruieren. In (B) wären Endian-/Zeichenkonvertierungen nach der Verschlüsselung praktisch unmöglich bzw. würden Ciphertext verfälschen. Effizienz: Kompression muss vor Verschlüsselung erfolgen, da Verschlüsselung die Redundanz entfernt und Kompression danach kaum wirkt. Sicherheit: Verschlüsselung am Ende schützt den gesamten Bitstrom (inkl. komprimierter Daten); in (B) ist Vertraulichkeit zwar gegeben, aber bei schlechter Kompression unnötig großes Datenvolumen. (Richtig)
+
+### Source Text
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.

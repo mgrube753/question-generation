@@ -1,0 +1,40 @@
+## Open-Ended Question
+
+### Bloom Level: Analyzing
+
+### Learning Objective
+
+Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Question Generation
+
+Frage: Setzen Sie die Kernaufgaben Adressierung, Flusssteuerung und Dienstqualität (QoS) des Transport Layers in Beziehung, indem Sie herausarbeiten, welche teilnehmerbezogenen Informationen bzw. Charakteristiken jeweils benötigt werden und wie sich die drei Aufgaben gegenseitig beeinflussen, um eine Übertragung zwischen beliebigen Teilnehmern mit garantierten Eigenschaften (z.B. Bandbreite, Latenz, Jitter, Fehlerrate) bereitzustellen.
+
+### Answer Generation + Union of all
+
+Frage: Setzen Sie die Kernaufgaben Adressierung, Flusssteuerung und Dienstqualität (QoS) des Transport Layers in Beziehung, indem Sie herausarbeiten, welche teilnehmerbezogenen Informationen bzw. Charakteristiken jeweils benötigt werden und wie sich die drei Aufgaben gegenseitig beeinflussen, um eine Übertragung zwischen beliebigen Teilnehmern mit garantierten Eigenschaften (z.B. Bandbreite, Latenz, Jitter, Fehlerrate) bereitzustellen.
+
+Antwort: Adressierung ordnet Daten eindeutig Teilnehmern/Endpunkten zu (z.B. IP+Port/Socket) und identifiziert damit den konkreten Transportfluss, für den Parameter gelten. Flusssteuerung nutzt Teilnehmer-Charakteristiken, v.a. Empfangsfenster/Puffer, Verarbeitungsgeschwindigkeit und aktuelle Last, um die Senderate so zu begrenzen, dass der Empfänger nicht überläuft (Vermeidung von Verlusten/Neusendungen). QoS benötigt teilnehmer- bzw. anwendungsbezogene Anforderungen/Serviceklasse (Bandbreite, max. Latenz, Jitter, Fehlerrate, Priorität) und ggf. verhandelte/ reservierte Ressourcen. Zusammenhang: Adressierung bestimmt, welchem Teilnehmer/Flow welche QoS- und Flusssteuerungsregeln zugeordnet werden. QoS setzt Zielwerte und ggf. zulässige Raten/ Prioritäten; Flusssteuerung setzt diese praktisch um und stabilisiert QoS (weniger Stau → bessere Latenz/Jitter). Zu aggressive Rate verletzt QoS, zu strikte Flusssteuerung unterschreitet garantierte Bandbreite. (Richtig)
+
+### Source Text
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.

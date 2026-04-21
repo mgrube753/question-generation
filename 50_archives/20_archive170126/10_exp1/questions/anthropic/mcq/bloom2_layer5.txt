@@ -1,0 +1,50 @@
+## Multiple-Choice Question
+
+### Bloom Level: Understanding
+
+### Learning Objective 
+
+Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+
+### Stem Generation
+
+Frage: Welche zwei Aspekte lassen sich als Kernaufgaben des Session Layers klassifizieren?
+
+### Key Generation
+
+Korrekte Antwort(en):
+
+a) Synchronisation durch das Setzen von Zwischenpunkten zur Wiederherstellung bei Unterbrechungen (Richtig)
+b) Bündelung zur Gruppierung zusammengehöriger Transaktionen (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Welche zwei Aspekte lassen sich als Kernaufgaben des Session Layers klassifizieren?
+
+Antwortmöglichkeiten:
+
+a) Bündelung zur Gruppierung zusammengehöriger Transaktionen (Richtig)
+b) Flusskontrolle zur Regulierung der Übertragungsgeschwindigkeit zwischen Sender und Empfänger (Falsch)
+c) Synchronisation durch das Setzen von Zwischenpunkten zur Wiederherstellung bei Unterbrechungen (Richtig)
+d) Verschlüsselung zur sicheren Übertragung sensibler Daten zwischen Kommunikationspartnern (Falsch)
+
+### Source Text
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.

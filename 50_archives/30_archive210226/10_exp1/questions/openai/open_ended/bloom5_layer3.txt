@@ -1,0 +1,42 @@
+## Open-Ended Question
+
+### Bloom Level: Evaluating
+
+### Learning Objective
+
+Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+
+### Question Generation
+
+Frage: Bewerten Sie für die netzwerkübergreifende Kommunikation zwischen einem Sender in Netzwerk A (Ethernet) und einem Empfänger in Netzwerk B (WLAN) über zwei Router, ob eine Node-to-Node-Flusssteuerung gegenüber einer reinen End-to-End-Flusssteuerung die geeignetere Wahl ist, und stützen Sie Ihr Urteil mit höchstens zwei klaren Kriterien aus den Bereichen Adressierung, Routing und Flusssteuerung.
+
+### Answer Generation + Union of all
+
+Frage: Bewerten Sie für die netzwerkübergreifende Kommunikation zwischen einem Sender in Netzwerk A (Ethernet) und einem Empfänger in Netzwerk B (WLAN) über zwei Router, ob eine Node-to-Node-Flusssteuerung gegenüber einer reinen End-to-End-Flusssteuerung die geeignetere Wahl ist, und stützen Sie Ihr Urteil mit höchstens zwei klaren Kriterien aus den Bereichen Adressierung, Routing und Flusssteuerung.
+
+Antwort: Node-to-Node-Flusssteuerung ist hier geeigneter als eine reine End-to-End-Flusssteuerung. (1) Flusssteuerung: Ethernet und WLAN haben typischerweise stark unterschiedliche Bandbreite/Latenz und WLAN ist variabler; hop-by-hop kann pro Link die Sende­rate anpassen und Routerpuffer vor Überlauf schützen. Eine reine End-to-End-Steuerung reagiert erst zwischen Sender und Empfänger und verhindert nicht, dass die Router als Zwischenknoten überlastet werden. (2) Routing: Da die Kommunikation über zwei Router (mehrere Hops) läuft, entstehen Engpässe an jedem Hop; Node-to-Node stabilisiert jeden einzelnen Abschnitt der gewählten Route und reduziert Verlust/Backpressure entlang des Pfads. (Richtig)
+
+### Source Text
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.

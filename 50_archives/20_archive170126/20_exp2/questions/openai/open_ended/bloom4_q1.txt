@@ -1,0 +1,185 @@
+## Open-Ended Question
+
+### Bloom Level: Analyzing
+
+### Learning Objective
+
+Die Studierenden können die Aufgabenverteilung zwischen den Schichten analysieren und Unterschiede sowie Zusammenhänge zwischen verwandten Konzepten herausarbeiten
+
+### Question Generation
+
+Frage: Analysieren Sie die Konzepte Fehlerkontrolle, Flusskontrolle/Flußsteuerung und Adressierung über die Schichten 2–4 hinweg, indem Sie deren jeweilige Zielrichtung (lokal vs. netzwerkübergreifend vs. teilnehmerbezogen) sowie die Abhängigkeiten und Abgrenzungen zwischen den Schichten herausarbeiten.
+
+### Answer Generation + Union of all
+
+Frage: Analysieren Sie die Konzepte Fehlerkontrolle, Flusskontrolle/Flußsteuerung und Adressierung über die Schichten 2–4 hinweg, indem Sie deren jeweilige Zielrichtung (lokal vs. netzwerkübergreifend vs. teilnehmerbezogen) sowie die Abhängigkeiten und Abgrenzungen zwischen den Schichten herausarbeiten.
+
+Antwort: Fehlerkontrolle: In Schicht 2 ist sie lokal/linkbezogen ausgerichtet (zwischen direkt verbundenen Knoten über ein konkretes Medium) und macht aus einem potenziell fehlerhaften Physical Layer eine „fehlergesicherte Übertragung“ für genau diese Verbindung. Schicht 3 und 4 bauen darauf auf, d. h. sie erwarten typischerweise, dass pro Hop nur „korrekte“ Layer‑2-Einheiten weitergereicht werden; verbleibende Fehler wirken oberhalb eher als Verlust/Abbruch, nicht als Aufgabe von Schicht 3/4 zur physikalischen Fehlerbehebung. Abgrenzung: L2 behebt/erkennt Fehler auf der direkten Strecke und ist nicht zuständig für die Sicherung über mehrere Netze hinweg; L3/L4 nutzen die dadurch stabilere Basis für ihre eigenen, anders gerichteten Aufgaben.
+
+Flusskontrolle/Flußsteuerung: In Schicht 2 ist Flusskontrolle lokal (Sender vs. direkter Empfänger/Next Hop), mit Strategien wie Puffern, Sender drosseln oder Wartenlassen, um Überlast auf genau dieser Verbindung zu vermeiden. Schicht 3 erweitert die Zielrichtung auf netzwerkübergreifende Kommunikation und unterscheidet dabei Node‑to‑Node (Hop‑by‑Hop, also wieder lokal zwischen zwei Routern/Stationen) und End‑to‑End (vom Sender zum weit entfernten Empfänger über mehrere Netze). Schicht 4 ist teilnehmerbezogen: Flusssteuerung orientiert sich an Teilnehmer-Charakteristiken und wird damit auf die Endpunkte einer Kommunikationsbeziehung zugeschnitten (in Kombination mit den in L4 verankerten Dienst-/QoS-Anforderungen). Abhängigkeiten/Abgrenzung: L2‑Flusskontrolle kann nur den unmittelbaren Link stabilisieren und kennt keine Pfade; L3‑Flusssteuerung adressiert zusätzlich Pfad-/Netzübergreifendes, ohne Medienzugriff zu regeln; L4 betrachtet die Leistungsfähigkeit der konkreten Teilnehmer unabhängig von Zwischenknoten, setzt dafür aber funktionierende L3‑Konnektivität und deren Hop‑Wechsel (unter Nutzung von L2) voraus.
+
+Adressierung: In Schicht 2 ist Adressierung/Identifikation lokal (Auswahl von Sender/Empfänger innerhalb eines Layer‑2‑Netzes/Segments) und an die jeweilige L2‑Technologie gebunden. Schicht 3 führt netzwerkübergreifende Adressen ein, die unabhängig von der konkreten L2‑Technik die Zustellung zwischen unterschiedlichen Netzwerken ermöglichen (Basis für Routing über Zwischenknoten). Schicht 4 schließlich adressiert teilnehmerbezogen: „Teilnehmer‑Adressen“ identifizieren Kommunikationsendpunkte auf einem Gerät/bei einem Teilnehmer und erlauben die Zuordnung zu konkreten Teilnehmern/Diensten oberhalb der reinen Host‑Erreichbarkeit. Abhängigkeiten/Abgrenzung: L3‑Adressierung setzt pro Hop L2‑Zustellung zur nächsten Station voraus, löst aber selbst keine Medienzugriffs-/Link-Identifikationsprobleme; L4‑Adressierung setzt L3‑Erreichbarkeit (Netzwerkadresse) voraus und ergänzt diese um die Teilnehmer-/Endpunkt-Sicht, ohne selbst Routing oder lokalen Medienzugriff zu übernehmen. (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

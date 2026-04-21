@@ -1,0 +1,56 @@
+## Multiple-Choice Question
+
+### Bloom Level: Remembering
+
+### Learning Objective 
+
+Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
+
+### Stem Generation:
+
+Frage: Welche drei Kernaufgaben umfasst der Physical Layer 1 zur Übertragung logischer Werte auf physikalischer Ebene?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) Codierung, Transport und Decodierung (Richtig)
+b) Codierung zur Abbildung logischer Werte auf physikalische Größen, Transport zur Übertragung physikalischer Größen und Decodierung zur Rückinterpretation physikalischer Größen als logische Werte (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Welche drei Kernaufgaben umfasst der Physical Layer 1 zur Übertragung logischer Werte auf physikalischer Ebene?
+
+Antwortmöglichkeiten:
+
+a) Adressierung, Segmentierung und Fehlererkennung (Falsch)
+b) Codierung, Transport und Decodierung (Richtig)
+c) Codierung zur Abbildung logischer Werte auf physikalische Größen, Transport zur Übertragung physikalischer Größen und Decodierung zur Rückinterpretation physikalischer Größen als logische Werte (Richtig)
+d) Verschlüsselung, Routing und Entschlüsselung (Falsch)
+
+### Source Text:
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.

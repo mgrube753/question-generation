@@ -1,0 +1,52 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Stem Generation
+
+Frage: In einem Netzwerkdienst soll eine Übertragung zwischen zwei eindeutig bestimmten Teilnehmern erfolgen und es müssen garantierte Werte für Bandbreite und maximale Latenz eingehalten werden; welche zwei Kernaufgaben der Transportschicht nutzen Sie dafür?
+
+### Key Generation
+
+Korrekte Antworten:
+
+a) Adressierung der Teilnehmer (eindeutige Teilnehmer-Adressen zur Kommunikation zwischen genau bestimmten Endpunkten) (Richtig)
+b) Dienstqualität / QoS-Sicherung (Garantien für Bandbreite und maximale Latenz einhalten) (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: In einem Netzwerkdienst soll eine Übertragung zwischen zwei eindeutig bestimmten Teilnehmern erfolgen und es müssen garantierte Werte für Bandbreite und maximale Latenz eingehalten werden; welche zwei Kernaufgaben der Transportschicht nutzen Sie dafür?
+
+Antwortmöglichkeiten:
+
+a) Dienstqualität / QoS-Sicherung (Garantien für Bandbreite und maximale Latenz einhalten) (Richtig)
+b) Flußsteuerung (Anpassung der Senderate an die Teilnehmer-Charakteristik zur Vermeidung von Überlast) (Falsch)
+c) Adressierung der Teilnehmer (eindeutige Teilnehmer-Adressen zur Kommunikation zwischen genau bestimmten Endpunkten) (Richtig)
+d) Routing / Wegewahl (Bestimmen des Pfads durch das Netz zur Einhaltung von Latenzvorgaben) (Falsch)
+
+### Source Text
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.

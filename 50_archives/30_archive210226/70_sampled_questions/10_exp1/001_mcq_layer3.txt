@@ -1,0 +1,41 @@
+## Multiple-Choice-Question
+
+### Lernziel
+
+Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+
+### Formulierte Frage
+
+Frage: Welche zwei Varianten der Flusssteuerung lassen sich anhand ihrer Reichweite im Netzwerk klassifizieren?
+
+Antwortmöglichkeiten:
+
+a) End-to-End-Flusssteuerung, bei der die Steuerung vom Sender zum weit entfernten Empfänger erfolgt (Richtig)
+b) Network-to-Network-Flusssteuerung, bei der die Steuerung zwischen verschiedenen Netzwerken zur Abstimmung der Übertragungsgeschwindigkeit erfolgt (Falsch)
+c) Node-to-Node-Flusssteuerung, bei der die Steuerung von jedem Knoten zum jeweils nächsten Knoten erfolgt (Richtig)
+d) Segment-to-Segment-Flusssteuerung, bei der die Steuerung innerhalb einzelner Datensegmente zur Pufferoptimierung erfolgt (Falsch)
+
+### Quelltext
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.

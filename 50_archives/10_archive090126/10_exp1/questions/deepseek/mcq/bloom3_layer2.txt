@@ -1,0 +1,60 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective: 
+
+Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+
+### Stem Generation:
+
+None
+
+### Key Generation:
+
+Korrekte Antwort(en):
+a) In einem Ethernet-Netzwerk unterteilt der Data Link Layer den eingehenden Bitstrom in Frames, ergänzt jedes Frame mit einer Prüfsumme zur Fehlererkennung und verwendet MAC-Adressen, um die beteiligten Geräte eindeutig zu identifizieren. (Richtig)
+b) Bei einer drahtlosen Übertragung mit stark variierenden Signalstärken setzt der Data Link Layer eine Sliding-Window-Flusskontrolle ein, um Überlastung des Empfängers zu vermeiden, und koordiniert den Medienzugriff durch ein Reservierungsprotokoll, um Kollisionen zu minimieren. (Richtig)
+
+### Distractor Generation + Union of all:
+
+Frage: None
+
+Antwortmöglichkeiten:
+
+a) In einem Ethernet-Netzwerk unterteilt der Data Link Layer den eingehenden Bitstrom in Frames, ergänzt jedes Frame mit einer Prüfsumme zur Fehlererkennung und verwendet MAC-Adressen, um die beteiligten Geräte eindeutig zu identifizieren. (Richtig)
+b) Bei einer drahtlosen Übertragung mit stark variierenden Signalstärken setzt der Data Link Layer eine Sliding-Window-Flusskontrolle ein, um Überlastung des Empfängers zu vermeiden, und koordiniert den Medienzugriff durch ein Reservierungsprotokoll, um Kollisionen zu minimieren. (Richtig)
+c) Um bei einer TCP-Verbindung mit hoher Latenz einen Paketverlust zu kompensieren, nutzt der Data Link Layer eine adaptive Timeout-Berechnung und führt eine Neuzusammenstellung der Datenpakete in der korrekten Reihenfolge durch. (Falsch)
+d) Bei der Übermittlung eines IP-Pakets über verschiedene Router-Netzwerke hinweg ist der Data Link Layer für die logische Adressierung mit IP-Adressen und die Fragmentierung der Pakete basierend auf der MTU der Zwischenstrecken verantwortlich. (Falsch)
+
+### Source Text:
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.

@@ -1,0 +1,51 @@
+## Multiple-Choice Question
+
+### Bloom Level: Remembering
+
+### Learning Objective 
+
+Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+
+### Stem Generation
+
+Frage: Welche zwei Fragen werden bei den Protokollelementen der Application Layer 7 gestellt?
+
+### Key Generation
+
+Korrekte Antwort(en):
+
+a) Welche Anforderungen können gestellt werden? Welche Daten werden dabei erwartet? (Richtig)
+b) Die Fragen sind: Welche Anforderungen können gestellt werden? Und welche Daten werden dabei erwartet? (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Welche zwei Fragen werden bei den Protokollelementen der Application Layer 7 gestellt?
+
+Antwortmöglichkeiten:
+
+a) Die Fragen sind: Welche Anforderungen können gestellt werden? Und welche Daten werden dabei erwartet? (Richtig)
+b) Welche Anforderungen können gestellt werden? Welche Daten werden dabei erwartet? (Richtig)
+c) Welche Begriffe treten in der Anwendung auf? Wie reagiert die Anwendung auf die Anforderungen? (Falsch)
+d) Wie reagiert die Anwendung auf die Anforderungen durch diese Protokollelemente? Welche Kernaufgaben gibt es? (Falsch)
+
+### Source Text
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

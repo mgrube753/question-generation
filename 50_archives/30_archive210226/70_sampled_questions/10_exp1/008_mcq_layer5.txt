@@ -1,0 +1,37 @@
+## Multiple-Choice-Question
+
+### Lernziel
+
+Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+
+### Formulierte Frage
+
+Frage: In einem Kommunikationsszenario werden zur Fehlerwiederherstellung Zwischenpunkte gesetzt und mehrere zusammengehörige Transaktionen zu einer Einheit gruppiert. Welche zwei Kernaufgaben der Session Layer werden hier angewendet?
+
+Antwortmöglichkeiten:
+
+a) Bündelung – Gruppierung zusammengehöriger Transaktionen zu einer Einheit (Richtig)
+b) Sitzungsverwaltung – Aufbauen und Beenden der Verbindung (Falsch)
+c) Synchronisation – Setzen von Zwischenpunkten zur Fehlerwiederherstellung (Richtig)
+d) Verschlüsselung – Sicherstellung der Vertraulichkeit der Transaktionen (Falsch)
+
+### Quelltext
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.

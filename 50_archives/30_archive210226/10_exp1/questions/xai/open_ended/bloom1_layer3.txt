@@ -1,0 +1,49 @@
+## Open-Ended Question
+
+### Bloom Level: Remembering
+
+### Learning Objective
+
+Die Studierenden beherrschen die netzwerkübergreifende Kommunikation durch Adressierung, Routing und Flusssteuerung (End-to-End sowie Node-to-Node)
+
+### Question Generation
+
+Frage: Nennen Sie die drei Kernaufgaben der Network Layer 3 und listen Sie die beiden Varianten der Flusssteuerung auf.
+
+### Answer Generation + Union of all
+
+Frage: Nennen Sie die drei Kernaufgaben der Network Layer 3 und listen Sie die beiden Varianten der Flusssteuerung auf.
+
+Antwort: Die drei Kernaufgaben der Network Layer 3 sind:  
+1. Adressierung: Bereitstellung netzwerkübergreifender Adressen für Geräte in unterschiedlichen Netzwerken.  
+2. Routing: Auswahl vermittelnder Zwischenknoten für die Kommunikation nicht direkt verbundener Knoten.  
+3. Flusssteuerung: Strategien zur Handhabung zu schneller Datenübertragung.  
+
+Die beiden Varianten der Flusssteuerung sind:  
+- End-to-End: Vom Sender zum entfernten Empfänger.  
+- Node-to-Node: Von jedem Knoten zum nächsten. (Richtig)
+
+### Source Text
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.

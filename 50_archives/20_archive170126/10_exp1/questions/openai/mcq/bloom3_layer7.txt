@@ -1,0 +1,51 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+
+### Stem Generation
+
+Frage: Wenden Sie die Aufgaben der Application Layer (Layer 7) auf die Erstellung einer Anwendungsspezifikation an: Welche zwei Festlegungen müssen Sie dabei dem Bereich „Protokollelemente“ zuordnen?
+
+### Key Generation
+
+Korrekte Antwort(en):
+
+a) Festlegen, welche Anforderungen/Requests (z. B. Operationen/Kommandos wie GET, LOGIN, SEND) die Anwendung über das Protokoll stellen bzw. entgegennehmen darf (Richtig)
+b) Festlegen, welche Daten zu diesen Protokollelementen erwartet werden (z. B. Parameter/Felder, Datentypen, Format/Syntax und notwendige Inhalte) (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: Wenden Sie die Aufgaben der Application Layer (Layer 7) auf die Erstellung einer Anwendungsspezifikation an: Welche zwei Festlegungen müssen Sie dabei dem Bereich „Protokollelemente“ zuordnen?
+
+Antwortmöglichkeiten:
+
+a) Festlegen, welche Daten zu diesen Protokollelementen erwartet werden (z. B. Parameter/Felder, Datentypen, Format/Syntax und notwendige Inhalte) (Richtig)
+b) Festlegen, wie die Anwendung auf die Anforderungen durch diese Protokollelemente reagiert (z. B. Status-/Fehlercodes, Zustandsübergänge, Antwortlogik) (Falsch)
+c) Festlegen, welche Anforderungen/Requests (z. B. Operationen/Kommandos wie GET, LOGIN, SEND) die Anwendung über das Protokoll stellen bzw. entgegennehmen darf (Richtig)
+d) Festlegen, welche Grundkonzepte/Begriffe in der Anwendung vorkommen und wie sie semantisch zu verstehen sind (z. B. „User“, „Session“, „Ressource“) (Falsch)
+
+### Source Text
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

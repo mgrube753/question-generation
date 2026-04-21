@@ -1,0 +1,207 @@
+## Open-Ended Question
+
+### Bloom Level: Analyzing
+
+### Learning Objective
+
+Die Studierenden können die Aufgabenverteilung zwischen den Schichten analysieren und Unterschiede sowie Zusammenhänge zwischen verwandten Konzepten herausarbeiten
+
+### Question Generation
+
+Frage: Analysieren Sie die Unterschiede und Zusammenhänge in der Handhabung der Flusssteuerung zwischen der Data Link Layer, der Network Layer und der Transport Layer.
+
+### Answer Generation + Union of all
+
+Frage: Analysieren Sie die Unterschiede und Zusammenhänge in der Handhabung der Flusssteuerung zwischen der Data Link Layer, der Network Layer und der Transport Layer.
+
+Antwort: Die Flusssteuerung (Flow Control) im ISO-OSI-Modell dient der Vermeidung von Überlastung durch Anpassung der Übertragungsrate zwischen Sender und Empfänger. Sie wird in den Schichten 2 (Data Link Layer), 3 (Network Layer) und 4 (Transport Layer) unterschiedlich gehandhabt, wobei jede Schicht auf spezifischen Abstraktionsebenen operiert. Im Folgenden werden die Handhabungsweisen zerlegt und ihre Unterschiede sowie Zusammenhänge analysiert, um die Aufgabenverteilung und Beziehungen zur Gesamtstruktur des Modells herauszuarbeiten.
+
+Zunächst die Zerlegung in Bestandteile:
+
+- In der Data Link Layer (Schicht 2) erfolgt die Flusssteuerung hop-to-hop, d.h. direkt zwischen benachbarten Knoten über einen einzelnen physischen Link. Sie adressiert Szenarien, in denen der Sender zu schnell für den Empfänger sendet, und umfasst Mechanismen wie Zwischenpuffern (Buffering), Herunterregeln der Sende-rate oder das Wartenlassen des Senders (z.B. durch Stop-and-Wait oder Sliding-Window-Protokolle). Der Fokus liegt auf der fehlergesicherten Übertragung über potenziell fehleranfällige physische Medien, wobei die Steuerung eng mit Fehlerkontrolle und Medienzugriff verknüpft ist.
+
+- In der Network Layer (Schicht 3) wird die Flusssteuerung erweitert auf netzwerkübergreifende Szenarien, mit einer Unterscheidung zwischen node-to-node (hop-to-hop, ähnlich Schicht 2, aber über Zwischenknoten) und end-to-end (vom ursprünglichen Sender zum finalen Empfänger). Sie berücksichtigt Routing und Adressierung in heterogenen Netzwerken, wobei Strategien wie Congestion Control (z.B. in IP-Netzwerken durch ICMP-Nachrichten oder explizite Feedback-Mechanismen) eingesetzt werden, um Überlastungen in Routern zu vermeiden. Der Schwerpunkt liegt auf der Vermeidung von Netzwerkstaus durch Anpassung der Rate basierend auf Zwischenknoten-Feedback.
+
+- In der Transport Layer (Schicht 4) erfolgt die Flusssteuerung end-to-end zwischen den Endteilnehmern (Prozessen oder Anwendungen), unter Nutzung von Teilnehmer-Charakteristiken wie verfügbarer Puffergröße oder Verbindungsqualität. Beispiele sind TCPs Sliding-Window-Mechanismus oder UDPs fehlende Steuerung (was Anwendungen überlassen wird). Sie integriert Dienstqualität (QoS)-Aspekte wie Bandbreite und Latenz, um eine zuverlässige Übertragung zwischen beliebigen Netzteilnehmern zu gewährleisten.
+
+Unterschiede in der Handhabung:
+
+- Granularität und Umfang: Schicht 2 ist lokal und link-spezifisch (hop-to-hop), fokussiert auf direkte Verbindungen und physische Einschränkungen, während Schicht 3 netzwerkweit (inklusive node-to-node und end-to-end) agiert und Routing-bedingte Überlastungen berücksichtigt. Schicht 4 ist prozess-spezifisch und end-to-end, ignoriert Zwischenknoten und priorisiert anwendungsnahe Charakteristiken, was sie abstrakter macht.
+
+- Mechanismen und Abhängigkeiten: Schicht 2 nutzt einfache, hardware-nahe Methoden (z.B. Buffering), abhängig von physischen Medien. Schicht 3 integriert Routing-Entscheidungen und kann proaktive Maßnahmen wie Rate-Limiting in Routern einbeziehen, was sie von Schicht 2 unterscheidet durch ihre Abhängigkeit von netzwerkübergreifender Adressierung. Schicht 4 baut auf höherer Abstraktion auf, mit adaptiven Algorithmen (z.B. TCP Congestion Avoidance), die Teilnehmer-spezifisch sind und QoS-Garantien einbeziehen, im Gegensatz zur reinen Staukontrolle in Schicht 3.
+
+- Fehler- und Stau-Handhabung: Schicht 2 verknüpft Flusssteuerung stark mit Fehlerkorrektur (z.B. ARQ), Schicht 3 trennt sie stärker und adressiert netzwerkweite Staus, während Schicht 4 sie mit Zuverlässigkeit und QoS verbindet, ohne direkte Fehlerkorrektur (die tieferen Schichten überlassen).
+
+Zusammenhänge und Beziehungen zur Gesamtstruktur:
+
+- Hierarchische Abhängigkeit: Die Schichten bauen aufeinander auf, wobei Schicht 2 die Grundlage für Schicht 3 bildet (indem sie sichere Links bereitstellt, über die Schicht 3 routing-basiert Fluss steuert), und Schicht 4 auf beiden aufsetzt, um end-to-end-Flusssteuerung zu ermöglichen. Dies spiegelt die modulare Struktur des OSI-Modells wider, wo niedrigere Schichten (2 und 3) hardware- und netzwerkspezifische Aspekte handhaben, während Schicht 4 anwendungsorientiert ist.
+
+- Gemeinsamer Zweck und Interaktion: Alle drei Schichten teilen das Ziel, Überlastung zu vermeiden, aber durch Kooperation: Schicht 2s lokale Steuerung verhindert Engpässe, die Schicht 3s netzwerkweite Sicht ergänzen würde; Schicht 4 nutzt Feedback aus unteren Schichten (z.B. via Paketverluste), um globale Anpassungen vorzunehmen. Zusammenhänge zeigen sich in Protokollen wie TCP/IP, wo Schicht 4 (TCP) mit Schicht 3 (IP) interagiert, um end-to-end-Fluss mit node-to-node-Elementen zu kombinieren.
+
+- Beitrag zum Gesamtziel: Die Verteilung ermöglicht Skalierbarkeit – Schicht 2 isoliert physische Probleme, Schicht 3 handhabt Netzwerkkomplexität, und Schicht 4 gewährleistet anwendungspezifische Zuverlässigkeit –, was die OSI-Struktur als ganzes effizient macht, indem redundante Funktionen vermieden und Spezialisierungen gefördert werden.
+
+Zusammenfassend verdeutlicht die Analyse, dass die Flusssteuerung durch schichtenweise Spezialisierung (von lokal zu global) optimiert wird, mit Unterschieden in Skopus und Mechanismen, die durch hierarchische Zusammenhänge eine kohärente Netzwerkkommunikation ermöglichen. (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

@@ -1,0 +1,56 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
+
+### Stem Generation
+
+Frage: In einem Sender werden logische 0/1-Werte per Manchester in ein elektrisches Signal abgebildet und anschließend über ein Telefonkabel zum Empfänger übertragen; welche zwei Kernaufgaben der Physical Layer 1 nutzen Sie in diesem Sender?
+
+### Key Generation
+
+Korrekte Antwort(en):
+
+a) Codierung der logischen 0/1-Werte per Manchester in ein elektrisches Signal und Transport dieses elektrischen Signals über das Telefonkabel zum Empfänger. (Richtig)
+b) Abbildung der Bits auf eine physikalische Größe (Manchester-Codierung als Spannungs-/Signalverlauf) sowie die mediengebundene Übertragung dieser physikalischen Größe über das Telefonkabel. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: In einem Sender werden logische 0/1-Werte per Manchester in ein elektrisches Signal abgebildet und anschließend über ein Telefonkabel zum Empfänger übertragen; welche zwei Kernaufgaben der Physical Layer 1 nutzen Sie in diesem Sender?
+
+Antwortmöglichkeiten:
+
+a) Codierung der logischen 0/1-Werte per Manchester und anschließende Decodierung des Spannungs-/Signalverlaufs zurück zu Bits im Sender zur Plausibilitätsprüfung. (Falsch)
+b) Codierung der logischen 0/1-Werte per Manchester in ein elektrisches Signal und Transport dieses elektrischen Signals über das Telefonkabel zum Empfänger. (Richtig)
+c) Rahmenbildung der Bits zu Datenframes inklusive CRC-Fehlererkennung und danach Übertragung der Frames als elektrisches Signal über das Telefonkabel. (Falsch)
+d) Abbildung der Bits auf eine physikalische Größe (Manchester-Codierung als Spannungs-/Signalverlauf) sowie die mediengebundene Übertragung dieser physikalischen Größe über das Telefonkabel. (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.

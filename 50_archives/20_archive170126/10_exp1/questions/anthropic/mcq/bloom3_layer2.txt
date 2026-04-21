@@ -1,0 +1,61 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+
+### Stem Generation
+
+Frage: Ein Sender überträgt Daten schneller, als der Empfänger diese verarbeiten kann. Welche Strategien der Flusskontrolle lassen sich anwenden, um diese Situation zu lösen?
+
+### Key Generation
+
+Korrekte Antwort(en):
+
+a) Der Empfänger kann die eingehenden Daten zwischenpuffern, um sie temporär zu speichern und später zu verarbeiten, oder den Sender auffordern, die Übertragungsgeschwindigkeit herunterzuregeln. (Richtig)
+b) Der Empfänger kann den Sender warten lassen, bis er zur Verarbeitung weiterer Daten bereit ist, und signalisiert dies durch entsprechende Steuernachrichten. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Ein Sender überträgt Daten schneller, als der Empfänger diese verarbeiten kann. Welche Strategien der Flusskontrolle lassen sich anwenden, um diese Situation zu lösen?
+
+Antwortmöglichkeiten:
+
+a) Der Empfänger kann beschädigte Datenpakete erkennen und eine erneute Übertragung vom Sender anfordern, um die Datenintegrität sicherzustellen. (Falsch)
+b) Der Empfänger kann den Sender warten lassen, bis er zur Verarbeitung weiterer Daten bereit ist, und signalisiert dies durch entsprechende Steuernachrichten. (Richtig)
+c) Der Empfänger kann die eingehenden Daten zwischenpuffern, um sie temporär zu speichern und später zu verarbeiten, oder den Sender auffordern, die Übertragungsgeschwindigkeit herunterzuregeln. (Richtig)
+d) Der Sender kann den Physical Layer deaktivieren und die Übertragung vollständig abbrechen, bis ein neuer Verbindungsaufbau vom Empfänger initiiert wird. (Falsch)
+
+### Source Text
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.

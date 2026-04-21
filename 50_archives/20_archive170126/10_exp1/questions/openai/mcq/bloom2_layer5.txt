@@ -1,0 +1,50 @@
+## Multiple-Choice Question
+
+### Bloom Level: Understanding
+
+### Learning Objective 
+
+Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+
+### Stem Generation
+
+Frage: Welche zwei Beschreibungen erklären die Kernaufgaben Synchronisation und Bündelung in der Session Layer 5 korrekt?
+
+### Key Generation
+
+Korrekte Antwort(en):
+
+a) Synchronisation bedeutet in Layer 5, dass während einer Sitzung Zwischenpunkte (Checkpoints) gesetzt werden, damit eine Übertragung bei Bedarf ab einem definierten Punkt fortgesetzt werden kann. (Richtig)
+b) Bündelung bedeutet in Layer 5, dass logisch zusammengehörige Transaktionen zu einer Gruppe zusammengefasst werden, um sie innerhalb der Sitzung gemeinsam zu behandeln bzw. zu übertragen. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: Welche zwei Beschreibungen erklären die Kernaufgaben Synchronisation und Bündelung in der Session Layer 5 korrekt?
+
+Antwortmöglichkeiten:
+
+a) Synchronisation bedeutet in Layer 5, dass Sender und Empfänger ihren Übertragungstakt bzw. die Bit-/Zeitsignale aufeinander abstimmen, damit Daten fehlerfrei „im gleichen Rhythmus“ ankommen. (Falsch)
+b) Synchronisation bedeutet in Layer 5, dass während einer Sitzung Zwischenpunkte (Checkpoints) gesetzt werden, damit eine Übertragung bei Bedarf ab einem definierten Punkt fortgesetzt werden kann. (Richtig)
+c) Bündelung bedeutet in Layer 5, dass logisch zusammengehörige Transaktionen zu einer Gruppe zusammengefasst werden, um sie innerhalb der Sitzung gemeinsam zu behandeln bzw. zu übertragen. (Richtig)
+d) Bündelung bedeutet in Layer 5, dass mehrere einzelne Pakete zu einem größeren Frame zusammengefasst werden, um den Protokoll-Overhead auf dem Übertragungsweg zu reduzieren. (Falsch)
+
+### Source Text
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.

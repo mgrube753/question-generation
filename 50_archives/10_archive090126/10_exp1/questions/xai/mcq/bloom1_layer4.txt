@@ -1,0 +1,52 @@
+## Multiple-Choice Question
+
+### Bloom Level: Remembering
+
+### Learning Objective 
+
+Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Stem Generation:
+
+Frage: Welche sind die drei Kernaufgaben der Transport Layer 4?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) Adressierung, Flußsteuerung und Dienstqualität. (Richtig)
+b) Adressierung (Teilnehmer-Adressen), Flußsteuerung (Nutzen der Teilnehmer-Charakteristik) und Dienstqualität (Sicherung der Quality of Service). (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: Welche sind die drei Kernaufgaben der Transport Layer 4?
+
+Antwortmöglichkeiten:
+
+a) Adressierung (Teilnehmer-Adressen), Flußsteuerung (Nutzen der Teilnehmer-Charakteristik) und Dienstqualität (Sicherung der Quality of Service). (Richtig)
+b) Adressierung, Flußsteuerung und Dienstqualität. (Richtig)
+c) Adressierung, Routing und Dienstqualität. (Falsch)
+d) Segmentierung, Fehlerkorrektur und Multiplexing. (Falsch)
+
+### Source Text:
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.

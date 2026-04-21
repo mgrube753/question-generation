@@ -1,0 +1,42 @@
+## Multiple-Choice-Question
+
+### Lernziel
+
+Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+
+### Formulierte Frage
+
+Frage: Frage: Wählen Sie die zwei Kernaufgaben der Presentation Layer (Schicht 6) aus, die explizit als Aktion mit zugehöriger Gegenaktion (z. B. X und De‑X) beschrieben werden.
+
+Antwortmöglichkeiten:
+
+a) Framing und Deframing (Falsch)
+b) Komprimieren und Dekomprimieren (Richtig)
+c) Segmentieren und Reassemblieren (Falsch)
+d) Verschlüsseln und Entschlüsseln (Richtig)
+
+### Quelltext
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.

@@ -1,0 +1,66 @@
+## Open-Ended Question
+
+### Bloom Level: Evaluating
+
+### Learning Objective
+
+Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
+
+### Question Generation
+
+Frage: Bewerten Sie, welche Kombination aus Codierung (NRZ oder Manchester), Transport (medien-gebunden über Telefonkabel oder medien-frei über Funk) und Decodierung (Abtastung mit geeigneten Detektionsbereichen) für die zuverlässige Übertragung logischer Werte unter störbehafteten Bedingungen am geeignetsten ist, anhand der Kriterien Synchronisationsfähigkeit, Störsicherheit und Fehlinterpretationsrisiko bei der Decodierung.
+
+### Answer Generation + Union of all
+
+Frage: Bewerten Sie, welche Kombination aus Codierung (NRZ oder Manchester), Transport (medien-gebunden über Telefonkabel oder medien-frei über Funk) und Decodierung (Abtastung mit geeigneten Detektionsbereichen) für die zuverlässige Übertragung logischer Werte unter störbehafteten Bedingungen am geeignetsten ist, anhand der Kriterien Synchronisationsfähigkeit, Störsicherheit und Fehlinterpretationsrisiko bei der Decodierung.
+
+Antwort: Unter störbehafteten Bedingungen ist die Kombination Manchester-Codierung + medien-gebundener Transport über Telefonkabel + Decodierung durch Abtastung/Transitionsauswertung mit klar definierten Detektionsbereichen am geeignetsten.
+
+Begründete Bewertung nach Kriterien:
+
+1) Synchronisationsfähigkeit:
+- Manchester ist selbsttaktend, da in jedem Bit eine definierte Flanke auftritt. Damit kann der Empfänger den Bit-Takt auch bei längeren Folgen gleicher логischer Werte zuverlässig nachführen.
+- NRZ liefert bei langen 0- oder 1-Sequenzen keine Flanken; dadurch steigt das Risiko von Taktdrift und Bitgrenzen-Verschiebung, besonders bei Störungen und bei variabler Signallaufzeit (typisch stärker bei Funk).
+=> Vorteil: Manchester.
+
+2) Störsicherheit (Übertragungsweg + Codierung):
+- Medien-gebundenes Telefonkabel ist im Regelfall weniger von unkontrollierbaren externen Störungen betroffen als Funk (kein Mehrwege-Fading, geringere impulsartige Störeinflüsse durch fremde Sender, besser definierte Dämpfung/Impedanz). Dadurch ist das Signal-Rausch-Verhältnis typischerweise stabiler und planbarer.
+- Funk ist stärker schwankend (Interferenzen, Abschattung, Mehrweg), wodurch Amplituden und Flankenform stärker variieren und damit die Decodierung fehleranfälliger wird.
+- Manchester ist gegenüber Pegelverschiebungen/Baseline-Wander tendenziell robuster als NRZ, weil die Information primär in der Flanke (Übergang) liegt und der Mittelwert über Zeit ausgeglichener ist; NRZ ist stärker von Pegelverschiebungen und Rauschspitzen abhängig.
+=> Vorteil: Telefonkabel + Manchester.
+
+3) Fehlinterpretationsrisiko bei der Decodierung (Abtastung/Detektionsbereiche):
+- Für höchste Zuverlässigkeit wird beim Empfänger nicht „irgendwann“ abgetastet, sondern zeitlich passend (z. B. in stabilen Bereichen um die Bitmitte bzw. gezielt auf die erwartete Manchester-Flanke) und mit geeigneten Detektionsbereichen gearbeitet (z. B. zwei Schwellwerte/Hysterese, Guard-Bands zwischen 0- und 1-Bereich), um Rauschen nahe der Schwelle nicht als Bitwechsel zu interpretieren.
+- Bei NRZ muss die Decodierung primär den Pegel korrekt klassifizieren; bei Störungen nahe der Schwelle ist die Fehlinterpretation direkt möglich, insbesondere wenn zusätzlich die Synchronisation driftet.
+- Bei Manchester kann die Decodierung auf das Vorhandensein und die Richtung/Position der Flanke pro Bit fokussieren; in Kombination mit stabiler Leitung ist die Verwechslungsgefahr geringer, sofern Detektionsfenster für „gültige Flankenzeitpunkte“ und Hysterese gegen Rauschflanken genutzt werden.
+=> Geringstes Fehlinterpretationsrisiko: Manchester + Telefonkabel + sauber definierte Detektionsbereiche (inkl. Hysterese und zeitlich korrekter Abtast-/Flankenauswertung).
+
+Gesamturteil:
+Die zuverlässigsten Urteile nach den Kriterien fallen zugunsten von Manchester über Telefonkabel mit robuster Decodierung (Abtastung in stabilen Bereichen/Transitionsauswertung und ausreichend getrennte Detektionsbereiche). NRZ über Funk ist am ungünstigsten, weil sowohl Synchronisationsprobleme (wenig Flanken) als auch stark schwankende Störungen des Funkkanals und damit ein erhöhtes Fehlinterpretationsrisiko zusammenkommen. (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.

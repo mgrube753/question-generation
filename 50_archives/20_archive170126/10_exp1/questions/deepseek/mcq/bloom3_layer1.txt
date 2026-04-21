@@ -1,0 +1,55 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
+
+### Stem Generation
+
+Frage: Ein Ingenieur muss ein System zur zuverlässigen Übertragung binärer Daten über eine lange, verzerrungsanfällige Kupferleitung entwerfen. Auf welche zwei Kernaufgaben der Physical Layer sollte er bei der Auslegung besonderen Wert legen, um Bitfehler zu minimieren?
+
+### Key Generation
+
+Korrekte Antwort(en):
+a) Besonderen Wert sollte der Ingenieur auf die Codierung legen, um durch eine geeignete physikalische Repräsentation der Bits (z.B. fehlerrobuste Leitungscodierung wie Manchester oder Scrambling) die Störungsanfälligkeit auf der langen Kupferleitung zu reduzieren, und auf die Decodierung, um durch optimale Abtastzeitpunkte und angepasste Detektionsschwellen trotz Signalverzerrungen eine korrekte Bitinterpretation zu gewährleisten. (Richtig)
+b) Auf die Codierung, um mit einer für verzerrungsanfällige Leitungen geeigneten Mapping-Technik (z.B. differenzielle Codierung oder mehrstufige Modulation) die Signalqualität zu maximieren, und auf die Decodierung, um mittels techniques wie Equalizing oder Fehlerkorrektur bei der Rückumwandlung physikalischer Größen in logische Werte Bitfehler aktiv zu minimieren. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Ein Ingenieur muss ein System zur zuverlässigen Übertragung binärer Daten über eine lange, verzerrungsanfällige Kupferleitung entwerfen. Auf welche zwei Kernaufgaben der Physical Layer sollte er bei der Auslegung besonderen Wert legen, um Bitfehler zu minimieren?
+
+Antwortmöglichkeiten:
+
+a) Besonderen Wert sollte der Ingenieur auf die Codierung legen, um durch eine geeignete physikalische Repräsentation der Bits (z.B. fehlerrobuste Leitungscodierung wie Manchester oder Scrambling) die Störungsanfälligkeit auf der langen Kupferleitung zu reduzieren, und auf die Decodierung, um durch optimale Abtastzeitpunkte und angepasste Detektionsschwellen trotz Signalverzerrungen eine korrekte Bitinterpretation zu gewährleisten. (Richtig)
+b) Besonderen Wert sollte der Ingenieur auf den Transport legen, um durch Auswahl geeigneter Kabelparameter (z.B. Abschirmung, Leitungsdämpfung) die Signalintegrität zu gewährleisten, und auf die Decodierung, um durch adaptive Schwellwertbildung und Equalization trotz Verzerrungen die Bits korrekt zu erkennen. (Falsch)
+c) Auf die Codierung, um mit einer für verzerrungsanfällige Leitungen geeigneten Mapping-Technik (z.B. differenzielle Codierung oder mehrstufige Modulation) die Signalqualität zu maximieren, und auf die Decodierung, um mittels techniques wie Equalizing oder Fehlerkorrektur bei der Rückumwandlung physikalischer Größen in logische Werte Bitfehler aktiv zu minimieren. (Richtig)
+d) Auf die Codierung, um mit fehlerrobuster Leitungscodierung die Signalqualität zu erhöhen, und auf den Transport, um durch optimale Platzierung von Verstärkern und Impedanzanpassung die Übertragung über die lange Leitung stabil zu halten. (Falsch)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.

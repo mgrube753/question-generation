@@ -1,0 +1,56 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
+
+### Stem Generation
+
+Frage: Für ein Kommunikationssystem, das logische Werte über ein Telefonkabel mit NRZ-Codierung überträgt, sind welche beiden weiteren Kernaufgaben der Physical Layer anzuwenden, um die Übertragung zu vollenden?
+
+### Key Generation
+
+Korrekte Antworten:
+
+a) Transport der physikalischen Größen über das Medium (z.B. Telefonkabel). (Richtig)
+b) Decodierung der physikalischen Größen zurück in logische Werte. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Für ein Kommunikationssystem, das logische Werte über ein Telefonkabel mit NRZ-Codierung überträgt, sind welche beiden weiteren Kernaufgaben der Physical Layer anzuwenden, um die Übertragung zu vollenden?
+
+Antwortmöglichkeiten:
+
+a) Bereitstellung einer mechanischen und elektrischen Verbindung zum Telefonkabel. (Falsch)
+b) Decodierung der physikalischen Größen zurück in logische Werte. (Richtig)
+c) Sicherstellung der Bit-Synchronisation zwischen Sender und Empfänger. (Falsch)
+d) Transport der physikalischen Größen über das Medium (z.B. Telefonkabel). (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.

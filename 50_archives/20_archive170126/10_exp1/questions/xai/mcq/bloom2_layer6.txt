@@ -1,0 +1,55 @@
+## Multiple-Choice Question
+
+### Bloom Level: Understanding
+
+### Learning Objective 
+
+Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+
+### Stem Generation
+
+Frage: Welche der folgenden Kernaufgaben der Presentation Layer 6 beinhalten die Konvertierung der Datendarstellung?
+
+### Key Generation
+
+Korrekte Antwort(en):
+
+a) Endian-Ness: Konvertieren der Datendarstellung. (Richtig)
+b) Zeichen: Konvertierung der Zeichendarstellung. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Welche der folgenden Kernaufgaben der Presentation Layer 6 beinhalten die Konvertierung der Datendarstellung?
+
+Antwortmöglichkeiten:
+
+a) Endian-Ness: Konvertieren der Datendarstellung. (Richtig)
+b) Kompression: Komprimieren und Dekomprimieren. (Falsch)
+c) Verschlüsselung: Verschlüsseln und Entschlüsseln. (Falsch)
+d) Zeichen: Konvertierung der Zeichendarstellung. (Richtig)
+
+### Source Text
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.

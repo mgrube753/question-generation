@@ -1,0 +1,32 @@
+## Offene Frage
+
+### Lernziel
+
+Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+
+### Formulierte Frage
+
+Frage: Analysieren Sie eine Kommunikationsbeziehung, in der ein Client (1) eine Sitzung für eine dreistufige Transaktion öffnet, (2) bei fehlender Authentifizierung sofort zurückgewiesen werden muss, (3) nach einem Verbindungsabbruch in Schritt 2 an einem definierten Zwischenpunkt fortsetzen soll und (4) die drei Schritte als zusammengehörig behandelt werden sollen: Welche Anteile der Sitzungsschicht betreffen Sitzungsverwaltung, Synchronisation und Bündelung, und wie wirken diese Anteile zusammen, um den Gesamtzweck zu erfüllen?
+
+Antwort: Sitzungsverwaltung: Aufbau der Sitzung zu Beginn, Verwalten des Sitzungszustands (z.B. „Transaktion läuft“), sofortiges Zurückweisen/Beenden der Sitzung bei fehlender Authentifizierung in Schritt 2, sowie geordnetes Beenden nach Abschluss/Abbruch. Synchronisation: Setzen eines definierten Zwischenpunkts (Checkpoint) vor bzw. innerhalb Schritt 2 (z.B. nach Schritt 1), sodass bei Verbindungsabbruch der Client die Sitzung wiederaufnehmen und ab dem Checkpoint fortsetzen kann statt von vorne. Bündelung: Gruppiert die drei Schritte als zusammengehörige Transaktion, sodass Wiederaufnahme, Fehlerbehandlung und Abschluss konsistent für alle drei Schritte erfolgen (ein gemeinsamer Kontext/Atomizität innerhalb der Sitzung). (Richtig)
+
+### Quelltext
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.

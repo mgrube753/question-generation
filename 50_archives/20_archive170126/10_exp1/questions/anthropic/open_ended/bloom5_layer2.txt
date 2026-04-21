@@ -1,0 +1,49 @@
+## Open-Ended Question
+
+### Bloom Level: Evaluating
+
+### Learning Objective
+
+Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+
+### Question Generation
+
+Frage: Beurteilen Sie, welche der fünf Kernaufgaben des Data Link Layers den größten Beitrag zur Gewährleistung einer zuverlässigen Datenübertragung leistet, und begründen Sie Ihr Urteil anhand der jeweiligen Funktionen und ihrer Abhängigkeiten voneinander.
+
+### Answer Generation + Union of all
+
+Frage: Beurteilen Sie, welche der fünf Kernaufgaben des Data Link Layers den größten Beitrag zur Gewährleistung einer zuverlässigen Datenübertragung leistet, und begründen Sie Ihr Urteil anhand der jeweiligen Funktionen und ihrer Abhängigkeiten voneinander.
+
+Antwort: Die Fehlerkontrolle leistet den größten Beitrag zur zuverlässigen Datenübertragung, da sie die Kernmission des Data Link Layers direkt adressiert: die fehlergesicherte Übertragung über einen potenziell fehlerbehafteten Physical Layer. Durch das Erkennen, Beheben und Signalisieren von Übertragungsfehlern stellt sie die Datenintegrität unmittelbar sicher. Die anderen Kernaufgaben sind zwar notwendige Voraussetzungen, tragen jedoch indirekt bei: Die Segmentierung schafft erst die Grundlage, indem sie Bits zu verarbeitbaren Einheiten zusammenfasst, auf die Fehlerkontrollmechanismen angewendet werden können. Der Medienzugriff ermöglicht die physische Übertragung, garantiert aber keine Korrektheit. Die Identifikation stellt sicher, dass Daten den richtigen Empfänger erreichen, ohne deren Integrität zu prüfen. Die Flusskontrolle verhindert Datenverlust durch Überlastung, adressiert jedoch keine Übertragungsfehler. Obwohl alle Funktionen zusammenwirken müssen, ist die Fehlerkontrolle der entscheidende Mechanismus, der aus einer funktionierenden Übertragung eine zuverlässige macht, da sie als einzige direkt die Korrektheit der übermittelten Daten gewährleistet. (Richtig)
+
+### Source Text
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.

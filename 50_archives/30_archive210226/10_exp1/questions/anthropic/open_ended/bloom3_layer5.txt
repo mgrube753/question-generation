@@ -1,0 +1,38 @@
+## Open-Ended Question
+
+### Bloom Level: Applying
+
+### Learning Objective
+
+Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+
+### Question Generation
+
+Frage: Wenden Sie das Sitzungskonzept des Session Layers an, indem Sie für ein Szenario beschreiben, wie bei einer umfangreichen Dateiübertragung zwischen zwei Systemen die Synchronisationsfunktion durch das Setzen von Zwischenpunkten genutzt werden kann, um nach einem unerwarteten Verbindungsabbruch die Übertragung fortzusetzen.
+
+### Answer Generation + Union of all
+
+Frage: Wenden Sie das Sitzungskonzept des Session Layers an, indem Sie für ein Szenario beschreiben, wie bei einer umfangreichen Dateiübertragung zwischen zwei Systemen die Synchronisationsfunktion durch das Setzen von Zwischenpunkten genutzt werden kann, um nach einem unerwarteten Verbindungsabbruch die Übertragung fortzusetzen.
+
+Antwort: Bei der Übertragung einer großen Datei (z.B. 10 GB) zwischen zwei Systemen setzt der Session Layer in regelmäßigen Abständen Synchronisationspunkte (Checkpoints). Beispielsweise wird nach jedem erfolgreich übertragenen Gigabyte ein Zwischenpunkt gesetzt und von beiden Seiten bestätigt. Diese Punkte markieren den gesicherten Übertragungsfortschritt. Bricht die Verbindung unerwartet nach 7,5 GB ab, speichert das System den letzten bestätigten Synchronisationspunkt bei 7 GB. Nach Wiederherstellung der Verbindung muss die Sitzung nicht komplett neu gestartet werden. Stattdessen kann die Übertragung ab dem letzten Checkpoint bei 7 GB fortgesetzt werden. Nur die restlichen 3 GB müssen noch übertragen werden, wodurch bereits übertragene Daten nicht erneut gesendet werden müssen und Ressourcen gespart werden. (Richtig)
+
+### Source Text
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.

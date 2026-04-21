@@ -1,0 +1,56 @@
+## Multiple-Choice Question
+
+### Bloom Level: Understanding
+
+### Learning Objective 
+
+Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Stem Generation:
+
+Frage: Welche Aussage erklärt korrekt, wie die Dienstqualität im Transport Layer auf die Bedürfnisse des jeweiligen Teilnehmers abgestimmt wird?
+
+### Key Generation:
+
+Korrekte Antwort(en):
+
+a) Die Dienstqualität wird durch die Erbringung eines Kommunikationsdienstes mit spezifischen Garantien für Parameter wie Bandbreite, Latenz, Jitter und Fehlerrate an die individuellen Anforderungen des jeweiligen Teilnehmers angepasst. (Richtig)
+
+b) Der Transport Layer sichert die Quality of Service, indem er einen maßgeschneiderten Kommunikationsdienst bereitstellt, dessen Garantien speziell auf die Bedürfnisse des jeweiligen Teilnehmers zugeschnitten werden. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Welche Aussage erklärt korrekt, wie die Dienstqualität im Transport Layer auf die Bedürfnisse des jeweiligen Teilnehmers abgestimmt wird?
+
+Antwortmöglichkeiten:
+
+a) Der Transport Layer sichert die Quality of Service, indem er einen maßgeschneiderten Kommunikationsdienst bereitstellt, dessen Garantien speziell auf die Bedürfnisse des jeweiligen Teilnehmers zugeschnitten werden. (Richtig)
+
+b) Die Dienstqualität im Transport Layer wird ausschließlich durch die Flusssteuerung reguliert, die automatisch die optimale Bandbreite für jeden Teilnehmer berechnet. (Falsch)
+
+c) Die Dienstqualität wird dadurch gewährleistet, dass der Transport Layer eine einheitliche Übertragungsrate für alle Teilnehmer festlegt, unabhängig von deren individuellen Anforderungen. (Falsch)
+
+d) Die Dienstqualität wird durch die Erbringung eines Kommunikationsdienstes mit spezifischen Garantien für Parameter wie Bandbreite, Latenz, Jitter und Fehlerrate an die individuellen Anforderungen des jeweiligen Teilnehmers angepasst. (Richtig)
+
+### Source Text:
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.

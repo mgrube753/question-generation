@@ -1,0 +1,5 @@
+Hier wurde archiviert, da ein neuer Generierungslauf notwendig ist. Die Workshops mit den Bewertenden haben wichtige methodische und generierungsbezogene Probleme aufgedeckt. Lernziele brauchten Überarbeitung, Bloom-Level-Beschreibungen waren inkonsistent/nicht zeitgemäß, und es gab Probleme mit der Prompt-Template-Ausgabe ("Frage: Frage:"). Diese Änderungen verlangten eine neue Version der Fragen, die folglich den aktuellen Stand im Git Repo darstellen. Mit den neuen Fragen wird Sampling durchgeführt, um die endgültigen Fragen für die Bewertenden zu teilen.
+
+---
+
+This was archived because a new generation run is necessary. The workshops with the evaluators revealed important methodological and generation-related issues. Learning objectives needed revision, Bloom level descriptions were inconsistent/not up-to-date, and there were issues with the prompt template output ("Frage: Frage:", which doubles the question indicator). These changes required a new version of the questions, which consequently represents the current state in the Git repo. With the new questions, sampling will be conducted to share the final questions with the evaluators.

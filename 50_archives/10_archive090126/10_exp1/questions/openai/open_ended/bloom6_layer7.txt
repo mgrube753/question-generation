@@ -1,0 +1,132 @@
+## Open-Ended Question
+
+### Bloom Level: Creating
+
+### Learning Objective
+
+Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+
+### Question Generation
+
+Frage: Entwerfen Sie für eine frei gewählte Anwendung eine konsistente Application-Layer-Spezifikation, die (1) die Grundkonzepte der Anwendung, (2) die Protokollelemente mit Anforderungen und erwarteten Daten sowie (3) das Verhalten der Anwendung als Reaktion auf diese Protokollelemente zusammenstellt.
+
+### Answer Generation + Union of all
+
+Frage: Entwerfen Sie für eine frei gewählte Anwendung eine konsistente Application-Layer-Spezifikation, die (1) die Grundkonzepte der Anwendung, (2) die Protokollelemente mit Anforderungen und erwarteten Daten sowie (3) das Verhalten der Anwendung als Reaktion auf diese Protokollelemente zusammenstellt.
+
+Antwort: Anwendung: TaskSync – Synchronisation einer To-Do-Liste zwischen mobilen Clients und einem zentralen Server.
+
+(1) Grundkonzepte der Anwendung
+1. Teilnehmerrollen
+1.1 Client: Endgerät/Applikation eines Nutzers, die Tasks offline bearbeiten kann.
+1.2 Server: zentrale Instanz, persistiert Tasks je Nutzer und verteilt Änderungen.
+
+2. Identitäten und Sitzungen
+2.1 userId: eindeutige Kennung eines Nutzers.
+2.2 deviceId: eindeutige Kennung eines Client-Geräts.
+2.3 session: logischer Zustand “verbunden + Version ausgehandelt”; Authentisierung erzeugt zusätzlich authToken.
+
+3. Datenobjekte
+3.1 Task: {taskId, title, description?, dueAt?, status, priority?, tags?, createdAt, updatedAt}
+3.2 status ∈ {OPEN, DONE, ARCHIVED}
+3.3 taskId: serverweit eindeutig (UUID).
+3.4 version: monoton steigende Ganzzahl je Task (optimistische Nebenläufigkeitskontrolle).
+3.5 tombstone: gelöschter Task wird als {taskId, deletedAt, lastVersion} repräsentiert, um Löschungen zu synchronisieren.
+
+4. Synchronisationskonzepte
+4.1 syncToken: Marker (opaque String), der den letzten bekannten Serverzustand eines Clients beschreibt.
+4.2 delta: Menge von Änderungen seit einem syncToken (geänderte/neu erstellte Tasks + Tombstones).
+4.3 Konflikt: tritt auf, wenn Client eine Änderung mit veralteter version einreicht.
+
+5. Fehlermodell
+5.1 errorCode: standardisierte Codes (z.B. BAD_REQUEST, UNAUTHORIZED, FORBIDDEN, NOT_FOUND, CONFLICT, TOKEN_EXPIRED, RATE_LIMIT, INTERNAL_ERROR).
+5.2 errorDetails: menschenlesbare Beschreibung + optional feldbezogene Hinweise.
+
+(2) Protokollelemente (Nachrichten) mit Anforderungen und erwarteten Daten
+Allgemeine Rahmenbedingungen (Application-Layer)
+A. Transportannahme: zuverlässiger Bytestrom (z.B. TCP). Nachrichtencodierung: UTF-8 JSON.
+B. Framing: Jede Nachricht beginnt mit einem 4-Byte Längenfeld (uint32, big-endian), danach genau diese Anzahl Bytes JSON.
+C. Gemeinsamer Nachrichtenkopf (für alle Requests/Responses verpflichtend, sofern nicht anders angegeben):
+C.1 msgType (String)
+C.2 msgId (String, vom Sender eindeutig pro Verbindung)
+C.3 protocolVersion (String, z.B. "1.0")
+C.4 timestamp (ISO-8601, optional)
+C.5 authToken (String, verpflichtend für alle Nachrichten nach erfolgreicher Authentisierung, außer LOGOUT; nicht erlaubt in HELLO und AUTH)
+C.6 correlationId (String, in Responses verpflichtend: msgId des auslösenden Requests)
+
+Nachrichtenkatalog
+
+1. HELLO (Client -> Server)
+Anforderung: Muss die erste Nachricht nach Verbindungsaufbau sein; authToken darf nicht gesetzt sein.
+Erwartete Daten:
+1.1 clientId (String, App-Instanzkennung)
+1.2 deviceId (String)
+1.3 supportedVersions (Array von Strings, z.B. ["1.0"])
+1.4 capabilities (Array von Strings, optional; z.B. ["BATCH_UPSERT"])
+Antwort: HELLO_ACK oder ERROR
+
+2. HELLO_ACK (Server -> Client)
+Anforderung: Antwort auf HELLO.
+Erwartete Daten:
+2.1 selectedVersion (String)
+2.2 serverTime (ISO-8601)
+2.3 maxMessageBytes (Integer)
+2.4 features (Array von Strings, optional)
+
+3. AUTH (Client -> Server)
+Anforderung: Erfordert vorheriges HELLO/HELLO_ACK; kein authToken im Kopf.
+Erwartete Daten (genau eine Variante):
+3.1 Variante Passwort:
+3.1.1 username (String)
+3.1.2 password (String)
+3.2 Variante Refresh:
+3.2.1 refreshToken (String)
+Antwort: AUTH_OK oder AUTH_FAIL oder ERROR
+
+4. AUTH_OK (Server -> Client)
+Anforderung: Antwort auf AUTH bei Erfolg.
+Erwartete Daten:
+4.1 userId (String)
+4.2 authToken (String, zeitlich begrenzt)
+4.3 expiresAt (ISO-8601)
+4.4 refreshToken (String, optional, falls ausgestellt)
+
+5. AUTH_FAIL (Server -> Client)
+Anforderung: Antwort auf AUTH bei Fehlschlag.
+Erwartete Daten:
+5.1 reason (String, z.B. "INVALID_CREDENTIALS" oder "ACCOUNT_LOCKED")
+
+6. SYNC_REQUEST (Client -> Server)
+Anforderung: Client muss authentisiert sein (authToken im Kopf). Wird verwendet, um Server-Delta zu beziehen.
+Erwartete Daten:
+6.1 deviceId (String)
+6.2 syncToken (String oder null; null bedeutet “erster Sync/Full Sync”)
+6.3 maxItems (Integer, optional; Default serverseitig)
+Antwort: SYNC_RESPONSE oder ERROR
+
+7. SYNC_RESPONSE (Server -> Client)
+Anforderung: Antwort auf SYNC_REQUEST.
+Erwartete Daten:
+7.1 new
+
+### Source Text
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

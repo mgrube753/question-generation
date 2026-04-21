@@ -1,0 +1,50 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen das Sitzungskonzept, einschließlich Sitzungsverwaltung, Synchronisation und Bündelung von Transaktionen
+
+### Stem Generation
+
+Frage: Ein Online-Buchungssystem, das die Benutzersitzung verwaltet und mehrere Buchungsanfragen zu einer Transaktion zusammenfasst, nutzt welche zwei Kernaufgaben der Session Layer?
+
+### Key Generation
+
+Korrekte Antwort(en):
+
+a) Sitzungsverwaltung (Aufbau, Verwaltung, Beendigung der Sitzung) und Bündelung (Gruppierung zusammengehöriger Transaktionen) (Richtig)
+b) Die Verwaltung der Benutzersitzung und das Zusammenfassen mehrerer Buchungsanfragen zu einer Transaktion entsprechen den Kernaufgaben "Sitzungen" und "Bündelung" des Session Layers. (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Ein Online-Buchungssystem, das die Benutzersitzung verwaltet und mehrere Buchungsanfragen zu einer Transaktion zusammenfasst, nutzt welche zwei Kernaufgaben der Session Layer?
+
+Antwortmöglichkeiten:
+
+a) Sitzungsverwaltung (Aufbau, Verwaltung, Beendigung der Sitzung) und Bündelung (Gruppierung zusammengehöriger Transaktionen) (Richtig)
+b) Die Verwaltung der Benutzersitzung und das Zusammenfassen mehrerer Buchungsanfragen zu einer Transaktion entsprechen den Kernaufgaben "Sitzungen" und "Bündelung" des Session Layers. (Richtig)
+c) Synchronisation (Setzen von Zwischenpunkten) und Bündelung (Gruppierung zusammengehöriger Transaktionen) (Falsch)
+d) Sitzungen (Aufbau, Verwaltung, Beendigung) und Synchronisation (Setzen von Zwischenpunkten) (Falsch)
+
+### Source Text
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.

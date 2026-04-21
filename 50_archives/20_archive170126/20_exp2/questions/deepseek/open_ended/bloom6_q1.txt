@@ -1,0 +1,203 @@
+## Open-Ended Question
+
+### Bloom Level: Creating
+
+### Learning Objective
+
+Die Studierenden können auf Basis der Schichtenprinzipien eigene Lösungsvorschläge für Kommunikationsprobleme entwickeln, die den Aufgaben der jeweiligen Schichten entsprechen
+
+### Question Generation
+
+Frage: Entwerfen Sie ein Protokollkonzept für die zuverlässige Übertragung von Steuerdaten in einem heterogenen Netzwerk, das sowohl kabelgebundene als auch funkbasierte Segmente umfasst, und erläutern Sie, wie Ihr Entwurf die Kernaufgaben der Physical, Data Link, Network und Transport Layer adressiert.
+
+### Answer Generation + Union of all
+
+Frage: Entwerfen Sie ein Protokollkonzept für die zuverlässige Übertragung von Steuerdaten in einem heterogenen Netzwerk, das sowohl kabelgebundene als auch funkbasierte Segmente umfasst, und erläutern Sie, wie Ihr Entwurf die Kernaufgaben der Physical, Data Link, Network und Transport Layer adressiert.
+
+Antwort: Das Protokollkonzept "Reliable Control Transport Protocol (RCTP)" ist für die zuverlässige Übertragung von Steuerdaten in heterogenen Netzwerken entworfen. Es adressiert die Kernaufgaben der genannten Schichten wie folgt:
+
+**Physical Layer (1):**
+*   **Codierung/Decodierung:** Für kabelgebundene Segmente (z.B. Ethernet) wird eine robuste Leitungscodierung wie 4B/5B eingesetzt, um Gleichspannungsfreiheit und Taktrückgewinnung zu sichern. Für funkbasierte Segmente (z.B. WLAN) wird eine modulationsrobuste Codierung wie DSSS (Direct Sequence Spread Spectrum) kombiniert mit einer Fehler korrigierenden Vorwärtscodierung (FEC) auf Bit-Ebene verwendet, um Bitfehler durch Interferenzen zu mindern.
+*   **Transport:** Der Layer abstrahiert die spezifischen Medien (Kupfer, Glasfaser, Funk). Für Funksignale werden Verfahren zur adaptiven Leistungsregelung und Frequenzwahl definiert, um Signalstärke zu optimieren und Störungen zu umgehen.
+
+**Data Link Layer (2):**
+*   **Segmentierung/Identifikation:** Daten werden zu variablen, aber maximal großen Frames segmentiert, die eine eindeutige Geräteadresse (MAC-Adresse) im heterogenen Netz tragen. Ein spezieller Frame-Typ kennzeichnet Steuerdaten mit hoher Priorität.
+*   **Fehlerkontrolle:** Jeder Frame enthält eine starke zyklische Redundanzprüfung (CRC-32) zur Fehlererkennung. Auf Funkssegmenten wird ein automatischer Wiederholungsaufruf (ARQ) mit selektivem Wiederholen (Selective Repeat) eingesetzt, um beschädigte Frames gezielt neu anzufordern. Für drahtgebundene, zuverlässigere Segmente kann ARQ optional deaktiviert werden.
+*   **Medienzugriff:** Für kabelgebundene Segmente wird CSMA/CD (bei Halbduplex) bzw. vollduplexer Zugriff verwendet. Für das funkbasierte Segment wird ein zeitgesteuertes, reservierungsbasiertes Zugriffsverfahren (wie TDMA mit Slot-Reservierung) definiert, um deterministische Zugriffszeiten für zeitkritische Steuerdaten zu garantieren und Kollisionen zu vermeiden.
+*   **Flusskontrolle:** Eine fensterbasierte Flusskontrolle auf Verbindungsbasis zwischen direkten Nachbarknoten (Node-to-Node) verhindert die Überlastung von Routern oder Access Points.
+
+**Network Layer (3):**
+*   **Adressierung:** Es wird eine hierarchische, netzwerkübergreifende logische Adressierung (z.B. nach IPv6-Prinzip) eingeführt, die Geräte unabhängig von der darunterliegenden Layer-2-Technologie identifiziert.
+*   **Routing:** Ein dynamisches Routing-Protokoll (z.B. ein modifizierter Link-State-Algorithmus) berechnet Pfade unter Berücksichtigung von Metriken wie erwarteter Paketverlustrate (für Funkstrecken), Latenz und Link-Typ. Dies ermöglicht die Wahl zuverlässigerer Pfade für Steuerdaten.
+*   **Flusssteuerung:** Eine End-to-End-Flusssteuerung wird auf dieser Ebene nicht implementiert, um Doppelungen zu vermeiden; dies ist Aufgabe des Transport Layers. Die Node-to-Node-Flusskontrolle erfolgt wie in Layer 2 beschrieben.
+
+**Transport Layer (4):**
+*   **Adressierung:** Der Dienst wird über Port-Adressen (z.B. dedizierter RCTP-Port) für spezifische Steueranwendungen auf den Endgeräten bereitgestellt.
+*   **Zuverlässigkeit & Flusssteuerung:** RCTP stellt eine verbindungsorientierte, zuverlässige Ende-zu-Ende-Übertragung sicher. Es nutzt eine kumulierte Bestätigung und eine kombinierte Paketverlust-Erkennung durch Timeouts und Duplicate ACKs. Die Ende-zu-Ende-Flusssteuerung ist fensterbasiert und passt die Senderate dynamisch an die Applikationscharakteristik des Empfängers und die geschätzte Netzwerkkapazität an.
+*   **Dienstqualität (QoS):** RCTP priorisiert Steuerdatenströme explizit. Es bietet garantierte Minima für Bandbreite und maximale Latenz durch enge Kopplung mit dem QoS-Framework der unterliegenden Netzwerk- und Data-Link-Schichten (z.B. durch Setzen entsprechender DSCP/IP-Precedence Werte). Jitter wird durch einen adaptiven Pufferungsmechanismus auf Empfängerseite ausgeglichen.
+
+(Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

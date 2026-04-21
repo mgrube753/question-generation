@@ -1,0 +1,193 @@
+## Open-Ended Question
+
+### Bloom Level: Creating
+
+### Learning Objective
+
+Die Studierenden können auf Basis der Schichtenprinzipien eigene Lösungsvorschläge für Kommunikationsprobleme entwickeln, die den Aufgaben der jeweiligen Schichten entsprechen
+
+### Question Generation
+
+Frage: Entwerfen Sie für ein System, das Sensordaten (kleine Pakete, teils zeitkritisch) sicher und zuverlässig über eine Kombination aus Funkstrecke und Telefonkabel durch mehrere unterschiedliche Layer‑2‑Netze bis zu mehreren Zielanwendungen übertragen soll, eine vollständige Ende‑zu‑Ende‑Kommunikationslösung als Schichtkonzept (Layer 1–7) mit je Schicht den von Ihnen vorgesehenen Mechanismen/Elementen zu Codierung/Transport/Decodierung, Fehler‑/Flußkontrolle, Segmentierung, Identifikation/Adressierung, Medienzugriff, Routing, QoS, Sitzungen/Synchronisation/Bündelung, Darstellung (Endian‑ness/Zeichen), Kompression, Verschlüsselung sowie anwendungsspezifischen Grundkonzepten/Protokollelementen/Verhalten.
+
+### Answer Generation + Union of all
+
+Frage: Entwerfen Sie für ein System, das Sensordaten (kleine Pakete, teils zeitkritisch) sicher und zuverlässig über eine Kombination aus Funkstrecke und Telefonkabel durch mehrere unterschiedliche Layer‑2‑Netze bis zu mehreren Zielanwendungen übertragen soll, eine vollständige Ende‑zu‑Ende‑Kommunikationslösung als Schichtkonzept (Layer 1–7) mit je Schicht den von Ihnen vorgesehenen Mechanismen/Elementen zu Codierung/Transport/Decodierung, Fehler‑/Flußkontrolle, Segmentierung, Identifikation/Adressierung, Medienzugriff, Routing, QoS, Sitzungen/Synchronisation/Bündelung, Darstellung (Endian‑ness/Zeichen), Kompression, Verschlüsselung sowie anwendungsspezifischen Grundkonzepten/Protokollelementen/Verhalten.
+
+Antwort: Layer 1 (Physical – Codierung/Transport/Decodierung): Funkstrecke z. B. IEEE 802.15.4 (O‑QPSK/DSSS, Kanalwahl, Sendeleistung); Telefonkabelstrecke z. B. VDSL2/PPPoE oder Ethernet über Twisted Pair (PAM/MLT‑3 je nach Technik), definierte Pegel/Detektionsschwellen; Clock-Recovery, Symbol-/Bit-Synchronisation, Abtastung/Filterung, FEC optional auf PHY (z. B. FEC bei Funk/DSL), Transceiver/Modem, Antenne bzw. Kupferleitung als Medium; Decodierung durch Demodulation/Line-Decode und Fehlerindikatoren des PHY.
+
+Layer 2 (Data Link – Segmentierung/Identifikation/Medienzugriff/Fehler-/Flußkontrolle): Pro Link eigene Frames: 802.15.4‑MAC Frames (kleine MTU) mit CRC/FCS, Sequenznummern, Link‑ACK + Retries (ARQ) für Zuverlässigkeit auf der Funkstrecke; Medienzugriff Funk: CSMA/CA, optional zeitkritische Klasse über garantierte Zeitschlitze (GTS/TSCH) bzw. Prioritätswarteschlangen; auf Kabelseite Ethernet/PPP‑Frames mit FCS, ggf. VLAN (802.1Q) und Priority (802.1p) zur lokalen Priorisierung; Flußkontrolle per MAC‑Backoff/Queueing (Funk) bzw. PAUSE/Queue-Management (Wired) und Pufferung; Identifikation über MAC‑Adressen pro Link, ggf. Bridge/Switch nur lokal (keine Ende‑zu‑Ende‑Bedeutung); Link-Security optional (z. B. 802.15.4 AES‑CCM) zusätzlich zu Ende‑zu‑Ende‑Security.
+
+Layer 3 (Network – Adressierung/Routing/Flußsteuerung/QoS über Netze): Ende‑zu‑Ende IPv6; auf Funk 6LoWPAN (Header-Kompression, Fragmentierung/Reassembly wegen kleiner L2‑MTU); Routing im Funk-Mesh z. B. RPL bis Border Router, danach normales IP‑Routing (statisch/OSPF) über die Kabel-/Provider-/Campusnetze; Adressierung: globale IPv6‑Präfixe, SLAAC/DHCPv6, eindeutige Device‑/Subnetz‑Zuordnung; QoS: DSCP-Markierung (z. B. EF für Alarme, AF für Telemetrie, BE für Bulk/Updates), Weiterleitung per Policy/Queues in Routern; Flußsteuerung: Hop-by-Hop Queue-Management (AQM) und Rate-Limits am Edge, ICMPv6/PMTUD für MTU‑Anpassung.
+
+Layer 4 (Transport – Teilnehmeradressierung/Flußsteuerung/QoS): Zwei Dienstklassen auf einem konsistenten Stack: (a) zeitkritische Ereignisse/Alarme: UDP mit CoAP Confirmable (ACK/Retry/Timeout) oder leichtgewichtigem App‑ACK, kurze Retransmit‑Fenster, dedizierte Ports, DSCP EF; (b) nicht zeitkritische, aber strikt zuverlässige Ströme (Konfiguration, größere Messblöcke, Firmware): TCP mit Window‑Flow‑Control, optional getrennte Verbindung/Port und DSCP AF/BE; Teilnehmeradressierung über Ports; Segmentierung: UDP/TCP‑Segmente, MSS/MTU‑Anpassung (unter Beachtung 6LoWPAN‑Fragmentierung), kleine Payloads ohne Nagle für Latenzpfade; QoS-Umsetzung durch getrennte Sockets/Queues und Priorisierung am Sender (Pacing/Token-Bucket pro Klasse).
+
+Layer 5 (Session – Sitzungen/Synchronisation/Bündelung): Sitzungsaufbau/‑abbau über TLS/DTLS‑Handshake bzw. CoAP‑Kontext, inkl. Session‑Resumption (Tickets) für Funk‑Energie/Latenz; Keepalive/Heartbeat zur Erkennung von Funkabbrüchen; Synchronisation durch Anwendungs‑Checkpoints: Zeitstempel + Sequenznummern, periodische “Sync‑Marker” (z. B. jede N‑te Nachricht bestätigt die bis dahin empfangene Sequenz); Bündelung für Effizienz: Batchen mehrerer Messwerte in einem Transaktionsblock (nur für nicht zeitkritische Klasse) mit gemeinsamer Signatur/ACK; Store‑and‑Forward an Edge‑Gateway bei Verbindungsunterbruch (Session-Fortsetzung nach Reconnect).
+
+Layer 6 (Presentation – Endian‑ness/Zeichen/Kompression/Verschlüsselung): Darstellung als kompakte binäre Serialisierung (z. B. CBOR oder Protocol Buffers) mit festgelegter Netzwerk-Byteorder (big endian) für Multibyte‑Werte, IEEE‑754 für Float; Textfelder in UTF‑8; Kompression nur für größere Bündel (z. B. LZ4/Deflate), bei kleinen zeitkritischen Paketen i. d. R. auslassen; Ende‑zu‑Ende Verschlüsselung/Integrität: DTLS (für UDP/CoAP) bzw. TLS (für TCP), AEAD (AES‑GCM/ChaCha20‑Poly1305), Geräteauthentisierung per Zertifikat/PSK, Schlüsselrotation, Replay‑Schutz (Nonces/Sequence).
+
+Layer 7 (Application – Grundkonzepte/Protokollelemente/Verhalten, Mehrfach-Ziele): Grundkonzepte: Sensor, Messwert, Zeitstempel, Qualitätsflag, Alarm, Konfiguration, Firmware, Geräteidentität, Zielanwendungen als Subscriber; Protokollelemente: Publish/Subscribe über zentralen Broker (z. B. MQTT über TLS/TCP für Telemetrie + Verteilung an mehrere Zielanwendungen) mit Topics pro Sensor/Datentyp und ACLs; für zeitkritische Alarme zusätzlich direkter CoAP‑POST (UDP/DTLS) an Alarm‑Service oder MQTT‑Priority‑Topic mit QoS‑Policy; Verhalten: Sensor sendet periodisch Telemetrie (QoS1, Duplikaterkennung über Msg‑ID/SeqNo), Alarme sofort mit höherer Priorität (DSCP EF, CoAP CON oder MQTT QoS2 falls zwingend), bei fehlendem ACK Retransmit gemäß Klasse, bei Offline lokale Pufferung und späteres Nachsenden (mit Zeitstempel/SeqNo zur Re-Sortierung), Broker repliziert an mehrere Anwendungen (Subscriptions), Retained “Last Known Value” für neue Subscriber, “Last Will” zur Offline‑Anzeige, Rate-Limits/Backpressure durch Broker‑Quota und Client‑Pacing. (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

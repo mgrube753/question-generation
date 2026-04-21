@@ -1,0 +1,56 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen das Zusammenspiel von Codierung, Transport und Decodierung zur Übertragung logischer Werte auf physikalischer Ebene
+
+### Stem Generation
+
+Frage: In einem Kommunikationssystem werden logische Bits im Sender mittels Manchester-Verfahren in ein physikalisches Signal umgesetzt und im Empfänger durch Abtastung sowie Detektionsbereiche wieder als Bits rekonstruiert; ermitteln Sie die zwei Kernaufgaben der Physical Layer, die dabei im Sender bzw. im Empfänger ausgeführt werden.
+
+### Key Generation
+
+Korrekte Antworten:
+
+a) Codierung im Sender (Abbildung logischer Bits auf physikalische Signalformen, z.B. Manchester) und Decodierung im Empfänger (Rückinterpretation durch Abtastung und Detektionsbereiche zu logischen Bits) (Richtig)
+b) Sender: Umsetzung logischer Werte in physikalische Größen mittels Leitungscodierung (Manchester); Empfänger: Rekonstruktion der logischen Werte aus dem physikalischen Signal durch Sampling/Schwellwert- bzw. Bereichsdetektion (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Frage: In einem Kommunikationssystem werden logische Bits im Sender mittels Manchester-Verfahren in ein physikalisches Signal umgesetzt und im Empfänger durch Abtastung sowie Detektionsbereiche wieder als Bits rekonstruiert; ermitteln Sie die zwei Kernaufgaben der Physical Layer, die dabei im Sender bzw. im Empfänger ausgeführt werden.
+
+Antwortmöglichkeiten:
+
+a) Sender: Rahmung der Bitfolge zu Frames inkl. CRC/Prüfsumme; Empfänger: CRC-Prüfung, Fehlerbehandlung und ggf. Anfordern einer Wiederholung (Falsch)
+b) Codierung im Sender (Abbildung logischer Bits auf physikalische Signalformen, z.B. Manchester) und Decodierung im Empfänger (Rückinterpretation durch Abtastung und Detektionsbereiche zu logischen Bits) (Richtig)
+c) Sender: Aushandlung von Leitungsparametern (z.B. Autonegotiation) und Pegelanpassung; Empfänger: automatische Verstärkungsregelung und reine Taktwiedergewinnung zur Synchronisation (Falsch)
+d) Sender: Umsetzung logischer Werte in physikalische Größen mittels Leitungscodierung (Manchester); Empfänger: Rekonstruktion der logischen Werte aus dem physikalischen Signal durch Sampling/Schwellwert- bzw. Bereichsdetektion (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.

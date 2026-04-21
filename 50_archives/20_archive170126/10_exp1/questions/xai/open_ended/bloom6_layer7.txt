@@ -1,0 +1,45 @@
+## Open-Ended Question
+
+### Bloom Level: Creating
+
+### Learning Objective
+
+Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+
+### Question Generation
+
+Frage: Entwerfen Sie für eine selbst gewählte Anwendung die anwendungsspezifischen Grundkonzepte, Protokollelemente und Verhaltensweisen im Application Layer 7.
+
+### Answer Generation + Union of all
+
+Frage: Entwerfen Sie für eine selbst gewählte Anwendung die anwendungsspezifischen Grundkonzepte, Protokollelemente und Verhaltensweisen im Application Layer 7.
+
+Antwort: Gewählte Anwendung: Webbasierte Dateiübertragung (ähnlich HTTP-basiertem File Transfer).
+
+Grundkonzepte: Client (Datei-Anforderer), Server (Datei-Bereitsteller), Datei-Identifikator (z. B. URL-Pfad), Authentifizierungstoken (z. B. Session-ID), Übertragungsmodus (Upload/Download).
+
+Protokollelemente: Anforderungen umfassen "UPLOAD" (Datei hochladen mit Metadaten wie Dateiname und Größe), "DOWNLOAD" (Datei abrufen mit Identifikator); erwartete Daten: Header-Felder (z. B. Content-Type, Authorization), Body (Binärdaten der Datei).
+
+Verhalten: Auf "UPLOAD"-Anforderung prüft der Server das Token, speichert die Datei und sendet Bestätigungs-Response mit Statuscode (z. B. 200 OK); auf "DOWNLOAD" holt der Server die Datei, überträgt sie im Body und handhabt Fehler (z. B. 404 Not Found bei fehlender Datei). (Richtig)
+
+### Source Text
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

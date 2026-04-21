@@ -1,0 +1,192 @@
+## Open-Ended Question
+
+### Bloom Level: Evaluating
+
+### Learning Objective
+
+Die Studierenden können die Angemessenheit bestimmter Schichtfunktionen für gegebene Anforderungen bewerten und begründete Urteile über Design-Entscheidungen im ISO-OSI-Modell abgeben
+
+### Question Generation
+
+Frage: Beurteilen Sie die Angemessenheit der Design-Entscheidung, die Sicherung der Dienstqualität (QoS-Garantien für Bandbreite, Latenz, Jitter und Fehlerrate) im Application Layer und die Verschlüsselung im Transport Layer zu realisieren, anhand der im ISO-OSI-Modell vorgesehenen Kernaufgaben dieser Schichten.
+
+### Answer Generation + Union of all
+
+Frage: Beurteilen Sie die Angemessenheit der Design-Entscheidung, die Sicherung der Dienstqualität (QoS-Garantien für Bandbreite, Latenz, Jitter und Fehlerrate) im Application Layer und die Verschlüsselung im Transport Layer zu realisieren, anhand der im ISO-OSI-Modell vorgesehenen Kernaufgaben dieser Schichten.
+
+Antwort: Die Design-Entscheidung ist gemessen an den im ISO-OSI-Modell vorgesehenen Kernaufgaben überwiegend unangemessen, weil beide Funktionen bewusst in Schichten verortet werden, denen sie nach dem Schichtmodell nicht zugeordnet sind.
+
+1) QoS-Garantien im Application Layer (Layer 7)
+Kriterium (OSI-Kernaufgaben): Der Application Layer legt anwendungsspezifische Grundkonzepte, Protokollelemente/Anforderungen und Verhalten fest; er ist stark anwendungsabhängig und soll keine generischen Übertragungsdienst-Eigenschaften des Netzes bereitstellen.
+Bewertung: QoS-Sicherung (Bandbreite, Latenz, Jitter, Fehlerrate) ist laut Vorgabe explizit eine Kernaufgabe des Transport Layers (Layer 4: „Dienstqualität“). Wird QoS stattdessen in Layer 7 realisiert, entsteht ein Schichtbruch: Eine Anwendung kann zwar Wünsche ausdrücken (z. B. „benötige geringe Latenz“), sie kann aber ohne Mechanismen in unteren Schichten keine verbindlichen End-to-End-Garantien durchsetzen, weil die Ressourcen- und Übertragungscharakteristika unterhalb liegen. Zudem würde QoS dann für jede Anwendung separat implementiert, was der OSI-Idee einer wiederverwendbaren, teilnehmerzugeschnittenen Dienstqualität im Transport Layer widerspricht. Damit ist die Platzierung von QoS im Application Layer nach OSI-Kriterien nicht angemessen; angemessen wäre, QoS als Transport-Layer-Funktion bereitzustellen, während Layer 7 höchstens QoS-Anforderungen formuliert.
+
+2) Verschlüsselung im Transport Layer (Layer 4)
+Kriterium (OSI-Kernaufgaben): Der Transport Layer stellt Teilnehmer-zu-Teilnehmer-Übertragung bereit (Adressierung, Flusssteuerung, Dienstqualität). Die Verschlüsselung ist im bereitgestellten OSI-Aufriss hingegen eine Kernaufgabe des Presentation Layers (Layer 6: „Verschlüsselung“ neben Endian-Ness, Zeichensatz, Kompression), also der Darstellung/Transformation von Anwendungsdaten.
+Bewertung: Verschlüsselung direkt im Transport Layer ist deshalb nach dem OSI-Standardverständnis nicht angemessen, weil sie nicht zu den dort genannten Kernaufgaben gehört und der Presentation Layer genau für solche Datenrepräsentations- und Schutztransformationen vorgesehen ist. Die Verlagerung in Layer 4 vermischt Transportdienst (Zuverfügungstellung einer Verbindung/Übertragung) mit Datenrepräsentations-/Schutzfunktionen und schwächt die Schichtentrennung. Allenfalls lässt sich diese Entscheidung pragmatisch rechtfertigen, wenn man Verschlüsselung bewusst als generische End-to-End-Funktion für viele Anwendungen anbieten will; dann handelt es sich aber OSI-streng genommen eher um eine zusätzliche Funktion/Schicht oberhalb des eigentlichen Transportdienstes (funktional näher an Layer 6/5) als um eine „Transport-Kernaufgabe“.
+
+Gesamturteil:
+Nach den im Material definierten OSI-Kernaufgaben ist die Entscheidung fachlich nicht angemessen: QoS gehört in Layer 4 (nicht Layer 7), und Verschlüsselung gehört in Layer 6 (nicht Layer 4). Eine OSI-konforme Gestaltung wäre daher: QoS im Transport Layer realisieren und Verschlüsselung im Presentation Layer (wobei Layer 7 nur anwendungsspezifische Anforderungen und Verhalten beschreibt). (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

@@ -1,0 +1,40 @@
+## Open-Ended Question
+
+### Bloom Level: Analyzing
+
+### Learning Objective
+
+Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Question Generation
+
+Frage: Analysieren Sie bei einer teilnehmerorientierten Übertragung zwischen zwei Teilnehmern mit unterschiedlichen Anforderungen die Rollen von Adressierung, Flusssteuerung und Dienstqualität sowie deren Beziehungen zueinander im Hinblick auf garantierte Bandbreite, Latenz, Jitter und Fehlerrate.
+
+### Answer Generation + Union of all
+
+Frage: Analysieren Sie bei einer teilnehmerorientierten Übertragung zwischen zwei Teilnehmern mit unterschiedlichen Anforderungen die Rollen von Adressierung, Flusssteuerung und Dienstqualität sowie deren Beziehungen zueinander im Hinblick auf garantierte Bandbreite, Latenz, Jitter und Fehlerrate.
+
+Antwort: Adressierung stellt in der teilnehmerorientierten Übertragung zunächst sicher, dass die Daten eindeutig den richtigen Endpunkten zugeordnet werden (Teilnehmer-/Port-Adressen) und damit auch, welchem Kommunikationskontext (Verbindung/Stream) die jeweils geforderten Übertragungsparameter zugeordnet sind; ohne korrekte Adressierung können Flusssteuerung und QoS nicht gezielt pro Teilnehmerbeziehung angewendet werden. Flusssteuerung nutzt die Teilnehmer-Charakteristik (z.B. Empfangspuffer, Verarbeitungsgeschwindigkeit, Rückmeldungen) und regelt die Senderate so, dass der Empfänger nicht überlastet wird; damit beeinflusst sie direkt erreichbare Bandbreite und Stabilität der Verzögerung: zu aggressives Senden erzeugt Pufferaufbau/Verluste (Bandbreiteneinbrüche durch Wiederholungen, höhere Latenz und Jitter), zu konservatives Senden kann zugesagte Bandbreite unterschreiten. Dienstqualität (QoS) definiert und sichert zugeschnittene Garantien pro Übertragung (Bandbreite, maximale/typische Latenz, zulässiger Jitter, Fehlerrate) und setzt dafür geeignete Mechanismen/Parameter (z.B. Priorisierung, Reservierung, geeignete Fehlerbehandlung) ein. Die Beziehungen: QoS-Anforderungen bestimmen, wie Flusssteuerung und Fehlerbehandlung zu parametrieren sind (z.B. garantierte Bandbreite erfordert ein Sende-/Fensterverhalten, das die Rate hält; geringe Latenz/Jitter erfordern geringe Pufferung und gleichmäßiges Senden; geringe Fehlerrate erfordert stärkere Sicherung, die wiederum Bandbreite kostet und Latenz/Jitter erhöhen kann). Bei zwei Teilnehmern mit unterschiedlichen Anforderungen müssen diese Aspekte pro Richtung/Stream getrennt betrachtet werden: ein Teilnehmer kann z.B. geringe Latenz/Jitter priorisieren (wenig Puffer, ggf. weniger Retransmits → höhere tolerierte Fehlerrate), während der andere eine sehr niedrige Fehlerrate wünscht (mehr Sicherung/Retransmits → potenziell höhere Latenz/Jitter und geringere nutzbare Bandbreite). Adressierung koppelt die richtigen Anforderungen an die jeweilige Kommunikation, Flusssteuerung realisiert die Anpassung an die Endsysteme, und QoS gibt die Zielgrößen vor und erzwingt/prüft deren Einhaltung; Zielkonflikte zwischen Bandbreite, Latenz, Jitter und Fehlerrate werden über die Abstimmung von QoS-Vorgaben und Flusssteuerungs-/Fehlermechanismen aufgelöst. (Richtig)
+
+### Source Text
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.

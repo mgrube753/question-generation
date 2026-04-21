@@ -1,0 +1,37 @@
+## Offene Frage
+
+### Lernziel
+
+Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+
+### Formulierte Frage
+
+Frage: Veranschaulichen Sie anhand eines konkreten 32-Bit-Ganzzahlwerts, wie die Präsentationsschicht die Konvertierung von Little-Endian- zu Big-Endian-Darstellung durchführt, und beschreiben Sie zusätzlich, welche weiteren Transformationsschritte notwendig wären, wenn die übertragenen Daten auch Textzeichen enthalten, die zwischen ASCII und Unicode konvertiert werden müssen.
+
+Antwort: Beispiel 32-Bit-Wert 0x12345678: In Little-Endian wird dieser als Bytefolge 78 56 34 12 gespeichert (LSB zuerst). Die Präsentationsschicht kehrt die Byte-Reihenfolge um, sodass Big-Endian entsteht: 12 34 56 78 (MSB zuerst). Bei Textzeichen-Konvertierung von ASCII zu Unicode sind folgende Schritte nötig: Zunächst wird jedes ASCII-Zeichen (8 Bit) identifiziert und auf den entsprechenden Unicode-Codepunkt gemappt. Da ASCII-Zeichen in Unicode den gleichen Codepunkten entsprechen (0-127), erfolgt dann die Erweiterung auf das Unicode-Format, beispielsweise UTF-16 mit 16 Bit pro Zeichen oder UTF-8 mit variabler Länge. Zusätzlich muss bei UTF-16 auch die Endian-Konvertierung der erweiterten Zeichencodes berücksichtigt werden. (Richtig)
+
+### Quelltext
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.

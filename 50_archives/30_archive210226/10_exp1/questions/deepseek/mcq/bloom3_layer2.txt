@@ -1,0 +1,61 @@
+## Multiple-Choice Question
+
+### Bloom Level: Applying
+
+### Learning Objective 
+
+Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+
+### Stem Generation
+
+Frage: Ein Data Link Layer Protokoll hat einen Übertragungsfehler erkannt. Nennen Sie zwei unterschiedliche Verfahren, die es nun anwenden kann, um mit diesem Fehler umzugehen.
+
+### Key Generation
+
+Korrekte Antworten:
+
+a) Fehlerbehebung durch automatische Wiederholungsanfrage (ARQ) (Richtig)
+b) Signalisierung des Fehlers an die nächsthöhere Schicht (z.B. durch Verwerfen des Frames) (Richtig)
+
+### Distractor Generation + Union of all
+
+Frage: Ein Data Link Layer Protokoll hat einen Übertragungsfehler erkannt. Nennen Sie zwei unterschiedliche Verfahren, die es nun anwenden kann, um mit diesem Fehler umzugehen.
+
+Antwortmöglichkeiten:
+
+a) Fehlerbehebung durch automatische Wiederholungsanfrage (ARQ) (Richtig)
+b) Durchführung einer Flusskontrolle, um die Senderate zu reduzieren (Falsch)
+c) Signalisierung des Fehlers an die nächsthöhere Schicht (z.B. durch Verwerfen des Frames) (Richtig)
+d) Segmentierung des Frames in kleinere Einheiten zur Fehlerreduzierung (Falsch)
+
+### Source Text
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.

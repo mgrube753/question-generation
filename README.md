@@ -46,7 +46,7 @@ The project is modularized to separate research context, data generation, and ev
   * See the [Experiments README](20_experiments/README.md) for an in-depth explanation.
 
 * **[`40_evaluation/`](40_evaluation/)** - Qualitative evaluation files (plots and tables) for both experiments from the notebooks in [`20_experiments/50_src/`](20_experiments/50_src/).
-* **[`50_archive*/`](50_archive090126/)** - Archived versions of experiment runs from early stages (soon).
+* **[`50_archives/`](50_archives/)** - Archived versions of experiment runs from early stages (soon).
 
 ## Setup & Installation
 

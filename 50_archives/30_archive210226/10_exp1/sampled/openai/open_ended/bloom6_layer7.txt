@@ -1,0 +1,46 @@
+## Open-Ended Question
+
+### Bloom Level: Creating
+
+### Learning Objective
+
+Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+
+### Question Generation
+
+Frage: Entwerfen Sie für eine einfache Anwendung „Campus-Chat“ (Textnachrichten zwischen zwei Studierenden) eine Application-Layer-7-Spezifikation mit (1) genau drei Grundkonzepten der Anwendung, (2) genau drei Protokollelementen (jeweils Name und erwartete Datenfelder), und (3) dem Verhalten der Anwendung für jedes Protokollelement in je einem Erfolgs- und einem Fehlerfall.
+
+### Answer Generation + Union of all
+
+Frage: Entwerfen Sie für eine einfache Anwendung „Campus-Chat“ (Textnachrichten zwischen zwei Studierenden) eine Application-Layer-7-Spezifikation mit (1) genau drei Grundkonzepten der Anwendung, (2) genau drei Protokollelementen (jeweils Name und erwartete Datenfelder), und (3) dem Verhalten der Anwendung für jedes Protokollelement in je einem Erfolgs- und einem Fehlerfall.
+
+Antwort: Grundkonzepte (3): Student (studentId), Sitzung (sessionToken), Nachricht (msgId, text, ts).
+Protokollelemente (3):
+1) AUTH_REQ(studentId, password)
+Erfolg: Server prüft Daten, erzeugt Sitzung und antwortet AUTH_OK(sessionToken). Fehler: falsche Daten/gesperrt → AUTH_ERR(reason).
+2) SEND_REQ(sessionToken, toStudentId, msgId, text, ts)
+Erfolg: Server validiert Sitzung, speichert Nachricht, stellt an Empfänger zu und antwortet SEND_OK(msgId). Fehler: ungültige Sitzung/Empfänger unbekannt → SEND_ERR(reason).
+3) FETCH_REQ(sessionToken, sinceTs)
+Erfolg: Server validiert Sitzung, liefert alle neuen Nachrichten: FETCH_OK(list<msgId,text,ts,fromStudentId>). Fehler: ungültige Sitzung → FETCH_ERR(reason). (Richtig)
+
+### Source Text
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

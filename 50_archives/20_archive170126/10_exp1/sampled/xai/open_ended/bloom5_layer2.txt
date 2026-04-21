@@ -1,0 +1,49 @@
+## Open-Ended Question
+
+### Bloom Level: Evaluating
+
+### Learning Objective
+
+Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+
+### Question Generation
+
+Frage: Bewerten Sie die Wirksamkeit der Flusskontrolle im Data Link Layer im Vergleich zur Fehlerkontrolle unter Berücksichtigung typischer Übertragungsszenarien.
+
+### Answer Generation + Union of all
+
+Frage: Bewerten Sie die Wirksamkeit der Flusskontrolle im Data Link Layer im Vergleich zur Fehlerkontrolle unter Berücksichtigung typischer Übertragungsszenarien.
+
+Antwort: Die Flusskontrolle im Data Link Layer ist in Szenarien mit Geschwindigkeitsunterschieden zwischen Sender und Empfänger (z. B. bei hoher Bandbreite und langsamen Empfängern) wirksamer als die Fehlerkontrolle, da sie Überlastungen durch Pufferung oder Rate-Anpassung verhindert und die Übertragungseffizienz aufrechterhält, ohne Datenverlust zu riskieren. Im Vergleich dazu ist die Fehlerkontrolle in fehleranfälligen Szenarien (z. B. drahtlosen Netzen mit Störungen) überlegen, da sie Übertragungsfehler erkennt und behebt, was die Datenintegrität sichert, während Flusskontrolle hier weniger relevant ist. Insgesamt ist Flusskontrolle effizienter für Leistungsoptimierung, Fehlerkontrolle jedoch essenziell für Zuverlässigkeit, basierend auf Kriterien wie Fehlerrate und Verarbeitungsgeschwindigkeit. (Richtig)
+
+### Source Text
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.

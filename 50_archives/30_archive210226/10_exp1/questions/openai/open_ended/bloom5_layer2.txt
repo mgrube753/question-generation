@@ -1,0 +1,49 @@
+## Open-Ended Question
+
+### Bloom Level: Evaluating
+
+### Learning Objective
+
+Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+
+### Question Generation
+
+Frage: Bewerten Sie für eine Punkt-zu-Mehrpunkt-Verbindung über einen nicht fehlergesicherten Physical Layer mit gelegentlichen Bitfehlern und einem zeitweise überlasteten Empfänger, welcher der folgenden Data-Link-Entwürfe die Anforderungen an fehlergesicherte Übertragung besser erfüllt: (A) einfache Paritätsprüfung ohne Wiederholungen, keine Flusskontrolle, Segmentierung in 8‑Bit‑Einheiten, nur Senderkennung, Medienzugriff über „Senden wenn frei, sonst warten“; (B) Fehlererkennung per CRC mit Signalisierung und Wiederholungsmechanismus, Flusskontrolle durch Wartenlassen/Herunterregeln mittels Fenster, Segmentierung in 8‑Bit‑Einheiten, Sender- und Empfängeradresse, Medienzugriff mit Reservieren zur Kollisionsvermeidung.
+
+### Answer Generation + Union of all
+
+Frage: Bewerten Sie für eine Punkt-zu-Mehrpunkt-Verbindung über einen nicht fehlergesicherten Physical Layer mit gelegentlichen Bitfehlern und einem zeitweise überlasteten Empfänger, welcher der folgenden Data-Link-Entwürfe die Anforderungen an fehlergesicherte Übertragung besser erfüllt: (A) einfache Paritätsprüfung ohne Wiederholungen, keine Flusskontrolle, Segmentierung in 8‑Bit‑Einheiten, nur Senderkennung, Medienzugriff über „Senden wenn frei, sonst warten“; (B) Fehlererkennung per CRC mit Signalisierung und Wiederholungsmechanismus, Flusskontrolle durch Wartenlassen/Herunterregeln mittels Fenster, Segmentierung in 8‑Bit‑Einheiten, Sender- und Empfängeradresse, Medienzugriff mit Reservieren zur Kollisionsvermeidung.
+
+Antwort: (B) erfüllt die Anforderungen deutlich besser. Bei Bitfehlern reicht Parität (A) nur zur groben Fehlererkennung (viele Fehler bleiben unentdeckt) und ohne Wiederholungen gibt es keine Fehlerbehebung; dadurch sind Datenverluste wahrscheinlich. Zudem fehlt in (A) Flusskontrolle, d. h. ein überlasteter Empfänger wird weiter überflutet, was zu Pufferüberlauf und Verlust führt. In Punkt-zu-Mehrpunkt ist außerdem Empfängeradressierung wichtig, um Frames korrekt zuzustellen; (A) hat nur Senderkennung. (B) nutzt CRC mit Signalisierung und Retransmission (ARQ) für zuverlässige Übertragung, Fenster-basierte Flusskontrolle gegen Empfängerüberlastung und Reservierung/Kollisionsvermeidung für robusten Medienzugriff. Segmentierung ist bei beiden gleich (8 Bit). (Richtig)
+
+### Source Text
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.

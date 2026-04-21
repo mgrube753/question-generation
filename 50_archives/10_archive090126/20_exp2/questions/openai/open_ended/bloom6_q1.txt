@@ -1,0 +1,196 @@
+## Open-Ended Question
+
+### Bloom Level: Creating
+
+### Learning Objective
+
+Die Studierenden können auf Basis der Schichtenprinzipien eigene Lösungsvorschläge für Kommunikationsprobleme entwickeln, die den Aufgaben der jeweiligen Schichten entsprechen
+
+### Question Generation
+
+Frage: Entwerfen Sie für die Messwertübertragung mobiler Geräte per Funk zu einem entfernten Server über mehrere Teilnetze ein OSI-orientiertes Kommunikationskonzept mit je einer konkreten Ausgestaltung der Kernaufgaben pro Schicht (1: Codierung/Transport/Decodierung; 2: Fehlerkontrolle/Flußkontrolle/Segmentierung/Identifikation/Medienzugriff; 3: Adressierung/Routing/Flußsteuerung; 4: Teilnehmer-Adressierung/Flußsteuerung/Dienstqualität; 5: Sitzungen/Synchronisation/Bündelung; 6: Endian-Ness/Zeichen/Kompression/Verschlüsselung; 7: Grundkonzepte/Protokollelemente/Verhalten)?
+
+### Answer Generation + Union of all
+
+Frage: Entwerfen Sie für die Messwertübertragung mobiler Geräte per Funk zu einem entfernten Server über mehrere Teilnetze ein OSI-orientiertes Kommunikationskonzept mit je einer konkreten Ausgestaltung der Kernaufgaben pro Schicht (1: Codierung/Transport/Decodierung; 2: Fehlerkontrolle/Flußkontrolle/Segmentierung/Identifikation/Medienzugriff; 3: Adressierung/Routing/Flußsteuerung; 4: Teilnehmer-Adressierung/Flußsteuerung/Dienstqualität; 5: Sitzungen/Synchronisation/Bündelung; 6: Endian-Ness/Zeichen/Kompression/Verschlüsselung; 7: Grundkonzepte/Protokollelemente/Verhalten)?
+
+Antwort: Kommunikationsszenario (Gesamtdesign): Ein mobiles Messgerät (UE) erfasst Sensorwerte (z.B. Temperatur, Beschleunigung) und überträgt diese periodisch sowie ereignisgetriggert über 5G-Funk (Teilnetz 1: Funkzugang), durch das Provider-Core-Netz (Teilnetz 2) und über das öffentliche IP-Backbone/Internet (Teilnetz 3) zu einem Server im Rechenzentrum (Teilnetz 4: Server-LAN). Die Übertragung soll energieeffizient, robust gegen Funkfehler und Ende-zu-Ende abgesichert sein.
+
+Schicht 1 (Physical) – Codierung/Transport/Decodierung:
+Codierung: 5G NR OFDM mit 256-QAM (adaptiv je nach Funkqualität), Mapping der Bits auf I/Q-Symbole gemäß Modulationsschema.
+Transport: Übertragung der modulierten elektromagnetischen Wellen im Sub-6-GHz-Band vom Gerät zur Basisstation (gNodeB) und zurück (medienfrei: Funk).
+Decodierung: Kohärente Demodulation/Equalizing im Empfänger (UE bzw. gNodeB), Abtastung der I/Q-Signale, Entscheidung mittels Detektionsschwellen und Rekonstruktion der Bitfolge.
+
+Schicht 2 (Data Link) – Fehlerkontrolle/Flußkontrolle/Segmentierung/Identifikation/Medienzugriff:
+Fehlerkontrolle: 5G HARQ/ARQ (Hybrid Automatic Repeat reQuest) mit CRC-Prüfung pro Block; fehlerhafte Blöcke werden automatisch erneut angefordert/gesendet.
+Flußkontrolle: RLC/PDCP-Puffer- und Rate-Control auf Funkstrecke; Sender passt Sendevolumen an verfügbare Funkressourcen und bestätigte Daten an (Vermeidung von Bufferbloat im UE).
+Segmentierung: Zerlegung größerer Nutzdaten (z.B. 4–20 kB Batch) in RLC-PDUs/MAC-Frames gemäß aktueller MTU/Transportblockgröße; Reassembly am Empfänger.
+Identifikation: Funkseitige Identifikation des Teilnehmers über RNTI/UE-Kontext im gNodeB; auf Link-Ebene Zuordnung der Frames zu genau diesem UE.
+Medienzugriff: 5G-spezifischer, basisstationsgesteuerter Zugriff (Scheduling): UE sendet im Uplink nur in zugewiesenen Zeit-/Frequenzressourcen (Grant-based), wodurch Kollisionen vermieden werden.
+
+Schicht 3 (Network) – Adressierung/Routing/Flußsteuerung:
+Adressierung: IPv6 für Ende-zu-Ende-Konnektivität; das UE erhält eine IPv6-Adresse pro PDU-Session (z.B. via DHCPv6/Provider-Policy),
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

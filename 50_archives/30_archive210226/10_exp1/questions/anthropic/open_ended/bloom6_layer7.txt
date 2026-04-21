@@ -1,0 +1,39 @@
+## Open-Ended Question
+
+### Bloom Level: Creating
+
+### Learning Objective
+
+Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+
+### Question Generation
+
+Frage: Entwerfen Sie für einen einfachen Benachrichtigungsdienst auf der Anwendungsschicht die vollständige Spezifikation, indem Sie die drei Kernaufgaben (Grundkonzepte, Protokollelemente mit erwarteten Daten und Verhalten) definieren und zu einem zusammenhängenden Konzept verbinden.
+
+### Answer Generation + Union of all
+
+Frage: Entwerfen Sie für einen einfachen Benachrichtigungsdienst auf der Anwendungsschicht die vollständige Spezifikation, indem Sie die drei Kernaufgaben (Grundkonzepte, Protokollelemente mit erwarteten Daten und Verhalten) definieren und zu einem zusammenhängenden Konzept verbinden.
+
+Antwort: Grundkonzepte: Sender, Empfänger, Nachricht (Text, Zeitstempel), Nachrichtenstatus (gesendet, zugestellt, gelesen), Benachrichtigungskanal. Protokollelemente mit erwarteten Daten: SEND (Sender-ID, Empfänger-ID, Nachrichtentext, Zeitstempel), RECEIVE (Empfänger-ID), STATUS (Nachrichten-ID), ACK (Nachrichten-ID, Statuscode), SUBSCRIBE (Nutzer-ID, Kanal), UNSUBSCRIBE (Nutzer-ID, Kanal). Verhalten: Bei SEND validiert der Dienst die Eingaben, speichert die Nachricht, leitet sie an den Empfänger weiter und sendet ACK mit Erfolgs- oder Fehlerstatus. Bei RECEIVE werden alle ungelesenen Nachrichten des Empfängers zurückgegeben und als zugestellt markiert. Bei STATUS wird der aktuelle Zustand einer Nachricht abgefragt. SUBSCRIBE registriert einen Nutzer für Benachrichtigungen, UNSUBSCRIBE entfernt die Registrierung. Zusammenhang: Sender nutzt SEND, Dienst speichert und leitet weiter, Empfänger ruft via RECEIVE ab, beide können STATUS prüfen. (Richtig)
+
+### Source Text
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

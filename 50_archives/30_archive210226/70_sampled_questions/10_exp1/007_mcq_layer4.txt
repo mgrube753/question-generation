@@ -1,0 +1,39 @@
+## Multiple-Choice-Question
+
+### Lernziel
+
+Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Formulierte Frage
+
+Frage: Ein Unternehmen plant die Einführung eines Voice-over-IP-Telefoniesystems (VoIP). Um die Sprachqualität für alle Teilnehmer zu gewährleisten, müssen zwei Kernaufgaben der Transportschicht gezielt angewendet werden. Welche sind dies?
+
+Antwortmöglichkeiten:
+
+a) Flußsteuerung und Dienstqualität (Quality of Service) (Richtig)
+b) Routing der Pakete und logische Adressierung der Teilnehmer (Falsch)
+c) Sicherung der QoS (Bandbreite, Latenz, Jitter) und Nutzung der Teilnehmer-Charakteristik für die Flußsteuerung (Richtig)
+d) Datenkompression zur Bandbreitenreduktion und Verschlüsselung zur Vertraulichkeit (Falsch)
+
+### Quelltext
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.

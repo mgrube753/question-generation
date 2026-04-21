@@ -1,0 +1,39 @@
+## Multiple-Choice-Question
+
+### Lernziel
+
+Die Studierenden beherrschen die teilnehmerorientierte Übertragung mit Fokus auf Adressierung, Flusssteuerung und Dienstqualität
+
+### Formulierte Frage
+
+Frage: Welche zwei Kernaufgaben der Transport Layer wenden Sie an, um einen Kommunikationsdienst mit Garantien für Bandbreite und Latenz bereitzustellen?
+
+Antwortmöglichkeiten:
+
+a) Um garantierte Bandbreite und Latenz bereitzustellen, wendet man die Flusssteuerung an, um die Datenübertragungsrate zu regulieren und Überlast zu vermeiden, sowie die Dienstqualität (QoS), um Ressourcen reservieren und Priorisieren von Datenströmen zu ermöglichen. (Richtig)
+b) Die Adressierung, um Endgeräte zu identifizieren und den Datenverkehr zuzuordnen, sowie die Fehlerkontrolle, um die Integrität der Daten zu gewährleisten. (Falsch)
+c) Die Anwendung von Flusssteuerung stellt sicher, dass der Empfänger nicht überlastet wird und die verfügbare Bandbreite effizient genutzt wird, während die Dienstqualität (QoS) Mechanismen wie Traffic Shaping und Priorisierung einsetzt, um garantierte Latenz und Bandbreite zu bieten. (Richtig)
+d) Das Routing, um den optimalen Pfad für die Datenübertragung zu bestimmen, und die Paketvermittlung, um effiziente Weiterleitung zu ermöglichen. (Falsch)
+
+### Quelltext
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.

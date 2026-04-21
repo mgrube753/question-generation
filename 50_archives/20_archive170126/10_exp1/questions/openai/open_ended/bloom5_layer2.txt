@@ -1,0 +1,55 @@
+## Open-Ended Question
+
+### Bloom Level: Evaluating
+
+### Learning Objective
+
+Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+
+### Question Generation
+
+Frage: Bewerten Sie eine Datenübertragungslösung im Data-Link-Layer, bei der nur Fehlerkontrolle und Segmentierung implementiert sind, Flusskontrolle, Identifikation und Medienzugriff jedoch fehlen: Inwieweit erfüllt sie den Standard einer fehlergesicherten Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer, und welche zwei fehlenden Kernaufgaben sind nach klaren Kriterien am kritischsten zu ergänzen (begründen Sie Ihre Bewertung)?
+
+### Answer Generation + Union of all
+
+Frage: Bewerten Sie eine Datenübertragungslösung im Data-Link-Layer, bei der nur Fehlerkontrolle und Segmentierung implementiert sind, Flusskontrolle, Identifikation und Medienzugriff jedoch fehlen: Inwieweit erfüllt sie den Standard einer fehlergesicherten Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer, und welche zwei fehlenden Kernaufgaben sind nach klaren Kriterien am kritischsten zu ergänzen (begründen Sie Ihre Bewertung)?
+
+Antwort: Die Lösung erfüllt den Standard „fehlergesicherte Übertragung über einen möglicherweise nicht fehlergesicherten Physical Layer“ nur eingeschränkt: Fehlerkontrolle kann Übertragungsfehler erkennen/ggf. beheben oder signalisieren, und Segmentierung schafft übertragbare Einheiten. Damit werden Bitfehler des Physical Layers grundsätzlich adressiert, aber es fehlen zentrale Mechanismen, die in der Praxis für eine tatsächlich verlässliche Übertragung (keine verlustbedingten Lücken, keine kollisionsbedingte Zerstörung) notwendig sind; die Fehlersicherung wäre daher nur in einem stark idealisierten Szenario (dedizierter Punkt-zu-Punkt-Link, passende Datenraten, kein geteiltes Medium) ausreichend.
+
+Am kritischsten zu ergänzen sind nach Kriterien der Übertragungszuverlässigkeit (Vermeidung systematischer Frame-Verluste trotz korrekter Bits) und der Beherrschung des Übertragungsmediums (Vermeidung/Behandlung von Kollisionen bzw. geregeltes Senden):
+1) Flusskontrolle: Ohne Flusskontrolle kann der Sender den Empfänger überfahren (Pufferüberlauf), wodurch Frames verloren gehen, obwohl sie physikalisch korrekt übertragen wurden; das verletzt das Ziel „fehlergesicherte Übertragung“ direkt, weil Fehlerkontrolle Bitfehler adressiert, nicht aber Überlast-bedingte Verluste.
+2) Medienzugriff: Ohne geregelten Medienzugriff ist das Aktivieren/Nutzen des Physical Layers (Senden/Warten/Beheben/Reservieren) undefiniert; auf einem geteilten Medium führt das zu Kollisionen und massiver Fehler-/Verlustrate, sodass Fehlerkontrolle ineffektiv oder ineffizient wird (dauernde Wiederholungen, keine stabile Übertragung).
+
+Identifikation ist ebenfalls wichtig (korrekte Zuordnung zu Sender/Empfänger, insbesondere in Mehrpunktnetzen), ist aber gegenüber Flusskontrolle und Medienzugriff nach obigen Kriterien weniger unmittelbar „übertragungskritisch“, wenn man minimale Punkt-zu-Punkt-Kommunikation voraussetzt. (Richtig)
+
+### Source Text
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.

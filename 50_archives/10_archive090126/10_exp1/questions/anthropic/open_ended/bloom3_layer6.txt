@@ -1,0 +1,43 @@
+## Open-Ended Question
+
+### Bloom Level: Applying
+
+### Learning Objective
+
+Die Studierenden beherrschen die Transformation von Anwendungsdaten in übertragbare Bitströme durch Konvertierung, Kompression und Verschlüsselung
+
+### Question Generation
+
+Frage: Wenden Sie die Funktionen der Presentation Layer an, um zu beschreiben, welche Transformationsschritte ein Textdokument durchlaufen muss, wenn es von einem System mit Little-Endian-Architektur und ASCII-Kodierung zu einem System mit Big-Endian-Architektur und Unicode-Kodierung sicher und effizient übertragen werden soll.
+
+### Answer Generation + Union of all
+
+Frage: Wenden Sie die Funktionen der Presentation Layer an, um zu beschreiben, welche Transformationsschritte ein Textdokument durchlaufen muss, wenn es von einem System mit Little-Endian-Architektur und ASCII-Kodierung zu einem System mit Big-Endian-Architektur und Unicode-Kodierung sicher und effizient übertragen werden soll.
+
+Antwort: Die Presentation Layer führt folgende Transformationsschritte für das Textdokument durch: Erstens erfolgt die Zeichenkonvertierung, bei der die ASCII-kodierten Zeichen (7-8 Bit pro Zeichen) in Unicode-Kodierung (z.B. UTF-16 mit 16 Bit pro Zeichen) umgewandelt werden, um die Kompatibilität mit dem Zielsystem herzustellen. Zweitens wird die Endian-Konvertierung durchgeführt, wobei die Byte-Reihenfolge der Multi-Byte-Unicode-Zeichen von Little-Endian (niederwertiges Byte zuerst) auf Big-Endian (höherwertiges Byte zuerst) angepasst wird. Drittens wird zur effizienten Übertragung eine Kompression angewendet, die die Datenmenge des Dokuments reduziert und somit Bandbreite spart. Viertens erfolgt zur sicheren Übertragung eine Verschlüsselung der komprimierten Daten, um die Vertraulichkeit während der Übertragung zu gewährleisten. Auf der Empfängerseite werden diese Schritte in umgekehrter Reihenfolge rückgängig gemacht: Entschlüsselung, Dekompression, und das Dokument liegt dann bereits in der für das Zielsystem passenden Unicode-Kodierung und Big-Endian-Darstellung vor. (Richtig)
+
+### Source Text
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.

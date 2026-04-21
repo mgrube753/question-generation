@@ -1,0 +1,48 @@
+## Multiple-Choice-Question
+
+### Lernziel
+
+Die Studierenden beherrschen die Mechanismen zur fehlergesicherten Datenübertragung, einschließlich Fehlerkontrolle, Flusskontrolle, Segmentierung, Identifikation und Medienzugriff
+
+### Formulierte Frage
+
+Frage: Frage: Welche zwei der folgenden Strategien beschreiben Maßnahmen der Flußkontrolle, wenn der Sender zu schnell für den Empfänger sendet?
+
+Antwortmöglichkeiten:
+
+a) Erkennen von Übertragungsfehlern durch Prüfsummen (Falsch)
+b) Herunterregeln der Sende rate des Senders durch Rückmeldungen (Richtig)
+c) Segmentierung der Daten in Frames für die Übertragung (Falsch)
+d) Zwischenpuffern von Datenpaketen, um den Empfänger nicht zu überfordern (Richtig)
+
+### Quelltext
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.

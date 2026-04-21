@@ -1,0 +1,195 @@
+## Open-Ended Question
+
+### Bloom Level: Creating
+
+### Learning Objective
+
+Die Studierenden können auf Basis der Schichtenprinzipien eigene Lösungsvorschläge für Kommunikationsprobleme entwickeln, die den Aufgaben der jeweiligen Schichten entsprechen
+
+### Question Generation
+
+Frage: Entwickeln Sie ein Lösungskonzept für die zuverlässige Übertragung zeitkritischer Videodaten zwischen zwei Standorten mit unterschiedlichen Netzwerktechnologien, indem Sie für jede relevante OSI-Schicht spezifische Maßnahmen beschreiben, die deren Kernaufgaben erfüllen.
+
+### Answer Generation + Union of all
+
+Frage: Entwickeln Sie ein Lösungskonzept für die zuverlässige Übertragung zeitkritischer Videodaten zwischen zwei Standorten mit unterschiedlichen Netzwerktechnologien, indem Sie für jede relevante OSI-Schicht spezifische Maßnahmen beschreiben, die deren Kernaufgaben erfüllen.
+
+Antwort: Lösungskonzept für zeitkritische Videoübertragung zwischen heterogenen Standorten:
+
+Physical Layer 1: Einsatz von Glasfasertechnologie als primäres Übertragungsmedium für hohe Bandbreite und geringe Latenz. Codierung mittels NRZ-Verfahren für effiziente Signalübertragung. An Standort B erfolgt präzise Decodierung durch definierte Detektionsbereiche zur fehlerfreien Rückgewinnung der logischen Werte.
+
+Data Link Layer 2: Implementation von Forward Error Correction zur Fehlerkontrolle ohne Retransmission, da Neuübertragungen bei Echtzeitvideo ungeeignet sind. Segmentierung in optimierte Frame-Größen von 1500 Bytes zur Minimierung von Fragmentierung. Flusskontrolle durch adaptive Pufferung am Empfänger. Eindeutige MAC-Adressierung zur Identifikation der Endgeräte. Priorisierter Medienzugriff für Videodaten durch VLAN-Tagging.
+
+Network Layer 3: Zuweisung netzwerkübergreifender IP-Adressen für beide Standorte. Routing über dedizierte Pfade mit minimaler Latenz unter Berücksichtigung der unterschiedlichen Layer-2-Technologien. End-to-End-Flusssteuerung mit Congestion-Avoidance-Mechanismen zur Vermeidung von Paketverlust.
+
+Transport Layer 4: Verwendung von UDP mit RTP-Erweiterung als Transportprotokoll mit Port-basierter Teilnehmeradressierung. Dienstqualitätssicherung durch reservierte Bandbreite von mindestens 10 Mbit/s, maximale Latenz von 150ms und Jitter-Begrenzung auf 30ms zur Erfüllung der Echtzeitanforderungen.
+
+Session Layer 5: Etablierung einer persistenten Sitzung für den kontinuierlichen Videostream mit Mechanismen zum Aufbau und kontrollierten Beenden. Synchronisationspunkte alle 5 Sekunden für mögliche Wiederaufnahme bei Unterbrechung. Bündelung von Video- und Audiodaten zu einer zusammengehörigen Transaktion.
+
+Presentation Layer 6: Kompression mittels H.264-Codec zur Reduktion der Datenrate bei akzeptabler Qualität. Konvertierung der Datendarstellung in ein einheitliches Format für beide Standorte trotz unterschiedlicher Systemarchitekturen. Optional AES-Verschlüsselung für vertrauliche Videoinhalte.
+
+Application Layer 7: Definition der Grundkonzepte wie Videostream, Auflösung und Bildrate. Protokollelemente umfassen Start-, Stopp- und Pause-Befehle sowie Qualitätsanpassungsanfragen. Das Anwendungsverhalten reagiert auf Bandbreitenänderungen durch dynamische Qualitätsanpassung und signalisiert Übertragungsstatus an die Benutzer. (Richtig)
+
+### Source Text
+
+Physical Layer 1
+Beschreibung
+Bereitstellung einer physikalischen Konzeption für Codierung, Transport und
+Decodierung logischer Werte.
+
+3 Kernaufgaben
+
+Codierung:
+
+Abbildung logischer Werteauf physikalische Größen.
+Bsp: NRZ, Manchester.
+
+Transport:
+
+Übertragung physikalischer Größen
+von einem Ort zum anderen.
+Medien-gebunden. Bsp: Telefonkabel.
+Medien-frei.
+Bsp: Lichtsignal, Funk.
+
+Decodierung:
+
+Rückinterpretation physikalischer Größen als logische Werte.
+Bsp: Abtastung, Detektionsbereiche.
+
+Data Link Layer 2
+Beschreibung
+Bereitstellung einer fehlergesicherten Übertragung über einen möglicherweise nicht
+fehlergesicherten Physical Layer.
+
+5 Kernaufgaben
+
+Fehlerkontrolle:
+
+Erkennen, Beheben oder Signalisieren von Übertragungsfehlern.
+
+Flußkontrolle:
+
+Strategien, wenn Sender für Empfänger zu schnell sendet.
+Bsp: Zwischenpuffern, Herunterregeln, warten Lassen.
+
+Segmentierung:
+
+Zusammenfassen einzelner Bits zu größeren Einheiten.
+Universal-typisches Bsp: 8-bit Bytes.
+
+Identifikation:
+
+Auswahl bestimmter Sender oder Empfänger (sog. Adresse).
+
+Medienzugriff:
+
+Aktivieren des Physical Layer.
+4 typische Aspekte: Senden, Warten, Beheben und Reservieren.
+
+Network Layer 3
+Beschreibung
+Bereitstellung einer Übertragung zwischen Geräten, die sich in unterschiedlichen
+Netzwerken (möglicherweise) verschiedener Layer 2 Technologien befinden.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Netzwerk-übergreifende Adressen.
+
+Routing:
+
+Auswahl der vermittelnden Zwischenknoten
+zur Kommunikation nicht direkt verbundenen Knoten.
+
+Flußsteuerung:
+
+Strategien, wenn zu schnell gesendet wird.
+End-to-End:
+Vom Sender zum weit entfernten Empfänger.
+Node-to-Node: Von jedem Knoten zum Nächsten.
+
+Transport Layer 4
+Beschreibung
+Bereitstellung einer Übertragung zwischen beliebigen Teilnehmern eines Netzes.
+
+3 Kernaufgaben
+
+Adressierung:
+
+Teilnehmer-Adressen.
+
+Flußsteuerung:
+
+Nutzen der Teilnehmer-Charakteristik.
+
+Dienstqualität:
+
+Sicherung der Quality of Service (QoS)
+Erbringung eines Kommunikationsdienstes mit Garantien
+für Bandbreite, Latenz, Jitter, Fehlerrate usw.
+Zugeschnitten auf den jeweiligen Teilnehmer.
+
+Session Layer 5
+
+Beschreibung
+Bereitstellung der Funktionen für das Sitzungs(Session)-Konzept einer Kommunikationsbeziehung.
+
+3 Kernaufgaben
+
+Sitzungen:
+
+Aufbauen, verwalten, zurückweisen und beenden.
+
+Synchronisation:
+
+Setzen von Zwischenpunkten.
+
+Bündelung
+
+Gruppierung zusammengehöriger Transaktionen.
+
+Presentation Layer 6
+Beschreibung
+Kodierung (Darstellung) der Anwendungsdaten als Bitstrom.
+
+4 Kernaufgaben
+
+Endian-Ness:
+
+Konvertieren der Datendarstellung.
+Bsp: little & big endian, weitere Serialisierungs-Formate.
+
+Zeichen:
+
+Konvertierung der Zeichendarstellung
+Bsp: ASCII, Unicode, EBCDIC, nationale Sonderzeichen.
+
+Kompression:
+
+Komprimieren und Dekomprimieren.
+
+Verschlüsselung:
+
+Verschlüsseln und Entschlüsseln.
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.

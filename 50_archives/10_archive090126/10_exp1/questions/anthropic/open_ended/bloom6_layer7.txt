@@ -1,0 +1,66 @@
+## Open-Ended Question
+
+### Bloom Level: Creating
+
+### Learning Objective
+
+Die Studierenden beherrschen die anwendungsspezifische Definition von Grundkonzepten, Protokollelementen und Verhaltensweisen
+
+### Question Generation
+
+Frage: Entwerfen Sie für eine selbst gewählte Anwendung eine vollständige Spezifikation der Application Layer, indem Sie die zugehörigen Grundkonzepte, Protokollelemente und Verhaltensweisen systematisch zusammenstellen und aufeinander abstimmen.
+
+### Answer Generation + Union of all
+
+Frage: Entwerfen Sie für eine selbst gewählte Anwendung eine vollständige Spezifikation der Application Layer, indem Sie die zugehörigen Grundkonzepte, Protokollelemente und Verhaltensweisen systematisch zusammenstellen und aufeinander abstimmen.
+
+Antwort: Spezifikation der Application Layer für eine Bibliotheksausleihe-Anwendung
+
+1. Grundkonzepte:
+- Benutzer: Identifiziert durch Benutzernummer und Name, besitzt ein Ausleihkonto
+- Medium: Buch, Zeitschrift oder DVD mit eindeutiger Mediennummer, Titel und Verfügbarkeitsstatus
+- Ausleihe: Verknüpfung zwischen Benutzer und Medium mit Ausleihdatum und Rückgabedatum
+- Vormerkung: Reservierung eines verliehenen Mediums durch einen Benutzer
+- Ausleihkonto: Enthält aktuelle Ausleihen, Vormerkungen und Mahnstatus eines Benutzers
+
+2. Protokollelemente:
+- AUTHENTICATE(Benutzernummer, Passwort): Anmeldung am System
+- SEARCH(Suchbegriff, Kategorie): Suche nach Medien im Bestand
+- BORROW(Mediennummer, Benutzernummer): Ausleihe eines Mediums
+- RETURN(Mediennummer): Rückgabe eines Mediums
+- RESERVE(Mediennummer, Benutzernummer): Vormerkung eines verliehenen Mediums
+- GET_ACCOUNT(Benutzernummer): Abruf des Ausleihkontos
+- RENEW(Mediennummer, Benutzernummer): Verlängerung einer Ausleihe
+
+3. Verhaltensweisen:
+- Bei AUTHENTICATE: Prüfung der Zugangsdaten, bei Erfolg Rückgabe einer Session-ID und Kontoinformationen, bei Fehler Rückgabe von AUTH_FAILED
+- Bei SEARCH: Durchsuchen des Medienbestands, Rückgabe einer Liste mit Mediennummer, Titel, Verfügbarkeitsstatus
+- Bei BORROW: Prüfung der Verfügbarkeit und des Kontostatus, bei Erfolg Änderung des Medienstatus auf ausgeliehen und Rückgabe von BORROW_SUCCESS mit Rückgabedatum, bei Fehler Rückgabe von BORROW_DENIED mit Begründung
+- Bei RETURN: Aktualisierung des Medienstatus auf verfügbar, Prüfung auf Vormerkungen und gegebenenfalls Benachrichtigung des Vormerkenden, Rückgabe von RETURN_SUCCESS oder OVERDUE_NOTICE bei Fristüberschreitung
+- Bei RESERVE: Prüfung ob Medium verliehen, Eintragung in Vormerkungsliste, Rückgabe von RESERVE_SUCCESS mit Warteplatzposition
+- Bei GET_ACCOUNT: Rückgabe aller aktuellen Ausleihen mit Fristen, Vormerkungen und offenen Mahngebühren
+- Bei RENEW: Prüfung auf Vormerkungen und maximale Verlängerungsanzahl, bei Erfolg neues Rückgabedatum, bei Fehler RENEW_DENIED
+
+Die drei Bereiche sind aufeinander abgestimmt, da die Grundkonzepte die Datenstrukturen definieren, die Protokollelemente die zulässigen Operationen festlegen und die Verhaltensweisen beschreiben, wie das System konsistent auf diese Operationen reagiert. (Richtig)
+
+### Source Text
+
+Application Layer 7
+Beschreibung
+Festlegung, welche Elemente bei einer spezifischen Anwendung auftreten.
+
+3 Kernaufgaben
+
+Grundkonzepte:
+Welche Begriffe treten in der Anwendung auf.
+
+Protokollelemente: Welche Anforderungen können gestellt werden?
+Welche Daten werden dabei erwartet?
+
+Verhalten:
+Wie reagiert die Anwendung auf die
+Anforderungen durch diese Protokollelemente?
+
+
+Stark abhängig von der jeweiligen Anwendung!
+Daher wenig Systematisierung möglich.
