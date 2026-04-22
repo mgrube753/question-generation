@@ -6,7 +6,7 @@
 [![University of Rostock](https://img.shields.io/badge/Institution-University_of_Rostock-003D7A.svg)](https://www.uni-rostock.de/)
 <!-- DOI for the future? -->
 
-This repository and its material is based on a [Bachelor thesis](https://github.com/mgrube753/bachelor-thesis) by Grube (2025, University of Rostock) and is used in the paper **"AI for exam preparation: A good idea in higher education?** (Cap, Grube, Rubach, in preparation).
+This repository and its material is built from a [Bachelor thesis](https://github.com/mgrube753/bachelor-thesis) by Grube (2025, University of Rostock) and is used in the paper **"AI for exam preparation: A good idea in higher education?** (Cap, Grube, Rubach, in preparation).
 It includes the official implementation, prompts, datasets, and evaluation data for the upcoming publication.
 
 ## Overview

@@ -15,7 +15,7 @@
   - Future Work: Validierungssysteme, um diese zu minimieren
   - LLMs können Fragen mit kontext-fernen/falschen Informationen generieren
   - Obwohl sie gebeten werden, sich an Quelltext zu halten
-- **BA-Paper** Bhowmick et al. [8] haben gelegentlich aufgetretene Halluzinationen (s. Discussion) 
+- **BA-Paper** Bhowmick et al. [8] haben gelegentlich aufgetretene Halluzinationen (s. Discussion)
   - Genutzte Modelle hier jedoch ebenso veraltet, bzw. auch klein (SLMs)
 - Kang et al. [4] nutzten Context Utilization als Bewertungskriterium
   - 10 LLMs haben Fragen generiert, gab 1 LLM-as-a-Judge
@@ -44,7 +44,7 @@
   - Alignment ist vernünftig, pauschal besser als unangetastete LLMs bei e.g. Zhuge et al.
   - Fällt auf, dass outdated Models überall vertreten sind...
 
-### Wenn es um MC-Fragen geht...
+### Wenn es um MC-Fragen geht
 
 - **BA-Paper** Doughty et al. [3] zeigten Probleme in MCQ-Distraktoren bei Programmierfragen
   - Alle Antworten waren bspw. korrekt, aber nur eine als korrekt markiert
@@ -61,6 +61,7 @@
   - Wollen aber auch LLM-as-a-Judge wieder verwenden bei Adherence Score (Inhaltstreue)
   - Einfache Metriken decken nicht die Inhaltstreue zwischen Frage und Kontext, Kosinusähnlichkeit auch nicht
   - Werden Adherence Score verbessern (besseres Prompting, Analyse beider LLM-Judges anstatt Mean nehmen)
+  - Um den Aufwand der Evaluation zu reduzieren, wird dieser quantitative Prozess nicht angewendet, sondern nur die essentielle Expertenbewertung
 - Prompt-Optimierungen, da es wie in Al Faraby et al. [1] Anweisungsklarheit fordert (Chain-of-Thought-Prompting; bereits überarbeitet)
 - Setzen bei Bhowmick et al. [8] an mit entkoppeltem Stamm, Key und Distraktoren Generieren bei MCQ
   - Literatur und auch wir hatten Probleme bei einschrittiger MCQ-Ausführung
@@ -100,13 +101,13 @@
 
 ### Literatur
 
-1. Al Faraby et al. (2024): https://doi.org/10.1016/j.caeai.2024.100298  
-2. An et al. (2025): https://doi.org/10.48550/arXiv.2507.05629  
-3. Doughty et al. (2024): https://doi.org/10.1145/3636243.3636256  
-4. Kang et al. (2025): https://doi.org/10.1109/TAI.2025.3620274  
-5. Maity et al. (2025): https://doi.org/10.1016/j.caeai.2025.100370  
-6. Meissner et al. (2024): https://doi.org/10.3389/feduc.2024.1427502  
-7. Zhuge et al. (2025): https://doi.org/10.3390/app15063055  
-8. Bhowmick et al. (2023): https://doi.org/10.1007/978-3-031-47994-6_38  
-9. Mi and Li (2024): https://doi.org/10.1109/ICEIT61397.2024.10540914  
-10. Scaria et al. (2024): https://aclanthology.org/2024.bea-1.1/
+1. Al Faraby et al. (2024): <https://doi.org/10.1016/j.caeai.2024.100298>  
+2. An et al. (2025): <https://doi.org/10.48550/arXiv.2507.05629>  
+3. Doughty et al. (2024): <https://doi.org/10.1145/3636243.3636256>  
+4. Kang et al. (2025): <https://doi.org/10.1109/TAI.2025.3620274>  
+5. Maity et al. (2025): <https://doi.org/10.1016/j.caeai.2025.100370>  
+6. Meissner et al. (2024): <https://doi.org/10.3389/feduc.2024.1427502>  
+7. Zhuge et al. (2025): <https://doi.org/10.3390/app15063055>  
+8. Bhowmick et al. (2023): <https://doi.org/10.1007/978-3-031-47994-6_38>  
+9. Mi and Li (2024): <https://doi.org/10.1109/ICEIT61397.2024.10540914>  
+10. Scaria et al. (2024): <https://aclanthology.org/2024.bea-1.1/>
