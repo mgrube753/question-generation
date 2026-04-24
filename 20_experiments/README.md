@@ -75,8 +75,13 @@ Located in **[`40_prompts/`](40_prompts/)**:
   - [`prompt_mcq_distractors.md`](40_prompts/experiment/prompt_mcq_distractors.md) - MCQ distractor generation
   - [`prompt_open_ended_q.md`](40_prompts/experiment/prompt_open_ended_q.md) - Open-ended question generation
   - [`prompt_open_ended_a.md`](40_prompts/experiment/prompt_open_ended_a.md) - Open-ended answer generation
-  - [`bloom.md`](40_prompts/experiment/bloom.md) - Bloom's Taxonomy definitions
-  - [`learning_objectives.md`](40_prompts/experiment/learning_objectives.md) - Learning objectives
+  - [`bloom.md`](40_prompts/experiment/bloom.md) - Bloom's Taxonomy verbs and definitions
+  - [`learning_objectives.md`](40_prompts/experiment/learning_objectives.md) - Experiment-specific learning objectives
+  
+  The prompt skeletons are designed using a certain structure, including **Role**, **Task**, **Context**, **Reasoning Steps**, **Output Format**, and **Stop Conditions**. This structure is based on a mixture of two OpenAI cookbook resources:
+
+    - <https://cookbook.openai.com/examples/gpt-5/gpt-5_prompting_guide>
+    - <https://cookbook.openai.com/examples/gpt4-1_prompting_guide>
 
 - **[`evaluation/`](40_prompts/evaluation/)** - Assessment prompts and rubrics
   - [`exp1_rubric.md`](40_prompts/evaluation/exp1_rubric.md) - Categories for first experiment
