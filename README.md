@@ -22,7 +22,7 @@ To address these questions, our framework focuses on two main areas:
 1. **Experiment 1:** Content Adherence Assessment (addressing RQ1 & RQ3)
 2. **Experiment 2:** Bloom's Taxonomy Alignment (addressing RQ2 & RQ3)
 
-Our framework supports generation, sampling, and evaluation (via blind test rating) across multiple state-of-the-art models:
+Our framework supports generation, sampling, and evaluation (via blind test rating) across multiple state-of-the-art models up to December 2025, including:
 
 * **Anthropic** Claude Opus 4.5
 * **OpenAI** GPT-5.2
@@ -45,8 +45,9 @@ The project is modularized to separate research context, data generation, and ev
   * **Workshop materials** to prepare the raters for the blind test.
   * See the [Experiments README](20_experiments/README.md) for an in-depth explanation.
 
+* **[`30_documentation/`](30_documentation/)** - Documentation of the codebase, including API handling, question generation logic, and sampling.
 * **[`40_evaluation/`](40_evaluation/)** - Qualitative evaluation files (plots and tables) for both experiments from the notebooks in [`20_experiments/50_src/`](20_experiments/50_src/).
-* **[`50_archives/`](50_archives/)** - Archived versions of experiment runs from early stages (soon).
+* **[`50_archives/`](50_archives/)** - Archived versions of experiment runs from early stages.
 
 ## Setup & Installation
 
@@ -80,7 +81,7 @@ To run the codebase or evaluate the generated data, set up the Python environmen
 
 ## Reproducibility & Execution
 
-For detailed instructions on how the experiments are structured, how the prompts are designed, and how to execute the Python scripts (`main.py`, `sampling.py`) properly, please refer to the comprehensive guide in **[`20_experiments/README.md`](20_experiments/README.md)**.
+For detailed instructions on how the experiments are structured, how the prompts are designed, and how to execute the Python scripts (`main.py`, `sampling.py`) properly, please refer to the comprehensive guide in [`20_experiments/README.md`](20_experiments/README.md).
 
 ## Citation
 
