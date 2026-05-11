@@ -12,7 +12,7 @@ To find relevant publications, comprehensive literature searches were conducted 
 - Springer
 - Elsevier
 
-From these searches, **10 key papers** were selected that are highly relevant to our specific research focus.
+From these searches, **10 key papers** were selected that are highly relevant to our specific research focus. A [`refs.bib`](refs.bib) file is included, containing the bibliographic information for these publications.
 
 ## Contents
 

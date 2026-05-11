@@ -22,7 +22,7 @@
   - Bestimmung, wie nah Frage am Quelltext/wie weit entfernt von Halluzination ist
 - An et al. [2] haben Halluzinationen bemerkt bei MCQ-Generierung (Elemente außerhalb des Kurskontexts)
   - Gemini 2.0 Flash und 2.5 Flash benutzt <-- kleinere Modelle
-  - 2.5 Flash haben wir benutzt, schnitt in diverser Hinsicht schlechter ab
+  - 2.5 Flash haben wir in der BA benutzt, schnitt in diverser Hinsicht auch schlechter ab
 
 ### Bloom Scoring bzw. Alignment im Fokus
 
@@ -58,10 +58,10 @@
 ### Wo setzen wir bei Literatur an?
 
 - Expertenbewertung elementar, nutzen wir auch wieder
-  - Wollen aber auch LLM-as-a-Judge wieder verwenden bei Adherence Score (Inhaltstreue)
+  - WOLLTEN auch LLM-as-a-Judge wieder verwenden bei Adherence Score (Inhaltstreue)
   - Einfache Metriken decken nicht die Inhaltstreue zwischen Frage und Kontext, Kosinusähnlichkeit auch nicht
   - Werden Adherence Score verbessern (besseres Prompting, Analyse beider LLM-Judges anstatt Mean nehmen)
-  - Um den Aufwand der Evaluation zu reduzieren, wird dieser quantitative Prozess nicht angewendet, sondern nur die essentielle Expertenbewertung
+  - **Um den Aufwand der Evaluation zu reduzieren, wird dieser quantitative Prozess nicht angewendet, sondern nur die essentielle Expertenbewertung**
 - Prompt-Optimierungen, da es wie in Al Faraby et al. [1] Anweisungsklarheit fordert (Chain-of-Thought-Prompting; bereits überarbeitet)
 - Setzen bei Bhowmick et al. [8] an mit entkoppeltem Stamm, Key und Distraktoren Generieren bei MCQ
   - Literatur und auch wir hatten Probleme bei einschrittiger MCQ-Ausführung
