@@ -3,7 +3,7 @@
 ## Research Design
 
 - Studie besteht aus zwei Experimenten zur Beantwortung der 3 FF
-  - Experiment 1: Inhaltstreue/Relevanz der Fragen zum Eingabetext (FF1) und Bezug auf Korrektheit der Antworten (FF3)
+  - Experiment 1: Inhaltstreue/Relevanz der Fragen zum Eingabetext (FF1) und Bezug auf inhaltliche Korrektheit der Antworten (FF3)
   - Experiment 2: Alignment der Fragen zum gewünschten Bloom Level (FF2) und Passung des Bloom-Levels der Antwort zur generierten Frage (FF3)
 
 ## Models
@@ -22,10 +22,10 @@
 - Zwei Frageformate: Multiple-Choice (MCQ) und Open-Ended (OE)
   - MCQ: Bloom-Level 1-3 Abdeckung (siehe sinngemäß [Uni Zürich](https://teachingtools.uzh.ch/de/tools/lernziel-taxonomien))
   - OE: Bloom-Level 1-6 Abdeckung
-- Experiment 1: Pro Frage 1 Layer, pro Layer gibt es 1 Lernziel (7) --> Lernziele, da Doughty et al. (2024) auch genutzt haben
-  - Frageanzahl: 4 LLMS x 7 Layer x 2 Frageformate = 56 Fragen
-- Experiment 2: Pro Frage alle 7 Layer als Kontext, pro Bloom-Level stattdessen 1 Lernziel (6)
-  - Frageanzahl: 4 LLMS x 6 Bloom-Level x 2 Frageformate = 48 Fragen
+- Experiment 1: Pro Frage 1 Layer, pro Layer gibt es 1 festes Lernziel (7) --> Lernziele, da Doughty et al. (2024) auch genutzt haben
+  - Frageanzahl: 4 LLMs x 7 Layer x 2 Frageformate = 56 Fragen
+- Experiment 2: Pro Frage alle 7 Layer als Kontext, pro Bloom-Level stattdessen 1 festes Lernziel (6)
+  - Frageanzahl: 4 LLMs x 6 Bloom-Level x 2 Frageformate = 48 Fragen
 
 ## Prompting & Generation
 
@@ -48,19 +48,31 @@
   
 ### Rating Criteria
 
-- Fragen und Antworten wurden mit spezifischen Kriterien bewertet, welche sich in den beiden Experimenten teilweise unterscheiden, um die jeweiligen Forschungsfragen gezielt zu adressieren (Q für Question, A für Answer, QA für beide):
-  - Relevance_Q (E1), Clarity_QA (E1/2), Answerability_Q (E1), Challenging_Q (E1/2), Value_Q (E1/2), Language_QA (E1/2), Correctness_A (E1), BloomAlignment_QA (E2)
+- Fragen und Antworten wurden mit spezifischen Kriterien bewertet, welche sich in den beiden Experimenten teilweise unterscheiden (welche Kategorien angewandt wurden), um die jeweiligen Forschungsfragen gezielt zu adressieren (Q für Question, A für Answer, QA für beide):
+
+| Kriterium | Experiment |
+|-----------|-----------|
+| Relevance_Q | E1 |
+| Clarity_QA | E1, E2 |
+| Answerability_Q | E1 |
+| Challenging_Q | E1, E2 |
+| Value_Q | E1, E2 |
+| Language_QA | E1, E2 |
+| Correctness_A | E1 |
+| BloomAlignment_QA | E2 |
+
 - Relevance_Q und Answerability_Q sind Kriterien für FF1
 - Kriterien Value & Language wurden von Prof. Cap vorgeschlagen, um Lernzielrelevanz und sprachliche Präzision/Komplexität zu bewerten
-- Correctness wurde hinzugefügt für Antwortenbewertung in E1 (Fokuss FF3)
+- Correctness wurde hinzugefügt für Antwortenbewertung in E1 (Fokus FF3)
 - Idee zu Bloom Alignment für E2 gesehen bei Scaria et al. (2024), nun adaptiert für Fragen (FF2) und Antworten (FF3) in unserem Setup
 
-### Rubric Design
+### Rubric Design for Criteria
 
-- Rubriken zuvor oft rudimentär, wir haben statt
+- Gewisse Rubriken waren zuvor rudimentär ausgelegt, wir haben statt
   - BA: 0-10 Skala mit schwächeren Punkt-Beschreibungen
-  - Mi and Li: 0-10 Punkte pro Kategorie, ohne klare Beschreibungen
-  - Jetzt: 1-5 Likert Skala, pro Kategorie eine verständliche Beschreibung, pro Punktvergabe eine feste Beschreibung
+  - Mi and Li, 2024: 0-10 Punkte pro Kategorie, ohne klare Beschreibungen (wir nutzen die Kategorien aber als Basis)
+  - Scaria et al., 2024: 9-Item Rubrik, mit fast ausschließlich Binär-Entscheidungen
+  - **Jetzt**: 1-5 Likert Skala (wie in Maity et al., 2025), pro **Kategorie** eine verständliche Fragestellung, und pro **Punktvergabe** eine feste Beschreibung
 
 ### Rater Workshops
 
