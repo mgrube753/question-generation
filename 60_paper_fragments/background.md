@@ -19,7 +19,7 @@
 - _Frage muss sich an den Quelltext halten_, ohne Halluzinationen oder externes Wissen zu integrieren
   - An et al., 2025: LLMs haben teilweise in Programmier-MCQ Konzepte eingebunden, die nicht im Kursmaterial zu finden waren
 - _Antwort zur generierten Frage muss inhaltlich korrekt auf die Frage abgestimmt sein_
-  - Doughty et al., 2024: Anzahl korrekter MCQ-Keys oft nicht korrekt | Meissner et al., 2024: Antworten zu Mathefragen oft mit Rechenfehlern versehen | Al Faraby et al., 2024: Oft Antwort-Snippets, welche die Frage gar nicht beantwortet hat
+  - Doughty et al., 2024: Anzahl korrekter MCQ-Keys oft nicht korrekt | Meissner et al., 2024: Antworten zu Mathefragen oft mit Rechenfehlern versehen | Al Faraby et al., 2024: Oft Antwort-Snippets, welche die Frage gar nicht beantwortet haben
 - _Frage muss das gewünschte kognitive Niveau (z.B. Bloom-Level) erfüllen_
   - Zhuge et al., 2025: Modelle ohne Bloom-Finetuning weichen oft vom gewünschten Level ab (Heatmaps im Paper) | Meissner et al., 2024: LLM neigte dazu, unverhältnismäßig oft Apply3 und Analyze4 Fragen zu erstellen, anstatt die oberen und unteren Levels gleichmäßig zu treffen | Scaria et al., 2024: **Fragequalität** für Apply3 und Create6 Fragen besonders schwach, aber keine Angabe darüber, welche Levels für welches Modell schwer zu erreichen waren (bedenken: sie haben "Erstelle Frage zu jedem Bloom Level" als Anweisung gegeben)
 

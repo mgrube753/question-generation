@@ -7,7 +7,7 @@
 - Lücke (noch geringfügig formuliert):
   - Bestehende Studien nutzen oft veraltete oder kleine Modelle (und verpassen somit Reasoning-Modelle)
     - Bhowmick et al., 2023: T5 und InstructGPT bspw. genutzt; modernere LLMs wie GPT-4 damals könnten qualitativ bessere Fragen generieren, aber diese (nicht-lokalen) Modelle können Latenz-, Datenschutz- und Reliability-Probleme aufzeigen, was im Bereich der Bildung nicht verhandelbar ist
-    - Zhuge et al., 2025: Deren fine-tuned Dual-LLM-Engine enthält im Vergleich zu Vergleichsmodellen im Paper nur kleine Modelle wie LLaMA2-13B; gewollt, da große Modelle wie GPT-4 viel an Rechen- und Speicherressourcen benötigen, was im Bildungskontext nur beschränkt verfügbar ist, somit nicht praktikabel
+    - Zhuge et al., 2025: Deren fine-tuned Dual-LLM-Engine enthält im Vergleich zu Vergleichsmodellen im Paper nur kleine Modelle wie LLaMA2-13B; gewollt, da große Modelle wie GPT-4 viel an Rechen- und Speicherressourcen benötigen, was für viele Institutionen nur beschränkt verfügbar ist, somit schwer praktikabel, wenn es um domain-specific Probleme geht
     - Kleiner positiver Kontrast --> Kang et al., 2025: ihnen war es wichtig, eine Mischung aus Popularität, einfachen API-Zugriffen und Balance aus Leistung, Kosten, und Zugänglichkeit zu haben (haben bspw. GPT-4o und Claude 3.5 Sonnet benutzt, welche etwas zeitgemäßere Modelle sind)
   - oder lassen Lernziele / Bloom-Level außer Acht
     - Kang et al., 2025: messen bei ihren generierten Fragen (basierend auf Video-Transkripten) von 1-5 die Question Difficulty, haben aber nirgends von Bloom-Leveln gesprochen
